@@ -1,0 +1,164 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-02T15:53:33-08:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution solution-like">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1</span>.</h6>
+<p>To find a normal vector \(\mbf{n}\) to the plane, we need two <em class="emphasis">non-parallel</em> vectors in the plane; for example, the two vectors</p>
+<div class="displaymath">
+\begin{equation*}
+\vect{BA}
+=
+\begin{bmatrix} 
+1 \\ -1\\ 6
+\end{bmatrix} 
+-
+\begin{bmatrix} 
+0 \\ 0\\ 1
+\end{bmatrix} 
+=
+\begin{bmatrix} 
+1 \\ -1\\ 5
+\end{bmatrix} 
+\end{equation*}
+</div>
+<p>and</p>
+<div class="displaymath">
+\begin{equation*}
+\vect{BC}
+=
+\begin{bmatrix} 
+4 \\ 7\\ -11
+\end{bmatrix} 
+-
+\begin{bmatrix} 
+0\\0\\1
+\end{bmatrix} 
+=
+\begin{bmatrix} 
+4 \\ 7\\ -12
+\end{bmatrix}								 			
+\end{equation*}
+</div>
+<p>would do. (If these two vectors had turned out to be parallel, then the three given points \(A, B, C\) would lie on a line, so they would not determine a plane.) A vector \(\mbf{n}\) which is orthogonal to both \(\vect{BA}\) and \(\vect{BC}\) is then given by their cross product:</p>
+<div class="displaymath">
+\begin{equation*}
+\mbf{n}
+=
+\vect{BA}
+\times
+\vect{BC}
+=
+\begin{bmatrix}
+(-1) \cdot (-12) - 5 \cdot 7 \\
+5 \cdot 4 - 1 \cdot (-12) \\
+1 \cdot 7 - 4\cdot (-1)
+\end{bmatrix}
+=
+\begin{bmatrix}
+-23 \\
+32 \\
+11
+\end{bmatrix}
+.
+\end{equation*}
+</div>
+<p>The normal form, \(\mbf{n}\cdot\vect{BX}=0\text{,}\) is now explicitly given by</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix}
+-23 \\
+32 \\
+11
+\end{bmatrix}
+\cdot
+\begin{bmatrix} 
+x_1 - 0 \\ x_2 - 0\\ x_3 - 1
+\end{bmatrix} 
+=
+0
+\end{equation*}
+</div>
+<p>or equivalently</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix}
+-23 \\
+32 \\
+11
+\end{bmatrix}
+\cdot
+\mbf{x}
+=
+\begin{bmatrix}
+-23 \\
+32 \\
+11
+\end{bmatrix}
+\cdot
+\begin{bmatrix} 
+0 \\ 0\\ 1
+\end{bmatrix}
+=
+11
+.
+\end{equation*}
+</div>
+<p>We get the general form by simply computing the dot product on both sides:</p>
+<div class="displaymath">
+\begin{equation*}
+-23x_1
++
+32x_2
++
+11x_3
+=
+11.
+\end{equation*}
+</div>
+<p>Lastly, we compute the parametric form by first giving the vector form:</p>
+<div class="displaymath">
+\begin{equation*}
+\mbf{x}
+=
+\vect{OB}
++t\vect{BA}
++s\vect{BC}
+=
+\begin{bmatrix} 
+0 \\ 0 \\ 1
+\end{bmatrix} 
++t\begin{bmatrix} 
+1 \\ -1\\ 5
+\end{bmatrix} 
++s
+\begin{bmatrix} 
+4 \\ 7\\ -12
+\end{bmatrix}.
+\end{equation*}
+</div>
+<p>The parametric form can now be read off:</p>
+<div class="displaymath">
+\begin{equation*}
+x_1 =  t + 4s
+;
+x_2 = -t + 7s
+;
+x_3 =  1+ 5t - 12s.
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec-Lines-and-Planes.html#solution-34">in-context</a></span>
+</body>
+</html>

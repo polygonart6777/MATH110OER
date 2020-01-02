@@ -1,0 +1,109 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-02T15:53:35-08:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like">First, we have to find out in which point the two lines meet. (If they do not meet, then they are skew lines since they are clearly not parallel. In this case, they are not in the same plane.) In other words, we are looking for two real numbers \(s, t\) such that<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix} +s\begin{bmatrix} 1 \\ -1\\ 3 \end{bmatrix}
+=
+\begin{bmatrix} 0 \\ -2\\ 5 \end{bmatrix} +t\begin{bmatrix} 2 \\ 1\\ -1 \end{bmatrix}
+.
+\end{equation*}
+</div>Componentwise, this vector equation means:<div class="displaymath">
+\begin{equation*}
+3 + s = 2t;\;
+1 - s = -2+t;\;
+3s = 5 - t.
+\end{equation*}
+</div>The second equation says \(t=3-s\text{,}\) which we plug into the other equations to get \(s = 1\text{.}\) We conclude that the two lines meet in the point \((4,0,3)\) because<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix} +1\begin{bmatrix} 1 \\ -1\\ 3 \end{bmatrix}
+=\begin{bmatrix} 4 \\ 0\\ 3 \end{bmatrix}
+.
+\end{equation*}
+</div>Since the two lines are not parallel, their directional vectors span the plane that contains them, so we arrive at the following vector equation of the plane,<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix} 
+x_1 \\ x_2 \\ x_3
+\end{bmatrix}
+=
+\begin{bmatrix} 
+4 \\ 0\\ 3
+\end{bmatrix}
++
+r
+\begin{bmatrix}
+1 \\ -1\\ 3 
+\end{bmatrix}
++
+q
+\begin{bmatrix}
+2 \\ 1\\ -1
+\end{bmatrix}
+,
+\end{equation*}
+</div>which means in parametric form:<div class="displaymath">
+\begin{equation*}
+x_1 =  4 + r + 2q
+;
+x_2 =  -r+q
+;
+x_3 = 3 +3r -q
+.
+\end{equation*}
+</div>For the normal form, we form the cross product of the two directional vectors to find a normal vector (see <a data-knowl="./knowl/hint-def-cross-product-and-it-is-normal.html" title="Hint 1">Hint 1</a>):<div class="displaymath">
+\begin{equation*}
+\mbf{n}
+=
+\begin{bmatrix}
+1 \\ -1\\ 3 
+\end{bmatrix}
+\times
+\begin{bmatrix}
+2 \\ 1\\ -1
+\end{bmatrix}
+=
+\begin{bmatrix}
+(-1) \cdot (-1)-3 \cdot 1\\
+3 \cdot 2-1 \cdot (-1)\\
+1 \cdot 1-(-1) \cdot 2
+\end{bmatrix}
+=
+\begin{bmatrix}
+-2\\
+7\\
+3
+\end{bmatrix}
+.
+\end{equation*}
+</div>We now only need a point on the plane, say \((4,0,3)\text{,}\) to give the normal form \(\mbf{n}\cdot\vect{PX}=0\) explicitly:<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix}
+-2\\
+7\\
+3
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+x_1 - 4\\
+x_2 \\
+x_3 - 3
+\end{bmatrix}
+.
+\end{equation*}
+</div>The general form can then be computed to be:<div class="displaymath">
+\begin{equation*}
+-2x_1 + 7x_2 + 3 x_3 = 1.
+\end{equation*}
+</div>
+</div></body>
+</html>

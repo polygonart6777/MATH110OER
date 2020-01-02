@@ -1,0 +1,86 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-02T15:53:29-08:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like">We require \(\mbf{a}\) to be parallel to \(\mbf{u}\text{,}\) i.e. \(\mbf{a} = c \mbf{u}\) for some real number \(c\) that is yet to be determined. Plugging that into \(\mathbf{v} = \mathbf{a}+\mathbf{b}\text{,}\) we get a definition of \(\mbf{b}\) that also depends on \(c\text{:}\) \(\mathbf{b} = \mathbf{v} - c \mbf{u}\text{.}\) As \(\mbf{b}\) needs to be orthogonal to \(\mbf{u}\text{,}\) we want \(\mbf{b}\cdot \mbf{u}=0\text{.}\) If we plug our tentative solution for \(\mbf{b}\) into this, we get<div class="displaymath">
+\begin{equation*}
+(\mathbf{v} - c \mbf{u})\cdot \mbf{u}=0
+.
+\end{equation*}
+</div>Using the properties of the dot product, we arrive at<div class="displaymath">
+\begin{equation*}
+\mathbf{v}\cdot \mbf{u} = c \mbf{u}\cdot \mbf{u},
+\text{ i.e. }
+c = \frac{\mathbf{v}\cdot \mbf{u}}{\mbf{u}\cdot \mbf{u}}
+\text{ using that }\mbf{u}\neq \mbf{0}
+.
+\end{equation*}
+</div>We can now compute both sides and get a value for \(c\text{:}\)<div class="displaymath">
+\begin{align*}
+\mathbf{v}\cdot \mbf{u}
+\amp =
+\begin{bmatrix} 1 \\ -1 \\ 2 \end{bmatrix} 
+\cdot
+\begin{bmatrix} 3 \\ 2\\ -5 \end{bmatrix} 
+=
+1\cdot 3 + (-1)\cdot 2 + 2\cdot (-5)
+=
+-9,\\
+\mbf{u}\cdot \mbf{u}
+\amp =
+\begin{bmatrix} 3 \\ 2\\ -5 \end{bmatrix}
+\cdot
+\begin{bmatrix} 3 \\ 2\\ -5 \end{bmatrix}
+=
+3^2 + 2^2 + (-5)^2
+=
+38, \text{ so that }
+\end{align*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+c
+=
+\frac{-9}{38}.
+\end{equation*}
+</div>We can now solve for our vectors \(\mbf{a}\) and \(\mbf{b}\text{:}\)<div class="displaymath">
+\begin{gather*}
+\mbf{a} = c \mbf{u}	= \frac{-9}{38}\begin{bmatrix} 3 \\ 2\\ -5 \end{bmatrix} 
+=
+\begin{bmatrix} \frac{-27}{38} \\ \frac{-18}{38}\\ \frac{45}{38}\end{bmatrix} \\
+\mathbf{b}
+=
+\mathbf{v} - \mbf{a}
+=
+\begin{bmatrix} 1 \\ -1 \\ 2 \end{bmatrix} 
+-
+\begin{bmatrix} \frac{-27}{38} \\ \frac{-18}{38}\\ \frac{45}{38}\end{bmatrix} 
+=
+\begin{bmatrix} \frac{65}{38} \\ \frac{-20}{38}\\ \frac{31}{38}\end{bmatrix} 
+.
+\end{gather*}
+</div>Let us do a sanity check: Is our \(\mbf{b}\) indeed orthogonal to \(\mbf{u}\text{?}\) We compute:<div class="displaymath">
+\begin{align*}
+\mbf{b}\cdot \mbf{u}
+\amp =
+\begin{bmatrix} \frac{65}{38} \\ \frac{-20}{38}\\ \frac{31}{38}\end{bmatrix} 
+\cdot
+\begin{bmatrix} 3 \\ 2\\ -5 \end{bmatrix} 
+=
+\frac{65}{38} \cdot 3 + \frac{-20}{38}\cdot 2 + \frac{31}{38}\cdot (-5)\\
+\amp =
+\frac{195-40-155}{38}
+=
+0,
+\end{align*}
+</div>so yes!</div></body>
+</html>

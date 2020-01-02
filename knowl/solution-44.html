@@ -1,0 +1,295 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-02T15:53:36-08:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution solution-like">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.3.1.5.1</span>.</h6>According to <a data-knowl="./knowl/hint-dist-plane-pt.html" title="Hint 1.3.1.5.1">Hint 1.3.1.5.1</a>, we only need to find a point \(A\) on the plane and a normal vector \(\mbf{n}\) to the plane. <ol class="lower-alpha">
+<li>For the plane with general equation \(5x_1+x_2+x_3 =1\text{,}\) we can choose<div class="displaymath">
+\begin{equation*}
+\mbf{n} = \begin{bmatrix}
+5\\
+1\\
+1
+\end{bmatrix}
+\text{ and }
+A = (1, -4, 0).
+\end{equation*}
+</div>We then compute<div class="displaymath">
+\begin{equation*}
+\mbf{v}
+:=
+\vect{OP}-\vect{OA}
+=
+\begin{bmatrix}
+2\\
+3\\
+0
+\end{bmatrix}
+-
+\begin{bmatrix}
+1\\
+-4\\
+0
+\end{bmatrix}
+=
+\begin{bmatrix}
+1\\
+7\\
+0
+\end{bmatrix},
+\end{equation*}
+</div>so that<div class="displaymath">
+\begin{equation*}
+\mbf{n}
+\cdot
+\mbf{v}
+=
+\begin{bmatrix}
+5\\
+1\\
+1
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+1\\
+7\\
+0
+\end{bmatrix}
+=
+5+7 = 12
+\end{equation*}
+</div>and<div class="displaymath">
+\begin{equation*}
+\mbf{n}
+\cdot
+\mbf{n}
+=
+\begin{bmatrix}
+5\\
+1\\
+1
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+5\\
+1\\
+1
+\end{bmatrix}
+=
+25+1+1 = 27.
+\end{equation*}
+</div>We can now compute (using <a data-knowl="./knowl/def-proj-vect-onto-vect.html" title="Hint 1.2.1.8.1">Hint 1.2.1.8.1</a>)<div class="displaymath">
+\begin{equation*}
+\operatorname{proj}_{\mathbf{n}}(\mathbf{v})
+=
+\left(
+\frac{\mbf{n}\cdot \mbf{v}}{\mbf{n}\cdot \mbf{n}}
+\right)
+\mbf{n}
+=
+\frac{12}{27}
+\begin{bmatrix}
+5\\
+1\\
+1
+\end{bmatrix}
+=
+\frac{4}{9}
+\begin{bmatrix}
+5\\
+1\\
+1
+\end{bmatrix}
+\end{equation*}
+</div>and thus<div class="displaymath">
+\begin{align*}
+\operatorname{dist}
+(\mathcal{P}, P)
+\amp
+= 
+\norm{\operatorname{proj}_{\mathbf{n}}\mathbf{v}}\\
+\amp =
+\sqrt{
+\left(\frac{20}{9}\right)^2 + \left(\frac{4}{9}\right)^2 + \left(\frac{4}{9}\right)^2
+}
+=
+\sqrt{
+\frac{16}{3}
+}.
+\end{align*}
+</div>The point on the plane which is closest to \(P\) then has the position vector<div class="displaymath">
+\begin{equation*}
+\mbf{q}
+=
+\vect{OP} - \operatorname{proj}_{\mathbf{n}}\mathbf{v}
+=
+\begin{bmatrix}
+2\\
+3\\
+0
+\end{bmatrix}
+-
+\frac{4}{9}
+\begin{bmatrix}
+5\\
+1\\
+1
+\end{bmatrix}
+=
+\frac{1}{9}
+\begin{bmatrix}
+-2 \\
+23\\
+-4
+\end{bmatrix},
+\end{equation*}
+</div>so that \(Q =(\frac{-2}{9},\frac{23}{9},\frac{-4}{9})\text{.}\)</li>
+<li>For the plane with general equation \(2x_1+x_2-x_3 =6\text{,}\) we can choose<div class="displaymath">
+\begin{equation*}
+\mbf{n} = \begin{bmatrix}
+2\\
+1\\
+-1
+\end{bmatrix}
+\text{ and }
+A = (3, 0, 0).
+\end{equation*}
+</div>We then compute<div class="displaymath">
+\begin{equation*}
+\mbf{v}
+:=
+\vect{OP}-\vect{OA}
+=
+\begin{bmatrix}
+3\\
+1\\
+-1
+\end{bmatrix}
+-
+\begin{bmatrix}
+3\\
+0\\
+0
+\end{bmatrix}
+=
+\begin{bmatrix}
+0\\
+1\\
+-1
+\end{bmatrix},
+\end{equation*}
+</div>so that<div class="displaymath">
+\begin{equation*}
+\mbf{n}
+\cdot
+\mbf{v}
+=
+\begin{bmatrix}
+2\\
+1\\
+-1
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+0\\
+1\\
+-1
+\end{bmatrix}
+=
+2
+\end{equation*}
+</div>and<div class="displaymath">
+\begin{equation*}
+\mbf{n}
+\cdot
+\mbf{n}
+=
+\begin{bmatrix}
+2\\
+1\\
+-1
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+2\\
+1\\
+-1
+\end{bmatrix}
+=
+4+1+1 = 6.
+\end{equation*}
+</div>We can now compute (using <a data-knowl="./knowl/def-proj-vect-onto-vect.html" title="Hint 1.2.1.8.1">Hint 1.2.1.8.1</a>)<div class="displaymath">
+\begin{equation*}
+\operatorname{proj}_{\mathbf{n}}(\mathbf{v})
+=
+\left(
+\frac{\mbf{n}\cdot \mbf{v}}{\mbf{n}\cdot \mbf{n}}
+\right)
+\mbf{n}
+=
+\frac{1}{3}
+\begin{bmatrix}
+2\\
+1\\
+-1
+\end{bmatrix}
+\end{equation*}
+</div>and thus<div class="displaymath">
+\begin{align*}
+\operatorname{dist}
+(\mathcal{P}, P)
+\amp
+= 
+\norm{\operatorname{proj}_{\mathbf{n}}\mathbf{v}}\\
+\amp =
+\sqrt{
+\left(\frac{2}{3}\right)^2 + \left(\frac{1}{3}\right)^2 + \left(\frac{-1}{3}\right)^2
+}
+=
+\sqrt{
+\frac{2}{3}
+}.
+\end{align*}
+</div>The point on the plane which is closest to \(P\) then has the position vector<div class="displaymath">
+\begin{equation*}
+\mbf{q}
+=
+\vect{OP} - \operatorname{proj}_{\mathbf{n}}\mathbf{v}
+=
+\begin{bmatrix}
+3\\
+1\\
+-1
+\end{bmatrix}
+-
+\frac{1}{3}
+\begin{bmatrix}
+2\\
+1\\
+-1
+\end{bmatrix}
+=
+\frac{1}{3}
+\begin{bmatrix}
+7\\
+2\\
+-2
+\end{bmatrix}
+\end{equation*}
+</div>so that \(Q =(\frac{7}{3}, \frac{2}{3}, \frac{-2}{3})\text{.}\)</li>
+</ol>
+</div>
+<span class="incontext"><a href="sec-Lines-and-Planes.html#solution-44">in-context</a></span>
+</body>
+</html>

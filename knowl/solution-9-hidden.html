@@ -1,0 +1,162 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-02T15:53:24-08:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like"><ol class="lower-alpha">
+<li>
+<div class="displaymath">
+\begin{align*}
+(k+l)(\mathbf{u}+\mathbf{v})
+\amp =
+(k+l)\mathbf{u}+ (k+l)\mathbf{v}
+\amp (\knowl{./knowl/axioms-vector-addition-distributivity-1.html}{\text{Distributivity 1 (1.1.7)}})\\
+\amp =
+k\mathbf{u}+l\mathbf{u}+ k\mathbf{v}+l\mathbf{v}
+\amp (\knowl{./knowl/axioms-vector-addition-distributivity-2.html}{\text{Distributivity 2 (1.1.8)}})\\
+\amp =
+k \mathbf{u} +k \mathbf{v} + l\mathbf{u} + l \mathbf{v}
+\amp (\knowl{./knowl/axioms-vector-addition-commutativity.html}{\text{Commutativity (1.1.2)}})
+\end{align*}
+</div>
+<p>Notice that one could also first have used <a data-knowl="./knowl/axioms-vector-addition-distributivity-2.html" title="Equation 1.1.8">Distributivity 2 (1.1.8)</a> and only then <a data-knowl="./knowl/axioms-vector-addition-distributivity-1.html" title="Equation 1.1.7">Distributivity 1 (1.1.7)</a>.</p>
+</li>
+<li>
+<p>First, we compute:</p>
+<div class="displaymath">
+\begin{align*}
+0 \mathbf{u}
+\amp =
+(0 \cdot 2)\mathbf{u}
+\amp
+\text{ because } 0=0\cdot 2\\
+\amp =
+0 ( 2  \mathbf{u})
+\amp (\knowl{./knowl/axioms-vector-addition-compatibility.html}{\text{Compatibility (1.1.6)}})\\
+\amp =
+0 (\mathbf{u}+\mathbf{u})
+\amp \text{(Definition)}\\
+\amp =
+0\mathbf{u} + 0\mathbf{u}
+\amp (\knowl{./knowl/axioms-vector-addition-distributivity-2.html}{\text{Distributivity 2 (1.1.8)}})
+\end{align*}
+</div>
+<p>To sum up, we have proved:</p>
+<div class="displaymath">
+\begin{equation*}
+0 \mathbf{u}
+=
+0\mathbf{u} + 0\mathbf{u}
+\end{equation*}
+</div>
+<p>If we add \(- 0\mathbf{u}\) on both sides, we get:</p>
+<div class="displaymath">
+\begin{equation*}
+0 \mathbf{u} +(-0\mathbf{u}) 
+=
+(0\mathbf{u} + 0\mathbf{u}) + (-0\mathbf{u})
+\end{equation*}
+</div>
+<p>For the left-hand side, note that</p>
+<div class="displaymath">
+\begin{equation*}
+0 \mathbf{u} +(-0\mathbf{u}) 
+=
+\mbf{0}
+\end{equation*}
+</div>
+<p>by the axiom of the <a data-knowl="./knowl/axioms-vector-addition-inverses.html" title="Equation 1.1.4">inverse element (1.1.4)</a>. For the right-hand side, we have</p>
+<div class="displaymath">
+\begin{align*}
+(0\mathbf{u} + 0\mathbf{u}) + (-0\mathbf{u})
+\amp =
+0\mathbf{u} + (0\mathbf{u} + (-0\mathbf{u}))
+\amp (\knowl{./knowl/axioms-vector-addition-associativity.html}{\text{Associativity (1.1.1)}})\\
+\amp =
+0\mathbf{u} + \mbf{0}
+\amp (\knowl{./knowl/axioms-vector-addition-inverses.html}{\text{Inverse elements (1.1.4)}})\\
+\amp =
+0\mathbf{u}
+\amp (\knowl{./knowl/axioms-vector-addition-neutral-elt.html}{\text{Neutral element (1.1.3)}})
+\end{align*}
+</div>
+<p>All in all, we have shown</p>
+<div class="displaymath">
+\begin{equation*}
+\mbf{0}
+=
+0 \mathbf{u} +(-0\mathbf{u}) 
+=
+(0\mathbf{u} + 0\mathbf{u}) + (-0\mathbf{u})
+=
+0\mbf{u},
+\end{equation*}
+</div>
+<p>as claimed.</p>
+</li>
+<li>We have to show that \((-1)\mathbf{u}\) behaves like the inverse elements \(-\mathbf{u}\) whose existence is claimed in  <a data-knowl="./knowl/axioms-vector-addition-inverses.html" title="Equation 1.1.4">this axiom (1.1.4)</a>. In other words, it suffices to show that<div class="displaymath">
+\begin{equation*}
+\mbf{u} + (-1)\mbf{u}
+=
+\mbf{0}.
+\end{equation*}
+</div>We compute:<div class="displaymath">
+\begin{align*}
+\mbf{u} + (-1)\mbf{u}
+\amp =
+1\mbf{u} + (-1)\mbf{u}
+\amp (\knowl{./knowl/axioms-vector-addition-scalar-1.html}{\text{Identity of scalar multiplication (1.1.5)}})\\
+\amp =
+(1+ (-1))\mbf{u}
+\amp (\knowl{./knowl/axioms-vector-addition-distributivity-2.html}{\text{Distributivity 2 (1.1.8)}})\\
+\amp =
+0\mbf{u}
+\amp\\
+\amp =
+\mathbf{0}
+\amp (\knowl{./knowl/ex-sums-of-vecs3-item-neutral.html}{\text{Item b}})
+\end{align*}
+</div>
+</li>
+<li>
+<p>First of all,</p>
+<div class="displaymath">
+\begin{align*}
+-(k\mathbf{u})
+\amp =
+(-1)(k\mathbf{u})	
+\amp (\knowl{./knowl/ex-sums-of-vecs3-item-inverse.html}{\text{Item c}})\\
+\amp =
+((-1)k)\mathbf{u}
+\amp (\knowl{./knowl/axioms-vector-addition-compatibility.html}{\text{Compatibility (1.1.6)}})
+\end{align*}
+</div>
+<p>We can now do two things: on the one hand, \((-1)k=-k\text{,}\) which proves that \(-(k\mathbf{u}) = -k \mbf{u}\text{.}\) On the other hand, \((-1)k = k(-1)\text{,}\) so that:</p>
+<div class="displaymath">
+\begin{align*}
+-(k\mathbf{u})
+\amp =
+((-1)k)\mathbf{u}
+\amp \text{ as argued above}\\
+\amp =
+(k(-1))\mathbf{u}
+\amp							 		\\
+\amp =
+k((-1)\mathbf{u})
+\amp (\knowl{./knowl/axioms-vector-addition-compatibility.html}{\text{Compatibility (1.1.6)}})\\
+\amp =
+k(-\mathbf{u})
+\amp (\knowl{./knowl/ex-sums-of-vecs3-item-inverse.html}{\text{Item c}})
+\end{align*}
+</div>
+</li>
+</ol></div></body>
+</html>

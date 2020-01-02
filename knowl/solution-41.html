@@ -1,0 +1,180 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-02T15:53:35-08:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution solution-like">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1</span>.</h6>For a point \(X\) to be equidistant from \(P\) and \(Q\text{,}\) we must have<div class="displaymath">
+\begin{equation*}
+\norm{\vect{PX}}= \norm{\vect{QX}}.
+\end{equation*}
+</div>By squaring both sides of the equation, we can rewrite this to<div class="displaymath">
+\begin{equation}
+\vect{PX}\cdot \vect{PX}= \vect{QX}\cdot \vect{QX}.\tag{1.3.2}
+\end{equation}
+</div>If we use that \(\vect{PX} = \vect{OX} - \vect{OP}\text{,}\) then using the properties of the dot product yields<div class="displaymath">
+\begin{align*}
+\vect{PX}\cdot \vect{PX} 
+\amp =
+(\vect{OX} - \vect{OP})\cdot(\vect{OX} - \vect{OP})\\
+\amp =
+\vect{OX}\cdot\vect{OX} - \vect{OX}\cdot\vect{OP}
+- \vect{OP}\cdot\vect{OX} + \vect{OP}\cdot\vect{OP}\\
+\amp =
+\norm{\vect{OX}}^2 + \norm{\vect{OP}}^2
+- 2 \vect{OX}\cdot\vect{OP}.
+\end{align*}
+</div>Similarly,<div class="displaymath">
+\begin{equation*}
+\vect{QX}\cdot \vect{QX} 
+=
+\norm{\vect{OX}}^2 + \norm{\vect{OQ}}^2
+- 2 \vect{OX}\cdot\vect{OQ}
+.
+\end{equation*}
+</div>So if we plug both of these into <a data-knowl="./knowl/eq-1.html" title="Equation 1.3.2">(1.3.2)</a> and cancel the summand of \(\norm{\vect{OX}}^2\) on both sides, then we see that \(\norm{\vect{PX}}= \norm{\vect{QX}}\) is equivalent to<div class="displaymath">
+\begin{equation}
+\norm{\vect{OP}}^2
+- 2 \vect{OX}\cdot\vect{OP}
+=
+\norm{\vect{OQ}}^2
+- 2 \vect{OX}\cdot\vect{OQ}
+.\tag{1.3.3}
+\end{equation}
+</div>We compute with \(X=(x_1,x_2,x_3)\text{:}\)<div class="displaymath">
+\begin{gather*}
+\vect{OX}\cdot\vect{OP}
+=
+2x_1 - x_2 + 3x_3\\
+\vect{OX}\cdot\vect{OQ}
+=
+x_1 + x_2 - x_3\\
+\norm{\vect{OP}}^2
+=
+2^2 + (-1)^2 +3^2
+=
+14\\
+\norm{\vect{OQ}}^2
+=
+1^2 + 1^2 + (-1)^2
+=
+3,
+\end{gather*}
+</div>so that <a data-knowl="./knowl/eq-reformulation-of-equidistant.html" title="Equation 1.3.3">(1.3.3)</a> becomes:<div class="displaymath">
+\begin{align*}
+\amp
+14
+- 2 (2x_1 - x_2 + 3x_3)
+=
+3
+- 2 (x_1 + x_2 - x_3)\\
+\iff \amp
+11
+=
+(- 2 x_1 - 2  x_2 + 2  x_3)
++
+(4x_1 - 2x_2 + 6x_3)\\
+\iff \amp
+11
+=
+2x_1 - 4x_2 + 8x_3,
+\end{align*}
+</div>which is the general form of our plane equation. We can rewrite this to<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix}
+2\\
+-4\\
+8
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3 
+\end{bmatrix}
+=
+11,
+\end{equation*}
+</div>which is its normal form. Lastly, for the vector form, we need three points in the plane which do not lie on a line. Let us choose \(R_1= (0, -3 , -\frac{1}{8} )\text{,}\) \(R_2= (\frac{3}{2}, 0, 1)\text{,}\) and \(R_3= (6,\frac{1}{4} ,0)\) which all satisfy the general equation. Now, the plane's vector equation is given by<div class="displaymath">
+\begin{align*}
+\mbf{x}
+\amp =
+\vect{OR_1}
++
+t
+\vect{R_1 R_2}
++
+s
+\vect{R_1 R_3}\\
+\amp	=
+\begin{bmatrix}
+0 \\ -3 \\ -\frac{1}{8} 
+\end{bmatrix}
++
+t
+\begin{bmatrix}
+\frac{3}{2}  - 0 \\ 0 - (-3) \\ 1 - (-\frac{1}{8})
+\end{bmatrix}
++
+s
+\begin{bmatrix}
+6 - 0 \\ \frac{1}{4} - (-3) \\ 0 - (-\frac{1}{8})
+\end{bmatrix}\\
+\amp =
+\begin{bmatrix}
+0 \\ -3 \\ -\frac{1}{8} 
+\end{bmatrix}
++
+t
+\begin{bmatrix}
+\frac{3}{2} \\ 3 \\ \frac{9}{8}
+\end{bmatrix}
++
+s
+\begin{bmatrix}
+6 \\ \frac{13}{4} \\ \frac{1}{8}
+\end{bmatrix}
+\end{align*}
+</div>We can rewrite this by rescaling (\(t=8r\) and \(s=8q\)) to:<div class="displaymath">
+\begin{equation*}
+\mbf{x}
+=
+\begin{bmatrix}
+0 \\ -3 \\ -\frac{1}{8} 
+\end{bmatrix}
++
+r
+\begin{bmatrix}
+12 \\ 24 \\ 9
+\end{bmatrix}
++
+q
+\begin{bmatrix}
+48 \\ 26 \\ 1
+\end{bmatrix}
+,
+\end{equation*}
+</div>which yields the parametric equations:<div class="displaymath">
+\begin{equation*}
+x_1 = 12r + 48q
+;
+x_2 = -3 +24r +26 q
+;
+x_3 = -\frac{1}{8} + 9r + q
+.
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec-Lines-and-Planes.html#solution-41">in-context</a></span>
+</body>
+</html>

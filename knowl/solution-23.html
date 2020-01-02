@@ -1,0 +1,117 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-02T15:53:29-08:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution solution-like">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.2.1.12.1</span>.</h6>
+<p>Since we are making a claim about the dot product of \(\mathbf{u} + \mathbf{v}\) and \(\mathbf{u} - \mathbf{v}\text{,}\) let us use the properties of the dot product to simplify it:</p>
+<div class="displaymath">
+\begin{align}
+(\mathbf{u} + \mathbf{v})\cdot(\mathbf{u} - \mathbf{v})
+\amp =
+(\mathbf{u} + \mathbf{v})\cdot\mathbf{u} - (\mathbf{u} + \mathbf{v})\cdot\mathbf{v}
+\amp\amp
+(\text{Distributivity})\notag\\
+\amp =
+(\mathbf{u}\cdot\mathbf{u} + \mathbf{v}\cdot\mathbf{u})
+-
+(\mathbf{u}\cdot\mathbf{v} + \mathbf{v}\cdot\mathbf{v})
+\amp\amp
+(\text{Distributivity})\notag\\
+\amp =
+\norm{\mbf{u}}^2 + \mathbf{v}\cdot\mathbf{u}
+-
+\mathbf{u}\cdot\mathbf{v} - \norm{\mbf{v}}^2
+\amp\amp
+(\text{definition of } \norm{\cdot})\notag\\
+\amp =
+\norm{\mbf{u}}^2 + \mathbf{u}\cdot \mathbf{v}
+-
+\mathbf{u}\cdot\mathbf{v} - \norm{\mbf{v}}^2
+\amp\amp
+(\text{Commutativity})\notag\\
+\amp =
+\norm{\mbf{u}}^2  - \norm{\mbf{v}}^2
+.\tag{1.2.2}
+\end{align}
+</div>
+<p>The two vectors being perpendicular means exactly that their dot product is zero, i.e.</p>
+<div class="displaymath">
+\begin{equation*}
+(\mathbf{u} + \mathbf{v})\perp (\mathbf{u} - \mathbf{v})
+\iff
+(\mathbf{u} + \mathbf{v})\cdot(\mathbf{u} - \mathbf{v}) = 0
+\end{equation*}
+</div>
+<p>By <a data-knowl="./knowl/ex-same-norm-iff-two-things-are-perp-manipulation.html" title="Equation 1.2.2">(1.2.2)</a>, this happens if and only if \(\norm{\mbf{u}}^2  - \norm{\mbf{v}}^2 = 0\text{,}\) or in other words:</p>
+<div class="displaymath">
+\begin{equation*}
+(\mathbf{u} + \mathbf{v})\perp (\mathbf{u} - \mathbf{v})
+\iff
+\norm{\mbf{u}}^2 = \norm{\mbf{v}}^2 
+\iff
+\norm{\mbf{u}}= \norm{\mbf{v}}
+,
+\end{equation*}
+</div>
+<p>as claimed.</p>
+<p>For example, the vectors \(\mathbf{u} = \begin{bmatrix} 3 \\ 4 \end{bmatrix} \) and \(\mathbf{v} = \begin{bmatrix} 5 \\ 0 \end{bmatrix} \) have the same norm since</p>
+<div class="displaymath">
+\begin{equation*}
+\norm{\mbf{u}}^2
+=
+\mbf{u}\cdot \mbf{u}
+=
+3^2 + 4^2 = 25
+\;\text{ and }\;
+\norm{\mbf{v}}^2
+=
+\mbf{v}\cdot \mbf{v}
+=
+5^2 + 0^2 = 25
+.
+\end{equation*}
+</div>
+<p>We check that indeed</p>
+<div class="displaymath">
+\begin{align*}
+(\mathbf{u} + \mathbf{v})\cdot (\mathbf{u} - \mathbf{v})
+\amp =
+\left(
+\begin{bmatrix} 3 \\ 4 \end{bmatrix} 
++
+\begin{bmatrix} 5 \\ 0 \end{bmatrix} 
+\right)
+\cdot
+\left(	
+\begin{bmatrix} 3 \\ 4 \end{bmatrix} 
+-
+\begin{bmatrix} 5 \\ 0 \end{bmatrix} 
+\right)\\
+\amp =
+\begin{bmatrix} 3+5 \\ 4+0 \end{bmatrix} 
+\cdot
+\begin{bmatrix} 3-5 \\ 4-0 \end{bmatrix} 
+=
+\begin{bmatrix} 8 \\ 4 \end{bmatrix} 
+\cdot
+\begin{bmatrix} -2 \\ 4 \end{bmatrix} \\
+\amp =
+8\cdot (-2) + 4\cdot 4 = 0.
+\end{align*}
+</div>
+</div>
+<span class="incontext"><a href="sec-DotProd.html#solution-23">in-context</a></span>
+</body>
+</html>
