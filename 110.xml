@@ -8187,8 +8187,10 @@
 
 		<chapter>
 			<title>
-				Eigenvalues, eigenvectors, and diagonalization
+				Eigenvalues, Eigenvectors, and Diagonalization
 			</title>
+			<section> 
+				<title> Introduction to Eigenvalues and Eigenvectors </title>
 			<exercises>
  					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
@@ -8268,6 +8270,7 @@
 						</answer> -->
 					</exercise></p>
 	</exercises>
+</section>
 	</chapter>
 
 		<chapter>
