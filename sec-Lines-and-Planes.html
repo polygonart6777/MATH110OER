@@ -1,0 +1,3263 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-02T15:11:22-08:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lines and Planes</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.12;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\matr}[2]{\left[\begin{array}{#1}#2\end{array}\right]}
+\newcommand{\vect}[1]{\overrightarrow{#1}}
+\let\mbf\mathbf
+\newcommand{\norm}[1]{\left\| #1 \right\|}
+\newcommand{\abs}[1]{\left\vert #1 \right\vert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">Math 110 Practice Problems</span></a></h1>
+<p class="byline">Christopher Eagle</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="sec-DotProd.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapt-1.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="chapt-2.html" title="Next">Next</a></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="sec-DotProd.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapt-1.html" title="Up">Up</a><a class="next-button button toolbar-item" href="chapt-2.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapt-1.html" data-scroll="chapt-1"><span class="codenumber">1</span> <span class="title">Vectors in \(\mathbb{R}^n\)</span></a><ul>
+<li><a href="sec-Geom-and-Alg-of-Vects.html" data-scroll="sec-Geom-and-Alg-of-Vects">The Geometry and Algebra of Vectors</a></li>
+<li><a href="sec-DotProd.html" data-scroll="sec-DotProd">Length and Angle: The Dot Product</a></li>
+<li><a href="sec-Lines-and-Planes.html" data-scroll="sec-Lines-and-Planes" class="active">Lines and Planes</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapt-2.html" data-scroll="chapt-2"><span class="codenumber">2</span> <span class="title">Systems of Linear Equations</span></a><ul>
+<li><a href="sec-2-1.html" data-scroll="sec-2-1">Systems of Linear Equations</a></li>
+<li><a href="sec-2-2.html" data-scroll="sec-2-2">Solving Linear Systems</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-3.html" data-scroll="chapter-3"><span class="codenumber">3</span> <span class="title">Matrices</span></a><ul>
+<li><a href="section-6.html" data-scroll="section-6">Matrix Operations</a></li>
+<li><a href="section-7.html" data-scroll="section-7">Matrix Algebra</a></li>
+<li><a href="section-8.html" data-scroll="section-8">The Inverse of a Matrix</a></li>
+<li><a href="section-9.html" data-scroll="section-9">Subspsace, Basis, Dimension, and Rank</a></li>
+<li><a href="section-10.html" data-scroll="section-10">Introduction to Linear Transformations</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span> <span class="title">Eigenvalues, Eigenvectors, and Diagonalization</span></a><ul><li><a href="section-11.html" data-scroll="section-11">Introduction to Eigenvalues and Eigenvectors</a></li></ul>
+</li>
+<li class="link">
+<a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">5</span> <span class="title">Orthogonality</span></a><ul><li><a href="exercises-12.html" data-scroll="exercises-12">Exercises</a></li></ul>
+</li>
+<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="ref-references.html" data-scroll="ref-references"><span class="title">References</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec-Lines-and-Planes"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">Lines and Planes</span>
+</h2>
+<a href="sec-Lines-and-Planes.html" class="permalink">¶</a><section class="exercises" id="exercises-3"><h3 class="heading hide-type">
+<span class="type">Exercises</span> <span class="codenumber">1.3.1</span> <span class="title">Exercises</span>
+</h3>
+<p id="p-165"><article class="exercise exercise-like" id="exercise-26"><h6 class="heading"><span class="codenumber">1.</span></h6>
+<aside class="aside aside-like" id="aside-26"><p id="p-166">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Section 3.1, Exercise 3.1.1.)</p></aside> Find the vector equation for the line through \((-7,6,0)\) and \((-1,1,4)\text{.}\)  Then, find the parametric equations for this line.<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-37" id="hint-37"><span class="type">Hint</span> <span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-37"><div class="hint solution-like">The <em class="emphasis">vector equation</em> of a line \(\ell\) through points \(P\) and \(Q\) is given by<div class="displaymath">
+\begin{equation*}
+\mbf{x}
+=
+\vect{OP}
++
+t
+\vect{PQ}
+.
+\end{equation*}
+</div>
+</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-38" id="hint-38"><span class="type">Hint</span> <span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-38"><div class="hint solution-like">The <em class="emphasis">parametric equations</em> of a line \(\ell\) are the equations for each of the coordinates in the vector equation.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-18" id="answer-18"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-18"><div class="answer solution-like">The vector equation is given by<div class="displaymath">
+\begin{equation*}
+\mbf{x} 
+=
+\begin{bmatrix} -7\\ 6 \\ 0 \end{bmatrix} 
++
+t
+\begin{bmatrix} 6\\ -5 \\ 4 \end{bmatrix} 
+,
+\end{equation*}
+</div>and the parametric equations by<div class="displaymath">
+\begin{equation*}
+x_1 = -7 + 6t
+;
+x_2 = 6 - 5t
+;
+x_3 = 4t
+.
+\end{equation*}
+</div>
+</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-25" id="solution-25"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-25"><div class="solution solution-like">The vector equation of the line is given by<div class="displaymath">
+\begin{equation*}
+\mbf{x} 
+=
+\begin{bmatrix} -7\\ 6 \\ 0 \end{bmatrix} 
++
+t
+\left(
+\begin{bmatrix} -1\\ 1 \\ 4 \end{bmatrix} 
+-
+\begin{bmatrix} -7\\ 6 \\ 0 \end{bmatrix} 
+\right)
+=
+\begin{bmatrix} -7\\ 6 \\ 0 \end{bmatrix} 
++
+t
+\begin{bmatrix} 6\\ -5 \\ 4 \end{bmatrix} 
+.
+\end{equation*}
+</div>To check that we did not make a mistake: for \(t=0\text{,}\) we are indeed at the point \((-7,6,0)\text{,}\) and for \(t=1\text{,}\) we are at the point<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix} -7\\ 6 \\ 0 \end{bmatrix} 
++
+\begin{bmatrix} 6\\ -5 \\ 4 \end{bmatrix} 
+=
+\begin{bmatrix} -1\\ 1 \\ 4 \end{bmatrix} ,
+\end{equation*}
+</div>the second point. For the parametric equations, we just have to rephrase the above vector equation in terms of its coordinates:<div class="displaymath">
+\begin{equation*}
+x_1 = -7 + 6t
+;
+x_2 = 6 - 5t
+;
+x_3 = 4t
+.
+\end{equation*}
+</div>
+</div></div>
+</div></article></p>
+<p id="p-167"><article class="exercise exercise-like" id="exercise-27"><h6 class="heading"><span class="codenumber">2.</span></h6>
+<aside class="aside aside-like" id="aside-27"><p id="p-168">(Adapted from <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Section 4.1, Exercise 4.1.22.)</p></aside> Find the vector  and parametric form of the following lines: <ol class="lower-alpha">
+<li id="li-105">
+<p id="p-169">The line parallel to \(\begin{bmatrix} 2 \\ -1\\ 0 \end{bmatrix} \) and passing through \(P=(1,-1,3)\text{.}\)</p>
+<p id="p-170"> <a data-knowl="" class="id-ref" data-refid="hk-solution-26" id="solution-26"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-26"><div class="solution solution-like">
+<p id="p-171">The vector equation is given by</p>
+<div class="displaymath" id="p-172">
+\begin{equation*}
+\mbf{x}
+=
+\begin{bmatrix} 1\\ -1 \\ 3 \end{bmatrix} 
++
+t
+\begin{bmatrix} 2 \\ -1\\ 0 \end{bmatrix} ,
+\end{equation*}
+</div>
+<p id="p-173">because for \(t=0\text{,}\) we are at the perscribed point, and the directional vector has the perscribed direction.</p>
+<p id="p-174">The parametric form is therefore given by</p>
+<div class="displaymath" id="p-175">
+\begin{equation*}
+x_1 = 1 +2t
+;
+x_2 = -1 - t
+;
+x_3 = 3
+.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-19" id="answer-19"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-19"><div class="answer solution-like">
+<p id="p-176">Vector equation:</p>
+<div class="displaymath" id="p-177">
+\begin{equation*}
+\mbf{x}
+=
+\begin{bmatrix} 1\\ -1 \\ 3 \end{bmatrix} 
++
+t
+\begin{bmatrix} 2 \\ -1\\ 0 \end{bmatrix} ,
+\end{equation*}
+</div>
+<p id="p-178">Parametric form:</p>
+<div class="displaymath" id="p-179">
+\begin{equation*}
+x_1 = 1 +2t
+;
+x_2 = -1 - t
+;
+x_3 = 3
+.
+\end{equation*}
+</div>
+</div></div></p>
+</li>
+<li id="li-106">
+<p id="p-180">The line passing through \(P=(3, -1,4)\) and \(Q=(1,0,-1)\text{.}\)</p>
+<p id="p-181"> <a data-knowl="" class="id-ref" data-refid="hk-solution-27" id="solution-27"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-27"><div class="solution solution-like">
+<p id="p-182">Our line can be described by \(\mbf{x} = \vect{OP} + t\vect{PQ}\) since this makes sure that, for \(t=0\text{,}\) our line passes through \(P\text{,}\) and for \(t=1\text{,}\) it passes through \(Q\text{.}\) The vector equation is therefore given by</p>
+<div class="displaymath" id="p-183">
+\begin{equation*}
+\mbf{x}
+=
+\begin{bmatrix} 
+3\\-1\\4
+\end{bmatrix} 
++
+t
+\left(
+\begin{bmatrix} 
+1\\0\\-1
+\end{bmatrix} 
+-
+\begin{bmatrix} 
+3\\-1\\4
+\end{bmatrix} 
+\right)
+=
+\begin{bmatrix} 
+3\\-1\\4
+\end{bmatrix} 
++
+t
+\begin{bmatrix} 
+-2\\1\\-5
+\end{bmatrix} 
+,
+\end{equation*}
+</div>
+<p id="p-184">The parametric form is therefore given by</p>
+<div class="displaymath" id="p-185">
+\begin{equation*}
+x_1 = 3 - 2t
+;
+x_2 = -1 + t
+;
+x_3 = 4 - 5t
+.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-20" id="answer-20"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-20"><div class="answer solution-like">
+<p id="p-186">Vector equation:</p>
+<div class="displaymath" id="p-187">
+\begin{equation*}
+\mbf{x}
+=
+\begin{bmatrix} 
+3\\-1\\4
+\end{bmatrix} 
++
+t
+\begin{bmatrix} 
+-2\\1\\-5
+\end{bmatrix} 
+\end{equation*}
+</div>
+<p id="p-188">Parametric form:</p>
+<div class="displaymath" id="p-189">
+\begin{equation*}
+x_1 = 3 - 2t
+;
+x_2 = -1 + t
+;
+x_3 = 4 - 5t
+\end{equation*}
+</div>
+</div></div></p>
+</li>
+<li id="li-107">
+<p id="p-190">The line passing through the point \(P=(3, -1,4)\) and \(Q=(3,-1,5)\text{.}\)</p>
+<p id="p-191"> <a data-knowl="" class="id-ref" data-refid="hk-solution-28" id="solution-28"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-28"><div class="solution solution-like">
+<p id="p-192">Our line can be described by \(\mbf{x} = \vect{OP} + t\vect{PQ}\) since this makes sure that, for \(t=0\text{,}\) our line passes through \(P\text{,}\) and for \(t=1\text{,}\) it passes through \(Q\text{.}\) The vector equation is therefore given by</p>
+<div class="displaymath" id="p-193">
+\begin{equation*}
+\mbf{x}
+=
+\begin{bmatrix} 
+3\\-1\\4
+\end{bmatrix} 
++
+t
+\left(
+\begin{bmatrix} 
+3\\-1\\5
+\end{bmatrix} 
+-
+\begin{bmatrix} 
+3\\-1\\4
+\end{bmatrix} 
+\right)
+=
+\begin{bmatrix} 
+3\\-1\\4
+\end{bmatrix} 
++
+t
+\begin{bmatrix} 
+0\\0\\1
+\end{bmatrix} 
+\end{equation*}
+</div>
+<p id="p-194">The parametric form is then</p>
+<div class="displaymath" id="p-195">
+\begin{equation*}
+x_1 = 3
+;
+x_2 = -1
+;
+x_3 = 4+t
+.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-21" id="answer-21"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-21"><div class="answer solution-like">
+<p id="p-196">Vector equation:</p>
+<div class="displaymath" id="p-197">
+\begin{equation*}
+\mbf{x}
+=
+\begin{bmatrix} 
+3\\-1\\4
+\end{bmatrix} 
++
+t
+\begin{bmatrix} 
+0\\0\\1
+\end{bmatrix} 
+\end{equation*}
+</div>
+<p id="p-198">Parametric form:</p>
+<div class="displaymath" id="p-199">
+\begin{equation*}
+x_1 = 3
+;
+x_2 = -1
+;
+x_3 = 4+t
+\end{equation*}
+</div>
+</div></div></p>
+</li>
+<li id="li-108">
+<p id="p-200">The line parallel to \(\begin{bmatrix} 1 \\ 1\\ 1 \end{bmatrix} \) and passing through \(P=(1,1,1)\text{.}\)</p>
+<p id="p-201"> <a data-knowl="" class="id-ref" data-refid="hk-solution-29" id="solution-29"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-29"><div class="solution solution-like">
+<p id="p-202">The vector equation is given by</p>
+<div class="displaymath" id="p-203">
+\begin{equation*}
+\mbf{x}
+=
+\begin{bmatrix} 
+1\\1\\1
+\end{bmatrix} 
++
+t
+\begin{bmatrix} 
+1\\1\\1
+\end{bmatrix} ,
+\end{equation*}
+</div>
+<p id="p-204">because for \(t=1\text{,}\) we are at the perscribed point, and we have given the line the perscribed direction.</p>
+<p id="p-205">The parametric form is therefore given by</p>
+<div class="displaymath" id="p-206">
+\begin{equation*}
+x_1 = 1+t
+;
+x_2 = 1+t
+;
+x_3 = 1+t
+.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-22" id="answer-22"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-22"><div class="answer solution-like">
+<p id="p-207">Vector equation:</p>
+<div class="displaymath" id="p-208">
+\begin{equation*}
+\mbf{x}
+=
+=
+\begin{bmatrix} 
+1\\1\\1
+\end{bmatrix} 
++
+t
+\begin{bmatrix} 
+1\\1\\1
+\end{bmatrix} 
+\end{equation*}
+</div>
+<p id="p-209">Parametric form:</p>
+<div class="displaymath" id="p-210">
+\begin{equation*}
+x_1 = 1+t
+;
+x_2 = 1+t
+;
+x_3 = 1+t
+\end{equation*}
+</div>
+</div></div></p>
+</li>
+<li id="li-109">
+<p id="p-211">The line passing through \(P=(1,0,-3)\) and parallel to the line with parametric equations \(x_1 = -1 +2t\text{,}\) \(x_2 = 2-t\text{,}\) and \(x_3= 3+3t\text{.}\)</p>
+<p id="p-212"> <a data-knowl="" class="id-ref" data-refid="hk-solution-30" id="solution-30"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-30"><div class="solution solution-like">
+<p id="p-213">First, let us find a directional vector for the line whose parametric equations are given. For \(t=0\text{,}\) that line passes through the point \(Q=(-1,2,3)\) and for \(t=1\text{,}\) it passes through \(R=(1,1,6)\text{.}\) Therefore, the vector</p>
+<div class="displaymath" id="p-214">
+\begin{equation*}
+\vect{QR}=
+\begin{bmatrix} 
+1-(-1) \\ 1-2 \\ 6-3
+\end{bmatrix} 
+=
+\begin{bmatrix} 
+2 \\ -1 \\ 3
+\end{bmatrix} 			 		
+\end{equation*}
+</div>
+<p id="p-215">gives the direction of said line.</p>
+<p id="p-216">The vector equation of the line in question is therefore given by</p>
+<div class="displaymath" id="p-217">
+\begin{equation*}
+\mbf{x}
+=
+\begin{bmatrix} 
+1 \\ 0\\ -3
+\end{bmatrix} 
++
+t
+\begin{bmatrix} 
+2 \\ -1 \\ 3
+\end{bmatrix} ,
+\end{equation*}
+</div>
+<p id="p-218">because for \(t=0\text{,}\) it passes through \(P\text{,}\) and it has the perscribed directional vector.</p>
+<p id="p-219">The parametric form is then given by</p>
+<div class="displaymath" id="p-220">
+\begin{equation*}
+x_1 = 1+2t
+;
+x_2 = -t
+;
+x_3 = -3+3t
+.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-23" id="answer-23"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-23"><div class="answer solution-like">
+<p id="p-221">Vector equation:</p>
+<div class="displaymath" id="p-222">
+\begin{equation*}
+\mbf{x}
+=
+\begin{bmatrix} 
+1 \\ 0\\ -3
+\end{bmatrix} 
++
+t
+\begin{bmatrix} 
+2 \\ -1 \\ 3
+\end{bmatrix} 
+\end{equation*}
+</div>
+<p id="p-223">Parametric form:</p>
+<div class="displaymath" id="p-224">
+\begin{equation*}
+x_1 = 1+2t
+;
+x_2 = -t
+;
+x_3 = -3+3t.
+\end{equation*}
+</div>
+</div></div></p>
+</li>
+<li id="li-110">
+<p id="p-225">The line passing through \(P=(2,-1,1)\) and parallel to the line with parametric equations \(x_1 =2-t\text{,}\) \(x_2 =1\) and \(x_3 = t\text{.}\)</p>
+<p id="p-226"> <a data-knowl="" class="id-ref" data-refid="hk-solution-31" id="solution-31"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-31"><div class="solution solution-like">
+<p id="p-227">First, let us find a directional vector for the line whose parametric equations are given. For \(t=0\text{,}\) that line passes through the point \(Q=(2,1,0)\) and for \(t=1\text{,}\) it passes through \(R=(1,1,1)\text{.}\) Therefore, the vector</p>
+<div class="displaymath" id="p-228">
+\begin{equation*}
+\vect{QR}=
+\begin{bmatrix} 
+1-2 \\ 1-1 \\ 1-0
+\end{bmatrix} 
+=
+\begin{bmatrix} 
+-1 \\ 0 \\ 1
+\end{bmatrix} 			 		
+\end{equation*}
+</div>
+<p id="p-229">gives the direction of said line.</p>
+<p id="p-230">The vector equation of the line in question is therefore given by</p>
+<div class="displaymath" id="p-231">
+\begin{equation*}
+\mbf{x}
+=
+\begin{bmatrix} 
+2 \\ -1 \\ 1
+\end{bmatrix} 
++
+t
+\begin{bmatrix} 
+-1 \\ 0 \\ 1
+\end{bmatrix} 
+\end{equation*}
+</div>
+<p id="p-232">The parametric form is therefore given by</p>
+<div class="displaymath" id="p-233">
+\begin{equation*}
+x_1 = 2-t
+;
+x_2 = -1
+;
+x_3 = 1+t
+.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-24" id="answer-24"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-24"><div class="answer solution-like">
+<p id="p-234">Vector equation:</p>
+<div class="displaymath" id="p-235">
+\begin{equation*}
+\mbf{x}
+=
+\begin{bmatrix} 
+2 \\ -1 \\ 1
+\end{bmatrix} 
++
+t
+\begin{bmatrix} 
+-1 \\ 0 \\ 1
+\end{bmatrix} 
+\end{equation*}
+</div>
+<p id="p-236">Parametric form:</p>
+<div class="displaymath" id="p-237">
+\begin{equation*}
+x_1 = 2-t
+;
+x_2 = -1
+;
+x_3 = 1+t
+\end{equation*}
+</div>
+</div></div></p>
+</li>
+<li id="li-111">
+<p id="p-238">The lines through \(P=(1,0,1)\) that meet the line \(\ell\) whose vector equation is given by \(\mathbf{x} = \begin{bmatrix} 1 \\ 2\\ 0 \end{bmatrix}  +t \begin{bmatrix} 2 \\ -1\\ 2 \end{bmatrix} \) at points with distance 3 from \(Q=(1,2,0)\text{.}\)</p>
+<p id="p-239"> <a data-knowl="" class="id-ref" data-refid="hk-solution-32" id="solution-32"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-32"><div class="solution solution-like">
+<p id="p-240">First, let us find the points \(R\) on \(\ell\) that have distance \(3\) from \(Q\text{:}\) Having distance \(3\) means exactly that</p>
+<div class="displaymath" id="p-241">
+\begin{equation*}
+\norm{ \vect{QR} } = 3.
+\end{equation*}
+</div>
+<p id="p-242">The fact that \(R\) is on \(\ell\) means that, for some real number \(t\text{,}\) we have</p>
+<div class="displaymath" id="p-243">
+\begin{equation*}
+\vect{OR} = 
+\begin{bmatrix} 
+1 \\ 2\\ 0
+\end{bmatrix} 
++
+t
+\begin{bmatrix} 
+2 \\ -1\\ 2
+\end{bmatrix} 
+\end{equation*}
+</div>
+<p id="p-244">Thus,</p>
+<div class="displaymath" id="p-245">
+\begin{equation*}
+\vect{QR} = 
+\left(
+\begin{bmatrix} 
+1 \\ 2\\ 0
+\end{bmatrix} 
++
+t
+\begin{bmatrix} 
+2 \\ -1\\ 2
+\end{bmatrix} 
+\right)
+-
+\begin{bmatrix} 
+1\\2\\0
+\end{bmatrix}
+=
+\begin{bmatrix} 
+2t \\ -t\\ 2t
+\end{bmatrix}
+\end{equation*}
+</div>
+<p id="p-246">and we therefore want</p>
+<div class="displaymath" id="p-247">
+\begin{equation*}
+\norm{ \begin{bmatrix} 
+2t \\ -t\\ 2t
+\end{bmatrix} } = 3,
+\text{ i.e. }
+(2t)^2 + (-t)^2 + (2t)^2 = 9.
+\end{equation*}
+</div>
+<p id="p-248">This means, we need \(9t^2=9\text{,}\) or in other words, \(t=\pm 1\text{.}\) Therefore, there are two points \(R_+, R_-\) on \(\ell\) which have distance \(3\) from \(Q\text{,}\) namely the points that satisfy</p>
+<div class="displaymath" id="p-249">
+\begin{equation*}
+\vect{O R_+} = 
+\begin{bmatrix} 
+1 \\ 2\\ 0
+\end{bmatrix} 
++
+1
+\begin{bmatrix} 
+2 \\ -1\\ 2
+\end{bmatrix}
+=
+\begin{bmatrix} 
+3 \\ 1\\ 2
+\end{bmatrix} 
+\end{equation*}
+</div>
+<p id="p-250">and</p>
+<div class="displaymath" id="p-251">
+\begin{equation*}
+\vect{OR_-} = 
+\begin{bmatrix} 
+1 \\ 2\\ 0
+\end{bmatrix} 
+-
+1
+\begin{bmatrix} 
+2 \\ -1\\ 2
+\end{bmatrix} 
+=
+\begin{bmatrix} 
+-1 \\ 3\\ -2
+\end{bmatrix} 
+.
+\end{equation*}
+</div>
+<p id="p-252">Any line through \(P\) can be described by the vector equation</p>
+<div class="displaymath" id="p-253">
+\begin{equation*}
+\mbf{x}
+=
+\vect{OP}
++
+s
+\mbf{d}
+\end{equation*}
+</div>
+<p id="p-254">for some directional vector \(\mbf{d}\text{.}\) For our line to go through \(R_+\text{,}\) we need to choose</p>
+<div class="displaymath" id="p-255">
+\begin{equation*}
+\mbf{d}
+=
+\vect{PR_+}
+=
+\begin{bmatrix} 
+3 \\ 1\\ 2
+\end{bmatrix} 
+-
+\begin{bmatrix} 
+1 \\ 0\\ 1
+\end{bmatrix} 
+=
+\begin{bmatrix} 
+2 \\ 1\\ 1
+\end{bmatrix}
+\end{equation*}
+</div>
+<p id="p-256">and the vector equation for this line is then given by</p>
+<div class="displaymath" id="p-257">
+\begin{equation*}
+\mbf{x}
+=
+\begin{bmatrix} 
+1 \\ 0\\ 1
+\end{bmatrix} 
++
+s
+\begin{bmatrix} 
+2 \\ 1\\ 1
+\end{bmatrix}
+.
+\end{equation*}
+</div>
+<p id="p-258">Its parametric form is therefore given by</p>
+<div class="displaymath" id="p-259">
+\begin{equation*}
+x_1 = 1+2s
+;
+x_2 = s
+;
+x_3 = 1+s
+.
+\end{equation*}
+</div>
+<p id="p-260">For the line to go through \(R_-\) on the other hand, we need to choose</p>
+<div class="displaymath" id="p-261">
+\begin{equation*}
+\mbf{d}
+=
+\vect{PR_-}
+=
+\begin{bmatrix} 
+-1 \\ 3\\ -2
+\end{bmatrix} 
+-
+\begin{bmatrix} 
+1 \\ 0\\ 1
+\end{bmatrix} 
+=
+\begin{bmatrix} 
+-2 \\ 3\\ -3
+\end{bmatrix}
+\end{equation*}
+</div>
+<p id="p-262">and the vector equation for this line is then given by</p>
+<div class="displaymath" id="p-263">
+\begin{equation*}
+\mbf{x}
+=
+\begin{bmatrix} 
+1 \\ 0\\ 1
+\end{bmatrix} 
++
+s
+\begin{bmatrix} 
+-2 \\ 3\\ -3
+\end{bmatrix}
+.
+\end{equation*}
+</div>
+<p id="p-264">Its parametric form is then given by</p>
+<div class="displaymath" id="p-265">
+\begin{equation*}
+x_1 = 1-2s
+;
+x_2 = 3s
+;
+x_3 = 1-3s
+.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-25" id="answer-25"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-25"><div class="answer solution-like">There are two lines that meet the given line at distance \(3\) from \(Q\) and go through \(P\text{:}\) <p id="p-266">Vector equation of the first line:</p>
+<div class="displaymath" id="p-267">
+\begin{equation*}
+\mbf{x}
+=
+\begin{bmatrix} 
+1 \\ 0\\ 1
+\end{bmatrix} 
++
+t
+\begin{bmatrix} 
+2 \\ 1\\ 1
+\end{bmatrix}
+\end{equation*}
+</div>
+<p id="p-268">Parametric form of the first line:</p>
+<div class="displaymath" id="p-269">
+\begin{equation*}
+x_1 = 1+2t
+;
+x_2 = t
+;
+x_3 = 1+t
+\end{equation*}
+</div>
+<p id="p-270">Vector equation of the second line:</p>
+<div class="displaymath" id="p-271">
+\begin{equation*}
+\mbf{x}
+=
+\begin{bmatrix} 
+1 \\ 0\\ 1
+\end{bmatrix} 
++
+t
+\begin{bmatrix} 
+-2 \\ 3\\ -3
+\end{bmatrix}
+\end{equation*}
+</div>
+<p id="p-272">Parametric form of the second line:</p>
+<div class="displaymath" id="p-273">
+\begin{equation*}
+x_1 = 1-2t
+;
+x_2 = 3t
+;
+x_3 = 1-3t
+.
+\end{equation*}
+</div>
+</div></div></p>
+</li>
+</ol></article></p>
+<p id="p-274"><article class="exercise exercise-like" id="exercise-28"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<aside class="aside aside-like" id="aside-28"><p id="p-275">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Section 4.2, Exercise 4.2.14.)</p></aside> Find the normal, general, and parametric form of each of the following planes. <a data-knowl="" class="id-ref" data-refid="hk-hint-def-cross-product-and-it-is-normal" id="hint-def-cross-product-and-it-is-normal"><span class="type">Hint</span> <span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-def-cross-product-and-it-is-normal"><div class="hint solution-like">To find a vector in \(\mathbb{R}^3\) that is normal to a plane, you need to find two <em class="emphasis">non-parallel</em> vectors \(\mbf{a}\) and \(\mbf{b}\) in the plane and compute their <em class="emphasis">cross product</em><div class="displaymath">
+\begin{equation*}
+\mbf{a}\times \mbf{b}
+=
+\begin{bmatrix}
+a_2b_3-a_3b_2\\
+a_3b_1-a_1b_3\\
+a_1b_2-a_2b_1
+\end{bmatrix}
+\end{equation*}
+</div>where \(a_i, b_i\) are the three components of \(\mbf{a}\) resp. \(\mbf{b}\text{.}\) This vector is orthogonal to both \(\mbf{a}\) and \(\mbf{b}\) and hence normal to the plane.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-what-is-needed-for-normal-form" id="hint-what-is-needed-for-normal-form"><span class="type">Hint</span> <span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-what-is-needed-for-normal-form"><div class="hint solution-like">In order to determine the <em class="emphasis">normal form</em> of a plane, you need both a single point \(P\) on the plane and a normal vector \(\mbf{n}\) to the plane. Then, any point \(X=(x_1,x_2,x_3)\) on the plane can be described by the normal form \(\mbf{n}\cdot\vect{PX}=0\text{.}\)</div></div>
+<ol class="lower-alpha">
+<li id="li-112">
+<p id="p-276">Passing through \(A=(2,1,3)\text{,}\)  \(B=(1,1,3)\text{,}\) and \(C=(1,2,-3)\text{.}\)</p>
+<p id="p-277"><a data-knowl="" class="id-ref" data-refid="hk-solution-33" id="solution-33"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-33"><div class="solution solution-like">
+<p id="p-278">To find a normal vector \(\mbf{n}\text{,}\) we need two <em class="emphasis">non-parallel</em> vectors in the plane; for example, the two vectors</p>
+<div class="displaymath" id="p-279">
+\begin{equation*}
+\vect{AB}
+=
+\begin{bmatrix} 
+3 \\ -1\\ 5
+\end{bmatrix} 
+-
+\begin{bmatrix} 
+1 \\ 1\\ 3
+\end{bmatrix} 
+=
+\begin{bmatrix} 
+2 \\ -2\\ 2
+\end{bmatrix} 
+\end{equation*}
+</div>
+<p id="p-280">and</p>
+<div class="displaymath" id="p-281">
+\begin{equation*}
+\vect{AC}
+=
+\begin{bmatrix} 
+1 \\ 2\\ -3
+\end{bmatrix} 
+-
+\begin{bmatrix} 
+1 \\ 1\\ 3
+\end{bmatrix} 
+=
+\begin{bmatrix} 
+0 \\ 1 \\ -6
+\end{bmatrix}								 			
+\end{equation*}
+</div>
+<p id="p-282">would do. (If these two vectors had turned out to be parallel, then the three given points \(A, B, C\) would lie on a line, so they would not determine a plane.) A vector \(\mbf{n}\) which is orthogonal to both \(\vect{AB}\) and \(\vect{AC}\) is then given by their cross product (see <a data-knowl="./knowl/hint-def-cross-product-and-it-is-normal.html" title="Hint 1">Hint 1</a>):</p>
+<div class="displaymath" id="p-283">
+\begin{equation*}
+\mbf{n}
+=
+\vect{AB}
+\times
+\vect{AC}
+=
+\begin{bmatrix}
+(-2) \cdot (-6) - 2 \cdot 1 \\
+2 \cdot 0 - 2 \cdot (-6) \\
+2 \cdot 1 - (-2)\cdot  0
+\end{bmatrix}
+=
+\begin{bmatrix}
+10 \\
+12 \\
+2
+\end{bmatrix}
+.
+\end{equation*}
+</div>
+<p id="p-284">The normal form, \(\mbf{n}\cdot\vect{AX}=0\text{,}\) is now explicitly given by</p>
+<div class="displaymath" id="p-285">
+\begin{equation*}
+\begin{bmatrix}
+10 \\
+12 \\
+2
+\end{bmatrix}
+\cdot
+\begin{bmatrix} 
+x_1 - 1 \\ x_2 - 1\\ x_3 -3
+\end{bmatrix} 
+=
+0
+\end{equation*}
+</div>
+<p id="p-286">or equivalently</p>
+<div class="displaymath" id="p-287">
+\begin{equation*}
+\begin{bmatrix}
+10 \\
+12 \\
+2
+\end{bmatrix}
+\cdot
+\mbf{x}
+=
+\begin{bmatrix}
+10 \\
+12 \\
+2
+\end{bmatrix}
+\cdot
+\begin{bmatrix} 
+1 \\ 1\\ 3
+\end{bmatrix}
+=
+28
+.
+\end{equation*}
+</div>
+<p id="p-288">We get the general form by simply computing the dot product on both sides:</p>
+<div class="displaymath" id="p-289">
+\begin{equation*}
+10x_1
++
+12x_2
++
+2x_3
+=
+28.
+\end{equation*}
+</div>
+<p id="p-290">Lastly, we compute the parametric form by first giving the vector form:</p>
+<div class="displaymath" id="p-291">
+\begin{equation*}
+\mbf{x}
+=
+\vect{OA}
++t\vect{AB}
++s\vect{AC}
+=
+\begin{bmatrix} 
+1 \\ 1\\ 3
+\end{bmatrix} 
++t\begin{bmatrix} 
+2 \\ -2\\ 2
+\end{bmatrix} 
++s
+\begin{bmatrix} 
+0 \\ 1 \\ -6
+\end{bmatrix}.
+\end{equation*}
+</div>
+<p id="p-292">The parametric form can now be read off:</p>
+<div class="displaymath" id="p-293">
+\begin{equation*}
+x_1 = 1+2t
+;
+x_2 = 1-2t+s
+;
+x_3 = 3+2t-6s.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-26" id="answer-26"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-26"><div class="answer solution-like">
+<p id="p-294">Normal form:</p>
+<div class="displaymath" id="p-295">
+\begin{equation*}
+\begin{bmatrix}
+10 \\
+12 \\
+2
+\end{bmatrix}
+\cdot
+\begin{bmatrix} 
+x_{1} \\ x_{2}\\ x_{3}
+\end{bmatrix} 
+=
+28
+\end{equation*}
+</div>
+<p id="p-296">General form:</p>
+<div class="displaymath" id="p-297">
+\begin{equation*}
+5x_1
++
+6x_2
++
+x_3
+=
+14
+\end{equation*}
+</div>
+<p id="p-298">Parametric form:</p>
+<div class="displaymath" id="p-299">
+\begin{equation*}
+x_1 = 1+2t
+;
+x_2 = 1-2t+s
+;
+x_3 = 3+2t-6s
+\end{equation*}
+</div>
+</div></div></p>
+</li>
+<li id="li-113">
+<p id="p-300">Passing through \(A=(1,-1,6)\text{,}\) \(B=(0,0,1)\text{,}\) and \(C=(4,7,-11)\text{.}\)</p>
+<p id="p-301"><a data-knowl="" class="id-ref" data-refid="hk-solution-34" id="solution-34"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-34"><div class="solution solution-like">
+<p id="p-302">To find a normal vector \(\mbf{n}\) to the plane, we need two <em class="emphasis">non-parallel</em> vectors in the plane; for example, the two vectors</p>
+<div class="displaymath" id="p-303">
+\begin{equation*}
+\vect{BA}
+=
+\begin{bmatrix} 
+1 \\ -1\\ 6
+\end{bmatrix} 
+-
+\begin{bmatrix} 
+0 \\ 0\\ 1
+\end{bmatrix} 
+=
+\begin{bmatrix} 
+1 \\ -1\\ 5
+\end{bmatrix} 
+\end{equation*}
+</div>
+<p id="p-304">and</p>
+<div class="displaymath" id="p-305">
+\begin{equation*}
+\vect{BC}
+=
+\begin{bmatrix} 
+4 \\ 7\\ -11
+\end{bmatrix} 
+-
+\begin{bmatrix} 
+0\\0\\1
+\end{bmatrix} 
+=
+\begin{bmatrix} 
+4 \\ 7\\ -12
+\end{bmatrix}								 			
+\end{equation*}
+</div>
+<p id="p-306">would do. (If these two vectors had turned out to be parallel, then the three given points \(A, B, C\) would lie on a line, so they would not determine a plane.) A vector \(\mbf{n}\) which is orthogonal to both \(\vect{BA}\) and \(\vect{BC}\) is then given by their cross product:</p>
+<div class="displaymath" id="p-307">
+\begin{equation*}
+\mbf{n}
+=
+\vect{BA}
+\times
+\vect{BC}
+=
+\begin{bmatrix}
+(-1) \cdot (-12) - 5 \cdot 7 \\
+5 \cdot 4 - 1 \cdot (-12) \\
+1 \cdot 7 - 4\cdot (-1)
+\end{bmatrix}
+=
+\begin{bmatrix}
+-23 \\
+32 \\
+11
+\end{bmatrix}
+.
+\end{equation*}
+</div>
+<p id="p-308">The normal form, \(\mbf{n}\cdot\vect{BX}=0\text{,}\) is now explicitly given by</p>
+<div class="displaymath" id="p-309">
+\begin{equation*}
+\begin{bmatrix}
+-23 \\
+32 \\
+11
+\end{bmatrix}
+\cdot
+\begin{bmatrix} 
+x_1 - 0 \\ x_2 - 0\\ x_3 - 1
+\end{bmatrix} 
+=
+0
+\end{equation*}
+</div>
+<p id="p-310">or equivalently</p>
+<div class="displaymath" id="p-311">
+\begin{equation*}
+\begin{bmatrix}
+-23 \\
+32 \\
+11
+\end{bmatrix}
+\cdot
+\mbf{x}
+=
+\begin{bmatrix}
+-23 \\
+32 \\
+11
+\end{bmatrix}
+\cdot
+\begin{bmatrix} 
+0 \\ 0\\ 1
+\end{bmatrix}
+=
+11
+.
+\end{equation*}
+</div>
+<p id="p-312">We get the general form by simply computing the dot product on both sides:</p>
+<div class="displaymath" id="p-313">
+\begin{equation*}
+-23x_1
++
+32x_2
++
+11x_3
+=
+11.
+\end{equation*}
+</div>
+<p id="p-314">Lastly, we compute the parametric form by first giving the vector form:</p>
+<div class="displaymath" id="p-315">
+\begin{equation*}
+\mbf{x}
+=
+\vect{OB}
++t\vect{BA}
++s\vect{BC}
+=
+\begin{bmatrix} 
+0 \\ 0 \\ 1
+\end{bmatrix} 
++t\begin{bmatrix} 
+1 \\ -1\\ 5
+\end{bmatrix} 
++s
+\begin{bmatrix} 
+4 \\ 7\\ -12
+\end{bmatrix}.
+\end{equation*}
+</div>
+<p id="p-316">The parametric form can now be read off:</p>
+<div class="displaymath" id="p-317">
+\begin{equation*}
+x_1 =  t + 4s
+;
+x_2 = -t + 7s
+;
+x_3 =  1+ 5t - 12s.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-27" id="answer-27"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-27"><div class="answer solution-like">
+<p id="p-318">Normal form:</p>
+<div class="displaymath" id="p-319">
+\begin{equation*}
+\begin{bmatrix}
+-23 \\
+32 \\
+11
+\end{bmatrix}
+\cdot
+\mbf{x}
+=
+11
+\end{equation*}
+</div>
+<p id="p-320">General form:</p>
+<div class="displaymath" id="p-321">
+\begin{equation*}
+-23x_1
++
+32x_2
++
+11x_3
+=
+11
+\end{equation*}
+</div>
+<p id="p-322">Parametric form:</p>
+<div class="displaymath" id="p-323">
+\begin{equation*}
+x_1 =  t + 4s
+;
+x_2 = -t + 7s
+;
+x_3 = 1+ 5t - 12s
+\end{equation*}
+</div>
+</div></div></p>
+</li>
+<li id="li-114">
+<p id="p-324">Passing through \(P=(2,-3,5)\) and parallel to the plane with general equation \(3x_1-2x_2-x_3=0\text{.}\)</p>
+<p id="p-325"><a data-knowl="" class="id-ref" data-refid="hk-solution-35" id="solution-35"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-35"><div class="solution solution-like">Two planes are parallel if and only if they have the same normal vectors. Therefore, we should first find a  normal vector to the plane whose general equation is given: If we chose <div class="displaymath" id="p-326">
+\begin{equation*}
+\mbf{n}
+=
+\begin{bmatrix}
+3 \\
+-2 \\
+-1
+\end{bmatrix},
+\end{equation*}
+</div> then the given general form is equivalent to <div class="displaymath" id="p-327">
+\begin{equation*}
+\mbf{n}
+\cdot\mbf{x}
+=0,
+\end{equation*}
+</div> so \(\mbf{n}\) is indeed a normal vector. With this at hand, any point \(X=(x_1,x_2,x_3)\) on the plane whose normal form we are after can be described by \(\mbf{n}\cdot\vect{PX}=0\text{,}\) or more explicitly: <div class="displaymath" id="p-328">
+\begin{equation*}
+\begin{bmatrix}
+3 \\
+-2 \\
+-1
+\end{bmatrix}
+\cdot
+\left(
+\mbf{x}
+-
+\begin{bmatrix}
+2 \\
+- 3 \\
+5
+\end{bmatrix}
+\right)
+=0
+\end{equation*}
+</div> To get the general form, we have to compute the dot product on the left-hand side and rearrange: <div class="displaymath" id="p-329">
+\begin{equation*}
+3x_{1} - 2 x_{2} - x_{3}							
+= 7.
+\end{equation*}
+</div> For the vector form, we need two <em class="emphasis">non-parallel</em> vectors \(\mbf{u}\text{,}\) \(\mbf{v}\) which are orthogonal to \(\mbf{n}\text{,}\) i.e. they need to satisfy <div class="displaymath" id="p-330">
+\begin{equation*}
+\mbf{u}\cdot \begin{bmatrix}
+3 \\
+-2 \\
+-1
+\end{bmatrix}
+=
+0
+\text{ and }
+\mbf{v}\cdot \begin{bmatrix}
+3 \\
+-2 \\
+-1
+\end{bmatrix}
+=
+0.
+\end{equation*}
+</div> For example, <div class="displaymath" id="p-331">
+\begin{equation*}
+\mbf{u}
+=
+\begin{bmatrix}
+0 \\
+1 \\
+-2
+\end{bmatrix}
+\text{ and }
+\mbf{v}
+=
+\begin{bmatrix}
+2 \\
+3 \\
+0
+\end{bmatrix}
+\end{equation*}
+</div> work. Therefore, the vector equation of the plane is <div class="displaymath" id="p-332">
+\begin{equation*}
+\mbf{x}
+=
+\vect{OP}
++t\mbf{u}
++s\mbf{v}
+=
+\begin{bmatrix}
+2\\-3\\5
+\end{bmatrix}
++t\begin{bmatrix}
+0 \\
+1 \\
+-2
+\end{bmatrix}
++s\begin{bmatrix}
+2 \\
+3 \\
+0
+\end{bmatrix}
+\end{equation*}
+</div> and so the parametric equations are <div class="displaymath" id="p-333">
+\begin{equation*}
+x_1 =  2 +2s
+;
+x_2 =  -3 + t + 3s
+;
+x_3 =  5 -2t.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-28" id="answer-28"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-28"><div class="answer solution-like">
+<p id="p-334">Normal form:</p>
+<div class="displaymath" id="p-335">
+\begin{equation*}
+\begin{bmatrix}
+3 \\
+-2 \\
+-1
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3
+\end{bmatrix}=
+7
+\end{equation*}
+</div>
+<p id="p-336">General form:</p>
+<div class="displaymath" id="p-337">
+\begin{equation*}
+3x_{1} - 2 x_{2} - x_{3}							
+= 7
+\end{equation*}
+</div>
+<p id="p-338">Parametric form:</p>
+<div class="displaymath" id="p-339">
+\begin{equation*}
+x_1 =  2 +2s
+;
+x_2 =  -3 + t + 3s
+;
+x_3 =  5 -2t
+\end{equation*}
+</div>
+</div></div></p>
+</li>
+<li id="li-115">
+<p id="p-340">Passing through \(P=(3,0,-1)\) and parallel to the plane with equation \(2x_1-x_2+x_3=3\text{.}\)</p>
+<p id="p-341"><a data-knowl="" class="id-ref" data-refid="hk-solution-36" id="solution-36"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-36"><div class="solution solution-like">Two planes are parallel if and only if they have the same normal vectors. Therefore, we should first find a  normal vector to the plane whose general equation is given: If we chose <div class="displaymath" id="p-342">
+\begin{equation*}
+\mbf{n}
+=
+\begin{bmatrix}
+2 \\
+-1 \\
+1
+\end{bmatrix},
+\end{equation*}
+</div> then the given general form is equivalent to <div class="displaymath" id="p-343">
+\begin{equation*}
+\mbf{n}
+\cdot\mbf{x}
+=3,
+\end{equation*}
+</div> so \(\mbf{n}\) is indeed a normal vector. With this at hand, any point \(X=(x_1,x_2,x_3)\) on the plane whose normal form we are after can be described by \(\mbf{n}\cdot\vect{PX}=0\text{,}\) or more explicitly: <div class="displaymath" id="p-344">
+\begin{equation*}
+\begin{bmatrix}
+2 \\
+-1 \\
+1
+\end{bmatrix}
+\cdot
+\left(
+\mbf{x}
+-
+\begin{bmatrix}
+3 \\
+0 \\
+-1
+\end{bmatrix}
+\right)
+=0
+\end{equation*}
+</div> To get the general form, we have to compute the dot product on the left-hand side and rearrange: <div class="displaymath" id="p-345">
+\begin{equation*}
+2x_{1} - x_{2} + x_{3}							
+= 5.
+\end{equation*}
+</div> For the vector form, we need two <em class="emphasis">non-parallel</em> vectors \(\mbf{u}\text{,}\) \(\mbf{v}\) which are orthogonal to \(\mbf{n}\text{,}\) i.e. they need to satisfy <div class="displaymath" id="p-346">
+\begin{equation*}
+\mbf{u}\cdot \begin{bmatrix}
+2 \\
+-1 \\
+1
+\end{bmatrix}
+=
+0
+\text{ and }
+\mbf{v}\cdot \begin{bmatrix}
+2 \\
+-1 \\
+1
+\end{bmatrix}
+=
+0.
+\end{equation*}
+</div> For example, <div class="displaymath" id="p-347">
+\begin{equation*}
+\mbf{u}
+=
+\begin{bmatrix}
+0 \\
+1 \\
+1
+\end{bmatrix}
+\text{ and }
+\mbf{v}
+=
+\begin{bmatrix}
+1 \\
+2 \\
+0
+\end{bmatrix}
+\end{equation*}
+</div> work. Therefore, the vector equation of the plane is <div class="displaymath" id="p-348">
+\begin{equation*}
+\mbf{x}
+=
+\vect{OP}
++t\mbf{u}
++s\mbf{v}
+=
+\begin{bmatrix}
+3 \\
+0 \\
+-1
+\end{bmatrix}
++t\begin{bmatrix}
+0 \\
+1 \\
+1
+\end{bmatrix}
++s\begin{bmatrix}
+1 \\
+2 \\
+0
+\end{bmatrix}
+\end{equation*}
+</div> and so the parametric equations are <div class="displaymath" id="p-349">
+\begin{equation*}
+x_1 = 3 + s
+;
+x_2 =  t+2s
+;
+x_3 =  -1+t.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-29" id="answer-29"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-29"><div class="answer solution-like">
+<p id="p-350">Normal form:</p>
+<div class="displaymath" id="p-351">
+\begin{equation*}
+\begin{bmatrix}
+2 \\
+-1 \\
+1
+\end{bmatrix}
+\cdot
+\left(
+\mbf{x}
+-
+\begin{bmatrix}
+3 \\
+0 \\
+-1
+\end{bmatrix}
+\right)
+=0
+\end{equation*}
+</div>
+<p id="p-352">General form:</p>
+<div class="displaymath" id="p-353">
+\begin{equation*}
+2x_{1} - x_{2} + x_{3}							
+= 5
+\end{equation*}
+</div>
+<p id="p-354">Parametric form:</p>
+<div class="displaymath" id="p-355">
+\begin{equation*}
+x_1 = 3 + s
+;
+x_2 =  t+2s
+;
+x_3 =  -1+t
+\end{equation*}
+</div>
+</div></div></p>
+</li>
+<li id="li-116">
+<p id="p-356">Containing \(P=(3,0,-1)\) and the line</p>
+<div class="displaymath">
+\begin{equation*}
+\mbf{x}  = \begin{bmatrix} 0 \\ 0\\ 2 \end{bmatrix} +t\begin{bmatrix} 1 \\ 0\\ 1 \end{bmatrix} 
+\end{equation*}
+</div>
+<p id="p-357"><a data-knowl="" class="id-ref" data-refid="hk-solution-37" id="solution-37"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-37"><div class="solution solution-like">Since the plane contains the line, it in particular contains the point \(Q=(0,0,2)\) (choose \(t=0\) in the line equation). Since \(P\) is assumed to be in the plane, we conclude that the line that goes through \(Q=(0,0,2)\) and \(P\text{,}\) whose vector form is given by <div class="displaymath" id="p-358">
+\begin{equation*}
+\mbf{x}  =
+\vect{OQ}
++
+s\vect{QP}
+= 
+\begin{bmatrix} 0 \\ 0\\ 2 \end{bmatrix}
++
+s\begin{bmatrix} 3 \\ 0\\ -3 \end{bmatrix}
+,
+\end{equation*}
+</div> is also contained in the plane. Since this second line's directional vector is not parallel to the first line's directional vector, we conclude that the plane is spanned by those two directional vectors and thus has vector form <div class="displaymath" id="p-359">
+\begin{equation*}
+\mbf{x} 
+=
+\begin{bmatrix} 0 \\ 0\\ 2 \end{bmatrix} 
++
+t\begin{bmatrix} 1 \\ 0\\ 1 \end{bmatrix}
++
+s \begin{bmatrix} 3 \\ 0\\ -3 \end{bmatrix}
+.
+\end{equation*}
+</div> In particular, the parametric equations are <div class="displaymath" id="p-360">
+\begin{equation}
+x_1 = t + 3s
+;
+x_2 =  0
+;
+x_3 =  2+t-3s.\label{eq1}\tag{1.3.1}
+\end{equation}
+</div> We should remark that we can find a better set of parametric equations, namely <div class="displaymath" id="p-361">
+\begin{equation*}
+x_1 = r
+;
+x_2 =  0
+;
+x_3 =  q,
+\end{equation*}
+</div> where \(r,q\) are any real numbers. To see this, just plug in the following values in <a data-knowl="./knowl/eq1.html" title="Equation 1.3.1">(1.3.1)</a>:<div class="displaymath">
+\begin{equation*}
+t = \frac{1}{2}(r+q-2)
+\text{ and }
+s = \frac{1}{6}(r-q+2)
+.
+\end{equation*}
+</div>We can find a normal vector \(\mbf{n}\) by taking the cross product of the two directional vectors: <div class="displaymath" id="p-362">
+\begin{equation*}
+\mbf{n}
+=
+\begin{bmatrix} 1 \\ 0\\ 1 \end{bmatrix}
+\times
+\begin{bmatrix} 3 \\ 0\\ -3 \end{bmatrix}
+=
+\begin{bmatrix}
+0\cdot(-3) + 1\cdot 0 \\
+1\cdot 3 - 1\cdot (-3) \\
+1\cdot 0 - 0 \cdot 3
+\end{bmatrix}
+=							 				
+\begin{bmatrix}
+0\\
+6 \\
+0
+\end{bmatrix}
+.
+\end{equation*}
+</div> The normal equation of the plane is now given by \(\mbf{n}\cdot\vect{PX}=0\text{,}\) or more explicitly: <div class="displaymath" id="p-363">
+\begin{equation*}
+\begin{bmatrix}
+0\\
+6 \\
+0
+\end{bmatrix}
+\cdot
+\left(
+\mbf{x}
+-
+\begin{bmatrix}
+3 \\
+0 \\
+-1
+\end{bmatrix}
+\right)=0
+\end{equation*}
+</div> and we get the general form by computing the dot product on the left-hand side and rearranging: <div class="displaymath" id="p-364">
+\begin{equation*}
+6x_2
+=
+0,\text{ i.e. }
+x_2 = 0.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-30" id="answer-30"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-30"><div class="answer solution-like">
+<p id="p-365">Normal form:</p>
+<div class="displaymath" id="p-366">
+\begin{equation*}
+\begin{bmatrix}
+0\\
+6 \\
+0
+\end{bmatrix}
+\cdot
+\left(
+\mbf{x}
+-
+\begin{bmatrix}
+3 \\
+0 \\
+-1
+\end{bmatrix}
+\right)=0
+\end{equation*}
+</div>
+<p id="p-367">General form:</p>
+<div class="displaymath" id="p-368">
+\begin{equation*}
+x_2 = 0
+\end{equation*}
+</div>
+<p id="p-369">Parametric form:</p>
+<div class="displaymath" id="p-370">
+\begin{equation*}
+x_1 =  s
+;
+x_2 =  0
+;
+x_3 =  t
+\end{equation*}
+</div>
+</div></div></p>
+</li>
+<li id="li-117">
+<p id="p-371">Containing \(P=(2,1,0)\) and the line</p>
+<div class="displaymath" id="p-372">
+\begin{equation*}
+\mbf{x} = \begin{bmatrix} 3 \\ -1\\ 2 \end{bmatrix} +t\begin{bmatrix} 1 \\ 0\\ -1 \end{bmatrix} 
+\end{equation*}
+</div>
+<p id="p-373"><a data-knowl="" class="id-ref" data-refid="hk-solution-38" id="solution-38"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-38"><div class="solution solution-like">Since the plane contains the line, it in particular contains the point \(Q=(3,-1,2)\) (choose \(t=0\) in the line equation). Since \(P\) is assumed to be in the plane, we conclude that the line that goes through \(Q\) and \(P\text{,}\) whose vector form is given by <div class="displaymath" id="p-374">
+\begin{equation*}
+\mbf{x}  =
+\vect{OQ}
++
+s\vect{QP}
+= 
+\begin{bmatrix} 3 \\ -1 \\ 2 \end{bmatrix}
++
+s\begin{bmatrix} -1 \\ 2 \\ -2 \end{bmatrix}
+,
+\end{equation*}
+</div> is also contained in the plane. Since this second line's directional vector is not parallel to the first line's directional vector, we conclude that the plane is spanned by those two directional vectors and thus has vector form <div class="displaymath" id="p-375">
+\begin{equation*}
+\mbf{x} 
+=
+\begin{bmatrix} 3 \\ -1\\ 2 \end{bmatrix} 
++
+t\begin{bmatrix} 1 \\ 0\\ - 1 \end{bmatrix}
++
+s \begin{bmatrix} -1 \\ 2 \\ -2 \end{bmatrix}
+.
+\end{equation*}
+</div> In particular, the parametric equations are <div class="displaymath" id="p-376">
+\begin{equation*}
+x_1 =  3 + t - s
+;
+x_2 =  -1 + 2s
+;
+x_3 =  2-t-2s.
+\end{equation*}
+</div> We can find a normal vector \(\mbf{n}\) by taking the cross product of the two directional vectors (see <a data-knowl="./knowl/hint-def-cross-product-and-it-is-normal.html" title="Hint 1">Hint 1</a>): <div class="displaymath" id="p-377">
+\begin{equation*}
+\mbf{n}
+=
+\begin{bmatrix} 1 \\ 0\\ - 1 \end{bmatrix}
+\times
+\begin{bmatrix} -1 \\ 2 \\ -2 \end{bmatrix}
+=
+\begin{bmatrix}
+0 \cdot (-2)-(-1) \cdot 2\\
+(-1) \cdot (-1) -1 \cdot (-2)\\
+1 \cdot 2-0\cdot (-1)
+\end{bmatrix})
+=
+\begin{bmatrix}
+2\\
+3\\
+2
+\end{bmatrix})
+.
+\end{equation*}
+</div> The normal equation of the plane is now given by \(\mbf{n}\cdot\vect{PX}=0\text{,}\) or more explicitly: <div class="displaymath" id="p-378">
+\begin{equation*}
+\begin{bmatrix}
+2\\
+3\\
+2
+\end{bmatrix}
+\cdot
+\left(
+\mbf{x}
+-
+\begin{bmatrix}
+3 \\ -1\\ 2
+\end{bmatrix}
+\right)=0
+\end{equation*}
+</div> and we get the general form by computing the dot product on the left-hand side and rearranging: <div class="displaymath" id="p-379">
+\begin{equation*}
+2x_1 + 3x_2 + 2x_3 
+=
+7.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-31" id="answer-31"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-31"><div class="answer solution-like">
+<p id="p-380">Normal form:</p>
+<div class="displaymath" id="p-381">
+\begin{equation*}
+\begin{bmatrix}
+2\\
+3\\
+2
+\end{bmatrix}
+\cdot
+\left(
+\mbf{x}
+-
+\begin{bmatrix}
+3 \\ -1\\ 2
+\end{bmatrix}
+\right)=0
+\end{equation*}
+</div>
+<p id="p-382">General form:</p>
+<div class="displaymath" id="p-383">
+\begin{equation*}
+2x_1 + 3x_2 + 2x_3 
+=
+7
+\end{equation*}
+</div>
+<p id="p-384">Parametric form:</p>
+<div class="displaymath" id="p-385">
+\begin{equation*}
+x_1 =  3 + t - s
+;
+x_2 =  -1 + 2s
+;
+x_3 =  2-t-2s
+\end{equation*}
+</div>
+</div></div></p>
+</li>
+<li id="li-118">
+<p id="p-386">Containing the lines</p>
+<div class="displaymath" id="p-387">
+\begin{equation*}
+\mbf{x} = \begin{bmatrix} 1 \\ -1\\ 2 \end{bmatrix} +t\begin{bmatrix} 1 \\ 1\\ 1 \end{bmatrix}  \ \text{and} \ \
+\mbf{x} = \begin{bmatrix} 0 \\ 0\\ 2 \end{bmatrix} +t\begin{bmatrix} 1 \\ -1\\ 0 \end{bmatrix} .
+\end{equation*}
+</div>
+<p id="p-388"><a data-knowl="" class="id-ref" data-refid="hk-solution-39" id="solution-39"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-39"><div class="solution solution-like">First, we have to find out in which point the two lines meet. (If they do not meet, then they are skew lines since they are clearly not parallel. In this case, they are not in the same plane.) In other words, we are looking for two real numbers \(s, t\) such that<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix} 
+1 \\ -1\\ 2
+\end{bmatrix}
++
+s
+\begin{bmatrix}
+1 \\ 1\\ 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 \\ 0\\ 2
+\end{bmatrix}
++
+t
+\begin{bmatrix} 1 \\ -1\\ 0 \end{bmatrix}
+.
+\end{equation*}
+</div>Componentwise, this vector equation means:<div class="displaymath">
+\begin{equation*}
+1 + s = t;\;
+-1 + s = -t;\;
+2 + s = 2.
+\end{equation*}
+</div>The last equation yields \(s=0\) and both other equations then yield \(t =  1\text{.}\) We conclude that the two lines meet in the point \((1,-1,2)\) because<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix} 
+1 \\ -1\\ 2
+\end{bmatrix}
++
+0
+\begin{bmatrix}
+1 \\ 1\\ 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 \\ 0\\ 2
+\end{bmatrix}
++
+1
+\begin{bmatrix} 1 \\ -1\\ 0 \end{bmatrix}
+=
+\begin{bmatrix} 
+1 \\ -1\\ 2
+\end{bmatrix}
+.
+\end{equation*}
+</div>Since the two lines are not parallel, their directional vectors span the plane that contains them, so we arrive at the following vector equation of the plane,<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix} 
+x_1 \\ x_2 \\ x_3
+\end{bmatrix}
+=
+\begin{bmatrix} 
+1 \\ -1\\ 2
+\end{bmatrix}
++
+r
+\begin{bmatrix}
+1 \\ 1\\ 1
+\end{bmatrix}
++
+q
+\begin{bmatrix}
+1 \\ -1\\ 0
+\end{bmatrix}
+,
+\end{equation*}
+</div>which means in parametric form:<div class="displaymath">
+\begin{equation*}
+x_1 = 1 + r + q
+;
+x_2 = -1 + r - q
+;
+x_3 = 2 + r
+.
+\end{equation*}
+</div>For the normal form, we form the cross product of the two directional vectors to find a normal vector (see <a data-knowl="./knowl/hint-def-cross-product-and-it-is-normal.html" title="Hint 1">Hint 1</a>):<div class="displaymath">
+\begin{equation*}
+\mbf{n}
+=
+\begin{bmatrix}
+1 \\ 1\\ 1
+\end{bmatrix}
+\times
+\begin{bmatrix}
+1 \\ -1\\ 0
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 \cdot 0 -1 \cdot (-1)\\
+1 \cdot 1 - 1 \cdot 0\\
+1 \cdot (-1) -1 \cdot 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+1\\
+1\\
+-2
+\end{bmatrix}
+.
+\end{equation*}
+</div>We now only need a point on the plane, say \((1 , -1 ,2)\text{,}\) to give the normal form \(\mbf{n}\cdot\vect{PX}=0\) explicitly:<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix}
+1\\
+1\\
+-2
+\end{bmatrix}
+\cdot
+\left(
+\begin{bmatrix}
+x_1 - 1\\
+x_2 + 1\\
+x_3 - 2
+\end{bmatrix}
+\right)
+=
+0
+.
+\end{equation*}
+</div>The general form can then be computed to be:<div class="displaymath">
+\begin{equation*}
+x_1 + x_2 - 2 x_3
+=
+-4
+.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-32" id="answer-32"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-32"><div class="answer solution-like">
+<p id="p-389">Normal form:</p>
+<div class="displaymath" id="p-390">
+\begin{equation*}
+\begin{bmatrix}
+1\\
+1\\
+-2
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+x_1 - 1\\
+x_2 + 1\\
+x_3 - 2
+\end{bmatrix}
+=
+0
+\end{equation*}
+</div>
+<p id="p-391">General form:</p>
+<div class="displaymath" id="p-392">
+\begin{equation*}
+x_1 + x_2 - 2 x_3
+=
+-4
+\end{equation*}
+</div>
+<p id="p-393">Parametric form:</p>
+<div class="displaymath" id="p-394">
+\begin{equation*}
+x_1 = 1 + s + t
+;
+x_2 = -1 + s - t
+;
+x_3 = 2 + s
+\end{equation*}
+</div>
+</div></div></p>
+</li>
+<li id="li-119">
+<p id="p-395">Containing the lines</p>
+<div class="displaymath" id="p-396">
+\begin{equation*}
+\mbf{x} = \begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix} +t\begin{bmatrix} 1 \\ -1\\ 3 \end{bmatrix}  \ \text{and} \ \
+\mbf{x} = \begin{bmatrix} 0 \\ -2\\ 5 \end{bmatrix} +t\begin{bmatrix} 2 \\ 1\\ -1 \end{bmatrix} .
+\end{equation*}
+</div>
+<p id="p-397"><a data-knowl="" class="id-ref" data-refid="hk-solution-40" id="solution-40"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-40"><div class="solution solution-like">First, we have to find out in which point the two lines meet. (If they do not meet, then they are skew lines since they are clearly not parallel. In this case, they are not in the same plane.) In other words, we are looking for two real numbers \(s, t\) such that<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix} +s\begin{bmatrix} 1 \\ -1\\ 3 \end{bmatrix}
+=
+\begin{bmatrix} 0 \\ -2\\ 5 \end{bmatrix} +t\begin{bmatrix} 2 \\ 1\\ -1 \end{bmatrix}
+.
+\end{equation*}
+</div>Componentwise, this vector equation means:<div class="displaymath">
+\begin{equation*}
+3 + s = 2t;\;
+1 - s = -2+t;\;
+3s = 5 - t.
+\end{equation*}
+</div>The second equation says \(t=3-s\text{,}\) which we plug into the other equations to get \(s = 1\text{.}\) We conclude that the two lines meet in the point \((4,0,3)\) because<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix} +1\begin{bmatrix} 1 \\ -1\\ 3 \end{bmatrix}
+=\begin{bmatrix} 4 \\ 0\\ 3 \end{bmatrix}
+.
+\end{equation*}
+</div>Since the two lines are not parallel, their directional vectors span the plane that contains them, so we arrive at the following vector equation of the plane,<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix} 
+x_1 \\ x_2 \\ x_3
+\end{bmatrix}
+=
+\begin{bmatrix} 
+4 \\ 0\\ 3
+\end{bmatrix}
++
+r
+\begin{bmatrix}
+1 \\ -1\\ 3 
+\end{bmatrix}
++
+q
+\begin{bmatrix}
+2 \\ 1\\ -1
+\end{bmatrix}
+,
+\end{equation*}
+</div>which means in parametric form:<div class="displaymath">
+\begin{equation*}
+x_1 =  4 + r + 2q
+;
+x_2 =  -r+q
+;
+x_3 = 3 +3r -q
+.
+\end{equation*}
+</div>For the normal form, we form the cross product of the two directional vectors to find a normal vector (see <a data-knowl="./knowl/hint-def-cross-product-and-it-is-normal.html" title="Hint 1">Hint 1</a>):<div class="displaymath">
+\begin{equation*}
+\mbf{n}
+=
+\begin{bmatrix}
+1 \\ -1\\ 3 
+\end{bmatrix}
+\times
+\begin{bmatrix}
+2 \\ 1\\ -1
+\end{bmatrix}
+=
+\begin{bmatrix}
+(-1) \cdot (-1)-3 \cdot 1\\
+3 \cdot 2-1 \cdot (-1)\\
+1 \cdot 1-(-1) \cdot 2
+\end{bmatrix}
+=
+\begin{bmatrix}
+-2\\
+7\\
+3
+\end{bmatrix}
+.
+\end{equation*}
+</div>We now only need a point on the plane, say \((4,0,3)\text{,}\) to give the normal form \(\mbf{n}\cdot\vect{PX}=0\) explicitly:<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix}
+-2\\
+7\\
+3
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+x_1 - 4\\
+x_2 \\
+x_3 - 3
+\end{bmatrix}
+.
+\end{equation*}
+</div>The general form can then be computed to be:<div class="displaymath">
+\begin{equation*}
+-2x_1 + 7x_2 + 3 x_3 = 1.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-33" id="answer-33"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-33"><div class="answer solution-like">
+<p id="p-398">Normal form:</p>
+<div class="displaymath" id="p-399">
+\begin{equation*}
+\begin{bmatrix}
+-2\\
+7\\
+3
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+x_1 - 4\\
+x_2 \\
+x_3 - 3
+\end{bmatrix}
+=
+0
+\end{equation*}
+</div>
+<p id="p-400">General form:</p>
+<div class="displaymath" id="p-401">
+\begin{equation*}
+-2x_1 + 7x_2 + 3 x_3 = 1
+\end{equation*}
+</div>
+<p id="p-402">Parametric form:</p>
+<div class="displaymath" id="p-403">
+\begin{equation*}
+x_1 =  4 + s + 2t
+;
+x_2 =  -s+t
+;
+x_3 = 3 +3s -t
+\end{equation*}
+</div>
+</div></div></p>
+</li>
+<li id="subex-plane-equidistant-to-two-points1">
+<p id="p-404">Each point which is equidistant from \(P=(2,-1,3)\) and \(Q=(1,1,-1)\text{.}\)</p>
+<p id="p-405"><a data-knowl="" class="id-ref" data-refid="hk-solution-41" id="solution-41"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-41"><div class="solution solution-like">For a point \(X\) to be equidistant from \(P\) and \(Q\text{,}\) we must have<div class="displaymath">
+\begin{equation*}
+\norm{\vect{PX}}= \norm{\vect{QX}}.
+\end{equation*}
+</div>By squaring both sides of the equation, we can rewrite this to<div class="displaymath">
+\begin{equation}
+\vect{PX}\cdot \vect{PX}= \vect{QX}\cdot \vect{QX}.\label{eq-1}\tag{1.3.2}
+\end{equation}
+</div>If we use that \(\vect{PX} = \vect{OX} - \vect{OP}\text{,}\) then using the properties of the dot product yields<div class="displaymath">
+\begin{align*}
+\vect{PX}\cdot \vect{PX} 
+\amp =
+(\vect{OX} - \vect{OP})\cdot(\vect{OX} - \vect{OP})\\
+\amp =
+\vect{OX}\cdot\vect{OX} - \vect{OX}\cdot\vect{OP}
+- \vect{OP}\cdot\vect{OX} + \vect{OP}\cdot\vect{OP}\\
+\amp =
+\norm{\vect{OX}}^2 + \norm{\vect{OP}}^2
+- 2 \vect{OX}\cdot\vect{OP}.
+\end{align*}
+</div>Similarly,<div class="displaymath">
+\begin{equation*}
+\vect{QX}\cdot \vect{QX} 
+=
+\norm{\vect{OX}}^2 + \norm{\vect{OQ}}^2
+- 2 \vect{OX}\cdot\vect{OQ}
+.
+\end{equation*}
+</div>So if we plug both of these into <a data-knowl="./knowl/eq-1.html" title="Equation 1.3.2">(1.3.2)</a> and cancel the summand of \(\norm{\vect{OX}}^2\) on both sides, then we see that \(\norm{\vect{PX}}= \norm{\vect{QX}}\) is equivalent to<div class="displaymath">
+\begin{equation}
+\norm{\vect{OP}}^2
+- 2 \vect{OX}\cdot\vect{OP}
+=
+\norm{\vect{OQ}}^2
+- 2 \vect{OX}\cdot\vect{OQ}
+.\label{eq-reformulation-of-equidistant}\tag{1.3.3}
+\end{equation}
+</div>We compute with \(X=(x_1,x_2,x_3)\text{:}\)<div class="displaymath">
+\begin{gather*}
+\vect{OX}\cdot\vect{OP}
+=
+2x_1 - x_2 + 3x_3\\
+\vect{OX}\cdot\vect{OQ}
+=
+x_1 + x_2 - x_3\\
+\norm{\vect{OP}}^2
+=
+2^2 + (-1)^2 +3^2
+=
+14\\
+\norm{\vect{OQ}}^2
+=
+1^2 + 1^2 + (-1)^2
+=
+3,
+\end{gather*}
+</div>so that <a data-knowl="./knowl/eq-reformulation-of-equidistant.html" title="Equation 1.3.3">(1.3.3)</a> becomes:<div class="displaymath">
+\begin{align*}
+\amp
+14
+- 2 (2x_1 - x_2 + 3x_3)
+=
+3
+- 2 (x_1 + x_2 - x_3)\\
+\iff \amp
+11
+=
+(- 2 x_1 - 2  x_2 + 2  x_3)
++
+(4x_1 - 2x_2 + 6x_3)\\
+\iff \amp
+11
+=
+2x_1 - 4x_2 + 8x_3,
+\end{align*}
+</div>which is the general form of our plane equation. We can rewrite this to<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix}
+2\\
+-4\\
+8
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3 
+\end{bmatrix}
+=
+11,
+\end{equation*}
+</div>which is its normal form. Lastly, for the vector form, we need three points in the plane which do not lie on a line. Let us choose \(R_1= (0, -3 , -\frac{1}{8} )\text{,}\) \(R_2= (\frac{3}{2}, 0, 1)\text{,}\) and \(R_3= (6,\frac{1}{4} ,0)\) which all satisfy the general equation. Now, the plane's vector equation is given by<div class="displaymath">
+\begin{align*}
+\mbf{x}
+\amp =
+\vect{OR_1}
++
+t
+\vect{R_1 R_2}
++
+s
+\vect{R_1 R_3}\\
+\amp	=
+\begin{bmatrix}
+0 \\ -3 \\ -\frac{1}{8} 
+\end{bmatrix}
++
+t
+\begin{bmatrix}
+\frac{3}{2}  - 0 \\ 0 - (-3) \\ 1 - (-\frac{1}{8})
+\end{bmatrix}
++
+s
+\begin{bmatrix}
+6 - 0 \\ \frac{1}{4} - (-3) \\ 0 - (-\frac{1}{8})
+\end{bmatrix}\\
+\amp =
+\begin{bmatrix}
+0 \\ -3 \\ -\frac{1}{8} 
+\end{bmatrix}
++
+t
+\begin{bmatrix}
+\frac{3}{2} \\ 3 \\ \frac{9}{8}
+\end{bmatrix}
++
+s
+\begin{bmatrix}
+6 \\ \frac{13}{4} \\ \frac{1}{8}
+\end{bmatrix}
+\end{align*}
+</div>We can rewrite this by rescaling (\(t=8r\) and \(s=8q\)) to:<div class="displaymath">
+\begin{equation*}
+\mbf{x}
+=
+\begin{bmatrix}
+0 \\ -3 \\ -\frac{1}{8} 
+\end{bmatrix}
++
+r
+\begin{bmatrix}
+12 \\ 24 \\ 9
+\end{bmatrix}
++
+q
+\begin{bmatrix}
+48 \\ 26 \\ 1
+\end{bmatrix}
+,
+\end{equation*}
+</div>which yields the parametric equations:<div class="displaymath">
+\begin{equation*}
+x_1 = 12r + 48q
+;
+x_2 = -3 +24r +26 q
+;
+x_3 = -\frac{1}{8} + 9r + q
+.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-34" id="answer-34"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-34"><div class="answer solution-like">
+<p id="p-406">Normal form:</p>
+<div class="displaymath" id="p-407">
+\begin{equation*}
+\begin{bmatrix}
+2\\
+-4\\
+8
+\end{bmatrix}
+\cdot
+left(
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3 
+\end{bmatrix}
+\right)
+=
+11
+\end{equation*}
+</div>
+<p id="p-408">General form:</p>
+<div class="displaymath" id="p-409">
+\begin{equation*}
+11
+=
+2x_1 - 4x_2 + 8x_3
+\end{equation*}
+</div>
+<p id="p-410">Parametric form:</p>
+<div class="displaymath" id="p-411">
+\begin{equation*}
+x_1 = 12r + 48q
+;
+x_2 = -3 +24r +26 q
+;
+x_3 = -\frac{1}{8} + 9r + q
+\end{equation*}
+</div>
+</div></div></p>
+</li>
+<li id="li-121">
+<p id="p-412">Each point which is equidistant from \(P=(0,1,-1)\) and \(Q=(2,-1,-3)\text{.}\)</p>
+<p id="p-413"><a data-knowl="" class="id-ref" data-refid="hk-solution-42" id="solution-42"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-42"><div class="solution solution-like">A point \(X\) is equidistant from \(P\) and \(Q\) if and only if<div class="displaymath">
+\begin{equation*}
+\norm{\vect{OP}}^2
+- 2 \vect{OX}\cdot\vect{OP}
+=
+\norm{\vect{OQ}}^2
+- 2 \vect{OX}\cdot\vect{OQ}
+,
+\end{equation*}
+</div>see the argument in <a data-knowl="./knowl/subex-plane-equidistant-to-two-points1.html" title="Item 1.3.1.3.i">Item 1.3.1.3.i</a>and <a data-knowl="./knowl/eq-reformulation-of-equidistant.html" title="Equation 1.3.3">(1.3.3)</a> in particular. We compute with \(X=(x_1,x_2,x_3)\text{:}\)<div class="displaymath">
+\begin{gather*}
+\vect{OX}\cdot\vect{OP}
+=
+x_2 - x_3\\
+\vect{OX}\cdot\vect{OQ}
+=
+2x_1 - x_2 - 3x_3\\
+\norm{\vect{OP}}^2
+=
+0^2 + 1^2 +(-1)^2
+=
+2\\
+\norm{\vect{OQ}}^2
+=
+2^2 + (-1)^2 + (-3)^2
+=
+14,
+\end{gather*}
+</div>so that <a data-knowl="./knowl/eq-reformulation-of-equidistant.html" title="Equation 1.3.3">(1.3.3)</a> becomes:<div class="displaymath">
+\begin{align*}
+\amp
+2
+- 2 (x_2 - x_3)
+=
+14
+- 2 (2x_1 - x_2 - 3x_3)\\
+\iff \amp
+2 (2x_1 - x_2 - 3x_3)
+- 2 (x_2 - x_3)
+=
+12\\
+\iff \amp
+4x_1 - 4x_2 - 4x_3
+=
+12,
+\end{align*}
+</div>which is the general form of our plane equation. We can rewrite this to<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix}
+4 \\ -4 \\ - 4
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3 
+\end{bmatrix}
+=
+12,
+\end{equation*}
+</div>which is its normal form. Lastly, for the vector form, we need three points in the plane which do not lie on a line. Let us choose \(R_1= (3,0,0)\text{,}\) \(R_2= (0, -3, 0)\text{,}\) and \(R_3= (0,0,-3)\) which all satisfy the general equation. Now, the plane's vector equation is given by<div class="displaymath">
+\begin{align*}
+\mbf{x}
+\amp =
+\vect{OR_1}
++
+t
+\vect{R_1 R_2}
++
+s
+\vect{R_1 R_3}\\
+\amp	=
+\begin{bmatrix}
+3\\0\\0
+\end{bmatrix}
++
+t
+\begin{bmatrix}
+-3\\-3\\0
+\end{bmatrix}
++
+s
+\begin{bmatrix}
+-3\\0\\-3
+\end{bmatrix}
+\end{align*}
+</div>which yields the parametric equations:<div class="displaymath">
+\begin{equation*}
+x_1 = 3 -3t -3s
+;
+x_2 = -3t
+;
+x_3 = -3s
+.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-35" id="answer-35"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-35"><div class="answer solution-like">
+<p id="p-414">Normal form:</p>
+<div class="displaymath" id="p-415">
+\begin{equation*}
+\begin{bmatrix}
+4 \\ -4 \\ - 4
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3 
+\end{bmatrix}
+=
+12
+\end{equation*}
+</div>
+<p id="p-416">General form:</p>
+<div class="displaymath" id="p-417">
+\begin{equation*}
+4x_1 - 4x_2 - 4x_3
+=
+12
+\end{equation*}
+</div>
+<p id="p-418">Parametric form:</p>
+<div class="displaymath" id="p-419">
+\begin{equation*}
+x_1 = 3 -3t -3s
+;
+x_2 = -3t
+;
+x_3 = -3s
+\end{equation*}
+</div>
+</div></div></p>
+</li>
+</ol></article></p>
+<p id="p-420"><article class="exercise exercise-like" id="exercise-29"><h6 class="heading"><span class="codenumber">4.</span></h6>
+<aside class="aside aside-like" id="aside-29"><p id="p-421">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Section 4.2, Exercise 4.2.12.)</p></aside> In each case, calculate the distance from the point \(P\) to the line \(\ell\text{,}\) and find the point \(Q\) on \(\ell\) closest to \(P\text{.}\) <ol class="lower-alpha">
+<li id="li-122">\(P=(3,2,-1)\text{,}\) \(\ell \colon \mbf{x}  = \begin{bmatrix} 2 \\ 1\\ 3 \end{bmatrix} +t\begin{bmatrix} 3 \\ -1\\ -2 \end{bmatrix}  \)</li>
+<li id="li-123">\(P=(1,-1,3)\text{,}\) \(\ell \colon \mbf{x}  = \begin{bmatrix} 1 \\ 0\\ -1 \end{bmatrix} +t\begin{bmatrix} 3 \\ 1\\ 4 \end{bmatrix}  \)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-dist-line-pt" id="hint-dist-line-pt"><span class="type">Hint</span> <span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-dist-line-pt"><div class="hint solution-like">If a line \(\ell\) is given by the vector equation<div class="displaymath">
+\begin{equation*}
+\mbf{x}
+=
+\mbf{a}
++
+t\mbf{d},
+\end{equation*}
+</div>then the distance from \(\ell\) to a point \(P\) is given by<div class="displaymath">
+\begin{equation*}
+\operatorname{dist}
+(\ell, P) = 
+\norm{(\mathbf{p}-\mathbf{a}) - \operatorname{proj}_{\mathbf{d}}(\mathbf{p}-\mathbf{a})},
+\end{equation*}
+</div>where \(\mbf{p}:=\vect{OP}\) and \(\operatorname{proj}\) is as defined in <a data-knowl="./knowl/def-proj-vect-onto-vect.html" title="Hint 1.2.1.8.1">Hint 1.2.1.8.1</a>.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-pt-on-line-closest-to-pt" id="hint-pt-on-line-closest-to-pt"><span class="type">Hint</span> <span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-pt-on-line-closest-to-pt"><div class="hint solution-like">If a line \(\ell\) is given by the vector equation<div class="displaymath">
+\begin{equation*}
+\mbf{x}
+=
+\mbf{a}
++
+t\mbf{d}
+\end{equation*}
+</div>and \(\mbf{p}\) is the position vector of a point \(P\text{,}\) then<div class="displaymath">
+\begin{equation*}
+\mbf{q}
+:=
+\mbf{a} + \operatorname{proj}_{\mathbf{d}}(\mathbf{p}-\mathbf{a}),
+\end{equation*}
+</div>is the position vector of the point \(Q\) on \(\ell\) which is closest to the point \(P\text{.}\)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-36" id="answer-36"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-36"><div class="answer solution-like"><ol class="lower-alpha">
+<li id="li-126"><div class="displaymath">
+\begin{equation*}
+\operatorname{dist}
+(\ell, P) 
+=
+\sqrt{\tfrac{152}{14}}
+\text{ and }
+Q= (\tfrac{29}{7}, \tfrac{2}{7}, \tfrac{11}{7})
+\end{equation*}
+</div></li>
+<li id="li-127"><div class="displaymath">
+\begin{equation*}
+\operatorname{dist}
+(\ell, P) 
+=
+\sqrt{\tfrac{217}{26}}
+\text{ and }
+Q= (\tfrac{71}{26}, \tfrac{15}{26}, \tfrac{34}{26})
+\end{equation*}
+</div></li>
+</ol></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-43" id="solution-43"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-43"><div class="solution solution-like">According to <a data-knowl="./knowl/hint-dist-line-pt.html" title="Hint 1.3.1.4.1">Hint 1.3.1.4.1</a>, the formula for the distance between \(\ell\) and \(P\) is given by<div class="displaymath">
+\begin{equation*}
+\operatorname{dist}
+(\ell, P) = 
+\norm{(\mathbf{p}-\mathbf{a}) - \operatorname{proj}_{\mathbf{d}}(\mathbf{p}-\mathbf{a})},
+\end{equation*}
+</div>where \(\mbf{a}\) is a point on the line and \(\mathbf{d}\) is a direction vector of the line. We now only have to plug in the values for the two situations: <ol class="lower-alpha">
+<li id="li-124">For the given \(\ell\text{,}\) we have<div class="displaymath">
+\begin{equation*}
+\mbf{a} = \begin{bmatrix} 2 \\ 1\\ 3 \end{bmatrix},
+\mbf{d} = \begin{bmatrix} 3 \\ -1\\ -2 \end{bmatrix},
+\text{ and }
+\mbf{p} = \begin{bmatrix} 3 \\ 2\\ -1 \end{bmatrix}
+,
+\end{equation*}
+</div>so that<div class="displaymath">
+\begin{equation*}
+\mbf{v}
+:=
+\mathbf{p}-\mathbf{a}
+=
+\begin{bmatrix} 3 \\ 2\\ -1 \end{bmatrix}
+-
+\begin{bmatrix} 2 \\ 1\\ 3 \end{bmatrix}
+=
+\begin{bmatrix} 1 \\ 1\\ -4 \end{bmatrix}
+.
+\end{equation*}
+</div>We compute<div class="displaymath">
+\begin{align*}
+\mathbf{v} \cdot  \mathbf{d}
+\amp =
+\begin{bmatrix} 1 \\ 1\\ -4 \end{bmatrix} \cdot \begin{bmatrix} 3 \\ -1\\ -2 \end{bmatrix}\\
+\amp =
+\bigl(1\cdot 3 + 1 \cdot (-1) + (-4)\cdot (-2)\bigr)
+=10.
+\end{align*}
+</div>and<div class="displaymath">
+\begin{equation*}
+\mbf{d}\cdot \mbf{d}
+=
+\begin{bmatrix} 3 \\ -1\\ -2 \end{bmatrix}
+\cdot
+\begin{bmatrix} 3 \\ -1\\ -2 \end{bmatrix}
+=
+3^2 + (-1)^2 + (-2)^2
+=
+14,
+\end{equation*}
+</div>so that (using <a data-knowl="./knowl/def-proj-vect-onto-vect.html" title="Hint 1.2.1.8.1">Hint 1.2.1.8.1</a>)<div class="displaymath">
+\begin{equation*}
+\operatorname{proj}_{\mathbf{d}}\mathbf{v}
+=
+\left(
+\frac{\mbf{d}\cdot \mbf{v}}{\mbf{d}\cdot \mbf{d}}
+\right)
+\mbf{d}
+=
+\tfrac{10}{14}\begin{bmatrix} 3 \\ -1\\ -2 \end{bmatrix}
+.
+\end{equation*}
+</div>Therefore,<div class="displaymath">
+\begin{align*}
+\operatorname{dist}
+(\ell, P) 
+\amp =
+\norm{\mathbf{v} - \operatorname{proj}_{\mathbf{d}}\mathbf{v}}
+=
+\norm{
+\begin{bmatrix} 1 \\ 1\\ -4 \end{bmatrix}
+-
+\tfrac{10}{14}
+\begin{bmatrix} 3 \\ -1\\ -2 \end{bmatrix}}\\
+\amp = 
+\norm{\tfrac{1}{14}\begin{bmatrix} -16 \\ 24 \\ -36 \end{bmatrix}}\\
+\amp = 
+\sqrt{ \left(\tfrac{-16}{14}\right)^2 + \left(\tfrac{24}{14}\right)^2 + \left(\tfrac{-36}{14}\right)^2}\\
+\amp = 
+\sqrt{\tfrac{152}{14}}.
+\end{align*}
+</div>Next, for the point \(Q\) on \(\ell\) which has distance \(\sqrt{\tfrac{152}{14}}\) from \(P\text{,}\) we use <a data-knowl="./knowl/hint-pt-on-line-closest-to-pt.html" title="Hint 1.3.1.4.2">Hint 1.3.1.4.2</a>: we need<div class="displaymath">
+\begin{equation*}
+\mbf{q}
+:=
+\mbf{a} + \operatorname{proj}_{\mathbf{d}}\mbf{v}
+=
+\begin{bmatrix} 2 \\ 1\\ 3 \end{bmatrix} + \tfrac{10}{14}\begin{bmatrix} 3 \\ -1\\ -2 \end{bmatrix}
+=
+\tfrac{1}{14}\begin{bmatrix} 58 \\ 4\\ 22 \end{bmatrix}
+,
+\end{equation*}
+</div>so that \(Q= (\tfrac{29}{7}, \tfrac{2}{7}, \tfrac{11}{7})\text{.}\)</li>
+<li id="li-125">\(P=(1,-1,3)\text{,}\) \(\ell \colon \mbf{x}  = \begin{bmatrix} 1 \\ 0\\ -1 \end{bmatrix} +t\begin{bmatrix} 3 \\ 1\\ 4 \end{bmatrix}  \) For the given \(\ell\text{,}\) we have<div class="displaymath">
+\begin{equation*}
+\mbf{a} = \begin{bmatrix} 1 \\ 0\\ -1 \end{bmatrix},
+\mbf{d} = \begin{bmatrix} 3 \\ 1\\ 4 \end{bmatrix},
+\text{ and }
+\mbf{p} = \begin{bmatrix} 1 \\ -1\\ 3 \end{bmatrix}
+,
+\end{equation*}
+</div>so that<div class="displaymath">
+\begin{equation*}
+\mbf{v}
+:=
+\mathbf{p}-\mathbf{a}
+=
+\begin{bmatrix} 1 \\ -1\\ 3 \end{bmatrix}
+-
+\begin{bmatrix} 1 \\ 0\\ -1 \end{bmatrix}
+=
+\begin{bmatrix} 0 \\ -1\\ 4 \end{bmatrix}
+.
+\end{equation*}
+</div>We compute<div class="displaymath">
+\begin{align*}
+\mathbf{v} \cdot  \mathbf{d}
+\amp =
+\begin{bmatrix} 0 \\ -1\\ 4 \end{bmatrix} 
+\cdot
+\begin{bmatrix} 3 \\ 1\\ 4 \end{bmatrix}\\
+\amp =
+\bigl(0\cdot 3 + (-1) \cdot 1 + 4\cdot 4\bigr)
+=15.
+\end{align*}
+</div>and<div class="displaymath">
+\begin{equation*}
+\mbf{d}\cdot \mbf{d}
+=
+\begin{bmatrix} 3 \\ 1\\ 4 \end{bmatrix}
+\cdot
+\begin{bmatrix} 3 \\ 1\\ 4 \end{bmatrix}
+=
+3^2 + 1^2 + 4^2
+=
+26,
+\end{equation*}
+</div>so that (using <a data-knowl="./knowl/def-proj-vect-onto-vect.html" title="Hint 1.2.1.8.1">Hint 1.2.1.8.1</a>)<div class="displaymath">
+\begin{equation*}
+\operatorname{proj}_{\mathbf{d}}\mathbf{v}
+=
+\left(
+\frac{\mbf{d}\cdot \mbf{v}}{\mbf{d}\cdot \mbf{d}}
+\right)
+\mbf{d}
+=
+\tfrac{15}{26}\begin{bmatrix} 3 \\ 1\\ 4 \end{bmatrix}
+.
+\end{equation*}
+</div>Therefore,<div class="displaymath">
+\begin{align*}
+\operatorname{dist}
+(\ell, P) 
+\amp =
+\norm{\mathbf{v} - \operatorname{proj}_{\mathbf{d}}\mathbf{v}}
+=
+\norm{
+\begin{bmatrix}  0 \\ -1\\ 4  \end{bmatrix}
+-
+\tfrac{15}{26}\begin{bmatrix} 3 \\ 1\\ 4 \end{bmatrix}
+}\\
+\amp = 
+\norm{\tfrac{1}{26}\begin{bmatrix} -45 \\ -41 \\ 44 \end{bmatrix}}\\
+\amp = 
+\sqrt{ \left(\tfrac{-45}{26}\right)^2 + \left(\tfrac{-41}{26}\right)^2 + \left(\tfrac{44}{26}\right)^2}\\
+\amp = 
+\sqrt{\tfrac{217}{26}}.
+\end{align*}
+</div>Next, for the point \(Q\) on \(\ell\) which has distance \(\sqrt{\tfrac{217}{26}}\) from \(P\text{,}\) we use <a data-knowl="./knowl/hint-pt-on-line-closest-to-pt.html" title="Hint 1.3.1.4.2">Hint 1.3.1.4.2</a>: we need<div class="displaymath">
+\begin{equation*}
+\mbf{q}
+:=
+\mbf{a} + \operatorname{proj}_{\mathbf{d}}\mbf{v}
+=
+\begin{bmatrix}  1 \\ 0\\ -1  \end{bmatrix}
++
+\tfrac{15}{26}\begin{bmatrix} 3 \\ 1\\ 4 \end{bmatrix}
+=
+\tfrac{1}{26}\begin{bmatrix} 71 \\ 15\\ 34 \end{bmatrix}
+,
+\end{equation*}
+</div>so that \(Q= (\tfrac{71}{26}, \tfrac{15}{26}, \tfrac{34}{26})\text{.}\)</li>
+</ol>
+</div></div>
+</div></article></p>
+<p id="p-422"><article class="exercise exercise-like" id="exercise-30"><h6 class="heading"><span class="codenumber">5.</span></h6>
+<aside class="aside aside-like" id="aside-30"><p id="p-423">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Section 4.2, Exercise 4.2.16.)</p></aside> In each case, find the shortest distance from the point \(P\) to the plane and find \(Q\) on the plane closest to \(P\text{.}\) <ol class="lower-alpha">
+<li id="li-128">\(P=(2,3,0)\) and plane equation: \(5x_1+x_2+x_3 =1\)</li>
+<li id="li-129">\(P=(3,1,-1)\) and plane equation: \(2x_1+x_2-x_3 =6\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-dist-plane-pt" id="hint-dist-plane-pt"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-dist-plane-pt"><div class="hint solution-like">The distance from a plane \(\mathcal{P}\) to a point \(P\) is given by<div class="displaymath">
+\begin{equation*}
+\operatorname{dist}
+(\mathcal{P}, P) = 
+\norm{\operatorname{proj}_{\mathbf{n}}(\mathbf{p}-\mathbf{a})},
+\end{equation*}
+</div>where \(\mbf{n}\) is normal to the plane, \(\mbf{a}\) is the position vector of any point on the plane, \(\mbf{p}:=\vect{OP}\text{,}\) and \(\operatorname{proj}\) is as defined in <a data-knowl="./knowl/def-proj-vect-onto-vect.html" title="Hint 1.2.1.8.1">Hint 1.2.1.8.1</a>.&gt;</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-37" id="answer-37"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-37"><div class="answer solution-like"><ol class="lower-alpha">
+<li id="li-132">\(\operatorname{dist}
+(\mathcal{P}, P)
+=
+\sqrt{
+\frac{16}{3}
+},
+Q =(\frac{-2}{9},\frac{23}{9},\frac{-4}{9})
+\text{.}\)</li>
+<li id="li-133">\(\displaystyle \operatorname{dist}
+(\mathcal{P}, P)
+=
+\sqrt{
+\frac{2}{3}
+},
+Q =(\frac{7}{3}, \frac{2}{3}, \frac{-2}{3})\)</li>
+</ol></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-44" id="solution-44"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-44"><div class="solution solution-like">According to <a data-knowl="./knowl/hint-dist-plane-pt.html" title="Hint 1.3.1.5.1">Hint 1.3.1.5.1</a>, we only need to find a point \(A\) on the plane and a normal vector \(\mbf{n}\) to the plane. <ol class="lower-alpha">
+<li id="li-130">For the plane with general equation \(5x_1+x_2+x_3 =1\text{,}\) we can choose<div class="displaymath">
+\begin{equation*}
+\mbf{n} = \begin{bmatrix}
+5\\
+1\\
+1
+\end{bmatrix}
+\text{ and }
+A = (1, -4, 0).
+\end{equation*}
+</div>We then compute<div class="displaymath">
+\begin{equation*}
+\mbf{v}
+:=
+\vect{OP}-\vect{OA}
+=
+\begin{bmatrix}
+2\\
+3\\
+0
+\end{bmatrix}
+-
+\begin{bmatrix}
+1\\
+-4\\
+0
+\end{bmatrix}
+=
+\begin{bmatrix}
+1\\
+7\\
+0
+\end{bmatrix},
+\end{equation*}
+</div>so that<div class="displaymath">
+\begin{equation*}
+\mbf{n}
+\cdot
+\mbf{v}
+=
+\begin{bmatrix}
+5\\
+1\\
+1
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+1\\
+7\\
+0
+\end{bmatrix}
+=
+5+7 = 12
+\end{equation*}
+</div>and<div class="displaymath">
+\begin{equation*}
+\mbf{n}
+\cdot
+\mbf{n}
+=
+\begin{bmatrix}
+5\\
+1\\
+1
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+5\\
+1\\
+1
+\end{bmatrix}
+=
+25+1+1 = 27.
+\end{equation*}
+</div>We can now compute (using <a data-knowl="./knowl/def-proj-vect-onto-vect.html" title="Hint 1.2.1.8.1">Hint 1.2.1.8.1</a>)<div class="displaymath">
+\begin{equation*}
+\operatorname{proj}_{\mathbf{n}}(\mathbf{v})
+=
+\left(
+\frac{\mbf{n}\cdot \mbf{v}}{\mbf{n}\cdot \mbf{n}}
+\right)
+\mbf{n}
+=
+\frac{12}{27}
+\begin{bmatrix}
+5\\
+1\\
+1
+\end{bmatrix}
+=
+\frac{4}{9}
+\begin{bmatrix}
+5\\
+1\\
+1
+\end{bmatrix}
+\end{equation*}
+</div>and thus<div class="displaymath">
+\begin{align*}
+\operatorname{dist}
+(\mathcal{P}, P)
+\amp
+= 
+\norm{\operatorname{proj}_{\mathbf{n}}\mathbf{v}}\\
+\amp =
+\sqrt{
+\left(\frac{20}{9}\right)^2 + \left(\frac{4}{9}\right)^2 + \left(\frac{4}{9}\right)^2
+}
+=
+\sqrt{
+\frac{16}{3}
+}.
+\end{align*}
+</div>The point on the plane which is closest to \(P\) then has the position vector<div class="displaymath">
+\begin{equation*}
+\mbf{q}
+=
+\vect{OP} - \operatorname{proj}_{\mathbf{n}}\mathbf{v}
+=
+\begin{bmatrix}
+2\\
+3\\
+0
+\end{bmatrix}
+-
+\frac{4}{9}
+\begin{bmatrix}
+5\\
+1\\
+1
+\end{bmatrix}
+=
+\frac{1}{9}
+\begin{bmatrix}
+-2 \\
+23\\
+-4
+\end{bmatrix},
+\end{equation*}
+</div>so that \(Q =(\frac{-2}{9},\frac{23}{9},\frac{-4}{9})\text{.}\)</li>
+<li id="li-131">For the plane with general equation \(2x_1+x_2-x_3 =6\text{,}\) we can choose<div class="displaymath">
+\begin{equation*}
+\mbf{n} = \begin{bmatrix}
+2\\
+1\\
+-1
+\end{bmatrix}
+\text{ and }
+A = (3, 0, 0).
+\end{equation*}
+</div>We then compute<div class="displaymath">
+\begin{equation*}
+\mbf{v}
+:=
+\vect{OP}-\vect{OA}
+=
+\begin{bmatrix}
+3\\
+1\\
+-1
+\end{bmatrix}
+-
+\begin{bmatrix}
+3\\
+0\\
+0
+\end{bmatrix}
+=
+\begin{bmatrix}
+0\\
+1\\
+-1
+\end{bmatrix},
+\end{equation*}
+</div>so that<div class="displaymath">
+\begin{equation*}
+\mbf{n}
+\cdot
+\mbf{v}
+=
+\begin{bmatrix}
+2\\
+1\\
+-1
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+0\\
+1\\
+-1
+\end{bmatrix}
+=
+2
+\end{equation*}
+</div>and<div class="displaymath">
+\begin{equation*}
+\mbf{n}
+\cdot
+\mbf{n}
+=
+\begin{bmatrix}
+2\\
+1\\
+-1
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+2\\
+1\\
+-1
+\end{bmatrix}
+=
+4+1+1 = 6.
+\end{equation*}
+</div>We can now compute (using <a data-knowl="./knowl/def-proj-vect-onto-vect.html" title="Hint 1.2.1.8.1">Hint 1.2.1.8.1</a>)<div class="displaymath">
+\begin{equation*}
+\operatorname{proj}_{\mathbf{n}}(\mathbf{v})
+=
+\left(
+\frac{\mbf{n}\cdot \mbf{v}}{\mbf{n}\cdot \mbf{n}}
+\right)
+\mbf{n}
+=
+\frac{1}{3}
+\begin{bmatrix}
+2\\
+1\\
+-1
+\end{bmatrix}
+\end{equation*}
+</div>and thus<div class="displaymath">
+\begin{align*}
+\operatorname{dist}
+(\mathcal{P}, P)
+\amp
+= 
+\norm{\operatorname{proj}_{\mathbf{n}}\mathbf{v}}\\
+\amp =
+\sqrt{
+\left(\frac{2}{3}\right)^2 + \left(\frac{1}{3}\right)^2 + \left(\frac{-1}{3}\right)^2
+}
+=
+\sqrt{
+\frac{2}{3}
+}.
+\end{align*}
+</div>The point on the plane which is closest to \(P\) then has the position vector<div class="displaymath">
+\begin{equation*}
+\mbf{q}
+=
+\vect{OP} - \operatorname{proj}_{\mathbf{n}}\mathbf{v}
+=
+\begin{bmatrix}
+3\\
+1\\
+-1
+\end{bmatrix}
+-
+\frac{1}{3}
+\begin{bmatrix}
+2\\
+1\\
+-1
+\end{bmatrix}
+=
+\frac{1}{3}
+\begin{bmatrix}
+7\\
+2\\
+-2
+\end{bmatrix}
+\end{equation*}
+</div>so that \(Q =(\frac{7}{3}, \frac{2}{3}, \frac{-2}{3})\text{.}\)</li>
+</ol>
+</div></div>
+</div></article></p>
+<p id="p-424"><article class="exercise exercise-like" id="exercise-31"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<aside class="aside aside-like" id="aside-31"><p id="p-425">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Section 4.2, Exercise 4.2.23.)</p></aside> Find the shortest distance between the following pairs of parallel lines. <ol class="lower-alpha">
+<li id="li-134">\(\ell_1\colon\mbf{x}  = \begin{bmatrix} 2 \\ -1\\ 3 \end{bmatrix} +t\begin{bmatrix} 1 \\ -1\\ 4 \end{bmatrix}  \) and \(\ell_2\colon\mbf{x}  = \begin{bmatrix} 1 \\ 0\\ 1 \end{bmatrix} +t\begin{bmatrix} 1 \\ -1\\ 4 \end{bmatrix}  \)</li>
+<li id="li-135">\(\ell_1\colon\mbf{x}  = \begin{bmatrix} 3 \\ 0\\ 2 \end{bmatrix} +t\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix}  \) and \(\ell_1\colon\mbf{x}  = \begin{bmatrix} -1 \\ 2\\ 2 \end{bmatrix} +t\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix}  \)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-dist-parallel-lines" id="hint-dist-parallel-lines"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-dist-parallel-lines"><div class="hint solution-like">Find a plane \(\mathcal{P}\) to which \(\ell_1\) (and therefore also \(\ell_2\)) is orthogonal. In other words, the directional vector of \(\ell_1\) is normal to \(\mathcal{P}\text{.}\) Find the points \(Q_1, Q_2\) which \(\mathcal{P}\) has in common with \(\ell_1\) resp. \(\ell_2\text{.}\) What do you know about the line from \(Q_1\) to \(Q_2\text{?}\)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-38" id="answer-38"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-38"><div class="answer solution-like"><ol class="lower-alpha">
+<li id="li-138"><div class="displaymath">
+\begin{equation*}
+\operatorname{dist} (\ell_1, \ell_2)
+=
+\tfrac{2}{3}.
+\end{equation*}
+</div></li>
+<li id="li-139"><div class="displaymath">
+\begin{equation*}
+\operatorname{dist} (\ell_1, \ell_2)
+=
+\sqrt{10}.
+\end{equation*}
+</div></li>
+</ol></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-45" id="solution-45"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-45"><div class="solution solution-like">We follow the idea of <a data-knowl="./knowl/hint-dist-parallel-lines.html" title="Hint 1.3.1.6.1">Hint 1.3.1.6.1</a> and make one additional remark: The line from \(Q_1\) to \(Q_2\) is, by construction, contained in the plane since the two points are in the plane. In particular, said line is orthogonal to  \(\ell_1\) and  \(\ell_2\) and hence describes the direct path from \(\ell_1\) to \(\ell_2\text{,}\) meaning<div class="displaymath">
+\begin{equation*}
+\operatorname{dist} (\ell_1, \ell_2)
+=
+\norm{\vect{Q_1 Q_2}}.
+\end{equation*}
+</div>We now follow this recipe for the two given pairs of lines. <ol class="lower-alpha">
+<li id="li-136">We choose the point \(Q_1= (2 , -1, 3 ) \) on \(\ell_1\) and the declare the directional vector \(\mbf{n}=\begin{bmatrix} 1 \\ -1\\ 4 \end{bmatrix} \) of  \(\ell_1\) to be normal to the plane  \(\mathcal{P}\text{.}\) The normal form of  \(\mathcal{P}\) is then given by \(\mbf{n} \cdot \mbf{x} = \mbf{n} \cdot \vect{OQ_1}\text{,}\) so its general form is<div class="displaymath">
+\begin{equation*}
+x_1 - x_2 + 4 x_3
+=
+15
+.
+\end{equation*}
+</div>Next, we are looking for the intersection of \(\mathcal{P}\) with  \(\ell_2\text{.}\) In other words, we are looking for \(t\) such that \(\begin{bmatrix} 1 \\ 0\\ 1 \end{bmatrix} +t\begin{bmatrix} 1 \\ -1\\ 4 \end{bmatrix}\) satisfies the general equation of  \(\mathcal{P}\text{:}\)<div class="displaymath">
+\begin{equation*}
+(1+t) - (0-t) + 4 (1+4t) = 15
+\iff
+t = \tfrac{5}{9}.
+\end{equation*}
+</div>We conclude that the point \(Q_2\) that \(\mathcal{P}\) and \(\ell_2\) share is given by<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix} 1 \\ 0\\ 1 \end{bmatrix} +\tfrac{5}{9}\begin{bmatrix} 1 \\ -1\\ 4 \end{bmatrix}
+=\begin{bmatrix} \tfrac{14}{9} \\ -\tfrac{5}{9}\\ \tfrac{29}{9}\end{bmatrix} 
+.
+\end{equation*}
+</div>The distance between the points \(Q_1\) and \(Q_2\) is then the distance between the lines:<div class="displaymath">
+\begin{align*}
+\operatorname{dist} (\ell_1, \ell_2)
+\amp=
+\norm{\vect{Q_1 Q_2}}\\
+\amp=
+\sqrt{(\tfrac{14}{9} -2)^2 + (-\tfrac{5}{9} +1)^2 + (\tfrac{29}{9} -3)^2}
+=
+\sqrt{\tfrac{36}{81}}
+=
+\tfrac{2}{3}.
+\end{align*}
+</div>
+</li>
+<li id="li-137">We choose the point \(Q_1= (3 , 0, 2 ) \) on \(\ell_1\) and the declare the directional vector \(\mbf{n}=\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix} \) of  \(\ell_1\)to be normal to the plane  \(\mathcal{P}\text{.}\) The normal form of  \(\mathcal{P}\) is then given by \(\mbf{n} \cdot \mbf{x} = \mbf{n} \cdot \vect{OQ_1}\text{,}\) so its general form is<div class="displaymath">
+\begin{equation*}
+3x_1 + x_2 
+=
+9
+.
+\end{equation*}
+</div>Next, we are looking for the intersection of \(\mathcal{P}\) with  \(\ell_2\text{.}\) In other words, we are looking for \(t\) such that \(\begin{bmatrix} -1 \\ 2\\ 2 \end{bmatrix} +t\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix}\) satisfies the general equation of  \(\mathcal{P}\text{:}\)<div class="displaymath">
+\begin{equation*}
+3(-1+3t) + (2+t)  = 9
+\iff
+t = 1.
+\end{equation*}
+</div>We conclude that the point \(Q_2\) that \(\mathcal{P}\) and \(\ell_2\) share is given by<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix} -1 \\ 2\\ 2 \end{bmatrix} +1\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix}
+=
+\begin{bmatrix} 2 \\ 3\\ 2 \end{bmatrix}
+.
+\end{equation*}
+</div>The distance between the points \(Q_1\) and \(Q_2\) is then the distance between the lines:<div class="displaymath">
+\begin{align*}
+\operatorname{dist} (\ell_1, \ell_2)
+\amp=
+\norm{\vect{Q_1 Q_2}}\\
+\amp=
+\sqrt{(2-3)^2 + (3-0)^2 + (2-2)^2}
+=
+\sqrt{10}
+.
+\end{align*}
+</div>
+</li>
+</ol>
+</div></div>
+</div></article></p>
+<p id="p-426"><article class="exercise exercise-like" id="exercise-32"><h6 class="heading"><span class="codenumber">7.</span></h6>
+<aside class="aside aside-like" id="aside-32"><p id="p-427">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Section 3.2, Exercise 3.2.11.)</p></aside> Find the angle between the planes \(\mathcal{P}_1\colon x_1+x_2=5\) and \(\mathcal{P}_2\colon 2x_1+x_2-x_3 =4\text{.}\)<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-45" id="hint-45"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-45"><div class="hint solution-like">Find a normal vector \(\mbf{n}_1\) resp. \(\mbf{n}_2\) for each of the planes. Using the <a data-knowl="./knowl/cosine-formula.html" title="Hint 1.2.1.5.1">Cosine Formula 1.2.1.5.1</a>, compute the angle \(\theta=\sphericalangle (\mbf{n}_1, \mbf{n}_2)\) between these vectors. Then,<div class="displaymath">
+\begin{equation*}
+\sphericalangle (\mathcal{P}_1, \mathcal{P}_2)
+=
+\left\{
+\begin{array}{lc}
+\theta \amp \text{ if } 0 \leq \theta \leq \tfrac{\pi}{2}\\
+\pi - \theta \amp \text{ if } \tfrac{\pi}{2} \leq \theta \leq \pi \\
+\end{array}
+\right.
+\end{equation*}
+</div>
+</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-39" id="answer-39"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-39"><div class="answer solution-like"><div class="displaymath">
+\begin{equation*}
+\sphericalangle (\mathcal{P}_1, \mathcal{P}_2)
+= \tfrac{\pi}{6}
+\end{equation*}
+</div></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-46" id="solution-46"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-46"><div class="solution solution-like">A normal vector to \(\mathcal{P}_1\) resp. \(\mathcal{P}_2\) is given by<div class="displaymath">
+\begin{equation*}
+\mbf{n}_1
+=
+\begin{bmatrix} 1 \\ 1\\ 0 \end{bmatrix} 
+\text{ resp. }
+\mbf{n}_2
+=
+\begin{bmatrix} 2 \\ 1\\ -1 \end{bmatrix}
+.
+\end{equation*}
+</div>According to the <a data-knowl="./knowl/cosine-formula.html" title="Hint 1.2.1.5.1">Cosine Formula 1.2.1.5.1</a>, the angle between \(\mbf{n}_1\) and \(\mbf{n}_2\) is the number \(\theta\) that satisfies<div class="displaymath">
+\begin{equation*}
+\cos (\theta)
+=
+\frac{ \mbf{n}_1\cdot \mbf{n}_2}{ \norm{\mbf{n}_1}\cdot \norm{\mbf{n}_2}}
+,
+\end{equation*}
+</div>so we compute:<div class="displaymath">
+\begin{align*}
+\mbf{n}_1\cdot \mbf{n}_2
+\amp =
+1\cdot 2 + 1\cdot 1 + 0\cdot (-1) = 3\\
+\norm{\mbf{n}_1}
+\amp =
+\sqrt{ 1^2 + 1^2 + 0^2}
+=
+\sqrt{2}\\
+\norm{\mbf{n}_1}
+\amp =
+\sqrt{ 2^2 + 1^2 + (-1)^2}
+=
+\sqrt{6},
+\end{align*}
+</div>so that<div class="displaymath">
+\begin{equation*}
+\cos (\theta)
+=
+\frac{ 3}{ \sqrt{2}\cdot \sqrt{6}}
+=
+\frac{ 3}{\sqrt{12}}
+,
+\text{ i.e. }
+\sphericalangle (\mathcal{P}_1, \mathcal{P}_2)
+=
+\theta = \tfrac{\pi}{6}
+.
+\end{equation*}
+</div>
+</div></div>
+</div></article></p>
+<p id="p-428"><article class="exercise exercise-like" id="exercise-33"><h6 class="heading"><span class="codenumber">8.</span></h6>
+<aside class="aside aside-like" id="aside-33"><p id="p-429">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Section 3.2, Exercise 3.2.12.)</p></aside> Find the angle between the line<div class="displaymath">
+\begin{equation*}
+\ell\colon \mbf{x}  = \begin{bmatrix} 0 \\ 3\\ 7 \end{bmatrix} +t\begin{bmatrix} 1 \\ 1\\ 4 \end{bmatrix}  
+\end{equation*}
+</div>and \(\mathcal{P}\colon 4x_1+7x_2+4x_3 =6\text{.}\)<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-46" id="hint-46"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-46"><div class="hint solution-like">Find a normal vector \(\mbf{n}\) for \(\mathcal{P}\) and a directional vector \(\mbf{d}\) of \(\ell\text{.}\) Compute \(\theta=\sphericalangle (\mbf{n}, \mbf{d})\) using the <a data-knowl="./knowl/cosine-formula.html" title="Hint 1.2.1.5.1">Cosine Formula 1.2.1.5.1</a>. Then<div class="displaymath">
+\begin{equation*}
+\sphericalangle (\mathcal{P}, \ell)
+=
+\left\{
+\begin{array}{lc}
+\frac{\pi}{2}
+-
+\theta
+\amp \text{ if } 0 \leq \theta \leq \frac{\pi}{2}
+\\
+\theta
+-
+\frac{\pi}{2}
+\amp \text{ if } \frac{\pi}{2} \leq \theta \leq \pi
+\end{array}
+\right.
+.
+\end{equation*}
+</div>
+</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-40" id="answer-40"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-40"><div class="answer solution-like"><div class="displaymath">
+\begin{equation*}
+\sphericalangle (\mathcal{P}, \ell)
+=
+\tfrac{\pi}{4}
+.
+\end{equation*}
+</div></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-47" id="solution-47"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-47"><div class="solution solution-like">A normal vector to the plane is given by<div class="displaymath">
+\begin{equation*}
+\mbf{n} = \begin{bmatrix} 4 \\ 7\\ 4 \end{bmatrix}.
+\end{equation*}
+</div>The angle \(\theta\) between this vector and the directional vector \(\mbf{d} = \begin{bmatrix} 1 \\ 1\\ 4 \end{bmatrix}\) of the line can be computed using the <a data-knowl="./knowl/cosine-formula.html" title="Hint 1.2.1.5.1">Cosine Formula 1.2.1.5.1</a>:<div class="displaymath">
+\begin{equation*}
+\cos (\theta)
+=
+\frac{ \mbf{n} \cdot \mbf{d}}{ \norm{\mbf{n}}\cdot \norm{\mbf{d}}}
+,
+\end{equation*}
+</div>so we compute<div class="displaymath">
+\begin{align*}
+\mbf{n}\cdot \mbf{d}
+\amp =
+4\cdot 1 + 7\cdot 1 + 4\cdot 4
+=
+27\\
+\norm{\mbf{n}}
+\amp =
+\sqrt{ 4^2 + 7^2 + 4^2}
+=
+\sqrt{81}
+=
+9\\
+\norm{\mbf{d}}
+\amp =
+\sqrt{ 1^2 + 1^2 + 4^2}
+=
+\sqrt{18}
+=
+3\sqrt{2}.
+\end{align*}
+</div>It follows that<div class="displaymath">
+\begin{equation*}
+\cos (\theta)
+=
+\frac{ 27}{ 9\cdot 3\sqrt{2}} = \frac{\sqrt{2}}{2}
+,
+\text{ i.e. }
+\theta=\tfrac{\pi}{4}.
+\end{equation*}
+</div>The angle \(\alpha\) between the line and the plane is then given by \(\alpha = \tfrac{\pi}{2} - \theta = \tfrac{\pi}{4}.\)</div></div>
+</div></article></p></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.12/login.js"></script>
+</body>
+</html>

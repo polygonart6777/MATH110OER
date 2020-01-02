@@ -1,0 +1,77 @@
+<p>
+<figure> <!-- the <figure> container isn't strictly necessary, but it's nice if you want the figure to be numbered, or if you want to xref it later-->
+		<caption>Want a caption?</caption> <!-- also not necessary -->
+		<image>
+		<latex-image>
+			\begin{tikzpicture}[line cap=round, line join=round, >=triangle 45, x=1.0cm,y=1.0cm]
+				\draw[->,color=black] (-2.5,0) -- (3.5,0); % x-axis
+				\foreach \x in {-2,-1,1,2,3}
+						\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+				\foreach \x in {-2,2,3}
+						\draw[shift={(\x,0)},color=black] node[below] {\scriptsize $\x$};
+				\draw[->,color=black] (0,-2.5) -- (0,2); % y-axis
+				\foreach \y in {-2,-1, 1}
+						\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+				\foreach \y in {-2, 1}
+						\draw[shift={(0,\y)},color=black]		 node[left] {\scriptsize $\y$};
+						\begin{axis}[
+				anchor=origin,  % Align the origins
+				x=1cm, y=1cm,   % Set the same unit vectors
+				hide axis
+						]
+						\addplot [-latex] table {
+						0 0
+						2 1
+						}
+				node[above] {\scriptsize $\mathbf{u}$};
+						\addplot [-latex] table {
+						0 0
+						1 -1
+						} node[near end, right] {\scriptsize $\mathbf{v}$};
+						\addplot [-latex, thick] table {
+						0 0
+						3 0
+						} node[near end, above] {\scriptsize $\mathbf{u}+\mathbf{v}$};
+						\addplot [-latex] table {
+							0 0
+							-2 -1
+						} node[left] {\scriptsize $-\mathbf{u}$};
+						\addplot [-latex, dashed] table {
+							0 0
+							2 -2
+						} node[near end, right] {\scriptsize $2\mathbf{v}$};
+						\addplot [-latex] table {
+							0 0
+							0.5 0.5
+						} node[above] {\scriptsize $-\frac{1}{2}\mathbf{v}$};
+						\addplot [-latex] table {
+						0 0
+						-1 -2
+						} node[left] {\scriptsize $-\mathbf{u}+\mathbf{v}$};
+				\end{axis}
+				\end{tikzpicture}
+		</latex-image>
+	</image>
+</figure>
+</p>
+
+
+OR
+
+
+<p><figure> <!-- the <figure> container isn't strictly necessary, but it's nice if you want the figure to be numbered, or if you want to xref it later-->
+	<caption><m>Caption</m></caption> <!-- also not necessary -->
+		<image>
+		<latex-image>
+			\begin{figure}[h]
+			\begin{tikzpicture}
+			   \tkzInit[xmax=6,ymax=6,xmin=-6,ymin=-6]
+			   \tkzGrid
+			   \tkzAxeXY
+			   \draw[ thick,latex-latex] (-1,4) -- (4,-6) node[anchor=south west] {$a$}; % two points for drawing 2x+y=2
+			  \tkzText[above](0,6.75){Desired Output}
+			  \end{tikzpicture}
+			\end{figure}
+		</latex-image>
+		</image>
+</figure></p>
