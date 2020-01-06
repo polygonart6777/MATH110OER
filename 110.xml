@@ -51,7 +51,7 @@
 			<colophon>	 
 				<copyright>
 					<holder>Christopher Eagle</holder>
-		 			<year>2019, 2020</year>
+		 			<year>2019</year>
 		 			<shortlicense>Creative Commons BY-SA-NC</shortlicense>
 				</copyright>
 		 	</colophon>
@@ -8194,7 +8194,7 @@
 			<exercises>
  					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
-							<aside><p> (Here could go a source, again.) </p></aside>
+							<aside><p> ) </p></aside>
 						</statement>
 						<!-- <hint>
 						</hint> -->
