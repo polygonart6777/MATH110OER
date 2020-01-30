@@ -8159,9 +8159,8 @@
 						<hint>
 							This is a test hint.
 						</hint>
-						<solution>
-							And this is a test solution.
-						</solution>
+						<!-- <solution>
+						</solution> -->
 						<!--<answer>
 						</answer> -->
 					</exercise></p>
