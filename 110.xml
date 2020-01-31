@@ -6967,12 +6967,124 @@
 								\end{bmatrix}<!-- \end{bmatrix*} -->
 							</me>
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint>
+							See <xref ref="def-REF"/> for the definition of the row-echelon form.
+						</hint>
+						<solution>
+							We start by row reducing from top to botteom:
+							<md>
+								<mrow>
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										2 \amp  1 \amp  1 \amp  3
+										\\
+										6 \amp  4 \amp  1 \amp  2
+										\\ 
+										1 \amp  5 \amp  1 \amp  5
+									\end{bmatrix}<!-- \end{bmatrix*} -->
+									\overset{II-3I}{\underset{2III-I}{\longrightarrow}}
+									\amp\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										2 \amp  1 \amp  1 \amp  3
+										\\
+										0 \amp  1 \amp  -2 \amp  -7
+										\\ 
+										0 \amp  9 \amp  1 \amp  7
+									\end{bmatrix}<!-- \end{bmatrix*} -->
+								</mrow>
+								<mrow>
+									\overset{III-9II}{\underset{\frac{1}{2}I}{\longrightarrow}}
+									\amp\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+										\\
+										0 \amp  1 \amp  -2 \amp  -7
+										\\ 
+										0 \amp  0 \amp  19 \amp  70
+									\end{bmatrix}<!-- \end{bmatrix*} -->
+								</mrow>
+								<mrow>
+									\overset{\frac{1}{19}III}{\longrightarrow}
+									\amp\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+										\\
+										0 \amp  1 \amp  -2 \amp  -7
+										\\ 
+										0 \amp  0 \amp  1 \amp  \frac{70}{19}
+									\end{bmatrix}.<!-- \end{bmatrix*} -->
+								</mrow>
+							</md>
+							We have arrived at a matrix in REF. (We recall that some books do not require the leading entries to be <m>1</m> for a matrix to be in REF, in which case the second to last matrix in the above computation would also be considered to be in REF.)
+							Since we are supposed to give <em>two</em> answers, we continue:
+							<md>
+								<mrow>
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+										\\
+										0 \amp  1 \amp  -2 \amp  -7
+										\\ 
+										0 \amp  0 \amp  1 \amp  \frac{70}{19}
+									\end{bmatrix}<!-- \end{bmatrix*} -->									
+									\overset{II+2III}{\longrightarrow}
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+										\\
+										0 \amp  1 \amp  0 \amp  \frac{7}{19}
+										\\ 
+										0 \amp  0 \amp  1 \amp  \frac{70}{19}
+									\end{bmatrix}.<!-- \end{bmatrix*} -->	
+								</mrow>
+							</md>
+							Since we were not asked for a matrix in RREF, we could stop here and have our second answer. But instead, we might as well continue to manipulate our matrix to arrive at RREF:
+							<md>
+								<mrow>
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+										\\
+										0 \amp  1 \amp  0 \amp  \frac{7}{19}
+										\\ 
+										0 \amp  0 \amp  1 \amp  \frac{70}{19}
+									\end{bmatrix}<!-- \end{bmatrix*} -->	
+									\overset{I-\frac{1}{2}II}{\longrightarrow}
+									\amp\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										1 \amp  0 \amp  \frac{1}{2} \amp  \frac{25}{19}
+										\\
+										0 \amp  1 \amp  0 \amp  \frac{7}{19}
+										\\ 
+										0 \amp  0 \amp  1 \amp  \frac{70}{19}
+									\end{bmatrix}<!-- \end{bmatrix*} -->
+								</mrow>
+								<mrow>
+									\overset{I-\frac{1}{2}III}{\longrightarrow}
+									\amp\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										1 \amp  0 \amp  0 \amp  \frac{-10}{19}
+										\\
+										0 \amp  1 \amp  0 \amp \frac{7}{19}
+										\\ 
+										0 \amp  0 \amp  1 \amp  \frac{70}{19}
+									\end{bmatrix}.<!-- \end{bmatrix*} -->
+								</mrow>
+							</md>
+						</solution>
+						<answer>
+							<me>
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+									\\
+									0 \amp  1 \amp  -2 \amp  -7
+									\\ 
+									0 \amp  0 \amp  1 \amp  \frac{70}{19}
+								\end{bmatrix}<!-- \end{bmatrix*} -->
+								\quad\text{ and }\quad
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp  0 \amp  0 \amp  \frac{-10}{19}
+									\\
+									0 \amp  1 \amp  0 \amp  \frac{7}{19}
+									\\ 
+									0 \amp  0 \amp  1 \amp  \frac{70}{19}
+								\end{bmatrix}<!-- \end{bmatrix*} -->
+							</me>
+
+
+							(There are many other solutions, since the REF is <em>not</em> unique.)
+						</answer>
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 2.2, Exercise 9-->
 						<statement>
@@ -7824,7 +7936,7 @@
 							</li>
 							<li>
 								<md>
-									<mrow>2A - B = 5(A + 2B)  \iff \amp 2A - B = 5A + 10B</mrow> 								
+									<mrow>2A - B = 5(A + 2B)  \iff \amp 2A - B = 5A + 10B</mrow>
 									<mrow>\iff \amp -3A = 11B</mrow>
 									<mrow>\iff \amp A = -\frac{11}{3}B. </mrow>
 								</md>

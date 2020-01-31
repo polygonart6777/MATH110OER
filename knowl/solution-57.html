@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-30T21:53:45-08:00    *-->
+<!--*    on 2020-01-31T11:54:37-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,19 +14,85 @@
 <body>
 <div class="solution">
 <h6 class="heading">
-<span class="type">Solution</span> <span class="codenumber">2.2.6.1</span>.</h6>
-<ol class="lower-alpha">
-<li>By exchanging row \(2\) and \(3\text{,}\) we arrive at a matrix in row-echelon form with two leading \(1\)s. Thus, the rank of the matrix is \(2\text{.}\)</li>
-<li>By dividing the first row by \(2\text{,}\) we arrive at a matrix in row-echelon form with one leading  \(1\text{.}\) Thus, the rank of the matrix is \(1\text{.}\)</li>
-<li>Since the matrix is in REF, we just need to count the leading \(1\)s: the rank of the matrix is \(2\text{.}\)</li>
-<li>Since the matrix is in REF, we just need to count the leading \(1\)s: the rank of the matrix is \(3\text{.}\)</li>
-<li>Since the matrix is in REF, we just need to count the leading \(1\)s: the rank of the matrix is \(2\text{.}\)</li>
-<li>To bring the matrix in REF, we substract the first row from the second and from the third row. The resulting matrix is<div class="displaymath">
-\begin{equation*}
-\begin{bmatrix} 0 \amp  0 \amp  1 \\  0 \amp  0 \amp  0 \\  0 \amp  0 \amp  0 \end{bmatrix},
-\end{equation*}
-</div>which has one leading \(1\) and hence rank \(1\text{.}\)</li>
-</ol>
+<span class="type">Solution</span> <span class="codenumber">2.2.2.1</span>.</h6>We start by row reducing from top to botteom:<div class="displaymath">
+\begin{align*}
+\begin{bmatrix}
+2 \amp  1 \amp  1 \amp  3
+\\
+6 \amp  4 \amp  1 \amp  2
+\\ 
+1 \amp  5 \amp  1 \amp  5
+\end{bmatrix}
+\overset{II-3I}{\underset{2III-I}{\longrightarrow}}
+\amp\begin{bmatrix}
+2 \amp  1 \amp  1 \amp  3
+\\
+0 \amp  1 \amp  -2 \amp  -7
+\\ 
+0 \amp  9 \amp  1 \amp  7
+\end{bmatrix}\\
+\overset{III-9II}{\underset{\frac{1}{2}I}{\longrightarrow}}
+\amp\begin{bmatrix}
+1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+\\
+0 \amp  1 \amp  -2 \amp  -7
+\\ 
+0 \amp  0 \amp  19 \amp  70
+\end{bmatrix}\\
+\overset{\frac{1}{19}III}{\longrightarrow}
+\amp\begin{bmatrix}
+1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+\\
+0 \amp  1 \amp  -2 \amp  -7
+\\ 
+0 \amp  0 \amp  1 \amp  \frac{70}{19}
+\end{bmatrix}.
+\end{align*}
+</div>We have arrived at a matrix in REF. (We recall that some books do not require the leading entries to be \(1\) for a matrix to be in REF, in which case the second to last matrix in the above computation would also be considered to be in REF.) Since we are supposed to give <em class="emphasis">two</em> answers, we continue:<div class="displaymath">
+\begin{align*}
+\begin{bmatrix}
+1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+\\
+0 \amp  1 \amp  -2 \amp  -7
+\\ 
+0 \amp  0 \amp  1 \amp  \frac{70}{19}
+\end{bmatrix}									
+\overset{II+2III}{\longrightarrow}
+\begin{bmatrix}
+1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+\\
+0 \amp  1 \amp  0 \amp  \frac{7}{19}
+\\ 
+0 \amp  0 \amp  1 \amp  \frac{70}{19}
+\end{bmatrix}.	
+\end{align*}
+</div>Since we were not asked for a matrix in RREF, we could stop here and have our second answer. But instead, we might as well continue to manipulate our matrix to arrive at RREF:<div class="displaymath">
+\begin{align*}
+\begin{bmatrix}
+1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+\\
+0 \amp  1 \amp  0 \amp  \frac{7}{19}
+\\ 
+0 \amp  0 \amp  1 \amp  \frac{70}{19}
+\end{bmatrix}	
+\overset{I-\frac{1}{2}II}{\longrightarrow}
+\amp\begin{bmatrix}
+1 \amp  0 \amp  \frac{1}{2} \amp  \frac{25}{19}
+\\
+0 \amp  1 \amp  0 \amp  \frac{7}{19}
+\\ 
+0 \amp  0 \amp  1 \amp  \frac{70}{19}
+\end{bmatrix}\\
+\overset{I-\frac{1}{2}III}{\longrightarrow}
+\amp\begin{bmatrix}
+1 \amp  0 \amp  0 \amp  \frac{-10}{19}
+\\
+0 \amp  1 \amp  0 \amp \frac{7}{19}
+\\ 
+0 \amp  0 \amp  1 \amp  \frac{70}{19}
+\end{bmatrix}.
+\end{align*}
+</div>
 </div>
 <span class="incontext"><a href="sec-2-2.html#solution-57">in-context</a></span>
 </body>

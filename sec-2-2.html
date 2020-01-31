@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-30T21:53:41-08:00    *-->
+<!--*    on 2020-01-31T11:54:31-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -182,6 +182,109 @@ var js_version = 0.11;
 1 \amp  5 \amp  1 \amp  5
 \end{bmatrix}
 \end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-60" id="hint-60"><span class="type">Hint</span></a><div id="hk-hint-60" class="hidden-content tex2jax_ignore"><div class="solution">See <a data-knowl="./knowl/def-REF.html" title="Hint 2.2.1.1">Hint 2.2.1.1</a> for the definition of the row-echelon form.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-51" id="answer-51"><span class="type">Answer</span></a><div id="hk-answer-51" class="hidden-content tex2jax_ignore"><div class="solution">
+<div class="displaymath">
+\begin{equation*}
+\begin{bmatrix}
+1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+\\
+0 \amp  1 \amp  -2 \amp  -7
+\\ 
+0 \amp  0 \amp  1 \amp  \frac{70}{19}
+\end{bmatrix}
+\quad\text{ and }\quad
+\begin{bmatrix}
+1 \amp  0 \amp  0 \amp  \frac{-10}{19}
+\\
+0 \amp  1 \amp  0 \amp  \frac{7}{19}
+\\ 
+0 \amp  0 \amp  1 \amp  \frac{70}{19}
+\end{bmatrix}
+\end{equation*}
+</div>(There are many other solutions, since the REF is <em class="emphasis">not</em> unique.)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-57" id="solution-57"><span class="type">Solution</span></a><div id="hk-solution-57" class="hidden-content tex2jax_ignore"><div class="solution">We start by row reducing from top to botteom:<div class="displaymath">
+\begin{align*}
+\begin{bmatrix}
+2 \amp  1 \amp  1 \amp  3
+\\
+6 \amp  4 \amp  1 \amp  2
+\\ 
+1 \amp  5 \amp  1 \amp  5
+\end{bmatrix}
+\overset{II-3I}{\underset{2III-I}{\longrightarrow}}
+\amp\begin{bmatrix}
+2 \amp  1 \amp  1 \amp  3
+\\
+0 \amp  1 \amp  -2 \amp  -7
+\\ 
+0 \amp  9 \amp  1 \amp  7
+\end{bmatrix}\\
+\overset{III-9II}{\underset{\frac{1}{2}I}{\longrightarrow}}
+\amp\begin{bmatrix}
+1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+\\
+0 \amp  1 \amp  -2 \amp  -7
+\\ 
+0 \amp  0 \amp  19 \amp  70
+\end{bmatrix}\\
+\overset{\frac{1}{19}III}{\longrightarrow}
+\amp\begin{bmatrix}
+1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+\\
+0 \amp  1 \amp  -2 \amp  -7
+\\ 
+0 \amp  0 \amp  1 \amp  \frac{70}{19}
+\end{bmatrix}.
+\end{align*}
+</div>We have arrived at a matrix in REF. (We recall that some books do not require the leading entries to be \(1\) for a matrix to be in REF, in which case the second to last matrix in the above computation would also be considered to be in REF.) Since we are supposed to give <em class="emphasis">two</em> answers, we continue:<div class="displaymath">
+\begin{align*}
+\begin{bmatrix}
+1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+\\
+0 \amp  1 \amp  -2 \amp  -7
+\\ 
+0 \amp  0 \amp  1 \amp  \frac{70}{19}
+\end{bmatrix}									
+\overset{II+2III}{\longrightarrow}
+\begin{bmatrix}
+1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+\\
+0 \amp  1 \amp  0 \amp  \frac{7}{19}
+\\ 
+0 \amp  0 \amp  1 \amp  \frac{70}{19}
+\end{bmatrix}.	
+\end{align*}
+</div>Since we were not asked for a matrix in RREF, we could stop here and have our second answer. But instead, we might as well continue to manipulate our matrix to arrive at RREF:<div class="displaymath">
+\begin{align*}
+\begin{bmatrix}
+1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+\\
+0 \amp  1 \amp  0 \amp  \frac{7}{19}
+\\ 
+0 \amp  0 \amp  1 \amp  \frac{70}{19}
+\end{bmatrix}	
+\overset{I-\frac{1}{2}II}{\longrightarrow}
+\amp\begin{bmatrix}
+1 \amp  0 \amp  \frac{1}{2} \amp  \frac{25}{19}
+\\
+0 \amp  1 \amp  0 \amp  \frac{7}{19}
+\\ 
+0 \amp  0 \amp  1 \amp  \frac{70}{19}
+\end{bmatrix}\\
+\overset{I-\frac{1}{2}III}{\longrightarrow}
+\amp\begin{bmatrix}
+1 \amp  0 \amp  0 \amp  \frac{-10}{19}
+\\
+0 \amp  1 \amp  0 \amp \frac{7}{19}
+\\ 
+0 \amp  0 \amp  1 \amp  \frac{70}{19}
+\end{bmatrix}.
+\end{align*}
+</div>
+</div></div>
 </div></article></p>
 <p id="p-456"><article class="exercise-like" id="exercise-45"><h6 class="heading"><span class="codenumber">3.</span></h6>
 <aside class="aside-like" id="aside-47"><p id="p-457">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Section 1.2, Exercise 1.2.20.)</p></aside> Row reduce the following matrix to obtain the row-echelon form. Then continue to obtain the reduced row-echelon form.<div class="displaymath">
@@ -199,7 +302,7 @@ var js_version = 0.11;
 <li id="li-212">\(3 \times 3\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-51" id="answer-51"><span class="type">Answer</span></a><div id="hk-answer-51" class="hidden-content tex2jax_ignore"><div class="solution">In the following, \(\ast\) can be any number. <ol class="lower-alpha">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-52" id="answer-52"><span class="type">Answer</span></a><div id="hk-answer-52" class="hidden-content tex2jax_ignore"><div class="solution">In the following, \(\ast\) can be any number. <ol class="lower-alpha">
 <li id="li-213"><div class="displaymath">
 \begin{equation*}
 \begin{bmatrix}
@@ -368,9 +471,9 @@ var js_version = 0.11;
 <li id="li-222">\(\begin{bmatrix} 0 \amp  0 \amp  1 \\  0 \amp  0 \amp  1 \\  0 \amp  0 \amp  1 \end{bmatrix}\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-60" id="hint-60"><span class="type">Hint</span></a><div id="hk-hint-60" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-61" id="hint-61"><span class="type">Hint</span></a><div id="hk-hint-61" class="hidden-content tex2jax_ignore"><div class="solution">
 <aside class="aside-like" id="aside-51"><p id="p-464">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a> Definition 1.4 in Section 1.2.)</p></aside> The <em class="emphasis">rank</em> of a matrix \(A\) is the number of leading \(1\)s in any row-echelon matrix to which \(A\) can be carried by row operations. (For the definition of the row-echelon form, see <a data-knowl="./knowl/def-REF.html" title="Hint 2.2.1.1">Hint 2.2.1.1</a>.)</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-52" id="answer-52"><span class="type">Answer</span></a><div id="hk-answer-52" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha cols2">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-53" id="answer-53"><span class="type">Answer</span></a><div id="hk-answer-53" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha cols2">
 <li id="li-229">rank \(2\)</li>
 <li id="li-230">rank \(1\)</li>
 <li id="li-231">rank \(2\)</li>
@@ -378,7 +481,7 @@ var js_version = 0.11;
 <li id="li-233">rank \(2\)</li>
 <li id="li-234">rank \(1\)</li>
 </ol></div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-57" id="solution-57"><span class="type">Solution</span></a><div id="hk-solution-57" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-58" id="solution-58"><span class="type">Solution</span></a><div id="hk-solution-58" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
 <li id="li-223">By exchanging row \(2\) and \(3\text{,}\) we arrive at a matrix in row-echelon form with two leading \(1\)s. Thus, the rank of the matrix is \(2\text{.}\)</li>
 <li id="li-224">By dividing the first row by \(2\text{,}\) we arrive at a matrix in row-echelon form with one leading  \(1\text{.}\) Thus, the rank of the matrix is \(1\text{.}\)</li>
 <li id="li-225">Since the matrix is in REF, we just need to count the leading \(1\)s: the rank of the matrix is \(2\text{.}\)</li>
@@ -528,9 +631,9 @@ x + ay  - z \amp =  1\\
 </ol></article></p>
 <p id="p-483"><article class="exercise-like" id="ex--three-lines-intersect"><h6 class="heading"><span class="codenumber">16.</span></h6>
 <aside class="aside-like" id="aside-61"><p id="p-484">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.3)</p></aside> Do the three lines \(x+2y=1\text{,}\) \(2x-y=1\text{,}\) and \(4x+3y=3\) in \(\mathbb{R}^2\) have a common point of intersection?  If so, find the point.  If not, explain why they don't have a common point of intersection.<div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-61" id="hint-61"><span class="type">Hint</span></a><div id="hk-hint-61" class="hidden-content tex2jax_ignore"><div class="solution">If \((x, y)\) is a point of intersection of the three lines, then \((x, y)\) must satisfy the equations of all three lines.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-53" id="answer-53"><span class="type">Answer</span></a><div id="hk-answer-53" class="hidden-content tex2jax_ignore"><div class="solution">The three lines intersect at \(\left(\frac{3}{5}, \frac{1}{5}\right)\text{.}\)</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-58" id="solution-58"><span class="type">Solution</span></a><div id="hk-solution-58" class="hidden-content tex2jax_ignore"><div class="solution">To find out if there is a common point of intersection we want to find out if the three given equations have a simultaneous solution.  We therefore turn the equations into an augmented matrix and row reduce:<div class="displaymath">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-62" id="hint-62"><span class="type">Hint</span></a><div id="hk-hint-62" class="hidden-content tex2jax_ignore"><div class="solution">If \((x, y)\) is a point of intersection of the three lines, then \((x, y)\) must satisfy the equations of all three lines.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-54" id="answer-54"><span class="type">Answer</span></a><div id="hk-answer-54" class="hidden-content tex2jax_ignore"><div class="solution">The three lines intersect at \(\left(\frac{3}{5}, \frac{1}{5}\right)\text{.}\)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-59" id="solution-59"><span class="type">Solution</span></a><div id="hk-solution-59" class="hidden-content tex2jax_ignore"><div class="solution">To find out if there is a common point of intersection we want to find out if the three given equations have a simultaneous solution.  We therefore turn the equations into an augmented matrix and row reduce:<div class="displaymath">
 \begin{equation*}
 \matr{rr|r}{1\amp 2\amp 1\\2\amp -1\amp 1\\4\amp 3\amp 3}
 \to \matr{rr|r}{1\amp 2\amp 1 \\ 0 \amp  -5 \amp  -1 \\ 0 \amp  -5 \amp  -1} 

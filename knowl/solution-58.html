@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-30T21:53:45-08:00    *-->
+<!--*    on 2020-01-31T11:54:37-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,13 +14,20 @@
 <body>
 <div class="solution">
 <h6 class="heading">
-<span class="type">Solution</span> <span class="codenumber">2.2.16.1</span>.</h6>To find out if there is a common point of intersection we want to find out if the three given equations have a simultaneous solution.  We therefore turn the equations into an augmented matrix and row reduce:<div class="displaymath">
+<span class="type">Solution</span> <span class="codenumber">2.2.6.1</span>.</h6>
+<ol class="lower-alpha">
+<li>By exchanging row \(2\) and \(3\text{,}\) we arrive at a matrix in row-echelon form with two leading \(1\)s. Thus, the rank of the matrix is \(2\text{.}\)</li>
+<li>By dividing the first row by \(2\text{,}\) we arrive at a matrix in row-echelon form with one leading  \(1\text{.}\) Thus, the rank of the matrix is \(1\text{.}\)</li>
+<li>Since the matrix is in REF, we just need to count the leading \(1\)s: the rank of the matrix is \(2\text{.}\)</li>
+<li>Since the matrix is in REF, we just need to count the leading \(1\)s: the rank of the matrix is \(3\text{.}\)</li>
+<li>Since the matrix is in REF, we just need to count the leading \(1\)s: the rank of the matrix is \(2\text{.}\)</li>
+<li>To bring the matrix in REF, we substract the first row from the second and from the third row. The resulting matrix is<div class="displaymath">
 \begin{equation*}
-\matr{rr|r}{1\amp 2\amp 1\\2\amp -1\amp 1\\4\amp 3\amp 3}
-\to \matr{rr|r}{1\amp 2\amp 1 \\ 0 \amp  -5 \amp  -1 \\ 0 \amp  -5 \amp  -1} 
-\to \matr{rr|r}{1 \amp  0 \amp  \frac{3}{5} \\ 0 \amp  1 \amp  \frac{1}{5} \\ 0 \amp  0 \amp  0}
+\begin{bmatrix} 0 \amp  0 \amp  1 \\  0 \amp  0 \amp  0 \\  0 \amp  0 \amp  0 \end{bmatrix},
 \end{equation*}
-</div>The row reduced form tells us that there is a solution to this system, and that the only solution is \(x=\frac{3}{5}, y = \frac{1}{5}\text{.}\)  Therefore the three given lines do have a common point of intersection, and that point is \(\left(\frac{3}{5}, \frac{1}{5}\right)\text{.}\)</div>
+</div>which has one leading \(1\) and hence rank \(1\text{.}\)</li>
+</ol>
+</div>
 <span class="incontext"><a href="sec-2-2.html#solution-58">in-context</a></span>
 </body>
 </html>
