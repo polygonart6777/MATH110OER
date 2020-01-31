@@ -1,7 +1,7 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-02T15:53:21-08:00    *-->
+<!--*    on 2020-01-30T18:41:40-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -9,7 +9,7 @@
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Subspsace, Basis, Dimension, and Rank</title>
+<title>Subspace, Basis, Dimension, and Rank</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 <script type="text/x-mathjax-config">
@@ -41,23 +41,19 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.12/pretext.js"></script><script src="https://pretextbook.org/js/0.12/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
-<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.31/features.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
 <script>var logged_in = false;
 var role = 'student';
 var guest_access = true;
 var login_required = false;
-var js_version = 0.12;
+var js_version = 0.11;
 </script>
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
@@ -110,7 +106,7 @@ var js_version = 0.12;
 <li><a href="section-6.html" data-scroll="section-6">Matrix Operations</a></li>
 <li><a href="section-7.html" data-scroll="section-7">Matrix Algebra</a></li>
 <li><a href="section-8.html" data-scroll="section-8">The Inverse of a Matrix</a></li>
-<li><a href="section-9.html" data-scroll="section-9" class="active">Subspsace, Basis, Dimension, and Rank</a></li>
+<li><a href="section-9.html" data-scroll="section-9" class="active">Subspace, Basis, Dimension, and Rank</a></li>
 <li><a href="section-10.html" data-scroll="section-10">Introduction to Linear Transformations</a></li>
 </ul>
 </li>
@@ -118,35 +114,36 @@ var js_version = 0.12;
 <a href="chapter-4.html" data-scroll="chapter-4"><span class="codenumber">4</span> <span class="title">Eigenvalues, Eigenvectors, and Diagonalization</span></a><ul>
 <li><a href="section-11.html" data-scroll="section-11">Introduction to Eigenvalues and Eigenvectors</a></li>
 <li><a href="section-12.html" data-scroll="section-12">Determinants</a></li>
+<li><a href="section-13.html" data-scroll="section-13">Eigenvalues and eigvenvectors of \(n \times n \) matrices.</a></li>
 </ul>
 </li>
 <li class="link">
-<a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">5</span> <span class="title">Orthogonality</span></a><ul><li><a href="exercises-13.html" data-scroll="exercises-13">Exercises</a></li></ul>
+<a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">5</span> <span class="title">Orthogonality</span></a><ul><li><a href="exercises-14.html" data-scroll="exercises-14">Exercises</a></li></ul>
 </li>
 <li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="ref-references.html" data-scroll="ref-references"><span class="title">References</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="section-9"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">3.4</span> <span class="title">Subspsace, Basis, Dimension, and Rank</span>
+<span class="type">Section</span> <span class="codenumber">3.4</span> <span class="title">Subspace, Basis, Dimension, and Rank</span>
 </h2>
 <section class="exercises" id="exercises-9"><h3 class="heading hide-type">
-<span class="type">Exercises</span> <span class="codenumber">3.4.1</span> <span class="title">Exercises</span>
+<span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<p id="p-535"><article class="exercise exercise-like" id="exercise-86"><h6 class="heading"><span class="codenumber">1.</span></h6>
-<aside class="aside aside-like" id="aside-86"><p id="p-536">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 5, Exercise 5.3.1)</p></aside> Which of the following sets are subspace of \(\mathbb{R}^3? \) Explain. <ol class="lower-alpha">
-<li id="li-270">\(\displaystyle \displaystyle V_1 = \left\{u = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \ \Bigg| \ |u_1| \le 4 \right\}. \)</li>
-<li id="li-271">\(\displaystyle \displaystyle V_2 = \left\{u = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \ \Bigg| \ u_i \ge 0 \ \text{for each } i = 1,2,3 \right\}. \)</li>
-<li id="li-272">\(\displaystyle \displaystyle V_3 = \left\{u = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \ \Bigg| \ u_3 + u_1 = 2u_2 \right\}. \)</li>
-<li id="li-273">\(\displaystyle \displaystyle V_4 = \left\{u = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \ \Bigg| \ u_3 \ge u_1 \right\}. \)</li>
-<li id="li-274">\(\displaystyle \displaystyle V_5 = \left\{u = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \ \Bigg| \ u_3 = u_1 =0 \right\}. \)</li>
+<p id="p-535"><article class="exercise-like" id="exercise-86"><h6 class="heading"><span class="codenumber">1.</span></h6>
+<aside class="aside-like" id="aside-86"><p id="p-536">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 5, Exercise 5.3.1)</p></aside> Which of the following sets are subspace of \(\mathbb{R}^3? \) Explain. <ol class="lower-alpha">
+<li id="li-270">\(\displaystyle V_1 = \left\{u = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \ \Bigg| \ |u_1| \le 4 \right\}. \)</li>
+<li id="li-271">\(\displaystyle V_2 = \left\{u = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \ \Bigg| \ u_i \ge 0 \ \text{for each } i = 1,2,3 \right\}. \)</li>
+<li id="li-272">\(\displaystyle V_3 = \left\{u = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \ \Bigg| \ u_3 + u_1 = 2u_2 \right\}. \)</li>
+<li id="li-273">\(\displaystyle V_4 = \left\{u = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \ \Bigg| \ u_3 \ge u_1 \right\}. \)</li>
+<li id="li-274">\(\displaystyle V_5 = \left\{u = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \ \Bigg| \ u_3 = u_1 =0 \right\}. \)</li>
 </ol></article></p>
-<p id="p-537"><article class="exercise exercise-like" id="exercise-87"><h6 class="heading"><span class="codenumber">2.</span></h6>
-<aside class="aside aside-like" id="aside-87"><p id="p-538">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 4, Exercise 4.10.58)</p></aside> Suppose \(V \) and \(W \)  are subspaces of \(\mathbb{R}^n \text{.}\)  Let \(V \cap W \) be all vectors which are in both \(V \) and \(W \text{.}\)  Show that \(V \cap W \) is a subspace also.</article></p>
-<p id="p-539"><article class="exercise exercise-like" id="exercise-88"><h6 class="heading"><span class="codenumber">3.</span></h6>
-<aside class="aside aside-like" id="aside-88"><p id="p-540">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 5, Exercise 5.1.24)</p></aside> Show that every proper subspace \(U \) of \(\mathbb{R}^2 \) is a line through the origin. Hint: If \(\mathbf{d} \) is a nonzero vector in \(U \) , let \(L = \mathbb{R}\textbf{d} = \{ r\textbf{d} \ | \ r  \text{ in } \mathbb{R}\} \) denote the line with direction vector \(\mathbf{d}. \) If \(\mathbf{u} \) is in \(U \) but not in \(L \text{,}\) argue geometrically that every vector \(\mathbf{v} \) in \(\mathbb{R}^2 \) is a linear combination of \(\mathbf{u} \) and \(\mathbf{d}. \)</article></p>
-<p id="p-541"><article class="exercise exercise-like" id="exercise-89"><h6 class="heading"><span class="codenumber">4.</span></h6>
-<aside class="aside aside-like" id="aside-89"><p id="p-542">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 5, Exercise 5.5.1)</p></aside> Determine the rank and nullity and find a basis of the column space, row space, and null space of each of the following matrices. <ol class="lower-alpha cols2">
+<p id="p-537"><article class="exercise-like" id="exercise-87"><h6 class="heading"><span class="codenumber">2.</span></h6>
+<aside class="aside-like" id="aside-87"><p id="p-538">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 4, Exercise 4.10.58)</p></aside> Suppose \(V \) and \(W \)  are subspaces of \(\mathbb{R}^n \text{.}\)  Let \(V \cap W \) be all vectors which are in both \(V \) and \(W \text{.}\)  Show that \(V \cap W \) is a subspace also.</article></p>
+<p id="p-539"><article class="exercise-like" id="exercise-88"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<aside class="aside-like" id="aside-88"><p id="p-540">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 5, Exercise 5.1.24)</p></aside> Show that every proper subspace \(U \) of \(\mathbb{R}^2 \) is a line through the origin. Hint: If \(\mathbf{d} \) is a nonzero vector in \(U \) , let \(L = \mathbb{R}\textbf{d} = \{ r\textbf{d} \ | \ r  \text{ in } \mathbb{R}\} \) denote the line with direction vector \(\mathbf{d}. \) If \(\mathbf{u} \) is in \(U \) but not in \(L \text{,}\) argue geometrically that every vector \(\mathbf{v} \) in \(\mathbb{R}^2 \) is a linear combination of \(\mathbf{u} \) and \(\mathbf{d}. \)</article></p>
+<p id="p-541"><article class="exercise-like" id="exercise-89"><h6 class="heading"><span class="codenumber">4.</span></h6>
+<aside class="aside-like" id="aside-89"><p id="p-542">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 5, Exercise 5.5.1)</p></aside> Determine the rank and nullity and find a basis of the column space, row space, and null space of each of the following matrices. <ol class="lower-alpha cols2">
 <li id="li-275"><div class="displaymath">
 \begin{equation*}
 A = \begin{bmatrix} 1 \amp 3 \amp 2 \\ 3 \amp 9 \amp 6 \\ 1 \amp 3 \amp 2 \end{bmatrix} 
@@ -173,8 +170,8 @@ E = \begin{bmatrix} 1 \amp 0 \amp 3 \amp 0 \\ 3 \amp 1 \amp 10 \amp 0 \\ -1 \amp
 \end{equation*}
 </div></li>
 </ol></article></p>
-<p id="p-543"><article class="exercise exercise-like" id="exercise-90"><h6 class="heading"><span class="codenumber">5.</span></h6>
-<aside class="aside aside-like" id="aside-90"><p id="p-544">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 5, Exercise 5.2.3)</p></aside> Find a basis and calculate the dimension of the following subspaces of \(\mathbb{R}^4 \text{.}\) <ol class="lower-alpha">
+<p id="p-543"><article class="exercise-like" id="exercise-90"><h6 class="heading"><span class="codenumber">5.</span></h6>
+<aside class="aside-like" id="aside-90"><p id="p-544">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 5, Exercise 5.2.3)</p></aside> Find a basis and calculate the dimension of the following subspaces of \(\mathbb{R}^4 \text{.}\) <ol class="lower-alpha">
 <li id="li-280"><div class="displaymath">
 \begin{equation*}
 \text{span}\{ (1,-1,2,0), (2,3,0,3), (1,9,-6,6)\} 
@@ -196,8 +193,8 @@ E = \begin{bmatrix} 1 \amp 0 \amp 3 \amp 0 \\ 3 \amp 1 \amp 10 \amp 0 \\ -1 \amp
 \end{equation*}
 </div></li>
 </ol></article></p>
-<p id="p-545"><article class="exercise exercise-like" id="exercise-91"><h6 class="heading"><span class="codenumber">6.</span></h6>
-<aside class="aside aside-like" id="aside-91"><p id="p-546">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 5, Exercise 5.4.3)</p></aside><ol class="lower-alpha">
+<p id="p-545"><article class="exercise-like" id="exercise-91"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<aside class="aside-like" id="aside-91"><p id="p-546">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 5, Exercise 5.4.3)</p></aside><ol class="lower-alpha">
 <li id="li-284">Can a \(3 \times 4 \) matrix have independent columns? Independent rows? Explain.</li>
 <li id="li-285">If  \(A \) is \(4 \times 3 \) and rank \(A \) =2, can  \(A \) have independent columns? Independent rows? Explain.</li>
 <li id="li-286">If \(A \) is an \(m \times n \) matrix and rank \(A = m \text{,}\) show that \(\le n \text{.}\)</li>
@@ -207,6 +204,6 @@ E = \begin{bmatrix} 1 \amp 0 \amp 3 \amp 0 \\ 3 \amp 1 \amp 10 \amp 0 \\ -1 \amp
 </ol></article></p></section></section></div></main>
 </div>
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.12/login.js"></script>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>

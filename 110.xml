@@ -7888,7 +7888,7 @@
 				</exercises>
 				</section>
 
-				<section> <title> Subspsace, Basis, Dimension, and Rank </title>
+				<section> <title> Subspace, Basis, Dimension, and Rank </title>
 <exercises>
  					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
@@ -8156,12 +8156,10 @@
 							<aside><p> (Source: <xref ref="ref-PS" />, Chapter 6, Exercise 6.4.3) </p></aside>
 							Find the matrix of the linear transformation that rotates every vector in <m> \mathbb{R}^2 </m> by an angle of <m> \pi/6 </m> and then reflects about the <m>x</m>-axis followed by a reflection about the <m>y</m>-axis. 						
 						</statement>
-						<hint>
-							This is a test hint.
-						</hint>
-						<solution>
-							And this is a test solution.
-						</solution>
+						<!--<hint>
+						</hint>-->
+						<!--<solution>
+						</solution>-->
 						<!--<answer>
 						</answer> -->
 					</exercise></p>
@@ -8355,7 +8353,7 @@
 					</exercise></p>
 	</exercises>
 </section>
-
+<section>
 	<title>Eigenvalues and eigvenvectors of <m> n \times n </m> matrices. </title>
 			<exercises>
  					<p><exercise><!-- xml:id="ex-" -->
