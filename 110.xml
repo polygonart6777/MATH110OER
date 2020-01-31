@@ -6866,7 +6866,7 @@
  					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 2.2, Exercises 1, 3, 5, 7-->
 						<statement>
 							<aside><p>(Source: <xref ref="ref-KN"/> in Section 1.2, Exercise 1.2.1.)</p></aside>
-							Which of the following matrices are in reduced-echelon form?  Which are in row-echelon form?		
+							Which of the following matrices are in reduced row-echelon form?  Which are in row-echelon form?		
 							<ol label="[a]" cols="2">
 								<li>
 									<m>\begin{bmatrix}<!-- \begin{bmatrix*}[r] --> 1\amp  -1 \amp  2\\ 0 \amp  0 \amp  0 \\ 0 \amp  0 \amp  1 \end{bmatrix}<!-- \end{bmatrix*} --></m>
@@ -6896,6 +6896,7 @@
 								<li> each leading entry of a row is in a column to the right of the leading entries of any row above it, and</li>
 								<li> each leading entry of a row is equal to <m>1</m>.</li>
 							</ol>
+							
 							<p>
 							(Note that some sources <em>do not</em> assume that the leading entries are <m>1</m> for the REF.)</p>
 						</hint>
@@ -6994,7 +6995,7 @@
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
 							<aside><p> (Source: <xref ref="ref-JH"/>, Chapter 3, Section 1 (Gauss-Jordan Reduction), Problem 5) </p></aside>
-							List the reduced echelon forms possible for each size.
+							List the reduced row-echelon forms possible for each size.
 							<ol label="[a]" cols="2">
 								<li>
 									<m>2 \times 2</m>
@@ -7015,17 +7016,17 @@
 						<!-- <solution>
 						</solution> -->
 						<answer>
+							In the following, <m>\ast</m> can be any number.
 							<ol label="[a]">
 								<li>
-									There are four possible answers:
-								<me>\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+								<me> \begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
 									0 \amp  0 
 									\\ 
 									0 \amp  0
 								\end{bmatrix}<!-- \end{bmatrix*} -->
 									,
 									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
-									1 \amp  0 
+									1 \amp  \ast
 									\\ 
 									0 \amp  0
 								\end{bmatrix}<!-- \end{bmatrix*} -->
@@ -7043,7 +7044,50 @@
 								</me>
 								</li>
 								<li>
-									<m>2 \times 3</m> 
+								<md>
+								<mrow>
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									0 \amp  0 \amp 0
+									\\ 
+									0 \amp  0\amp 0
+								\end{bmatrix}<!-- \end{bmatrix*} -->,
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp  \ast \amp \ast
+									\\ 
+									0 \amp  0\amp 0
+								\end{bmatrix}<!-- \end{bmatrix*} -->
+								,
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									0 \amp 	1 \amp \ast
+									\\ 
+									0 \amp  0\amp 0
+								\end{bmatrix}<!-- \end{bmatrix*} -->
+								,
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									0 \amp 	0 \amp 1
+									\\ 
+									0 \amp  0\amp 0
+								\end{bmatrix},<!-- \end{bmatrix*} -->
+								</mrow>
+								<mrow>
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp  0 \amp \ast
+									\\ 
+									0 \amp  1 \amp \ast
+								\end{bmatrix}<!-- \end{bmatrix*} -->
+								,
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp 	\ast \amp 0
+									\\ 
+									0 \amp  0 \amp 1
+								\end{bmatrix}.<!-- \end{bmatrix*} -->
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									0 \amp 	1 \amp 0
+									\\ 
+									0 \amp  0 \amp 1
+								\end{bmatrix}.<!-- \end{bmatrix*} -->
+								</mrow>
+								</md>
 								</li>
 								<li>
 									<m>3 \times 2</m> 

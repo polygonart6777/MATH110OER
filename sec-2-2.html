@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-30T19:24:12-08:00    *-->
+<!--*    on 2020-01-30T19:45:04-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -131,7 +131,7 @@ var js_version = 0.11;
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <p id="p-449"><article class="exercise-like" id="exercise-43"><h6 class="heading"><span class="codenumber">1.</span></h6>
-<aside class="aside-like" id="aside-43"><p id="p-450">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a> in Section 1.2, Exercise 1.2.1.)</p></aside> Which of the following matrices are in reduced-echelon form?  Which are in row-echelon form? <ol class="lower-alpha cols2">
+<aside class="aside-like" id="aside-43"><p id="p-450">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a> in Section 1.2, Exercise 1.2.1.)</p></aside> Which of the following matrices are in reduced row-echelon form?  Which are in row-echelon form? <ol class="lower-alpha cols2">
 <li id="li-186">\(\begin{bmatrix} 1\amp  -1 \amp  2\\ 0 \amp  0 \amp  0 \\ 0 \amp  0 \amp  1 \end{bmatrix}\)</li>
 <li id="li-187">\(\begin{bmatrix} 2\amp  1 \amp  -1 \amp  3 \\ 0 \amp  0 \amp  0 \amp  0 \end{bmatrix}\)</li>
 <li id="li-188">\(\begin{bmatrix}1\amp  -2 \amp  3 \amp  5 \\ 0 \amp  0 \amp  0 \amp  1 \end{bmatrix}\)</li>
@@ -144,21 +144,23 @@ var js_version = 0.11;
 <aside class="aside-like" id="aside-44"><p id="p-451">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a> Section 1.2, Definition 1.12)</p></aside> A matrix is in <em class="emphasis">row-echelon form</em> (REF) if <ol class="decimal">
 <li id="li-192">all nonzero rows are above any rows of zeros,</li>
 <li id="li-193">each leading entry of a row is in a column to the right of the leading entries of any row above it, and</li>
-<li id="li-194">each leading entry is equal to \(1\text{.}\)</li>
-</ol> (Note that some sources <em class="emphasis">do not</em> assume that the leading entries are \(1\) for the REF.)</div></div>
+<li id="li-194">each leading entry of a row is equal to \(1\text{.}\)</li>
+</ol>
+<p id="p-452">(Note that some sources <em class="emphasis">do not</em> assume that the leading entries are \(1\) for the REF.)</p>
+</div></div>
 <a data-knowl="" class="id-ref" data-refid="hk-def-RREF" id="def-RREF"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-def-RREF" class="hidden-content tex2jax_ignore"><div class="solution">
-<aside class="aside-like" id="aside-45"><p id="p-452">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a> Section 1.2, Definition 1.13)</p></aside> A matrix is in <em class="emphasis">reduced row-echelon form</em> (RREF) if <ol class="decimal">
+<aside class="aside-like" id="aside-45"><p id="p-453">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a> Section 1.2, Definition 1.13)</p></aside> A matrix is in <em class="emphasis">reduced row-echelon form</em> (RREF) if <ol class="decimal">
 <li id="li-195">it is in REF and</li>
-<li id="li-196">all entries above a leading entry are zero.</li>
+<li id="li-196">all entries in a column above and below a leading entry are zero.</li>
 </ol>
 </div></div>
 <a data-knowl="" class="id-ref" data-refid="hk-answer-50" id="answer-50"><span class="type">Answer</span></a><div id="hk-answer-50" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
-<li id="li-203">The matrix is not in REF: There is a non-zero entry below a zero row. In particular, the matrix is not RREF.</li>
-<li id="li-204">The matrix is in not in REF: The leading entry of the first row is not \(1\text{.}\) In particular, the matrix is not RREF.</li>
+<li id="li-203">The matrix is not in REF: The zero row is not at the bottom.</li>
+<li id="li-204">The matrix is in not in REF: The leading entry of the first row is not \(1\text{.}\) In particular, the matrix is not in RREF.</li>
 <li id="li-205">The matrix is in REF, but not in RREF: The last column, which contains a leading \(1\) in the second row, has a non-zero entry (\(5\)).</li>
 <li id="li-206">The matrix is in REF, but not in RREF: The fourth column, which contains a leading \(1\) in the second row, has a non-zero entry (\(3\)).</li>
 <li id="li-207">The matrix is in REF, but not in RREF: The second column, which contains a leading \(1\) in the second row, has a non-zero entry (\(1\)).</li>
-<li id="li-208">The matrix is not in REF: The leading entry of the second row (\(1\) in the \((2, 3)\)-entry) is not strictly to the right of the leading entry of the first row (\(1\) in the \((1, 3)\)-entry). In particular, the matrix is not RREF.</li>
+<li id="li-208">The matrix is not in REF: The leading entry of the second row (\(1\) in the \((2, 3)\)-entry) is not strictly to the right of the leading entry of the first row (\(1\) in the \((1, 3)\)-entry). In particular, the matrix is not in RREF.</li>
 </ol></div></div>
 <a data-knowl="" class="id-ref" data-refid="hk-solution-56" id="solution-56"><span class="type">Solution</span></a><div id="hk-solution-56" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha cols2">
 <li id="li-197">Neither in REF nor in RREF.</li>
@@ -169,8 +171,8 @@ var js_version = 0.11;
 <li id="li-202">Neither in REF nor in RREF.</li>
 </ol></div></div>
 </div></article></p>
-<p id="p-453"><article class="exercise-like" id="exercise-44"><h6 class="heading"><span class="codenumber">2.</span></h6>
-<aside class="aside-like" id="aside-46"><p id="p-454">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>,  Chapter 3, Section 1 (Gauss-Jordan Reduction) Problem 4.)</p></aside> Give two distinct echelon form versions of this matrix.<div class="displaymath">
+<p id="p-454"><article class="exercise-like" id="exercise-44"><h6 class="heading"><span class="codenumber">2.</span></h6>
+<aside class="aside-like" id="aside-46"><p id="p-455">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>,  Chapter 3, Section 1 (Gauss-Jordan Reduction) Problem 4.)</p></aside> Give two distinct echelon form versions of this matrix.<div class="displaymath">
 \begin{equation*}
 \begin{bmatrix}
 2 \amp  1 \amp  1 \amp  3
@@ -181,77 +183,152 @@ var js_version = 0.11;
 \end{bmatrix}
 \end{equation*}
 </div></article></p>
-<p id="p-455"><article class="exercise-like" id="exercise-45"><h6 class="heading"><span class="codenumber">3.</span></h6>
-<aside class="aside-like" id="aside-47"><p id="p-456">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Section 1.2, Exercise 1.2.20.)</p></aside> Row reduce the following matrix to obtain the row-echelon form. Then continue to obtain the reduced row-echelon form.<div class="displaymath">
+<p id="p-456"><article class="exercise-like" id="exercise-45"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<aside class="aside-like" id="aside-47"><p id="p-457">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Section 1.2, Exercise 1.2.20.)</p></aside> Row reduce the following matrix to obtain the row-echelon form. Then continue to obtain the reduced row-echelon form.<div class="displaymath">
 \begin{equation*}
 \begin{bmatrix}
 2 \amp  -1 \amp  3 \amp  -1  \\ 1 \amp  0 \amp  2 \amp  1 \\  1 \amp  -1 \amp  1 \amp  -2 
 \end{bmatrix}
 \end{equation*}
 </div></article></p>
-<p id="p-457"><article class="exercise-like" id="exercise-46"><h6 class="heading"><span class="codenumber">4.</span></h6>
-<aside class="aside-like" id="aside-48"><p id="p-458">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Chapter 3, Section 1 (Gauss-Jordan Reduction), Problem 5)</p></aside> List the reduced echelon forms possible for each size. <ol class="lower-alpha cols2">
+<p id="p-458"><article class="exercise-like" id="exercise-46"><h6 class="heading"><span class="codenumber">4.</span></h6>
+<aside class="aside-like" id="aside-48"><p id="p-459">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Chapter 3, Section 1 (Gauss-Jordan Reduction), Problem 5)</p></aside> List the reduced row-echelon forms possible for each size. <ol class="lower-alpha cols2">
 <li id="li-209">\(2 \times 2\)</li>
 <li id="li-210">\(2 \times 3\)</li>
 <li id="li-211">\(3 \times 2\)</li>
 <li id="li-212">\(3 \times 3\)</li>
-</ol></article></p>
-<p id="p-459"><article class="exercise-like" id="exercise-47"><h6 class="heading"><span class="codenumber">5.</span></h6>
-<aside class="aside-like" id="aside-49"><p id="p-460">(Source: <a data-knowl="./knowl/ref-RB.html" title="Bibliographic Entry 5">[5]</a> in the Section for Row-reduced Echelon Form, Exercise RREF.T10.)</p></aside> Prove that each of the three row operations is reversible. More precisely, if the matrix \(B\) is obtained from \(A\) by application of a single row operation, show that there is a single row operation that will transform B back into \(A\text{.}\)</article></p>
-<p id="p-461"><article class="exercise-like" id="exercise-48"><h6 class="heading"><span class="codenumber">6.</span></h6>
-<aside class="aside-like" id="aside-50"><p id="p-462">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a> in Section 1.2.)</p></aside> Find the rank of each of the matrices in Problem 1.</article></p>
-<p id="p-463"><article class="exercise-like" id="exercise-49"><h6 class="heading"><span class="codenumber">7.</span></h6>
-<aside class="aside-like" id="aside-51"><p id="p-464">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a> in Section 1.2, Exercise 1.2.5.)</p></aside> Find all solutions (if any) to each of the following systems of linear equations. <ol class="lower-alpha cols2">
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-51" id="answer-51"><span class="type">Answer</span></a><div id="hk-answer-51" class="hidden-content tex2jax_ignore"><div class="solution">In the following, \(\ast\) can be any number. <ol class="lower-alpha">
 <li id="li-213"><div class="displaymath">
+\begin{equation*}
+\begin{bmatrix}
+0 \amp  0 
+\\ 
+0 \amp  0
+\end{bmatrix}
+,
+\begin{bmatrix}
+1 \amp  \ast
+\\ 
+0 \amp  0
+\end{bmatrix}
+\begin{bmatrix}
+0 \amp  1
+\\ 
+0 \amp  0
+\end{bmatrix}
+,
+\begin{bmatrix}
+1 \amp  0 
+\\ 
+0 \amp  1
+\end{bmatrix}.									
+\end{equation*}
+</div></li>
+<li id="li-214"><div class="displaymath">
+\begin{align*}
+\begin{bmatrix}
+0 \amp  0 \amp 0
+\\ 
+0 \amp  0\amp 0
+\end{bmatrix},
+\begin{bmatrix}
+1 \amp  \ast \amp \ast
+\\ 
+0 \amp  0\amp 0
+\end{bmatrix}
+,
+\begin{bmatrix}
+0 \amp 	1 \amp \ast
+\\ 
+0 \amp  0\amp 0
+\end{bmatrix}
+,
+\begin{bmatrix}
+0 \amp 	0 \amp 1
+\\ 
+0 \amp  0\amp 0
+\end{bmatrix},\\
+\begin{bmatrix}
+1 \amp  0 \amp \ast
+\\ 
+0 \amp  1 \amp \ast
+\end{bmatrix}
+,
+\begin{bmatrix}
+1 \amp 	\ast \amp 0
+\\ 
+0 \amp  0 \amp 1
+\end{bmatrix}.
+\begin{bmatrix}
+0 \amp 	1 \amp 0
+\\ 
+0 \amp  0 \amp 1
+\end{bmatrix}.
+\end{align*}
+</div></li>
+<li id="li-215">\(3 \times 2\)</li>
+<li id="li-216">\(3 \times 3\)</li>
+</ol>
+</div></div>
+</div></article></p>
+<p id="p-460"><article class="exercise-like" id="exercise-47"><h6 class="heading"><span class="codenumber">5.</span></h6>
+<aside class="aside-like" id="aside-49"><p id="p-461">(Source: <a data-knowl="./knowl/ref-RB.html" title="Bibliographic Entry 5">[5]</a> in the Section for Row-reduced Echelon Form, Exercise RREF.T10.)</p></aside> Prove that each of the three row operations is reversible. More precisely, if the matrix \(B\) is obtained from \(A\) by application of a single row operation, show that there is a single row operation that will transform B back into \(A\text{.}\)</article></p>
+<p id="p-462"><article class="exercise-like" id="exercise-48"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<aside class="aside-like" id="aside-50"><p id="p-463">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a> in Section 1.2.)</p></aside> Find the rank of each of the matrices in Problem 1.</article></p>
+<p id="p-464"><article class="exercise-like" id="exercise-49"><h6 class="heading"><span class="codenumber">7.</span></h6>
+<aside class="aside-like" id="aside-51"><p id="p-465">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a> in Section 1.2, Exercise 1.2.5.)</p></aside> Find all solutions (if any) to each of the following systems of linear equations. <ol class="lower-alpha cols2">
+<li id="li-217"><div class="displaymath">
 \begin{align*}
 x + y + 2z \amp = 8\\
 3x - y + z \amp = 0\\
 -x + 3y + 4z \amp = -4
 \end{align*}
 </div></li>
-<li id="li-214"><div class="displaymath">
+<li id="li-218"><div class="displaymath">
 \begin{align*}
 -2x + 3y + 3z \amp = -9\\
 3x - 4y + z \amp = 5\\
 -5x + 7y + 2z \amp = -14
 \end{align*}
 </div></li>
-<li id="li-215"><div class="displaymath">
+<li id="li-219"><div class="displaymath">
 \begin{align*}
 x + y - z \amp = 10\\
 -x + 4y + 5z \amp = -5\\
 x + 6y + 3z \amp = 15 
 \end{align*}
 </div></li>
-<li id="li-216"><div class="displaymath">
+<li id="li-220"><div class="displaymath">
 \begin{align*}
 x + 2y - z \amp = 2\\
 2x + 5y - 3z \amp = 1\\
 x + 4y - 3z \amp = 3 
 \end{align*}
 </div></li>
-<li id="li-217"><div class="displaymath">
+<li id="li-221"><div class="displaymath">
 \begin{align*}
 5x + y \amp = 2\\
 3x - y - 2z \amp = 1\\
 x + y - z \amp = 5 
 \end{align*}
 </div></li>
-<li id="li-218"><div class="displaymath">
+<li id="li-222"><div class="displaymath">
 \begin{align*}
 3x - 2y + z \amp = -2\\
 x - y + 3z \amp = 5\\
 -x + y + z \amp = -1
 \end{align*}
 </div></li>
-<li id="li-219"><div class="displaymath">
+<li id="li-223"><div class="displaymath">
 \begin{align*}
 x + y + z \amp = 2\\
 x  + z \amp = 1\\
 2x + 5y + 2z \amp = 7 
 \end{align*}
 </div></li>
-<li id="li-220"><div class="displaymath">
+<li id="li-224"><div class="displaymath">
 \begin{align*}
 x + 2y - 4z \amp = 10\\
 2x - y + 2z \amp = 5\\
@@ -259,29 +336,29 @@ x + y - 2z \amp = 7
 \end{align*}
 </div></li>
 </ol></article></p>
-<p id="p-465"><article class="exercise-like" id="exercise-50"><h6 class="heading"><span class="codenumber">8.</span></h6>
-<aside class="aside-like" id="aside-52"><p id="p-466">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.3.)</p></aside> Do the three lines, \(x + 2y =1\text{,}\) \(2x -y =1\text{,}\) and \(4x + 3y=3\) have a common point of intersection? If so, find the point and if not, tell why they don't have such a common point of intersection.</article></p>
-<p id="p-467"><article class="exercise-like" id="exercise-51"><h6 class="heading"><span class="codenumber">9.</span></h6>
-<aside class="aside-like" id="aside-53"><p id="p-468">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.4.)</p></aside> Do the three planes, \(x+y - 3z=2\text{,}\) \(2x+y+z =1\) and \(3x+2y-2z=0\) have a common point of intersection? If so, find one and if not, tell why there is no such point.</article></p>
-<p id="p-469"><article class="exercise-like" id="exercise-52"><h6 class="heading"><span class="codenumber">10.</span></h6>
-<aside class="aside-like" id="aside-54"><p id="p-470">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Section 1.6, Exercise 1.6.3.)</p></aside> My system of equations has a solution \((x,y,z)= (1,2,4)\text{.}\)  The associated homogenous system has basic solutions \((x,y,z) =(1,0,1)\) and \((x,y,z)= (0,1,-1)\text{.}\)  What is the general solution of my system of equations?</article></p>
-<p id="p-471"><article class="exercise-like" id="exercise-53"><h6 class="heading"><span class="codenumber">11.</span></h6>
-<aside class="aside-like" id="aside-55"><p id="p-472">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.7.)</p></aside> Consider the following augmented matrix in which \(*\) denotes an arbitrary number and \(\blacksquare\) denotes a nonzero number.  Determine whether the given augmented matrix is consistent.  If consistent, is the solution unique?<div class="displaymath">
+<p id="p-466"><article class="exercise-like" id="exercise-50"><h6 class="heading"><span class="codenumber">8.</span></h6>
+<aside class="aside-like" id="aside-52"><p id="p-467">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.3.)</p></aside> Do the three lines, \(x + 2y =1\text{,}\) \(2x -y =1\text{,}\) and \(4x + 3y=3\) have a common point of intersection? If so, find the point and if not, tell why they don't have such a common point of intersection.</article></p>
+<p id="p-468"><article class="exercise-like" id="exercise-51"><h6 class="heading"><span class="codenumber">9.</span></h6>
+<aside class="aside-like" id="aside-53"><p id="p-469">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.4.)</p></aside> Do the three planes, \(x+y - 3z=2\text{,}\) \(2x+y+z =1\) and \(3x+2y-2z=0\) have a common point of intersection? If so, find one and if not, tell why there is no such point.</article></p>
+<p id="p-470"><article class="exercise-like" id="exercise-52"><h6 class="heading"><span class="codenumber">10.</span></h6>
+<aside class="aside-like" id="aside-54"><p id="p-471">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Section 1.6, Exercise 1.6.3.)</p></aside> My system of equations has a solution \((x,y,z)= (1,2,4)\text{.}\)  The associated homogenous system has basic solutions \((x,y,z) =(1,0,1)\) and \((x,y,z)= (0,1,-1)\text{.}\)  What is the general solution of my system of equations?</article></p>
+<p id="p-472"><article class="exercise-like" id="exercise-53"><h6 class="heading"><span class="codenumber">11.</span></h6>
+<aside class="aside-like" id="aside-55"><p id="p-473">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.7.)</p></aside> Consider the following augmented matrix in which \(*\) denotes an arbitrary number and \(\blacksquare\) denotes a nonzero number.  Determine whether the given augmented matrix is consistent.  If consistent, is the solution unique?<div class="displaymath">
 \begin{equation*}
 \matr{ccc|c} { \blacksquare\amp  * \amp  * \amp  *\\
 0 \amp  \blacksquare \amp  * \amp  * \\
 0 \amp  0 \amp  \blacksquare \amp  *}								
 \end{equation*}
 </div></article></p>
-<p id="p-473"><article class="exercise-like" id="exercise-54"><h6 class="heading"><span class="codenumber">12.</span></h6>
-<aside class="aside-like" id="aside-56"><p id="p-474">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Section 1.4, Exercise 1.4.5.)</p></aside> Suppose a system of equations has fewer equations than variables.  Will such a system necessarily be consistent? If so, explain  why and if not, give an example  which is not consistent.</article></p>
-<p id="p-475"><article class="exercise-like" id="exercise-55"><h6 class="heading"><span class="codenumber">13.</span></h6>
-<aside class="aside-like" id="aside-57"><p id="p-476">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Section 1.4, Exercise 1.4.22.)</p></aside> Suppose a system of equations has fewer equations than variables and you have found a solution to this system of equations.  Is it possible that your solution is the only one?  Explain.</article></p>
-<p id="p-477"><article class="exercise-like" id="exercise-56"><h6 class="heading"><span class="codenumber">14.</span></h6>
-<aside class="aside-like" id="aside-58"><p id="p-478">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Section 1.2, Exercise 1.2.15.)</p></aside> Choose \(h\) and \(k\) such that the augmented matrix shown has each of the following: <ol class="lower-alpha">
-<li id="li-221">one solution</li>
-<li id="li-222">no solution</li>
-<li id="li-223">infinitely many solutions</li>
+<p id="p-474"><article class="exercise-like" id="exercise-54"><h6 class="heading"><span class="codenumber">12.</span></h6>
+<aside class="aside-like" id="aside-56"><p id="p-475">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Section 1.4, Exercise 1.4.5.)</p></aside> Suppose a system of equations has fewer equations than variables.  Will such a system necessarily be consistent? If so, explain  why and if not, give an example  which is not consistent.</article></p>
+<p id="p-476"><article class="exercise-like" id="exercise-55"><h6 class="heading"><span class="codenumber">13.</span></h6>
+<aside class="aside-like" id="aside-57"><p id="p-477">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Section 1.4, Exercise 1.4.22.)</p></aside> Suppose a system of equations has fewer equations than variables and you have found a solution to this system of equations.  Is it possible that your solution is the only one?  Explain.</article></p>
+<p id="p-478"><article class="exercise-like" id="exercise-56"><h6 class="heading"><span class="codenumber">14.</span></h6>
+<aside class="aside-like" id="aside-58"><p id="p-479">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Section 1.2, Exercise 1.2.15.)</p></aside> Choose \(h\) and \(k\) such that the augmented matrix shown has each of the following: <ol class="lower-alpha">
+<li id="li-225">one solution</li>
+<li id="li-226">no solution</li>
+<li id="li-227">infinitely many solutions</li>
 </ol>
 <div class="displaymath">
 \begin{equation*}
@@ -290,44 +367,44 @@ x + y - 2z \amp = 7
 }
 \end{equation*}
 </div></article></p>
-<p id="p-479"><article class="exercise-like" id="exercise-57"><h6 class="heading"><span class="codenumber">15.</span></h6>
-<aside class="aside-like" id="aside-59"><p id="p-480">(Source: "ref-KN" Section 1.2, Exercise 1.2.9))</p></aside> In each of the following , find (if possible) conditions on \(a,b,\) and \(c\) such that the system has one solution, no solution or infinitely many solutions. <ol class="lower-alpha cols2">
-<li id="li-224"><div class="displaymath">
+<p id="p-480"><article class="exercise-like" id="exercise-57"><h6 class="heading"><span class="codenumber">15.</span></h6>
+<aside class="aside-like" id="aside-59"><p id="p-481">(Source: "ref-KN" Section 1.2, Exercise 1.2.9))</p></aside> In each of the following , find (if possible) conditions on \(a,b,\) and \(c\) such that the system has one solution, no solution or infinitely many solutions. <ol class="lower-alpha cols2">
+<li id="li-228"><div class="displaymath">
 \begin{align*}
 3x +  y - z \amp =  a\\
 x -  y + 2z \amp =  b\\
 5x +  3y  - 4z \amp =  c
 \end{align*}
 </div></li>
-<li id="li-225"><div class="displaymath">
+<li id="li-229"><div class="displaymath">
 \begin{align*}
 2x + y - z \amp =  a\\
 2y + 3z \amp =  b\\
 x +  - z \amp =  c
 \end{align*}
 </div></li>
-<li id="li-226"><div class="displaymath">
+<li id="li-230"><div class="displaymath">
 \begin{align*}
 -x + 3y  +  2z \amp =  -8\\
 x  + z \amp =  2\\
 3x + 3y + az \amp =  b
 \end{align*}
 </div></li>
-<li id="li-227"><div class="displaymath">
+<li id="li-231"><div class="displaymath">
 \begin{align*}
 x + ay   \amp =  0\\
 y  + bz \amp =  0\\
 cx 	  + z \amp =  0
 \end{align*}
 </div></li>
-<li id="li-228"><div class="displaymath">
+<li id="li-232"><div class="displaymath">
 \begin{align*}
 3x - y  + 2z \amp =  3\\
 x + y  - z \amp =  2\\
 2x - 2y  + 3z \amp =  b
 \end{align*}
 </div></li>
-<li id="li-229"><div class="displaymath">
+<li id="li-233"><div class="displaymath">
 \begin{align*}
 x + ay  - z \amp =  1\\
 -x + (a-2)y  + z \amp =  -1\\
@@ -335,10 +412,10 @@ x + ay  - z \amp =  1\\
 \end{align*}
 </div></li>
 </ol></article></p>
-<p id="p-481"><article class="exercise-like" id="ex--three-lines-intersect"><h6 class="heading"><span class="codenumber">16.</span></h6>
-<aside class="aside-like" id="aside-60"><p id="p-482">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.3)</p></aside> Do the three lines \(x+2y=1\text{,}\) \(2x-y=1\text{,}\) and \(4x+3y=3\) in \(\mathbb{R}^2\) have a common point of intersection?  If so, find the point.  If not, explain why they don't have a common point of intersection.<div class="solutions">
+<p id="p-482"><article class="exercise-like" id="ex--three-lines-intersect"><h6 class="heading"><span class="codenumber">16.</span></h6>
+<aside class="aside-like" id="aside-60"><p id="p-483">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.3)</p></aside> Do the three lines \(x+2y=1\text{,}\) \(2x-y=1\text{,}\) and \(4x+3y=3\) in \(\mathbb{R}^2\) have a common point of intersection?  If so, find the point.  If not, explain why they don't have a common point of intersection.<div class="solutions">
 <a data-knowl="" class="id-ref" data-refid="hk-hint-60" id="hint-60"><span class="type">Hint</span></a><div id="hk-hint-60" class="hidden-content tex2jax_ignore"><div class="solution">If \((x, y)\) is a point of intersection of the three lines, then \((x, y)\) must satisfy the equations of all three lines.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-51" id="answer-51"><span class="type">Answer</span></a><div id="hk-answer-51" class="hidden-content tex2jax_ignore"><div class="solution">The three lines intersect at \(\left(\frac{3}{5}, \frac{1}{5}\right)\)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-52" id="answer-52"><span class="type">Answer</span></a><div id="hk-answer-52" class="hidden-content tex2jax_ignore"><div class="solution">The three lines intersect at \(\left(\frac{3}{5}, \frac{1}{5}\right)\)</div></div>
 <a data-knowl="" class="id-ref" data-refid="hk-solution-57" id="solution-57"><span class="type">Solution</span></a><div id="hk-solution-57" class="hidden-content tex2jax_ignore"><div class="solution">To find out if there is a common point of intersection we want to find out if the three given equations have a simultaneous solution.  We therefore turn the equations into an augmented matrix and row reduce:<div class="displaymath">
 \begin{equation*}
 \matr{rr|r}{1\amp 2\amp 1\\2\amp -1\amp 1\\4\amp 3\amp 3}
