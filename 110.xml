@@ -6890,10 +6890,30 @@
 						</statement>
 						<!-- <hint>
 						</hint> -->
-						<!-- <solution>
+						<!--<solution>
 						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<answer>
+								<ol label="[a]" cols="2">
+								<li>
+									No: There is a non-zero entry below a zero row.
+								</li>
+								<li>
+									No: The leading entry of the first row is not <m>1</m>.
+								</li>
+								<li>
+									No: The last column, which contains a leading <m>1</m> in the second row, has a non-zero entry (<m>5</m>).
+								</li>
+								<li>
+									No: The fourth column, which contains a leading <m>1</m> in the second row, has a non-zero entry (<m>3</m>).
+								</li>
+								<li>
+									No: The second column, which contains a leading <m>1</m> in the second row, has a non-zero entry (<m>1</m>).
+								</li>
+								<li>
+									No: The third column, which contains a leading <m>1</m> in the first row, has non-zero entries (two other <m>1</m>s).
+								</li>
+							</ol>
+						</answer>
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 2.2, Exercise 9-->
 						<statement>
