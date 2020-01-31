@@ -7390,8 +7390,10 @@
 						<solution>
 							First, assume that <m>B \overset{R_{i}\leftrightarrow R_{j}}{\longrightarrow} A</m>. Then <m>A \overset{R_{j}\leftrightarrow R_{i}}{\longrightarrow} B</m>, so the first row operation is invertible. To be more precise, the first row operation is its own inverse.
 
+
 							Next, assume that <m>B \overset{\alpha R_{i}}{\longrightarrow} A</m>. For this to be a legitimate row operation, we must have <m>\alpha\neq 0</m>. In particular, <m>\frac{1}{\alpha}</m> exists and
 							<m>A \overset{\frac{1}{\alpha} R_{i}}{\longrightarrow} B</m> is also a legitimate row operation. Thus, the row operation of multiplication by <m>\alpha</m> is invertible with inverse the row operation of multiplication by <m>\frac{1}{\alpha}</m>.
+
 
 							Lastly, assume that <m>B \overset{\alpha R_{i} + R_{j}}{\longrightarrow} A</m>. If <m>\alpha = 0 </m> or row <m>i</m> in <m>B</m> is a zero-row, then the operation does nothing and <m>B=A</m>. If <m>\alpha\neq 0</m> and row <m>i</m> in <m>B</m> is not a zero-row, then <m>A</m> differs from <m>B</m> exactly in row <m>j</m>; in particular, row <m>i</m> is the same in <m>A</m> and <m>B</m>. We see from this that <m>A \overset{-\frac{1}{\alpha} R_{i} + R_{j}}{\longrightarrow} B</m> inverts the row operation.
 						</solution>
@@ -7588,12 +7590,572 @@
 	 
 			
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint>
+							Write the system of linear equations as an augmented matrix and then row reduce.
+						</hint>
+						<solution>
+							For each of these solutions, the first step is to turn the system of linear equations into an augmented matrix form. Then, we row reduce until we (at least almost) reach the RREF of the the augmented matrix.
+							<ol>
+								<li><solution>
+									<md>
+									<mrow>
+										\matr{rrr|r}{
+											1 \amp 1 \amp 2 \amp 8
+											\\
+											3 \amp -1 \amp 1 \amp 0
+											\\
+											-1 \amp 3 \amp 4 \amp -4
+											}
+										\overset{-3R_{1}+R_{2}}{\underset{R_{1}+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+											1 \amp 1 \amp 2 \amp 8
+											\\
+											0 \amp -4 \amp -5 \amp -24
+											\\
+											0 \amp 4 \amp 6 \amp 4
+											}
+									</mrow>
+									<mrow>
+										\overset{R_{2}+R_{3}}{\longrightarrow}
+										\amp
+										\matr{rrr|r}{
+											1 \amp 1 \amp 2 \amp 8
+											\\
+											0 \amp -4 \amp -5 \amp -24
+											\\
+											0 \amp 0 \amp 1 \amp -20
+											}
+										.
+									</mrow>
+									</md>
+
+
+									<p>From this, we can already see that the system of linear equations has a unique solution. To find it, we proceed until we arrive at the RREF:</p>
+									<md>
+										<mrow>
+											\matr{rrr|r}{
+											1 \amp 1 \amp 2 \amp 8
+											\\
+											0 \amp -4 \amp -5 \amp -24
+											\\
+											0 \amp 0 \amp 1 \amp -20
+											}
+											\overset{ 5R_{3}+R_{2} }{ \underset{ -2R_{3}+R_{1} }{\longrightarrow}}
+											\amp
+											\matr{rrr|r}{
+											1 \amp 1 \amp 0 \amp 48
+											\\
+											0 \amp -4 \amp 0 \amp -124
+											\\
+											0 \amp 0 \amp 1 \amp -20 
+											}
+										</mrow>
+										<mrow>
+											\overset{\frac{-1}{4}R_{2}}{\longrightarrow}
+											\amp
+											\matr{rrr|r}{
+											1 \amp 1 \amp 0 \amp 48
+											\\
+											0 \amp 1 \amp 0 \amp 31
+											\\
+											0 \amp 0 \amp 1 \amp -20
+											}
+										</mrow>
+										<mrow>
+											\overset{-R_{2}+R_{1}}{\longrightarrow}
+											\amp
+											\matr{rrr|r}{
+											1 \amp 0 \amp 0 \amp 17
+											\\
+											0 \amp 1 \amp 0 \amp 31
+											\\
+											0 \amp 0 \amp 1 \amp -20
+											}.
+										</mrow>
+									</md>
+									<p>We conclude that the unique solution is given by <m>(x,y,z)= (17,31,-20)</m>.</p>
+								</solution></li>
+							<li><solution>
+								<md>
+									<mrow>
+										 \matr{rrr|r}{
+										 	-2 \amp 3 \amp 3 \amp -9
+										 	\\
+										 	3 \amp -4 \amp 1 \amp 5
+										 	\\
+										 	-5 \amp 7 \amp 2 \amp -14
+										 	}
+										\overset{-2R_{3}}{\underset{2 R_{2}}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+										 	-2 \amp 3 \amp 3 \amp -9
+										 	\\
+										 	6 \amp -8 \amp 2 \amp 10
+										 	\\
+										 	10 \amp -14 \amp -4 \amp 28
+										 	}
+									</mrow>
+									<mrow>
+										\overset{3R_{1}+R_{2}}{\underset{5 R_{1}+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+										 	-2 \amp 3 \amp 3 \amp -9
+										 	\\
+										 	0 \amp 1 \amp 11 \amp -17
+										 	\\
+										 	0 \amp 1 \amp 11 \amp -17
+										 	}.
+									</mrow>
+								</md>
+
+								<p>From this, we already see that there is not a unique solution because the last two rows are identical. We proceed to compute the RREF:</p>
+								<md>
+									<mrow>
+										\matr{rrr|r}{
+										 	-2 \amp 3 \amp 3 \amp -9
+										 	\\
+										 	0 \amp 1 \amp 11 \amp -17
+										 	\\
+										 	0 \amp 1 \amp 11 \amp -17
+										 	}
+										\overset{-R_{2}+R_{3}}{\underset{-3R_{2}+R_{1}}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+										 	-2 \amp 0 \amp -30 \amp 42
+										 	\\
+										 	0 \amp 1 \amp 11 \amp -17
+										 	\\
+										 	0 \amp 0 \amp 0 \amp 0
+										 	}
+									</mrow>
+									<mrow>
+										\overset{\frac{-1}{2}R_{1}}{\longrightarrow}
+										\amp
+										\matr{rrr|r}{
+										 	1 \amp 0 \amp 15 \amp -21
+										 	\\
+										 	0 \amp 1 \amp 11 \amp -17
+										 	\\
+										 	0 \amp 0 \amp 0 \amp 0
+										 	}
+									</mrow>
+								</md>
+								<p>We conclude that <m>z</m> is a free variable and the solution is given by</p>
+								<me>
+									\left\{
+										(-21 - 15z,-17 -  11 z,z) \vert z \in \mathbb{R}
+									\right\}.
+								</me>
+								</solution></li>
+							<li><solution>
+								<md>
+									<mrow>
+										\matr{rrr|r}{
+											1 \amp 1 \amp -1 \amp 10
+											\\
+											-1 \amp 4 \amp 5 \amp -5
+											\\
+											1 \amp 6 \amp 3 \amp 15
+										}
+										\overset{R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+											1 \amp 1 \amp -1 \amp 10
+											\\
+											0 \amp 5 \amp 4 \amp 5
+											\\
+											0 \amp 5 \amp 4 \amp 5
+										}
+									</mrow>
+								</md>
+								<p>We already see that there is no unique solution, because the last two rows are identical. We proceed:</p>
+								<md>
+									<mrow>
+										\matr{rrr|r}{
+											1 \amp 1 \amp -1 \amp 10
+											\\
+											0 \amp 5 \amp 4 \amp 5
+											\\
+											0 \amp 5 \amp 4 \amp 5
+										}
+										\overset{-R_{2}+R_{3}}{\underset{-\frac{1}{5}R_{2}+R_{1}}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+											1 \amp 0 \amp -\frac{9}{5} \amp 9
+											\\
+											0 \amp 5 \amp 4 \amp 5
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}
+									</mrow>
+									<mrow>
+										\overset{\frac{1}{5}R_{2}}{\longrightarrow}
+										\amp
+										\matr{rrr|r}{
+											1 \amp 0 \amp -\frac{9}{5} \amp 9
+											\\
+											0 \amp 1 \amp \frac{4}{5} \amp 1
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}
+									</mrow> </md>
+									<p>We conclude that <m>z</m> is a free variable and the solution is given by</p>
+									<me>
+										\left\{
+											\left(9+\frac{9}{5}z, 1 - \frac{4}{5},z\right) \vert z \in \mathbb{R}
+										\right\}.
+									</me>
+								</solution></li>
+							<li><solution>
+								<md>
+									<mrow>
+										\matr{rrr|r}{
+											1 \amp 2 \amp -1 \amp 2
+											\\
+											2 \amp 5 \amp -3 \amp 1
+											\\
+											1 \amp 4 \amp -3 \amp 3
+										}
+										\overset{-2R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+											1 \amp 2 \amp -1 \amp 2
+											\\
+											0 \amp 1 \amp -1 \amp 0
+											\\
+											0 \amp 2 \amp -2 \amp 1
+										}
+									</mrow>
+									<mrow>
+										\overset{-2R_{2}+R_{3}}{\longrightarrow}
+										\amp
+										\matr{rrr|r}{
+											1 \amp 2 \amp -1 \amp 2
+											\\
+											0 \amp 1 \amp -1 \amp 0
+											\\
+											0 \amp 0 \amp 0 \amp 1
+										}.
+									</mrow>
+									</md>
+									<p>We see from this that the system has no solution, since the last line means</p>
+									<me>
+										0x+0y+0z=1.
+									</me>
+								</solution></li>
+							<li><solution>
+								<md>
+									<mrow>
+										\matr{rrr|r}{
+											5 \amp 1 \amp 0 \amp 2
+											\\
+											3 \amp -1 \amp -2 \amp 1
+											\\
+											1 \amp 1 \amp -1 \amp 5
+										}
+										\overset{5R_{2}}{\underset{5R_{3}}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+											5 \amp 1 \amp 0 \amp 2
+											\\
+											15 \amp -5 \amp -10 \amp 5
+											\\
+											5 \amp 5 \amp -5 \amp 25
+										}
+									</mrow> 
+									<mrow>
+										\overset{-3R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+											5 \amp 1 \amp 0 \amp 2
+											\\
+											0 \amp -8 \amp -10 \amp -1
+											\\
+											0 \amp 4 \amp -5 \amp 23
+										}
+									</mrow>
+									<mrow>
+										\overset{\frac{1}{2}R_{2}+R_{3}}{\longrightarrow}
+										\amp
+										\matr{rrr|r}{
+											5 \amp 1 \amp 0 \amp 2
+											\\
+											0 \amp -8 \amp -10 \amp -1
+											\\
+											0 \amp 0 \amp -10 \amp \frac{45}{2}
+										}
+									</mrow>
+									<mrow>
+										\overset{-R_{3}+R_{2}}{\underset{-\frac{1}{10}R_{3}}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+											5 \amp 1 \amp 0 \amp 2
+											\\
+											0 \amp -8 \amp 0 \amp -\frac{47}{2}
+											\\
+											0 \amp 0 \amp 1 \amp -\frac{9}{4}
+										}
+									</mrow>
+									<mrow>
+										\overset{-\frac{1}{8}R_{2}}{\underset{-R_{2}'+R_{1}}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+											5 \amp 0 \amp 0 \amp -\frac{15}{16}
+											\\
+											0 \amp 1 \amp 0 \amp \frac{47}{16}
+											\\
+											0 \amp 0 \amp 1 \amp -\frac{9}{4}
+										}
+									</mrow>
+									<mrow>
+										\overset{\frac{1}{5}R_{1}}{\longrightarrow}
+										\amp
+										\matr{rrr|r}{
+											1 \amp 0 \amp 0 \amp -\frac{3}{16}
+											\\
+											0 \amp 1 \amp 0 \amp \frac{47}{16}
+											\\
+											0 \amp 0 \amp 1 \amp -\frac{9}{4}
+										}
+									</mrow>
+								</md>		
+								<p>We conclude that the unique solution is given by <m>(x,y,z)= \left(-\frac{3}{16},\frac{47}{16},-\frac{9}{4}\right)</m>.</p>
+								</solution></li>
+							<li><solution>
+									 <md>
+									<mrow>
+										\matr{rrr|r}{
+											3 \amp -2 \amp 1 \amp -2
+											\\
+											1 \amp -1 \amp 3 \amp 5
+											\\
+											-1 \amp 1 \amp 1 \amp -1
+										}
+										\overset{3R_{2}}{\underset{3R_{3}}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+											3 \amp -2 \amp 1 \amp -2
+											\\
+											3 \amp -3 \amp 9 \amp 15
+											\\
+											-3 \amp 3 \amp 3 \amp -3
+										}
+									</mrow>
+									<mrow>
+										\overset{-R_{1}+R_{2}}{\underset{R_{1}+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+											3 \amp -2 \amp 1 \amp -2
+											\\
+											0 \amp -1 \amp 8 \amp 17
+											\\
+											0 \amp 1 \amp 4 \amp -5
+										}
+									</mrow>
+									<mrow>
+										\overset{R_{2}+R_{3}}{\longrightarrow}
+										\amp
+										\matr{rrr|r}{
+											3 \amp -2 \amp 1 \amp -2
+											\\
+											0 \amp -1 \amp 8 \amp 17
+											\\
+											0 \amp 0 \amp 12 \amp 12
+										}
+									</mrow>
+									<mrow>
+										\overset{\frac{1}{12}R_{3}}{\underset{-8R_{3}' + R_{2}}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+											3 \amp -2 \amp 1 \amp -2
+											\\
+											0 \amp -1 \amp 0 \amp 9
+											\\
+											0 \amp 0 \amp 1 \amp 1
+										}
+									</mrow>
+									<mrow>
+										\overset{-2R_{2}+R_{1}}{\underset{-R_{2}}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+											3 \amp 0 \amp 1 \amp -20
+											\\
+											0 \amp 1 \amp 0 \amp -9
+											\\
+											0 \amp 0 \amp 1 \amp 1
+										}
+									</mrow>
+									<mrow>
+										\overset{-R_{3}+R_{1}}{\underset{\frac{1}{3}R_{1}'}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+											1 \amp 0 \amp 0 \amp -7
+											\\
+											0 \amp 1 \amp 0 \amp -9
+											\\
+											0 \amp 0 \amp 1 \amp 1
+										}.
+									</mrow>
+								</md>
+								<p>We conclude that the unique solution is given by <m>(x,y,z)= \left(-7,-9,1\right)</m>.</p>
+								</solution></li>
+							<li><solution>
+								<md>
+									<mrow>
+										\matr{rrr|r}{
+											1 \amp 1 \amp 1 \amp 2
+											\\
+											1 \amp 0 \amp 1 \amp 1
+											\\
+											2 \amp 5 \amp 2 \amp 7
+										}
+										\overset{-R_{1}+R_{2}}{\underset{-2R_{1}+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+											1 \amp 1 \amp 1 \amp 2
+											\\
+											0 \amp -1 \amp 0 \amp -1
+											\\
+											0 \amp 3 \amp 0 \amp 3
+										}
+									</mrow>
+								</md>
+								<p>We already see that there is not going to be a unique solution. We proceed:</p>
+								<md>
+									<mrow>
+										\matr{rrr|r}{
+											1 \amp 1 \amp 1 \amp 2
+											\\
+											0 \amp -1 \amp 0 \amp -1
+											\\
+											0 \amp 3 \amp 0 \amp 3
+										}
+										\overset{3R_{2}+R_{3}}{\underset{R_{2}+R_{1}}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+											1 \amp 0 \amp 1 \amp 1
+											\\
+											0 \amp -1 \amp 0 \amp -1
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}.
+									</mrow>
+								</md>
+									<p>We conclude that there is one free variable and the solution set is given by</p>
+									<me>
+										\left\{
+											\left(1-z, 1, z\right) \vert z \in \mathbb{R}
+										\right\}.
+									</me>
+								</solution></li>
+							<li><solution>
+								<md>
+									<mrow>
+										\matr{rrr|r}{
+											1 \amp 2 \amp -4 \amp 10
+											\\
+											2 \amp -1 \amp 2 \amp 5
+											\\
+											1 \amp 1 \amp -2 \amp 7
+										}
+										\overset{-R_{1}+R_{3}}{\underset{-2R_{1}+R_{2}}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+											1 \amp 2 \amp -4 \amp 10
+											\\
+											0 \amp -5 \amp 10 \amp -15
+											\\
+											0 \amp -1 \amp 2 \amp -3
+										}.
+									</mrow>
+								</md>
+									<p>From this, we see that there is no unique solution. We proceed:</p>
+								<md>	<mrow>
+										\matr{rrr|r}{
+											1 \amp 2 \amp -4 \amp 10
+											\\
+											0 \amp -5 \amp 10 \amp -15
+											\\
+											0 \amp -1 \amp 2 \amp -3
+										}
+										\overset{-\frac{1}{5}R_{2}+R_{3}}{\underset{5R_{1}}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+											5 \amp 10 \amp -20 \amp 50
+											\\
+											0 \amp -5 \amp 10 \amp -15
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}
+									</mrow>
+									<mrow>
+										\overset{2R_{2}+R_{1}}{\underset{\frac{-1}{5}R_{2}}{\longrightarrow}}
+										\amp
+										\matr{rrr|r}{
+											5 \amp 0 \amp 0 \amp 20
+											\\
+											0 \amp 1 \amp -2 \amp 3
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}.
+									</mrow>
+								</md>
+								<p>We conclude that there is one free variable and the solution set is given by</p>
+									<me>
+										\left\{
+											\left(4, 3+2z, z\right) \vert z \in \mathbb{R}
+										\right\}.
+									</me>
+								</solution></li>
+							</ol>
+						</solution>
+						<answer>
+							<ol>
+								<li><answer>
+									The unique solution is given by <m>(x,y,z)= (17,31,-20)</m>.</answer>
+								</li>
+								<li><answer>There is one free variable and the solution set is given by
+								<me>
+									\left\{
+										(-21 - 15z,-17 -  11 z,z) \vert z \in \mathbb{R}
+									\right\}.
+								</me></answer>
+								</li>
+								<li><answer>There is one free variable and the solution set is given by
+									<me>
+									\left\{
+										\left(9+\frac{9}{5}z, 1 - \frac{4}{5},z\right) \vert z \in \mathbb{R}
+									\right\}.
+									</me></answer>
+								</li>
+								<li><answer>No solution.</answer></li>
+							<li><answer>
+									The unique solution is given by <m>(x,y,z)= \left(-\frac{3}{16},\frac{47}{16},-\frac{9}{4}\right)</m>		
+								</answer></li>
+							<li><answer>
+									The unique solution is given by <m>(x,y,z)= \left(-7,-9,1\right)</m>.
+								</answer></li>
+							<li><answer>
+								There is one free variable and the solution set is given by
+								<me>
+									\left\{
+										\left(1-z, 1, z\right) \vert z \in \mathbb{R}
+									\right\}.
+								</me>
+								</answer>
+								</li>
+							<li><answer>
+								There is one free variable and the solution set is given by
+								<me>
+									\left\{
+											\left(4, 3+2z, z\right) \vert z \in \mathbb{R}
+										\right\}.
+								</me>
+									</answer>
+								</li>
+							</ol>
+						</answer>
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
@@ -7708,7 +8270,7 @@
 							<ol cols="2">
 								<li>
 									<md>
-										<mrow>
+										<mrow> 
 											3x +  y - z \amp =  a
 										</mrow>
 										<mrow>

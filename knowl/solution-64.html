@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-01-31T15:00:58-08:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">2.2.7.c.1</span>.</h6>
+<div class="displaymath">
+\begin{align*}
+\matr{rrr|r}{
+1 \amp 1 \amp -1 \amp 10
+\\
+-1 \amp 4 \amp 5 \amp -5
+\\
+1 \amp 6 \amp 3 \amp 15
+}
+\overset{R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+1 \amp 1 \amp -1 \amp 10
+\\
+0 \amp 5 \amp 4 \amp 5
+\\
+0 \amp 5 \amp 4 \amp 5
+}
+\end{align*}
+</div>
+<p>We already see that there is no unique solution, because the last two rows are identical. We proceed:</p>
+<div class="displaymath">
+\begin{align*}
+\matr{rrr|r}{
+1 \amp 1 \amp -1 \amp 10
+\\
+0 \amp 5 \amp 4 \amp 5
+\\
+0 \amp 5 \amp 4 \amp 5
+}
+\overset{-R_{2}+R_{3}}{\underset{-\frac{1}{5}R_{2}+R_{1}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+1 \amp 0 \amp -\frac{9}{5} \amp 9
+\\
+0 \amp 5 \amp 4 \amp 5
+\\
+0 \amp 0 \amp 0 \amp 0
+}\\
+\overset{\frac{1}{5}R_{2}}{\longrightarrow}
+\amp
+\matr{rrr|r}{
+1 \amp 0 \amp -\frac{9}{5} \amp 9
+\\
+0 \amp 1 \amp \frac{4}{5} \amp 1
+\\
+0 \amp 0 \amp 0 \amp 0
+}
+\end{align*}
+</div>
+<p>We conclude that \(z\) is a free variable and the solution is given by</p>
+<div class="displaymath">
+\begin{equation*}
+\left\{
+\left(9+\frac{9}{5}z, 1 - \frac{4}{5},z\right) \vert z \in \mathbb{R}
+\right\}.
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec-2-2.html#solution-64">in-context</a></span>
+</body>
+</html>

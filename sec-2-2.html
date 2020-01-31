@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-31T13:19:25-08:00    *-->
+<!--*    on 2020-01-31T15:00:51-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -543,9 +543,9 @@ var js_version = 0.11;
 </div></div>
 </div></article></p>
 <p id="p-460"><article class="exercise-like" id="exercise-47"><h6 class="heading"><span class="codenumber">5.</span></h6>
-<aside class="aside-like" id="aside-49"><p id="p-461">(Source: <a data-knowl="./knowl/ref-RB.html" title="Bibliographic Entry 5">[5]</a> in the Section for Row-reduced Echelon Form, Exercise RREF.T10.)</p></aside> Prove that each of the three row operations is reversible. More precisely, if the matrix \(B\) is obtained from \(A\) by application of a single row operation, show that there is a single row operation that will transform B back into \(A\text{.}\)<div class="solutions">
+<aside class="aside-like" id="aside-49"><p id="p-461">(Source: <a data-knowl="./knowl/ref-RB.html" title="Bibliographic Entry 5">[5]</a> in the Section for <a class="external" href="http://linear.ups.edu/fcla/section-RREF.html" target="_blank">Row-reduced Echelon Form</a>, Exercise RREF.T10.)</p></aside> Prove that each of the three row operations is reversible. More precisely, if the matrix \(B\) is obtained from \(A\) by application of a single row operation, show that there is a single row operation that will transform B back into \(A\text{.}\)<div class="solutions">
 <a data-knowl="" class="id-ref" data-refid="hk-hint-62" id="hint-62"><span class="type">Hint</span></a><div id="hk-hint-62" class="hidden-content tex2jax_ignore"><div class="solution">
-<aside class="aside-like" id="aside-50"><p id="p-462">(Adapted from <a data-knowl="./knowl/ref-RB.html" title="Bibliographic Entry 5">[5]</a>, <a class="external" href="http://linear.ups.edu/fcla/section-RREF.html" target="_blank"><code class="code-inline tex2jax_ignore">http://linear.ups.edu/fcla/section-RREF.html</code></a>)</p></aside> The three row operations are given by: <ol class="lower-alpha">
+<aside class="aside-like" id="aside-50"><p id="p-462">(Adapted from <a data-knowl="./knowl/ref-RB.html" title="Bibliographic Entry 5">[5]</a>, the Section for <a class="external" href="http://linear.ups.edu/fcla/section-RREF.html" target="_blank">Row-reduced Echelon Form</a>)</p></aside> The three row operations are given by: <ol class="lower-alpha">
 <li id="li-217">Swap the locations of row \(i\) with row \(j\text{:}\) \(R_{i} \leftrightarrow R_{j}\text{.}\)</li>
 <li id="li-218">Multiply each entry of a single row \(i\) by a nonzero quantity \(\alpha\text{:}\) \(\alpha R_{i}\text{.}\)</li>
 <li id="li-219">Multiply each entry of one row \(R_{i}\) by some quantity \(\alpha\text{,}\) and add these values to the entries in the same columns of a second row \(R_{j}\text{.}\) Leave the first row the same after this operation (i.e. \(R_{i}\) remains unchanged), but replace the second row by the new values (i.e. row \(j\) is new): \(\alpha R_{i} + R_{j}\text{.}\)</li>
@@ -644,30 +644,591 @@ x + 2y - 4z \amp = 10\\
 x + y - 2z \amp = 7 
 \end{align*}
 </div></li>
-</ol></article></p>
-<p id="p-468"><article class="exercise-like" id="exercise-50"><h6 class="heading"><span class="codenumber">8.</span></h6>
-<aside class="aside-like" id="aside-54"><p id="p-469">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.3.)</p></aside> Do the three lines, \(x + 2y =1\text{,}\) \(2x -y =1\text{,}\) and \(4x + 3y=3\) have a common point of intersection? If so, find the point and if not, tell why they don't have such a common point of intersection.</article></p>
-<p id="p-470"><article class="exercise-like" id="exercise-51"><h6 class="heading"><span class="codenumber">9.</span></h6>
-<aside class="aside-like" id="aside-55"><p id="p-471">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.4.)</p></aside> Do the three planes, \(x+y - 3z=2\text{,}\) \(2x+y+z =1\) and \(3x+2y-2z=0\) have a common point of intersection? If so, find one and if not, tell why there is no such point.</article></p>
-<p id="p-472"><article class="exercise-like" id="exercise-52"><h6 class="heading"><span class="codenumber">10.</span></h6>
-<aside class="aside-like" id="aside-56"><p id="p-473">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Section 1.6, Exercise 1.6.3.)</p></aside> My system of equations has a solution \((x,y,z)= (1,2,4)\text{.}\)  The associated homogenous system has basic solutions \((x,y,z) =(1,0,1)\) and \((x,y,z)= (0,1,-1)\text{.}\)  What is the general solution of my system of equations?</article></p>
-<p id="p-474"><article class="exercise-like" id="exercise-53"><h6 class="heading"><span class="codenumber">11.</span></h6>
-<aside class="aside-like" id="aside-57"><p id="p-475">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.7.)</p></aside> Consider the following augmented matrix in which \(*\) denotes an arbitrary number and \(\blacksquare\) denotes a nonzero number.  Determine whether the given augmented matrix is consistent.  If consistent, is the solution unique?<div class="displaymath">
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-64" id="hint-64"><span class="type">Hint</span></a><div id="hk-hint-64" class="hidden-content tex2jax_ignore"><div class="solution">Write the system of linear equations as an augmented matrix and then row reduce.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-55" id="answer-55"><span class="type">Answer</span></a><div id="hk-answer-55" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
+<li id="li-254">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-56" id="answer-56"><span class="type">Answer</span></a><div id="hk-answer-56" class="hidden-content tex2jax_ignore"><div class="solution">The unique solution is given by \((x,y,z)= (17,31,-20)\text{.}\)</div></div>
+</li>
+<li id="li-255">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-57" id="answer-57"><span class="type">Answer</span></a><div id="hk-answer-57" class="hidden-content tex2jax_ignore"><div class="solution">There is one free variable and the solution set is given by<div class="displaymath">
+\begin{equation*}
+\left\{
+(-21 - 15z,-17 -  11 z,z) \vert z \in \mathbb{R}
+\right\}.
+\end{equation*}
+</div>
+</div></div>
+</li>
+<li id="li-256">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-58" id="answer-58"><span class="type">Answer</span></a><div id="hk-answer-58" class="hidden-content tex2jax_ignore"><div class="solution">There is one free variable and the solution set is given by<div class="displaymath">
+\begin{equation*}
+\left\{
+\left(9+\frac{9}{5}z, 1 - \frac{4}{5},z\right) \vert z \in \mathbb{R}
+\right\}.
+\end{equation*}
+</div>
+</div></div>
+</li>
+<li id="li-257">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-59" id="answer-59"><span class="type">Answer</span></a><div id="hk-answer-59" class="hidden-content tex2jax_ignore"><div class="solution">No solution.</div></div>
+</li>
+<li id="li-258">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-60" id="answer-60"><span class="type">Answer</span></a><div id="hk-answer-60" class="hidden-content tex2jax_ignore"><div class="solution">The unique solution is given by \((x,y,z)= \left(-\frac{3}{16},\frac{47}{16},-\frac{9}{4}\right)\)</div></div>
+</li>
+<li id="li-259">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-61" id="answer-61"><span class="type">Answer</span></a><div id="hk-answer-61" class="hidden-content tex2jax_ignore"><div class="solution">The unique solution is given by \((x,y,z)= \left(-7,-9,1\right)\text{.}\)</div></div>
+</li>
+<li id="li-260">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-62" id="answer-62"><span class="type">Answer</span></a><div id="hk-answer-62" class="hidden-content tex2jax_ignore"><div class="solution">There is one free variable and the solution set is given by<div class="displaymath">
+\begin{equation*}
+\left\{
+\left(1-z, 1, z\right) \vert z \in \mathbb{R}
+\right\}.
+\end{equation*}
+</div>
+</div></div>
+</li>
+<li id="li-261">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-63" id="answer-63"><span class="type">Answer</span></a><div id="hk-answer-63" class="hidden-content tex2jax_ignore"><div class="solution">There is one free variable and the solution set is given by<div class="displaymath">
+\begin{equation*}
+\left\{
+\left(4, 3+2z, z\right) \vert z \in \mathbb{R}
+\right\}.
+\end{equation*}
+</div>
+</div></div>
+</li>
+</ol></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-61" id="solution-61"><span class="type">Solution</span></a><div id="hk-solution-61" class="hidden-content tex2jax_ignore"><div class="solution">For each of these solutions, the first step is to turn the system of linear equations into an augmented matrix form. Then, we row reduce until we (at least almost) reach the RREF of the the augmented matrix. <ol class="lower-alpha">
+<li id="li-246">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-62" id="solution-62"><span class="type">Solution</span></a><div id="hk-solution-62" class="hidden-content tex2jax_ignore"><div class="solution">
+<div class="displaymath">
+\begin{align*}
+\matr{rrr|r}{
+1 \amp 1 \amp 2 \amp 8
+\\
+3 \amp -1 \amp 1 \amp 0
+\\
+-1 \amp 3 \amp 4 \amp -4
+}
+\overset{-3R_{1}+R_{2}}{\underset{R_{1}+R_{3}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+1 \amp 1 \amp 2 \amp 8
+\\
+0 \amp -4 \amp -5 \amp -24
+\\
+0 \amp 4 \amp 6 \amp 4
+}\\
+\overset{R_{2}+R_{3}}{\longrightarrow}
+\amp
+\matr{rrr|r}{
+1 \amp 1 \amp 2 \amp 8
+\\
+0 \amp -4 \amp -5 \amp -24
+\\
+0 \amp 0 \amp 1 \amp -20
+}
+.
+\end{align*}
+</div>
+<p id="p-468">From this, we can already see that the system of linear equations has a unique solution. To find it, we proceed until we arrive at the RREF:</p>
+<div class="displaymath">
+\begin{align*}
+\matr{rrr|r}{
+1 \amp 1 \amp 2 \amp 8
+\\
+0 \amp -4 \amp -5 \amp -24
+\\
+0 \amp 0 \amp 1 \amp -20
+}
+\overset{ 5R_{3}+R_{2} }{ \underset{ -2R_{3}+R_{1} }{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+1 \amp 1 \amp 0 \amp 48
+\\
+0 \amp -4 \amp 0 \amp -124
+\\
+0 \amp 0 \amp 1 \amp -20 
+}\\
+\overset{\frac{-1}{4}R_{2}}{\longrightarrow}
+\amp
+\matr{rrr|r}{
+1 \amp 1 \amp 0 \amp 48
+\\
+0 \amp 1 \amp 0 \amp 31
+\\
+0 \amp 0 \amp 1 \amp -20
+}\\
+\overset{-R_{2}+R_{1}}{\longrightarrow}
+\amp
+\matr{rrr|r}{
+1 \amp 0 \amp 0 \amp 17
+\\
+0 \amp 1 \amp 0 \amp 31
+\\
+0 \amp 0 \amp 1 \amp -20
+}.
+\end{align*}
+</div>
+<p id="p-469">We conclude that the unique solution is given by \((x,y,z)= (17,31,-20)\text{.}\)</p>
+</div></div>
+</li>
+<li id="li-247">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-63" id="solution-63"><span class="type">Solution</span></a><div id="hk-solution-63" class="hidden-content tex2jax_ignore"><div class="solution">
+<div class="displaymath">
+\begin{align*}
+\matr{rrr|r}{
+-2 \amp 3 \amp 3 \amp -9
+\\
+3 \amp -4 \amp 1 \amp 5
+\\
+-5 \amp 7 \amp 2 \amp -14
+}
+\overset{-2R_{3}}{\underset{2 R_{2}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+-2 \amp 3 \amp 3 \amp -9
+\\
+6 \amp -8 \amp 2 \amp 10
+\\
+10 \amp -14 \amp -4 \amp 28
+}\\
+\overset{3R_{1}+R_{2}}{\underset{5 R_{1}+R_{3}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+-2 \amp 3 \amp 3 \amp -9
+\\
+0 \amp 1 \amp 11 \amp -17
+\\
+0 \amp 1 \amp 11 \amp -17
+}.
+\end{align*}
+</div>
+<p id="p-470">From this, we already see that there is not a unique solution because the last two rows are identical. We proceed to compute the RREF:</p>
+<div class="displaymath">
+\begin{align*}
+\matr{rrr|r}{
+-2 \amp 3 \amp 3 \amp -9
+\\
+0 \amp 1 \amp 11 \amp -17
+\\
+0 \amp 1 \amp 11 \amp -17
+}
+\overset{-R_{2}+R_{3}}{\underset{-3R_{2}+R_{1}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+-2 \amp 0 \amp -30 \amp 42
+\\
+0 \amp 1 \amp 11 \amp -17
+\\
+0 \amp 0 \amp 0 \amp 0
+}\\
+\overset{\frac{-1}{2}R_{1}}{\longrightarrow}
+\amp
+\matr{rrr|r}{
+1 \amp 0 \amp 15 \amp -21
+\\
+0 \amp 1 \amp 11 \amp -17
+\\
+0 \amp 0 \amp 0 \amp 0
+}
+\end{align*}
+</div>
+<p id="p-471">We conclude that \(z\) is a free variable and the solution is given by</p>
+<div class="displaymath">
+\begin{equation*}
+\left\{
+(-21 - 15z,-17 -  11 z,z) \vert z \in \mathbb{R}
+\right\}.
+\end{equation*}
+</div>
+</div></div>
+</li>
+<li id="li-248">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-64" id="solution-64"><span class="type">Solution</span></a><div id="hk-solution-64" class="hidden-content tex2jax_ignore"><div class="solution">
+<div class="displaymath">
+\begin{align*}
+\matr{rrr|r}{
+1 \amp 1 \amp -1 \amp 10
+\\
+-1 \amp 4 \amp 5 \amp -5
+\\
+1 \amp 6 \amp 3 \amp 15
+}
+\overset{R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+1 \amp 1 \amp -1 \amp 10
+\\
+0 \amp 5 \amp 4 \amp 5
+\\
+0 \amp 5 \amp 4 \amp 5
+}
+\end{align*}
+</div>
+<p id="p-472">We already see that there is no unique solution, because the last two rows are identical. We proceed:</p>
+<div class="displaymath">
+\begin{align*}
+\matr{rrr|r}{
+1 \amp 1 \amp -1 \amp 10
+\\
+0 \amp 5 \amp 4 \amp 5
+\\
+0 \amp 5 \amp 4 \amp 5
+}
+\overset{-R_{2}+R_{3}}{\underset{-\frac{1}{5}R_{2}+R_{1}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+1 \amp 0 \amp -\frac{9}{5} \amp 9
+\\
+0 \amp 5 \amp 4 \amp 5
+\\
+0 \amp 0 \amp 0 \amp 0
+}\\
+\overset{\frac{1}{5}R_{2}}{\longrightarrow}
+\amp
+\matr{rrr|r}{
+1 \amp 0 \amp -\frac{9}{5} \amp 9
+\\
+0 \amp 1 \amp \frac{4}{5} \amp 1
+\\
+0 \amp 0 \amp 0 \amp 0
+}
+\end{align*}
+</div>
+<p id="p-473">We conclude that \(z\) is a free variable and the solution is given by</p>
+<div class="displaymath">
+\begin{equation*}
+\left\{
+\left(9+\frac{9}{5}z, 1 - \frac{4}{5},z\right) \vert z \in \mathbb{R}
+\right\}.
+\end{equation*}
+</div>
+</div></div>
+</li>
+<li id="li-249">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-65" id="solution-65"><span class="type">Solution</span></a><div id="hk-solution-65" class="hidden-content tex2jax_ignore"><div class="solution">
+<div class="displaymath">
+\begin{align*}
+\matr{rrr|r}{
+1 \amp 2 \amp -1 \amp 2
+\\
+2 \amp 5 \amp -3 \amp 1
+\\
+1 \amp 4 \amp -3 \amp 3
+}
+\overset{-2R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+1 \amp 2 \amp -1 \amp 2
+\\
+0 \amp 1 \amp -1 \amp 0
+\\
+0 \amp 2 \amp -2 \amp 1
+}\\
+\overset{-2R_{2}+R_{3}}{\longrightarrow}
+\amp
+\matr{rrr|r}{
+1 \amp 2 \amp -1 \amp 2
+\\
+0 \amp 1 \amp -1 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 1
+}.
+\end{align*}
+</div>
+<p id="p-474">We see from this that the system has no solution, since the last line means</p>
+<div class="displaymath">
+\begin{equation*}
+0x+0y+0z=1.
+\end{equation*}
+</div>
+</div></div>
+</li>
+<li id="li-250">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-66" id="solution-66"><span class="type">Solution</span></a><div id="hk-solution-66" class="hidden-content tex2jax_ignore"><div class="solution">
+<div class="displaymath">
+\begin{align*}
+\matr{rrr|r}{
+5 \amp 1 \amp 0 \amp 2
+\\
+3 \amp -1 \amp -2 \amp 1
+\\
+1 \amp 1 \amp -1 \amp 5
+}
+\overset{5R_{2}}{\underset{5R_{3}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+5 \amp 1 \amp 0 \amp 2
+\\
+15 \amp -5 \amp -10 \amp 5
+\\
+5 \amp 5 \amp -5 \amp 25
+}\\
+\overset{-3R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+5 \amp 1 \amp 0 \amp 2
+\\
+0 \amp -8 \amp -10 \amp -1
+\\
+0 \amp 4 \amp -5 \amp 23
+}\\
+\overset{\frac{1}{2}R_{2}+R_{3}}{\longrightarrow}
+\amp
+\matr{rrr|r}{
+5 \amp 1 \amp 0 \amp 2
+\\
+0 \amp -8 \amp -10 \amp -1
+\\
+0 \amp 0 \amp -10 \amp \frac{45}{2}
+}\\
+\overset{-R_{3}+R_{2}}{\underset{-\frac{1}{10}R_{3}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+5 \amp 1 \amp 0 \amp 2
+\\
+0 \amp -8 \amp 0 \amp -\frac{47}{2}
+\\
+0 \amp 0 \amp 1 \amp -\frac{9}{4}
+}\\
+\overset{-\frac{1}{8}R_{2}}{\underset{-R_{2}'+R_{1}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+5 \amp 0 \amp 0 \amp -\frac{15}{16}
+\\
+0 \amp 1 \amp 0 \amp \frac{47}{16}
+\\
+0 \amp 0 \amp 1 \amp -\frac{9}{4}
+}\\
+\overset{\frac{1}{5}R_{1}}{\longrightarrow}
+\amp
+\matr{rrr|r}{
+1 \amp 0 \amp 0 \amp -\frac{3}{16}
+\\
+0 \amp 1 \amp 0 \amp \frac{47}{16}
+\\
+0 \amp 0 \amp 1 \amp -\frac{9}{4}
+}
+\end{align*}
+</div>
+<p id="p-475">We conclude that the unique solution is given by \((x,y,z)= \left(-\frac{3}{16},\frac{47}{16},-\frac{9}{4}\right)\text{.}\)</p>
+</div></div>
+</li>
+<li id="li-251">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-67" id="solution-67"><span class="type">Solution</span></a><div id="hk-solution-67" class="hidden-content tex2jax_ignore"><div class="solution">
+<div class="displaymath">
+\begin{align*}
+\matr{rrr|r}{
+3 \amp -2 \amp 1 \amp -2
+\\
+1 \amp -1 \amp 3 \amp 5
+\\
+-1 \amp 1 \amp 1 \amp -1
+}
+\overset{3R_{2}}{\underset{3R_{3}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+3 \amp -2 \amp 1 \amp -2
+\\
+3 \amp -3 \amp 9 \amp 15
+\\
+-3 \amp 3 \amp 3 \amp -3
+}\\
+\overset{-R_{1}+R_{2}}{\underset{R_{1}+R_{3}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+3 \amp -2 \amp 1 \amp -2
+\\
+0 \amp -1 \amp 8 \amp 17
+\\
+0 \amp 1 \amp 4 \amp -5
+}\\
+\overset{R_{2}+R_{3}}{\longrightarrow}
+\amp
+\matr{rrr|r}{
+3 \amp -2 \amp 1 \amp -2
+\\
+0 \amp -1 \amp 8 \amp 17
+\\
+0 \amp 0 \amp 12 \amp 12
+}\\
+\overset{\frac{1}{12}R_{3}}{\underset{-8R_{3}' + R_{2}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+3 \amp -2 \amp 1 \amp -2
+\\
+0 \amp -1 \amp 0 \amp 9
+\\
+0 \amp 0 \amp 1 \amp 1
+}\\
+\overset{-2R_{2}+R_{1}}{\underset{-R_{2}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+3 \amp 0 \amp 1 \amp -20
+\\
+0 \amp 1 \amp 0 \amp -9
+\\
+0 \amp 0 \amp 1 \amp 1
+}\\
+\overset{-R_{3}+R_{1}}{\underset{\frac{1}{3}R_{1}'}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+1 \amp 0 \amp 0 \amp -7
+\\
+0 \amp 1 \amp 0 \amp -9
+\\
+0 \amp 0 \amp 1 \amp 1
+}.
+\end{align*}
+</div>
+<p id="p-476">We conclude that the unique solution is given by \((x,y,z)= \left(-7,-9,1\right)\text{.}\)</p>
+</div></div>
+</li>
+<li id="li-252">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-68" id="solution-68"><span class="type">Solution</span></a><div id="hk-solution-68" class="hidden-content tex2jax_ignore"><div class="solution">
+<div class="displaymath">
+\begin{align*}
+\matr{rrr|r}{
+1 \amp 1 \amp 1 \amp 2
+\\
+1 \amp 0 \amp 1 \amp 1
+\\
+2 \amp 5 \amp 2 \amp 7
+}
+\overset{-R_{1}+R_{2}}{\underset{-2R_{1}+R_{3}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+1 \amp 1 \amp 1 \amp 2
+\\
+0 \amp -1 \amp 0 \amp -1
+\\
+0 \amp 3 \amp 0 \amp 3
+}
+\end{align*}
+</div>
+<p id="p-477">We already see that there is not going to be a unique solution. We proceed:</p>
+<div class="displaymath">
+\begin{align*}
+\matr{rrr|r}{
+1 \amp 1 \amp 1 \amp 2
+\\
+0 \amp -1 \amp 0 \amp -1
+\\
+0 \amp 3 \amp 0 \amp 3
+}
+\overset{3R_{2}+R_{3}}{\underset{R_{2}+R_{1}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+1 \amp 0 \amp 1 \amp 1
+\\
+0 \amp -1 \amp 0 \amp -1
+\\
+0 \amp 0 \amp 0 \amp 0
+}.
+\end{align*}
+</div>
+<p id="p-478">We conclude that there is one free variable and the solution set is given by</p>
+<div class="displaymath">
+\begin{equation*}
+\left\{
+\left(1-z, 1, z\right) \vert z \in \mathbb{R}
+\right\}.
+\end{equation*}
+</div>
+</div></div>
+</li>
+<li id="li-253">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-69" id="solution-69"><span class="type">Solution</span></a><div id="hk-solution-69" class="hidden-content tex2jax_ignore"><div class="solution">
+<div class="displaymath">
+\begin{align*}
+\matr{rrr|r}{
+1 \amp 2 \amp -4 \amp 10
+\\
+2 \amp -1 \amp 2 \amp 5
+\\
+1 \amp 1 \amp -2 \amp 7
+}
+\overset{-R_{1}+R_{3}}{\underset{-2R_{1}+R_{2}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+1 \amp 2 \amp -4 \amp 10
+\\
+0 \amp -5 \amp 10 \amp -15
+\\
+0 \amp -1 \amp 2 \amp -3
+}.
+\end{align*}
+</div>
+<p id="p-479">From this, we see that there is no unique solution. We proceed:</p>
+<div class="displaymath">
+\begin{align*}
+\matr{rrr|r}{
+1 \amp 2 \amp -4 \amp 10
+\\
+0 \amp -5 \amp 10 \amp -15
+\\
+0 \amp -1 \amp 2 \amp -3
+}
+\overset{-\frac{1}{5}R_{2}+R_{3}}{\underset{5R_{1}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+5 \amp 10 \amp -20 \amp 50
+\\
+0 \amp -5 \amp 10 \amp -15
+\\
+0 \amp 0 \amp 0 \amp 0
+}\\
+\overset{2R_{2}+R_{1}}{\underset{\frac{-1}{5}R_{2}}{\longrightarrow}}
+\amp
+\matr{rrr|r}{
+5 \amp 0 \amp 0 \amp 20
+\\
+0 \amp 1 \amp -2 \amp 3
+\\
+0 \amp 0 \amp 0 \amp 0
+}.
+\end{align*}
+</div>
+<p id="p-480">We conclude that there is one free variable and the solution set is given by</p>
+<div class="displaymath">
+\begin{equation*}
+\left\{
+\left(4, 3+2z, z\right) \vert z \in \mathbb{R}
+\right\}.
+\end{equation*}
+</div>
+</div></div>
+</li>
+</ol>
+</div></div>
+</div></article></p>
+<p id="p-481"><article class="exercise-like" id="exercise-50"><h6 class="heading"><span class="codenumber">8.</span></h6>
+<aside class="aside-like" id="aside-54"><p id="p-482">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.3.)</p></aside> Do the three lines, \(x + 2y =1\text{,}\) \(2x -y =1\text{,}\) and \(4x + 3y=3\) have a common point of intersection? If so, find the point and if not, tell why they don't have such a common point of intersection.</article></p>
+<p id="p-483"><article class="exercise-like" id="exercise-51"><h6 class="heading"><span class="codenumber">9.</span></h6>
+<aside class="aside-like" id="aside-55"><p id="p-484">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.4.)</p></aside> Do the three planes, \(x+y - 3z=2\text{,}\) \(2x+y+z =1\) and \(3x+2y-2z=0\) have a common point of intersection? If so, find one and if not, tell why there is no such point.</article></p>
+<p id="p-485"><article class="exercise-like" id="exercise-52"><h6 class="heading"><span class="codenumber">10.</span></h6>
+<aside class="aside-like" id="aside-56"><p id="p-486">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Section 1.6, Exercise 1.6.3.)</p></aside> My system of equations has a solution \((x,y,z)= (1,2,4)\text{.}\)  The associated homogenous system has basic solutions \((x,y,z) =(1,0,1)\) and \((x,y,z)= (0,1,-1)\text{.}\)  What is the general solution of my system of equations?</article></p>
+<p id="p-487"><article class="exercise-like" id="exercise-53"><h6 class="heading"><span class="codenumber">11.</span></h6>
+<aside class="aside-like" id="aside-57"><p id="p-488">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.7.)</p></aside> Consider the following augmented matrix in which \(*\) denotes an arbitrary number and \(\blacksquare\) denotes a nonzero number.  Determine whether the given augmented matrix is consistent.  If consistent, is the solution unique?<div class="displaymath">
 \begin{equation*}
 \matr{ccc|c} { \blacksquare\amp  * \amp  * \amp  *\\
 0 \amp  \blacksquare \amp  * \amp  * \\
 0 \amp  0 \amp  \blacksquare \amp  *}								
 \end{equation*}
 </div></article></p>
-<p id="p-476"><article class="exercise-like" id="exercise-54"><h6 class="heading"><span class="codenumber">12.</span></h6>
-<aside class="aside-like" id="aside-58"><p id="p-477">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Section 1.4, Exercise 1.4.5.)</p></aside> Suppose a system of equations has fewer equations than variables.  Will such a system necessarily be consistent? If so, explain  why and if not, give an example  which is not consistent.</article></p>
-<p id="p-478"><article class="exercise-like" id="exercise-55"><h6 class="heading"><span class="codenumber">13.</span></h6>
-<aside class="aside-like" id="aside-59"><p id="p-479">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Section 1.4, Exercise 1.4.22.)</p></aside> Suppose a system of equations has fewer equations than variables and you have found a solution to this system of equations.  Is it possible that your solution is the only one?  Explain.</article></p>
-<p id="p-480"><article class="exercise-like" id="exercise-56"><h6 class="heading"><span class="codenumber">14.</span></h6>
-<aside class="aside-like" id="aside-60"><p id="p-481">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Section 1.2, Exercise 1.2.15.)</p></aside> Choose \(h\) and \(k\) such that the augmented matrix shown has each of the following: <ol class="lower-alpha">
-<li id="li-246">one solution</li>
-<li id="li-247">no solution</li>
-<li id="li-248">infinitely many solutions</li>
+<p id="p-489"><article class="exercise-like" id="exercise-54"><h6 class="heading"><span class="codenumber">12.</span></h6>
+<aside class="aside-like" id="aside-58"><p id="p-490">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Section 1.4, Exercise 1.4.5.)</p></aside> Suppose a system of equations has fewer equations than variables.  Will such a system necessarily be consistent? If so, explain  why and if not, give an example  which is not consistent.</article></p>
+<p id="p-491"><article class="exercise-like" id="exercise-55"><h6 class="heading"><span class="codenumber">13.</span></h6>
+<aside class="aside-like" id="aside-59"><p id="p-492">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Section 1.4, Exercise 1.4.22.)</p></aside> Suppose a system of equations has fewer equations than variables and you have found a solution to this system of equations.  Is it possible that your solution is the only one?  Explain.</article></p>
+<p id="p-493"><article class="exercise-like" id="exercise-56"><h6 class="heading"><span class="codenumber">14.</span></h6>
+<aside class="aside-like" id="aside-60"><p id="p-494">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Section 1.2, Exercise 1.2.15.)</p></aside> Choose \(h\) and \(k\) such that the augmented matrix shown has each of the following: <ol class="lower-alpha">
+<li id="li-262">one solution</li>
+<li id="li-263">no solution</li>
+<li id="li-264">infinitely many solutions</li>
 </ol>
 <div class="displaymath">
 \begin{equation*}
@@ -676,44 +1237,44 @@ x + y - 2z \amp = 7
 }
 \end{equation*}
 </div></article></p>
-<p id="p-482"><article class="exercise-like" id="exercise-57"><h6 class="heading"><span class="codenumber">15.</span></h6>
-<aside class="aside-like" id="aside-61"><p id="p-483">(Source: "ref-KN" Section 1.2, Exercise 1.2.9))</p></aside> In each of the following, find (if possible) conditions on \(a,b,\) and \(c\) such that the system has one solution, no solution or infinitely many solutions. <ol class="lower-alpha cols2">
-<li id="li-249"><div class="displaymath">
+<p id="p-495"><article class="exercise-like" id="exercise-57"><h6 class="heading"><span class="codenumber">15.</span></h6>
+<aside class="aside-like" id="aside-61"><p id="p-496">(Source: "ref-KN" Section 1.2, Exercise 1.2.9))</p></aside> In each of the following, find (if possible) conditions on \(a,b,\) and \(c\) such that the system has one solution, no solution or infinitely many solutions. <ol class="lower-alpha cols2">
+<li id="li-265"><div class="displaymath">
 \begin{align*}
 3x +  y - z \amp =  a\\
 x -  y + 2z \amp =  b\\
 5x +  3y  - 4z \amp =  c
 \end{align*}
 </div></li>
-<li id="li-250"><div class="displaymath">
+<li id="li-266"><div class="displaymath">
 \begin{align*}
 2x + y - z \amp =  a\\
 2y + 3z \amp =  b\\
 x +  - z \amp =  c
 \end{align*}
 </div></li>
-<li id="li-251"><div class="displaymath">
+<li id="li-267"><div class="displaymath">
 \begin{align*}
 -x + 3y  +  2z \amp =  -8\\
 x  + z \amp =  2\\
 3x + 3y + az \amp =  b
 \end{align*}
 </div></li>
-<li id="li-252"><div class="displaymath">
+<li id="li-268"><div class="displaymath">
 \begin{align*}
 x + ay   \amp =  0\\
 y  + bz \amp =  0\\
 cx 	  + z \amp =  0
 \end{align*}
 </div></li>
-<li id="li-253"><div class="displaymath">
+<li id="li-269"><div class="displaymath">
 \begin{align*}
 3x - y  + 2z \amp =  3\\
 x + y  - z \amp =  2\\
 2x - 2y  + 3z \amp =  b
 \end{align*}
 </div></li>
-<li id="li-254"><div class="displaymath">
+<li id="li-270"><div class="displaymath">
 \begin{align*}
 x + ay  - z \amp =  1\\
 -x + (a-2)y  + z \amp =  -1\\
@@ -721,11 +1282,11 @@ x + ay  - z \amp =  1\\
 \end{align*}
 </div></li>
 </ol></article></p>
-<p id="p-484"><article class="exercise-like" id="ex--three-lines-intersect"><h6 class="heading"><span class="codenumber">16.</span></h6>
-<aside class="aside-like" id="aside-62"><p id="p-485">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.3)</p></aside> Do the three lines \(x+2y=1\text{,}\) \(2x-y=1\text{,}\) and \(4x+3y=3\) in \(\mathbb{R}^2\) have a common point of intersection?  If so, find the point.  If not, explain why they don't have a common point of intersection.<div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-64" id="hint-64"><span class="type">Hint</span></a><div id="hk-hint-64" class="hidden-content tex2jax_ignore"><div class="solution">If \((x, y)\) is a point of intersection of the three lines, then \((x, y)\) must satisfy the equations of all three lines.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-55" id="answer-55"><span class="type">Answer</span></a><div id="hk-answer-55" class="hidden-content tex2jax_ignore"><div class="solution">The three lines intersect at \(\left(\frac{3}{5}, \frac{1}{5}\right)\text{.}\)</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-61" id="solution-61"><span class="type">Solution</span></a><div id="hk-solution-61" class="hidden-content tex2jax_ignore"><div class="solution">To find out if there is a common point of intersection we want to find out if the three given equations have a simultaneous solution.  We therefore turn the equations into an augmented matrix and row reduce:<div class="displaymath">
+<p id="p-497"><article class="exercise-like" id="ex--three-lines-intersect"><h6 class="heading"><span class="codenumber">16.</span></h6>
+<aside class="aside-like" id="aside-62"><p id="p-498">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.3)</p></aside> Do the three lines \(x+2y=1\text{,}\) \(2x-y=1\text{,}\) and \(4x+3y=3\) in \(\mathbb{R}^2\) have a common point of intersection?  If so, find the point.  If not, explain why they don't have a common point of intersection.<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-65" id="hint-65"><span class="type">Hint</span></a><div id="hk-hint-65" class="hidden-content tex2jax_ignore"><div class="solution">If \((x, y)\) is a point of intersection of the three lines, then \((x, y)\) must satisfy the equations of all three lines.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-64" id="answer-64"><span class="type">Answer</span></a><div id="hk-answer-64" class="hidden-content tex2jax_ignore"><div class="solution">The three lines intersect at \(\left(\frac{3}{5}, \frac{1}{5}\right)\text{.}\)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-70" id="solution-70"><span class="type">Solution</span></a><div id="hk-solution-70" class="hidden-content tex2jax_ignore"><div class="solution">To find out if there is a common point of intersection we want to find out if the three given equations have a simultaneous solution.  We therefore turn the equations into an augmented matrix and row reduce:<div class="displaymath">
 \begin{equation*}
 \matr{rr|r}{1\amp 2\amp 1\\2\amp -1\amp 1\\4\amp 3\amp 3}
 \to \matr{rr|r}{1\amp 2\amp 1 \\ 0 \amp  -5 \amp  -1 \\ 0 \amp  -5 \amp  -1} 
