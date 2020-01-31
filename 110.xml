@@ -6908,7 +6908,7 @@
 								<li> all entries in a column above and below a leading entry are zero.</li>
 							</ol>
 						</hint>
-						<solution>
+						<answer>
 							<ol label="[a]" cols="2">
 								<li>
 									Neither in REF nor in RREF.
@@ -6929,8 +6929,8 @@
 									Neither in REF nor in RREF.
 								</li>
 							</ol>
-						</solution>
-						<answer>
+						</answer>
+						<solution>
 								<ol label="[a]">
 								<li>
 									The matrix is not in REF: The zero row is not at the bottom.
@@ -6951,7 +6951,7 @@
 									The matrix is not in REF: The leading entry of the second row (<m>1</m> in the <m>(2, 3)</m>-entry) is not strictly to the right of the leading entry of the first row (<m>1</m> in the <m>(1, 3)</m>-entry). In particular, the matrix is not in RREF.
 								</li>
 							</ol>
-						</answer>
+						</solution>
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 2.2, Exercise 9-->
 						<statement>
@@ -7013,8 +7013,6 @@
 						</statement>
 						<!-- <hint>
 						</hint> -->
-						<!-- <solution>
-						</solution> -->
 						<answer>
 							In the following, <m>\ast</m> can be any number.
 							<ol label="[a]">
@@ -7089,14 +7087,99 @@
 								</mrow>
 								</md>
 								</li>
-								<!--<li>
-									<m>3 \times 2</m> 
+								<li>
+								<me>
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									0 \amp  0
+									\\
+									0 \amp 0
+									\\ 
+									0 \amp  0
+									\end{bmatrix},<!-- \end{bmatrix*} -->
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp  \ast
+									\\
+									0 \amp 0
+									\\ 
+									0 \amp  0
+									\end{bmatrix},<!-- \end{bmatrix*} -->
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									0 \amp  1
+									\\
+									0 \amp 0
+									\\ 
+									0 \amp  0
+									\end{bmatrix},<!-- \end{bmatrix*} -->
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp  0
+									\\
+									0 \amp 1
+									\\ 
+									0 \amp  0
+									\end{bmatrix}<!-- \end{bmatrix*} -->.
+								</me>
 								</li>
 								<li>
-									<m>3 \times 3</m>
-								</li>-->
+								<md>
+								<mrow>
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									0 \amp  0 \amp 0
+									\\
+									0 \amp 0 \amp 0
+									\\ 
+									0 \amp  0 \amp 0
+									\end{bmatrix},<!-- \end{bmatrix*} -->
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp \ast \amp \ast
+									\\
+									0 \amp 0 \amp 0
+									\\ 
+									0 \amp  0 \amp 0
+									\end{bmatrix},<!-- \end{bmatrix*} -->
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									0 \amp 1 \amp \ast
+									\\
+									0 \amp 0 \amp 0
+									\\ 
+									0 \amp  0 \amp 0
+									\end{bmatrix},<!-- \end{bmatrix*} -->
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									0 \amp 0 \amp 1
+									\\
+									0 \amp 0 \amp 0
+									\\ 
+									0 \amp  0 \amp 0
+									\end{bmatrix},<!-- \end{bmatrix*} -->
+								</mrow>
+								<mrow>
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp  0 \amp \ast
+									\\
+									0 \amp 1 \amp \ast
+									\\ 
+									0 \amp  0 \amp 0
+									\end{bmatrix},<!-- \end{bmatrix*} -->
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp \ast \amp 0
+									\\
+									0 \amp 0 \amp 1
+									\\ 
+									0 \amp  0 \amp 0
+									\end{bmatrix},<!-- \end{bmatrix*} -->
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp 0 \amp 0
+									\\
+									0 \amp 1 \amp 0
+									\\ 
+									0 \amp  0 \amp 1
+									\end{bmatrix}.
+								</mrow>
+								</md>
+								</li>
 							</ol>
 						</answer>
+						<!-- <solution>
+						</solution> -->
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
@@ -7113,14 +7196,78 @@
 					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 2.2, Exercises 23-->
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KN"/> in Section 1.2.) </p></aside>
-							Find the rank of each of the matrices in Problem 1. 
+							Find the rank of each of the matrices in Problem 1, that is:
+							<ol label="[a]" cols="2">
+								<li>
+									<m>\begin{bmatrix}<!-- \begin{bmatrix*}[r] --> 1\amp  -1 \amp  2\\ 0 \amp  0 \amp  0 \\ 0 \amp  0 \amp  1 \end{bmatrix}<!-- \end{bmatrix*} --></m>
+								</li>
+								<li>
+									<m>\begin{bmatrix}<!-- \begin{bmatrix*}[r] --> 2\amp  1 \amp  -1 \amp  3 \\ 0 \amp  0 \amp  0 \amp  0 \end{bmatrix}<!-- \end{bmatrix*} --></m>
+								</li>
+								<li>
+									<m>\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->1\amp  -2 \amp  3 \amp  5 \\ 0 \amp  0 \amp  0 \amp  1 \end{bmatrix}<!-- \end{bmatrix*} --></m>
+								</li>
+								<li>
+									<m>\begin{bmatrix}<!-- \begin{bmatrix*}[r] --> 1\amp  0 \amp  0 \amp  3 \amp  1 \\ 0 \amp  0 \amp  0 \amp  1 \amp  1\\ 0 \amp  0 \amp  0 \amp  0 \amp  1 \end{bmatrix}<!-- \end{bmatrix*} --></m>
+								</li>
+								<li>
+									<m>\begin{bmatrix}<!-- \begin{bmatrix*}[r] --> 1 \amp  1 \\ 0 \amp  1\end{bmatrix}<!-- \end{bmatrix*} --></m>
+								</li>
+								<li>
+									<m>\begin{bmatrix}<!-- \begin{bmatrix*}[r] --> 0 \amp  0 \amp  1 \\  0 \amp  0 \amp  1 \\  0 \amp  0 \amp  1 \end{bmatrix}<!-- \end{bmatrix*} --></m>
+								</li>
+							</ol>
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint>
+							<aside><p> (Source: <xref ref="ref-KN"/> Definition 1.4 in Section 1.2.) </p></aside>
+							The <em>rank</em> of a matrix <m>A</m> is the number of leading <m>1</m>s in any row-echelon matrix to which <m>A</m> can be carried by row operations. (For the definition of the row-echelon form, see <xref ref="def-REF"/>.)
+						</hint>
+						<solution>
+							<ol label="[a]">
+								<li>
+									By exchanging row <m>2</m> and <m>3</m>, we arrive at a matrix in row-echelon form with two leading <m>1</m>s. Thus, the rank of the matrix is <m>2</m>.
+								</li>
+								<li>
+									By dividing the first row by <m>2</m>, we arrive at a matrix in row-echelon form with one leading  <m>1</m>. Thus, the rank of the matrix is <m>1</m>.
+								</li>
+								<li>
+									Since the matrix is in REF, we just need to count the leading <m>1</m>s: the rank of the matrix is <m>2</m>.
+								</li>
+								<li>
+									Since the matrix is in REF, we just need to count the leading <m>1</m>s: the rank of the matrix is <m>3</m>.
+								</li>
+								<li>
+									Since the matrix is in REF, we just need to count the leading <m>1</m>s: the rank of the matrix is <m>2</m>.
+								</li>
+								<li>
+									To bring the matrix in REF, we substract the first row from the second and from the third row. The resulting matrix is
+									<me>\begin{bmatrix}<!-- \begin{bmatrix*}[r] --> 0 \amp  0 \amp  1 \\  0 \amp  0 \amp  0 \\  0 \amp  0 \amp  0 \end{bmatrix}<!-- \end{bmatrix*} -->,</me>
+									which has one leading <m>1</m> and hence rank <m>1</m>.
+								</li>
+							</ol>
+						</solution>
+						<answer>
+								<ol label="[a]" cols="2">
+								<li>
+									rank <m>2</m>
+								</li>
+								<li>
+									rank <m>1</m>
+								</li>
+								<li>
+									rank <m>2</m>
+								</li>
+								<li>
+									rank <m>3</m>
+								</li>
+								<li>
+									rank <m>2</m>
+								</li>
+								<li>
+									rank <m>1</m>
+								</li>
+							</ol>
+						</answer>
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 2.2, Exercises 25, 27, 29, 33-->
 						<statement>
