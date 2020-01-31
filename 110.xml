@@ -6888,29 +6888,66 @@
 								</li>
 							</ol>
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!--<solution>
-						</solution> -->
+						<hint xml:id="def-REF">
+							<aside><p>(Source: <xref ref="ref-KN"/> Section 1.2, Definition 1.12)</p></aside>
+							A matrix is in <em>row-echelon form</em> (REF) if
+							<ol label="1.">
+								<li> all nonzero rows are above any rows of zeros, </li>
+								<li> each leading entry of a row is in a column to the right of the leading entries of any row above it, and</li>
+								<li> each leading entry of a row is equal to <m>1</m>.</li>
+							</ol>
+							<p>
+							(Note that some sources <em>do not</em> assume that the leading entries are <m>1</m> for the REF.)</p>
+						</hint>
+						<hint xml:id="def-RREF">
+							<aside><p>(Source: <xref ref="ref-KN"/> Section 1.2, Definition 1.13)</p></aside>
+							A matrix is in <em>reduced row-echelon form</em> (RREF) if
+							<ol label="1.">
+								<li> it is in REF and</li>
+								<li> all entries in a column above and below a leading entry are zero.</li>
+							</ol>
+						</hint>
+						<solution>
+							<ol label="[a]" cols="2">
+								<li>
+									Neither in REF nor in RREF.
+								</li>
+								<li>
+									Neither in REF nor in RREF.
+								</li>
+								<li>
+									In REF, but not in RREF.
+								</li>
+								<li>
+									In REF, but not in RREF.
+								</li>
+								<li>
+									In REF, but not in RREF.
+								</li>
+								<li>
+									Neither in REF nor in RREF.
+								</li>
+							</ol>
+						</solution>
 						<answer>
-								<ol label="[a]" cols="2">
+								<ol label="[a]">
 								<li>
-									No: There is a non-zero entry below a zero row.
+									The matrix is not in REF: The zero row is not at the bottom.
 								</li>
 								<li>
-									No: The leading entry of the first row is not <m>1</m>.
+									The matrix is in not in REF: The leading entry of the first row is not <m>1</m>. In particular, the matrix is not in RREF.
 								</li>
 								<li>
-									No: The last column, which contains a leading <m>1</m> in the second row, has a non-zero entry (<m>5</m>).
+									The matrix is in REF, but not in RREF: The last column, which contains a leading <m>1</m> in the second row, has a non-zero entry (<m>5</m>).
 								</li>
 								<li>
-									No: The fourth column, which contains a leading <m>1</m> in the second row, has a non-zero entry (<m>3</m>).
+									The matrix is in REF, but not in RREF: The fourth column, which contains a leading <m>1</m> in the second row, has a non-zero entry (<m>3</m>).
 								</li>
 								<li>
-									No: The second column, which contains a leading <m>1</m> in the second row, has a non-zero entry (<m>1</m>).
+									The matrix is in REF, but not in RREF: The second column, which contains a leading <m>1</m> in the second row, has a non-zero entry (<m>1</m>).
 								</li>
 								<li>
-									No: The third column, which contains a leading <m>1</m> in the first row, has non-zero entries (two other <m>1</m>s).
+									The matrix is not in REF: The leading entry of the second row (<m>1</m> in the <m>(2, 3)</m>-entry) is not strictly to the right of the leading entry of the first row (<m>1</m> in the <m>(1, 3)</m>-entry). In particular, the matrix is not in RREF.
 								</li>
 							</ol>
 						</answer>
