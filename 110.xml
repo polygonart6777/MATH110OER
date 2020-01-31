@@ -7499,7 +7499,7 @@
 					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 2.2, Exercise 43-->
 						<statement>
 							<aside><p> (Source: "ref-KN" Section 1.2, Exercise 1.2.9)) </p></aside>
-							In each of the following , find (if possible) conditions on <m>a,b,</m> and <m>c</m> such that the system has one solution, no solution or infinitely many solutions.		 
+							In each of the following, find (if possible) conditions on <m>a,b,</m> and <m>c</m> such that the system has one solution, no solution or infinitely many solutions.		 
 							<ol cols="2">
 								<li>
 									<md>
@@ -7606,7 +7606,7 @@
 							The row reduced form tells us that there is a solution to this system, and that the only solution is <m>x=\frac{3}{5}, y = \frac{1}{5}</m>.  Therefore the three given lines do have a common point of intersection, and that point is <m>\left(\frac{3}{5}, \frac{1}{5}\right)</m>.
 						</solution>
 						<answer>
-							The three lines intersect at <m>\left(\frac{3}{5}, \frac{1}{5}\right)</m>
+							The three lines intersect at <m>\left(\frac{3}{5}, \frac{1}{5}\right)</m>.
 						</answer>
 					</exercise></p>
 				</exercises>
@@ -7799,7 +7799,7 @@
 						<statement>
 						<aside><p> (Source: <xref ref="ref-KN" />, Chapter 2, Exercise 2.1.5) </p></aside>
 						Find <m> A </m> in terms of <m> B </m> if: 
-						<ol>
+						<ol cols="2">
 							<li> 
 								<me> A + B = 3A + 2B </me>
 							</li>
@@ -7809,12 +7809,40 @@
 							</li>
 						</ol>
 					</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint>
+							Theorem 2.1.1 in Section 2.1 of <xref ref="ref-KN" /> might help.
+						</hint>
+						<solution>
+							Because of the properties listed in Theorem 2.1.1 of <xref ref="ref-KN" />, we can manipulate both sides of the equations just like we would if <m>A</m> and <m>B</m> where variables <m>x</m> and <m>y</m>:
+							<ol>
+							<li> 
+								<md>
+									<mrow> A + B = 3A + 2B \iff \amp (1-3)A = (2-1)B </mrow>									
+									<mrow>\iff \amp -2A = B </mrow>																
+									<mrow>\iff \amp A= -\frac{1}{2} B. </mrow>
+								</md>
+							</li>
+							<li>
+								<md>
+									<mrow>2A - B = 5(A + 2B)  \iff \amp 2A - B = 5A + 10B</mrow> 								
+									<mrow>\iff \amp -3A = 11B</mrow>
+									<mrow>\iff \amp A = -\frac{11}{3}B. </mrow>
+								</md>
+							</li>
+						</ol>
+						</solution>
+						<answer>
+							<ol cols="2">
+							<li> 
+								<me> A= -\frac{1}{2} B  </me>
+							</li>
+							<li>
+								<me>
+									A = -\frac{11}{3}B 
+								</me>
+							</li>
+						</ol>
+						</answer>
 					</exercise></p>
  					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 3.2, Exercise 1 and 3-->
 						<statement>
