@@ -6981,7 +6981,7 @@
 										\\ 
 										1 \amp  5 \amp  1 \amp  5
 									\end{bmatrix}<!-- \end{bmatrix*} -->
-									\overset{II-3I}{\underset{2III-I}{\longrightarrow}}
+									\overset{-3R_{1}+R_{2}}{\underset{-R_{1}+2R_{3}}{\longrightarrow}}
 									\amp\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
 										2 \amp  1 \amp  1 \amp  3
 										\\
@@ -6991,7 +6991,7 @@
 									\end{bmatrix}<!-- \end{bmatrix*} -->
 								</mrow>
 								<mrow>
-									\overset{III-9II}{\underset{\frac{1}{2}I}{\longrightarrow}}
+									\overset{-9R_{2} + R_{3}}{\underset{\frac{1}{2}R_{1}}{\longrightarrow}}
 									\amp\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
 										1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
 										\\
@@ -7001,7 +7001,7 @@
 									\end{bmatrix}<!-- \end{bmatrix*} -->
 								</mrow>
 								<mrow>
-									\overset{\frac{1}{19}III}{\longrightarrow}
+									\overset{\frac{1}{19}R_{3}}{\longrightarrow}
 									\amp\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
 										1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
 										\\
@@ -7022,7 +7022,7 @@
 										\\ 
 										0 \amp  0 \amp  1 \amp  \frac{70}{19}
 									\end{bmatrix}<!-- \end{bmatrix*} -->									
-									\overset{II+2III}{\longrightarrow}
+									\overset{2R_{3}+R_{2}}{\longrightarrow}
 									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
 										1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
 										\\
@@ -7042,7 +7042,7 @@
 										\\ 
 										0 \amp  0 \amp  1 \amp  \frac{70}{19}
 									\end{bmatrix}<!-- \end{bmatrix*} -->	
-									\overset{I-\frac{1}{2}II}{\longrightarrow}
+									\overset{-\frac{1}{2}R_{2}+R_{1}}{\longrightarrow}
 									\amp\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
 										1 \amp  0 \amp  \frac{1}{2} \amp  \frac{25}{19}
 										\\
@@ -7052,7 +7052,7 @@
 									\end{bmatrix}<!-- \end{bmatrix*} -->
 								</mrow>
 								<mrow>
-									\overset{I-\frac{1}{2}III}{\longrightarrow}
+									\overset{-\frac{1}{2}R_{3} + R_{1}}{\longrightarrow}
 									\amp\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
 										1 \amp  0 \amp  0 \amp  \frac{-10}{19}
 										\\
@@ -7110,7 +7110,7 @@
 										\\
 										1 \amp  -1 \amp  1 \amp  -2 
 									\end{bmatrix}<!-- \end{bmatrix*} -->
-									\overset{II-\frac{1}{2}I}{\underset{III-\frac{1}{2}I}{\longrightarrow}}
+									\overset{-\frac{1}{2}R_{1} + R_{2}}{\underset{-\frac{1}{2}R_{1} + R_{3}}{\longrightarrow}}
 									\amp
 									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
 										2 \amp  -1 \amp  3 \amp  -1
@@ -7121,7 +7121,7 @@
 									\end{bmatrix}<!-- \end{bmatrix*} -->
 								</mrow>
 								<mrow>
-									\overset{\frac{1}{2}I}{\underset{III+II}{\longrightarrow}}
+									\overset{\frac{1}{2}R_{1}}{\underset{R_{2}+R_{3}}{\longrightarrow}}
 									\amp
 									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
 										1 \amp  -\frac{1}{2} \amp  \frac{3}{2} \amp  -\frac{1}{2}
@@ -7132,7 +7132,7 @@
 									\end{bmatrix}<!-- \end{bmatrix*} -->
 								</mrow>
 								<mrow>
-									\overset{2II}{\longrightarrow}
+									\overset{2R_{2}}{\longrightarrow}
 									\amp
 									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
 										1 \amp  -\frac{1}{2} \amp  \frac{3}{2} \amp  -\frac{1}{2}
@@ -7152,7 +7152,7 @@
 										\\
 										0 \amp  0 \amp  0 \amp  0
 									\end{bmatrix}<!-- \end{bmatrix*} -->.
-									\overset{I+\frac{1}{2}II}{\longrightarrow}
+									\overset{\frac{1}{2}R_{2} + R_{1}}{\longrightarrow}
 									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
 										1 \amp  0 \amp  2 \amp  -1
 										\\
@@ -7376,13 +7376,25 @@
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
-							<aside><p> (Source: <xref ref="ref-RB"/> in the Section for Row-reduced Echelon Form, Exercise RREF.T10.) </p></aside>
+							<aside><p> (Source: <xref ref="ref-RB"/> in the Section for <url href="http://linear.ups.edu/fcla/section-RREF.html">Row-reduced Echelon Form</url>, Exercise RREF.T10.) </p></aside>
 							Prove that each of the three row operations is reversible. More precisely, if the matrix <m>B</m> is obtained from <m>A</m> by application of a single row operation, show that there is a single row operation that will transform B back into <m>A</m>.
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
+						<hint><aside><p>(Adapted from <xref ref="ref-RB"/>, the Section for <url href="http://linear.ups.edu/fcla/section-RREF.html">Row-reduced Echelon Form</url>)</p></aside>
+							 The three row operations are given by:
+							 <ol>
+							 	<li> Swap the locations of row <m>i</m> with row <m>j</m>: <m>R_{i} \leftrightarrow R_{j}</m>.</li>
+							 	<li> Multiply each entry of a single row <m>i</m> by a nonzero quantity <m>\alpha</m>: <m>\alpha R_{i}</m>.</li>
+							 	<li> Multiply each entry of one row <m>R_{i}</m> by some quantity <m>\alpha</m>, and add these values to the entries in the same columns of a second row <m>R_{j}</m>. Leave the first row the same after this operation (i.e. <m>R_{i}</m> remains unchanged), but replace the second row by the new values (i.e. row <m>j</m> is new): <m>\alpha R_{i} + R_{j}</m>.</li>
+							 </ol>
+						</hint>
+						<solution>
+							First, assume that <m>B \overset{R_{i}\leftrightarrow R_{j}}{\longrightarrow} A</m>. Then <m>A \overset{R_{j}\leftrightarrow R_{i}}{\longrightarrow} B</m>, so the first row operation is invertible. To be more precise, the first row operation is its own inverse.
+
+							Next, assume that <m>B \overset{\alpha R_{i}}{\longrightarrow} A</m>. For this to be a legitimate row operation, we must have <m>\alpha\neq 0</m>. In particular, <m>\frac{1}{\alpha}</m> exists and
+							<m>A \overset{\frac{1}{\alpha} R_{i}}{\longrightarrow} B</m> is also a legitimate row operation. Thus, the row operation of multiplication by <m>\alpha</m> is invertible with inverse the row operation of multiplication by <m>\frac{1}{\alpha}</m>.
+
+							Lastly, assume that <m>B \overset{\alpha R_{i} + R_{j}}{\longrightarrow} A</m>. If <m>\alpha = 0 </m> or row <m>i</m> in <m>B</m> is a zero-row, then the operation does nothing and <m>B=A</m>. If <m>\alpha\neq 0</m> and row <m>i</m> in <m>B</m> is not a zero-row, then <m>A</m> differs from <m>B</m> exactly in row <m>j</m>; in particular, row <m>i</m> is the same in <m>A</m> and <m>B</m>. We see from this that <m>A \overset{-\frac{1}{\alpha} R_{i} + R_{j}}{\longrightarrow} B</m> inverts the row operation.
+						</solution>
 						<!--<answer>
 						</answer> -->
 					</exercise></p>
