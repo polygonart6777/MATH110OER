@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-31T11:54:38-08:00    *-->
+<!--*    on 2020-01-31T12:50:58-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,23 +14,13 @@
 <body>
 <div class="solution">
 <h6 class="heading">
-<span class="type">Solution</span> <span class="codenumber">3.2.1.1</span>.</h6>Because of the properties listed in Theorem 2.1.1 of <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, we can manipulate both sides of the equations just like we would if \(A\) and \(B\) where variables \(x\) and \(y\text{:}\) <ol class="lower-alpha">
-<li><div class="displaymath">
-\begin{align*}
-A + B = 3A + 2B \iff \amp (1-3)A = (2-1)B \\
-\iff \amp -2A = B \\
-\iff \amp A= -\frac{1}{2} B. 
-\end{align*}
-</div></li>
-<li><div class="displaymath">
-\begin{align*}
-2A - B = 5(A + 2B)  \iff \amp 2A - B = 5A + 10B\\
-\iff \amp -3A = 11B\\
-\iff \amp A = -\frac{11}{3}B. 
-\end{align*}
-</div></li>
-</ol>
-</div>
-<span class="incontext"><a href="section-7.html#solution-60">in-context</a></span>
+<span class="type">Solution</span> <span class="codenumber">2.2.16.1</span>.</h6>To find out if there is a common point of intersection we want to find out if the three given equations have a simultaneous solution.  We therefore turn the equations into an augmented matrix and row reduce:<div class="displaymath">
+\begin{equation*}
+\matr{rr|r}{1\amp 2\amp 1\\2\amp -1\amp 1\\4\amp 3\amp 3}
+\to \matr{rr|r}{1\amp 2\amp 1 \\ 0 \amp  -5 \amp  -1 \\ 0 \amp  -5 \amp  -1} 
+\to \matr{rr|r}{1 \amp  0 \amp  \frac{3}{5} \\ 0 \amp  1 \amp  \frac{1}{5} \\ 0 \amp  0 \amp  0}
+\end{equation*}
+</div>The row reduced form tells us that there is a solution to this system, and that the only solution is \(x=\frac{3}{5}, y = \frac{1}{5}\text{.}\)  Therefore the three given lines do have a common point of intersection, and that point is \(\left(\frac{3}{5}, \frac{1}{5}\right)\text{.}\)</div>
+<span class="incontext"><a href="sec-2-2.html#solution-60">in-context</a></span>
 </body>
 </html>
