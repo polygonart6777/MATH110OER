@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-31T15:00:59-08:00    *-->
+<!--*    on 2020-02-02T13:01:02-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,11 +11,59 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution">To find out if there is a common point of intersection we want to find out if the three given equations have a simultaneous solution.  We therefore turn the equations into an augmented matrix and row reduce:<div class="displaymath">
-\begin{equation*}
-\matr{rr|r}{1\amp 2\amp 1\\2\amp -1\amp 1\\4\amp 3\amp 3}
-\to \matr{rr|r}{1\amp 2\amp 1 \\ 0 \amp  -5 \amp  -1 \\ 0 \amp  -5 \amp  -1} 
-\to \matr{rr|r}{1 \amp  0 \amp  \frac{3}{5} \\ 0 \amp  1 \amp  \frac{1}{5} \\ 0 \amp  0 \amp  0}
-\end{equation*}
-</div>The row reduced form tells us that there is a solution to this system, and that the only solution is \(x=\frac{3}{5}, y = \frac{1}{5}\text{.}\)  Therefore the three given lines do have a common point of intersection, and that point is \(\left(\frac{3}{5}, \frac{1}{5}\right)\text{.}\)</div></body>
+<body><div class="solution">
+<p>The question can be rephrased to: "Does the system of linear equations have a solution?", and we know that such a question is easily answered using an augmented matrix, which we row-reduce:</p>
+<div class="displaymath">
+\begin{align*}
+\matr{rr|r}{
+1 \amp 2 \amp 1
+\\
+2 \amp -1 \amp 1
+\\
+4 \amp 3 \amp 3
+}
+\amp
+\overset{-2R_{1}+R_{2}}{\underset{-4R_{1}+R_{3}}{\longrightarrow}}
+\matr{rr|r}{
+1 \amp 2 \amp 1
+\\
+0 \amp -5 \amp -1
+\\
+0 \amp -5 \amp -1
+}
+.
+\end{align*}
+</div>
+<p>We can already see that there is going to be a solution, and that said solution is unique. We proceed to find the intersection point:</p>
+<div class="displaymath">
+\begin{align*}
+\matr{rr|r}{
+1 \amp 2 \amp 1
+\\
+0 \amp -5 \amp -1
+\\
+0 \amp -5 \amp -1
+}
+\amp
+\overset{-R_{2}+R_{3}}{\underset{2R_{2}+5R_{1}}{\longrightarrow}}
+\matr{rr|r}{
+5 \amp 0 \amp 3
+\\
+0 \amp -5 \amp -1
+\\
+0 \amp 0 \amp 0
+}\\
+\amp
+\overset{\frac{-1}{5}R_{2}}{\underset{\frac{1}{5}R_{1}}{\longrightarrow}}
+\matr{rr|r}{
+1 \amp 0 \amp \frac{3}{5}
+\\
+0 \amp 1 \amp \frac{1}{5}
+\\
+0 \amp 0 \amp 0
+}
+\end{align*}
+</div>
+<p>We conclude that the three lines intersect in the point \(\left( \frac{3}{5}, \frac{1}{5}\right)\text{.}\)</p>
+</div></body>
 </html>

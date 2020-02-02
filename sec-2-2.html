@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-31T15:00:51-08:00    *-->
+<!--*    on 2020-02-02T13:00:54-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -1207,25 +1207,119 @@ x + y - 2z \amp = 7
 </div></div>
 </div></article></p>
 <p id="p-481"><article class="exercise-like" id="exercise-50"><h6 class="heading"><span class="codenumber">8.</span></h6>
-<aside class="aside-like" id="aside-54"><p id="p-482">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.3.)</p></aside> Do the three lines, \(x + 2y =1\text{,}\) \(2x -y =1\text{,}\) and \(4x + 3y=3\) have a common point of intersection? If so, find the point and if not, tell why they don't have such a common point of intersection.</article></p>
-<p id="p-483"><article class="exercise-like" id="exercise-51"><h6 class="heading"><span class="codenumber">9.</span></h6>
-<aside class="aside-like" id="aside-55"><p id="p-484">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.4.)</p></aside> Do the three planes, \(x+y - 3z=2\text{,}\) \(2x+y+z =1\) and \(3x+2y-2z=0\) have a common point of intersection? If so, find one and if not, tell why there is no such point.</article></p>
-<p id="p-485"><article class="exercise-like" id="exercise-52"><h6 class="heading"><span class="codenumber">10.</span></h6>
-<aside class="aside-like" id="aside-56"><p id="p-486">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Section 1.6, Exercise 1.6.3.)</p></aside> My system of equations has a solution \((x,y,z)= (1,2,4)\text{.}\)  The associated homogenous system has basic solutions \((x,y,z) =(1,0,1)\) and \((x,y,z)= (0,1,-1)\text{.}\)  What is the general solution of my system of equations?</article></p>
-<p id="p-487"><article class="exercise-like" id="exercise-53"><h6 class="heading"><span class="codenumber">11.</span></h6>
-<aside class="aside-like" id="aside-57"><p id="p-488">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.7.)</p></aside> Consider the following augmented matrix in which \(*\) denotes an arbitrary number and \(\blacksquare\) denotes a nonzero number.  Determine whether the given augmented matrix is consistent.  If consistent, is the solution unique?<div class="displaymath">
+<aside class="aside-like" id="aside-54"><p id="p-482">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.3.)</p></aside> Do the three lines, \(x + 2y =1\text{,}\) \(2x -y =1\text{,}\) and \(4x + 3y=3\) have a common point of intersection? If so, find the point and if not, tell why they don't have such a common point of intersection.<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-65" id="hint-65"><span class="type">Hint</span></a><div id="hk-hint-65" class="hidden-content tex2jax_ignore"><div class="solution">Write the system of linear equations as an augmented matrix and row-reduce.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-64" id="answer-64"><span class="type">Answer</span></a><div id="hk-answer-64" class="hidden-content tex2jax_ignore"><div class="solution">The three lines intersect in the point \(\left( \frac{3}{5}, \frac{1}{5}\right)\text{.}\)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-70" id="solution-70"><span class="type">Solution</span></a><div id="hk-solution-70" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-483">The question can be rephrased to: "Does the system of linear equations have a solution?", and we know that such a question is easily answered using an augmented matrix, which we row-reduce:</p>
+<div class="displaymath">
+\begin{align*}
+\matr{rr|r}{
+1 \amp 2 \amp 1
+\\
+2 \amp -1 \amp 1
+\\
+4 \amp 3 \amp 3
+}
+\amp
+\overset{-2R_{1}+R_{2}}{\underset{-4R_{1}+R_{3}}{\longrightarrow}}
+\matr{rr|r}{
+1 \amp 2 \amp 1
+\\
+0 \amp -5 \amp -1
+\\
+0 \amp -5 \amp -1
+}
+.
+\end{align*}
+</div>
+<p id="p-484">We can already see that there is going to be a solution, and that said solution is unique. We proceed to find the intersection point:</p>
+<div class="displaymath">
+\begin{align*}
+\matr{rr|r}{
+1 \amp 2 \amp 1
+\\
+0 \amp -5 \amp -1
+\\
+0 \amp -5 \amp -1
+}
+\amp
+\overset{-R_{2}+R_{3}}{\underset{2R_{2}+5R_{1}}{\longrightarrow}}
+\matr{rr|r}{
+5 \amp 0 \amp 3
+\\
+0 \amp -5 \amp -1
+\\
+0 \amp 0 \amp 0
+}\\
+\amp
+\overset{\frac{-1}{5}R_{2}}{\underset{\frac{1}{5}R_{1}}{\longrightarrow}}
+\matr{rr|r}{
+1 \amp 0 \amp \frac{3}{5}
+\\
+0 \amp 1 \amp \frac{1}{5}
+\\
+0 \amp 0 \amp 0
+}
+\end{align*}
+</div>
+<p id="p-485">We conclude that the three lines intersect in the point \(\left( \frac{3}{5}, \frac{1}{5}\right)\text{.}\)</p>
+</div></div>
+</div></article></p>
+<p id="p-486"><article class="exercise-like" id="exercise-51"><h6 class="heading"><span class="codenumber">9.</span></h6>
+<aside class="aside-like" id="aside-55"><p id="p-487">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.4.)</p></aside> Do the three planes, \(x+y - 3z=2\text{,}\) \(2x+y+z =1\) and \(3x+2y-2z=0\) have a common point of intersection? If so, find one and if not, tell why there is no such point.<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-66" id="hint-66"><span class="type">Hint</span></a><div id="hk-hint-66" class="hidden-content tex2jax_ignore"><div class="solution">Write the system of linear equations as an augmented matrix and row-reduce.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-65" id="answer-65"><span class="type">Answer</span></a><div id="hk-answer-65" class="hidden-content tex2jax_ignore"><div class="solution">The three planes do not intersect.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-71" id="solution-71"><span class="type">Solution</span></a><div id="hk-solution-71" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-488">The question can be rephrased to: "Does the system of linear equations have a solution?", and we know that such a question is easily answered using an augmented matrix, which we row-reduce:</p>
+<div class="displaymath">
+\begin{align*}
+\matr{rrr|r}{
+1 \amp 1 \amp -3 \amp 2
+\\
+2 \amp 1 \amp 1 \amp 1
+\\
+3 \amp 2 \amp -2 \amp 0
+}
+\amp
+\overset{-2R_{1}+R_{2}}{\underset{-3R_{1}+R_{3}}{\longrightarrow}}
+\matr{rrr|r}{
+1 \amp 1 \amp -3 \amp 2
+\\
+0 \amp -1 \amp 7 \amp -3
+\\
+0 \amp -1 \amp 7 \amp -6
+}\\
+\amp
+\overset{-R_{2}+R_{3}}{\longrightarrow}
+\matr{rrr|r}{
+1 \amp 1 \amp -3 \amp 2
+\\
+0 \amp -1 \amp 7 \amp -3
+\\
+0 \amp 0 \amp 0 \amp -3
+}
+\end{align*}
+</div>
+<p id="p-489">Since the last line of the augmented matrix reads as \(0x + 0y + 0z = -3\text{,}\) we see that there is no solution to the system. In other words, the three planes do not intersect.</p>
+</div></div>
+</div></article></p>
+<p id="p-490"><article class="exercise-like" id="exercise-52"><h6 class="heading"><span class="codenumber">10.</span></h6>
+<aside class="aside-like" id="aside-56"><p id="p-491">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Section 1.6, Exercise 1.6.3.)</p></aside> My system of equations has a solution \((x,y,z)= (1,2,4)\text{.}\)  The associated homogenous system has basic solutions \((x,y,z) =(1,0,1)\) and \((x,y,z)= (0,1,-1)\text{.}\)  What is the general solution of my system of equations?</article></p>
+<p id="p-492"><article class="exercise-like" id="exercise-53"><h6 class="heading"><span class="codenumber">11.</span></h6>
+<aside class="aside-like" id="aside-57"><p id="p-493">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.7.)</p></aside> Consider the following augmented matrix in which \(*\) denotes an arbitrary number and \(\blacksquare\) denotes a nonzero number.  Determine whether the given augmented matrix is consistent.  If consistent, is the solution unique?<div class="displaymath">
 \begin{equation*}
 \matr{ccc|c} { \blacksquare\amp  * \amp  * \amp  *\\
 0 \amp  \blacksquare \amp  * \amp  * \\
 0 \amp  0 \amp  \blacksquare \amp  *}								
 \end{equation*}
 </div></article></p>
-<p id="p-489"><article class="exercise-like" id="exercise-54"><h6 class="heading"><span class="codenumber">12.</span></h6>
-<aside class="aside-like" id="aside-58"><p id="p-490">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Section 1.4, Exercise 1.4.5.)</p></aside> Suppose a system of equations has fewer equations than variables.  Will such a system necessarily be consistent? If so, explain  why and if not, give an example  which is not consistent.</article></p>
-<p id="p-491"><article class="exercise-like" id="exercise-55"><h6 class="heading"><span class="codenumber">13.</span></h6>
-<aside class="aside-like" id="aside-59"><p id="p-492">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Section 1.4, Exercise 1.4.22.)</p></aside> Suppose a system of equations has fewer equations than variables and you have found a solution to this system of equations.  Is it possible that your solution is the only one?  Explain.</article></p>
-<p id="p-493"><article class="exercise-like" id="exercise-56"><h6 class="heading"><span class="codenumber">14.</span></h6>
-<aside class="aside-like" id="aside-60"><p id="p-494">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Section 1.2, Exercise 1.2.15.)</p></aside> Choose \(h\) and \(k\) such that the augmented matrix shown has each of the following: <ol class="lower-alpha">
+<p id="p-494"><article class="exercise-like" id="exercise-54"><h6 class="heading"><span class="codenumber">12.</span></h6>
+<aside class="aside-like" id="aside-58"><p id="p-495">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Section 1.4, Exercise 1.4.5.)</p></aside> Suppose a system of equations has fewer equations than variables.  Will such a system necessarily be consistent? If so, explain  why and if not, give an example  which is not consistent.</article></p>
+<p id="p-496"><article class="exercise-like" id="exercise-55"><h6 class="heading"><span class="codenumber">13.</span></h6>
+<aside class="aside-like" id="aside-59"><p id="p-497">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Section 1.4, Exercise 1.4.22.)</p></aside> Suppose a system of equations has fewer equations than variables and you have found a solution to this system of equations.  Is it possible that your solution is the only one?  Explain.</article></p>
+<p id="p-498"><article class="exercise-like" id="exercise-56"><h6 class="heading"><span class="codenumber">14.</span></h6>
+<aside class="aside-like" id="aside-60"><p id="p-499">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Section 1.2, Exercise 1.2.15.)</p></aside> Choose \(h\) and \(k\) such that the augmented matrix shown has each of the following: <ol class="lower-alpha">
 <li id="li-262">one solution</li>
 <li id="li-263">no solution</li>
 <li id="li-264">infinitely many solutions</li>
@@ -1237,8 +1331,8 @@ x + y - 2z \amp = 7
 }
 \end{equation*}
 </div></article></p>
-<p id="p-495"><article class="exercise-like" id="exercise-57"><h6 class="heading"><span class="codenumber">15.</span></h6>
-<aside class="aside-like" id="aside-61"><p id="p-496">(Source: "ref-KN" Section 1.2, Exercise 1.2.9))</p></aside> In each of the following, find (if possible) conditions on \(a,b,\) and \(c\) such that the system has one solution, no solution or infinitely many solutions. <ol class="lower-alpha cols2">
+<p id="p-500"><article class="exercise-like" id="exercise-57"><h6 class="heading"><span class="codenumber">15.</span></h6>
+<aside class="aside-like" id="aside-61"><p id="p-501">(Source: "ref-KN" Section 1.2, Exercise 1.2.9))</p></aside> In each of the following, find (if possible) conditions on \(a,b,\) and \(c\) such that the system has one solution, no solution or infinitely many solutions. <ol class="lower-alpha cols2">
 <li id="li-265"><div class="displaymath">
 \begin{align*}
 3x +  y - z \amp =  a\\
@@ -1282,11 +1376,11 @@ x + ay  - z \amp =  1\\
 \end{align*}
 </div></li>
 </ol></article></p>
-<p id="p-497"><article class="exercise-like" id="ex--three-lines-intersect"><h6 class="heading"><span class="codenumber">16.</span></h6>
-<aside class="aside-like" id="aside-62"><p id="p-498">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.3)</p></aside> Do the three lines \(x+2y=1\text{,}\) \(2x-y=1\text{,}\) and \(4x+3y=3\) in \(\mathbb{R}^2\) have a common point of intersection?  If so, find the point.  If not, explain why they don't have a common point of intersection.<div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-65" id="hint-65"><span class="type">Hint</span></a><div id="hk-hint-65" class="hidden-content tex2jax_ignore"><div class="solution">If \((x, y)\) is a point of intersection of the three lines, then \((x, y)\) must satisfy the equations of all three lines.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-64" id="answer-64"><span class="type">Answer</span></a><div id="hk-answer-64" class="hidden-content tex2jax_ignore"><div class="solution">The three lines intersect at \(\left(\frac{3}{5}, \frac{1}{5}\right)\text{.}\)</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-70" id="solution-70"><span class="type">Solution</span></a><div id="hk-solution-70" class="hidden-content tex2jax_ignore"><div class="solution">To find out if there is a common point of intersection we want to find out if the three given equations have a simultaneous solution.  We therefore turn the equations into an augmented matrix and row reduce:<div class="displaymath">
+<p id="p-502"><article class="exercise-like" id="ex--three-lines-intersect"><h6 class="heading"><span class="codenumber">16.</span></h6>
+<aside class="aside-like" id="aside-62"><p id="p-503">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.3)</p></aside> Do the three lines \(x+2y=1\text{,}\) \(2x-y=1\text{,}\) and \(4x+3y=3\) in \(\mathbb{R}^2\) have a common point of intersection?  If so, find the point.  If not, explain why they don't have a common point of intersection.<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-67" id="hint-67"><span class="type">Hint</span></a><div id="hk-hint-67" class="hidden-content tex2jax_ignore"><div class="solution">If \((x, y)\) is a point of intersection of the three lines, then \((x, y)\) must satisfy the equations of all three lines.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-66" id="answer-66"><span class="type">Answer</span></a><div id="hk-answer-66" class="hidden-content tex2jax_ignore"><div class="solution">The three lines intersect at \(\left(\frac{3}{5}, \frac{1}{5}\right)\text{.}\)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-72" id="solution-72"><span class="type">Solution</span></a><div id="hk-solution-72" class="hidden-content tex2jax_ignore"><div class="solution">To find out if there is a common point of intersection we want to find out if the three given equations have a simultaneous solution.  We therefore turn the equations into an augmented matrix and row reduce:<div class="displaymath">
 \begin{equation*}
 \matr{rr|r}{1\amp 2\amp 1\\2\amp -1\amp 1\\4\amp 3\amp 3}
 \to \matr{rr|r}{1\amp 2\amp 1 \\ 0 \amp  -5 \amp  -1 \\ 0 \amp  -5 \amp  -1} 

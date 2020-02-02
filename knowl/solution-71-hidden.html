@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-01-31T15:00:59-08:00    *-->
+<!--*    on 2020-02-02T13:01:02-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,21 +11,37 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution">Because of the properties listed in Theorem 2.1.1 of <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, we can manipulate both sides of the equations just like we would if \(A\) and \(B\) where variables \(x\) and \(y\text{:}\) <ol class="lower-alpha">
-<li><div class="displaymath">
+<body><div class="solution">
+<p>The question can be rephrased to: "Does the system of linear equations have a solution?", and we know that such a question is easily answered using an augmented matrix, which we row-reduce:</p>
+<div class="displaymath">
 \begin{align*}
-A + B = 3A + 2B \iff \amp (1-3)A = (2-1)B \\
-\iff \amp -2A = B \\
-\iff \amp A= -\frac{1}{2} B. 
+\matr{rrr|r}{
+1 \amp 1 \amp -3 \amp 2
+\\
+2 \amp 1 \amp 1 \amp 1
+\\
+3 \amp 2 \amp -2 \amp 0
+}
+\amp
+\overset{-2R_{1}+R_{2}}{\underset{-3R_{1}+R_{3}}{\longrightarrow}}
+\matr{rrr|r}{
+1 \amp 1 \amp -3 \amp 2
+\\
+0 \amp -1 \amp 7 \amp -3
+\\
+0 \amp -1 \amp 7 \amp -6
+}\\
+\amp
+\overset{-R_{2}+R_{3}}{\longrightarrow}
+\matr{rrr|r}{
+1 \amp 1 \amp -3 \amp 2
+\\
+0 \amp -1 \amp 7 \amp -3
+\\
+0 \amp 0 \amp 0 \amp -3
+}
 \end{align*}
-</div></li>
-<li><div class="displaymath">
-\begin{align*}
-2A - B = 5(A + 2B)  \iff \amp 2A - B = 5A + 10B\\
-\iff \amp -3A = 11B\\
-\iff \amp A = -\frac{11}{3}B. 
-\end{align*}
-</div></li>
-</ol>
+</div>
+<p>Since the last line of the augmented matrix reads as \(0x + 0y + 0z = -3\text{,}\) we see that there is no solution to the system. In other words, the three planes do not intersect.</p>
 </div></body>
 </html>
