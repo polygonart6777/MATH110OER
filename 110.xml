@@ -8162,12 +8162,69 @@
 							<aside><p> (Source: <xref ref="ref-KK"/>, Chapter 1, Exercise 1.2.3.) </p></aside>
 							Do the three lines, <m>x + 2y =1</m>, <m>2x -y =1</m>, and <m>4x + 3y=3</m> have a common point of intersection? If so, find the point and if not, tell why they don't have such a common point of intersection.
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint>
+							Write the system of linear equations as an augmented matrix and row-reduce.
+						</hint>
+						<solution>
+							<p>The question can be rephrased to: "Does the system of linear equations have a solution?", and we know that such a question is easily answered using an augmented matrix, which we row-reduce:</p>
+							<md>
+							<mrow>
+								\matr{rr|r}{
+									1 \amp 2 \amp 1
+									\\
+									2 \amp -1 \amp 1
+									\\
+									4 \amp 3 \amp 3
+								}
+								\amp
+								\overset{-2R_{1}+R_{2}}{\underset{-4R_{1}+R_{3}}{\longrightarrow}}
+								\matr{rr|r}{
+									1 \amp 2 \amp 1
+									\\
+									0 \amp -5 \amp -1
+									\\
+									0 \amp -5 \amp -1
+								}
+								.
+							</mrow>
+							</md>
+							<p>We can already see that there is going to be a solution, and that said solution is unique. We proceed to find the intersection point:</p>
+							<md>
+							<mrow>
+								\matr{rr|r}{
+									1 \amp 2 \amp 1
+									\\
+									0 \amp -5 \amp -1
+									\\
+									0 \amp -5 \amp -1
+								}
+								\amp
+								\overset{-R_{2}+R_{3}}{\underset{2R_{2}+5R_{1}}{\longrightarrow}}
+								\matr{rr|r}{
+									5 \amp 0 \amp 3
+									\\
+									0 \amp -5 \amp -1
+									\\
+									0 \amp 0 \amp 0
+								}
+							</mrow>
+							<mrow>
+								\amp
+								\overset{\frac{-1}{5}R_{2}}{\underset{\frac{1}{5}R_{1}}{\longrightarrow}}
+								\matr{rr|r}{
+									1 \amp 0 \amp \frac{3}{5}
+									\\
+									0 \amp 1 \amp \frac{1}{5}
+									\\
+									0 \amp 0 \amp 0
+								}
+							</mrow>
+							</md>
+							<p>We conclude that the three lines intersect in the point <m>\left( \frac{3}{5}, \frac{1}{5}\right)</m>.</p>
+						</solution>
+						<answer>
+							The three lines intersect in the point <m>\left( \frac{3}{5}, \frac{1}{5}\right)</m>.
+						</answer>
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
