@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-02-02T21:04:13-08:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+1 \amp a \amp 0 \amp 0
+\\
+0 \amp 1 \amp b \amp 0
+\\
+c \amp 0 \amp 1 \amp 0 
+}
+\overset{-cR_{1}+R_{3}}{\longrightarrow}
+\amp
+\matr{ccc|c}{
+1 \amp a \amp 0 \amp 0
+\\
+0 \amp 1 \amp b \amp 0
+\\
+0 \amp -ca \amp 1 \amp 0 
+}\\
+\overset{caR_{2}+R_{3}}{\underset{-aR_{2}+R_{1}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp 0 \amp -ab \amp 0
+\\
+0 \amp 1 \amp b \amp 0
+\\
+0 \amp 0 \amp 1 + cab  \amp 0 
+}.
+\end{align*}
+</div>To proceed, we need to make a case distinction: If \(1+cab = 0\text{,}\) then we have found the RREF of the matrix and the solution set is given  by<div class="displaymath">
+\begin{equation*}
+\left\{
+(abz, -bz, z)
+\,\vert\,
+z\in\mathbb{R}
+\right\}.
+\end{equation*}
+</div>If \(1+cab \neq 0\text{,}\) then we can divide by \(1+cab\text{:}\)<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+1 \amp 0 \amp -ab \amp 0
+\\
+0 \amp 1 \amp b \amp 0
+\\
+0 \amp 0 \amp 1 + cab  \amp 0 
+}
+\overset{\frac{1}{1+cab}R_{3}}{\longrightarrow}
+\amp
+\matr{ccc|c}{
+1 \amp 0 \amp -ab \amp 0
+\\
+0 \amp 1 \amp b \amp 0
+\\
+0 \amp 0 \amp 1 \amp 0 
+}\\
+\overset{abR_{3}+R_{1}}{\underset{-bR_{3}+R_{2}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp 0 \amp 0 \amp 0
+\\
+0 \amp 1 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp 0 
+}.
+\end{align*}
+</div>Thus, if \(1+cab \neq 0\text{,}\) then the unique solution to the system is \((0,0,0)\text{.}\)</div></body>
+</html>

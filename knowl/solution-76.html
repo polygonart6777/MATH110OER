@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-02-02T21:04:13-08:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">2.2.15.a.1</span>.</h6>
+<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+3 \amp 1 \amp -1 \amp a
+\\
+1 \amp -1 \amp 2 \amp b
+\\
+5 \amp 3 \amp -4 \amp c
+}
+\overset{-3R_{2}+R_{1}}{\underset{-5R_{2}+R_{3}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+0 \amp 4 \amp -7 \amp a-3b
+\\
+1 \amp -1 \amp 2 \amp b
+\\
+0 \amp 8 \amp -14 \amp c-5b
+}\\
+\overset{R_{1}\leftrightarrow R_{2}}{\underset{-2R_{2}'+R_{3}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp -1 \amp 2 \amp b
+\\
+0 \amp 4 \amp -7 \amp a-3b
+\\
+0 \amp 0 \amp 0 \amp (c-5b) - 2(a-3b)
+}\\
+\amp=
+\matr{ccc|c}{
+1 \amp -1 \amp 2 \amp b
+\\
+0 \amp 4 \amp -7 \amp a-3b
+\\
+0 \amp 0 \amp 0 \amp - 2a + c + b
+}
+\end{align*}
+</div>We see: If \(-2a+c+b\neq 0\text{,}\) then the system is inconsistent and has no solutions. If \(-2a+c+b = 0\text{,}\) then we proceed:<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+1 \amp -1 \amp 2 \amp b
+\\
+0 \amp 4 \amp -7 \amp a-3b
+\\
+0 \amp 0 \amp 0 \amp - 2a + c + b
+}
+\overset{\frac{1}{4}R_{2}}{\underset{R_{2}+R_{1}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp 0 \amp \frac{1}{4} \amp \frac{a+b}{4}
+\\
+0 \amp 1 \amp -\frac{7}{4} \amp \frac{a-3b}{4}
+\\
+0 \amp 0 \amp 0 \amp 0
+}
+.
+\end{align*}
+</div>We conclude that, if \(-2a+c+b = 0\text{,}\) i.e. \(c = 2a-b\text{,}\) then the solution set for the system is<div class="displaymath">
+\begin{equation*}
+\left\{
+\left(
+\frac{a+b}{4} - \frac{1}{4}z,
+\frac{a-3b}{4} + \frac{7}{4}z,z
+\right) \,\vert\,
+z\in\mathbb{R}
+\right\}
+.
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="sec-2-2.html#solution-76">in-context</a></span>
+</body>
+</html>

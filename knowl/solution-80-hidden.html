@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-02-02T21:04:13-08:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+1 \amp a \amp -1 \amp 1
+\\
+-1 \amp a-2 \amp 1 \amp -1
+\\
+2 \amp 2 \amp a-2 \amp 1
+}
+\overset{R_{1}+R_{2}}{\underset{-2R_{1}+R_{3}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp a \amp -1 \amp 1
+\\
+0 \amp 2a-2 \amp 0 \amp 0
+\\
+0 \amp 2-2a \amp a \amp -1
+}\\
+\overset{R_{2}+R_{3}}{\longrightarrow}
+\amp
+\matr{ccc|c}{
+1 \amp a \amp -1 \amp 1
+\\
+0 \amp 2a-2 \amp 0 \amp 0
+\\
+0 \amp 0 \amp a \amp -1
+}
+.
+\end{align*}
+</div>If \(a=0\text{,}\) then the system is inconsistent (because of the third row) and there is no solution. Otherwise, we can divide by \(a\text{:}\)<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+1 \amp a \amp -1 \amp 1
+\\
+0 \amp 2a-2 \amp 0 \amp 0
+\\
+0 \amp 0 \amp a \amp -1
+}
+\overset{\frac{1}{a}R_{3}}{\underset{R_{3}'+R_{1}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp a \amp 0 \amp 1-\frac{1}{a}
+\\
+0 \amp 2a-2 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp -\frac{1}{a}
+}
+.
+\end{align*}
+</div>If \(a=1\text{,}\) then switching the second and third row yields the RREF:<div class="displaymath">
+\begin{equation*}
+\matr{ccc|c}{
+1 \amp 1 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp -1
+}
+\overset{R_{2}\leftrightarrow R_{3}}{\longrightarrow}
+\matr{ccc|c}{
+1 \amp 1 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp -1										
+\\
+0 \amp 0 \amp 0 \amp 0
+}.
+\end{equation*}
+</div>Thus, the solution set is given by<div class="displaymath">
+\begin{equation*}
+\left\{
+\left(-y,y,-1
+\right)
+\,\vert\, y\in\mathbb{R}
+\right\}.
+\end{equation*}
+</div>If \(a\neq 1\text{,}\) then we can divide by \(2a-2 \text{:}\)<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+1 \amp a \amp 0 \amp 1-\frac{1}{a}
+\\
+0 \amp 2a-2 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp -\frac{1}{a}
+}
+\overset{\frac{1}{2a-2}R_{2}}{\longrightarrow}
+\amp
+\matr{ccc|c}{
+1 \amp a \amp 0 \amp 1-\frac{1}{a}
+\\
+0 \amp 1 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp -\frac{1}{a}
+}\\
+\overset{-aR_{2}+R_{1}}{\longrightarrow}
+\amp
+\matr{ccc|c}{
+1 \amp 0 \amp 0 \amp 1-\frac{1}{a}
+\\
+0 \amp 1 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp -\frac{1}{a}
+}
+.
+\end{align*}
+</div>Thus, in this case, the unique solution is given by \(\left(1-\frac{1}{a}, 0, -\frac{1}{a} \right)\text{.}\)</div></body>
+</html>
