@@ -8363,7 +8363,7 @@
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
 							<aside><p> (Source: <xref ref="ref-JH"/>, Section 1.4, Exercise 1.4.5.) </p></aside>
-							Suppose a system of equations has fewer equations than variables.  Will such a system necessarily be consistent? If so, explain  why and if not, give an example  which is not consistent.
+							Suppose a system of equations has fewer equations than variables.  Will such a system necessarily be consistent? If so, explain  why and if not, give an example which is not consistent.
 						</statement>	 
 						<!-- <hint>
 						</hint> -->
@@ -8379,8 +8379,9 @@
 							</me>
 							This system consists of only two equations but three variables. Nonetheless, the first row asks for <m>x=5</m>, while the second row asks for <m>x=-5</m>, so there cannot be any solution and the system is inconsistent.
 						</solution>
-						<!--<answer>
-						</answer> -->
+						<answer>
+							No, it does not have to be consistent.
+						</answer>
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 2.2, Exercise 37.  Not exactly the same question, but I think this one is better-->
 						<statement>
