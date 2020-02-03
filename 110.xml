@@ -8357,7 +8357,7 @@
 							<m>\left( \frac{dhe-cie - bgh+bfi}{ahe} , \frac{gh-fi}{he}, \frac{i}{h}\right)</m>.
 						</solution>
 						<answer>
-							The system is consistend and has a unique solution. 
+							The system is consistent and has a unique solution. 
 						</answer> 
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
@@ -8367,8 +8367,17 @@
 						</statement>	 
 						<!-- <hint>
 						</hint> -->
-						<!-- <solution>
-						</solution> -->
+						<solution>
+							No, it does not have to be consistent: consider
+							<me>
+								\matr{ccc|c}
+								{
+									1 \amp 0 \amp 0 \amp 5
+									1 \amp 0 \amp 0 \amp -5
+								}.
+							</me>
+							This system consists of only two equations but three variables. Nonetheless, the first row asks for <m>x=5</m>, while the second row asks for <m>x=-5</m>, so there cannot be any solution and the system is inconsistent.
+						</solution>
 						<!--<answer>
 						</answer> -->
 					</exercise></p>
