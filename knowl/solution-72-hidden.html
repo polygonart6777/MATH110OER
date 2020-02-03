@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-02-02T21:45:27-08:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">The system is consistend and has a unique solution. To prove this, let us give names to the entries of the matrix:<div class="displaymath">
+\begin{equation*}
+\matr{ccc|c} { a \amp  b \amp  c \amp  d\\
+0 \amp  e \amp  f \amp  g \\
+0 \amp  0 \amp  h \amp  i}	
+\end{equation*}
+</div>By assumption, \(a, e, h\) are non-zero, so in particular, we may manipulate the augmented matrix as follows:<div class="displaymath">
+\begin{align*}
+\matr{ccc|c} {
+a \amp  b \amp  c \amp  d\\
+0 \amp  e \amp  f \amp  g \\
+0 \amp  0 \amp  h \amp  i}
+\overset{\frac{1}{h}R_{3}}{\longrightarrow}
+\amp
+\matr{ccc|c} { a \amp  b \amp  c \amp  d\\
+0 \amp  e \amp  f \amp  g \\
+0 \amp  0 \amp  1 \amp  \frac{i}{h}
+}	\\
+\overset{-cR_{3}+R_{1}}{\underset{-fR_{3}+R_{2}}{\longrightarrow}}
+\amp
+\matr{ccc|c} {
+a \amp  b \amp  0 \amp  d - c\frac{i}{h}\\
+0 \amp  e \amp  0 \amp  g - f\frac{i}{h} \\
+0 \amp  0 \amp  1 \amp  \frac{i}{h}
+}
+.	
+\end{align*}
+</div>Since \(e\neq 0\) by assumption, we can divide by it:<div class="displaymath">
+\begin{align*}
+\matr{ccc|c} {
+a \amp  b \amp  0 \amp  d - c\frac{i}{h}\\
+0 \amp  e \amp  0 \amp  g - f\frac{i}{h} \\
+0 \amp  0 \amp  1 \amp  \frac{i}{h}
+}
+\overset{\frac{1}{e}R_{2}}{\longrightarrow}
+\amp
+\matr{ccc|c} {
+a \amp  b \amp  0 \amp  d - c\frac{i}{h}\\
+0 \amp  1 \amp  0 \amp  \frac{gh-fi}{he} \\
+0 \amp  0 \amp  1 \amp  \frac{i}{h}
+}	\\
+\overset{-bR_{2}+R_{1}}{\longrightarrow}
+\amp
+\matr{ccc|c} {
+a \amp  0 \amp  0 \amp  d - c\frac{i}{h} - b \frac{gh-fi}{he}\\
+0 \amp  1 \amp  0 \amp  \frac{gh-fi}{he} \\
+0 \amp  0 \amp  1 \amp  \frac{i}{h}
+}	
+.
+\end{align*}
+</div>Lastly, since \(a\neq 0\) by assumption, we can divide by it and see that the unique solution to the system is given by \(\left( \frac{dhe-cie - bgh+bfi}{ahe} , \frac{gh-fi}{he}, \frac{i}{h}\right)\text{.}\)</div></body>
+</html>

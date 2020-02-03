@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2020-02-02T21:45:27-08:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>We row reduce:</p>
+<div class="displaymath">
+\begin{equation*}
+\matr{cc|c}{ 
+1 \amp  h \amp  2
+\\
+2 \amp  4 \amp  k
+}
+\overset{-2R_{1}+R_{2}}{\longrightarrow}
+\matr{cc|c}{ 
+1 \amp  h \amp  2
+\\
+0 \amp  4-2h \amp  k-4
+}.
+\end{equation*}
+</div>
+<p>For there to be <em class="emphasis">one solution</em>, we need \(4-2h \neq 0\) (i.e. \(h \neq 2\)), so that the system is exactly determined. In that case, we can continue reducing:</p>
+<div class="displaymath">
+\begin{align*}
+\matr{cc|c}{ 
+1 \amp  h \amp  2
+\\
+0 \amp  4-2h \amp  k-4
+}
+\overset{\frac{1}{4-2h}R_{2}}{\longrightarrow}
+\amp\matr{cc|c}{ 
+1 \amp  h \amp  2
+\\
+0 \amp  1 \amp  \frac{k-4}{4-2h}
+}\\
+\overset{-hR_{2}+R_{1}}{\longrightarrow}
+\amp\matr{cc|c}{ 
+1 \amp  0 \amp  2 - h \frac{k-4}{4-2h}
+\\
+0 \amp  1 \amp  \frac{k-4}{4-2h}
+}.
+\end{align*}
+</div>
+<p>The unique solution is therefore given by \(\left(2 - h \frac{k-4}{4-2h}, \frac{k-4}{4-2h}\right)\text{.}\)</p>
+<p>For there to be <em class="emphasis">no solution</em>, we need that \(4-2h = 0 \) while \(k-4 \neq 0\text{,}\) because then, the last row of the matrix reads as \(0x + 0y = k-4 \neq 0\text{,}\) i.e. \(0\neq 0\text{,}\) which is false. In other words, the system is inconsistent if and only if \(h = 2\) and \(k\neq 4\text{.}\)</p>
+<p>For there to be <em class="emphasis">infinitely many solutions</em>, we need \(4-2h = 0 \) and \(k-4 = 0\text{,}\) so that the last line reads as  \(0x + 0y = 0\text{,}\) which is always true. In other words, if  \(h = 2\) and \(k = 4\text{,}\) then the solution set is given by</p>
+<div class="displaymath">
+\begin{equation*}
+\left\{
+(2-hy,y)
+\,\vert\,
+y\in\mathbb{R}
+\right\}.
+\end{equation*}
+</div>
+</div></body>
+</html>
