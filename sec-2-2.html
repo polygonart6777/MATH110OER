@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-02T20:36:29-08:00    *-->
+<!--*    on 2020-02-02T20:55:40-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -1310,6 +1310,60 @@ x + y - 2z \amp = 7
 0 \amp  \blacksquare \amp  * \amp  * \\
 0 \amp  0 \amp  \blacksquare \amp  *}								
 \end{equation*}
+</div>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-66" id="answer-66"><span class="type">Answer</span></a><div id="hk-answer-66" class="hidden-content tex2jax_ignore"><div class="solution">The system is consistend and has a unique solution.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-72" id="solution-72"><span class="type">Solution</span></a><div id="hk-solution-72" class="hidden-content tex2jax_ignore"><div class="solution">The system is consistend and has a unique solution. To prove this, let us give names to the entries of the matrix:<div class="displaymath">
+\begin{equation*}
+\matr{ccc|c} { a \amp  b \amp  c \amp  d\\
+0 \amp  e \amp  f \amp  g \\
+0 \amp  0 \amp  h \amp  i}	
+\end{equation*}
+</div>By assumption, \(a, e, h\) are non-zero, so in particular, we may manipulate the augmented matrix as follows:<div class="displaymath">
+\begin{align*}
+\matr{ccc|c} {
+a \amp  b \amp  c \amp  d\\
+0 \amp  e \amp  f \amp  g \\
+0 \amp  0 \amp  h \amp  i}
+\overset{\frac{1}{h}R_{3}}{\longrightarrow}
+\amp
+\matr{ccc|c} { a \amp  b \amp  c \amp  d\\
+0 \amp  e \amp  f \amp  g \\
+0 \amp  0 \amp  1 \amp  \frac{i}{h}
+}	\\
+\overset{-cR_{3}+R_{1}}{\underset{-fR_{3}+R_{2}}{\longrightarrow}}
+\amp
+\matr{ccc|c} {
+a \amp  b \amp  0 \amp  d - c\frac{i}{h}\\
+0 \amp  e \amp  0 \amp  g - f\frac{i}{h} \\
+0 \amp  0 \amp  1 \amp  \frac{i}{h}
+}
+.	
+\end{align*}
+</div>Since \(e\neq 0\) by assumption, we can divide by it:<div class="displaymath">
+\begin{align*}
+\matr{ccc|c} {
+a \amp  b \amp  0 \amp  d - c\frac{i}{h}\\
+0 \amp  e \amp  0 \amp  g - f\frac{i}{h} \\
+0 \amp  0 \amp  1 \amp  \frac{i}{h}
+}
+\overset{\frac{1}{e}R_{2}}{\longrightarrow}
+\amp
+\matr{ccc|c} {
+a \amp  b \amp  0 \amp  d - c\frac{i}{h}\\
+0 \amp  1 \amp  0 \amp  \frac{gh-fi}{he} \\
+0 \amp  0 \amp  1 \amp  \frac{i}{h}
+}	\\
+\overset{-bR_{2}+R_{1}}{\longrightarrow}
+\amp
+\matr{ccc|c} {
+a \amp  0 \amp  0 \amp  d - c\frac{i}{h} - b \frac{gh-fi}{he}\\
+0 \amp  1 \amp  0 \amp  \frac{gh-fi}{he} \\
+0 \amp  0 \amp  1 \amp  \frac{i}{h}
+}	
+.
+\end{align*}
+</div>Lastly, since \(a\neq 0\) by assumption, we can divide by it and see that the unique solution to the system is given by \(\left( \frac{dhe-cie - bgh+bfi}{ahe} , \frac{gh-fi}{he}, \frac{i}{h}\right)\text{.}\)</div></div>
 </div></article></p>
 <p id="p-494"><article class="exercise-like" id="exercise-54"><h6 class="heading"><span class="codenumber">12.</span></h6>
 <aside class="aside-like" id="aside-58"><p id="p-495">(Source: <a data-knowl="./knowl/ref-JH.html" title="Bibliographic Entry 2">[2]</a>, Section 1.4, Exercise 1.4.5.)</p></aside> Suppose a system of equations has fewer equations than variables.  Will such a system necessarily be consistent? If so, explain  why and if not, give an example  which is not consistent.</article></p>
@@ -1329,12 +1383,12 @@ x + y - 2z \amp = 7
 \end{equation*}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-66" id="answer-66"><span class="type">Answer</span></a><div id="hk-answer-66" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-67" id="answer-67"><span class="type">Answer</span></a><div id="hk-answer-67" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
 <li id="li-265">If \(h \neq 2\) and \(k\) is arbitrary, then the system has a unique solution.</li>
 <li id="li-266">If \(h = 2\) and \(k\neq 4\text{,}\) then the system has no solutions.</li>
 <li id="li-267">If \(h = 2\) and \(k = 4\text{,}\) then the system has infinitely many solutions.</li>
 </ol></div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-72" id="solution-72"><span class="type">Solution</span></a><div id="hk-solution-72" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-73" id="solution-73"><span class="type">Solution</span></a><div id="hk-solution-73" class="hidden-content tex2jax_ignore"><div class="solution">
 <p id="p-500">We row reduce:</p>
 <div class="displaymath">
 \begin{equation*}
@@ -1433,9 +1487,9 @@ x + ay  - z \amp =  1\\
 },
 \end{align*}
 </div>you need to distinguish between the case \(a=2\) (so that the equation does not have a solution) and the case \(a\neq 2\) (so that you can divide by \(a-2\)).</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-67" id="answer-67"><span class="type">Answer</span></a><div id="hk-answer-67" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-68" id="answer-68"><span class="type">Answer</span></a><div id="hk-answer-68" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
 <li id="li-278">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-68" id="answer-68"><span class="type">Answer</span></a><div id="hk-answer-68" class="hidden-content tex2jax_ignore"><div class="solution">If \(-2a+c+b\neq 0\text{,}\) then the system is inconsistent and has therefore no solutions. If \(-2a+c+b = 0\text{,}\) then the solution set for the system is<div class="displaymath">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-69" id="answer-69"><span class="type">Answer</span></a><div id="hk-answer-69" class="hidden-content tex2jax_ignore"><div class="solution">If \(-2a+c+b\neq 0\text{,}\) then the system is inconsistent and has therefore no solutions. If \(-2a+c+b = 0\text{,}\) then the solution set for the system is<div class="displaymath">
 \begin{equation*}
 \left\{
 \left(
@@ -1450,7 +1504,7 @@ z\in\mathbb{R}
 </div></div>
 </li>
 <li id="li-279">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-69" id="answer-69"><span class="type">Answer</span></a><div id="hk-answer-69" class="hidden-content tex2jax_ignore"><div class="solution">If \(a=6\) and \(b\neq 0\text{,}\) then  there is no solution. If \(a=6\) and \(b=0\text{,}\) then the solution set to the system is given by<div class="displaymath">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-70" id="answer-70"><span class="type">Answer</span></a><div id="hk-answer-70" class="hidden-content tex2jax_ignore"><div class="solution">If \(a=6\) and \(b\neq 0\text{,}\) then  there is no solution. If \(a=6\) and \(b=0\text{,}\) then the solution set to the system is given by<div class="displaymath">
 \begin{equation*}
 \left\{
 (2-z,-2-z,z)\,\vert\, z\in\mathbb{R}
@@ -1459,7 +1513,7 @@ z\in\mathbb{R}
 </div>If \(a\neq 6\text{,}\) then the system has a unique solution, namely \(\left(2 -\frac{b}{a-6}, -2-\frac{b}{a-6},\frac{b}{a-6} \right)\)</div></div>
 </li>
 <li id="li-280">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-70" id="answer-70"><span class="type">Answer</span></a><div id="hk-answer-70" class="hidden-content tex2jax_ignore"><div class="solution">If \(1+cab = 0\text{,}\) then the solution set is given  by<div class="displaymath">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-71" id="answer-71"><span class="type">Answer</span></a><div id="hk-answer-71" class="hidden-content tex2jax_ignore"><div class="solution">If \(1+cab = 0\text{,}\) then the solution set is given  by<div class="displaymath">
 \begin{equation*}
 \left\{
 (abz, -bz, z)
@@ -1470,7 +1524,7 @@ z\in\mathbb{R}
 </div>If \(1+cab \neq 0\text{,}\) then the unique solution to the system is \((0,0,0)\text{.}\)</div></div>
 </li>
 <li id="li-281">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-71" id="answer-71"><span class="type">Answer</span></a><div id="hk-answer-71" class="hidden-content tex2jax_ignore"><div class="solution">If \(b\neq 1\text{,}\) then this system is inconsistent and has no solution. If \(b = 1\text{,}\) then the solution set of the system is<div class="displaymath">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-72" id="answer-72"><span class="type">Answer</span></a><div id="hk-answer-72" class="hidden-content tex2jax_ignore"><div class="solution">If \(b\neq 1\text{,}\) then this system is inconsistent and has no solution. If \(b = 1\text{,}\) then the solution set of the system is<div class="displaymath">
 \begin{equation*}
 \left\{
 \left(\frac{5}{4} - \frac{1}{4}z,\frac{3}{4}+\frac{5}{4}z,z\right)
@@ -1482,7 +1536,7 @@ z\in\mathbb{R}
 </div></div>
 </li>
 <li id="li-282">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-72" id="answer-72"><span class="type">Answer</span></a><div id="hk-answer-72" class="hidden-content tex2jax_ignore"><div class="solution">If \(a=0\text{,}\) then there is no solution. If \(a=1\text{,}\) then the solution set is given by<div class="displaymath">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-73" id="answer-73"><span class="type">Answer</span></a><div id="hk-answer-73" class="hidden-content tex2jax_ignore"><div class="solution">If \(a=0\text{,}\) then there is no solution. If \(a=1\text{,}\) then the solution set is given by<div class="displaymath">
 \begin{equation*}
 \left\{
 \left(-y,y,-1
@@ -1493,9 +1547,9 @@ z\in\mathbb{R}
 </div>If \(a\neq 1\text{,}\) then the unique solution is given by \(\left(1-\frac{1}{a}, 0, -\frac{1}{a} \right)\text{.}\)</div></div>
 </li>
 </ol></div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-73" id="solution-73"><span class="type">Solution</span></a><div id="hk-solution-73" class="hidden-content tex2jax_ignore"><div class="solution">The approach for each of these questions is the same: We write the system as an augmented matrix and then row-reduce. <ol class="lower-alpha">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-74" id="solution-74"><span class="type">Solution</span></a><div id="hk-solution-74" class="hidden-content tex2jax_ignore"><div class="solution">The approach for each of these questions is the same: We write the system as an augmented matrix and then row-reduce. <ol class="lower-alpha">
 <li id="li-273">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-74" id="solution-74"><span class="type">Solution</span></a><div id="hk-solution-74" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-75" id="solution-75"><span class="type">Solution</span></a><div id="hk-solution-75" class="hidden-content tex2jax_ignore"><div class="solution">
 <div class="displaymath">
 \begin{align*}
 \matr{ccc|c}{
@@ -1567,7 +1621,7 @@ z\in\mathbb{R}
 </div></div>
 </li>
 <li id="li-274">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-75" id="solution-75"><span class="type">Solution</span></a><div id="hk-solution-75" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-76" id="solution-76"><span class="type">Solution</span></a><div id="hk-solution-76" class="hidden-content tex2jax_ignore"><div class="solution">
 <div class="displaymath">
 \begin{align*}
 \matr{ccc|c}{
@@ -1661,7 +1715,7 @@ z\in\mathbb{R}
 </div>We see that, if \(a\neq 6\text{,}\) then the system has a unique solution, namely \(\left(2 -\frac{b}{a-6}, -2-\frac{b}{a-6},\frac{b}{a-6} \right)\text{.}\)</div></div>
 </li>
 <li id="li-275">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-76" id="solution-76"><span class="type">Solution</span></a><div id="hk-solution-76" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-77" id="solution-77"><span class="type">Solution</span></a><div id="hk-solution-77" class="hidden-content tex2jax_ignore"><div class="solution">
 <div class="displaymath">
 \begin{align*}
 \matr{ccc|c}{
@@ -1729,7 +1783,7 @@ z\in\mathbb{R}
 </div>Thus, if \(1+cab \neq 0\text{,}\) then the unique solution to the system is \((0,0,0)\text{.}\)</div></div>
 </li>
 <li id="li-276">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-77" id="solution-77"><span class="type">Solution</span></a><div id="hk-solution-77" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-78" id="solution-78"><span class="type">Solution</span></a><div id="hk-solution-78" class="hidden-content tex2jax_ignore"><div class="solution">
 <div class="displaymath">
 \begin{align*}
 \matr{ccc|c}{
@@ -1808,7 +1862,7 @@ z\in\mathbb{R}
 </div></div>
 </li>
 <li id="li-277">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-78" id="solution-78"><span class="type">Solution</span></a><div id="hk-solution-78" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-79" id="solution-79"><span class="type">Solution</span></a><div id="hk-solution-79" class="hidden-content tex2jax_ignore"><div class="solution">
 <div class="displaymath">
 \begin{align*}
 \matr{ccc|c}{
@@ -1921,8 +1975,8 @@ z\in\mathbb{R}
 <p id="p-507"><article class="exercise-like" id="ex--three-lines-intersect"><h6 class="heading"><span class="codenumber">16.</span></h6>
 <aside class="aside-like" id="aside-62"><p id="p-508">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.3)</p></aside> Do the three lines \(x+2y=1\text{,}\) \(2x-y=1\text{,}\) and \(4x+3y=3\) in \(\mathbb{R}^2\) have a common point of intersection?  If so, find the point.  If not, explain why they don't have a common point of intersection.<div class="solutions">
 <a data-knowl="" class="id-ref" data-refid="hk-hint-68" id="hint-68"><span class="type">Hint</span></a><div id="hk-hint-68" class="hidden-content tex2jax_ignore"><div class="solution">If \((x, y)\) is a point of intersection of the three lines, then \((x, y)\) must satisfy the equations of all three lines.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-73" id="answer-73"><span class="type">Answer</span></a><div id="hk-answer-73" class="hidden-content tex2jax_ignore"><div class="solution">The three lines intersect at \(\left(\frac{3}{5}, \frac{1}{5}\right)\text{.}\)</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-79" id="solution-79"><span class="type">Solution</span></a><div id="hk-solution-79" class="hidden-content tex2jax_ignore"><div class="solution">To find out if there is a common point of intersection we want to find out if the three given equations have a simultaneous solution.  We therefore turn the equations into an augmented matrix and row reduce:<div class="displaymath">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-74" id="answer-74"><span class="type">Answer</span></a><div id="hk-answer-74" class="hidden-content tex2jax_ignore"><div class="solution">The three lines intersect at \(\left(\frac{3}{5}, \frac{1}{5}\right)\text{.}\)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-80" id="solution-80"><span class="type">Solution</span></a><div id="hk-solution-80" class="hidden-content tex2jax_ignore"><div class="solution">To find out if there is a common point of intersection we want to find out if the three given equations have a simultaneous solution.  We therefore turn the equations into an augmented matrix and row reduce:<div class="displaymath">
 \begin{equation*}
 \matr{cc|c}{1\amp 2\amp 1\\2\amp -1\amp 1\\4\amp 3\amp 3}
 \to \matr{cc|c}{1\amp 2\amp 1 \\ 0 \amp  -5 \amp  -1 \\ 0 \amp  -5 \amp  -1} 

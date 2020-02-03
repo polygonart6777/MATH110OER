@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-02T20:36:38-08:00    *-->
+<!--*    on 2020-02-02T20:55:48-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,23 +14,24 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-\matr{cc|c}{ 
-1 \amp  h \amp  2
-\\
-0 \amp  4-2h \amp  k-4
+\matr{ccc|c} {
+a \amp  b \amp  c \amp  d\\
+0 \amp  e \amp  f \amp  g \\
+0 \amp  0 \amp  h \amp  i}
+\overset{\frac{1}{h}R_{3}}{\longrightarrow}
+\amp
+\matr{ccc|c} { a \amp  b \amp  c \amp  d\\
+0 \amp  e \amp  f \amp  g \\
+0 \amp  0 \amp  1 \amp  \frac{i}{h}
+}	\\
+\overset{-cR_{3}+R_{1}}{\underset{-fR_{3}+R_{2}}{\longrightarrow}}
+\amp
+\matr{ccc|c} {
+a \amp  b \amp  0 \amp  d - c\frac{i}{h}\\
+0 \amp  e \amp  0 \amp  g - f\frac{i}{h} \\
+0 \amp  0 \amp  1 \amp  \frac{i}{h}
 }
-\overset{\frac{1}{4-2h}R_{2}}{\longrightarrow}
-\amp\matr{cc|c}{ 
-1 \amp  h \amp  2
-\\
-0 \amp  1 \amp  \frac{k-4}{4-2h}
-}\\
-\overset{-hR_{2}+R_{1}}{\longrightarrow}
-\amp\matr{cc|c}{ 
-1 \amp  0 \amp  2 - h \frac{k-4}{4-2h}
-\\
-0 \amp  1 \amp  \frac{k-4}{4-2h}
-}.
+.	
 \end{align*}
 </div>
 <span class="incontext"><a href="sec-2-2.html#mjx-eqn-mrow-317">in-context</a></span>
