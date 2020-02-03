@@ -8373,6 +8373,7 @@
 								\matr{ccc|c}
 								{
 									1 \amp 0 \amp 0 \amp 5
+									\\
 									1 \amp 0 \amp 0 \amp -5
 								}.
 							</me>
