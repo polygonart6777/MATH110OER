@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-02T13:16:11-08:00    *-->
+<!--*    on 2020-02-02T20:36:29-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -1351,7 +1351,7 @@ x + y - 2z \amp = 7
 }.
 \end{equation*}
 </div>
-<p id="p-501">For there to be <em class="emphasis">one solution</em>, we need \(4-2h \neq 0\) (i.e. \(h \neq 2\)). In that case, we can continue reducing:</p>
+<p id="p-501">For there to be <em class="emphasis">one solution</em>, we need \(4-2h \neq 0\) (i.e. \(h \neq 2\)), so that the system is exactly determined. In that case, we can continue reducing:</p>
 <div class="displaymath">
 \begin{align*}
 \matr{cc|c}{ 
@@ -1398,45 +1398,531 @@ x -  y + 2z \amp =  b\\
 </div></li>
 <li id="li-269"><div class="displaymath">
 \begin{align*}
-2x + y - z \amp =  a\\
-2y + 3z \amp =  b\\
-x +  - z \amp =  c
-\end{align*}
-</div></li>
-<li id="li-270"><div class="displaymath">
-\begin{align*}
 -x + 3y  +  2z \amp =  -8\\
 x  + z \amp =  2\\
 3x + 3y + az \amp =  b
 \end{align*}
 </div></li>
-<li id="li-271"><div class="displaymath">
+<li id="li-270"><div class="displaymath">
 \begin{align*}
 x + ay   \amp =  0\\
 y  + bz \amp =  0\\
 cx 	  + z \amp =  0
 \end{align*}
 </div></li>
-<li id="li-272"><div class="displaymath">
+<li id="li-271"><div class="displaymath">
 \begin{align*}
 3x - y  + 2z \amp =  3\\
 x + y  - z \amp =  2\\
 2x - 2y  + 3z \amp =  b
 \end{align*}
 </div></li>
-<li id="li-273"><div class="displaymath">
+<li id="li-272"><div class="displaymath">
 \begin{align*}
 x + ay  - z \amp =  1\\
 -x + (a-2)y  + z \amp =  -1\\
 2x + 2y  + (a-2)z \amp =  1
 \end{align*}
 </div></li>
-</ol></article></p>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-67" id="hint-67"><span class="type">Hint</span></a><div id="hk-hint-67" class="hidden-content tex2jax_ignore"><div class="solution">Write each system of linear equations as an augmented matrix and start to row-reduce. Be careful not to divide by zero. For example, if you have the following row in a matrix:<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+0 \amp a-2 \amp 0 \amp 8
+},
+\end{align*}
+</div>you need to distinguish between the case \(a=2\) (so that the equation does not have a solution) and the case \(a\neq 2\) (so that you can divide by \(a-2\)).</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-67" id="answer-67"><span class="type">Answer</span></a><div id="hk-answer-67" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
+<li id="li-278">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-68" id="answer-68"><span class="type">Answer</span></a><div id="hk-answer-68" class="hidden-content tex2jax_ignore"><div class="solution">If \(-2a+c+b\neq 0\text{,}\) then the system is inconsistent and has therefore no solutions. If \(-2a+c+b = 0\text{,}\) then the solution set for the system is<div class="displaymath">
+\begin{equation*}
+\left\{
+\left(
+\frac{a+b}{4} - \frac{1}{4}z,
+\frac{a-3b}{4} + \frac{7}{4}z,z
+\right) \,\vert\,
+z\in\mathbb{R}
+\right\}
+.
+\end{equation*}
+</div>
+</div></div>
+</li>
+<li id="li-279">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-69" id="answer-69"><span class="type">Answer</span></a><div id="hk-answer-69" class="hidden-content tex2jax_ignore"><div class="solution">If \(a=6\) and \(b\neq 0\text{,}\) then  there is no solution. If \(a=6\) and \(b=0\text{,}\) then the solution set to the system is given by<div class="displaymath">
+\begin{equation*}
+\left\{
+(2-z,-2-z,z)\,\vert\, z\in\mathbb{R}
+\right\}.
+\end{equation*}
+</div>If \(a\neq 6\text{,}\) then the system has a unique solution, namely \(\left(2 -\frac{b}{a-6}, -2-\frac{b}{a-6},\frac{b}{a-6} \right)\)</div></div>
+</li>
+<li id="li-280">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-70" id="answer-70"><span class="type">Answer</span></a><div id="hk-answer-70" class="hidden-content tex2jax_ignore"><div class="solution">If \(1+cab = 0\text{,}\) then the solution set is given  by<div class="displaymath">
+\begin{equation*}
+\left\{
+(abz, -bz, z)
+\,\vert\,
+z\in\mathbb{R}
+\right\}.
+\end{equation*}
+</div>If \(1+cab \neq 0\text{,}\) then the unique solution to the system is \((0,0,0)\text{.}\)</div></div>
+</li>
+<li id="li-281">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-71" id="answer-71"><span class="type">Answer</span></a><div id="hk-answer-71" class="hidden-content tex2jax_ignore"><div class="solution">If \(b\neq 1\text{,}\) then this system is inconsistent and has no solution. If \(b = 1\text{,}\) then the solution set of the system is<div class="displaymath">
+\begin{equation*}
+\left\{
+\left(\frac{5}{4} - \frac{1}{4}z,\frac{3}{4}+\frac{5}{4}z,z\right)
+\,\vert\,
+z\in\mathbb{R}
+\right\}.
+\end{equation*}
+</div>
+</div></div>
+</li>
+<li id="li-282">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-72" id="answer-72"><span class="type">Answer</span></a><div id="hk-answer-72" class="hidden-content tex2jax_ignore"><div class="solution">If \(a=0\text{,}\) then there is no solution. If \(a=1\text{,}\) then the solution set is given by<div class="displaymath">
+\begin{equation*}
+\left\{
+\left(-y,y,-1
+\right)
+\,\vert\, y\in\mathbb{R}
+\right\}.
+\end{equation*}
+</div>If \(a\neq 1\text{,}\) then the unique solution is given by \(\left(1-\frac{1}{a}, 0, -\frac{1}{a} \right)\text{.}\)</div></div>
+</li>
+</ol></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-73" id="solution-73"><span class="type">Solution</span></a><div id="hk-solution-73" class="hidden-content tex2jax_ignore"><div class="solution">The approach for each of these questions is the same: We write the system as an augmented matrix and then row-reduce. <ol class="lower-alpha">
+<li id="li-273">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-74" id="solution-74"><span class="type">Solution</span></a><div id="hk-solution-74" class="hidden-content tex2jax_ignore"><div class="solution">
+<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+3 \amp 1 \amp -1 \amp a
+\\
+1 \amp -1 \amp 2 \amp b
+\\
+5 \amp 3 \amp -4 \amp c
+}
+\overset{-3R_{2}+R_{1}}{\underset{-5R_{2}+R_{3}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+0 \amp 4 \amp -7 \amp a-3b
+\\
+1 \amp -1 \amp 2 \amp b
+\\
+0 \amp 8 \amp -14 \amp c-5b
+}\\
+\overset{R_{1}\leftrightarrow R_{2}}{\underset{-2R_{2}'+R_{3}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp -1 \amp 2 \amp b
+\\
+0 \amp 4 \amp -7 \amp a-3b
+\\
+0 \amp 0 \amp 0 \amp (c-5b) - 2(a-3b)
+}\\
+\amp=
+\matr{ccc|c}{
+1 \amp -1 \amp 2 \amp b
+\\
+0 \amp 4 \amp -7 \amp a-3b
+\\
+0 \amp 0 \amp 0 \amp - 2a + c + b
+}
+\end{align*}
+</div>We see: If \(-2a+c+b\neq 0\text{,}\) then the system is inconsistent and has no solutions. If \(-2a+c+b = 0\text{,}\) then we proceed:<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+1 \amp -1 \amp 2 \amp b
+\\
+0 \amp 4 \amp -7 \amp a-3b
+\\
+0 \amp 0 \amp 0 \amp - 2a + c + b
+}
+\overset{\frac{1}{4}R_{2}}{\underset{R_{2}+R_{1}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp 0 \amp \frac{1}{4} \amp \frac{a+b}{4}
+\\
+0 \amp 1 \amp -\frac{7}{4} \amp \frac{a-3b}{4}
+\\
+0 \amp 0 \amp 0 \amp 0
+}
+.
+\end{align*}
+</div>We conclude that, if \(-2a+c+b = 0\text{,}\) i.e. \(c = 2a-b\text{,}\) then the solution set for the system is<div class="displaymath">
+\begin{equation*}
+\left\{
+\left(
+\frac{a+b}{4} - \frac{1}{4}z,
+\frac{a-3b}{4} + \frac{7}{4}z,z
+\right) \,\vert\,
+z\in\mathbb{R}
+\right\}
+.
+\end{equation*}
+</div>
+</div></div>
+</li>
+<li id="li-274">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-75" id="solution-75"><span class="type">Solution</span></a><div id="hk-solution-75" class="hidden-content tex2jax_ignore"><div class="solution">
+<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+-1 \amp 3 \amp 2 \amp -8
+\\
+1 \amp 0 \amp 1 \amp 2
+\\
+3 \amp 3 \amp a \amp b
+}
+\overset{R_{1}+R_{2}}{\underset{3R_{1}+R_{3}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+-1 \amp 3 \amp 2 \amp -8
+\\
+0 \amp 3 \amp 3 \amp -6
+\\
+0 \amp 12 \amp a+6 \amp b-24
+}										\\
+\overset{-4R_{2}+R_{3}}{\underset{\frac{1}{3}R_{2}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+-1 \amp 3 \amp 2 \amp -8
+\\
+0 \amp 1 \amp 1 \amp -2
+\\
+0 \amp 0 \amp a-6 \amp b
+}.									
+\end{align*}
+</div>We now have to make a case distinction: Suppose first that \(a=6\text{.}\) Then the last line of the augmented matrix reads as \(0x+0y+0z=b\text{,}\) which has no solution if \(b\neq 0\text{.}\) If, however, both \(a=6\) and \(b=0\text{,}\) then we can proceed:<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+-1 \amp 3 \amp 2 \amp -8
+\\
+0 \amp 1 \amp 1 \amp -2
+\\
+0 \amp 0 \amp 0 \amp 0
+}
+\overset{-3R_{2}+R_{1}}{\longrightarrow}
+\amp
+\matr{ccc|c}{
+-1 \amp 0 \amp -1 \amp -2
+\\
+0 \amp 1 \amp 1 \amp -2
+\\
+0 \amp 0 \amp 0 \amp 0
+}.									
+\end{align*}
+</div>Thus, if \(a=6\) and \(b=0\text{,}\) then the solution set to the system is given by<div class="displaymath">
+\begin{equation*}
+\left\{
+(2-z,-2-z,z)\,\vert\, z\in\mathbb{R}
+\right\}.
+\end{equation*}
+</div>The second case is when \(a\neq 6\text{,}\) so that we can divide by \(a- 6\text{:}\)<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+-1 \amp 3 \amp 2 \amp -8
+\\
+0 \amp 1 \amp 1 \amp -2
+\\
+0 \amp 0 \amp a-6 \amp b
+}
+\overset{\frac{1}{a-6}R_{3}}{\longrightarrow}
+\amp
+\matr{ccc|c}{
+-1 \amp 3 \amp 2 \amp -8
+\\
+0 \amp 1 \amp 1 \amp -2
+\\
+0 \amp 0 \amp 1 \amp \frac{b}{a-6}
+}								\\
+\overset{-R_{3}+R_{2}}{\underset{-2R_{3}+R_{1}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+-1 \amp 3 \amp 0 \amp -8 - 2\frac{b}{a-6}
+\\
+0 \amp 1 \amp 0 \amp -2-\frac{b}{a-6}
+\\
+0 \amp 0 \amp 1 \amp \frac{b}{a-6}
+}							\\
+\overset{-R_{1}}{\underset{3R_{2}+R_{1}'}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp 0 \amp 0 \amp 8 + 2\frac{b}{a-6}-6-3\frac{b}{a-6}
+\\
+0 \amp 1 \amp 0 \amp -2-\frac{b}{a-6}
+\\
+0 \amp 0 \amp 1 \amp \frac{b}{a-6}
+}.									
+\end{align*}
+</div>We see that, if \(a\neq 6\text{,}\) then the system has a unique solution, namely \(\left(2 -\frac{b}{a-6}, -2-\frac{b}{a-6},\frac{b}{a-6} \right)\text{.}\)</div></div>
+</li>
+<li id="li-275">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-76" id="solution-76"><span class="type">Solution</span></a><div id="hk-solution-76" class="hidden-content tex2jax_ignore"><div class="solution">
+<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+1 \amp a \amp 0 \amp 0
+\\
+0 \amp 1 \amp b \amp 0
+\\
+c \amp 0 \amp 1 \amp 0 
+}
+\overset{-cR_{1}+R_{3}}{\longrightarrow}
+\amp
+\matr{ccc|c}{
+1 \amp a \amp 0 \amp 0
+\\
+0 \amp 1 \amp b \amp 0
+\\
+0 \amp -ca \amp 1 \amp 0 
+}\\
+\overset{caR_{2}+R_{3}}{\underset{-aR_{2}+R_{1}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp 0 \amp -ab \amp 0
+\\
+0 \amp 1 \amp b \amp 0
+\\
+0 \amp 0 \amp 1 + cab  \amp 0 
+}.
+\end{align*}
+</div>To proceed, we need to make a case distinction: If \(1+cab = 0\text{,}\) then we have found the RREF of the matrix and the solution set is given  by<div class="displaymath">
+\begin{equation*}
+\left\{
+(abz, -bz, z)
+\,\vert\,
+z\in\mathbb{R}
+\right\}.
+\end{equation*}
+</div>If \(1+cab \neq 0\text{,}\) then we can divide by \(1+cab\text{:}\)<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+1 \amp 0 \amp -ab \amp 0
+\\
+0 \amp 1 \amp b \amp 0
+\\
+0 \amp 0 \amp 1 + cab  \amp 0 
+}
+\overset{\frac{1}{1+cab}R_{3}}{\longrightarrow}
+\amp
+\matr{ccc|c}{
+1 \amp 0 \amp -ab \amp 0
+\\
+0 \amp 1 \amp b \amp 0
+\\
+0 \amp 0 \amp 1 \amp 0 
+}\\
+\overset{abR_{3}+R_{1}}{\underset{-bR_{3}+R_{2}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp 0 \amp 0 \amp 0
+\\
+0 \amp 1 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp 0 
+}.
+\end{align*}
+</div>Thus, if \(1+cab \neq 0\text{,}\) then the unique solution to the system is \((0,0,0)\text{.}\)</div></div>
+</li>
+<li id="li-276">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-77" id="solution-77"><span class="type">Solution</span></a><div id="hk-solution-77" class="hidden-content tex2jax_ignore"><div class="solution">
+<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+3 \amp -1 \amp 2 \amp 3
+\\
+1 \amp 1 \amp -1 \amp 2
+\\
+2 \amp -2 \amp 3 \amp b
+}
+\overset{3R_{2}}{\underset{3R_{3}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+3 \amp -1 \amp 2 \amp 3
+\\
+3 \amp 3 \amp -3 \amp 6
+\\
+6 \amp -6 \amp 9 \amp 3b
+}\\
+\overset{-R_{1}+R_{2}}{\underset{-2R_{1}+R_{3}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+3 \amp -1 \amp 2 \amp 3
+\\
+0 \amp 4 \amp -5 \amp 3
+\\
+0 \amp -4 \amp 5 \amp 3b-6
+}\\
+\overset{R_{2}+R_{3}}{\underset{4R_{1}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+12 \amp -4 \amp 8 \amp 12
+\\
+0 \amp 4 \amp -5 \amp 3
+\\
+0 \amp 0 \amp 0 \amp 3b-3
+}
+.
+\end{align*}
+</div>If \(b\neq 1\text{,}\) then this system is inconsistent and has no solution. Otherwise,<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+12 \amp -4 \amp 8 \amp 12
+\\
+0 \amp 4 \amp -5 \amp 3
+\\
+0 \amp 0 \amp 0 \amp 0
+}
+\overset{R_{2}+R_{1}}{\longrightarrow}
+\amp
+\matr{ccc|c}{
+12 \amp 0 \amp 3 \amp 15
+\\
+0 \amp 4 \amp -5 \amp 3
+\\
+0 \amp 0 \amp 0 \amp 0
+}\\
+\overset{\frac{1}{12}R_{1}}{\underset{\frac{1}{4}R_{2}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp 0 \amp \frac{1}{4} \amp \frac{5}{4}
+\\
+0 \amp 1 \amp -\frac{5}{4} \amp \frac{3}{4}
+\\
+0 \amp 0 \amp 0 \amp 0
+}.
+\end{align*}
+</div>Thus, if \(b = 1\text{,}\) then the solution set of the system is<div class="displaymath">
+\begin{equation*}
+\left\{
+\left(\frac{5}{4} - \frac{1}{4}z,\frac{3}{4}+\frac{5}{4}z,z\right)
+\,\vert\,
+z\in\mathbb{R}
+\right\}.
+\end{equation*}
+</div>
+</div></div>
+</li>
+<li id="li-277">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-78" id="solution-78"><span class="type">Solution</span></a><div id="hk-solution-78" class="hidden-content tex2jax_ignore"><div class="solution">
+<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+1 \amp a \amp -1 \amp 1
+\\
+-1 \amp a-2 \amp 1 \amp -1
+\\
+2 \amp 2 \amp a-2 \amp 1
+}
+\overset{R_{1}+R_{2}}{\underset{-2R_{1}+R_{3}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp a \amp -1 \amp 1
+\\
+0 \amp 2a-2 \amp 0 \amp 0
+\\
+0 \amp 2-2a \amp a \amp -1
+}\\
+\overset{R_{2}+R_{3}}{\longrightarrow}
+\amp
+\matr{ccc|c}{
+1 \amp a \amp -1 \amp 1
+\\
+0 \amp 2a-2 \amp 0 \amp 0
+\\
+0 \amp 0 \amp a \amp -1
+}
+.
+\end{align*}
+</div>If \(a=0\text{,}\) then the system is inconsistent (because of the third row) and there is no solution. Otherwise, we can divide by \(a\text{:}\)<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+1 \amp a \amp -1 \amp 1
+\\
+0 \amp 2a-2 \amp 0 \amp 0
+\\
+0 \amp 0 \amp a \amp -1
+}
+\overset{\frac{1}{a}R_{3}}{\underset{R_{3}'+R_{1}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp a \amp 0 \amp 1-\frac{1}{a}
+\\
+0 \amp 2a-2 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp -\frac{1}{a}
+}
+.
+\end{align*}
+</div>If \(a=1\text{,}\) then switching the second and third row yields the RREF:<div class="displaymath">
+\begin{equation*}
+\matr{ccc|c}{
+1 \amp 1 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp -1
+}
+\overset{R_{2}\leftrightarrow R_{3}}{\longrightarrow}
+\matr{ccc|c}{
+1 \amp 1 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp -1										
+\\
+0 \amp 0 \amp 0 \amp 0
+}.
+\end{equation*}
+</div>Thus, the solution set is given by<div class="displaymath">
+\begin{equation*}
+\left\{
+\left(-y,y,-1
+\right)
+\,\vert\, y\in\mathbb{R}
+\right\}.
+\end{equation*}
+</div>If \(a\neq 1\text{,}\) then we can divide by \(2a-2 \text{:}\)<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+1 \amp a \amp 0 \amp 1-\frac{1}{a}
+\\
+0 \amp 2a-2 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp -\frac{1}{a}
+}
+\overset{\frac{1}{2a-2}R_{2}}{\longrightarrow}
+\amp
+\matr{ccc|c}{
+1 \amp a \amp 0 \amp 1-\frac{1}{a}
+\\
+0 \amp 1 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp -\frac{1}{a}
+}\\
+\overset{-aR_{2}+R_{1}}{\longrightarrow}
+\amp
+\matr{ccc|c}{
+1 \amp 0 \amp 0 \amp 1-\frac{1}{a}
+\\
+0 \amp 1 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp -\frac{1}{a}
+}
+.
+\end{align*}
+</div>Thus, in this case, the unique solution is given by \(\left(1-\frac{1}{a}, 0, -\frac{1}{a} \right)\text{.}\)</div></div>
+</li>
+</ol>
+</div></div>
+</div></article></p>
 <p id="p-507"><article class="exercise-like" id="ex--three-lines-intersect"><h6 class="heading"><span class="codenumber">16.</span></h6>
 <aside class="aside-like" id="aside-62"><p id="p-508">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 1, Exercise 1.2.3)</p></aside> Do the three lines \(x+2y=1\text{,}\) \(2x-y=1\text{,}\) and \(4x+3y=3\) in \(\mathbb{R}^2\) have a common point of intersection?  If so, find the point.  If not, explain why they don't have a common point of intersection.<div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-67" id="hint-67"><span class="type">Hint</span></a><div id="hk-hint-67" class="hidden-content tex2jax_ignore"><div class="solution">If \((x, y)\) is a point of intersection of the three lines, then \((x, y)\) must satisfy the equations of all three lines.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-67" id="answer-67"><span class="type">Answer</span></a><div id="hk-answer-67" class="hidden-content tex2jax_ignore"><div class="solution">The three lines intersect at \(\left(\frac{3}{5}, \frac{1}{5}\right)\text{.}\)</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-73" id="solution-73"><span class="type">Solution</span></a><div id="hk-solution-73" class="hidden-content tex2jax_ignore"><div class="solution">To find out if there is a common point of intersection we want to find out if the three given equations have a simultaneous solution.  We therefore turn the equations into an augmented matrix and row reduce:<div class="displaymath">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-68" id="hint-68"><span class="type">Hint</span></a><div id="hk-hint-68" class="hidden-content tex2jax_ignore"><div class="solution">If \((x, y)\) is a point of intersection of the three lines, then \((x, y)\) must satisfy the equations of all three lines.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-73" id="answer-73"><span class="type">Answer</span></a><div id="hk-answer-73" class="hidden-content tex2jax_ignore"><div class="solution">The three lines intersect at \(\left(\frac{3}{5}, \frac{1}{5}\right)\text{.}\)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-79" id="solution-79"><span class="type">Solution</span></a><div id="hk-solution-79" class="hidden-content tex2jax_ignore"><div class="solution">To find out if there is a common point of intersection we want to find out if the three given equations have a simultaneous solution.  We therefore turn the equations into an augmented matrix and row reduce:<div class="displaymath">
 \begin{equation*}
 \matr{cc|c}{1\amp 2\amp 1\\2\amp -1\amp 1\\4\amp 3\amp 3}
 \to \matr{cc|c}{1\amp 2\amp 1 \\ 0 \amp  -5 \amp  -1 \\ 0 \amp  -5 \amp  -1} 

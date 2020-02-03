@@ -8346,6 +8346,7 @@
 		  					</me>
 		  				</statement>
 						<!-- <hint>
+							Here should maybe be a hint reminding the students of over/under/exactly determined systems, and of consistent/inconsistent systems.
 						</hint> -->
 						<solution>
 							<p>We row reduce:</p>
@@ -8362,7 +8363,7 @@
 		  							0 \amp  4-2h \amp  k-4
 		  						}.
 		  					</me>
-		  					<p>For there to be <em>one solution</em>, we need <m>4-2h \neq 0</m> (i.e. <m> h \neq 2</m>). In that case, we can continue reducing:</p>
+		  					<p>For there to be <em>one solution</em>, we need <m>4-2h \neq 0</m> (i.e. <m> h \neq 2</m>), so that the system is exactly determined. In that case, we can continue reducing:</p>
 		  					<md>
 		  					<mrow>
 		  						\matr{cc|c}{ 
@@ -8431,7 +8432,7 @@
 										</mrow>
 									</md>
 								</li>
-								<li>
+								<!-- <li>
 									<md>
 										<mrow>
 											2x + y - z \amp =  a
@@ -8443,7 +8444,7 @@
 											x +  - z \amp =  c
 										</mrow>
 									</md>
-								</li>
+								</li> -->
 								<li>
 									<md>
 										<mrow>
@@ -8499,12 +8500,584 @@
 							</ol>
 
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint>
+							Write each system of linear equations as an augmented matrix and start to row-reduce. Be careful not to divide by zero. For example, if you have the following row in a matrix:
+							<md>
+							<mrow>
+								\matr{ccc|c}{
+									0 \amp a-2 \amp 0 \amp 8
+								},
+							</mrow>
+							</md>
+							you need to distinguish between the case <m> a=2</m> (so that the equation does not have a solution) and the case <m>a\neq 2</m> (so that you can divide by <m>a-2</m>).
+						</hint>
+						<solution>
+							The approach for each of these questions is the same: We write the system as an augmented matrix and then row-reduce.
+							<ol>
+								<li>
+									<solution>
+									<md><mrow>
+										\matr{ccc|c}{
+											3 \amp 1 \amp -1 \amp a
+											\\
+											1 \amp -1 \amp 2 \amp b
+											\\
+											5 \amp 3 \amp -4 \amp c
+										}
+										\overset{-3R_{2}+R_{1}}{\underset{-5R_{2}+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											0 \amp 4 \amp -7 \amp a-3b
+											\\
+											1 \amp -1 \amp 2 \amp b
+											\\
+											0 \amp 8 \amp -14 \amp c-5b
+										}
+									</mrow>
+									<mrow>
+										\overset{R_{1}\leftrightarrow R_{2}}{\underset{-2R_{2}'+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											1 \amp -1 \amp 2 \amp b
+											\\
+											0 \amp 4 \amp -7 \amp a-3b
+											\\
+											0 \amp 0 \amp 0 \amp (c-5b) - 2(a-3b)
+										}
+									</mrow>
+									<mrow>
+										\amp=
+										\matr{ccc|c}{
+											1 \amp -1 \amp 2 \amp b
+											\\
+											0 \amp 4 \amp -7 \amp a-3b
+											\\
+											0 \amp 0 \amp 0 \amp - 2a + c + b
+										}
+									</mrow>
+									</md>
+									We see: If <m>-2a+c+b\neq 0</m>, then the system is inconsistent and has no solutions. If <m>-2a+c+b = 0</m>, then we proceed:
+									<md>
+									<mrow>
+										\matr{ccc|c}{
+											1 \amp -1 \amp 2 \amp b
+											\\
+											0 \amp 4 \amp -7 \amp a-3b
+											\\
+											0 \amp 0 \amp 0 \amp - 2a + c + b
+										}
+										\overset{\frac{1}{4}R_{2}}{\underset{R_{2}+R_{1}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											1 \amp 0 \amp \frac{1}{4} \amp \frac{a+b}{4}
+											\\
+											0 \amp 1 \amp -\frac{7}{4} \amp \frac{a-3b}{4}
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}
+										.
+									</mrow>
+									</md>
+									We conclude that, if <m>-2a+c+b = 0</m>, i.e. <m> c = 2a-b</m>, then the solution set for the system is
+									<me>
+										\left\{
+											\left(
+												\frac{a+b}{4} - \frac{1}{4}z,
+												\frac{a-3b}{4} + \frac{7}{4}z,z
+											\right) \,\vert\,
+											z\in\mathbb{R}
+										\right\}
+										.
+									</me>
+									<!-- To be safe, we do a check by plugging the values back into the equations, where <m>z</m> is allowed to be any real number:
+									<md>
+										<mrow> 
+											3\left(\frac{a+b}{4} - \frac{1}{4}z\right) +  \left(\frac{a-3b}{4} + \frac{7}{4}z\right) - z 
+											=
+											\frac{3a+3b - 3z+a-3b+7z - 4z}{4}
+											\amp =  a
+										</mrow>
+										<mrow>
+											\left(\frac{a+b}{4} - \frac{1}{4}z\right) -  \left(\frac{a-3b}{4} + \frac{7}{4}z\right) + 2z
+											=
+											\frac{a+b-z-a+3b-7z+8z}{4}
+											\amp =  b
+										</mrow>
+										<mrow>
+											5\left(\frac{a+b}{4} - \frac{1}{4}z\right) +  3\left(\frac{a-3b}{4} + \frac{7}{4}z\right)  - 4z 
+											=
+											\frac{5a+5b-5z+3a-9b+21z -16z}{4}
+											=
+											\frac{4(2a-b)}{4}\amp =  c,
+										</mrow>
+									</md>
+									where the last equality is due to the assumption <m> c = 2a-b</m>. -->
+									</solution>
+								</li>
+<!-- 								<li>
+									<solution>
+									<md><mrow>
+										\matr{ccc|c}{
+											2 \amp 1 \amp -1  \amp a
+											\\
+											2 \amp 0 \amp 3 \amp b
+											\\
+											1 \amp ? \amp -1 \amp c
+										}
+									</mrow></md>
+									</solution>
+								</li> -->
+								<li>
+									<solution>
+										<md><mrow>
+											\matr{ccc|c}{
+												-1 \amp 3 \amp 2 \amp -8
+												\\
+												1 \amp 0 \amp 1 \amp 2
+												\\
+												3 \amp 3 \amp a \amp b
+											}
+											\overset{R_{1}+R_{2}}{\underset{3R_{1}+R_{3}}{\longrightarrow}}
+											\amp
+											\matr{ccc|c}{
+												-1 \amp 3 \amp 2 \amp -8
+												\\
+												0 \amp 3 \amp 3 \amp -6
+												\\
+												0 \amp 12 \amp a+6 \amp b-24
+											}										
+										</mrow>
+										<mrow>
+											\overset{-4R_{2}+R_{3}}{\underset{\frac{1}{3}R_{2}}{\longrightarrow}}
+											\amp
+											\matr{ccc|c}{
+												-1 \amp 3 \amp 2 \amp -8
+												\\
+												0 \amp 1 \amp 1 \amp -2
+												\\
+												0 \amp 0 \amp a-6 \amp b
+											}.									
+										</mrow>
+										</md>
+											We now have to make a case distinction: Suppose first that <m>a=6</m>. Then the last line of the augmented matrix reads as <m>0x+0y+0z=b</m>, which has no solution if <m>b\neq 0</m>. If, however, both <m>a=6</m> and <m>b=0</m>, then we can proceed:
+										<md>
+											<mrow>
+												\matr{ccc|c}{
+													-1 \amp 3 \amp 2 \amp -8
+													\\
+													0 \amp 1 \amp 1 \amp -2
+													\\
+													0 \amp 0 \amp 0 \amp 0
+												}
+												\overset{-3R_{2}+R_{1}}{\longrightarrow}
+												\amp
+												\matr{ccc|c}{
+													-1 \amp 0 \amp -1 \amp -2
+													\\
+													0 \amp 1 \amp 1 \amp -2
+													\\
+													0 \amp 0 \amp 0 \amp 0
+												}.									
+											</mrow>
+										</md>
+										Thus, if <m>a=6</m> and <m>b=0</m>, then the solution set to the system is given by
+										<me>
+											\left\{
+												(2-z,-2-z,z)\,\vert\, z\in\mathbb{R}
+											\right\}.
+										</me>
+										The second case is when <m>a\neq 6</m>, so that we can divide by <m>a- 6</m>:
+											<md>
+											<mrow>
+												\matr{ccc|c}{
+													-1 \amp 3 \amp 2 \amp -8
+													\\
+													0 \amp 1 \amp 1 \amp -2
+													\\
+													0 \amp 0 \amp a-6 \amp b
+												}
+												\overset{\frac{1}{a-6}R_{3}}{\longrightarrow}
+												\amp
+												\matr{ccc|c}{
+													-1 \amp 3 \amp 2 \amp -8
+													\\
+													0 \amp 1 \amp 1 \amp -2
+													\\
+													0 \amp 0 \amp 1 \amp \frac{b}{a-6}
+												}								
+											</mrow>
+											<mrow>
+												\overset{-R_{3}+R_{2}}{\underset{-2R_{3}+R_{1}}{\longrightarrow}}
+												\amp
+												\matr{ccc|c}{
+													-1 \amp 3 \amp 0 \amp -8 - 2\frac{b}{a-6}
+													\\
+													0 \amp 1 \amp 0 \amp -2-\frac{b}{a-6}
+													\\
+													0 \amp 0 \amp 1 \amp \frac{b}{a-6}
+												}							
+											</mrow>
+											<mrow>
+												\overset{-R_{1}}{\underset{3R_{2}+R_{1}'}{\longrightarrow}}
+												\amp
+												\matr{ccc|c}{
+													1 \amp 0 \amp 0 \amp 8 + 2\frac{b}{a-6}-6-3\frac{b}{a-6}
+													\\
+													0 \amp 1 \amp 0 \amp -2-\frac{b}{a-6}
+													\\
+													0 \amp 0 \amp 1 \amp \frac{b}{a-6}
+												}.									
+											</mrow>
+										</md>
+										We see that, if <m>a\neq 6</m>, then the system has a unique solution, namely <m>\left(2 -\frac{b}{a-6}, -2-\frac{b}{a-6},\frac{b}{a-6} \right)</m>.
+									</solution>
+								</li>
+								<li>
+									<solution>
+										<md><mrow>
+											\matr{ccc|c}{
+												1 \amp a \amp 0 \amp 0
+												\\
+												0 \amp 1 \amp b \amp 0
+												\\
+												c \amp 0 \amp 1 \amp 0 
+											}
+											\overset{-cR_{1}+R_{3}}{\longrightarrow}
+											\amp
+											\matr{ccc|c}{
+												1 \amp a \amp 0 \amp 0
+												\\
+												0 \amp 1 \amp b \amp 0
+												\\
+												0 \amp -ca \amp 1 \amp 0 
+											}
+										</mrow>
+										<mrow>
+											\overset{caR_{2}+R_{3}}{\underset{-aR_{2}+R_{1}}{\longrightarrow}}
+											\amp
+											\matr{ccc|c}{
+												1 \amp 0 \amp -ab \amp 0
+												\\
+												0 \amp 1 \amp b \amp 0
+												\\
+												0 \amp 0 \amp 1 + cab  \amp 0 
+											}.
+										</mrow>
+										</md>
+										To proceed, we need to make a case distinction: If <m>1+cab = 0</m>, then we have found the RREF of the matrix and the solution set is given  by
+										<me>
+											\left\{
+												(abz, -bz, z)
+												\,\vert\,
+												z\in\mathbb{R}
+											\right\}.
+										</me>
+										If <m>1+cab \neq 0</m>, then we can divide by <m>1+cab</m>:
+										<md>
+										<mrow>
+											\matr{ccc|c}{
+												1 \amp 0 \amp -ab \amp 0
+												\\
+												0 \amp 1 \amp b \amp 0
+												\\
+												0 \amp 0 \amp 1 + cab  \amp 0 
+											}
+											\overset{\frac{1}{1+cab}R_{3}}{\longrightarrow}
+											\amp
+											\matr{ccc|c}{
+												1 \amp 0 \amp -ab \amp 0
+												\\
+												0 \amp 1 \amp b \amp 0
+												\\
+												0 \amp 0 \amp 1 \amp 0 
+											}
+										</mrow>
+										<mrow>
+											\overset{abR_{3}+R_{1}}{\underset{-bR_{3}+R_{2}}{\longrightarrow}}
+											\amp
+											\matr{ccc|c}{
+												1 \amp 0 \amp 0 \amp 0
+												\\
+												0 \amp 1 \amp 0 \amp 0
+												\\
+												0 \amp 0 \amp 1 \amp 0 
+											}.
+										</mrow>
+										</md>
+										Thus, if <m>1+cab \neq 0</m>, then the unique solution to the system is <m>(0,0,0)</m>.
+									</solution>
+								</li>
+								<li>
+									<solution>
+									<md><mrow>
+										\matr{ccc|c}{
+											3 \amp -1 \amp 2 \amp 3
+											\\
+											1 \amp 1 \amp -1 \amp 2
+											\\
+											2 \amp -2 \amp 3 \amp b
+										}
+										\overset{3R_{2}}{\underset{3R_{3}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											3 \amp -1 \amp 2 \amp 3
+											\\
+											3 \amp 3 \amp -3 \amp 6
+											\\
+											6 \amp -6 \amp 9 \amp 3b
+										}
+									</mrow>
+									<mrow>
+										\overset{-R_{1}+R_{2}}{\underset{-2R_{1}+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											3 \amp -1 \amp 2 \amp 3
+											\\
+											0 \amp 4 \amp -5 \amp 3
+											\\
+											0 \amp -4 \amp 5 \amp 3b-6
+										}
+									</mrow>
+									<mrow>
+										\overset{R_{2}+R_{3}}{\underset{4R_{1}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											12 \amp -4 \amp 8 \amp 12
+											\\
+											0 \amp 4 \amp -5 \amp 3
+											\\
+											0 \amp 0 \amp 0 \amp 3b-3
+										}
+										.
+									</mrow></md>
+									If <m>b\neq 1</m>, then this system is inconsistent and has no solution. Otherwise,
+									<md>
+										<mrow>
+										\matr{ccc|c}{
+											12 \amp -4 \amp 8 \amp 12
+											\\
+											0 \amp 4 \amp -5 \amp 3
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}
+										\overset{R_{2}+R_{1}}{\longrightarrow}
+										\amp
+										\matr{ccc|c}{
+											12 \amp 0 \amp 3 \amp 15
+											\\
+											0 \amp 4 \amp -5 \amp 3
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}
+									</mrow>
+									<mrow>
+										\overset{\frac{1}{12}R_{1}}{\underset{\frac{1}{4}R_{2}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											1 \amp 0 \amp \frac{1}{4} \amp \frac{5}{4}
+											\\
+											0 \amp 1 \amp -\frac{5}{4} \amp \frac{3}{4}
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}.
+									</mrow>
+									</md>
+									Thus, if <m>b = 1</m>, then the solution set of the system is
+									<me>
+										\left\{
+										 \left(\frac{5}{4} - \frac{1}{4}z,\frac{3}{4}+\frac{5}{4}z,z\right)
+										\,\vert\,
+										z\in\mathbb{R}
+										\right\}.
+									</me>
+									</solution>
+								</li>
+								<li>
+									<solution>
+									<md><mrow>
+										\matr{ccc|c}{
+											1 \amp a \amp -1 \amp 1
+											\\
+											-1 \amp a-2 \amp 1 \amp -1
+											\\
+											2 \amp 2 \amp a-2 \amp 1
+										}
+										\overset{R_{1}+R_{2}}{\underset{-2R_{1}+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											1 \amp a \amp -1 \amp 1
+											\\
+											0 \amp 2a-2 \amp 0 \amp 0
+											\\
+											0 \amp 2-2a \amp a \amp -1
+										}
+									</mrow><mrow>
+										\overset{R_{2}+R_{3}}{\longrightarrow}
+										\amp
+										\matr{ccc|c}{
+											1 \amp a \amp -1 \amp 1
+											\\
+											0 \amp 2a-2 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp a \amp -1
+										}
+										.
+									</mrow></md>
+									If <m>a=0</m>, then the system is inconsistent (because of the third row) and there is no solution. Otherwise, we can divide by <m>a</m>:
+									<md><mrow>
+										\matr{ccc|c}{
+											1 \amp a \amp -1 \amp 1
+											\\
+											0 \amp 2a-2 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp a \amp -1
+										}
+										\overset{\frac{1}{a}R_{3}}{\underset{R_{3}'+R_{1}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											1 \amp a \amp 0 \amp 1-\frac{1}{a}
+											\\
+											0 \amp 2a-2 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp 1 \amp -\frac{1}{a}
+										}
+										.
+									</mrow></md>
+									If <m>a=1</m>, then switching the second and third row yields the RREF:
+									<me>
+										\matr{ccc|c}{
+											1 \amp 1 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp 1 \amp -1
+										}
+										\overset{R_{2}\leftrightarrow R_{3}}{\longrightarrow}
+										\matr{ccc|c}{
+											1 \amp 1 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp 1 \amp -1										
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}.
+									</me>
+									Thus, the solution set is given by
+									<me>
+										\left\{
+											\left(-y,y,-1
+											\right)
+											\,\vert\, y\in\mathbb{R}
+										\right\}.
+									</me>
+									If <m>a\neq 1</m>, then we can divide by <m>2a-2 </m>:
+									<md><mrow>
+										\matr{ccc|c}{
+											1 \amp a \amp 0 \amp 1-\frac{1}{a}
+											\\
+											0 \amp 2a-2 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp 1 \amp -\frac{1}{a}
+										}
+										\overset{\frac{1}{2a-2}R_{2}}{\longrightarrow}
+										\amp
+										\matr{ccc|c}{
+											1 \amp a \amp 0 \amp 1-\frac{1}{a}
+											\\
+											0 \amp 1 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp 1 \amp -\frac{1}{a}
+										}
+									</mrow>
+									<mrow>
+										\overset{-aR_{2}+R_{1}}{\longrightarrow}
+										\amp
+										\matr{ccc|c}{
+											1 \amp 0 \amp 0 \amp 1-\frac{1}{a}
+											\\
+											0 \amp 1 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp 1 \amp -\frac{1}{a}
+										}
+										.
+									</mrow></md>
+									Thus, in this case, the unique solution is given by <m>\left(1-\frac{1}{a}, 0, -\frac{1}{a} \right)</m>.
+									</solution>
+								</li>
+							</ol>
+						</solution>
+						<answer>
+							<ol>
+								<li><answer>
+									If <m>-2a+c+b\neq 0</m>, then the system is inconsistent and has therefore no solutions. If <m>-2a+c+b = 0</m>, then the solution set for the system is
+									<me>
+										\left\{
+											\left(
+												\frac{a+b}{4} - \frac{1}{4}z,
+												\frac{a-3b}{4} + \frac{7}{4}z,z
+											\right) \,\vert\,
+											z\in\mathbb{R}
+										\right\}
+										.
+									</me>
+								</answer></li>
+								<!-- <li><answer>
+									<md>
+										<mrow>
+											2x + y - z \amp =  a
+										</mrow>
+										<mrow>
+											2y + 3z \amp =  b
+										</mrow>
+										<mrow>
+											x +  - z \amp =  c
+										</mrow>
+									</md>
+								</answer></li> -->
+								<li><answer>
+									If <m>a=6</m> and <m>b\neq 0</m>, then  there is no solution. If <m>a=6</m> and <m>b=0</m>, then the solution set to the system is given by
+									<me>
+										\left\{
+											(2-z,-2-z,z)\,\vert\, z\in\mathbb{R}
+										\right\}.
+									</me>
+									If <m>a\neq 6</m>, then the system has a unique solution, namely <m>\left(2 -\frac{b}{a-6}, -2-\frac{b}{a-6},\frac{b}{a-6} \right)</m>
+								</answer></li>
+								<li><answer>
+									If <m>1+cab = 0</m>, then the solution set is given  by
+										<me>
+											\left\{
+												(abz, -bz, z)
+												\,\vert\,
+												z\in\mathbb{R}
+											\right\}.
+										</me>
+									If <m>1+cab \neq 0</m>, then the unique solution to the system is <m>(0,0,0)</m>.
+								</answer></li>
+								<li><answer>
+									If <m>b\neq 1</m>, then this system is inconsistent and has no solution. If <m>b = 1</m>, then the solution set of the system is
+									<me>
+										\left\{
+										 \left(\frac{5}{4} - \frac{1}{4}z,\frac{3}{4}+\frac{5}{4}z,z\right)
+										\,\vert\,
+										z\in\mathbb{R}
+										\right\}.
+									</me>
+								</answer></li>
+								<li><answer>
+									If <m>a=0</m>, then there is no solution.
+									If <m>a=1</m>, then the solution set is given by
+									<me>
+										\left\{
+											\left(-y,y,-1
+											\right)
+											\,\vert\, y\in\mathbb{R}
+										\right\}.
+									</me>
+									If <m>a\neq 1</m>, then the unique solution is given by <m>\left(1-\frac{1}{a}, 0, -\frac{1}{a} \right)</m>.
+								</answer></li>
+							</ol>
+
+						</answer>
 					</exercise></p>
 					<p><exercise xml:id="ex--three-lines-intersect">
 						<statement> <aside><p>(Source: <xref ref="ref-KK" />, Chapter 1, Exercise 1.2.3)</p></aside>
