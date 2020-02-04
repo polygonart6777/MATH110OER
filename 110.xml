@@ -9485,14 +9485,18 @@
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 2, Exercise 2.3.29) </p></aside>
-							Let <m>A</m> and <m>B</m> be <m>n \times n</m> matrices for which the system  of equations  <m>A\mathbf{x} = \mathbf{0}</m> and <m>B\mathbf{x} = \mathbf{0}</m> each only have the trivial solution <m>\mathbf{x = 0}</m>.  Show that the system <m>AB \mathbf{x} = \mathbf{0}</m> has only the trivial solution.
+							Let <m>A</m> and <m>B</m> be <m>n \times n</m> matrices for which the system  of equations  <m>A\mathbf{x} = \mathbf{0}</m> and <m>B\mathbf{x} = \mathbf{0}</m> each only have the trivial solution <m>\mathbf{x} = \mathbf{0}</m>.  Show that the system <m>AB \mathbf{x} = \mathbf{0}</m> has only the trivial solution.
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint>
+							Assume that <m>\mathbf{y}</m> is a solution to the system <m>AB \mathbf{x} = \mathbf{0}</m>. Use the assumptions to conclude that we must have <m>\mathbf{y}=\mathbf{0}</m>.
+						</hint>
+						<hint>
+							Remember that <m>AB \mathbf{x} = A(B \mathbf{x}) =(AB) \mathbf{x}</m>.
+						</hint>
+						<solution>
+							Take any vector <m>\mathbf{y}</m> with <m>n</m> components such that <m>AB \mathbf{y} = \mathbf{0}</m>. This means that <m>B \mathbf{y}</m> is a solution to the system of equations  <m>A\mathbf{x} = \mathbf{0}</m> which, by assumption, only has the trivial solution. In other words, <m>B \mathbf{y} = \mathbf{0}</m>. This similarly means that <m>\mathbf{y}</m> is a solution to the system of equations  <m>B\mathbf{x} = \mathbf{0}</m> which, again by assumption, only has the trivial solution. Thus, <m>\mathbf{y}=\mathbf{0}</m>. We have seen that the system <m>AB \mathbf{x} = \mathbf{0}</m> only has the trivial solution.
+						</solution>
+						<!--answer makes no sense here.-->
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
