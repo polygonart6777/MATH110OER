@@ -10210,8 +10210,15 @@
 						</statement>
 						<!-- <hint>
 						</hint> -->
-						<!-- <solution>
-						</solution> -->
+						<solution>
+							We compute
+							<me>
+								AB = \begin{bmatrix} 3 \amp 2+2k \\ 12 \amp 6+4k \end{bmatrix}
+								\text{ and }
+								BA = \begin{bmatrix} 7 \amp 10 \\ 3+3k \amp 6+4k \end{bmatrix}.
+							</me>
+							Their <m>(1,1)</m>-entries do not coincide, no matter what we choose for <m>k</m>, so the answer is no.
+						</solution>
 						<!--<answer>
 						</answer> -->
 					</exercise></p>
