@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-04T19:43:39-08:00    *-->
+<!--*    on 2020-02-04T20:19:51-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -267,16 +267,16 @@ A + B = 3A + 2B \iff \amp (1-3)A = (2-1)B \\
 </div></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-80" id="hint-80"><span class="type">Hint</span> <span class="codenumber">1</span></a><div id="hk-hint-80" class="hidden-content tex2jax_ignore"><div class="solution">Matrices \(A_{1}, \ldots, A_{m}\) of the same size are called <em class="emphasis">linearly dependent</em> if there exist numbers \(c_{1},\ldots, c_{m}\text{,}\) not all of which are zero, so that<div class="displaymath">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-matrix-linear-dependence" id="hint-matrix-linear-dependence"><span class="type">Hint</span> <span class="codenumber">1</span></a><div id="hk-hint-matrix-linear-dependence" class="hidden-content tex2jax_ignore"><div class="solution">Matrices \(A_{1}, \ldots, A_{m}\) of the same size are called <em class="emphasis">linearly dependent</em> if there exist numbers \(c_{1},\ldots, c_{m}\text{,}\) not all of which are zero, so that<div class="displaymath">
 \begin{equation*}
-c_{1}A_{1}+c_{2}A_{2}+\ldots + c_{m}+A_{m} = 0.
+c_{1}A_{1}+c_{2}A_{2}+\ldots + c_{m}A_{m} = 0.
 \end{equation*}
 </div>Otherwise, they are called <em class="emphasis">linearly independent</em>.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-hint-81" id="hint-81"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-81" class="hidden-content tex2jax_ignore"><div class="solution">Another way of phrasing linear independence is: Matrices \(A_{1}, \ldots, A_{m}\) of the same size are linearly independent if the only solution \((c_{1}, \ldots, c_{m})\) to the system of linear equations<div class="displaymath">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-matrix-linear-independence" id="hint-matrix-linear-independence"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-matrix-linear-independence" class="hidden-content tex2jax_ignore"><div class="solution">Another way of phrasing linear independence is: Matrices \(A_{1}, \ldots, A_{m}\) of the same size are linearly independent if the only solution \((c_{1}, \ldots, c_{m})\) to the system of linear equations<div class="displaymath">
 \begin{equation*}
-c_{1}A_{1}+c_{2}A_{2}+\ldots + c_{m}+A_{m} = 0
+x_{1}A_{1}+x_{2}A_{2}+\ldots + x_{m}A_{m} = 0
 \end{equation*}
-</div>is the trivial solution, \((c_{1}, \ldots, c_{m})= (0,\ldots, 0).\)</div></div>
+</div>is the trivial solution, \((0,\ldots, 0).\)</div></div>
 <a data-knowl="" class="id-ref" data-refid="hk-answer-100" id="answer-100"><span class="type">Answer</span></a><div id="hk-answer-100" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
 <li id="li-380">
 <a data-knowl="" class="id-ref" data-refid="hk-answer-101" id="answer-101"><span class="type">Answer</span></a><div id="hk-answer-101" class="hidden-content tex2jax_ignore"><div class="solution">The matrices are linearly independent.</div></div>
@@ -370,21 +370,171 @@ w\begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix}
 <p id="p-540"><article class="exercise-like" id="exercise-68"><h6 class="heading"><span class="codenumber">4.</span></h6>
 <aside class="aside-like" id="aside-76"><p id="p-541">(Source: <a data-knowl="./knowl/ref-RB.html" title="Bibliographic Entry 5">[5]</a>, LISS.C20</p></aside> Let<div class="displaymath">
 \begin{equation*}
-S = \left\{ \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}, \begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}, \begin{bmatrix} 0 \amp 1 \\ 1 \amp 2 \end{bmatrix},  \right\}
+S = \left\{ \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}, \begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}, \begin{bmatrix} 0 \amp 1 \\ 1 \amp 2 \end{bmatrix} \right\}
 \end{equation*}
 </div>
 <ol class="lower-alpha">
 <li id="li-382">Determine if \(S \) spans the set of all \(2 \times 2 \) matrices.</li>
 <li id="li-383">Determine if \(S \) is linearly independent.</li>
-</ol></article></p>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-82" id="hint-82"><span class="type">Hint</span></a><div id="hk-hint-82" class="hidden-content tex2jax_ignore"><div class="solution">See  and  for the definition of linear independence.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-103" id="answer-103"><span class="type">Answer</span></a><div id="hk-answer-103" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
+<li id="li-386">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-104" id="answer-104"><span class="type">Answer</span></a><div id="hk-answer-104" class="hidden-content tex2jax_ignore"><div class="solution">No, \(S\) does not span the set of all \(2\times 2\) matrices.</div></div>
+</li>
+<li id="li-387">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-105" id="answer-105"><span class="type">Answer</span></a><div id="hk-answer-105" class="hidden-content tex2jax_ignore"><div class="solution">Yes, the set \(S\) is linearly independent.</div></div>
+</li>
+</ol></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-122" id="solution-122"><span class="type">Solution</span></a><div id="hk-solution-122" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
+<li id="li-384">
+<a data-knowl="" class="id-ref" data-refid="hk-soln-3-2-4a" id="soln-3-2-4a"><span class="type">Solution</span></a><div id="hk-soln-3-2-4a" class="hidden-content tex2jax_ignore"><div class="solution">The set \(S \) spans the set of all \(2 \times 2 \) matrices if and only if, for any \(2 \times 2 \) matrix \(A\text{,}\) there exist numbers \(x_{1}, x_{2}, x_{3}\) so that<div class="displaymath">
+\begin{equation*}
+x_{1} \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}
++ x_{2}\begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}
++ x_{3} \begin{bmatrix} 0 \amp 1 \\ 1 \amp 2 \end{bmatrix}
+=
+A
+.
+\end{equation*}
+</div>If we write \(A = \begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix}\text{,}\) then this is equivalent to saying that there exists a solution to the following system of linear equations:<div class="displaymath">
+\begin{align*}
+x_{1} + 2x_{2}  \amp = a\\
+2 x_{1} + x_{2} + x_{3} \amp= b\\
+2x_{1} - x_{2} + x_{3} \amp = c\\
+x_{1} + 2x_{2} + 2x_{3} \amp = d
+\end{align*}
+</div>Let us transfer this into an augmented matrix and then row-reduce:<div class="displaymath">
+\begin{align*}
+\amp\matr{ccc|c}
+{
+1 \amp 2 \amp 0 \amp a
+\\
+2 \amp 1 \amp 1 \amp b
+\\
+2 \amp -1 \amp 1 \amp c
+\\
+1 \amp 2 \amp 2 \amp d
+}
+\overset{-R_{1}+R_{4}}{\underset{-2R_{1}+R_{3}, -2R_{1}+R_{2}}{\longrightarrow}}					
+\matr{ccc|c}
+{
+1 \amp 2 \amp 0 \amp a
+\\
+0 \amp -3 \amp 1 \amp b-2a
+\\
+0 \amp -5 \amp 1 \amp c-2a
+\\
+0 \amp 0 \amp 2 \amp d - a
+}\\
+\amp\overset{\frac{1}{2}R_{4}}{\underset{-R_{4}'+R_{3}, -R_{4}'+R_{2}}{\longrightarrow}}					
+\matr{ccc|c}
+{
+1 \amp 2 \amp 0 \amp a
+\\
+0 \amp -3 \amp 0 \amp b-2a -\frac{1}{2}(d - a)
+\\
+0 \amp -5 \amp 0 \amp c-2a - \frac{1}{2}(d - a)
+\\
+0 \amp 0 \amp 1 \amp \frac{1}{2}(d - a)
+}\\
+\amp\overset{5R_{2}}{\underset{-3R_{3}}{\longrightarrow}}					
+\matr{ccc|c}
+{
+1 \amp 2 \amp 0 \amp a
+\\
+0 \amp -15 \amp 0 \amp 5b-\frac{15}{2}a  -\frac{5}{2}d
+\\
+0 \amp 15 \amp 0 \amp -3c+ \frac{9}{2}a + \frac{3}{2}d 
+\\
+0 \amp 0 \amp 1 \amp \frac{1}{2}(d - a)
+}\\
+\amp\overset{R_{2}+R_{3}}{\longrightarrow}
+\matr{ccc|c}
+{
+1 \amp 2 \amp 0 \amp a
+\\
+0 \amp -15 \amp 0 \amp 5b-\frac{15}{2}a  -\frac{5}{2}d
+\\
+0 \amp 0 \amp 0 \amp (-3c+ \frac{9}{2}a + \frac{3}{2}d)  + (5b-\frac{15}{2}a  -\frac{5}{2}d)
+\\
+0 \amp 0 \amp 1 \amp \frac{1}{2}(d - a)
+}.
+\end{align*}
+</div>We see from the third row that the system is inconsistent if<div class="displaymath">
+\begin{equation*}
+-3c -3 a - d  + 5b   
+=
+\left(-3c+ \frac{9}{2}a + \frac{3}{2}d)  + (5b-\frac{15}{2}a  -\frac{5}{2}d\right)
+\neq 0.
+\end{equation*}
+</div>Since \(\begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix} = \begin{bmatrix} 1 \amp 0 \\ 0 \amp 0 \end{bmatrix}\) is an example of a choice of numbers which makes the system inconsistent, we conclude that, no, \(S\) does not span the set of all \(2\times 2\) matrices.</div></div>
+</li>
+<li id="li-385">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-124" id="solution-124"><span class="type">Solution</span></a><div id="hk-solution-124" class="hidden-content tex2jax_ignore"><div class="solution">We need to figure out wheter<div class="displaymath">
+\begin{equation*}
+x_{1} \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}
++ x_{2}\begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}
++ x_{3} \begin{bmatrix} 0 \amp 1 \\ 1 \amp 2 \end{bmatrix}
+=
+\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}
+\end{equation*}
+</div>has a non-zero solution. We reuse our computation from <a data-knowl="./knowl/soln-3-2-4a.html" title="Solution 3.2.4.a.1">Solution 3.2.4.a.1</a> for the case \(\begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix} = \begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}\text{:}\)<div class="displaymath">
+\begin{align*}
+\matr{ccc|c}
+{
+1 \amp 2 \amp 0 \amp a
+\\
+2 \amp 1 \amp 1 \amp b
+\\
+2 \amp -1 \amp 1 \amp c
+\\
+1 \amp 2 \amp 2 \amp d
+}
+\amp\overset{\text{row reduction}}{\longrightarrow}
+\matr{ccc|c}
+{
+1 \amp 2 \amp 0 \amp 0
+\\
+0 \amp -15 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp 0
+}\\
+\amp\overset{2R_{2}+15R_{1}}{\longrightarrow}
+\matr{ccc|c}
+{
+15 \amp 0 \amp 0 \amp 0
+\\
+0 \amp -15 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp 0
+}.
+\end{align*}
+</div>From this, we see that the only solution to the system of equations<div class="displaymath">
+\begin{equation*}
+x_{1} \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}
++ x_{2}\begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}
++ x_{3} \begin{bmatrix} 0 \amp 1 \\ 1 \amp 2 \end{bmatrix}
+=
+\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}
+\end{equation*}
+</div>is \((x_{1},x_{2},x_{3})=(0,0,0)\text{.}\) Thus, the set \(S\) is linearly independent.</div></div>
+</li>
+</ol></div></div>
+</div></article></p>
 <p id="p-542"><article class="exercise-like" id="exercise-69"><h6 class="heading"><span class="codenumber">5.</span></h6>
 <aside class="aside-like" id="aside-77"><p id="p-543">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.14)</p></aside> Let \(A = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}\) and \(B = \begin{bmatrix} 1 \amp 2 \\ 3 \amp k \end{bmatrix}\text{.}\)  Is it possible to find \(k\) such that \(AB = BA\text{?}\) If so, what should \(k \) equal?</article></p>
 <p id="p-544"><article class="exercise-like" id="exercise-70"><h6 class="heading"><span class="codenumber">6.</span></h6>
 <aside class="aside-like" id="aside-78"><p id="p-545">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.15)</p></aside> Let \(A = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}\) and \(B = \begin{bmatrix} 1 \amp 2 \\ 1 \amp k \end{bmatrix}\text{.}\)  Is it possible to find \(k\) such that \(AB = BA\text{?}\) If so, what should \(k \) equal?</article></p>
 <p id="p-546"><article class="exercise-like" id="exercise-71"><h6 class="heading"><span class="codenumber">7.</span></h6>
 <aside class="aside-like" id="aside-79"><p id="p-547">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.1.16)</p></aside> Let \(A \) and \(B \) be symmetric (of the same size).  Show that each of the following is symmetric. <ol class="lower-alpha">
-<li id="li-384">\(A - B \)</li>
-<li id="li-385">\(kA \) for any scalar \(k \text{.}\)</li>
+<li id="li-388">\(A - B \)</li>
+<li id="li-389">\(kA \) for any scalar \(k \text{.}\)</li>
 </ol></article></p>
 <p id="p-548"><article class="exercise-like" id="exercise-72"><h6 class="heading"><span class="codenumber">8.</span></h6>
 <aside class="aside-like" id="aside-80"><p id="p-549">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.29)</p></aside> A square matrix is called <em class="emphasis">skew-symmetric</em> if \(A^T = -A \text{.}\)  Show that the main diagonal of a skew-symmetric matrix consists of only zeros.  Recall that the main diagonal consists of every entry of the matri which is of the form \(a_{ii} \text{.}\)</article></p>

@@ -9884,14 +9884,14 @@
 							</li>
 						</ol>
 					</statement>
-						<hint>
+						<hint xml:id="hint-matrix-linear-dependence">
 							Matrices <m>A_{1}, \ldots, A_{m}</m> of the same size are called <em>linearly dependent</em> if there exist numbers <m>c_{1},\ldots, c_{m}</m>, not all of which are zero, so that 
 							<me>
 								c_{1}A_{1}+c_{2}A_{2}+\ldots + c_{m}A_{m} = 0.
 							</me>
 							Otherwise, they are called <em>linearly independent</em>. 
 						</hint>
-						<hint>
+						<hint xml:id="hint-matrix-linear-independence">
 							Another way of phrasing linear independence is: Matrices <m>A_{1}, \ldots, A_{m}</m> of the same size are linearly independent if the only solution <m>(c_{1}, \ldots, c_{m})</m> to the system of linear equations
 							<me>
 								x_{1}A_{1}+x_{2}A_{2}+\ldots + x_{m}A_{m} = 0
@@ -10012,9 +10012,9 @@
 
 						<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 3.2, Exercise 9-->
 						<statement>
-						<aside><p> (Source: <xref ref="ref-RB" />, LISS.C20 </p></aside>
+						<aside><p> (Source: <xref ref="ref-RB" />, LISS.C20 </p></aside> <!-- Anna Thinks that ref-RB has other numbers in the matrices, but whatever.-->
 						Let 
-						<me>  S = \left\{ \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}, \begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}, \begin{bmatrix} 0 \amp 1 \\ 1 \amp 2 \end{bmatrix},  \right\}</me>
+						<me>  S = \left\{ \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}, \begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}, \begin{bmatrix} 0 \amp 1 \\ 1 \amp 2 \end{bmatrix} \right\}</me>
 						<ol>
 							<li> 
 								Determine if <m> S </m> spans the set of all <m> 2 \times 2 </m> matrices.
@@ -10027,11 +10027,181 @@
 
 						</statement>
 						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+							span
+						</hint> -->						
+						<hint>
+							See <xml ref="hint-matrix-linear-dependence"/> and <xml ref="hint-matrix-linear-independence"/> for the definition of linear independence.
+						</hint>
+						<solution>
+							<ol>
+							<li><solution xml:id="soln-3-2-4a">
+								The set <m> S </m> spans the set of all <m> 2 \times 2 </m> matrices if and only if, for any <m> 2 \times 2 </m> matrix <m>A</m>, there exist numbers <m>x_{1}, x_{2}, x_{3}</m> so that
+								<me>
+									x_{1} \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}
+									+ x_{2}\begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}
+									+ x_{3} \begin{bmatrix} 0 \amp 1 \\ 1 \amp 2 \end{bmatrix}
+									=
+									A
+									.
+								</me>
+								If we write <m> A = \begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix}</m>, then this is equivalent to saying that there exists a solution to the following system of linear equations:
+								<md>
+									<mrow>
+										x_{1} + 2x_{2}  \amp = a
+									</mrow>
+									<mrow>
+										2 x_{1} + x_{2} + x_{3} \amp= b
+									</mrow>
+									<mrow>
+										2x_{1} - x_{2} + x_{3} \amp = c
+									</mrow>
+									<mrow>
+										x_{1} + 2x_{2} + 2x_{3} \amp = d
+									</mrow>
+								</md>
+								Let us transfer this into an augmented matrix and then row-reduce:
+								<md>
+									<mrow>
+										\amp\matr{ccc|c}
+										{
+										 1 \amp 2 \amp 0 \amp a
+										 \\
+										 2 \amp 1 \amp 1 \amp b
+										 \\
+										 2 \amp -1 \amp 1 \amp c
+										 \\
+										 1 \amp 2 \amp 2 \amp d
+										}
+										\overset{-R_{1}+R_{4}}{\underset{-2R_{1}+R_{3}, -2R_{1}+R_{2}}{\longrightarrow}}					
+										\matr{ccc|c}
+										{
+										 1 \amp 2 \amp 0 \amp a
+										 \\
+										 0 \amp -3 \amp 1 \amp b-2a
+										 \\
+										 0 \amp -5 \amp 1 \amp c-2a
+										 \\
+										 0 \amp 0 \amp 2 \amp d - a
+										}
+									</mrow>									
+									<mrow>
+										\amp\overset{\frac{1}{2}R_{4}}{\underset{-R_{4}'+R_{3}, -R_{4}'+R_{2}}{\longrightarrow}}					
+										\matr{ccc|c}
+										{
+										 1 \amp 2 \amp 0 \amp a
+										 \\
+										 0 \amp -3 \amp 0 \amp b-2a -\frac{1}{2}(d - a)
+										 \\
+										 0 \amp -5 \amp 0 \amp c-2a - \frac{1}{2}(d - a)
+										 \\
+										 0 \amp 0 \amp 1 \amp \frac{1}{2}(d - a)
+										}
+									</mrow>
+									<mrow>
+										\amp\overset{5R_{2}}{\underset{-3R_{3}}{\longrightarrow}}					
+										\matr{ccc|c}
+										{
+										 1 \amp 2 \amp 0 \amp a
+										 \\
+										 0 \amp -15 \amp 0 \amp 5b-\frac{15}{2}a  -\frac{5}{2}d
+										 \\
+										 0 \amp 15 \amp 0 \amp -3c+ \frac{9}{2}a + \frac{3}{2}d 
+										 \\
+										 0 \amp 0 \amp 1 \amp \frac{1}{2}(d - a)
+										}
+									</mrow>
+									<mrow>
+										\amp\overset{R_{2}+R_{3}}{\longrightarrow}
+										\matr{ccc|c}
+										{
+										 1 \amp 2 \amp 0 \amp a
+										 \\
+										 0 \amp -15 \amp 0 \amp 5b-\frac{15}{2}a  -\frac{5}{2}d
+										 \\
+										 0 \amp 0 \amp 0 \amp (-3c+ \frac{9}{2}a + \frac{3}{2}d)  + (5b-\frac{15}{2}a  -\frac{5}{2}d)
+										 \\
+										 0 \amp 0 \amp 1 \amp \frac{1}{2}(d - a)
+										}.
+									</mrow>
+								</md>
+								We see from the third row that the system is inconsistent if 
+								<me>
+									-3c -3 a - d  + 5b   
+									=
+									\left(-3c+ \frac{9}{2}a + \frac{3}{2}d)  + (5b-\frac{15}{2}a  -\frac{5}{2}d\right)
+									\neq 0.
+								</me>
+								Since <m>\begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix} = \begin{bmatrix} 1 \amp 0 \\ 0 \amp 0 \end{bmatrix}</m> is an example of a choice of numbers which makes the system inconsistent, we conclude that, no, <m>S</m> does not span the set of all <m>2\times 2</m> matrices.
+							</solution></li>
+							<li><solution>
+								We need to figure out wheter
+								<me>
+									x_{1} \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}
+									+ x_{2}\begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}
+									+ x_{3} \begin{bmatrix} 0 \amp 1 \\ 1 \amp 2 \end{bmatrix}
+									=
+									\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}
+								</me>
+								has a non-zero solution. We reuse our computation from <xref ref="soln-3-2-4a"/> for the case <m>\begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix} = \begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}</m>:
+								<md>
+									<mrow>
+										\matr{ccc|c}
+										{
+										 1 \amp 2 \amp 0 \amp a
+										 \\
+										 2 \amp 1 \amp 1 \amp b
+										 \\
+										 2 \amp -1 \amp 1 \amp c
+										 \\
+										 1 \amp 2 \amp 2 \amp d
+										}
+										\amp\overset{\text{row reduction}}{\longrightarrow}
+										\matr{ccc|c}
+										{
+										 1 \amp 2 \amp 0 \amp 0
+										 \\
+										 0 \amp -15 \amp 0 \amp 0
+										 \\
+										 0 \amp 0 \amp 0 \amp 0
+										 \\
+										 0 \amp 0 \amp 1 \amp 0
+										}
+									</mrow>
+									<mrow>
+									\amp\overset{2R_{2}+15R_{1}}{\longrightarrow}
+										\matr{ccc|c}
+										{
+										 15 \amp 0 \amp 0 \amp 0
+										 \\
+										 0 \amp -15 \amp 0 \amp 0
+										 \\
+										 0 \amp 0 \amp 0 \amp 0
+										 \\
+										 0 \amp 0 \amp 1 \amp 0
+										}.
+									</mrow>
+								</md>
+									From this, we see that the only solution to the system of equations
+									<me>
+										x_{1} \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}
+										+ x_{2}\begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}
+										+ x_{3} \begin{bmatrix} 0 \amp 1 \\ 1 \amp 2 \end{bmatrix}
+										=
+										\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}
+									</me>
+									is <m>(x_{1},x_{2},x_{3})=(0,0,0)</m>. Thus, the set <m>S</m> is linearly independent.
+							</solution></li>
+						</ol>
+						</solution>
+						<answer>
+							<ol>
+							<li><answer>No, <m>S</m> does not span the set of all <m>2\times 2</m> matrices.
+							</answer></li>
+							<li><answer>
+								Yes, the set <m>S</m> is linearly independent.
+							</answer></li>
+						</ol>
+						</answer>
 					</exercise></p>
 						<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 3.2, Exercise 23-->
 						<statement>
