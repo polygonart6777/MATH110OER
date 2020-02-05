@@ -9794,8 +9794,9 @@
 								</li>
 							</ol>
 						</statement>
-						<!-- <hint>
-						</hint> -->
+						<hint>
+							It might help to look back into Theorem 2.1.1 of <xref ref="ref-KN" />.
+						</hint>
 						<solution>
 							Because of the properties listed in Theorem 2.1.1 of <xref ref="ref-KN" />, we can manipulate both sides of the equations just like we would if <m>A, B</m> were numbers and <m>X, Y</m> were variables (however, we cannot simply divide by a matrix!).
 							<ol>
@@ -9828,16 +9829,33 @@
 									</md>
 									We conclude that <m> X= \frac{1}{10} (-10A + 30 B) = -A + 3 B</m> and <m>Y=-5B+2A</m>.</solution>
 								</li>
-								<li><solution>
+								<li><solution>The system can also be written as
+									<me>
+										\matr{cc|c}{ 4 \amp 3 \amp A \\ 5 \amp 4 \amp B},
+									</me>
+									where it is important that we remember that <m>A,B</m> are not numbers, so we cannot divide by them. We row-reduce:
 									<md>
 										<mrow>
-											4X + 3Y  \amp =  A
+											\matr{cc|c}{ 4 \amp 3 \amp A
+														\\ 5 \amp 4 \amp B}
+											\overset{5R_{1}}{\underset{4R_{2}}{\longrightarrow}}
+											\amp\matr{cc|c}{ 20 \amp 15 \amp 5A
+														\\ 20 \amp 16 \amp 4B}
+											\overset{-R_{1}+R_{2}}{\longrightarrow}										
+											\matr{cc|c}{ 20 \amp 15 \amp 5A
+														\\ 0 \amp 1 \amp 4B-5A}
 										</mrow>
 										<mrow>
-											5X + 4Y  \amp =  B
+											\overset{-15R_{2}+R_{1}}{\longrightarrow}
+											\amp\matr{cc|c}{ 20 \amp 0 \amp 5A-15(4B-5A)
+														\\ 0 \amp 1 \amp 4B-5A}
+										</mrow>
+										<mrow>
+											\amp=\matr{cc|c}{ 20 \amp 0 \amp 80A-60B
+														\\ 0 \amp 1 \amp 4B-5A}
 										</mrow>
 									</md>
-								</solution>
+									We conclude that <m> X= \frac{1}{20} (80A-60B) = 4A - 3 B</m> and <m>Y=4B-5A</m>.</solution>
 								</li>
 							</ol>
 						</solution>
@@ -9846,14 +9864,7 @@
 								<li> <answer><m> X= -A + 3 B</m>, <m>Y=-5B+2A</m>.</answer>
 								</li>
 								<li><answer>
-									<md>
-										<mrow>
-											4X + 3Y  \amp =  A
-										</mrow>
-										<mrow>
-											5X + 4Y  \amp =  B
-										</mrow>
-									</md>
+									<m> X= 4A - 3 B</m>, <m>Y=4B-5A</m>
 								</answer>
 								</li>
 							</ol>

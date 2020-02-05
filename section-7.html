@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-04T17:48:09-08:00    *-->
+<!--*    on 2020-02-04T19:12:10-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -191,17 +191,13 @@ A + B = 3A + 2B \iff \amp (1-3)A = (2-1)B \\
 </div></li>
 </ol>
 <div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-79" id="hint-79"><span class="type">Hint</span></a><div id="hk-hint-79" class="hidden-content tex2jax_ignore"><div class="solution">It might help to look back into Theorem 2.1.1 of <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>.</div></div>
 <a data-knowl="" class="id-ref" data-refid="hk-answer-97" id="answer-97"><span class="type">Answer</span></a><div id="hk-answer-97" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
 <li id="li-374">
 <a data-knowl="" class="id-ref" data-refid="hk-answer-98" id="answer-98"><span class="type">Answer</span></a><div id="hk-answer-98" class="hidden-content tex2jax_ignore"><div class="solution">\(X= -A + 3 B\text{,}\) \(Y=-5B+2A\text{.}\)</div></div>
 </li>
 <li id="li-375">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-99" id="answer-99"><span class="type">Answer</span></a><div id="hk-answer-99" class="hidden-content tex2jax_ignore"><div class="solution"><div class="displaymath">
-\begin{align*}
-4X + 3Y  \amp =  A\\
-5X + 4Y  \amp =  B
-\end{align*}
-</div></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-99" id="answer-99"><span class="type">Answer</span></a><div id="hk-answer-99" class="hidden-content tex2jax_ignore"><div class="solution">\(X= 4A - 3 B\text{,}\) \(Y=4B-5A\)</div></div>
 </li>
 </ol></div></div>
 <a data-knowl="" class="id-ref" data-refid="hk-solution-116" id="solution-116"><span class="type">Solution</span></a><div id="hk-solution-116" class="hidden-content tex2jax_ignore"><div class="solution">Because of the properties listed in Theorem 2.1.1 of <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, we can manipulate both sides of the equations just like we would if \(A, B\) were numbers and \(X, Y\) were variables (however, we cannot simply divide by a matrix!). <ol class="lower-alpha">
@@ -232,12 +228,27 @@ A + B = 3A + 2B \iff \amp (1-3)A = (2-1)B \\
 </div>We conclude that \(X= \frac{1}{10} (-10A + 30 B) = -A + 3 B\) and \(Y=-5B+2A\text{.}\)</div></div>
 </li>
 <li id="li-373">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-118" id="solution-118"><span class="type">Solution</span></a><div id="hk-solution-118" class="hidden-content tex2jax_ignore"><div class="solution"><div class="displaymath">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-118" id="solution-118"><span class="type">Solution</span></a><div id="hk-solution-118" class="hidden-content tex2jax_ignore"><div class="solution">The system can also be written as<div class="displaymath">
+\begin{equation*}
+\matr{cc|c}{ 4 \amp 3 \amp A \\ 5 \amp 4 \amp B},
+\end{equation*}
+</div>where it is important that we remember that \(A,B\) are not numbers, so we cannot divide by them. We row-reduce:<div class="displaymath">
 \begin{align*}
-4X + 3Y  \amp =  A\\
-5X + 4Y  \amp =  B
+\matr{cc|c}{ 4 \amp 3 \amp A
+\\ 5 \amp 4 \amp B}
+\overset{5R_{1}}{\underset{4R_{2}}{\longrightarrow}}
+\amp\matr{cc|c}{ 20 \amp 15 \amp 5A
+\\ 20 \amp 16 \amp 4B}
+\overset{-R_{1}+R_{2}}{\longrightarrow}										
+\matr{cc|c}{ 20 \amp 15 \amp 5A
+\\ 0 \amp 1 \amp 4B-5A}\\
+\overset{-15R_{2}+R_{1}}{\longrightarrow}
+\amp\matr{cc|c}{ 20 \amp 0 \amp 5A-15(4B-5A)
+\\ 0 \amp 1 \amp 4B-5A}\\
+=\amp\matr{cc|c}{ 20 \amp 0 \amp 80A-60B
+\\ 0 \amp 1 \amp 4B-5A}
 \end{align*}
-</div></div></div>
+</div>We conclude that \(X= \frac{1}{20} (80A-60B) = 4A - 3 B\) and \(Y=4B-5A\text{.}\)</div></div>
 </li>
 </ol>
 </div></div>
