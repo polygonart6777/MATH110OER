@@ -10285,14 +10285,18 @@
 						<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 3.2, Exercise 39-->
 						<statement>
 						<aside><p> (Source: <xref ref="ref-KK" />, Chapter 2, Exercise 2.1.29) </p></aside>
-						A square matrix is called <em> skew-symmetric </em> if <m> A^T = -A </m>.  Show that the main diagonal of a skew-symmetric matrix consists of only zeros.  Recall that the main diagonal consists of every entry of the matri which is of the form <m> a_{ii} </m>.
+						A square matrix is called <em> skew-symmetric </em> if <m> A^T = -A </m>.  Show that the main diagonal of a skew-symmetric matrix consists of only zeros.
 				</statement>
-				<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint>
+							If <m>A=[a_{ij}]</m>, then the main diagonal consists of every entry of the matrix which is of the form <m> a_{ii} </m>.
+						</hint>
+						<solution>
+							Write <m>A=[a_{ij}]</m>. By assumption, 
+							<me>
+								[a_{ji}] = A^{T} = -A = [-a_{ij}],
+							</me>
+							so that <m>a_{ji}=-a_{ij} </m> for all choices of <m>i,j</m>. In particular, if <m>i=j</m>, then <m>a_{ii}=-a_{ii} </m>, so <m>a_{ii}=0</m>.
+						</solution>
 				</exercise> </p>
 
 				<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 3.2, Exercise 39-->
