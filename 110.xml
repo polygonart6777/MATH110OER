@@ -9736,7 +9736,7 @@
 							Theorem 2.1.1 in Section 2.1 of <xref ref="ref-KN" /> might help.
 						</hint>
 						<solution>
-							Because of the properties listed in Theorem 2.1.1 of <xref ref="ref-KN" />, we can manipulate both sides of the equations just like we would if <m>A</m> and <m>B</m> where variables <m>x</m> and <m>y</m>:
+							Because of the properties listed in Theorem 2.1.1 of <xref ref="ref-KN" />, we can manipulate both sides of the equations just like we would if <m>A</m> and <m>B</m> were numbers:
 							<ol>
 							<li> 
 								<md>
@@ -9796,10 +9796,68 @@
 						</statement>
 						<!-- <hint>
 						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<solution>
+							Because of the properties listed in Theorem 2.1.1 of <xref ref="ref-KN" />, we can manipulate both sides of the equations just like we would if <m>A, B</m> were numbers and <m>X, Y</m> were variables (however, we cannot simply divide by a matrix!).
+							<ol>
+								<li> <solution>The system can also be written as
+									<me>
+										\matr{cc|c}{ 5 \amp 3 \amp A \\ 2 \amp 1 \amp B},
+									</me>
+									where it is important that we remember that <m>A,B</m> are not numbers, so we cannot divide by them. We row-reduce:
+									<md>
+										<mrow>\matr{cc|c}{5 \amp 3 \amp A
+												\\ 	2 \amp 1 \amp B}
+										\underset{5R_{2}}{\overset{2R_{1}}{\longrightarrow}}
+										\amp
+										\matr{cc|c}{10 \amp 6 \amp 2A
+												\\ 	10 \amp 5 \amp 5B}
+										\overset{-R_{1}+R_{2}}{\longrightarrow}
+										\matr{cc|c}{10 \amp 6 \amp 2A
+												\\ 	0 \amp -1 \amp 5B-2A}
+										</mrow>
+										<mrow>
+										\overset{6R_{2}+R_{1}}{\longrightarrow}
+										\amp
+										\matr{cc|c}{10 \amp 0 \amp 2A + 6 (5B-2A)
+												\\ 	0 \amp -1 \amp 5B-2A}
+											</mrow><mrow>
+										\amp=
+										\matr{cc|c}{10 \amp 0 \amp -10A + 30 B
+										\\ 	0 \amp -1 \amp 5B-2A}.
+										</mrow>
+									</md>
+									We conclude that <m> X= \frac{1}{10} (-10A + 30 B) = -A + 3 B</m> and <m>Y=-5B+2A</m>.</solution>
+								</li>
+								<li><solution>
+									<md>
+										<mrow>
+											4X + 3Y  \amp =  A
+										</mrow>
+										<mrow>
+											5X + 4Y  \amp =  B
+										</mrow>
+									</md>
+								</solution>
+								</li>
+							</ol>
+						</solution>
+						<answer>
+							<ol>
+								<li> <answer><m> X= -A + 3 B</m>, <m>Y=-5B+2A</m>.</answer>
+								</li>
+								<li><answer>
+									<md>
+										<mrow>
+											4X + 3Y  \amp =  A
+										</mrow>
+										<mrow>
+											5X + 4Y  \amp =  B
+										</mrow>
+									</md>
+								</answer>
+								</li>
+							</ol>
+						</answer>
 					</exercise></p>
 						<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 3.2, Exercise 5, 13-->
 						<statement>
