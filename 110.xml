@@ -10208,19 +10208,23 @@
 							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 2, Exercise 2.1.14) </p></aside>
 							Let <m>A = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}</m> and <m> B = \begin{bmatrix} 1 \amp 2 \\ 3 \amp k \end{bmatrix}</m>.  Is it possible to find <m>k</m> such that <m> AB = BA</m>? If so, what should <m> k </m> equal? 
 						</statement>
-						<!-- <hint>
-						</hint> -->
+						<hint>
+							Compute both <m>AB</m> and <m>BA</m> and compare the answer.
+						</hint>
 						<solution>
 							We compute
 							<me>
-								AB = \begin{bmatrix} 3 \amp 2+2k \\ 12 \amp 6+4k \end{bmatrix}
+								AB = \begin{bmatrix} 7 \amp 2+2k \\ 15 \amp 6+4k \end{bmatrix}
 								\text{ and }
 								BA = \begin{bmatrix} 7 \amp 10 \\ 3+3k \amp 6+4k \end{bmatrix}.
 							</me>
-							Their <m>(1,1)</m>-entries do not coincide, no matter what we choose for <m>k</m>, so the answer is no.
+							For these to be equal, we need them to be equal entrywise. The <m>(1,1)</m>- and the <m>(2,2)</m>-entry coincide for every choice of <m>k</m>, and for the other two entries we need
+							<me> 2 + 2k = 10, \text{ i.e. } k = 4, \text{ and also }15 = 3+3k, \text{ i.e. } k= 4.</me>
+						We see that <m>k=4</m> makes <m>AB=BA</m>.
 						</solution>
-						<!--<answer>
-						</answer> -->
+						<answer>
+							Yes, <m>k=4</m>.
+						</answer>
 					</exercise></p>
 
 						<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 3.2, Exercise 25-->
@@ -10228,12 +10232,21 @@
 							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 2, Exercise 2.1.15) </p></aside>
 							Let <m>A = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}</m> and <m> B = \begin{bmatrix} 1 \amp 2 \\ 1 \amp k \end{bmatrix}</m>.  Is it possible to find <m>k</m> such that <m> AB = BA</m>? If so, what should <m> k </m> equal? 
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint>
+							Compute both <m>AB</m> and <m>BA</m> and compare the answer.
+						</hint>
+						<solution>
+							We compute
+							<me>
+								AB = \begin{bmatrix} 3 \amp 2+2k \\ 7 \amp 6+4k \end{bmatrix}
+								\text{ and }
+								BA = \begin{bmatrix} 7 \amp 10 \\ 1+3k \amp 6+4k \end{bmatrix}.
+							</me>
+							For these to be equal, we need them to be equal entrywise, but no matter what <m>k</m> we choose, the <m>(1,1)</m>-entries will never coincide (<m>3\neq 7</m>). Thus, the answer is no.
+					</solution>
+						<answer>
+							No.
+						</answer>
 					</exercise></p>
 
 					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 3.2, Exercise 35-->

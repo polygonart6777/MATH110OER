@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-04T20:24:01-08:00    *-->
+<!--*    on 2020-02-04T20:35:05-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -529,16 +529,32 @@ x_{1} \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}
 </div></article></p>
 <p id="p-542"><article class="exercise-like" id="exercise-69"><h6 class="heading"><span class="codenumber">5.</span></h6>
 <aside class="aside-like" id="aside-77"><p id="p-543">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.14)</p></aside> Let \(A = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}\) and \(B = \begin{bmatrix} 1 \amp 2 \\ 3 \amp k \end{bmatrix}\text{.}\)  Is it possible to find \(k\) such that \(AB = BA\text{?}\) If so, what should \(k \) equal?<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-83" id="hint-83"><span class="type">Hint</span></a><div id="hk-hint-83" class="hidden-content tex2jax_ignore"><div class="solution">Compute both \(AB\) and \(BA\) and compare the answer.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-106" id="answer-106"><span class="type">Answer</span></a><div id="hk-answer-106" class="hidden-content tex2jax_ignore"><div class="solution">Yes, \(k=4\text{.}\)</div></div>
 <a data-knowl="" class="id-ref" data-refid="hk-solution-125" id="solution-125"><span class="type">Solution</span></a><div id="hk-solution-125" class="hidden-content tex2jax_ignore"><div class="solution">We compute<div class="displaymath">
 \begin{equation*}
-AB = \begin{bmatrix} 3 \amp 2+2k \\ 12 \amp 6+4k \end{bmatrix}
+AB = \begin{bmatrix} 7 \amp 2+2k \\ 15 \amp 6+4k \end{bmatrix}
 \text{ and }
 BA = \begin{bmatrix} 7 \amp 10 \\ 3+3k \amp 6+4k \end{bmatrix}.
 \end{equation*}
-</div>Their \((1,1)\)-entries do not coincide, no matter what we choose for \(k\text{,}\) so the answer is no.</div></div>
+</div>For these to be equal, we need them to be equal entrywise. The \((1,1)\)- and the \((2,2)\)-entry coincide for every choice of \(k\text{,}\) and for the other two entries we need<div class="displaymath">
+\begin{equation*}
+2 + 2k = 10, \text{ i.e. } k = 4, \text{ and also }15 = 3+3k, \text{ i.e. } k= 4.
+\end{equation*}
+</div>We see that \(k=4\) makes \(AB=BA\text{.}\)</div></div>
 </div></article></p>
 <p id="p-544"><article class="exercise-like" id="exercise-70"><h6 class="heading"><span class="codenumber">6.</span></h6>
-<aside class="aside-like" id="aside-78"><p id="p-545">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.15)</p></aside> Let \(A = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}\) and \(B = \begin{bmatrix} 1 \amp 2 \\ 1 \amp k \end{bmatrix}\text{.}\)  Is it possible to find \(k\) such that \(AB = BA\text{?}\) If so, what should \(k \) equal?</article></p>
+<aside class="aside-like" id="aside-78"><p id="p-545">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.15)</p></aside> Let \(A = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}\) and \(B = \begin{bmatrix} 1 \amp 2 \\ 1 \amp k \end{bmatrix}\text{.}\)  Is it possible to find \(k\) such that \(AB = BA\text{?}\) If so, what should \(k \) equal?<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-84" id="hint-84"><span class="type">Hint</span></a><div id="hk-hint-84" class="hidden-content tex2jax_ignore"><div class="solution">Compute both \(AB\) and \(BA\) and compare the answer.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-107" id="answer-107"><span class="type">Answer</span></a><div id="hk-answer-107" class="hidden-content tex2jax_ignore"><div class="solution">No.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-126" id="solution-126"><span class="type">Solution</span></a><div id="hk-solution-126" class="hidden-content tex2jax_ignore"><div class="solution">We compute<div class="displaymath">
+\begin{equation*}
+AB = \begin{bmatrix} 3 \amp 2+2k \\ 7 \amp 6+4k \end{bmatrix}
+\text{ and }
+BA = \begin{bmatrix} 7 \amp 10 \\ 1+3k \amp 6+4k \end{bmatrix}.
+\end{equation*}
+</div>For these to be equal, we need them to be equal entrywise, but no matter what \(k\) we chose, the \((1,1)\)-entries will never coincide. Thus, the answer is no.</div></div>
+</div></article></p>
 <p id="p-546"><article class="exercise-like" id="exercise-71"><h6 class="heading"><span class="codenumber">7.</span></h6>
 <aside class="aside-like" id="aside-79"><p id="p-547">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.1.16)</p></aside> Let \(A \) and \(B \) be symmetric (of the same size).  Show that each of the following is symmetric. <ol class="lower-alpha">
 <li id="li-388">\(A - B \)</li>
