@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-04T14:06:37-08:00    *-->
+<!--*    on 2020-02-04T17:31:24-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -150,7 +150,7 @@ D = \begin{bmatrix} 1 \amp 3 \\ -1 \amp 0 \\ 1 \amp 4 \end{bmatrix},\) and \(E =
 <aside class="aside-like" id="aside-64"><p id="p-511">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Definition 2.1)</p></aside> Recall: If \(A\) and \(B\) are matrices of the same size, their <em class="emphasis">sum</em>\(A+B\) is the matrix formed by adding corresponding entries.</div></div>
 <a data-knowl="" class="id-ref" data-refid="hk-hint-70" id="hint-70"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-70" class="hidden-content tex2jax_ignore"><div class="solution">
 <aside class="aside-like" id="aside-65"><p id="p-512">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Definition 2.2)</p></aside> Recall: If \(A\) is any matrix and \(k\) is any number, the <em class="emphasis">scalar multiple</em>\(kA\) is the matrix obtained from \(A\) by multiplying each entry of \(A\) by \(k\) .</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-hint-71" id="hint-71"><span class="type">Hint</span> <span class="codenumber">3</span></a><div id="hk-hint-71" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-matrix-transpose" id="hint-matrix-transpose"><span class="type">Hint</span> <span class="codenumber">3</span></a><div id="hk-hint-matrix-transpose" class="hidden-content tex2jax_ignore"><div class="solution">
 <aside class="aside-like" id="aside-66"><p id="p-513">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Definition 2.3)</p></aside> Recall: If \(A\) is a \(m\times n\) matrix, the <em class="emphasis">transpose</em> of \(A\text{,}\) written \(A^T\text{,}\) is the \(n\times m\) matrix whose rows are just the columns of  \(A\) in the same order.</div></div>
 <a data-knowl="" class="id-ref" data-refid="hk-answer-76" id="answer-76"><span class="type">Answer</span></a><div id="hk-answer-76" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
 <li id="li-301">
@@ -287,7 +287,7 @@ D = \begin{bmatrix} -1 \amp 2 \\ 2 \amp -3 \end{bmatrix}, \) and \(E = \begin{bm
 <li id="li-315">\(EA \)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-72" id="hint-72"><span class="type">Hint</span></a><div id="hk-hint-72" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-matrix-product" id="hint-matrix-product"><span class="type">Hint</span></a><div id="hk-hint-matrix-product" class="hidden-content tex2jax_ignore"><div class="solution">
 <aside class="aside-like" id="aside-68"><p id="p-516">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 4, Definition 4.21)</p></aside> Recall: Let \(A=[a_{i j}]\) be an \(m\times n\)-matrix, and let \(B=[b_{j k}]\) be an \(n\times p\)-matrix. Then their <em class="emphasis">product</em> is the \(m\times p\)-matrix \(AB= [c_{ik}]\) whose \((i,k)\)-entry is defined by<div class="displaymath">
 \begin{equation*}
 c_{ik} = a_{i1}b_{1k}+a_{i2}b_{2k}+...+a_{in}b_{nk}.
@@ -410,20 +410,172 @@ x -3y  \amp = -3
 <a data-knowl="" class="id-ref" data-refid="hk-solution-100" id="solution-100"><span class="type">Solution</span></a><div id="hk-solution-100" class="hidden-content tex2jax_ignore"><div class="solution">Take any vector \(\mathbf{y}\) with \(n\) components such that \(AB \mathbf{y} = \mathbf{0}\text{.}\) This means that \(B \mathbf{y}\) is a solution to the system of equations  \(A\mathbf{x} = \mathbf{0}\) which, by assumption, only has the trivial solution. In other words, \(B \mathbf{y} = \mathbf{0}\text{.}\) This similarly means that \(\mathbf{y}\) is a solution to the system of equations  \(B\mathbf{x} = \mathbf{0}\) which, again by assumption, only has the trivial solution. Thus, \(\mathbf{y}=\mathbf{0}\text{.}\) We have seen that the system \(AB \mathbf{x} = \mathbf{0}\) only has the trivial solution.</div></div>
 </div></article></p>
 <p id="p-521"><article class="exercise-like" id="exercise-63"><h6 class="heading"><span class="codenumber">5.</span></h6>
-<aside class="aside-like" id="aside-71"><p id="p-522">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.3.27)</p></aside> In each case either show the statement is true or give an example showing that it is false. <ol class="lower-alpha cols2">
+<aside class="aside-like" id="aside-71"><p id="p-522">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.3.27)</p></aside> In each case either show the statement is true or give an example showing that it is false. (We assume that the matrices are of the correct size so that all matrix products which we consider make sense.) <ol class="lower-alpha">
 <li id="li-328">If \(A^2 = I\text{,}\) then \(A = I\text{.}\)</li>
-<li id="li-329">If \(AJ = A\text{,}\) then \(J = I\text{.}\)</li>
+<li id="li-329">If \(AB = A\text{,}\) then \(B = I\text{.}\)</li>
 <li id="li-330">If \(A \) is square, then \((A^T)^3 = (A^3)^T\text{.}\)</li>
 <li id="li-331">If \(A\) is symmetric, then \(I + A\) is symmetric.</li>
 <li id="li-332">If \(AB = AC \) and \(A \ne 0\text{,}\) then \(B = C \text{.}\)</li>
 <li id="li-333">If \(A \ne 0\text{,}\) then \(A^2 \ne 0\text{.}\)</li>
-<li id="li-334">If \(A\)  has a row of zeros, so also does \(BA\) for all \(B\text{.}\)</li>
-<li id="li-335">If \(A \) commutes with \(A+B \) then \(A \) commutes with \(B \text{.}\)</li>
-<li id="li-336">If \(B\) has a column of zeros, so also does \(AB \text{.}\)</li>
-<li id="li-337">If \(AB \) has a columns of zeros, so also does \(B \text{.}\)</li>
-<li id="li-338">If \(A \) has a row of zeros, so also does \(AB \text{.}\)</li>
-<li id="li-339">If \(AB \) has a row of zeros, so also does \(A \text{.}\)</li>
-</ol></article></p></section></section></div></main>
+<li id="li-334">If \(A \) commutes with \(A+B \) then \(A \) commutes with \(B \text{.}\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-76" id="hint-76"><span class="type">Hint</span> <span class="codenumber">1</span></a><div id="hk-hint-76" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-523">See <a data-knowl="./knowl/hint-matrix-transpose.html" title="Hint 3.1.1.3">Hint 3.1.1.3</a> for the definition of the transpose and <a data-knowl="./knowl/hint-matrix-product.html" title="Hint 3.1.2.1">Hint 3.1.2.1</a> for the definition of matrix multiplication.</p>
+<p id="p-524">Look back into <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Theorem 2.1.1, for some properties of matrix operation.</p>
+<p id="p-525">A square matrix \(A\) is called <em class="emphasis">symmetric</em> if \(A=A^T\text{.}\)</p>
+<p id="p-526">Two square matrices \(A,B\) of the same size are said to <em class="emphasis">commute</em> if \(AB=BA\text{.}\)</p>
+</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-77" id="hint-77"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-77" class="hidden-content tex2jax_ignore"><div class="solution">All counterexamples can be chosen to be of size \(2\times 2\text{.}\)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-94" id="answer-94"><span class="type">Answer</span></a><div id="hk-answer-94" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
+<li id="li-342">False.</li>
+<li id="li-343">False.</li>
+<li id="li-344">True.</li>
+<li id="li-345">True.</li>
+<li id="li-346">False.</li>
+<li id="li-347">False.</li>
+<li id="li-348">True.</li>
+</ol></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-101" id="solution-101"><span class="type">Solution</span></a><div id="hk-solution-101" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
+<li id="li-335">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-102" id="solution-102"><span class="type">Solution</span></a><div id="hk-solution-102" class="hidden-content tex2jax_ignore"><div class="solution">
+<em class="emphasis">False:</em> Take \(A =\begin{bmatrix} 0 \amp 1 \\ 1 \amp 0 \end{bmatrix}\neq I\text{,}\) which satisfies \(A^2 = I\text{.}\)</div></div>
+</li>
+<li id="li-336">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-103" id="solution-103"><span class="type">Solution</span></a><div id="hk-solution-103" class="hidden-content tex2jax_ignore"><div class="solution">
+<em class="emphasis">False:</em> Take \(A=B=\begin{bmatrix} 1 \amp 0 \\ 0 \amp 0\end{bmatrix}\neq I\text{,}\) which satisfy \(AB = A\text{.}\)</div></div>
+</li>
+<li id="li-337">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-104" id="solution-104"><span class="type">Solution</span></a><div id="hk-solution-104" class="hidden-content tex2jax_ignore"><div class="solution">
+<em class="emphasis">True:</em> We will prove that \(B^T A^T=(AB)^T\text{,}\) which will imply our claim because<div class="displaymath">
+\begin{equation*}
+(A^T)^3 = (A^T)(A^T)(A^T) = A^T(AA)^T = ((AA)A)^T = (A^3)^T.
+\end{equation*}
+</div>For this proof, let us write \(A_{i,j}\) for the \((i,j)\)-entry of \(A\text{.}\) Thus, we know from <a data-knowl="./knowl/hint-matrix-product.html" title="Hint 3.1.2.1">Hint 3.1.2.1</a> that the \((i,k)\)-entry of \(AB\) is given by:<div class="displaymath">
+\begin{equation*}
+(AB)_{i,k} = A_{i,1}B_{1,k}+A_{i,2}B_{2,k}+...+A_{i,n}B_{n,k}.
+\end{equation*}
+</div>Recall further from <a data-knowl="./knowl/hint-matrix-transpose.html" title="Hint 3.1.1.3">Hint 3.1.1.3</a> that \((B^T)_{k,j}=B_{j k}\) and \((A^{T})_{j,i}=A_{i j}\text{,}\) so that \(B^T A^T\) has \((k,i)\)-entry<div class="displaymath">
+\begin{align*}
+(B^T A^T)_{k,i} \amp= (B^T)_{k,1}(A^T)_{1,i}+(B^T)_{k,2}(A^T)_{2,i}+...+(B^T)_{k,n}(A^T)_{n,i}\\
+\amp = B{1,k}A_{i,1}+B_{2,k}A_{i,2}+...+B_{n,k}A_{i,n}\\
+\amp = (AB)_{i,k}.
+\end{align*}
+</div>Again by <a data-knowl="./knowl/hint-matrix-transpose.html" title="Hint 3.1.1.3">Hint 3.1.1.3</a>, \((i,k)\)-entry of \(AB\) is the same as the \((k,i)\)-entry of \((AB)^T\text{,}\) so that<div class="displaymath">
+\begin{equation*}
+(B^T A^T)_{k,i}= (AB)_{i,k} = ((AB)^T)_{k,i} .
+\end{equation*}
+</div>We have shown that the \((k,i)\)-entry of \(B^T A^T\) and of \((AB)^T\) are identical. This means that \(B^T A^T=(AB)^T\text{.}\)</div></div>
+</li>
+<li id="li-338">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-105" id="solution-105"><span class="type">Solution</span></a><div id="hk-solution-105" class="hidden-content tex2jax_ignore"><div class="solution">
+<em class="emphasis">True:</em>\(A\) is symmetric means \(A=A^T\text{.}\) Thus, \((I + A)^{T} = I^{T}+A^{T} = I+A\text{,}\)  where the first equality follows from Theorem 2.1.2(4) in <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>. Thus, \(I + A\) is symmetric as well.</div></div>
+</li>
+<li id="li-339">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-106" id="solution-106"><span class="type">Solution</span></a><div id="hk-solution-106" class="hidden-content tex2jax_ignore"><div class="solution">
+<em class="emphasis">False:</em> Let<div class="displaymath">
+\begin{equation*}
+A=\begin{bmatrix} 1 \amp 0 \\ 0 \amp 0 \end{bmatrix},
+B=\begin{bmatrix} 1 \amp 0 \\ 1 \amp 1 \end{bmatrix},
+C=\begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix}.
+\end{equation*}
+</div>Then \(A \ne 0\) and<div class="displaymath">
+\begin{equation*}
+AB = \begin{bmatrix} 1 \amp 0 \\ 0 \amp 0 \end{bmatrix} = A = AC, 
+\end{equation*}
+</div>but \(B \neq C \text{.}\)</div></div>
+</li>
+<li id="li-340">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-107" id="solution-107"><span class="type">Solution</span></a><div id="hk-solution-107" class="hidden-content tex2jax_ignore"><div class="solution">
+<em class="emphasis">False:</em> Let \(A=\begin{bmatrix} 0 \amp 1 \\ 0 \amp 0 \end{bmatrix}\text{.}\) Then \(A^2 = 0\text{,}\) even though \(A\neq 0\text{.}\)</div></div>
+</li>
+<li id="li-341">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-108" id="solution-108"><span class="type">Solution</span></a><div id="hk-solution-108" class="hidden-content tex2jax_ignore"><div class="solution">
+<em class="emphasis">True:</em> We compute<div class="displaymath">
+\begin{equation*}
+A^2 + AB = A(A+B) \overset{(*)}{=} (A+B)A = A^2 + BA,
+\end{equation*}
+</div>where \((*)\) is by assumption that \(A\) commutes with \(A+B\text{.}\) If we substract \(A^{2}\) from both the left- and right-most side of the equation, we see that \(AB=BA\text{,}\) i.e. \(A\) commutes with \(B \text{.}\)</div></div>
+</li>
+</ol></div></div>
+</div></article></p>
+<p id="p-527"><article class="exercise-like" id="exercise-64"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<aside class="aside-like" id="aside-72"><p id="p-528">(Adapted from: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.3.27)</p></aside> In each case either show the statement is true or give an example showing that it is false. (We assume that the matrices are of the correct size so that all matrix products which we consider make sense.) <ol class="lower-alpha">
+<li id="li-349">If \(B\)  has a row of zeros, so also does \(AB\) for all \(A\text{.}\)</li>
+<li id="li-350">If \(A \) has a row of zeros, so also does \(AB \) for all \(B\text{.}\)</li>
+<li id="li-351">If \(B\) has a column of zeros, so also does \(AB \)  for all \(A\text{.}\)</li>
+<li id="li-352">If \(AB \) has a column of zeros for some \(A\neq 0\text{,}\) then so also does \(B\text{.}\)</li>
+<li id="li-353">If \(AB \) has a row of zeros for some \(A\neq 0\text{,}\) so also does \(B \text{.}\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-95" id="answer-95"><span class="type">Answer</span></a><div id="hk-answer-95" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
+<li id="li-359"> False.</li>
+<li id="li-360">True.</li>
+<li id="li-361">True.</li>
+<li id="li-362">False.</li>
+<li id="li-363">False.</li>
+</ol></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-109" id="solution-109"><span class="type">Solution</span></a><div id="hk-solution-109" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
+<li id="li-354">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-110" id="solution-110"><span class="type">Solution</span></a><div id="hk-solution-110" class="hidden-content tex2jax_ignore"><div class="solution">
+<em class="emphasis">False:</em> Let<div class="displaymath">
+\begin{equation*}
+A=\begin{bmatrix} 1 \amp 1 \\ 1 \amp 1 \end{bmatrix} 
+\text{ and }									
+B=\begin{bmatrix} 1 \amp 0 \\ 0 \amp 0 \end{bmatrix}.
+\end{equation*}
+</div>Then \(AB = \begin{bmatrix} 1 \amp 0 \\ 1 \amp 0 \end{bmatrix}\) does not have a zero row.</div></div>
+</li>
+<li id="li-355">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-111" id="solution-111"><span class="type">Solution</span></a><div id="hk-solution-111" class="hidden-content tex2jax_ignore"><div class="solution">
+<em class="emphasis">True:</em> Let us write \(A= [ a_{ij}]\) and \(B= [ b_{jk}]\text{.}\) By assumption, there exists a zero row in \(A\text{,}\) say row \(i_{0}\text{.}\) In other words, \(a_{i_{0}j}=0\) for all \(j\text{.}\) By definition of \(AB= [c_{ik}]\) (see <a data-knowl="./knowl/hint-matrix-product.html" title="Hint 3.1.2.1">Hint 3.1.2.1</a>), its \((i,k)\)-entry is defined by<div class="displaymath">
+\begin{equation*}
+c_{ik} = a_{i1}b_{1k}+a_{i2}b_{2k}+...+a_{in}b_{nk}.
+\end{equation*}
+</div>Since \(a_{i_{0}j}=0\) for all \(j\text{,}\) we see that \(c_{i_{0}k}=0\) for all \(k\text{.}\) In other words, row \(i_{0}\) in \(AB\) is zero.</div></div>
+</li>
+<li id="li-356">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-112" id="solution-112"><span class="type">Solution</span></a><div id="hk-solution-112" class="hidden-content tex2jax_ignore"><div class="solution">
+<em class="emphasis">True:</em> Let us write \(A= [ a_{ij}]\) and \(B= [ b_{jk}]\text{.}\) By assumption, there exists a zero column in \(B\text{,}\) say column \(k_{0}\text{.}\) In other words, \(b_{jk_{0}}=0\) for all \(j\text{.}\) By definition of \(AB= [c_{ik}]\) (see <a data-knowl="./knowl/hint-matrix-product.html" title="Hint 3.1.2.1">Hint 3.1.2.1</a>), its \((i,k)\)-entry is defined by<div class="displaymath">
+\begin{equation*}
+c_{ik} = a_{i1}b_{1k}+a_{i2}b_{2k}+...+a_{in}b_{nk}.
+\end{equation*}
+</div>Since \(b_{jk_{0}}=0\) for all \(j\text{,}\) we see that \(c_{ik_{0}}=0\) for all \(i\text{.}\) In other words, column \(k_{0}\) in \(AB\) is zero.</div></div>
+</li>
+<li id="li-357">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-113" id="solution-113"><span class="type">Solution</span></a><div id="hk-solution-113" class="hidden-content tex2jax_ignore"><div class="solution">
+<em class="emphasis">False:</em> Take<div class="displaymath">
+\begin{equation*}
+A=\begin{bmatrix} 1 \amp -2 \\ 2 \amp -4 \end{bmatrix} 
+\text{ and }
+B=\begin{bmatrix} 2 \amp 4 \\ 1 \amp 2 \end{bmatrix},
+\end{equation*}
+</div>so that<div class="displaymath">
+\begin{equation*}
+AB 
+=\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix} .
+\end{equation*}
+</div>
+</div></div>
+</li>
+<li id="li-358">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-114" id="solution-114"><span class="type">Solution</span></a><div id="hk-solution-114" class="hidden-content tex2jax_ignore"><div class="solution">
+<em class="emphasis">False:</em> Take<div class="displaymath">
+\begin{equation*}
+A=\begin{bmatrix} 1 \amp -2 \\ 2 \amp -4 \end{bmatrix} 
+\text{ and }
+B=\begin{bmatrix} 2 \amp 4 \\ 1 \amp 2 \end{bmatrix},
+\end{equation*}
+</div>so that<div class="displaymath">
+\begin{equation*}
+AB 
+=\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix} .
+\end{equation*}
+</div>
+</div></div>
+</li>
+</ol></div></div>
+</div></article></p></section></section></div></main>
 </div>
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>
 <script src="https://pretextbook.org/js/0.11/login.js"></script>

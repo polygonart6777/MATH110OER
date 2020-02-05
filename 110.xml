@@ -9232,7 +9232,7 @@
 						<hint><aside><p> (Source: <xref ref="ref-KN" />, Chapter 2, Definition 2.2) </p></aside>
 							Recall: If <m>A</m> is any matrix and <m>k</m> is any number, the <em>scalar multiple</em> <m>kA</m> is the matrix obtained from <m>A</m> by multiplying each entry of <m>A</m> by <m>k</m> .
 						</hint>
-						<hint><aside><p> (Source: <xref ref="ref-KN" />, Chapter 2, Definition 2.3) </p></aside>
+						<hint xml:id="hint-matrix-transpose"><aside><p> (Source: <xref ref="ref-KN" />, Chapter 2, Definition 2.3) </p></aside>
 							Recall: If <m>A</m> is a <m>m\times n</m> matrix, the <em>transpose</em> of <m>A</m>, written <m>A^T</m>, is the <m>n\times m</m> matrix whose rows are just the columns of  <m>A</m> in the same order.
 						</hint>
 						<solution>
@@ -9363,7 +9363,7 @@
 								</li>
 							</ol>
 						</statement>
-						<hint>
+						<hint xml:id="hint-matrix-product">
 							<aside><p>(Source: <xref ref="ref-PS" />, Chapter 4, Definition 4.21) </p></aside>
 							Recall: Let <m>A=[a_{i j}]</m> be an <m>m\times n</m>-matrix, and let <m>B=[b_{j k}]</m> be an <m>n\times p</m>-matrix. Then their <em>product</em> is the <m>m\times p</m>-matrix
 							<m>AB= [c_{ik}]</m> whose <m>(i,k)</m>-entry is defined by
@@ -9501,13 +9501,13 @@
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 2, Exercise 2.3.27) </p></aside>
-							 In each case either show the statement is true or give an example showing that it is false.
-	<ol cols="2">
+							 In each case either show the statement is true or give an example showing that it is false. (We assume that the matrices are of the correct size so that all matrix products which we consider make sense.)
+	<ol>
 		<li> 
 			If <m> A^2 = I</m>, then <m> A = I</m>.
 		</li>
 		<li>
-			If <m> AJ = A</m>, then <m> J = I</m>. 
+			If <m> AB = A</m>, then <m> B = I</m>. 
 		</li>
 		<li> 
 		 	If <m> A </m> is square, then <m> (A^T)^3 = (A^3)^T</m>.
@@ -9520,34 +9520,193 @@
 		</li>
 		<li> 
 		  	If <m> A \ne 0</m>, then <m> A^2 \ne 0</m>.
-		 </li>
-		 <li>
-			If <m> A</m>  has a row of zeros, so also does <m> BA</m> for all <m> B</m>.
-		</li>
+		 </li>		 
 		<li>
 			If <m> A </m> commutes with <m> A+B </m> then <m> A </m> commutes with <m> B </m>.
-		</li>
-		<li>
-			If <m> B</m> has a column of zeros, so also does <m> AB </m>.
-		</li>
-		<li> 
-			If <m> AB </m> has a columns of zeros, so also does <m> B </m>.
-		</li>
-		<li>  
-			If <m> A </m> has a row of zeros, so also does <m> AB </m>.
-		</li>
-		<li> 
-			If <m> AB </m> has a row of zeros, so also does <m> A </m>.
 		</li>
 	</ol>
 
 			</statement>
-							<!-- <hint>
+				<hint>
+					<p>See <xref ref="hint-matrix-transpose"/> for the definition of the transpose and <xref ref="hint-matrix-product"/> for the definition of matrix multiplication.</p>
+
+					<p>Look back into <xref ref="ref-KN" />, Chapter 2, Theorem 2.1.1, for some properties of matrix operation.</p>
+					
+					<p>A square matrix <m>A</m> is called <em>symmetric</em> if <m>A=A^T</m>.</p>
+
+					<p>Two square matrices <m>A,B</m> of the same size are said to <em>commute</em> if <m>AB=BA</m>.</p>
+				</hint>
+				<hint>
+					All counterexamples can be chosen to be of size <m>2\times 2</m>.
+				</hint>
+				<solution>
+					<ol>
+					<li><solution> 
+						<em>False:</em> Take <m> A =\begin{bmatrix} 0 \amp 1 \\ 1 \amp 0 \end{bmatrix}\neq I</m>, which satisfies <m> A^2 = I</m>.
+					</solution></li>
+					<li><solution>
+						<em>False:</em> Take <m>A=B=\begin{bmatrix} 1 \amp 0 \\ 0 \amp 0\end{bmatrix}\neq I</m>, which satisfy <m> AB = A</m>.
+					</solution></li>
+					<li><solution> 
+						<!--If <m> A </m> is square, then <m> (A^T)^3 = (A^3)^T</m>.-->
+						<em>True:</em> We will prove that <m>B^T A^T=(AB)^T</m>, which will imply our claim because
+						<me>
+							(A^T)^3 = (A^T)(A^T)(A^T) = A^T(AA)^T = ((AA)A)^T = (A^3)^T.
+						</me>
+						For this proof, let us write <m>A_{i,j}</m> for the <m>(i,j)</m>-entry of <m>A</m>. Thus, we know from <xref ref="hint-matrix-product"/> that the <m>(i,k)</m>-entry of <m>AB</m> is given by:
+						<me>
+							(AB)_{i,k} = A_{i,1}B_{1,k}+A_{i,2}B_{2,k}+...+A_{i,n}B_{n,k}.
+						</me>
+						Recall further from <xref ref="hint-matrix-transpose"/> that <m>(B^T)_{k,j}=B_{j k}</m> and <m>(A^{T})_{j,i}=A_{i j}</m>, so that <m>B^T A^T</m> has <m>(k,i)</m>-entry 
+						<md>
+							<mrow>(B^T A^T)_{k,i} \amp= (B^T)_{k,1}(A^T)_{1,i}+(B^T)_{k,2}(A^T)_{2,i}+...+(B^T)_{k,n}(A^T)_{n,i}</mrow>
+							<mrow>\amp = B{1,k}A_{i,1}+B_{2,k}A_{i,2}+...+B_{n,k}A_{i,n}</mrow>					
+							<mrow>\amp = (AB)_{i,k}.</mrow>
+						</md> 
+						Again by <xref ref="hint-matrix-transpose"/>, <m>(i,k)</m>-entry of <m>AB</m> is the same as the <m>(k,i)</m>-entry of <m>(AB)^T</m>, so that 
+						<me>
+							(B^T A^T)_{k,i}= (AB)_{i,k} = ((AB)^T)_{k,i} .
+						</me>
+					 	We have shown that the <m>(k,i)</m>-entry of <m>B^T A^T</m> and of <m>(AB)^T</m> are identical. This means that <m>B^T A^T=(AB)^T</m>.
+					</solution></li>
+					<li><solution>
+						<em>True:</em> <m>A</m> is symmetric means <m>A=A^T</m>. Thus, <m> (I + A)^{T} = I^{T}+A^{T} = I+A</m>,  where the first equality follows from Theorem 2.1.2(4) in <xref ref="ref-KN"/>. Thus, <m> I + A</m> is symmetric as well.
+					</solution></li>
+					<li><solution>
+						<em>False:</em> Let
+							<me>
+								A=\begin{bmatrix} 1 \amp 0 \\ 0 \amp 0 \end{bmatrix},
+								B=\begin{bmatrix} 1 \amp 0 \\ 1 \amp 1 \end{bmatrix},
+								C=\begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix}.
+							</me>
+						Then <m> A \ne 0</m> and 
+						<me> AB = \begin{bmatrix} 1 \amp 0 \\ 0 \amp 0 \end{bmatrix} = A = AC, </me>
+						but <m> B \neq C </m>. 
+					</solution></li>
+					<li><solution> 
+					  	<em>False:</em> Let <m>A=\begin{bmatrix} 0 \amp 1 \\ 0 \amp 0 \end{bmatrix}</m>. Then <m> A^2 = 0</m>, even though <m>A\neq 0</m>.
+					 </solution></li>							 
+					<li><solution>
+						<em>True:</em> We compute
+						<me> A^2 + AB = A(A+B) \overset{(*)}{=} (A+B)A = A^2 + BA,</me>
+						where <m>(*)</m> is by assumption that <m>A</m> commutes with <m>A+B</m>. If we substract <m>A^{2}</m> from both the left- and right-most side of the equation, we see that <m>AB=BA</m>, i.e. <m>A</m> commutes with <m> B </m>.
+					</solution></li>
+				</ol>
+				</solution>
+				<answer>
+					<ol>
+					<li>False.</li>
+					<li>False.</li>
+					<li>True.</li>
+					<li>True.</li>
+					<li>False.</li>
+					<li>False.</li>							 
+					<li>True.</li>
+				</ol>
+				</answer>
+
+			</exercise></p>
+			<p><exercise><!-- xml:id="ex-" -->
+				<statement>
+					<aside><p> (Adapted from: <xref ref="ref-KN" />, Chapter 2, Exercise 2.3.27) </p></aside>
+					 In each case either show the statement is true or give an example showing that it is false. (We assume that the matrices are of the correct size so that all matrix products which we consider make sense.)
+	<ol>
+		<li>
+			If <m> B</m>  has a row of zeros, so also does <m> AB</m> for all <m> A</m>.
+		</li>y		
+		<li>  
+			If <m> A </m> has a row of zeros, so also does <m> AB </m> for all <m> B</m>.
+		</li>
+		<li>
+			If <m> B</m> has a column of zeros, so also does <m> AB </m>  for all <m>A</m>.
+		</li>
+		<li> 
+			If <m> AB </m> has a column of zeros for some <m>A\neq 0</m>, then so also does <m> B</m>.
+		</li>
+		<li>
+			If <m> AB </m> has a row of zeros for some <m>A\neq 0</m>, so also does <m> B </m>.			
+		</li>
+	</ol>
+
+			</statement>
+						<!-- <hint>
+							symmetric, transpose, Theorems that show some properties, commute
 						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<solution>
+							<ol>
+							 <li><solution>
+							 	<!--If <m> B</m>  has a row of zeros, so also does <m> AB</m> for all <m> A</m>. -->
+							 	<em>False:</em> Let
+							 	<me>
+							 		A=\begin{bmatrix} 1 \amp 1 \\ 1 \amp 1 \end{bmatrix} 
+									\text{ and }									
+									B=\begin{bmatrix} 1 \amp 0 \\ 0 \amp 0 \end{bmatrix}.
+								</me>
+								Then <m>AB = \begin{bmatrix} 1 \amp 0 \\ 1 \amp 0 \end{bmatrix}</m> does not have a zero row.
+							</solution></li>							
+							<li><solution>  
+								<!-- If <m> A </m> has a row of zeros, so also does <m> AB </m> for all <m> B</m>. -->
+								<em>True:</em> Let us write <m>A= [ a_{ij}]</m> and <m>B= [ b_{jk}]</m>. By assumption, there exists a zero row in <m>A</m>, say row <m>i_{0}</m>. In other words, <m>a_{i_{0}j}=0</m> for all <m>j</m>. By definition of <m>AB= [c_{ik}]</m> (see <xref ref="hint-matrix-product"/>), its <m>(i,k)</m>-entry is defined by
+								<me>
+									c_{ik} = a_{i1}b_{1k}+a_{i2}b_{2k}+...+a_{in}b_{nk}.
+								</me>
+								Since <m>a_{i_{0}j}=0</m> for all <m>j</m>, we see that <m>c_{i_{0}k}=0</m> for all <m>k</m>. In other words, row <m>i_{0}</m> in <m>AB</m> is zero.
+							</solution></li>
+							<li><solution>
+								<!-- If <m> B</m> has a column of zeros, so also does <m> AB </m>  for all <m>A</m>. -->
+								<em>True:</em> Let us write <m>A= [ a_{ij}]</m> and <m>B= [ b_{jk}]</m>. By assumption, there exists a zero column in <m>B</m>, say column <m>k_{0}</m>. In other words, <m>b_{jk_{0}}=0</m> for all <m>j</m>. By definition of <m>AB= [c_{ik}]</m> (see <xref ref="hint-matrix-product"/>), its <m>(i,k)</m>-entry is defined by
+								<me>
+									c_{ik} = a_{i1}b_{1k}+a_{i2}b_{2k}+...+a_{in}b_{nk}.
+								</me>
+								Since <m>b_{jk_{0}}=0</m> for all <m>j</m>, we see that <m>c_{ik_{0}}=0</m> for all <m>i</m>. In other words, column <m>k_{0}</m> in <m>AB</m> is zero.
+							</solution></li>
+							<li><solution> 
+								<!-- If <m> AB </m> has a column of zeros for some <m>A\neq 0</m>, then so also does <m> B</m>. -->
+								<em>False:</em> Take 
+								<me>
+									A=\begin{bmatrix} 1 \amp -2 \\ 2 \amp -4 \end{bmatrix} 
+									\text{ and }
+									B=\begin{bmatrix} 2 \amp 4 \\ 1 \amp 2 \end{bmatrix},
+								</me>
+								so that
+								<me>
+									AB 
+									=\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix} .
+								</me>
+							</solution></li>
+							<li><solution> 
+								<!-- If <m> AB </m> has a row of zeros for some <m>A\neq 0</m>, so also does <m> B </m>.	 -->
+								<em>False:</em> Take
+								<me>
+									A=\begin{bmatrix} 1 \amp -2 \\ 2 \amp -4 \end{bmatrix} 
+									\text{ and }
+									B=\begin{bmatrix} 2 \amp 4 \\ 1 \amp 2 \end{bmatrix},
+								</me>
+								so that
+								<me>
+									AB 
+									=\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix} .
+								</me>
+							</solution></li>
+						</ol>
+						</solution>
+						<answer>
+							<ol>
+							 <li>
+							 	<!--If <m> B</m>  has a row of zeros, so also does <m> AB</m> for all <m> A</m>. -->
+							 	False.
+							</li>							
+							<li><!-- If <m> A </m> has a row of zeros, so also does <m> AB </m> for all <m> B</m>. -->
+								True.</li>
+							<li><!-- If <m> B</m> has a column of zeros, so also does <m> AB </m>  for all <m>A</m>. -->
+								True.</li>
+							<li><!-- If <m> AB </m> has a column of zeros for some <m>A\neq 0</m>, then so also does <m> B</m>. -->
+								False. 
+							</li>
+							<li><!-- If <m> AB </m> has a row of zeros for some <m>A\neq 0</m>, so also does <m> B </m>.	 -->
+								False.</li>
+						</ol>
+						</answer>
 
 					</exercise></p>
 				</exercises>
