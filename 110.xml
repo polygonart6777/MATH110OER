@@ -9884,12 +9884,130 @@
 							</li>
 						</ol>
 					</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint>
+							Matrices <m>A_{1}, \ldots, A_{m}</m> of the same size are called <em>linearly dependent</em> if there exist numbers <m>c_{1},\ldots, c_{m}</m>, not all of which are zero, so that 
+							<me>
+								c_{1}A_{1}+c_{2}A_{2}+\ldots + c_{m}A_{m} = 0.
+							</me>
+							Otherwise, they are called <em>linearly independent</em>. 
+						</hint>
+						<hint>
+							Another way of phrasing linear independence is: Matrices <m>A_{1}, \ldots, A_{m}</m> of the same size are linearly independent if the only solution <m>(c_{1}, \ldots, c_{m})</m> to the system of linear equations
+							<me>
+								x_{1}A_{1}+x_{2}A_{2}+\ldots + x_{m}A_{m} = 0
+							</me>
+							is the trivial solution, <m>(0,\ldots, 0).</m>
+						</hint>
+						<solution>							
+							<ol>
+							<li> <solution>We are wondering whether there exist numbers <m>x,y,z</m>, not all zero, such that
+								<me>
+									x \begin{bmatrix} 1 \amp 2 \\ 0 \amp 1 \end{bmatrix}
+									+ y\begin{bmatrix} -7 \amp 2 \\ -2\amp -3 \end{bmatrix}
+									+ z\begin{bmatrix} 4 \amp 0 \\ 1 \amp 2 \end{bmatrix}\right\} 
+									=
+									\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}.
+								</me>
+								Note that an equality of matrices means componentwise equality, so for example, the equality of the <m>(1,1)</m>-entry says:
+								<me> x - 7 y + 4 z = 0.</me>
+								Proceeding in this way, we arrive at a system of 4 linear equations with augmented matrix that we can row-reduce:
+								<md><mrow>
+									\matr{ccc|c}
+									{
+										1 \amp -7 \amp 4 \amp 0
+										\\
+										2 \amp 2 \amp 0 \amp 0
+										\\
+										0 \amp -2 \amp 1 \amp 0
+										\\
+										1 \amp -2 \amp 2 \amp 0
+									}
+									\overset{-2R_{1}+R_{2}}{\underset{-R_{1}+R_{4}}{\longrightarrow}}
+									\amp\matr{ccc|c}
+									{
+										1 \amp -7 \amp 4 \amp 0
+										\\
+										0 \amp 16 \amp -8 \amp 0
+										\\
+										0 \amp -2 \amp 1 \amp 0
+										\\
+										0 \amp 5 \amp -2 \amp 0
+									}
+									\overset{8R_{3}+R_{2}}{\underset{2R_{4}}{\longrightarrow}}
+									\matr{ccc|c}
+									{
+										1 \amp -7 \amp 4 \amp 0
+										\\
+										0 \amp 0 \amp 0 \amp 0
+										\\
+										0 \amp -2 \amp 1 \amp 0
+										\\
+										0 \amp 10 \amp -4 \amp 0
+									}</mrow>
+									<mrow>
+									\overset{5R_{3}+R_{4}}{\longrightarrow}
+									\amp \matr{ccc|c}
+									{
+										1 \amp -7 \amp 4 \amp 0
+										\\
+										0 \amp 0 \amp 0 \amp 0
+										\\
+										0 \amp -2 \amp 1 \amp 0
+										\\
+										0 \amp 0 \amp 1 \amp 0
+									}</mrow>
+									<!-- <mrow>
+									\overset{-R_{4}+R_{3}}{\underset{-4R_{4}+R_{1}}{\longrightarrow}}
+									\amp \matr{ccc|c}
+									{
+										1 \amp -7 \amp 0 \amp 0
+										\\
+										0 \amp 0 \amp 0 \amp 0
+										\\
+										0 \amp -2 \amp 0 \amp 0
+										\\
+										0 \amp 0 \amp 1 \amp 0
+									}</mrow>
+									<mrow>
+									\overset{-R_{4}+R_{3}}{\underset{-4R_{4}+R_{1}}{\longrightarrow}}
+									\amp \matr{ccc|c}
+									{
+										1 \amp -7 \amp 0 \amp 0
+										\\
+										0 \amp 0 \amp 0 \amp 0
+										\\
+										0 \amp -2 \amp 0 \amp 0
+										\\
+										0 \amp 0 \amp 1 \amp 0
+									}</mrow> -->
+									.
+								</md>
+								At this point, we can already see that further row reduction will yield that the only solution is <m>(x,y,z)=(0,0,0)</m>. Therefore, the matrices are linearly independent.
+							</solution>
+							</li>
+							<li><solution>We are wondering whether there exist numbers <m>w,x,y,z</m>, not all zero, such that
+								<me>
+									w\begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix}
+									+x\begin{bmatrix} 0 \amp 1 \\ 0\amp 1 \end{bmatrix}
+									+y\begin{bmatrix} 1 \amp 0 \\ 1 \amp 0 \end{bmatrix}
+									+z\begin{bmatrix} 0 \amp 0 \\ 1 \amp 1 \end{bmatrix}
+									=
+									\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}
+									.
+								</me>
+								Just as in the last part, we could turn this into an augmented matrix of size <m>4\times 5</m> and row-reduce, but since the entries of these matrices are easier, we will do it by hand: <p>Equality of the <m>(1,2)</m>-entries says that <m>x=0</m>.</p> <p>Equality of the <m>(1,1)</m>-entries says that <m>w+y=0</m>, i.e. <m>w=-y</m>.</p> <p>Equality of the <m>(2,1)</m>-entries says that <m>y+z=0</m>, i.e. <m>z=-y=w</m>.</p><p> Lastly, equality of the <m>(2,2)</m>-entries says that <m>w+x+z=0</m>, which means that <m>w=-z</m> since <m>x=0</m>.</p> <p>Since <m>-z=w=z</m> also, we conclude that <m>z=0</m> and so also <m>0=z=-y=w</m>. All in all, the only solution is <m>(w,x,y,z)=(0,0,0,0)</m>, so the matrices are linearly independent.</p></solution>
+							</li>
+						</ol>
+						</solution>
+						<answer>
+							<ol>
+							<li> <answer>The matrices are linearly independent.
+							</answer>
+							</li>
+							<li><answer>The matrices are linearly independent.</answer>
+							</li>
+						</ol>
+						</answer>
 					</exercise></p>
 
 						<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 3.2, Exercise 9-->
