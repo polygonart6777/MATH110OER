@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-04T20:35:05-08:00    *-->
+<!--*    on 2020-02-04T21:01:26-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -553,17 +553,35 @@ AB = \begin{bmatrix} 3 \amp 2+2k \\ 7 \amp 6+4k \end{bmatrix}
 \text{ and }
 BA = \begin{bmatrix} 7 \amp 10 \\ 1+3k \amp 6+4k \end{bmatrix}.
 \end{equation*}
-</div>For these to be equal, we need them to be equal entrywise, but no matter what \(k\) we chose, the \((1,1)\)-entries will never coincide. Thus, the answer is no.</div></div>
+</div>For these to be equal, we need them to be equal entrywise, but no matter what \(k\) we choose, the \((1,1)\)-entries will never coincide (\(3\neq 7\)). Thus, the answer is no.</div></div>
 </div></article></p>
 <p id="p-546"><article class="exercise-like" id="exercise-71"><h6 class="heading"><span class="codenumber">7.</span></h6>
-<aside class="aside-like" id="aside-79"><p id="p-547">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.1.16)</p></aside> Let \(A \) and \(B \) be symmetric (of the same size).  Show that each of the following is symmetric. <ol class="lower-alpha">
-<li id="li-388">\(A - B \)</li>
-<li id="li-389">\(kA \) for any scalar \(k \text{.}\)</li>
-</ol></article></p>
-<p id="p-548"><article class="exercise-like" id="exercise-72"><h6 class="heading"><span class="codenumber">8.</span></h6>
-<aside class="aside-like" id="aside-80"><p id="p-549">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.29)</p></aside> A square matrix is called <em class="emphasis">skew-symmetric</em> if \(A^T = -A \text{.}\)  Show that the main diagonal of a skew-symmetric matrix consists of only zeros.  Recall that the main diagonal consists of every entry of the matri which is of the form \(a_{ii} \text{.}\)</article></p>
-<p id="p-550"><article class="exercise-like" id="exercise-73"><h6 class="heading"><span class="codenumber">9.</span></h6>
-<aside class="aside-like" id="aside-81"><p id="p-551">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.1.17)</p></aside> Show that \(A + A^T \) is symmetric for <em class="emphasis">any</em> square matrix \(A \text{.}\)</article></p></section></section></div></main>
+<aside class="aside-like" id="aside-79"><p id="p-547">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.1.16)</p></aside> Let \(A \) and \(B \) be square matrices of the same size. <ol class="lower-alpha">
+<li id="li-388">If \(A \) and \(B \) are symmetric, then so is \(A - B \text{.}\)</li>
+<li id="li-389">If \(A\) is symmetric, then so is \(kA \) for any scalar \(k \text{.}\)</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-85" id="hint-85"><span class="type">Hint</span></a><div id="hk-hint-85" class="hidden-content tex2jax_ignore"><div class="solution">See <a data-knowl="./knowl/hint-def-symmetric.html" title="Hint 3.1.5.1">Hint 3.1.5.1</a> for the defintion of symmetric.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-127" id="solution-127"><span class="type">Solution</span></a><div id="hk-solution-127" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
+<li id="li-390">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-128" id="solution-128"><span class="type">Solution</span></a><div id="hk-solution-128" class="hidden-content tex2jax_ignore"><div class="solution">Let \(A=[a_{ij}]\) and \(B=[b_{ij}]\text{,}\) so that \(A-B=[a_{ij}-b_{ij}]\text{.}\) Since \(A=A^T\text{,}\) we have \(a_{ij} = a_{ji}\) for all choices of \(i,j\text{,}\) and similarly \(b_{ij} = b_{ji}\text{.}\) Thus,<div class="displaymath">
+\begin{align*}
+(A-B)^{T} \amp= [a_{ij}-b_{ij}]^{T} = [a_{ji}-b_{ji}] \\
+\amp= [a_{ij}-b_{ij}]  =  [a_{ij}]-[b_{ij}]  = A-B,
+\end{align*}
+</div>so \(A-B\) is symmetric.</div></div>
+</li>
+<li id="li-391">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-129" id="solution-129"><span class="type">Solution</span></a><div id="hk-solution-129" class="hidden-content tex2jax_ignore"><div class="solution">We need to show that \((kA)^{T} = k A\) to conclude that \(kA\) is symmetric. Since equality of matrices is entrywise equality, we will consider their \((i,j)\)-entries: <p id="p-548">Let \(A=[a_{ij}]\text{.}\) By definition of scalar multiplication, \(kA=[ka_{ij}]\text{.}\) By definition of the transpose, the \((i,j)\)-entry of \((kA)^{T}\) is therefore \(ka_{ji}\) (where we swapped the roles of \(i\) and \(j\)).</p>
+<p id="p-549">Since \(A\) is symmetric, we know that \(a_{ij}=a_{ji}\) for any choice of \(i,j\text{,}\) so in particular \(ka_{ij}=ka_{ji}\) also. This means that the \((i,j)\)-entry of \(kA\) (namely \(ka_{ij}\)) coincides with the \((i,j)\)-entry of \((kA)^{T}\) (namely \(ka_{ji}\)), which shows that \(k A = (kA)^{T} \) since they are equal entrywise.</p>
+</div></div>
+</li>
+</ol></div></div>
+</div></article></p>
+<p id="p-550"><article class="exercise-like" id="exercise-72"><h6 class="heading"><span class="codenumber">8.</span></h6>
+<aside class="aside-like" id="aside-80"><p id="p-551">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.29)</p></aside> A square matrix is called <em class="emphasis">skew-symmetric</em> if \(A^T = -A \text{.}\)  Show that the main diagonal of a skew-symmetric matrix consists of only zeros.  Recall that the main diagonal consists of every entry of the matri which is of the form \(a_{ii} \text{.}\)</article></p>
+<p id="p-552"><article class="exercise-like" id="exercise-73"><h6 class="heading"><span class="codenumber">9.</span></h6>
+<aside class="aside-like" id="aside-81"><p id="p-553">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.1.17)</p></aside> Show that \(A + A^T \) is symmetric for <em class="emphasis">any</em> square matrix \(A \text{.}\)</article></p></section></section></div></main>
 </div>
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>
 <script src="https://pretextbook.org/js/0.11/login.js"></script>
