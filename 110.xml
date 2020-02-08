@@ -10349,10 +10349,170 @@
 				</statement>
 						<!-- <hint>
 						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<solution>
+							To find the inverse of a matrix <m>A</m> of size <m>n\times n</m>, one writes down the augmented matrix
+							<me>
+								\matr{c|c}
+									{A\amp I_{n}}
+							</me>
+							and then row-reduces. If the RREF of <m>A</m> is <m>I_{n}</m> (the identity matrix of size <m>n\times n</m>), so that the above augmented matrix becomes
+							<me>
+								\matr{c|c}
+									{A\amp I_{n}}
+								\overset{\text{row reduction}}{\longrightarrow}
+									\matr{c|c}
+									{I_{n}\amp B}
+							</me>
+							for some matrix <m>B</m>, then <m>B</m> is the inverse <m>A^{-1}</m> of <m>A</m>.
+							<ol>
+							<li><solution>
+								<md><mrow>
+									\matr{cc|cc}
+									{
+										2 \amp 1 \amp 1 \amp 0
+										\\
+										-1 \amp 3 \amp 0 \amp 1
+									}
+									\overset{R_{1}+2R_{2}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										2 \amp 1 \amp 1 \amp 0
+										\\
+										0 \amp 7 \amp 1 \amp 2
+									}
+								</mrow><mrow>
+									\overset{-R_{2}+7R_{1}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										14 \amp 0 \amp 6 \amp -2
+										\\
+										0 \amp 7 \amp 1 \amp 2
+									}
+								</mrow><mrow>
+									\overset{\frac{1}{14}R_{1}}{\underset{\frac{1}{7}R_{2}}{\longrightarrow}}
+									\amp
+									\matr{cc|cc}
+									{
+										1 \amp 0 \amp \frac{3}{7} \amp -\frac{1}{7}
+										\\
+										0 \amp 1 \amp \frac{1}{7} \amp \frac{2}{7}
+									}.
+								</mrow></md>
+								We conclude that <m>\begin{bmatrix} 2 \amp 1 \\ -1 \amp 3 \end{bmatrix}^{-1} = \frac{1}{7}\begin{bmatrix} 3 \amp -1 \\ 1 \amp 2 \end{bmatrix}.</m>
+							</solution></li>
+							<li><solution>
+								<md><mrow>
+									\matr{cc|cc}
+									{
+										0 \amp 1 \amp 1 \amp 0
+										\\
+										5 \amp 3 \amp 0 \amp 1
+									}
+									\overset{R_{1}\leftrightarrow R_{2}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										5 \amp 3 \amp 0 \amp 1
+										\\
+										0 \amp 1 \amp 1 \amp 0
+									}
+									</mrow><mrow>
+									\overset{-3R_{2}+R_{1}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										5 \amp 0 \amp -3 \amp 1
+										\\
+										0 \amp 1 \amp 1 \amp 0
+									}
+									</mrow>
+									<mrow>
+									\overset{\frac{1}{5}R_{1}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										1 \amp 0 \amp \frac{-3}{5} \amp \frac{1}{5}
+										\\
+										0 \amp 1 \amp 1 \amp 0
+									}
+									</mrow></md>
+									We conclude that <m>\begin{bmatrix} 0 \amp 1 \\ 5 \amp 3 \end{bmatrix}^{-1}=\frac{1}{5}\begin{bmatrix} -3 \amp 1 \\ 5 \amp 0 \end{bmatrix}</m>.
+								</solution></li>
+							<li><solution>
+								<md><mrow>\matr{cc|cc}
+									{
+										2 \amp 1 \amp 1 \amp 0
+										\\
+										3 \amp 0 \amp 0 \amp 1
+									}
+									\overset{R_{1}\leftrightarrow R_{2}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										3 \amp 0 \amp 0 \amp 1
+										\\
+										2 \amp 1 \amp 1 \amp 0
+									}
+								</mrow><mrow>
+									\overset{-2R_{1}+3R_{2}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										3 \amp 0 \amp 0 \amp 1
+										\\
+										0 \amp 3 \amp 3 \amp -2
+									}
+								</mrow><mrow>
+									\overset{\frac{1}{3}R_{1}}{\underset{\frac{1}{3}R_{2}}{\longrightarrow}}
+									\amp
+									\matr{cc|cc}
+									{
+										1 \amp 0 \amp 0 \amp \frac{1}{3}
+										\\
+										0 \amp 1 \amp 1 \amp -\frac{2}{3}
+									}
+								</mrow></md>
+									We conclude that <m>\begin{bmatrix} 2 \amp 1 \\ 3 \amp 0 \end{bmatrix}^{-1} = \frac{1}{3}\begin{bmatrix} 0 \amp 1 \\ 3 \amp -2 \end{bmatrix}</m>.</solution></li>
+							<li><solution>
+								<md><mrow>\matr{cc|cc}
+									{
+										2 \amp 1  \amp 1 \amp 0
+										\\
+										4 \amp 2 \amp 0 \amp 1
+									}
+									\overset{-2R_{1}+R_{2}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										2 \amp 1  \amp 1 \amp 0
+										\\
+										0 \amp 0 \amp -2 \amp 1
+									} 
+								</mrow></md>We see that the left-hand side will not have the identity matrix as its RREF. Therefore, the matrix <m>\begin{bmatrix} 2 \amp 1 \\ 4 \amp 2 \end{bmatrix}</m> does not have an inverse. </solution></li>
+							<li><solution>
+								The matrix
+								<m>\begin{bmatrix} 0 \amp 1  \amp 2 \\ 1 \amp 2 \amp 5 \end{bmatrix} </m> is not a square matrix, so it cannot be invertible.</solution></li>
+							</ol>
+						</solution>
+						<answer>
+							<ol>
+							<li><answer>
+								<m>\begin{bmatrix} 2 \amp 1 \\ -1 \amp 3 \end{bmatrix}^{-1} = \frac{1}{7}\begin{bmatrix} 3 \amp -1 \\ 1 \amp 2 \end{bmatrix}</m>
+							</answer></li>
+							<li><answer>
+								<m>\begin{bmatrix} 0 \amp 1 \\ 5 \amp 3 \end{bmatrix}^{-1}=\frac{1}{5}\begin{bmatrix} -3 \amp 1 \\ 5 \amp 0 \end{bmatrix}</m>
+								</answer></li>
+							<li><answer>
+								<m>\begin{bmatrix} 2 \amp 1 \\ 3 \amp 0 \end{bmatrix}^{-1} = \frac{1}{3}\begin{bmatrix} 0 \amp 1 \\ 3 \amp -2 \end{bmatrix}</m></answer></li>
+							<li><answer>
+								The matrix <m>\begin{bmatrix} 2 \amp 1 \\ 4 \amp 2 \end{bmatrix}</m> does not have an inverse. </answer></li>
+							<li><answer>
+								The matrix
+								<m>\begin{bmatrix} 0 \amp 1  \amp 2 \\ 1 \amp 2 \amp 5 \end{bmatrix} </m> does not have an inverse.</answer></li>
+							</ol>
+						</answer>
 
 				</exercise> </p>
 					<p><exercise><!-- xml:id="ex-" -->
