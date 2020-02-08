@@ -10347,9 +10347,7 @@
 								<m> \begin{bmatrix} 0 \amp 1  \amp 2 \\ 1 \amp 2 \amp 5 \end{bmatrix} </m> </li>
 							</ol> 
 				</statement>
-						<!-- <hint>
-						</hint> -->
-						<solution>
+						<hint xml:id="hint-how-to-find-inverse-matrix">
 							To find the inverse of a matrix <m>A</m> of size <m>n\times n</m>, one writes down the augmented matrix
 							<me>
 								\matr{c|c}
@@ -10364,8 +10362,12 @@
 									{I_{n}\amp B}
 							</me>
 							for some matrix <m>B</m>, then <m>B</m> is the inverse <m>A^{-1}</m> of <m>A</m>.
+						</hint>
+						<solution>
+							
 							<ol>
 							<li><solution>
+								We will use the approach explained in <xref ref="hint-how-to-find-inverse-matrix"/>.
 								<md><mrow>
 									\matr{cc|cc}
 									{
@@ -10524,8 +10526,16 @@
 						</hint> -->
 						<!-- <solution>
 						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<answer xml:id="eq-inverse-of-2-times-2-matrix">
+							If <m> A = \begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix}</m> is invertible, its inverse is given by
+							<me>
+									\begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix}^{-1}
+									=
+									\frac{1}{ad-bc}
+									\begin{bmatrix} d \amp -b \\ -c \amp a \end{bmatrix}
+									.
+							</me>
+						</answer>
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
@@ -10538,8 +10548,9 @@
 							Now give the the solution in terms of <m> a </m> and <m> b </m> to 
 							<me> \begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix} \begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} a \\ b \end{bmatrix}. </me> 
 						</statement>
-						<!-- <hint>
-						</hint> -->
+						<hint>
+							You can use either <xref ref="eq-inverse-of-2-times-2-matrix"/> or  <xref ref="hint-how-to-find-inverse-matrix"/> to find the inverse matrix.
+						</hint>
 						<!-- <solution>
 						</solution> -->
 						<!--<answer>
@@ -10555,8 +10566,9 @@
 								<li> <me> A = \begin{bmatrix} 4 \amp 1  \amp 3 \\ 2 \amp 1 \amp 2 \\ 1 \amp 0 \amp 1 \end{bmatrix}, \ \ B = \begin{bmatrix} 1  \amp -1 \amp -1  \\ 0 \amp 1 \amp -2 \\ -1 \amp 1 \amp 2 \end{bmatrix}. </me> </li>
 							</ol>
 						</statement>
-						<!-- <hint>
-						</hint> -->
+						<hint>
+							You can use either <xref ref="eq-inverse-of-2-times-2-matrix"/> or  <xref ref="hint-how-to-find-inverse-matrix"/> to find the inverse of a <m>2\times 2</m> matrix. For a <m>3\times 3</m>, only the latter will work.
+						</hint>
 						<!-- <solution>
 						</solution> -->
 						<!--<answer>
@@ -10566,17 +10578,63 @@
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 2, Exercise 2.1.50) </p></aside>
-							Show that <m> (AB)^{-1} = B^{-1}A^{-1} </m> by verifying that 
+							Suppose <m>A, B</m> are two invertible matrices of the same size. Show that <m> (AB)^{-1} = B^{-1}A^{-1} </m> by verifying that 
 							<me> A B (B^{-1}A^{-1}) =I </me>
 							and 
 							<me> B^{-1}A^{-1} (AB) =I. </me>
 						</statement>
 						<!-- <hint>
 						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<solution>
+							Recall that <m>A^{-1}</m> is the unique matrix that satisfies <m>AA^{-1}=I=A^{-1}A</m>, and similarly for <m>B^{-1}</m>. We use this in the following computation:
+							<md>
+								<mrow>
+									A B (B^{-1}A^{-1})
+									\amp=
+									A (B B^{-1})A^{-1}
+									\qquad \text{by associativity of matrix multiplication}
+								</mrow>
+								<mrow>
+									\amp=
+									A (I)A^{-1}
+									\qquad \text{since } B B^{-1}=I
+								</mrow>
+								<mrow>
+									\amp=
+									A A^{-1}
+									\qquad \text{by the properties of } I
+								</mrow>
+								<mrow>
+									\amp=
+									I
+									\qquad\text{since } AA^{-1} = I.
+								</mrow>
+							</md>
+							For the other equality, we proceed similarly:
+							<md>
+								<mrow>
+									B^{-1}A^{-1} (AB)
+									\amp=
+									B^{-1}(A^{-1} A)B
+									\qquad \text{by associativity of matrix multiplication}
+								</mrow>
+								<mrow>
+									\amp=
+									B^{-1}(I)B
+									\qquad \text{since } A^{-1}A=I
+								</mrow>
+								<mrow>
+									\amp=
+									B^{-1}B
+									\qquad \text{by the properties of } I
+								</mrow>
+								<mrow>
+									\amp=
+									I
+									\qquad\text{since } B^{-1}B=I.
+								</mrow>
+							</md>
+							</solution>
 					</exercise></p>
 
 
