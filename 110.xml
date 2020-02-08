@@ -10304,10 +10304,18 @@
 						<aside><p> (Source: <xref ref="ref-KN" />, Chapter 2, Exercise 2.1.17) </p></aside>
 						Show that <m> A + A^T </m> is symmetric for <em> any </em> square matrix <m> A </m>.
 				</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
+						<hint>
+							See <xref ref="hint-def-symmetric"/> for the definition of symmetric.
+						</hint>
+						<solution>
+							Recall first that <m>(A+B)^T = A^T + B^T</m> for any matrices <m>A, B</m> of the same size. Now, since <m>A</m> is square, <m>A</m> and <m>A^T</m> are of the same size, so we may use this fact for <m>B=A^T</m>:
+							<md>
+								<mrow> (A+A^T)^T \amp= A^T + (A^T)^T</mrow>
+								<mrow> \amp = A^T + A,\qquad\text{ since } (A^T)^=A</mrow>
+								<mrow> \amp = A + A^T,\qquad\text{ since addition is commutative.}</mrow>
+							</md>
+							This shows that <m>A+A^T</m> is its own transpose, i.e. symmetric.
+						</solution>
 						<!--<answer>
 						</answer> -->
 

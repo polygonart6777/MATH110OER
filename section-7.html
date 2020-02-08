@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-04T21:08:01-08:00    *-->
+<!--*    on 2020-02-07T20:34:36-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -588,7 +588,16 @@ BA = \begin{bmatrix} 7 \amp 10 \\ 1+3k \amp 6+4k \end{bmatrix}.
 </div>so that \(a_{ji}=-a_{ij} \) for all choices of \(i,j\text{.}\) In particular, if \(i=j\text{,}\) then \(a_{ii}=-a_{ii} \text{,}\) so \(a_{ii}=0\text{.}\)</div></div>
 </div></article></p>
 <p id="p-552"><article class="exercise-like" id="exercise-73"><h6 class="heading"><span class="codenumber">9.</span></h6>
-<aside class="aside-like" id="aside-81"><p id="p-553">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.1.17)</p></aside> Show that \(A + A^T \) is symmetric for <em class="emphasis">any</em> square matrix \(A \text{.}\)</article></p></section></section></div></main>
+<aside class="aside-like" id="aside-81"><p id="p-553">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.1.17)</p></aside> Show that \(A + A^T \) is symmetric for <em class="emphasis">any</em> square matrix \(A \text{.}\)<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-87" id="hint-87"><span class="type">Hint</span></a><div id="hk-hint-87" class="hidden-content tex2jax_ignore"><div class="solution">See <a data-knowl="./knowl/hint-def-symmetric.html" title="Hint 3.1.5.1">Hint 3.1.5.1</a> for the definition of symmetric.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-131" id="solution-131"><span class="type">Solution</span></a><div id="hk-solution-131" class="hidden-content tex2jax_ignore"><div class="solution">Recall first that \((A+B)^T = A^T + B^T\) for any matrices \(A, B\) of the same size. Now, since \(A\) is square, \(A\) and \(A^T\) are of the same size, so we may use this fact for \(B=A^T\text{:}\)<div class="displaymath">
+\begin{align*}
+(A+A^T)^T \amp= A^T + (A^T)^T\\
+\amp = A^T + A \text{ since } (A^T)^=A\\
+\amp = A + A^T \text{ since addition is commutative.}
+\end{align*}
+</div>This shows that \(A+A^T\) is its own transpose, i.e. symmetric.</div></div>
+</div></article></p></section></section></div></main>
 </div>
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>
 <script src="https://pretextbook.org/js/0.11/login.js"></script>
