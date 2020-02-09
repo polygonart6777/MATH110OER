@@ -10575,13 +10575,11 @@
 						</answer> -->
 					</exercise></p>
 
-					<p><exercise><!-- xml:id="ex-" -->
+					<p><exercise xml:id="ex-prod-of-invertible-matrices">
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 2, Exercise 2.1.50) </p></aside>
 							Suppose <m>A, B</m> are two invertible matrices of the same size. Show that <m> (AB)^{-1} = B^{-1}A^{-1} </m> by verifying that 
-							<me> A B (B^{-1}A^{-1}) =I </me>
-							and 
-							<me> B^{-1}A^{-1} (AB) =I. </me>
+							<me> A B (B^{-1}A^{-1}) =I \quad\text{and}\quad B^{-1}A^{-1} (AB) =I. </me>
 						</statement>
 						<!-- <hint>
 						</hint> -->
@@ -10592,22 +10590,22 @@
 									A B (B^{-1}A^{-1})
 									\amp=
 									A (B B^{-1})A^{-1}
-									\qquad \text{by associativity of matrix multiplication}
+									\amp \text{by associativity of matrix multiplication}
 								</mrow>
 								<mrow>
 									\amp=
 									A (I)A^{-1}
-									\qquad \text{since } B B^{-1}=I
+									\amp \text{since } B B^{-1}=I
 								</mrow>
 								<mrow>
 									\amp=
 									A A^{-1}
-									\qquad \text{by the properties of } I
+									\amp \text{by the properties of } I
 								</mrow>
 								<mrow>
 									\amp=
 									I
-									\qquad\text{since } AA^{-1} = I.
+									\amp\text{since } AA^{-1} = I.
 								</mrow>
 							</md>
 							For the other equality, we proceed similarly:
@@ -10616,22 +10614,22 @@
 									B^{-1}A^{-1} (AB)
 									\amp=
 									B^{-1}(A^{-1} A)B
-									\qquad \text{by associativity of matrix multiplication}
+									\amp \text{by associativity of matrix multiplication}
 								</mrow>
 								<mrow>
 									\amp=
 									B^{-1}(I)B
-									\qquad \text{since } A^{-1}A=I
+									\amp \text{since } A^{-1}A=I
 								</mrow>
 								<mrow>
 									\amp=
 									B^{-1}B
-									\qquad \text{by the properties of } I
+									\amp \text{by the properties of } I
 								</mrow>
 								<mrow>
 									\amp=
 									I
-									\qquad\text{since } B^{-1}B=I.
+									\amp\text{since } B^{-1}B=I.
 								</mrow>
 							</md>
 							</solution>
@@ -10643,16 +10641,112 @@
 							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 2, Exercise 2.4.41) </p></aside>
 							Let <m> A </m> and <m> B </m> denote <m> n \times n </m> invertible matrices.
 							<ol>
-								<li> Show that <m> A^{-1} + B^{-1}  = A^{-1}(A + B) B^{-1}. </m> </li>
-								<li> If <m> A + B </m> is also invertible, show that <m> A^{-1} + B^{-1} </m> is invertible and find a formula for <m> (A^{-1} + B^{-1})^{-1}. </m> </li>
+								<li> <p>Show that <m> A^{-1} + B^{-1}  = A^{-1}(A + B) B^{-1}. </m></p>
+								<p><hint>
+									Recall that, for a matrix <m>A</m>, its inverse <m>A^{-1}</m> is <em>uniquely</em> determined by satisfying the property <m>AA^{-1}=I</m> and <m>A^{-1}A=I</m>. This means: If a matrix <m>C</m> satisfies <m>AC=I</m> and <m>CA=I</m>, then <m>C=A^{-1}</m>.
+								</hint></p>
+									<p><solution>
+										By substracting <m>B^{-1}</m> from each side of the equation, we see that the claim is equivalent to showing that <m> A^{-1}  = A^{-1}(A + B) B^{-1} - B^{-1}. </m> Recall that <m>A^{-1}</m> is the unique matrix that satisfies both <m>AA^{-1}=I</m> and <m>A^{-1}A=I</m>, so it suffices to show that  <m>A^{-1}(A + B) B^{-1} - B^{-1}</m> has this property. We compute (using Theorem 2.1.1 in Section 2.1 of <xref ref="ref-KN"/>):
+										<md>
+											<mrow>
+												\amp A \bigl( A^{-1}(A + B) B^{-1} - B^{-1} \bigr)
+												\amp
+											</mrow>
+											<mrow>
+												\quad\amp=
+												AA^{-1}(A + B) B^{-1} - AB^{-1} 
+												\amp\text{by distributivity}
+											</mrow>
+											<mrow>
+												\quad\amp=
+												I(A + B) B^{-1} - AB^{-1} 												
+												\amp\text{by the properties of } A^{-1}
+											</mrow>
+											<mrow>
+												\amp
+												=
+												I(AB^{-1} + BB^{-1}) - AB^{-1}											
+												\amp\text{by distributivity}
+											</mrow>
+											<mrow>
+												\quad\amp=
+												AB^{-1} + BB^{-1} - AB^{-1}												
+												\amp\text{by the properties of } I
+											</mrow>
+											<mrow>
+												\amp
+												=
+												AB^{-1} + I - AB^{-1}												
+												\amp\text{by the properties of } B^{-1}
+											</mrow>
+											<mrow>
+												\quad\amp=
+												I.
+											</mrow>
+										</md>
+										Similarly,
+										<md>
+											<mrow>
+												\amp\bigl( A^{-1}(A + B) B^{-1} - B^{-1} \bigr) A
+											</mrow>
+											<mrow>
+												\quad\amp=
+												A^{-1}(A + B) B^{-1}A - B^{-1}A
+												\amp\text{by distributivity}
+											</mrow>
+											<mrow>
+												\quad\amp=
+												(A^{-1}A + A^{-1}B) B^{-1}A - B^{-1}A
+												\amp\text{by distributivity}
+											</mrow>
+											<mrow>
+												\amp
+												=
+												(I + A^{-1}B) B^{-1}A - B^{-1}A
+												\amp\text{by the properties of } A^{-1}
+											</mrow>
+											<mrow>
+												\quad\amp=
+												IB^{-1}A + A^{-1}BB^{-1}A - B^{-1}A
+												\amp\text{by distributivity}
+											</mrow>
+											<mrow>
+												\quad\amp=
+												B^{-1}A + A^{-1}IA  - B^{-1}A
+												\amp\text{by the properties of } I \text{ and } B^{-1}
+											</mrow>
+											<mrow>
+												\quad\amp=
+												A^{-1}A 
+												=
+												I
+												\amp\text{by the properties of } A^{-1}.
+											</mrow>
+										</md>
+										We have checked that the matrix <m> A^{-1}(A + B) B^{-1} - B^{-1} </m> indeed satisfies the defining property of <m>A^{-1}</m>.
+									</solution></p>
+								</li>
+								<li> <p>If <m> A + B </m> is also invertible, show that <m> A^{-1} + B^{-1} </m> is invertible and find a formula for <m> (A^{-1} + B^{-1})^{-1}. </m></p>
+									<p><hint>Use the first part of the exercise. Then use <xref ref="ex-prod-of-invertible-matrices"/>.</hint></p>
+									<p><solution>
+										By assumption, <m>C:= A + B </m> is invertible. By the first part of the exercise, we know that <m> A^{-1} + B^{-1}  = A^{-1}(A + B) B^{-1},</m> i.e. <m>A^{-1} + B^{-1}= A^{-1}CB^{-1}.</m> The matrix <m>A^{-1}CB^{-1}</m> is invertible as product of invertible matrices by <xref ref="ex-prod-of-invertible-matrices"/>, which shows that <m>A^{-1} + B^{-1}</m> is invertible. <xref ref="ex-prod-of-invertible-matrices"/> also gives a formula for the inverse of a product, which we use for the equalities <m>(*)</m> in the following computation:
+										<md>
+											<mrow>
+												(A^{-1}CB^{-1})^{-1} 
+												\amp=(A^{-1}[CB^{-1}])^{-1}
+												\overset{(*)}{=}[CB^{-1}]^{-1} (A^{-1})^{-1}
+											</mrow>
+											<mrow>
+												\amp\overset{(*)}{=}(B^{-1})^{-1} C^{-1} A
+												=B C^{-1} A.
+											</mrow>
+										</md>
+										We conclude: The inverse of <m> A^{-1} + B^{-1} </m> is given by <m>B C^{-1} A = B (A + B)^{-1} A.</m>
+									</solution></p>
+									<p><answer>The inverse of <m> A^{-1} + B^{-1} </m> is given by <m>B (A + B)^{-1} A.</m></answer></p>
+								</li>
 							</ol>
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>

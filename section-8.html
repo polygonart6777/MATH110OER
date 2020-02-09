@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-07T21:22:30-08:00    *-->
+<!--*    on 2020-02-09T14:43:13-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -361,14 +361,10 @@ A = \begin{bmatrix} 4 \amp 1  \amp 3 \\ 2 \amp 1 \amp 2 \\ 1 \amp 0 \amp 1 \end{
 <div class="solutions">
 <a data-knowl="" class="id-ref" data-refid="hk-hint-90" id="hint-90"><span class="type">Hint</span></a><div id="hk-hint-90" class="hidden-content tex2jax_ignore"><div class="solution">You can use either <a data-knowl="./knowl/eq-inverse-of-2-times-2-matrix.html" title="Answer 3.3.2.1">Answer 3.3.2.1</a> or  <a data-knowl="./knowl/hint-how-to-find-inverse-matrix.html" title="Hint 3.3.1.1">Hint 3.3.1.1</a> to find the inverse of a \(2\times 2\) matrix. For a \(3\times 3\text{,}\) only the latter will work.</div></div>
 </div></article></p>
-<p id="p-562"><article class="exercise-like" id="exercise-78"><h6 class="heading"><span class="codenumber">5.</span></h6>
+<p id="p-562"><article class="exercise-like" id="ex-prod-of-invertible-matrices"><h6 class="heading"><span class="codenumber">5.</span></h6>
 <aside class="aside-like" id="aside-86"><p id="p-563">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.50)</p></aside> Suppose \(A, B\) are two invertible matrices of the same size. Show that \((AB)^{-1} = B^{-1}A^{-1} \) by verifying that<div class="displaymath">
 \begin{equation*}
-A B (B^{-1}A^{-1}) =I 
-\end{equation*}
-</div>and<div class="displaymath">
-\begin{equation*}
-B^{-1}A^{-1} (AB) =I. 
+A B (B^{-1}A^{-1}) =I \quad\text{and}\quad B^{-1}A^{-1} (AB) =I. 
 \end{equation*}
 </div>
 <div class="solutions">
@@ -377,43 +373,108 @@ B^{-1}A^{-1} (AB) =I.
 A B (B^{-1}A^{-1})
 \amp=
 A (B B^{-1})A^{-1}
-\qquad \text{by associativity of matrix multiplication}\\
+\amp \text{by associativity of matrix multiplication}\\
 \amp=
 A (I)A^{-1}
-\qquad \text{since } B B^{-1}=I\\
+\amp \text{since } B B^{-1}=I\\
 \amp=
 A A^{-1}
-\qquad \text{by the properties of } I\\
+\amp \text{by the properties of } I\\
 \amp=
 I
-\qquad\text{since } AA^{-1} = I.
+\amp\text{since } AA^{-1} = I.
 \end{align*}
 </div>For the other equality, we proceed similarly:<div class="displaymath">
 \begin{align*}
 B^{-1}A^{-1} (AB)
 \amp=
 B^{-1}(A^{-1} A)B
-\qquad \text{by associativity of matrix multiplication}\\
+\amp \text{by associativity of matrix multiplication}\\
 \amp=
 B^{-1}(I)B
-\qquad \text{since } A^{-1}A=I\\
+\amp \text{since } A^{-1}A=I\\
 \amp=
 B^{-1}B
-\qquad \text{by the properties of } I\\
+\amp \text{by the properties of } I\\
 \amp=
 I
-\qquad\text{since } B^{-1}B=I.
+\amp\text{since } B^{-1}B=I.
 \end{align*}
 </div>
 </div></div>
 </div></article></p>
 <p id="p-564"><article class="exercise-like" id="exercise-79"><h6 class="heading"><span class="codenumber">6.</span></h6>
 <aside class="aside-like" id="aside-87"><p id="p-565">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.4.41)</p></aside> Let \(A \) and \(B \) denote \(n \times n \) invertible matrices. <ol class="lower-alpha">
-<li id="li-412">Show that \(A^{-1} + B^{-1}  = A^{-1}(A + B) B^{-1}. \)</li>
-<li id="li-413">If \(A + B \) is also invertible, show that \(A^{-1} + B^{-1} \) is invertible and find a formula for \((A^{-1} + B^{-1})^{-1}. \)</li>
+<li id="li-412">
+<p id="p-566">Show that \(A^{-1} + B^{-1}  = A^{-1}(A + B) B^{-1}. \)</p>
+<p id="p-567"><a data-knowl="" class="id-ref" data-refid="hk-hint-91" id="hint-91"><span class="type">Hint</span></a><div id="hk-hint-91" class="hidden-content tex2jax_ignore"><div class="solution">Recall that, for a matrix \(A\text{,}\) its inverse \(A^{-1}\) is <em class="emphasis">uniquely</em> determined by satisfying the property \(AA^{-1}=I\) and \(A^{-1}A=I\text{.}\) This means: If a matrix \(C\) satisfies \(AC=I\) and \(CA=I\text{,}\) then \(C=A^{-1}\text{.}\)</div></div></p>
+<p id="p-568"><a data-knowl="" class="id-ref" data-refid="hk-solution-139" id="solution-139"><span class="type">Solution</span></a><div id="hk-solution-139" class="hidden-content tex2jax_ignore"><div class="solution">By substracting \(B^{-1}\) from each side of the equation, we see that the claim is equivalent to showing that \(A^{-1}  = A^{-1}(A + B) B^{-1} - B^{-1}. \) Recall that \(A^{-1}\) is the unique matrix that satisfies both \(AA^{-1}=I\) and \(A^{-1}A=I\text{,}\) so it suffices to show that  \(A^{-1}(A + B) B^{-1} - B^{-1}\) has this property. We compute (using Theorem 2.1.1 in Section 2.1 of <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>):<div class="displaymath">
+\begin{align*}
+\amp A \bigl( A^{-1}(A + B) B^{-1} - B^{-1} \bigr)
+\amp\\
+\quad\amp=
+AA^{-1}(A + B) B^{-1} - AB^{-1} 
+\amp\text{by distributivity}\\
+\quad\amp=
+I(A + B) B^{-1} - AB^{-1} 												
+\amp\text{by the properties of } A^{-1}\\
+\amp
+=
+I(AB^{-1} + BB^{-1}) - AB^{-1}											
+\amp\text{by distributivity}\\
+\quad\amp=
+AB^{-1} + BB^{-1} - AB^{-1}												
+\amp\text{by the properties of } I\\
+\amp
+=
+AB^{-1} + I - AB^{-1}												
+\amp\text{by the properties of } B^{-1}\\
+\quad\amp=
+I.
+\end{align*}
+</div>Similarly,<div class="displaymath">
+\begin{align*}
+\amp\bigl( A^{-1}(A + B) B^{-1} - B^{-1} \bigr) A\\
+\quad\amp=
+A^{-1}(A + B) B^{-1}A - B^{-1}A
+\amp\text{by distributivity}\\
+\quad\amp=
+(A^{-1}A + A^{-1}B) B^{-1}A - B^{-1}A
+\amp\text{by distributivity}\\
+\amp
+=
+(I + A^{-1}B) B^{-1}A - B^{-1}A
+\amp\text{by the properties of } A^{-1}\\
+\quad\amp=
+IB^{-1}A + A^{-1}BB^{-1}A - B^{-1}A
+\amp\text{by distributivity}\\
+\quad\amp=
+B^{-1}A + A^{-1}IA  - B^{-1}A
+\amp\text{by the properties of } I \text{ and } B^{-1}\\
+\quad\amp=
+A^{-1}A 
+=
+I
+\amp\text{by the properties of } A^{-1}.
+\end{align*}
+</div>We have checked that the matrix \(A^{-1}(A + B) B^{-1} - B^{-1} \) indeed satisfies the defining property of \(A^{-1}\text{.}\)</div></div></p>
+</li>
+<li id="li-413">
+<p id="p-569">If \(A + B \) is also invertible, show that \(A^{-1} + B^{-1} \) is invertible and find a formula for \((A^{-1} + B^{-1})^{-1}. \)</p>
+<p id="p-570"><a data-knowl="" class="id-ref" data-refid="hk-hint-92" id="hint-92"><span class="type">Hint</span></a><div id="hk-hint-92" class="hidden-content tex2jax_ignore"><div class="solution">Use the first part of the exercise. Then use <a data-knowl="./knowl/ex-prod-of-invertible-matrices.html" title="Exercise 3.3.5">Exercise 3.3.5</a>.</div></div></p>
+<p id="p-571"><a data-knowl="" class="id-ref" data-refid="hk-solution-140" id="solution-140"><span class="type">Solution</span></a><div id="hk-solution-140" class="hidden-content tex2jax_ignore"><div class="solution">By assumption, \(C:= A + B \) is invertible. By the first part of the exercise, we know that \(A^{-1} + B^{-1}  = A^{-1}(A + B) B^{-1},\) i.e. \(A^{-1} + B^{-1}= A^{-1}CB^{-1}.\) The matrix \(A^{-1}CB^{-1}\) is invertible as product of invertible matrices by <a data-knowl="./knowl/ex-prod-of-invertible-matrices.html" title="Exercise 3.3.5">Exercise 3.3.5</a>, which shows that \(A^{-1} + B^{-1}\) is invertible. <a data-knowl="./knowl/ex-prod-of-invertible-matrices.html" title="Exercise 3.3.5">Exercise 3.3.5</a> also gives a formula for the inverse of a product, which we use for the equalities \((*)\) in the following computation:<div class="displaymath">
+\begin{align*}
+(A^{-1}CB^{-1})^{-1} 
+\amp=(A^{-1}[CB^{-1}])^{-1}
+\overset{(*)}{=}[CB^{-1}]^{-1} (A^{-1})^{-1}\\
+\amp\overset{(*)}{=}(B^{-1})^{-1} C^{-1} A
+=B C^{-1} A.
+\end{align*}
+</div>We conclude: The inverse of \(A^{-1} + B^{-1} \) is given by \(B C^{-1} A = B (A + B)^{-1} A.\)</div></div></p>
+</li>
 </ol></article></p>
-<p id="p-566"><article class="exercise-like" id="exercise-80"><h6 class="heading"><span class="codenumber">7.</span></h6>
-<aside class="aside-like" id="aside-88"><p id="p-567">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.5.2)</p></aside> In each case find the elementary matrix \(E \) such that \(B = EA. \)<ol class="lower-alpha cols2">
+<p id="p-572"><article class="exercise-like" id="exercise-80"><h6 class="heading"><span class="codenumber">7.</span></h6>
+<aside class="aside-like" id="aside-88"><p id="p-573">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.5.2)</p></aside> In each case find the elementary matrix \(E \) such that \(B = EA. \)<ol class="lower-alpha cols2">
 <li id="li-414"><div class="displaymath">
 \begin{equation*}
 A =\begin{bmatrix} 2 \amp 1 \\ 3 \amp -1 \end{bmatrix}, \ \ B = \begin{bmatrix} 2 \amp 1 \\ 1 \amp -2 \end{bmatrix} 
@@ -445,25 +506,25 @@ A =\begin{bmatrix} 2 \amp 1 \\ -1 \amp 3 \end{bmatrix}, \ \ B = \begin{bmatrix} 
 \end{equation*}
 </div></li>
 </ol></article></p>
-<p id="p-568"><article class="exercise-like" id="exercise-81"><h6 class="heading"><span class="codenumber">8.</span></h6>
-<aside class="aside-like" id="aside-89"><p id="p-569">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.59)</p></aside> Let \(A = \begin{bmatrix}  1 \amp 2 \amp 1 \\ 0 \amp 5 \amp 1 \\ 2 \amp -1 \amp 4 \end{bmatrix}. \)  Suppose a row operation is applied to \(A \)  and the result is \(B  = \begin{bmatrix} 1 \amp 2 \amp 1 \\ 0 \amp 5 \amp 1 \\ 1 \amp -\frac{1}{2} \amp 2 \end{bmatrix}.\)<ol class="lower-alpha">
+<p id="p-574"><article class="exercise-like" id="exercise-81"><h6 class="heading"><span class="codenumber">8.</span></h6>
+<aside class="aside-like" id="aside-89"><p id="p-575">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.59)</p></aside> Let \(A = \begin{bmatrix}  1 \amp 2 \amp 1 \\ 0 \amp 5 \amp 1 \\ 2 \amp -1 \amp 4 \end{bmatrix}. \)  Suppose a row operation is applied to \(A \)  and the result is \(B  = \begin{bmatrix} 1 \amp 2 \amp 1 \\ 0 \amp 5 \amp 1 \\ 1 \amp -\frac{1}{2} \amp 2 \end{bmatrix}.\)<ol class="lower-alpha">
 <li id="li-420">Find the elementary matrix \(E \) such that \(EA = B. \)</li>
 <li id="li-421">Find the inverse of \(E, E^{-1},\) such that \(E^{-1}B = A. \)</li>
 </ol></article></p>
-<p id="p-570"><article class="exercise-like" id="exercise-82"><h6 class="heading"><span class="codenumber">9.</span></h6>
-<aside class="aside-like" id="aside-90"><p id="p-571">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 4, Exercise 4.5.2)</p></aside> Suppose \(AB = AC \) and \(A \) is an invertible \(n \times n \) matrix.  Does it follow that \(B = C? \) Explain why or why not?</article></p>
-<p id="p-572"><article class="exercise-like" id="exercise-83"><h6 class="heading"><span class="codenumber">10.</span></h6>
-<aside class="aside-like" id="aside-91"><p id="p-573">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 4, Exercise 4.5.3)</p></aside> Suppose \(AB = AC \) and \(A \) is a non-invertible \(n \times n \) matrix.  Does it follow that \(B = C? \) Explain why or why not?</article></p>
-<p id="p-574"><article class="exercise-like" id="exercise-84"><h6 class="heading"><span class="codenumber">11.</span></h6>
-<aside class="aside-like" id="aside-92"><p id="p-575">(Source: <a data-knowl="./knowl/ref-RB.html" title="Bibliographic Entry 5">[5]</a>, Chapter Matrix Inverses, Exercise MISLE.T10)</p></aside> Construct an example to demonstrate that \((A + B)^{-1} = A^{-1} + B^{-1} \) is not true for all square matrices \(A \) and \(B \) of the same size.</article></p>
-<p id="p-576"><article class="exercise-like" id="exercise-85"><h6 class="heading"><span class="codenumber">12.</span></h6>
-<aside class="aside-like" id="aside-93"><p id="p-577">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.40)</p></aside> Let<div class="displaymath">
+<p id="p-576"><article class="exercise-like" id="exercise-82"><h6 class="heading"><span class="codenumber">9.</span></h6>
+<aside class="aside-like" id="aside-90"><p id="p-577">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 4, Exercise 4.5.2)</p></aside> Suppose \(AB = AC \) and \(A \) is an invertible \(n \times n \) matrix.  Does it follow that \(B = C? \) Explain why or why not?</article></p>
+<p id="p-578"><article class="exercise-like" id="exercise-83"><h6 class="heading"><span class="codenumber">10.</span></h6>
+<aside class="aside-like" id="aside-91"><p id="p-579">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 4, Exercise 4.5.3)</p></aside> Suppose \(AB = AC \) and \(A \) is a non-invertible \(n \times n \) matrix.  Does it follow that \(B = C? \) Explain why or why not?</article></p>
+<p id="p-580"><article class="exercise-like" id="exercise-84"><h6 class="heading"><span class="codenumber">11.</span></h6>
+<aside class="aside-like" id="aside-92"><p id="p-581">(Source: <a data-knowl="./knowl/ref-RB.html" title="Bibliographic Entry 5">[5]</a>, Chapter Matrix Inverses, Exercise MISLE.T10)</p></aside> Construct an example to demonstrate that \((A + B)^{-1} = A^{-1} + B^{-1} \) is not true for all square matrices \(A \) and \(B \) of the same size.</article></p>
+<p id="p-582"><article class="exercise-like" id="exercise-85"><h6 class="heading"><span class="codenumber">12.</span></h6>
+<aside class="aside-like" id="aside-93"><p id="p-583">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.40)</p></aside> Let<div class="displaymath">
 \begin{equation*}
 A = \begin{bmatrix} 1 \amp 2 \amp 3 \\ 2 \amp 1 \amp 4 \\ 1 \amp 0 \amp 4 \end{bmatrix}. 
 \end{equation*}
 </div>Find \(A^{-1} \) if possible.  If \(A^{-1} \) does not exist, explain why.</article></p>
-<p id="p-578"><article class="exercise-like" id="exercise-86"><h6 class="heading"><span class="codenumber">13.</span></h6>
-<aside class="aside-like" id="aside-94"><p id="p-579">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.4.17)</p></aside> If \(c \ne 0, \) find the inverse of \(\begin{bmatrix} 1 \amp -1 \amp 1 \\ 2 \amp -1 \amp 2 \\ 0 \amp 2 \amp c \end{bmatrix}\) in terms of \(c. \)</article></p></section></section></div></main>
+<p id="p-584"><article class="exercise-like" id="exercise-86"><h6 class="heading"><span class="codenumber">13.</span></h6>
+<aside class="aside-like" id="aside-94"><p id="p-585">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.4.17)</p></aside> If \(c \ne 0, \) find the inverse of \(\begin{bmatrix} 1 \amp -1 \amp 1 \\ 2 \amp -1 \amp 2 \\ 0 \amp 2 \amp c \end{bmatrix}\) in terms of \(c. \)</article></p></section></section></div></main>
 </div>
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>
 <script src="https://pretextbook.org/js/0.11/login.js"></script>
