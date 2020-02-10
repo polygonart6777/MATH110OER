@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-09T21:06:31-08:00    *-->
+<!--*    on 2020-02-09T22:58:33-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -403,7 +403,7 @@ I
 </div>
 </div></div>
 </div></article></p>
-<p id="p-564"><article class="exercise-like" id="exercise-79"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<p id="p-564"><article class="exercise-like" id="ex-sums-of-inverses-of-matrices"><h6 class="heading"><span class="codenumber">6.</span></h6>
 <aside class="aside-like" id="aside-87"><p id="p-565">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.4.41)</p></aside> Let \(A \) and \(B \) denote \(n \times n \) invertible matrices. <ol class="lower-alpha">
 <li id="li-412">
 <p id="p-566">Show that \(A^{-1} + B^{-1}  = A^{-1}(A + B) B^{-1}. \)</p>
@@ -523,13 +523,100 @@ A =\begin{bmatrix} 2 \amp 1 \\ -1 \amp 3 \end{bmatrix}, \ \ B = \begin{bmatrix} 
 <a data-knowl="" class="id-ref" data-refid="hk-solution-142" id="solution-142"><span class="type">Solution</span></a><div id="hk-solution-142" class="hidden-content tex2jax_ignore"><div class="solution">Suppose \(A=0\text{,}\) the matrix all of whose entries are \(0\text{.}\) Then for <em class="emphasis">any</em> matrix \(B\text{,}\) we have \(AB=0\text{.}\) In particular, \(AB=AC\) for <em class="emphasis">all</em> matrices \(B, C\text{.}\) This shows that \(AB = AC \) does not necessarily imply \(B = C \text{.}\)</div></div>
 </div></article></p>
 <p id="p-581"><article class="exercise-like" id="exercise-84"><h6 class="heading"><span class="codenumber">11.</span></h6>
-<aside class="aside-like" id="aside-92"><p id="p-582">(Source: <a data-knowl="./knowl/ref-RB.html" title="Bibliographic Entry 5">[5]</a>, Chapter Matrix Inverses, Exercise MISLE.T10)</p></aside> Construct an example to demonstrate that \((A + B)^{-1} = A^{-1} + B^{-1} \) is not true for all square matrices \(A \) and \(B \) of the same size.</article></p>
+<aside class="aside-like" id="aside-92"><p id="p-582">(Source: <a data-knowl="./knowl/ref-RB.html" title="Bibliographic Entry 5">[5]</a>, Chapter Matrix Inverses, Exercise MISLE.T10)</p></aside> Construct an example to demonstrate that \((A + B)^{-1} = A^{-1} + B^{-1} \) is not true for all invertible square matrices \(A \) and \(B \) of the same size.<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-93" id="hint-93"><span class="type">Hint</span></a><div id="hk-hint-93" class="hidden-content tex2jax_ignore"><div class="solution">It is possible to choose \(A=B\) to be a very nice matrix.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-118" id="answer-118"><span class="type">Answer</span></a><div id="hk-answer-118" class="hidden-content tex2jax_ignore"><div class="solution">The equality is not true for \(A=B=I\text{.}\)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-143" id="solution-143"><span class="type">Solution</span></a><div id="hk-solution-143" class="hidden-content tex2jax_ignore"><div class="solution">We choose \(A=B=I\text{,}\) so that<div class="displaymath">
+\begin{equation*}
+(A + B)^{-1} = (2I)^{-1} = \frac{1}{2}I^{-1} = \frac{1}{2}I,
+\end{equation*}
+</div>while<div class="displaymath">
+\begin{equation*}
+A^{-1} + B^{-1} = 2 I^{-1} = 2 I.
+\end{equation*}
+</div>This shows that \((A + B)^{-1}\) does not equal \(A^{-1} + B^{-1}\text{.}\)</div></div>
+</div></article></p>
 <p id="p-583"><article class="exercise-like" id="exercise-85"><h6 class="heading"><span class="codenumber">12.</span></h6>
 <aside class="aside-like" id="aside-93"><p id="p-584">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.40)</p></aside> Let<div class="displaymath">
 \begin{equation*}
 A = \begin{bmatrix} 1 \amp 2 \amp 3 \\ 2 \amp 1 \amp 4 \\ 1 \amp 0 \amp 4 \end{bmatrix}. 
 \end{equation*}
-</div>Find \(A^{-1} \) if possible.  If \(A^{-1} \) does not exist, explain why.</article></p>
+</div>Find \(A^{-1} \) if possible.  If \(A^{-1} \) does not exist, explain why.<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-94" id="hint-94"><span class="type">Hint</span></a><div id="hk-hint-94" class="hidden-content tex2jax_ignore"><div class="solution">See <a data-knowl="./knowl/hint-how-to-find-inverse-matrix.html" title="Hint 3.3.1.1">Hint 3.3.1.1</a> for an algorithm to find \(A^{-1}\text{,}\) if it exists.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-119" id="answer-119"><span class="type">Answer</span></a><div id="hk-answer-119" class="hidden-content tex2jax_ignore"><div class="solution">\(A^{-1}=
+\frac{1}{7}
+\begin{bmatrix} -4 \amp 8 \amp -5 \\ 4 \amp -1 \amp -2 \\ 1 \amp -2 \amp 3 \end{bmatrix}\text{.}\)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-144" id="solution-144"><span class="type">Solution</span></a><div id="hk-solution-144" class="hidden-content tex2jax_ignore"><div class="solution">We compute<div class="displaymath">
+\begin{align*}
+\matr{ccc|ccc}
+{
+1 \amp 2 \amp 3 \amp 1 \amp 0 \amp 0
+\\
+2 \amp 1 \amp 4 \amp 0 \amp 1 \amp 0
+\\
+1 \amp 0 \amp 4 \amp 0 \amp 0 \amp 1
+}
+\overset{-2R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+\amp\matr{ccc|ccc}
+{
+1 \amp 2 \amp 3 \amp 1 \amp 0 \amp 0
+\\
+0 \amp -3 \amp -2 \amp -2 \amp 1 \amp 0
+\\
+0 \amp -2 \amp 1 \amp -1 \amp 0 \amp 1
+}\\
+\overset{-2R_{2}+3R_{3}}{\longrightarrow}
+\amp\matr{ccc|ccc}
+{
+1 \amp 2 \amp 3 \amp 1 \amp 0 \amp 0
+\\
+0 \amp -3 \amp -2 \amp -2 \amp 1 \amp 0
+\\
+0 \amp 0 \amp 7 \amp 1 \amp -2 \amp 3
+}
+\end{align*}
+</div>From this, we can already see that the matrix is invertible. We continue:<div class="displaymath">
+\begin{align*}
+\matr{ccc|ccc}
+{
+1 \amp 2 \amp 3 \amp 1 \amp 0 \amp 0
+\\
+0 \amp -3 \amp -2 \amp -2 \amp 1 \amp 0
+\\
+0 \amp 0 \amp 7 \amp 1 \amp -2 \amp 3
+}
+\overset{\frac{1}{7}R_{3}}{\underset{2R_{3}'+R_{2}}{\longrightarrow}}
+\amp\matr{ccc|ccc}
+{
+1 \amp 2 \amp 3 \amp 1 \amp 0 \amp 0
+\\
+0 \amp -3 \amp 0 \amp \frac{-12}{7} \amp \frac{3}{7} \amp \frac{6}{7}
+\\
+0 \amp 0 \amp 1 \amp \frac{1}{7} \amp \frac{-2}{7} \amp \frac{3}{7}
+}\\
+\overset{-\frac{1}{3}R_{2}}{\underset{-3R_{3}+R_{1}}{\longrightarrow}}
+\amp\matr{ccc|ccc}
+{
+1 \amp 2 \amp 0 \amp \frac{4}{7} \amp \frac{6}{7} \amp \frac{-9}{7}
+\\
+0 \amp 1 \amp 0 \amp \frac{4}{7} \amp \frac{-1}{7} \amp \frac{-2}{7}
+\\
+0 \amp 0 \amp 1 \amp \frac{1}{7} \amp \frac{-2}{7} \amp \frac{3}{7}
+}\\
+\overset{-2R_{2}+R_{1}}{\longrightarrow}
+\amp\matr{ccc|ccc}
+{
+1 \amp 0 \amp 0 \amp \frac{-4}{7} \amp \frac{8}{7} \amp \frac{-5}{7}
+\\
+0 \amp 1 \amp 0 \amp \frac{4}{7} \amp \frac{-1}{7} \amp \frac{-2}{7}
+\\
+0 \amp 0 \amp 1 \amp \frac{1}{7} \amp \frac{-2}{7} \amp \frac{3}{7}
+}.
+\end{align*}
+</div>We conclude that \(A^{-1}=
+\frac{1}{7}
+\begin{bmatrix} -4 \amp 8 \amp -5 \\ 4 \amp -1 \amp -2 \\ 1 \amp -2 \amp 3 \end{bmatrix}\)</div></div>
+</div></article></p>
 <p id="p-585"><article class="exercise-like" id="exercise-86"><h6 class="heading"><span class="codenumber">13.</span></h6>
 <aside class="aside-like" id="aside-94"><p id="p-586">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.4.17)</p></aside> If \(c \ne 0, \) find the inverse of \(\begin{bmatrix} 1 \amp -1 \amp 1 \\ 2 \amp -1 \amp 2 \\ 0 \amp 2 \amp c \end{bmatrix}\) in terms of \(c. \)</article></p></section></section></div></main>
 </div>
