@@ -10802,14 +10802,16 @@
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
 							<aside><p> (Source: <xref ref="ref-PS" />, Chapter 4, Exercise 4.5.3) </p></aside>
-							Suppose <m> AB = AC </m> and <m> A </m> is a non-invertible <m> n \times n </m> matrix.  Does it follow that <m> B = C? </m> Explain why or why not?
+							Suppose <m> AB = AC </m> and <m> A </m> is a non-invertible <m> n \times n </m> matrix.  Does it follow that <m> B = C? </m> Explain why or why not.
 						</statement>
 						<!-- <hint>
 						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<solution>
+							Suppose <m>A=0</m>, the matrix all of whose entries are <m>0</m>. Then for <em>any</em> matrix <m>B</m>, we have <m>AB=0</m>. In particular, <m>AB=AC</m> for <em>all</em> matrices <m>B, C</m>. This shows that <m> AB = AC </m> does not necessarily imply <m> B = C </m>.
+						</solution>
+						<answer>
+							No, <m> B</m> is not necessarily equal to <m>C</m>.
+						</answer>
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
