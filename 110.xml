@@ -10788,14 +10788,16 @@
 						<p><exercise><!-- xml:id="ex-" -->
 						<statement>
 							<aside><p> (Source: <xref ref="ref-PS" />, Chapter 4, Exercise 4.5.2) </p></aside>
-							Suppose <m> AB = AC </m> and <m> A </m> is an invertible <m> n \times n </m> matrix.  Does it follow that <m> B = C? </m> Explain why or why not?
+							Suppose <m> AB = AC </m> and <m> A </m> is an invertible <m> n \times n </m> matrix.  Does it follow that <m> B = C? </m> Explain why or why not.
 						</statement>
 						<!-- <hint>
 						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<solution>
+							By assumption, <m>A^{-1}</m> exists. In particular, we can multiply the equation <m> AB = AC </m> on the left by <m>A^{-1}</m> and we get <m>A^{-1}AB = A^{-1}AC </m>. Recall that <m>A^{-1}</m> has the property that <m>A^{-1}A=I</m>, so our equation can be rewritten as <m>IB=IC</m>. Since <m>I</m> has the property <m>B=IB</m> and <m>C=IC</m>, we conclude that, indeed, <m> B = C. </m>
+						</solution>
+						<answer>
+							Yes, <m> B = C. </m>
+						</answer> 
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
