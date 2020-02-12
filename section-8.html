@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-11T16:47:36-08:00    *-->
+<!--*    on 2020-02-11T17:07:35-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -609,7 +609,81 @@ A = \begin{bmatrix} 4 \amp 1  \amp 3 \\ 2 \amp 1 \amp 2 \\ 1 \amp 0 \amp 1 \end{
 </div></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-92" id="hint-92"><span class="type">Hint</span></a><div id="hk-hint-92" class="hidden-content tex2jax_ignore"><div class="solution">You can use either <a data-knowl="./knowl/eq-inverse-of-2-times-2-matrix.html" title="Answer 3.3.2.1">Answer 3.3.2.1</a> or  <a data-knowl="./knowl/hint-how-to-find-inverse-matrix.html" title="Hint 3.3.1.1">Hint 3.3.1.1</a> to find the inverse of a \(2\times 2\) matrix. For a \(3\times 3\text{,}\) only the latter will work.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-92" id="hint-92"><span class="type">Hint</span></a><div id="hk-hint-92" class="hidden-content tex2jax_ignore"><div class="solution">You can use <a data-knowl="./knowl/eq-inverse-of-2-times-2-matrix.html" title="Answer 3.3.2.1">Answer 3.3.2.1</a> to find the inverse of a \(2\times 2\) matrix.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-119" id="answer-119"><span class="type">Answer</span></a><div id="hk-answer-119" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
+<li id="li-422">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-120" id="answer-120"><span class="type">Answer</span></a><div id="hk-answer-120" class="hidden-content tex2jax_ignore"><div class="solution">No.</div></div>
+</li>
+<li id="li-423">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-121" id="answer-121"><span class="type">Answer</span></a><div id="hk-answer-121" class="hidden-content tex2jax_ignore"><div class="solution">No.</div></div>
+</li>
+<li id="li-424">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-122" id="answer-122"><span class="type">Answer</span></a><div id="hk-answer-122" class="hidden-content tex2jax_ignore"><div class="solution">Yes.</div></div>
+</li>
+</ol></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-143" id="solution-143"><span class="type">Solution</span></a><div id="hk-solution-143" class="hidden-content tex2jax_ignore"><div class="solution">In the situation of  \(2\times 2\) matrices, we can approach the question in two different ways: one option is using <a data-knowl="./knowl/eq-inverse-of-2-times-2-matrix.html" title="Answer 3.3.2.1">Answer 3.3.2.1</a> to compute the inverse \(A^{-1}\) of \(A\) and then check whether it coincides with the given matrix \(B\text{.}\) The second option is to check whether \(AB=I\) and \(BA=I\text{,}\) which is exactly the case if \(B=A^{-1}\text{.}\) This latter approach also works for matrices of larger size. <ol class="lower-alpha">
+<li id="li-419">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-144" id="solution-144"><span class="type">Solution</span></a><div id="hk-solution-144" class="hidden-content tex2jax_ignore"><div class="solution">For this example, we use <a data-knowl="./knowl/eq-inverse-of-2-times-2-matrix.html" title="Answer 3.3.2.1">Answer 3.3.2.1</a> to compute \(A^{-1}\text{:}\)<div class="displaymath">
+\begin{align*}
+A^{-1}
+=\amp
+\begin{bmatrix} 2 \amp 4 \\ 1 \amp 4 \end{bmatrix}^{-1}
+=
+\frac{1}{2\cdot 4 - 1\cdot 4}
+\begin{bmatrix} 4 \amp -4 \\ -1 \amp 2 \end{bmatrix}\\
+=\amp
+\frac{1}{4}
+\begin{bmatrix} 4 \amp -4 \\ -1 \amp 2 \end{bmatrix}
+\neq
+\frac{1}{2}\begin{bmatrix} 3 \amp -4 \\ -1 \amp 2 \end{bmatrix}
+=
+B.
+\end{align*}
+</div>We conclude that, no, \(B\) is not the inverse of \(A\text{.}\)</div></div>
+</li>
+<li id="li-420">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-145" id="solution-145"><span class="type">Solution</span></a><div id="hk-solution-145" class="hidden-content tex2jax_ignore"><div class="solution">For this example, we will actually check whether \(B\) behaves like the inverse of \(A\text{,}\) so we compute:<div class="displaymath">
+\begin{align*}
+AB \amp=
+\begin{bmatrix} 1 \amp -2 \\ 4 \amp -7 \end{bmatrix}
+\begin{bmatrix} -1 \amp 2 \\ -4 \amp 7 \end{bmatrix}\\
+\amp=
+\begin{bmatrix}	1\cdot (-1) - 2 \cdot (-4) 
+\amp 	1 \cdot 2 - 2 \cdot 7
+\\
+4\cdot (-1) - 7 \cdot (-4) 
+\amp 	4 \cdot 2 - 7 \cdot 7	
+\end{bmatrix}
+=
+\begin{bmatrix}	7 \amp -12	\\ 24 \amp -41	\end{bmatrix}.
+\end{align*}
+</div>Since \(AB \neq I\text{,}\) we conclude that, no, \(B\) is not the inverse of \(A\text{.}\) (We note that it was not necessary to compute all entries of \(AB\text{;}\) it suffices to see that its \((1,1)\)-entry is not equal to \(1\text{.}\))</div></div>
+</li>
+<li id="li-421">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-146" id="solution-146"><span class="type">Solution</span></a><div id="hk-solution-146" class="hidden-content tex2jax_ignore"><div class="solution">We compute:<div class="displaymath">
+\begin{align*}
+AB \amp=
+\begin{bmatrix} 4 \amp 1  \amp 3 \\ 2 \amp 1 \amp 2 \\ 1 \amp 0 \amp 1 \end{bmatrix}
+\begin{bmatrix} 1  \amp -1 \amp -1  \\ 0 \amp 1 \amp -2 \\ -1 \amp 1 \amp 2 \end{bmatrix}\\
+\amp=
+\begin{bmatrix} 4 +0 -3 \amp -4+1+3  \amp -4-2+6 \\ 2+0-2 \amp -2+1+2 \amp -2-2+4 \\ 1+0-1 \amp -1+0+1 \amp -1+0+2 \end{bmatrix}
+=
+\begin{bmatrix} 1 \amp 0  \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix}.
+\end{align*}
+</div>At this point, there is hope that \(B\) is the inverse of \(A\text{,}\) but we still need to check the other equation, so we compute:<div class="displaymath">
+\begin{align*}
+BA \amp=											
+\begin{bmatrix} 1  \amp -1 \amp -1  \\ 0 \amp 1 \amp -2 \\ -1 \amp 1 \amp 2 \end{bmatrix}
+\begin{bmatrix} 4 \amp 1  \amp 3 \\ 2 \amp 1 \amp 2 \\ 1 \amp 0 \amp 1 \end{bmatrix}\\
+\amp=
+\begin{bmatrix} 4-2-1 \amp  1-1+0  \amp 3-2-1 \\ 0+2-2  \amp 0+1+0 \amp 0+2-2  \\  -4+2+2 \amp -1+1+0 \amp -3+2+2  \end{bmatrix}
+=
+\begin{bmatrix} 1 \amp 0  \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix}.
+\end{align*}
+</div>We conclude that, indeed, \(B\) is the inverse of \(A\text{.}\)</div></div>
+</li>
+</ol>
+</div></div>
 </div></article></p>
 <p id="p-562"><article class="exercise-like" id="ex-prod-of-invertible-matrices"><h6 class="heading"><span class="codenumber">5.</span></h6>
 <aside class="aside-like" id="aside-86"><p id="p-563">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.50)</p></aside> Suppose \(A, B\) are two invertible matrices of the same size. Show that \((AB)^{-1} = B^{-1}A^{-1} \) by verifying that<div class="displaymath">
@@ -618,7 +692,7 @@ A B (B^{-1}A^{-1}) =I \quad\text{and}\quad B^{-1}A^{-1} (AB) =I.
 \end{equation*}
 </div>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-143" id="solution-143"><span class="type">Solution</span></a><div id="hk-solution-143" class="hidden-content tex2jax_ignore"><div class="solution">Recall that \(A^{-1}\) is the unique matrix that satisfies \(AA^{-1}=I=A^{-1}A\text{,}\) and similarly for \(B^{-1}\text{.}\) We use this in the following computation:<div class="displaymath">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-147" id="solution-147"><span class="type">Solution</span></a><div id="hk-solution-147" class="hidden-content tex2jax_ignore"><div class="solution">Recall that \(A^{-1}\) is the unique matrix that satisfies \(AA^{-1}=I=A^{-1}A\text{,}\) and similarly for \(B^{-1}\text{.}\) We use this in the following computation:<div class="displaymath">
 \begin{align*}
 A B (B^{-1}A^{-1})
 \amp=
@@ -655,10 +729,10 @@ I
 </div></article></p>
 <p id="p-564"><article class="exercise-like" id="ex-sums-of-inverses-of-matrices"><h6 class="heading"><span class="codenumber">6.</span></h6>
 <aside class="aside-like" id="aside-87"><p id="p-565">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.4.41)</p></aside> Let \(A \) and \(B \) denote \(n \times n \) invertible matrices. <ol class="lower-alpha">
-<li id="li-419">
+<li id="li-425">
 <p id="p-566">Show that \(A^{-1} + B^{-1}  = A^{-1}(A + B) B^{-1}. \)</p>
 <p id="p-567"><a data-knowl="" class="id-ref" data-refid="hk-hint-93" id="hint-93"><span class="type">Hint</span></a><div id="hk-hint-93" class="hidden-content tex2jax_ignore"><div class="solution">Recall that, for a matrix \(A\text{,}\) its inverse \(A^{-1}\) is <em class="emphasis">uniquely</em> determined by satisfying the property \(AA^{-1}=I\) and \(A^{-1}A=I\text{.}\) This means: If a matrix \(C\) satisfies \(AC=I\) and \(CA=I\text{,}\) then \(C=A^{-1}\text{.}\)</div></div></p>
-<p id="p-568"><a data-knowl="" class="id-ref" data-refid="hk-solution-144" id="solution-144"><span class="type">Solution</span></a><div id="hk-solution-144" class="hidden-content tex2jax_ignore"><div class="solution">By substracting \(B^{-1}\) from each side of the equation, we see that the claim is equivalent to showing that \(A^{-1}  = A^{-1}(A + B) B^{-1} - B^{-1}. \) Recall that \(A^{-1}\) is the unique matrix that satisfies both \(AA^{-1}=I\) and \(A^{-1}A=I\text{,}\) so it suffices to show that  \(A^{-1}(A + B) B^{-1} - B^{-1}\) has this property. We compute (using Theorem 2.1.1 in Section 2.1 of <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>):<div class="displaymath">
+<p id="p-568"><a data-knowl="" class="id-ref" data-refid="hk-solution-148" id="solution-148"><span class="type">Solution</span></a><div id="hk-solution-148" class="hidden-content tex2jax_ignore"><div class="solution">By substracting \(B^{-1}\) from each side of the equation, we see that the claim is equivalent to showing that \(A^{-1}  = A^{-1}(A + B) B^{-1} - B^{-1}. \) Recall that \(A^{-1}\) is the unique matrix that satisfies both \(AA^{-1}=I\) and \(A^{-1}A=I\text{,}\) so it suffices to show that  \(A^{-1}(A + B) B^{-1} - B^{-1}\) has this property. We compute (using Theorem 2.1.1 in Section 2.1 of <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>):<div class="displaymath">
 \begin{align*}
 \amp A \bigl( A^{-1}(A + B) B^{-1} - B^{-1} \bigr)
 \amp\\
@@ -709,10 +783,10 @@ I
 \end{align*}
 </div>We have checked that the matrix \(A^{-1}(A + B) B^{-1} - B^{-1} \) indeed satisfies the defining property of \(A^{-1}\text{.}\)</div></div></p>
 </li>
-<li id="li-420">
+<li id="li-426">
 <p id="p-569">If \(A + B \) is also invertible, show that \(A^{-1} + B^{-1} \) is invertible and find a formula for \((A^{-1} + B^{-1})^{-1}. \)</p>
 <p id="p-570"><a data-knowl="" class="id-ref" data-refid="hk-hint-94" id="hint-94"><span class="type">Hint</span></a><div id="hk-hint-94" class="hidden-content tex2jax_ignore"><div class="solution">Use the first part of the exercise. Then use <a data-knowl="./knowl/ex-prod-of-invertible-matrices.html" title="Exercise 3.3.5">Exercise 3.3.5</a>.</div></div></p>
-<p id="p-571"><a data-knowl="" class="id-ref" data-refid="hk-solution-145" id="solution-145"><span class="type">Solution</span></a><div id="hk-solution-145" class="hidden-content tex2jax_ignore"><div class="solution">By assumption, \(C:= A + B \) is invertible. By the first part of the exercise, we know that \(A^{-1} + B^{-1}  = A^{-1}(A + B) B^{-1},\) i.e. \(A^{-1} + B^{-1}= A^{-1}CB^{-1}.\) The matrix \(A^{-1}CB^{-1}\) is invertible as product of invertible matrices by <a data-knowl="./knowl/ex-prod-of-invertible-matrices.html" title="Exercise 3.3.5">Exercise 3.3.5</a>, which shows that \(A^{-1} + B^{-1}\) is invertible. <a data-knowl="./knowl/ex-prod-of-invertible-matrices.html" title="Exercise 3.3.5">Exercise 3.3.5</a> also gives a formula for the inverse of a product, which we use for the equalities \((*)\) in the following computation:<div class="displaymath">
+<p id="p-571"><a data-knowl="" class="id-ref" data-refid="hk-solution-149" id="solution-149"><span class="type">Solution</span></a><div id="hk-solution-149" class="hidden-content tex2jax_ignore"><div class="solution">By assumption, \(C:= A + B \) is invertible. By the first part of the exercise, we know that \(A^{-1} + B^{-1}  = A^{-1}(A + B) B^{-1},\) i.e. \(A^{-1} + B^{-1}= A^{-1}CB^{-1}.\) The matrix \(A^{-1}CB^{-1}\) is invertible as product of invertible matrices by <a data-knowl="./knowl/ex-prod-of-invertible-matrices.html" title="Exercise 3.3.5">Exercise 3.3.5</a>, which shows that \(A^{-1} + B^{-1}\) is invertible. <a data-knowl="./knowl/ex-prod-of-invertible-matrices.html" title="Exercise 3.3.5">Exercise 3.3.5</a> also gives a formula for the inverse of a product, which we use for the equalities \((*)\) in the following computation:<div class="displaymath">
 \begin{align*}
 (A^{-1}CB^{-1})^{-1} 
 \amp=(A^{-1}[CB^{-1}])^{-1}
@@ -721,37 +795,37 @@ I
 =B C^{-1} A.
 \end{align*}
 </div>We conclude: The inverse of \(A^{-1} + B^{-1} \) is given by \(B C^{-1} A = B (A + B)^{-1} A.\)</div></div></p>
-<p id="p-572"><a data-knowl="" class="id-ref" data-refid="hk-answer-119" id="answer-119"><span class="type">Answer</span></a><div id="hk-answer-119" class="hidden-content tex2jax_ignore"><div class="solution">The inverse of \(A^{-1} + B^{-1} \) is given by \(B (A + B)^{-1} A.\)</div></div></p>
+<p id="p-572"><a data-knowl="" class="id-ref" data-refid="hk-answer-123" id="answer-123"><span class="type">Answer</span></a><div id="hk-answer-123" class="hidden-content tex2jax_ignore"><div class="solution">The inverse of \(A^{-1} + B^{-1} \) is given by \(B (A + B)^{-1} A.\)</div></div></p>
 </li>
 </ol></article></p>
 <p id="p-573"><article class="exercise-like" id="exercise-80"><h6 class="heading"><span class="codenumber">7.</span></h6>
 <aside class="aside-like" id="aside-88"><p id="p-574">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.5.2)</p></aside> In each case find the elementary matrix \(E \) such that \(B = EA. \)<ol class="lower-alpha cols2">
-<li id="li-421"><div class="displaymath">
+<li id="li-427"><div class="displaymath">
 \begin{equation*}
 A =\begin{bmatrix} 2 \amp 1 \\ 3 \amp -1 \end{bmatrix}, \ \ B = \begin{bmatrix} 2 \amp 1 \\ 1 \amp -2 \end{bmatrix} 
 \end{equation*}
 </div></li>
-<li id="li-422"><div class="displaymath">
+<li id="li-428"><div class="displaymath">
 \begin{equation*}
 A =\begin{bmatrix} -1 \amp 2 \\ 0 \amp 1 \end{bmatrix}, \ \ B = \begin{bmatrix} 1 \amp -2 \\ 0 \amp 1 \end{bmatrix} 
 \end{equation*}
 </div></li>
-<li id="li-423"><div class="displaymath">
+<li id="li-429"><div class="displaymath">
 \begin{equation*}
 A = \begin{bmatrix} 1 \amp 1 \\ -1 \amp 2 \end{bmatrix}, \ \ B = \begin{bmatrix} -1 \amp 2 \\ 1 \amp 1 \end{bmatrix} 
 \end{equation*}
 </div></li>
-<li id="li-424"><div class="displaymath">
+<li id="li-430"><div class="displaymath">
 \begin{equation*}
 A =\begin{bmatrix} 4 \amp 1 \\ 3 \amp 2 \end{bmatrix}, \ \ B = \begin{bmatrix} 1 \amp -1 \\ 3 \amp 2 \end{bmatrix} 
 \end{equation*}
 </div></li>
-<li id="li-425"><div class="displaymath">
+<li id="li-431"><div class="displaymath">
 \begin{equation*}
 A =\begin{bmatrix} -1 \amp 1 \\ 1 \amp -1 \end{bmatrix}, \ \ B = \begin{bmatrix} -1 \amp 1 \\ -1 \amp 1 \end{bmatrix} 
 \end{equation*}
 </div></li>
-<li id="li-426"><div class="displaymath">
+<li id="li-432"><div class="displaymath">
 \begin{equation*}
 A =\begin{bmatrix} 2 \amp 1 \\ -1 \amp 3 \end{bmatrix}, \ \ B = \begin{bmatrix} -1 \amp 3 \\ 2 \amp 1 \end{bmatrix} 
 \end{equation*}
@@ -759,24 +833,24 @@ A =\begin{bmatrix} 2 \amp 1 \\ -1 \amp 3 \end{bmatrix}, \ \ B = \begin{bmatrix} 
 </ol></article></p>
 <p id="p-575"><article class="exercise-like" id="exercise-81"><h6 class="heading"><span class="codenumber">8.</span></h6>
 <aside class="aside-like" id="aside-89"><p id="p-576">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.59)</p></aside> Let \(A = \begin{bmatrix}  1 \amp 2 \amp 1 \\ 0 \amp 5 \amp 1 \\ 2 \amp -1 \amp 4 \end{bmatrix}. \)  Suppose a row operation is applied to \(A \)  and the result is \(B  = \begin{bmatrix} 1 \amp 2 \amp 1 \\ 0 \amp 5 \amp 1 \\ 1 \amp -\frac{1}{2} \amp 2 \end{bmatrix}.\)<ol class="lower-alpha">
-<li id="li-427">Find the elementary matrix \(E \) such that \(EA = B. \)</li>
-<li id="li-428">Find the inverse of \(E, E^{-1},\) such that \(E^{-1}B = A. \)</li>
+<li id="li-433">Find the elementary matrix \(E \) such that \(EA = B. \)</li>
+<li id="li-434">Find the inverse of \(E, E^{-1},\) such that \(E^{-1}B = A. \)</li>
 </ol></article></p>
 <p id="p-577"><article class="exercise-like" id="exercise-82"><h6 class="heading"><span class="codenumber">9.</span></h6>
 <aside class="aside-like" id="aside-90"><p id="p-578">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 4, Exercise 4.5.2)</p></aside> Suppose \(AB = AC \) and \(A \) is an invertible \(n \times n \) matrix.  Does it follow that \(B = C? \) Explain why or why not.<div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-120" id="answer-120"><span class="type">Answer</span></a><div id="hk-answer-120" class="hidden-content tex2jax_ignore"><div class="solution">Yes, \(B = C. \)</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-146" id="solution-146"><span class="type">Solution</span></a><div id="hk-solution-146" class="hidden-content tex2jax_ignore"><div class="solution">By assumption, \(A^{-1}\) exists. In particular, we can multiply the equation \(AB = AC \) on the left by \(A^{-1}\) and we get \(A^{-1}AB = A^{-1}AC \text{.}\) Recall that \(A^{-1}\) has the property that \(A^{-1}A=I\text{,}\) so our equation can be rewritten as \(IB=IC\text{.}\) Since \(I\) has the property \(B=IB\) and \(C=IC\text{,}\) we conclude that, indeed, \(B = C. \)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-124" id="answer-124"><span class="type">Answer</span></a><div id="hk-answer-124" class="hidden-content tex2jax_ignore"><div class="solution">Yes, \(B = C. \)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-150" id="solution-150"><span class="type">Solution</span></a><div id="hk-solution-150" class="hidden-content tex2jax_ignore"><div class="solution">By assumption, \(A^{-1}\) exists. In particular, we can multiply the equation \(AB = AC \) on the left by \(A^{-1}\) and we get \(A^{-1}AB = A^{-1}AC \text{.}\) Recall that \(A^{-1}\) has the property that \(A^{-1}A=I\text{,}\) so our equation can be rewritten as \(IB=IC\text{.}\) Since \(I\) has the property \(B=IB\) and \(C=IC\text{,}\) we conclude that, indeed, \(B = C. \)</div></div>
 </div></article></p>
 <p id="p-579"><article class="exercise-like" id="exercise-83"><h6 class="heading"><span class="codenumber">10.</span></h6>
 <aside class="aside-like" id="aside-91"><p id="p-580">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 4, Exercise 4.5.3)</p></aside> Suppose \(AB = AC \) and \(A \) is a non-invertible \(n \times n \) matrix.  Does it follow that \(B = C? \) Explain why or why not.<div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-121" id="answer-121"><span class="type">Answer</span></a><div id="hk-answer-121" class="hidden-content tex2jax_ignore"><div class="solution">No, \(B\) is not necessarily equal to \(C\text{.}\)</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-147" id="solution-147"><span class="type">Solution</span></a><div id="hk-solution-147" class="hidden-content tex2jax_ignore"><div class="solution">Suppose \(A=0\text{,}\) the matrix all of whose entries are \(0\text{.}\) Then for <em class="emphasis">any</em> matrix \(B\text{,}\) we have \(AB=0\text{.}\) In particular, \(AB=AC\) for <em class="emphasis">all</em> matrices \(B, C\text{.}\) This shows that \(AB = AC \) does not necessarily imply \(B = C \text{.}\)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-125" id="answer-125"><span class="type">Answer</span></a><div id="hk-answer-125" class="hidden-content tex2jax_ignore"><div class="solution">No, \(B\) is not necessarily equal to \(C\text{.}\)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-151" id="solution-151"><span class="type">Solution</span></a><div id="hk-solution-151" class="hidden-content tex2jax_ignore"><div class="solution">Suppose \(A=0\text{,}\) the matrix all of whose entries are \(0\text{.}\) Then for <em class="emphasis">any</em> matrix \(B\text{,}\) we have \(AB=0\text{.}\) In particular, \(AB=AC\) for <em class="emphasis">all</em> matrices \(B, C\text{.}\) This shows that \(AB = AC \) does not necessarily imply \(B = C \text{.}\)</div></div>
 </div></article></p>
 <p id="p-581"><article class="exercise-like" id="exercise-84"><h6 class="heading"><span class="codenumber">11.</span></h6>
 <aside class="aside-like" id="aside-92"><p id="p-582">(Source: <a data-knowl="./knowl/ref-RB.html" title="Bibliographic Entry 5">[5]</a>, Chapter Matrix Inverses, Exercise MISLE.T10)</p></aside> Construct an example to demonstrate that \((A + B)^{-1} = A^{-1} + B^{-1} \) is not true for all invertible square matrices \(A \) and \(B \) of the same size.<div class="solutions">
 <a data-knowl="" class="id-ref" data-refid="hk-hint-95" id="hint-95"><span class="type">Hint</span></a><div id="hk-hint-95" class="hidden-content tex2jax_ignore"><div class="solution">It is possible to choose \(A=B\) to be a very nice matrix.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-122" id="answer-122"><span class="type">Answer</span></a><div id="hk-answer-122" class="hidden-content tex2jax_ignore"><div class="solution">The equality is not true for \(A=B=I\text{.}\)</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-148" id="solution-148"><span class="type">Solution</span></a><div id="hk-solution-148" class="hidden-content tex2jax_ignore"><div class="solution">We choose \(A=B=I\text{,}\) so that<div class="displaymath">
+<a data-knowl="" class="id-ref" data-refid="hk-answer-126" id="answer-126"><span class="type">Answer</span></a><div id="hk-answer-126" class="hidden-content tex2jax_ignore"><div class="solution">The equality is not true for \(A=B=I\text{.}\)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-152" id="solution-152"><span class="type">Solution</span></a><div id="hk-solution-152" class="hidden-content tex2jax_ignore"><div class="solution">We choose \(A=B=I\text{,}\) so that<div class="displaymath">
 \begin{equation*}
 (A + B)^{-1} = (2I)^{-1} = \frac{1}{2}I^{-1} = \frac{1}{2}I,
 \end{equation*}
@@ -793,10 +867,10 @@ A = \begin{bmatrix} 1 \amp 2 \amp 3 \\ 2 \amp 1 \amp 4 \\ 1 \amp 0 \amp 4 \end{b
 \end{equation*}
 </div>Find \(A^{-1} \) if possible.  If \(A^{-1} \) does not exist, explain why.<div class="solutions">
 <a data-knowl="" class="id-ref" data-refid="hk-hint-96" id="hint-96"><span class="type">Hint</span></a><div id="hk-hint-96" class="hidden-content tex2jax_ignore"><div class="solution">See <a data-knowl="./knowl/hint-how-to-find-inverse-matrix.html" title="Hint 3.3.1.1">Hint 3.3.1.1</a> for an algorithm to find \(A^{-1}\text{,}\) if it exists.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-123" id="answer-123"><span class="type">Answer</span></a><div id="hk-answer-123" class="hidden-content tex2jax_ignore"><div class="solution">\(A^{-1}=
+<a data-knowl="" class="id-ref" data-refid="hk-answer-127" id="answer-127"><span class="type">Answer</span></a><div id="hk-answer-127" class="hidden-content tex2jax_ignore"><div class="solution">\(A^{-1}=
 \frac{1}{7}
 \begin{bmatrix} -4 \amp 8 \amp -5 \\ 4 \amp -1 \amp -2 \\ 1 \amp -2 \amp 3 \end{bmatrix}\text{.}\)</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-149" id="solution-149"><span class="type">Solution</span></a><div id="hk-solution-149" class="hidden-content tex2jax_ignore"><div class="solution">We compute<div class="displaymath">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-153" id="solution-153"><span class="type">Solution</span></a><div id="hk-solution-153" class="hidden-content tex2jax_ignore"><div class="solution">We compute<div class="displaymath">
 \begin{align*}
 \matr{ccc|ccc}
 {
