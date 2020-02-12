@@ -10522,10 +10522,179 @@
 							<aside><p> (Source: <xref ref="ref-PS" />, Chapter 4, Exercise 4.5.6) </p></aside>
 							Let <m> A </m> be a <m> 2 \times 2 </m> invertible matrix, with <m> A = \begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix}. </m> Find a formula for <m> A^{-1} </m> in terms of <m> a,b,c,d. </m> 
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
+						<hint>
+							You can use <xref ref="hint-how-to-find-inverse-matrix"/>. Be careful not to divide by zero (you need to make a case distinction).
+						</hint>
+						<solution>
+							We use the approach from <xref ref="hint-how-to-find-inverse-matrix"/>, i.e. we want to row-reduce the following augmented matrix:
+							<md>
+								<mrow>
+									\matr{cc|cc}
+									{
+										a \amp b \amp 1 \amp 0
+										\\
+										c \amp d \amp 0 \amp 1
+									}
+								</mrow>
+							</md>
+							But we need to be careful not to divide by zero in the process.
+
+							By assumption, the matrix <m>A</m> is invertible. In particular, according to <xref ref="hint-how-to-find-inverse-matrix"/>, the reduced row-echelon form of <m>A</m> is the identity matrix. Therefore, if <m>a=0</m>, then neither <m>c</m> nor <m>b</m> can be zero (because else the first column resp. row of <m>A</m> would be zero). This means that we can make a case distinction: Assume first that <m>a\neq 0</m>, so that multiplying a row by <m>a</m> is a valid row operation:
+							<md>
+								<mrow>
+									\matr{cc|cc}
+									{
+										a \amp b \amp 1 \amp 0
+										\\
+										c \amp d \amp 0 \amp 1
+									}
+									\overset{aR_{2}}{\longrightarrow}
+									\amp 
+									\matr{cc|cc}
+									{
+										a \amp b \amp 1 \amp 0
+										\\
+										ac \amp ad \amp 0 \amp a
+									}
+								</mrow>
+								<mrow>
+									\overset{-cR_{1} + R_{2}}{\longrightarrow}
+									\amp\matr{cc|cc}
+									{
+										a \amp b \amp 1 \amp 0
+										\\
+										0 \amp ad-bc \amp -c \amp a
+									}
+									.
+								</mrow>
+							</md>
+							Since the RREF of <m>A</m> is the identity (by the assumption that <m>A</m> is invertible), we conclude that <m>\det(A) = ad-bc \neq 0</m>. We proceed:
+							<md>
+								<mrow>
+									\matr{cc|cc}{
+										a \amp b \amp 1 \amp 0
+										\\
+										0 \amp ad-bc \amp -c \amp a
+									}
+									\overset{\frac{1}{\det(A)}R_{2}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										a \amp b \amp 1 \amp 0
+										\\
+										0 \amp 1 \amp \frac{-c}{\det(A)} \amp \frac{a}{\det(A)}
+									}
+								</mrow>
+								<mrow>
+									\overset{-bR_{2}+R_{1}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										a \amp 0 \amp 1 + \frac{bc}{\det(A)} \amp \frac{-ab}{\det(A)}
+										\\
+										0 \amp 1 \amp \frac{-c}{\det(A)} \amp \frac{a}{\det(A)}
+									}
+								</mrow>
+								<mrow>
+									=\amp
+									\matr{cc|cc}
+									{
+										a \amp 0 \amp \frac{ad}{\det(A)} \amp \frac{-ab}{\det(A)}
+										\\
+										0 \amp 1 \amp \frac{-c}{\det(A)} \amp \frac{a}{\det(A)}
+									}
+								</mrow>
+								<mrow>
+									\overset{\frac{1}{a}R_{1}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										1 \amp 0 \amp \frac{d}{\det(A)} \amp \frac{-b}{\det(A)}
+										\\
+										0 \amp 1 \amp \frac{-c}{\det(A)} \amp \frac{a}{\det(A)}
+									}
+									,
+								</mrow>
+							</md>
+							where the last operation is valid since <m>a\neq 0</m>.	We conclude: If <m>A= \begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix}</m> is invertible and <m>a\neq 0</m>, then <m>\det(A) \neq 0</m>, and <m>A^{-1} =\frac{1}{\det(A)} \begin{bmatrix} d \amp -b \\ -c \amp a \end{bmatrix}.</m>
+
+
+							The case where <m>a=0</m> works similarly: As explained above, this implies that <m>c\neq 0</m> and <m>b\neq 0</m>. This allows us to do the following row operations:
+							<md>
+								<mrow>
+									\matr{cc|cc}
+									{
+										a \amp b \amp 1 \amp 0
+										\\
+										c \amp d \amp 0 \amp 1
+									}
+									=
+									\amp
+									\matr{cc|cc}
+									{
+										0 \amp b \amp 1 \amp 0
+										\\
+										c \amp d \amp 0 \amp 1
+									}
+								</mrow>
+								<mrow>
+									\overset{ \frac{1}{c}R_{2}}{\underset{\frac{1}{b}R_{1}}{\longrightarrow}}
+									\amp
+									\matr{cc|cc}
+									{
+										0 \amp 1 \amp \frac{1}{b} \amp 0
+										\\
+										1 \amp \frac{d}{c} \amp 0 \amp \frac{1}{c}
+									}
+								</mrow>
+								<mrow>
+									\overset{R_{1}\leftrightarrow R_{2}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										1 \amp \frac{d}{c} \amp 0 \amp \frac{1}{c}
+										\\
+										0 \amp 1 \amp \frac{1}{b} \amp 0
+									}
+								</mrow>
+								<mrow>
+									\overset{-\frac{d}{c}R_{1}+R_{2}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										1 \amp 0 \amp -\frac{d}{c}\cdot \frac{1}{b} \amp \frac{1}{c}
+										\\
+										0 \amp 1 \amp \frac{1}{b} \amp 0
+									}
+									.
+								</mrow>
+							</md>
+							In the case where <m>a=0</m>, we have found the inverse of <m>A</m> to be 
+							<me>
+								A^{-1}
+								=
+								\begin{bmatrix}
+									-\frac{d}{c}\cdot \frac{1}{b} \amp \frac{1}{c}
+									\\
+									\frac{1}{b} \amp 0
+								\end{bmatrix}
+								=
+								\frac{1}{-bc} 
+								\begin{bmatrix}
+									d \amp -b
+									\\
+									-c \amp a
+								\end{bmatrix}
+								=
+								\frac{1}{\det (A)} 
+								\begin{bmatrix}
+									d \amp -b
+									\\
+									-c \amp a
+								\end{bmatrix}.
+							</me>
+							All in all, we have shown:  If <m>A= \begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix}</m> is invertible (where <m>a</m> is any value), then <m>\det(A) \neq 0</m>, and <m>A^{-1} =\frac{1}{\det(A)} \begin{bmatrix} d \amp -b \\ -c \amp a \end{bmatrix}.</m>
+						</solution>
 						<answer xml:id="eq-inverse-of-2-times-2-matrix">
 							If <m> A = \begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix}</m> is invertible, its inverse is given by
 							<me>
