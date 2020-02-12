@@ -10713,17 +10713,123 @@
 							<ol>
 								<li> <me> \begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix} \begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \end{bmatrix} </me></li>
 								<li> <me> \begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix} \begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} 2 \\ 0 \end{bmatrix} </me></li>
-							</ol>
-							Now give the the solution in terms of <m> a </m> and <m> b </m> to 
-							<me> \begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix} \begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} a \\ b \end{bmatrix}. </me> 
+								<li>
+									<me> \begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix} \begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} a \\ b \end{bmatrix}</me> 
+									(give the solution in terms of <m> a </m> and <m> b </m>)
+								</li>
+							</ol>							
 						</statement>
 						<hint>
-							You can use either <xref ref="eq-inverse-of-2-times-2-matrix"/> or  <xref ref="hint-how-to-find-inverse-matrix"/> to find the inverse matrix.
+							It is easiest to use <xref ref="eq-inverse-of-2-times-2-matrix"/> to determine the inverse matrix.
 						</hint>
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint>
+							Note that, given an invertible matrix <m>A</m>, we can multiply the vector equation
+							<me>
+								A \vec{x} = \vec{y}
+							</me>
+							on the left by <m>A^{-1}</m>, which yields the equivalent equation:
+							<me>
+								\vec{x} = A^{-1}\vec{y}
+								.
+							</me>
+						</hint>
+						<solution>
+							First, we determine the inverse of <m> \begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix} </m> using <xref ref="eq-inverse-of-2-times-2-matrix"/>:
+							<me>
+								\begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix}^{-1}
+								=
+								\frac{1}{2\cdot 1 - 4\cdot 1}
+								\begin{bmatrix} 1 \amp -4 \\ -1 \amp 2 \end{bmatrix}
+								=
+								\frac{1}{2}
+								\begin{bmatrix} -1 \amp 4 \\ 1 \amp -2 \end{bmatrix}
+								.
+							</me>
+							<ol>
+								<li>
+								<solution>
+									Note that
+									<me>
+										\begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix} \begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}
+										\iff
+										\begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix}^{-1}
+										\begin{bmatrix} 1 \\ 2 \end{bmatrix}.
+									</me>
+									We compute:
+									<me>
+										\begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix}^{-1}
+										\begin{bmatrix} 1 \\ 2 \end{bmatrix}
+										=
+										\frac{1}{2}
+										\begin{bmatrix} -1 \amp 4 \\ 1 \amp -2 \end{bmatrix}
+										\begin{bmatrix} 1 \\ 2 \end{bmatrix}
+										=
+										\frac{1}{2}
+										\begin{bmatrix} -1 + 4\cdot 2 \\ 1 - 2 \cdot 2 \end{bmatrix}
+										=
+										\begin{bmatrix} \frac{7}{2} \\ \frac{-3}{2} \end{bmatrix}
+										.
+									</me>
+									The solution is therefore given by <m>\begin{bmatrix} x \\ y \end{bmatrix}=\begin{bmatrix} \frac{7}{2} \\ \frac{-3}{2} \end{bmatrix}.</m>
+								</solution></li>
+								<li><solution>
+									Note that
+									<me>\begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix} \begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} 2 \\ 0 \end{bmatrix} 
+										\iff
+										\begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix}^{-1}\begin{bmatrix} 2 \\ 0 \end{bmatrix} .
+									</me>
+									We compute:
+									<me>
+										\begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix}^{-1}\begin{bmatrix} 2 \\ 0 \end{bmatrix}
+										=
+										\frac{1}{2}
+										\begin{bmatrix} -1 \amp 4 \\ 1 \amp -2 \end{bmatrix}
+										\begin{bmatrix} 2 \\ 0 \end{bmatrix}
+										=
+										\frac{1}{2}
+										\begin{bmatrix} -2 + 4\cdot 0 \\ 2 -2\cdot 0 \end{bmatrix}
+										=
+										\begin{bmatrix} -1 \\ 1 \end{bmatrix}
+										.
+									</me>
+									The solution is therefore given by <m>\begin{bmatrix} x \\ y \end{bmatrix}=\begin{bmatrix} -1 \\ 1 \end{bmatrix}</m>.
+								</solution></li>
+								<li><solution>
+									Just as before, we see that
+									<me> \begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix} \begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} a \\ b \end{bmatrix}
+										\iff
+									 \begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix}^{-1}\begin{bmatrix} a \\ b \end{bmatrix}.
+									</me> 
+									We compute:
+									<me>
+										\begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix}^{-1}
+										\begin{bmatrix} a \\ b \end{bmatrix}
+										=
+										\frac{1}{2}
+										\begin{bmatrix} -1 \amp 4 \\ 1 \amp -2 \end{bmatrix}
+										\begin{bmatrix} a \\ b \end{bmatrix}
+										=
+										\frac{1}{2}
+										\begin{bmatrix} -a + 4 b \\ a - 2b \end{bmatrix}.
+									</me> 
+									The solution is therefore given by <m>\begin{bmatrix} x \\ y \end{bmatrix}=\begin{bmatrix} \frac{-a}{2} + 2 b \\ \frac{a}{2} - b \end{bmatrix}.</m>
+								</solution></li>
+							</ol>
+						</solution>
+						<answer>
+							<ol>
+								<li>
+								<answer>
+									<m>\begin{bmatrix} x \\ y \end{bmatrix}=\begin{bmatrix} \frac{7}{2} \\ \frac{-3}{2} \end{bmatrix}</m>
+								</answer></li>
+								<li><answer>
+									<m>\begin{bmatrix} x \\ y \end{bmatrix}=\begin{bmatrix} -1 \\ 1 \end{bmatrix}</m>
+								</answer></li>
+								<li><answer>
+									<m>\begin{bmatrix} x \\ y \end{bmatrix}=\begin{bmatrix} \frac{-a}{2} + 2 b \\ \frac{a}{2} - b \end{bmatrix}</m>
+								</answer></li>
+							</ol>
+						</answer>
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
