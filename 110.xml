@@ -11486,14 +11486,104 @@
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 2, Exercise 2.4.17) </p></aside>
-							If <m> c \ne 0, </m> find the inverse of <m>\begin{bmatrix} 1 \amp -1 \amp 1 \\ 2 \amp -1 \amp 2 \\ 0 \amp 2 \amp c \end{bmatrix}</m> in terms of <m> c. </m>      
+							If <m> c \ne 0, </m> find the inverse of <m>A=\begin{bmatrix} 1 \amp -1 \amp 1 \\ 2 \amp -1 \amp 2 \\ 0 \amp 2 \amp c \end{bmatrix}</m> in terms of <m> c. </m>      
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint>
+							See <xref ref="hint-how-to-find-inverse-matrix"/> for an algorithm to find <m>A^{-1}</m>, if it exists.
+						</hint>
+						<solution>
+							We use <xref ref="hint-how-to-find-inverse-matrix"/>, i.e. we will row-reduce the augmented matrix <m>\matr{c|c}{A\amp I_{3}}</m>:
+							<md>
+								<mrow>
+									\matr{ccc|ccc}
+									{
+										1 \amp -1 \amp 1 \amp 1 \amp 0 \amp 0
+										\\
+										2 \amp -1 \amp 2 \amp 0 \amp 1 \amp 0
+										\\
+										0 \amp 2 \amp c  \amp 0 \amp 0 \amp 1
+									}
+									\overset{-2R_{1}+R_{2}}{\longrightarrow}
+									\amp\matr{ccc|ccc}
+									{
+										1 \amp -1 \amp 1 \amp 1 \amp 0 \amp 0
+										\\
+										0 \amp 1 \amp 0 \amp -2 \amp 1 \amp 0
+										\\
+										0 \amp 2 \amp c  \amp 0 \amp 0 \amp 1
+									}
+								</mrow>
+								<mrow>
+									\overset{-2R_{2}+R_{3}}{\underset{R_{2}+R_{1}}{\longrightarrow}}
+									\amp\matr{ccc|ccc}
+									{
+										1 \amp 0 \amp 1 \amp -1 \amp 1 \amp 0
+										\\
+										0 \amp 1 \amp 0 \amp -2 \amp 1 \amp 0
+										\\
+										0 \amp 0 \amp c  \amp 4 \amp -2 \amp 1
+									}.
+								</mrow>
+							</md>
+							Since <m>c\neq 0</m>, dividing by <m>c</m> is a valid row-operation, so that
+							<md>
+								<mrow>
+									\matr{ccc|ccc}
+									{
+										1 \amp 0 \amp 1 \amp -1 \amp 1 \amp 0
+										\\
+										0 \amp 1 \amp 0 \amp -2 \amp 1 \amp 0
+										\\
+										0 \amp 0 \amp c  \amp 4 \amp -2 \amp 1
+									}
+									\overset{\frac{1}{c}R_{3}}{\longrightarrow}
+									\amp\matr{ccc|ccc}
+									{
+										1 \amp 0 \amp 1 \amp -1 \amp 1 \amp 0
+										\\
+										0 \amp 1 \amp 0 \amp -2 \amp 1 \amp 0
+										\\
+										0 \amp 0 \amp 1  \amp \frac{4}{c} \amp \frac{-2}{c} \amp \frac{1}{c}
+									}
+								</mrow>
+								<mrow>
+									\overset{-R_{3}+R_{1}}{\longrightarrow}
+									\amp\matr{ccc|ccc}
+									{
+										1 \amp 0 \amp 0 \amp -1-\frac{4}{c} \amp 1+\frac{2}{c} \amp \frac{-1}{c}
+										\\
+										0 \amp 1 \amp 0 \amp -2 \amp 1 \amp 0
+										\\
+										0 \amp 0 \amp 1  \amp \frac{4}{c} \amp \frac{-2}{c} \amp \frac{1}{c}
+									}.
+								</mrow>
+							</md>
+							We conclude that
+							<me>
+								A^{-1}
+								=
+								\begin{bmatrix}
+									-1-\frac{4}{c} \amp 1+\frac{2}{c} \amp \frac{-1}{c} \\ -2 \amp 1 \amp 0 \\ \frac{4}{c} \amp \frac{-2}{c} \amp \frac{1}{c}
+								\end{bmatrix}
+								=
+								\frac{1}{c}
+								\begin{bmatrix}
+									-c-4 \amp c+2 \amp -1 \\ -2c \amp c \amp 0 \\ 4 \amp -2 \amp 1
+								\end{bmatrix}
+								.
+							</me>
+						</solution>
+						<answer>
+							<me>
+								A^{-1}
+								=
+								\frac{1}{c}
+								\begin{bmatrix}
+									-c-4 \amp c+2 \amp -1 \\ -2c \amp c \amp 0 \\ 4 \amp -2 \amp 1
+								\end{bmatrix}
+								.
+							</me>
+						</answer>
 					</exercise></p>
 				</exercises>
 				</section>
