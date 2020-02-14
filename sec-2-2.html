@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-11T17:07:34-08:00    *-->
+<!--*    on 2020-02-14T09:42:53-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -544,11 +544,11 @@ var js_version = 0.11;
 </div></article></p>
 <p id="p-460"><article class="exercise-like" id="exercise-47"><h6 class="heading"><span class="codenumber">5.</span></h6>
 <aside class="aside-like" id="aside-49"><p id="p-461">(Source: <a data-knowl="./knowl/ref-RB.html" title="Bibliographic Entry 5">[5]</a> in the Section for <a class="external" href="http://linear.ups.edu/fcla/section-RREF.html" target="_blank">Row-reduced Echelon Form</a>, Exercise RREF.T10.)</p></aside> Prove that each of the three row operations is reversible. More precisely, if the matrix \(B\) is obtained from \(A\) by application of a single row operation, show that there is a single row operation that will transform B back into \(A\text{.}\)<div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-62" id="hint-62"><span class="type">Hint</span></a><div id="hk-hint-62" class="hidden-content tex2jax_ignore"><div class="solution">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-row-operations" id="hint-row-operations"><span class="type">Hint</span></a><div id="hk-hint-row-operations" class="hidden-content tex2jax_ignore"><div class="solution">
 <aside class="aside-like" id="aside-50"><p id="p-462">(Adapted from <a data-knowl="./knowl/ref-RB.html" title="Bibliographic Entry 5">[5]</a>, the Section for <a class="external" href="http://linear.ups.edu/fcla/section-RREF.html" target="_blank">Row-reduced Echelon Form</a>)</p></aside> The three row operations are given by: <ol class="lower-alpha">
 <li id="li-217">Swap the locations of row \(i\) with row \(j\text{:}\) \(R_{i} \leftrightarrow R_{j}\text{.}\)</li>
 <li id="li-218">Multiply each entry of a single row \(i\) by a nonzero quantity \(\alpha\text{:}\) \(\alpha R_{i}\text{.}\)</li>
-<li id="li-219">Multiply each entry of one row \(R_{i}\) by some quantity \(\alpha\text{,}\) and add these values to the entries in the same columns of a second row \(R_{j}\text{.}\) Leave the first row the same after this operation (i.e. \(R_{i}\) remains unchanged), but replace the second row by the new values (i.e. row \(j\) is new): \(\alpha R_{i} + R_{j}\text{.}\)</li>
+<li id="li-219">Multiply each entry of one row \(R_{i}\) by some quantity \(\alpha\text{,}\) and add these values to the entries in the same columns of a second row \(R_{j}\) (where \(i\neq j\)). Leave the first row the same after this operation (i.e. \(R_{i}\) remains unchanged), but replace the second row by the new values (i.e. row \(j\) is new): \(\alpha R_{i} + R_{j}\text{.}\)</li>
 </ol>
 </div></div>
 <a data-knowl="" class="id-ref" data-refid="hk-solution-59" id="solution-59"><span class="type">Solution</span></a><div id="hk-solution-59" class="hidden-content tex2jax_ignore"><div class="solution">First, assume that \(B \overset{R_{i}\leftrightarrow R_{j}}{\longrightarrow} A\text{.}\) Then \(A \overset{R_{j}\leftrightarrow R_{i}}{\longrightarrow} B\text{,}\) so the first row operation is invertible. To be more precise, the first row operation is its own inverse. Next, assume that \(B \overset{\alpha R_{i}}{\longrightarrow} A\text{.}\) For this to be a legitimate row operation, we must have \(\alpha\neq 0\text{.}\) In particular, \(\frac{1}{\alpha}\) exists and \(A \overset{\frac{1}{\alpha} R_{i}}{\longrightarrow} B\) is also a legitimate row operation. Thus, the row operation of multiplication by \(\alpha\) is invertible with inverse the row operation of multiplication by \(\frac{1}{\alpha}\text{.}\) Lastly, assume that \(B \overset{\alpha R_{i} + R_{j}}{\longrightarrow} A\text{.}\) If \(\alpha = 0 \) or row \(i\) in \(B\) is a zero-row, then the operation does nothing and \(B=A\text{.}\) If \(\alpha\neq 0\) and row \(i\) in \(B\) is not a zero-row, then \(A\) differs from \(B\) exactly in row \(j\text{;}\) in particular, row \(i\) is the same in \(A\) and \(B\text{.}\) We see from this that \(A \overset{-\frac{1}{\alpha} R_{i} + R_{j}}{\longrightarrow} B\) inverts the row operation.</div></div>

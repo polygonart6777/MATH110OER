@@ -7379,12 +7379,12 @@
 							<aside><p> (Source: <xref ref="ref-RB"/> in the Section for <url href="http://linear.ups.edu/fcla/section-RREF.html">Row-reduced Echelon Form</url>, Exercise RREF.T10.) </p></aside>
 							Prove that each of the three row operations is reversible. More precisely, if the matrix <m>B</m> is obtained from <m>A</m> by application of a single row operation, show that there is a single row operation that will transform B back into <m>A</m>.
 						</statement>
-						<hint><aside><p>(Adapted from <xref ref="ref-RB"/>, the Section for <url href="http://linear.ups.edu/fcla/section-RREF.html">Row-reduced Echelon Form</url>)</p></aside>
+						<hint xml:id="hint-row-operations"><aside><p>(Adapted from <xref ref="ref-RB"/>, the Section for <url href="http://linear.ups.edu/fcla/section-RREF.html">Row-reduced Echelon Form</url>)</p></aside>
 							 The three row operations are given by:
 							 <ol>
 							 	<li> Swap the locations of row <m>i</m> with row <m>j</m>: <m>R_{i} \leftrightarrow R_{j}</m>.</li>
 							 	<li> Multiply each entry of a single row <m>i</m> by a nonzero quantity <m>\alpha</m>: <m>\alpha R_{i}</m>.</li>
-							 	<li> Multiply each entry of one row <m>R_{i}</m> by some quantity <m>\alpha</m>, and add these values to the entries in the same columns of a second row <m>R_{j}</m>. Leave the first row the same after this operation (i.e. <m>R_{i}</m> remains unchanged), but replace the second row by the new values (i.e. row <m>j</m> is new): <m>\alpha R_{i} + R_{j}</m>.</li>
+							 	<li> Multiply each entry of one row <m>R_{i}</m> by some quantity <m>\alpha</m>, and add these values to the entries in the same columns of a second row <m>R_{j}</m> (where <m>i\neq j</m>). Leave the first row the same after this operation (i.e. <m>R_{i}</m> remains unchanged), but replace the second row by the new values (i.e. row <m>j</m> is new): <m>\alpha R_{i} + R_{j}</m>.</li>
 							 </ol>
 						</hint>
 						<solution>
@@ -11106,22 +11106,195 @@
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 2, Exercise 2.5.2) </p></aside>
-							In each case find the elementary matrix <m> E </m> such that <m> B = EA. </m>
-							<ol cols = "2">
-								<li> <me> A =\begin{bmatrix} 2 \amp 1 \\ 3 \amp -1 \end{bmatrix}, \ \ B = \begin{bmatrix} 2 \amp 1 \\ 1 \amp -2 \end{bmatrix} </me> </li>
-								<li> <me> A =\begin{bmatrix} -1 \amp 2 \\ 0 \amp 1 \end{bmatrix}, \ \ B = \begin{bmatrix} 1 \amp -2 \\ 0 \amp 1 \end{bmatrix} </me> </li> 
-								<li> <me> A = \begin{bmatrix} 1 \amp 1 \\ -1 \amp 2 \end{bmatrix}, \ \ B = \begin{bmatrix} -1 \amp 2 \\ 1 \amp 1 \end{bmatrix} </me> </li>
-								<li> <me> A =\begin{bmatrix} 4 \amp 1 \\ 3 \amp 2 \end{bmatrix}, \ \ B = \begin{bmatrix} 1 \amp -1 \\ 3 \amp 2 \end{bmatrix} </me> </li>
-								<li> <me> A =\begin{bmatrix} -1 \amp 1 \\ 1 \amp -1 \end{bmatrix}, \ \ B = \begin{bmatrix} -1 \amp 1 \\ -1 \amp 1 \end{bmatrix} </me> </li>
-								<li> <me> A =\begin{bmatrix} 2 \amp 1 \\ -1 \amp 3 \end{bmatrix}, \ \ B = \begin{bmatrix} -1 \amp 3 \\ 2 \amp 1 \end{bmatrix} </me> </li>
+							In each case, find the elementary matrix <m> E </m> such that <m> B = EA. </m>
+							<ol>
+								<li>
+									<me> A =\begin{bmatrix} 2 \amp 1 \\ 3 \amp -1 \end{bmatrix},
+										\ \ B = \begin{bmatrix} 2 \amp 1 \\ 1 \amp -2 \end{bmatrix} </me>
+
+									<solution>
+										We see that <m>A \overset{-R_{1} + R_{2}}{\longrightarrow}B</m>, so the row operation is of type III. This means:
+										<me>
+											B = EA
+											\ \text{ where } \
+											E
+											=
+											\begin{bmatrix} 1 \amp 0 \\ -1 \amp 1 \end{bmatrix}.
+										</me>
+									</solution>
+									<answer>
+										<me>
+											E
+											=
+											\begin{bmatrix} 1 \amp 0 \\ -1 \amp 1 \end{bmatrix}.
+										</me>
+									</answer>
+								</li>
+								<li>
+									<me> A =\begin{bmatrix} -1 \amp 2 \\ 0 \amp 1 \end{bmatrix},
+									\ \ B = \begin{bmatrix} 1 \amp -2 \\ 0 \amp 1 \end{bmatrix} </me>
+									<solution>
+										We see that <m>A \overset{(-1)R_{1}}{\longrightarrow}B</m>, so the row operation is of type I. This means:
+										<me>
+											B = EA
+											\ \text{ where } \
+											E
+											=
+											\begin{bmatrix} -1 \amp 0 \\ 0 \amp 1 \end{bmatrix}.
+										</me>
+									</solution>
+									<answer>
+										<me>
+											E
+											=
+											\begin{bmatrix} -1 \amp 0 \\ 0 \amp 1 \end{bmatrix}.
+										</me>
+									</answer>
+								</li> 
+								<li> <me> A = \begin{bmatrix} 1 \amp 1 \\ -1 \amp 2 \end{bmatrix}, \ \ B = \begin{bmatrix} -1 \amp 2 \\ 1 \amp 1 \end{bmatrix} </me>
+									<solution>
+										We see that <m>A \overset{R_{1}\leftrightarrow R_{2}}{\longrightarrow}B</m>, so the row operation is of type II. This means:
+										<me>
+											B = EA
+											\ \text{ where } \
+											E
+											=
+											\begin{bmatrix} 0 \amp 1 \\ 1 \amp 0 \end{bmatrix}.
+										</me>
+									</solution>
+									<answer>
+										<me>
+											E
+											=
+											\begin{bmatrix} 0 \amp 1 \\ 1 \amp 0 \end{bmatrix}.
+										</me>
+									</answer>
+								</li>
+								<li>
+									<me> A =\begin{bmatrix} 4 \amp 1 \\ 3 \amp 2 \end{bmatrix}, \ \ B = \begin{bmatrix} 1 \amp -1 \\ 3 \amp 2 \end{bmatrix} </me>
+
+									<solution>
+										We see that <m>A \overset{-R_{2}+R_{1}}{\longrightarrow}B</m>, so the row operation is of type III. This means:
+										<me>
+											B = EA
+											\ \text{ where } \
+											E
+											=
+											\begin{bmatrix} 1 \amp -1 \\ 0 \amp 1 \end{bmatrix}.
+										</me>
+									</solution>
+									<answer>
+										<me>
+											E
+											=
+											\begin{bmatrix} 1 \amp -1 \\ 0 \amp 1 \end{bmatrix}.
+										</me>
+									</answer>
+								</li>
+								<li>
+									<me> A =\begin{bmatrix} -1 \amp 1 \\ 1 \amp -1 \end{bmatrix}, \ \ B = \begin{bmatrix} -1 \amp 1 \\ -1 \amp 1 \end{bmatrix} </me>
+
+									<solution>
+										We see that <m>A \overset{(-1)R_{2}}{\longrightarrow}B</m>, so the row operation is of type I. This means:
+										<me>
+											B = EA
+											\ \text{ where } \
+											E
+											=
+											\begin{bmatrix} 1 \amp 0 \\ 0 \amp -1 \end{bmatrix}.
+										</me>
+									</solution>
+									<answer>
+										<me>
+											E
+											=
+											\begin{bmatrix} 1 \amp 0 \\ 0 \amp -1 \end{bmatrix}.
+										</me>
+									</answer>
+								</li>
+								<li>
+									<me> A =\begin{bmatrix} 2 \amp 1 \\ -1 \amp 3 \end{bmatrix}, \ \ B = \begin{bmatrix} -1 \amp 3 \\ 2 \amp 1 \end{bmatrix} </me>
+									<solution>
+										We see that <m>A \overset{R_{1}\leftrightarrow R_{2}}{\longrightarrow}B</m>, so the row operation is of type II. This means:
+										<me>
+											B = EA
+											\ \text{ where } \
+											E
+											=
+											\begin{bmatrix} 0 \amp 1 \\ 1 \amp 0 \end{bmatrix}.
+										</me>
+									</solution>
+									<answer>
+										<me>
+											E
+											=
+											\begin{bmatrix} 0 \amp 1 \\ 1 \amp 0 \end{bmatrix}.
+										</me>
+									</answer>
+								</li>
 							</ol>
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint>
+							Recall the three different types of elementary row operations from <xref ref="hint-row-operations"/>. Each of them corresponds to left-multiplication by an elementary matrix <m>E</m>.
+						</hint>
+						<hint>
+							The row operation <m>R_{k}\leftrightarrow R_{l}</m> corresponds to multiplication on the left with the matrix <m>[e_{i,j}]</m>, where
+						 	<md>
+						 		<mrow>
+						 		e_{k,l} \amp= 1 = e_{l,k},
+						 		</mrow>
+						 		<mrow>
+						 		e_{i,i} \amp=
+						 		\left\{
+						 			\begin{array}{2}
+						 				1 \amp\amp \text{if } i\neq k \text{ and } i \neq l,
+						 				\\
+						 				0 \amp\amp \text{if } i= k \text{ or } i = l,
+						 			\end{array}
+						 		\right.
+						 		</mrow>
+						 		<mrow>
+						 		e_{i,j} \amp= 0 \text{ for all remaining } i,j .
+							 	</mrow>
+						 	</md>
+						 	We define elementary matrices of this type to be <em>of type I</em>.
+						</hint>
+						<hint>
+							The row operation <m>\alpha R_{k}</m> where <m>\alpha</m> is a non-zero number corresponds to multiplication on the left with the matrix <m>[e_{i,j}]</m>, where
+							<md>
+								<mrow>
+						 		e_{i,j} \amp=
+						 		\left\{
+						 			\begin{array}{2}
+						 				1 \amp\amp \text{if } i=j\neq k,
+						 				\\						 				
+						 				\alpha \amp\amp \text{if } i=j= k, \text{ and}
+						 				\\
+						 				0 \amp\amp \text{if } i\neq j.
+						 			\end{array}
+						 		\right.
+						 		</mrow>
+							</md>
+							We define elementary matrices of this type to be <em>of type II</em>.
+						</hint>
+						<hint>
+							The row operation <m>\alpha R_{k} + R_{l}</m> corresponds to multiplication on the left with the matrix <m>[e_{i,j}]</m>, where
+							<md>
+								<mrow>
+						 		e_{i,j} \amp=
+						 		\left\{
+						 			\begin{array}{2}
+						 				1 \amp\amp \text{if } i=j,
+						 				\\						 				
+						 				\alpha \amp\amp \text{if } i=l \text{ and } j=k, \text{ and}
+						 				\\
+						 				0 \amp\amp \text{for all remaining } i, j.
+						 			\end{array}
+						 		\right.
+						 		</mrow>
+							</md>
+							We define elementary matrices of this type to be <em>of type III</em>.
+						</hint>
 					</exercise></p>
 						<p><exercise><!-- xml:id="ex-" -->
 						<statement>
