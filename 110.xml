@@ -11595,20 +11595,155 @@
 							<aside><p> (Source: <xref ref="ref-PS" />, Chapter 5, Exercise 5.3.1) </p></aside>
 							Which of the following sets are subspace of <m> \mathbb{R}^3? </m> Explain. 
 							<ol>
-							<li>   <m> \displaystyle V_1 = \left\{u = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \ \Bigg| \ |u_1| \le 4 \right\}. </m> </li>
-    		<li> <m> \displaystyle V_2 = \left\{u = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \ \Bigg| \ u_i \ge 0 \ \text{for each } i = 1,2,3 \right\}. </m> </li>
-    		<li> <m> \displaystyle V_3 = \left\{u = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \ \Bigg| \ u_3 + u_1 = 2u_2 \right\}. </m> </li>
-    		<li> <m> \displaystyle V_4 = \left\{u = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \ \Bigg| \ u_3 \ge u_1 \right\}. </m> </li>
-    		<li> <m> \displaystyle V_5 = \left\{u = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \ \Bigg| \ u_3 = u_1 =0 \right\}. </m> </li>
-    	</ol>
+							<li>
+								<m> \displaystyle V_1 = \left\{\mathbf{u} = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \ \Bigg| \ |u_1| \le 4 \right\}. </m>
+								<solution>
+									<m> V_1</m> is not closed unter scalar multiplication: While the vector <m>\mathbf{u} = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}</m> is in <m>V_{1}</m>, the vector <m>5\mathbf{u} = \begin{bmatrix} 5 \\ 0 \\ 0 \end{bmatrix}</m> is not in <m>V_{1}</m>.
+								</solution>
+								<answer>
+									No, <m>V_{1}</m> is not a subspace of <m>\mathbb{R}^{3}</m>
+								</answer>
+							</li>
+				    		<li>
+				    			<m> \displaystyle V_2 = \left\{\mathbf{u} = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \ \Bigg| \ u_i \ge 0 \ \text{for each } i = 1,2,3 \right\}. </m>
+								<solution>
+									<m> V_2</m> is not closed unter scalar multiplication: While the vector <m>\mathbf{u} = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}</m> is in <m>V_{2}</m>, the vector <m>(-1)\mathbf{u} = \begin{bmatrix} -1 \\ -1 \\ -1 \end{bmatrix}</m> is not in <m>V_{2}</m>.
+								</solution>
+								<answer>
+									No, <m>V_{2}</m> is not a subspace of <m>\mathbb{R}^{3}</m>.
+								</answer>
+				    		</li>
+				    		<li>
+				    			<m> \displaystyle V_3 = \left\{\mathbf{u} = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \ \Bigg| \ u_3 + u_1 = 2u_2 \right\}. </m>
+								<solution>
+									We claim that <m>V_{3}</m> is indeed a subspace of <m>\mathbb{R}^{3}</m>, so we have to check that it satisfies the properties listed in <xref ref="def-subspace"/>:
+									<ol>
+										<li>
+											<em>Non-empty</em>: Since <m>0+0=2\cdot 0</m>, the vector <m>\mathbf{u} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}</m> is an element of <m>V_{3}</m>.
+										</li>
+										<li>
+											<em>Closed under scalar multiplication</em>: We take an arbitrary vector <m>\mathbf{u} = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix}\in V_{3}</m> and any scalar <m>\lambda</m>. Since <m>\mathbf{u}\in V_{3}</m>, we know that its entries satisfy the equation <m>u_3 + u_1 = 2u_2</m>. Now, the components of <m>\mathbf{v}:=\lambda \mathbf{u}</m> are given by
+											<me>
+												\begin{bmatrix} v_1 \\ v_2 \\ v_3 \end{bmatrix}
+												=
+												\begin{bmatrix} \lambda \cdot u_1 \\ \lambda \cdot u_2 \\ \lambda \cdot u_3 \end{bmatrix}
+											</me>
+											and they satisfy
+											<me>
+												v_{3} + v_{1}
+												=
+												\lambda \cdot u_{3} + \lambda \cdot u_{1}
+												=
+												\lambda \cdot (u_{3} + u_{1})
+												=
+												\lambda \cdot 2 u_{2}
+												=
+												2 v_{2}
+												.
+											</me>
+											Thus, <m>\mathbf{v}\in V_{3}</m>. We have shown that <m>\lambda \mathbf{u}</m> is an element of <m>V_{3}</m>.
+										</li>
+										<li>
+											<em>Closed under addition</em>: We take two arbitrary vectors <m>\mathbf{u} = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix}</m> and <m>\mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \\ v_3 \end{bmatrix}</m> in <m>V_{3}</m>. Since <m>\mathbf{u}, \mathbf{v}\in V_{3}</m>, we know that their entries satisfy the equation <m>u_3 + u_1 = 2u_2</m> and <m>v_3 + v_1 = 2v_2</m>. This means that the components of
+											<me>
+												\mathbf{w}:=
+												\mathbf{u} + \mathbf{v}
+												<!--= \begin{bmatrix} 0 \\ u_{2} \\ 0 \end{bmatrix} + \begin{bmatrix} 0 \\ v_{2} \\ 0 \end{bmatrix}-->
+												=
+												\begin{bmatrix} u_{1} + v_{1} \\ u_{2} + v_{2} \\ u_{3} + v_{3} \end{bmatrix}
+											</me>
+											satisfy:
+											<md>
+												<mrow>
+													w_{3} + w_{1}
+													\amp=
+													(u_{3}+v_{3}) + (u_{1} + v_{1})
+													=
+													(u_{3}+u_{1}) + ( v_{3}+ v_{1})
+												</mrow>
+												<mrow>
+													\amp=
+													2u_{2} + 2v_{2}
+													=
+													2 (u_{2}+v_{2})
+													=
+													2w_{2}
+													.
+												</mrow>
+											</md>
+											Thus, <m>\mathbf{w}\in V_{3}</m>. We have shown that <m>\mathbf{u}+\mathbf{v}</m> is an element of <m>V_{3}</m>.
+										</li>
+									</ol>
+								</solution>
+								<answer>
+									Yes, <m>V_{3}</m> is a subspace of <m>\mathbb{R}^{3}</m>.
+								</answer>
+				    		</li>
+				    		<li>
+				    			<m> \displaystyle V_4 = \left\{\mathbf{u} = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \ \Bigg| \ u_3 \ge u_1 \right\}. </m>
+								<solution>
+									<m>V_{4}</m> is not closed under scalar multiplication: While the vector <m>\mathbf{u} = \begin{bmatrix} 1 \\ 0 \\ 5 \end{bmatrix}</m> is in <m>V_{4}</m>, the vector <m>(-1)\mathbf{u} = \begin{bmatrix} -1 \\ 0 \\ -5 \end{bmatrix}</m> is not in <m>V_{4}</m>, because <m>-5 \not\geq -1</m>.
+								</solution>
+								<answer>
+									No, <m>V_{4}</m> is not a subspace of <m>\mathbb{R}^{3}</m>.
+								</answer>
+				    		</li>
+				    		<li>
+				    			<m> \displaystyle V_5 = \left\{\mathbf{u} = \begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix} \ \Bigg| \ u_3 = u_1 =0 \right\}. </m>
+								<solution>
+									We claim that <m>V_{5}</m> is indeed a subspace of <m>\mathbb{R}^{3}</m>, so we have to check that it satisfies the properties listed in <xref ref="def-subspace"/>:
+									<ol>
+										<li>
+											<em>Non-empty</em>: The first and third component of <m>\mathbf{u} = \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}</m> are equal to zero, so it is an element of <m>V_{5}</m>.
+										</li>
+										<li>
+											<em>Closed under scalar multiplication</em>: We take an arbitrary vector <m>\mathbf{u}\in V_{5}</m> and any scalar <m>\lambda</m>. Since <m>\mathbf{u}\in V_{5}</m>, we know that <m>\mathbf{u} = \begin{bmatrix} 0 \\ u_{2} \\ 0 \end{bmatrix}</m> for some number <m>u_{2}</m>, so that
+											<me>
+												\lambda \mathbf{u}
+												=
+												\begin{bmatrix} 0 \\ \lambda \cdotu_{2} \\ 0 \end{bmatrix}.
+											</me>
+											The first and third component of <m>\lambda \mathbf{u}</m> are equal to zero, so it is an element of <m>V_{5}</m>.
+										</li>
+										<li>
+											<em>Closed under addition</em>: We take two arbitrary vectors <m>\mathbf{u},\mathbf{v}\in V_{5}</m>. This means that
+											<me>
+												\mathbf{u} = \begin{bmatrix} 0 \\ u_{2} \\ 0 \end{bmatrix},
+												\mathbf{v} = \begin{bmatrix} 0 \\ v_{2} \\ 0 \end{bmatrix}
+												\quad \text{ for some numbers } u_{2}, v_{2}.
+											</me>
+											Therefore,
+											<me>
+												\mathbf{u} + \mathbf{v}
+												<!--= \begin{bmatrix} 0 \\ u_{2} \\ 0 \end{bmatrix} + \begin{bmatrix} 0 \\ v_{2} \\ 0 \end{bmatrix}-->
+												=
+												\begin{bmatrix}  0 \\ u_{2} + v_{2} \\ 0 \end{bmatrix}.
+											</me>
+											The first and third component of <m>\mathbf{u}+\mathbf{v}</m> are equal to zero, so it is an element of <m>V_{5}</m>.
+										</li>
+									</ol>
+								</solution>
+								<answer>
+									Yes, <m>V_{5}</m> is a subspace of <m>\mathbb{R}^{3}</m>.
+								</answer>
+				    		</li>
+				    	</ol>
 
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint xml:id="def-subspace">
+							A subset <m>V</m> of <m>\mathbb{R}^{n}</m> is called <em>subspace</em> if it satisfies the following:
+							<ol>
+								<li>
+									<m>V</m> is non-empty. (Equivalently, <m>V</m> contains <m>\mathbf{0}</m>.)
+								</li>
+								<li>
+									If <m>\mathbf{u}\in V</m> and <m>\lambda\in\mathbb{R}</m> is any scalar, then <m>\lambda\mathbf{u} \in V</m>.
+								</li>
+								<li>
+									If <m>\mathbf{u}, \mathbf{v}\in V</m>, then <m>\mathbf{u}+\mathbf{v} \in V</m>.
+								</li>
+							</ol>
+						</hint>
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
