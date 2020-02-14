@@ -11234,83 +11234,104 @@
 								</li>
 							</ol>
 						</statement>
-						<hint>
-							Recall the three different types of elementary row operations from <xref ref="hint-row-operations"/>. Each of them corresponds to left-multiplication by an elementary matrix <m>E</m>.
-						</hint>
-						<hint>
-							The row operation <m>R_{k}\leftrightarrow R_{l}</m> corresponds to multiplication on the left with the matrix <m>[e_{i,j}]</m>, where
-						 	<md>
-						 		<mrow>
-						 		e_{k,l} \amp= 1 = e_{l,k},
-						 		</mrow>
-						 		<mrow>
-						 		e_{i,i} \amp=
-						 		\left\{
-						 			\begin{array}{2}
-						 				1 \amp\amp \text{if } i\neq k \text{ and } i \neq l,
-						 				\\
-						 				0 \amp\amp \text{if } i= k \text{ or } i = l,
-						 			\end{array}
-						 		\right.
-						 		</mrow>
-						 		<mrow>
-						 		e_{i,j} \amp= 0 \text{ for all remaining } i,j .
-							 	</mrow>
-						 	</md>
-						 	We define elementary matrices of this type to be <em>of type I</em>.
-						</hint>
-						<hint>
-							The row operation <m>\alpha R_{k}</m> where <m>\alpha</m> is a non-zero number corresponds to multiplication on the left with the matrix <m>[e_{i,j}]</m>, where
-							<md>
-								<mrow>
-						 		e_{i,j} \amp=
-						 		\left\{
-						 			\begin{array}{2}
-						 				1 \amp\amp \text{if } i=j\neq k,
-						 				\\						 				
-						 				\alpha \amp\amp \text{if } i=j= k, \text{ and}
-						 				\\
-						 				0 \amp\amp \text{if } i\neq j.
-						 			\end{array}
-						 		\right.
-						 		</mrow>
-							</md>
-							We define elementary matrices of this type to be <em>of type II</em>.
-						</hint>
-						<hint>
-							The row operation <m>\alpha R_{k} + R_{l}</m> corresponds to multiplication on the left with the matrix <m>[e_{i,j}]</m>, where
-							<md>
-								<mrow>
-						 		e_{i,j} \amp=
-						 		\left\{
-						 			\begin{array}{2}
-						 				1 \amp\amp \text{if } i=j,
-						 				\\						 				
-						 				\alpha \amp\amp \text{if } i=l \text{ and } j=k, \text{ and}
-						 				\\
-						 				0 \amp\amp \text{for all remaining } i, j.
-						 			\end{array}
-						 		\right.
-						 		</mrow>
-							</md>
-							We define elementary matrices of this type to be <em>of type III</em>.
+						<hint xml:id="hint-elementary-matrices">
+							Recall the three different types of elementary row operations from <xref ref="hint-row-operations"/>. Each of them corresponds to left-multiplication by an elementary matrix <m>E</m>:
+							<hint>
+								The row operation <m>R_{k}\leftrightarrow R_{l}</m> corresponds to multiplication on the left with the matrix <m>[e_{i,j}]</m>, where
+							 	<md>
+							 		<mrow>
+							 		e_{k,l} \amp= 1 = e_{l,k},
+							 		</mrow>
+							 		<mrow>
+							 		e_{i,i} \amp=
+							 		\left\{
+							 			\begin{array}{2}
+							 				1 \amp\amp \text{if } i\neq k \text{ and } i \neq l,
+							 				\\
+							 				0 \amp\amp \text{if } i= k \text{ or } i = l,
+							 			\end{array}
+							 		\right.
+							 		</mrow>
+							 		<mrow>
+							 		e_{i,j} \amp= 0 \text{ for all remaining } i,j .
+								 	</mrow>
+							 	</md>
+							 	We define elementary matrices of this type to be <em>of type I</em>.
+							</hint>
+							<hint>
+								The row operation <m>\alpha R_{k}</m> where <m>\alpha</m> is a non-zero number corresponds to multiplication on the left with the matrix <m>[e_{i,j}]</m>, where
+								<md>
+									<mrow>
+							 		e_{i,j} \amp=
+							 		\left\{
+							 			\begin{array}{2}
+							 				1 \amp\amp \text{if } i=j\neq k,
+							 				\\						 				
+							 				\alpha \amp\amp \text{if } i=j= k, \text{ and}
+							 				\\
+							 				0 \amp\amp \text{if } i\neq j.
+							 			\end{array}
+							 		\right.
+							 		</mrow>
+								</md>
+								We define elementary matrices of this type to be <em>of type II</em>.
+							</hint>
+							<hint>
+								The row operation <m>\alpha R_{k} + R_{l}</m> corresponds to multiplication on the left with the matrix <m>[e_{i,j}]</m>, where
+								<md>
+									<mrow>
+							 		e_{i,j} \amp=
+							 		\left\{
+							 			\begin{array}{2}
+							 				1 \amp\amp \text{if } i=j,
+							 				\\						 				
+							 				\alpha \amp\amp \text{if } i=l \text{ and } j=k, \text{ and}
+							 				\\
+							 				0 \amp\amp \text{for all remaining } i, j.
+							 			\end{array}
+							 		\right.
+							 		</mrow>
+								</md>
+								We define elementary matrices of this type to be <em>of type III</em>.
+							</hint>						
 						</hint>
 					</exercise></p>
 						<p><exercise><!-- xml:id="ex-" -->
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 2, Exercise 2.1.59) </p></aside>
-							Let <m> A = \begin{bmatrix}  1 \amp 2 \amp 1 \\ 0 \amp 5 \amp 1 \\ 2 \amp -1 \amp 4 \end{bmatrix}. </m>  Suppose a row operation is applied to <m> A </m>  and the result is <m> B  = \begin{bmatrix} 1 \amp 2 \amp 1 \\ 0 \amp 5 \amp 1 \\ 1 \amp -\frac{1}{2} \amp 2 \end{bmatrix}.</m>
+							Let <m> A = \begin{bmatrix}  1 \amp 2 \amp 1 \\ 0 \amp 5 \amp 1 \\ 2 \amp -1 \amp 4 \end{bmatrix}. </m>
+							<!--  Suppose a row operation is applied to <m> A </m>  and the result is-->
+							and <m> B  = \begin{bmatrix} 1 \amp 2 \amp 1 \\ 0 \amp 5 \amp 1 \\ 1 \amp -\frac{1}{2} \amp 2 \end{bmatrix}.</m>
 							<ol>
 								<li> Find the elementary matrix <m> E </m> such that <m> EA = B. </m></li>
 								<li> Find the inverse of <m> E, E^{-1},</m> such that <m> E^{-1}B = A. </m> </li>
 							</ol>
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint>
+							Look into <xref ref="hint-elementary-matrices"/> for the different types of elementary matrices.
+						</hint>
+						<solution>
+							We see that <m>A\overset{\frac{1}{2}R_{3}}{\longrightarrow}B</m>, so the row operation is of type I. This means that
+							<me>
+								B = EA
+								\ \text{ where } \
+								E
+								=
+								\begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp \frac{1}{2}  \end{bmatrix}.
+							</me>
+							In particular, <m>B\overset{2R_{3}}{\longrightarrow}A</m> undoes this operation, so that 
+							<me>
+								E^{-1}
+								=
+								\begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 2 \end{bmatrix}.
+							</me>					
+						</solution>
+						<answer>
+							<ol>
+								<li> <m> E=\begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp \frac{1}{2}  \end{bmatrix} </m></li>
+								<li> <m> E^{-1}=\begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 2 \end{bmatrix}</m> </li>
+							</ol>
+						</answer>
 					</exercise></p>
 
 						<p><exercise><!-- xml:id="ex-" -->

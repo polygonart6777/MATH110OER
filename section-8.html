@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-14T09:42:54-08:00    *-->
+<!--*    on 2020-02-14T09:50:05-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -942,8 +942,7 @@ E
 </li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-95" id="hint-95"><span class="type">Hint</span> <span class="codenumber">1</span></a><div id="hk-hint-95" class="hidden-content tex2jax_ignore"><div class="solution">Recall the three different types of elementary row operations from <a data-knowl="./knowl/hint-row-operations.html" title="Hint 2.2.5.1">Hint 2.2.5.1</a>. Each of them corresponds to left-multiplication by an elementary matrix \(E\text{.}\)</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-hint-96" id="hint-96"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-96" class="hidden-content tex2jax_ignore"><div class="solution">The row operation \(R_{k}\leftrightarrow R_{l}\) corresponds to multiplication on the left with the matrix \([e_{i,j}]\text{,}\) where<div class="displaymath">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-elementary-matrices" id="hint-elementary-matrices"><span class="type">Hint</span></a><div id="hk-hint-elementary-matrices" class="hidden-content tex2jax_ignore"><div class="solution">Recall the three different types of elementary row operations from <a data-knowl="./knowl/hint-row-operations.html" title="Hint 2.2.5.1">Hint 2.2.5.1</a>. Each of them corresponds to left-multiplication by an elementary matrix \(E\text{:}\) <a data-knowl="" class="id-ref" data-refid="hk-hint-96" id="hint-96"><span class="type">Hint</span> <span class="codenumber">1</span></a><div id="hk-hint-96" class="hidden-content tex2jax_ignore"><div class="solution">The row operation \(R_{k}\leftrightarrow R_{l}\) corresponds to multiplication on the left with the matrix \([e_{i,j}]\text{,}\) where<div class="displaymath">
 \begin{align*}
 e_{k,l} \amp= 1 = e_{l,k},\\
 e_{i,i} \amp=
@@ -957,7 +956,7 @@ e_{i,i} \amp=
 e_{i,j} \amp= 0 \text{ for all remaining } i,j .
 \end{align*}
 </div>We define elementary matrices of this type to be <em class="emphasis">of type I</em>.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-hint-97" id="hint-97"><span class="type">Hint</span> <span class="codenumber">3</span></a><div id="hk-hint-97" class="hidden-content tex2jax_ignore"><div class="solution">The row operation \(\alpha R_{k}\) where \(\alpha\) is a non-zero number corresponds to multiplication on the left with the matrix \([e_{i,j}]\text{,}\) where<div class="displaymath">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-97" id="hint-97"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-97" class="hidden-content tex2jax_ignore"><div class="solution">The row operation \(\alpha R_{k}\) where \(\alpha\) is a non-zero number corresponds to multiplication on the left with the matrix \([e_{i,j}]\text{,}\) where<div class="displaymath">
 \begin{align*}
 e_{i,j} \amp=
 \left\{
@@ -971,7 +970,7 @@ e_{i,j} \amp=
 \right.
 \end{align*}
 </div>We define elementary matrices of this type to be <em class="emphasis">of type II</em>.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-hint-98" id="hint-98"><span class="type">Hint</span> <span class="codenumber">4</span></a><div id="hk-hint-98" class="hidden-content tex2jax_ignore"><div class="solution">The row operation \(\alpha R_{k} + R_{l}\) corresponds to multiplication on the left with the matrix \([e_{i,j}]\text{,}\) where<div class="displaymath">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-98" id="hint-98"><span class="type">Hint</span> <span class="codenumber">3</span></a><div id="hk-hint-98" class="hidden-content tex2jax_ignore"><div class="solution">The row operation \(\alpha R_{k} + R_{l}\) corresponds to multiplication on the left with the matrix \([e_{i,j}]\text{,}\) where<div class="displaymath">
 \begin{align*}
 e_{i,j} \amp=
 \left\{
@@ -985,27 +984,51 @@ e_{i,j} \amp=
 \right.
 \end{align*}
 </div>We define elementary matrices of this type to be <em class="emphasis">of type III</em>.</div></div>
+</div></div>
 </div></article></p>
 <p id="p-575"><article class="exercise-like" id="exercise-81"><h6 class="heading"><span class="codenumber">8.</span></h6>
-<aside class="aside-like" id="aside-89"><p id="p-576">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.59)</p></aside> Let \(A = \begin{bmatrix}  1 \amp 2 \amp 1 \\ 0 \amp 5 \amp 1 \\ 2 \amp -1 \amp 4 \end{bmatrix}. \)  Suppose a row operation is applied to \(A \)  and the result is \(B  = \begin{bmatrix} 1 \amp 2 \amp 1 \\ 0 \amp 5 \amp 1 \\ 1 \amp -\frac{1}{2} \amp 2 \end{bmatrix}.\)<ol class="lower-alpha">
+<aside class="aside-like" id="aside-89"><p id="p-576">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.59)</p></aside> Let \(A = \begin{bmatrix}  1 \amp 2 \amp 1 \\ 0 \amp 5 \amp 1 \\ 2 \amp -1 \amp 4 \end{bmatrix}. \) and \(B  = \begin{bmatrix} 1 \amp 2 \amp 1 \\ 0 \amp 5 \amp 1 \\ 1 \amp -\frac{1}{2} \amp 2 \end{bmatrix}.\)<ol class="lower-alpha">
 <li id="li-433">Find the elementary matrix \(E \) such that \(EA = B. \)</li>
 <li id="li-434">Find the inverse of \(E, E^{-1},\) such that \(E^{-1}B = A. \)</li>
-</ol></article></p>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-99" id="hint-99"><span class="type">Hint</span></a><div id="hk-hint-99" class="hidden-content tex2jax_ignore"><div class="solution">Look into <a data-knowl="./knowl/hint-elementary-matrices.html" title="Hint 3.3.7.1">Hint 3.3.7.1</a> for the different types of elementary matrices.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-130" id="answer-130"><span class="type">Answer</span></a><div id="hk-answer-130" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
+<li id="li-435">\(E=\begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp \frac{1}{2}  \end{bmatrix} \)</li>
+<li id="li-436">\(E^{-1}=\begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 2 \end{bmatrix}\)</li>
+</ol></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-156" id="solution-156"><span class="type">Solution</span></a><div id="hk-solution-156" class="hidden-content tex2jax_ignore"><div class="solution">We see that \(A\overset{\frac{1}{2}R_{3}}{\longrightarrow}B\text{,}\) so the row operation is of type I. This means that<div class="displaymath">
+\begin{equation*}
+B = EA
+\ \text{ where } \
+E
+=
+\begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp \frac{1}{2}  \end{bmatrix}.
+\end{equation*}
+</div>In particular, \(B\overset{2R_{3}}{\longrightarrow}A\) undoes this operation, so that<div class="displaymath">
+\begin{equation*}
+E^{-1}
+=
+\begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 2 \end{bmatrix}.
+\end{equation*}
+</div>
+</div></div>
+</div></article></p>
 <p id="p-577"><article class="exercise-like" id="exercise-82"><h6 class="heading"><span class="codenumber">9.</span></h6>
 <aside class="aside-like" id="aside-90"><p id="p-578">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 4, Exercise 4.5.2)</p></aside> Suppose \(AB = AC \) and \(A \) is an invertible \(n \times n \) matrix.  Does it follow that \(B = C? \) Explain why or why not.<div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-130" id="answer-130"><span class="type">Answer</span></a><div id="hk-answer-130" class="hidden-content tex2jax_ignore"><div class="solution">Yes, \(B = C. \)</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-156" id="solution-156"><span class="type">Solution</span></a><div id="hk-solution-156" class="hidden-content tex2jax_ignore"><div class="solution">By assumption, \(A^{-1}\) exists. In particular, we can multiply the equation \(AB = AC \) on the left by \(A^{-1}\) and we get \(A^{-1}AB = A^{-1}AC \text{.}\) Recall that \(A^{-1}\) has the property that \(A^{-1}A=I\text{,}\) so our equation can be rewritten as \(IB=IC\text{.}\) Since \(I\) has the property \(B=IB\) and \(C=IC\text{,}\) we conclude that, indeed, \(B = C. \)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-131" id="answer-131"><span class="type">Answer</span></a><div id="hk-answer-131" class="hidden-content tex2jax_ignore"><div class="solution">Yes, \(B = C. \)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-157" id="solution-157"><span class="type">Solution</span></a><div id="hk-solution-157" class="hidden-content tex2jax_ignore"><div class="solution">By assumption, \(A^{-1}\) exists. In particular, we can multiply the equation \(AB = AC \) on the left by \(A^{-1}\) and we get \(A^{-1}AB = A^{-1}AC \text{.}\) Recall that \(A^{-1}\) has the property that \(A^{-1}A=I\text{,}\) so our equation can be rewritten as \(IB=IC\text{.}\) Since \(I\) has the property \(B=IB\) and \(C=IC\text{,}\) we conclude that, indeed, \(B = C. \)</div></div>
 </div></article></p>
 <p id="p-579"><article class="exercise-like" id="exercise-83"><h6 class="heading"><span class="codenumber">10.</span></h6>
 <aside class="aside-like" id="aside-91"><p id="p-580">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 4, Exercise 4.5.3)</p></aside> Suppose \(AB = AC \) and \(A \) is a non-invertible \(n \times n \) matrix.  Does it follow that \(B = C? \) Explain why or why not.<div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-131" id="answer-131"><span class="type">Answer</span></a><div id="hk-answer-131" class="hidden-content tex2jax_ignore"><div class="solution">No, \(B\) is not necessarily equal to \(C\text{.}\)</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-157" id="solution-157"><span class="type">Solution</span></a><div id="hk-solution-157" class="hidden-content tex2jax_ignore"><div class="solution">Suppose \(A=0\text{,}\) the matrix all of whose entries are \(0\text{.}\) Then for <em class="emphasis">any</em> matrix \(B\text{,}\) we have \(AB=0\text{.}\) In particular, \(AB=AC\) for <em class="emphasis">all</em> matrices \(B, C\text{.}\) This shows that \(AB = AC \) does not necessarily imply \(B = C \text{.}\)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-132" id="answer-132"><span class="type">Answer</span></a><div id="hk-answer-132" class="hidden-content tex2jax_ignore"><div class="solution">No, \(B\) is not necessarily equal to \(C\text{.}\)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-158" id="solution-158"><span class="type">Solution</span></a><div id="hk-solution-158" class="hidden-content tex2jax_ignore"><div class="solution">Suppose \(A=0\text{,}\) the matrix all of whose entries are \(0\text{.}\) Then for <em class="emphasis">any</em> matrix \(B\text{,}\) we have \(AB=0\text{.}\) In particular, \(AB=AC\) for <em class="emphasis">all</em> matrices \(B, C\text{.}\) This shows that \(AB = AC \) does not necessarily imply \(B = C \text{.}\)</div></div>
 </div></article></p>
 <p id="p-581"><article class="exercise-like" id="exercise-84"><h6 class="heading"><span class="codenumber">11.</span></h6>
 <aside class="aside-like" id="aside-92"><p id="p-582">(Source: <a data-knowl="./knowl/ref-RB.html" title="Bibliographic Entry 5">[5]</a>, Chapter Matrix Inverses, Exercise MISLE.T10)</p></aside> Construct an example to demonstrate that \((A + B)^{-1} = A^{-1} + B^{-1} \) is not true for all invertible square matrices \(A \) and \(B \) of the same size.<div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-99" id="hint-99"><span class="type">Hint</span></a><div id="hk-hint-99" class="hidden-content tex2jax_ignore"><div class="solution">It is possible to choose \(A=B\) to be a very nice matrix.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-132" id="answer-132"><span class="type">Answer</span></a><div id="hk-answer-132" class="hidden-content tex2jax_ignore"><div class="solution">The equality is not true for \(A=B=I\text{.}\)</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-158" id="solution-158"><span class="type">Solution</span></a><div id="hk-solution-158" class="hidden-content tex2jax_ignore"><div class="solution">We choose \(A=B=I\text{,}\) so that<div class="displaymath">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-100" id="hint-100"><span class="type">Hint</span></a><div id="hk-hint-100" class="hidden-content tex2jax_ignore"><div class="solution">It is possible to choose \(A=B\) to be a very nice matrix.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-133" id="answer-133"><span class="type">Answer</span></a><div id="hk-answer-133" class="hidden-content tex2jax_ignore"><div class="solution">The equality is not true for \(A=B=I\text{.}\)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-159" id="solution-159"><span class="type">Solution</span></a><div id="hk-solution-159" class="hidden-content tex2jax_ignore"><div class="solution">We choose \(A=B=I\text{,}\) so that<div class="displaymath">
 \begin{equation*}
 (A + B)^{-1} = (2I)^{-1} = \frac{1}{2}I^{-1} = \frac{1}{2}I,
 \end{equation*}
@@ -1021,11 +1044,11 @@ A^{-1} + B^{-1} = 2 I^{-1} = 2 I.
 A = \begin{bmatrix} 1 \amp 2 \amp 3 \\ 2 \amp 1 \amp 4 \\ 1 \amp 0 \amp 4 \end{bmatrix}. 
 \end{equation*}
 </div>Find \(A^{-1} \) if possible.  If \(A^{-1} \) does not exist, explain why.<div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-100" id="hint-100"><span class="type">Hint</span></a><div id="hk-hint-100" class="hidden-content tex2jax_ignore"><div class="solution">See <a data-knowl="./knowl/hint-how-to-find-inverse-matrix.html" title="Hint 3.3.1.1">Hint 3.3.1.1</a> for an algorithm to find \(A^{-1}\text{,}\) if it exists.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-133" id="answer-133"><span class="type">Answer</span></a><div id="hk-answer-133" class="hidden-content tex2jax_ignore"><div class="solution">\(A^{-1}=
+<a data-knowl="" class="id-ref" data-refid="hk-hint-101" id="hint-101"><span class="type">Hint</span></a><div id="hk-hint-101" class="hidden-content tex2jax_ignore"><div class="solution">See <a data-knowl="./knowl/hint-how-to-find-inverse-matrix.html" title="Hint 3.3.1.1">Hint 3.3.1.1</a> for an algorithm to find \(A^{-1}\text{,}\) if it exists.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-134" id="answer-134"><span class="type">Answer</span></a><div id="hk-answer-134" class="hidden-content tex2jax_ignore"><div class="solution">\(A^{-1}=
 \frac{1}{7}
 \begin{bmatrix} -4 \amp 8 \amp -5 \\ 4 \amp -1 \amp -2 \\ 1 \amp -2 \amp 3 \end{bmatrix}\text{.}\)</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-159" id="solution-159"><span class="type">Solution</span></a><div id="hk-solution-159" class="hidden-content tex2jax_ignore"><div class="solution">We compute<div class="displaymath">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-160" id="solution-160"><span class="type">Solution</span></a><div id="hk-solution-160" class="hidden-content tex2jax_ignore"><div class="solution">We compute<div class="displaymath">
 \begin{align*}
 \matr{ccc|ccc}
 {
