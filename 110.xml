@@ -15,6 +15,13 @@
 	\let\mbf\mathbf
 	\newcommand{\norm}[1]{\left\| #1 \right\|}
 	\newcommand{\abs}[1]{\left\vert #1 \right\vert}
+	\DeclareMathOperator{\nullity}{nullity}
+	\DeclareMathOperator{\rank}{rank}
+	\DeclareMathOperator{\row}{row}
+	\DeclareMathOperator{\col}{col}
+	\DeclareMathOperator{\null}{null}
+	\DeclareMathOperator{\span}{span}
+	\DeclareMathOperator{\RREF}{RREF}
 </macros>
 	<latex-image-preamble>
 		\usepackage{tikz}
@@ -11805,21 +11812,532 @@
 							<aside><p> (Source: <xref ref="ref-PS" />, Chapter 5, Exercise 5.5.1) </p></aside>
 
 							Determine the rank and nullity and find a basis of the column space, row space, and null space of each of the following matrices.
-							<ol cols ="2">
-	<li> <me>  A = \begin{bmatrix} 1 \amp 3 \amp 2 \\ 3 \amp 9 \amp 6 \\ 1 \amp 3 \amp 2 \end{bmatrix} </me> </li>
-	<li> <me>  B = \begin{bmatrix} 1 \amp 3 \amp 0  \amp 2 \\ 3 \amp 9 \amp 1 \amp 7 \\ 1 \amp 3 \amp 1 \amp 3 \end{bmatrix} </me> </li>
-	<li> <me> C = \begin{bmatrix} 1 \amp 0 \amp 3 \\ 3 \amp 1 \amp 10  \\ 1 \amp 1 \amp 4 \\ 1 \amp -1 \amp 2 \end{bmatrix} </me> </li>
-	<li> <me> D = \begin{bmatrix} 0 \amp 0  \amp -1 \amp 0 \amp 1 \\ 1 \amp 2 \amp 3 \amp -2 \amp -18\\ 1 \amp 2 \amp 2 \amp 1 \amp 11 \\ -1 \amp -2 \amp -2 \amp 1 \amp 11 \end{bmatrix}</me> </li>
-	<li> <me>  E = \begin{bmatrix} 1 \amp 0 \amp 3 \amp 0 \\ 3 \amp 1 \amp 10 \amp 0 \\ -1 \amp 1 \amp -2 \amp 1\\ 1 \amp -1 \amp 2 \amp -2 \end{bmatrix} </me> </li>
-</ol>
+							<ol>
+							<li> <me>  A = \begin{bmatrix} 1 \amp 3 \amp 2 \\ 3 \amp 9 \amp 6 \\ 1 \amp 3 \amp 2 \end{bmatrix} </me>
+								<solution>
+									We row-reduce <m>A</m>:
+									<md>
+										<mrow>
+											\begin{bmatrix}
+												1 \amp 3 \amp 2
+												\\
+												3 \amp 9 \amp 6
+												\\
+												1 \amp 3 \amp 2
+											\end{bmatrix}
+											\overset{-3R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+											\begin{bmatrix}
+												1 \amp 3 \amp 2
+												\\
+												0 \amp 0 \amp 0
+												\\
+												0 \amp 0 \amp 0
+											\end{bmatrix}.
+										</mrow>
+									</md>
+									We have found a row echelon form of <m>A</m> (actually, we have found its RREF). It has one non-zero row, so that
+									<md>
+										<mrow>
+											\rank (A) = 1
+											\text{ and }
+											\nullity (A) = 3-1 = 2.
+										</mrow>										
+									</md>	
+									Moreover, using <xref ref=" hint-equivalent-matrices-same-row-and-null"/> for the row space and <xref ref="Casting-out-algorithm"/> for the column space, we find the following bases:
+									<md>
+										<mrow>
+											\text{basis of } \row (A):\quad \amp \span \left\{\begin{bmatrix}1 \amp 3 \amp 2\end{bmatrix}\right\} 
+										</mrow>
+										<mrow>
+											\text{basis of } \col (A):\quad \amp \span \left\{\begin{bmatrix}1 \\ 3 \\ 1\end{bmatrix}\right\}.
+										</mrow>
+									</md>
+									Lastly, for the null space, we use <xref ref="hint-basis-of-null-space"/>: From the RREF of <m>A</m>, we are looking for the solution set of
+									<me>
+										\matr{ccc|c}{
+											1 \amp 3 \amp 2 \amp 0
+											\\
+											0 \amp 0 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}.
+									</me>
+									We have that <m>x_{2}</m> and <m>x_{3}</m> are free variables, and <m>x_{1}=-3x_{2}-2x_{3}</m>, so that
+									<md>
+										<mrow>
+											\text{basis of } \null (B):\quad \amp
+											\span
+											\left\{
+												\begin{bmatrix} -3 \\ 1 \\ 0\end{bmatrix},
+												\begin{bmatrix} -2 \\ 0 \\ 1\end{bmatrix}
+											\right\}.
+										</mrow>
+									</md>
+								</solution>
+								<answer>
+									<md>
+										<mrow>
+											\text{basis of } \row (A):\quad \amp \span \left\{\begin{bmatrix}1 \amp 3 \amp 2\end{bmatrix}\right\}
+											,\quad\rank (A) = 1
+										</mrow>
+										<mrow>
+											\text{basis of } \col (A):\quad \amp \span \left\{\begin{bmatrix}1 \\ 3 \\ 1\end{bmatrix}\right\}
+										</mrow>
+										<mrow>
+											\text{basis of } \null (A):\quad \amp
+											\span
+											\left\{
+												\begin{bmatrix} -3 \\ 1 \\ 0\end{bmatrix},
+												\begin{bmatrix} -2 \\ 0 \\ 1\end{bmatrix}
+											\right\},\quad\nullity (A) =  2
+										</mrow>
+									</md>
+								</answer>
+							</li>
+								<li> <me>  B = \begin{bmatrix} 1 \amp 3 \amp 0  \amp 2 \\ 3 \amp 9 \amp 1 \amp 7 \\ 1 \amp 3 \amp 1 \amp 3 \end{bmatrix} </me>
+								<solution>
+									We row-reduce <m>B</m>:
+									<md>
+										<mrow>
+											\begin{bmatrix}
+												1 \amp 3 \amp 0  \amp 2
+												\\
+												3 \amp 9 \amp 1 \amp 7
+												\\
+												1 \amp 3 \amp 1 \amp 3
+											\end{bmatrix}
+											\overset{-3R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+											\amp\begin{bmatrix}
+												1 \amp 3 \amp 0  \amp 2
+												\\
+												0 \amp 0 \amp 1 \amp 1
+												\\
+												0 \amp 0 \amp 1 \amp 1											\end{bmatrix}
+										</mrow>
+										<mrow>
+											\overset{-R_{2}+R_{3}}{\longrightarrow}
+											\amp\begin{bmatrix}
+												1 \amp 3 \amp 0  \amp 2
+												\\
+												0 \amp 0 \amp 1 \amp 1
+												\\
+												0 \amp 0 \amp 0 \amp 0
+											\end{bmatrix}.
+										</mrow>
+									</md>
+									We have found a row echelon form of <m>B</m> (actually, we have found its RREF).It has two non-zero rows, so that
+									<md>
+										<mrow>
+											\rank (B) = 2
+											\text{ and }
+											\nullity (B) = 4-2 = 2.
+										</mrow>										
+									</md>	
+									Moreover, using <xref ref=" hint-equivalent-matrices-same-row-and-null"/> for the row space and <xref ref="Casting-out-algorithm"/> for the column space, we find the following bases:
+									<md>
+										<mrow>
+											\text{basis of } \row (B):\quad \amp \span \left\{\begin{bmatrix}1 \amp 3 \amp 0  \amp 2\end{bmatrix},
+											\begin{bmatrix}0 \amp 0 \amp 1 \amp 1\end{bmatrix}\right\} 
+										</mrow>
+										<mrow>
+											\text{basis of } \col (B):\quad \amp \span \left\{
+											\begin{bmatrix}1 \\ 3 \\ 1\end{bmatrix},
+											\begin{bmatrix}0 \\ 1 \\ 1\end{bmatrix}
+											\right\}.
+										</mrow>
+									</md>
+									Lastly, for the null space, we use <xref ref="hint-basis-of-null-space"/>: From the RREF of <m>B</m>, we are looking for the solution set of
+									<me>
+										\matr{cccc|c}{
+											1 \amp 3 \amp 0  \amp 2 \amp 0  
+											\\
+											0 \amp 0 \amp 1 \amp 1 \amp 0  
+											\\
+											0 \amp 0 \amp 0 \amp 0 \amp 0 
+										}
+									</me>
+									We have that <m>x_{2}</m> and <m>x_{4}</m> are free variables, and <m>x_{1}=-3x_{2}-2x_{4}</m>, <m>x_{3}=-x_{4}</m>, so that
+									<md>
+										<mrow>
+											\text{basis of } \null (B):\quad \amp
+											\span
+											\left\{
+												\begin{bmatrix} -3 \\ 1 \\ 0 \\ 0\end{bmatrix},
+												\begin{bmatrix} -2 \\ 0 \\ -1 \\ 1\end{bmatrix}
+											\right\}.
+										</mrow>
+									</md>
+								</solution><answer>
+									<md>
+										<mrow>
+											\text{basis of } \row (B):\quad \amp \span \left\{\begin{bmatrix}1 \amp 3 \amp 0  \amp 2\end{bmatrix},
+											\begin{bmatrix}0 \amp 0 \amp 1 \amp 1\end{bmatrix}\right\}, \quad
+											\rank (B) = 2
+										</mrow>
+										<mrow>
+											\text{basis of } \col (B):\quad \amp \span \left\{
+											\begin{bmatrix}1 \\ 3 \\ 1\end{bmatrix},
+											\begin{bmatrix}0 \\ 1 \\ 1\end{bmatrix}
+											\right\}
+										</mrow>
+										<mrow>
+											\text{basis of } \null (B):\quad \amp
+											\span
+											\left\{
+												\begin{bmatrix} -3 \\ 1 \\ 0 \\ 0\end{bmatrix},
+												\begin{bmatrix} -2 \\ 0 \\ -1 \\ 1\end{bmatrix}
+											\right\}
+											,
+											\quad \nullity (B) = 2.
+										</mrow>
+									</md></answer></li>
+								<li> <me> C = \begin{bmatrix} 1 \amp 0 \amp 3 \\ 3 \amp 1 \amp 10  \\ 1 \amp 1 \amp 4 \\ 1 \amp -1 \amp 2 \end{bmatrix} </me>
+								<solution>
+									We row-reduce <m>C</m>:
+									<md>
+										<mrow>
+											\begin{bmatrix}
+												1 \amp 0 \amp 3
+												\\
+												3 \amp 1 \amp 10
+												\\
+												1 \amp 1 \amp 4
+												\\
+												1 \amp -1 \amp 2
+											\end{bmatrix}
+											\overset{-3R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+											\amp\begin{bmatrix}
+												1 \amp 0 \amp 3
+												\\
+												0 \amp 1 \amp 1
+												\\
+												0 \amp 1 \amp 1
+												\\
+												1 \amp -1 \amp 2
+											\end{bmatrix}
+										</mrow>
+										<mrow>
+											\overset{-R_{1}+R_{4}}{\longrightarrow}
+											\amp\begin{bmatrix}
+												1 \amp 0 \amp 3
+												\\
+												0 \amp 1 \amp 1
+												\\
+												0 \amp 1 \amp 1
+												\\
+												0 \amp -1 \amp -1
+											\end{bmatrix}
+										</mrow>
+										<mrow>
+											\overset{R_{2}+R_{4}}{\underset{-R_{2}+R_{3}{\longrightarrow}}
+											\amp\begin{bmatrix}
+												1 \amp 0 \amp 3
+												\\
+												0 \amp 1 \amp 1
+												\\
+												0 \amp 0 \amp 0
+												\\
+												0 \amp 0 \amp 0
+											\end{bmatrix}.
+										</mrow>										
+									</md>
+									We have found a row echelon form of <m>C</m> (actually, we have found its RREF). It has two non-zero rows, so that
+									<md>
+										<mrow>
+											\rank (C) = 2
+											\text{ and }
+											\nullity (C) = 3-2 = 1.
+										</mrow>										
+									</md>	
+									Moreover, using <xref ref=" hint-equivalent-matrices-same-row-and-null"/> for the row space and <xref ref="Casting-out-algorithm"/> for the column space, we find the following bases:
+									<md>
+										<mrow>
+											\text{basis of } \row (C):\quad \amp \span \left\{
+											\begin{bmatrix}1 \amp 0 \amp 3\end{bmatrix},
+											\begin{bmatrix}0 \amp 1 \amp 1\end{bmatrix}\right\}
+										</mrow>
+										<mrow>
+											\text{basis of } \col (C):\quad \amp \span \left\{
+											\begin{bmatrix}1 \\ 3 \\ 1 \\ 1\end{bmatrix},
+											\begin{bmatrix}0 \\ 1 \\ 1 \\ -1\end{bmatrix}
+											\right\}.
+										</mrow>
+									</md>
+									Lastly, for the null space, we use <xref ref="hint-basis-of-null-space"/>: From the RREF of <m>C</m>, we are looking for the solution set of
+									<me>
+										\matr{ccc|c}{
+											1 \amp 0 \amp 3 \amp 0
+											\\
+											0 \amp 1 \amp 1 \amp 0
+											\\
+											0 \amp 0 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}
+									</me>
+									We have that <m>x_{3}</m> is a free variable, and <m>x_{1}=-3x_{3}</m>, <m>x_{2}=-x_{3}</m>, so that
+									<md>
+										<mrow>
+											\text{basis of } \null (C):\quad \amp
+											\span
+											\left\{
+												\begin{bmatrix} -3 \\ -1 \\ 1\end{bmatrix}
+											\right\}.
+										</mrow>
+									</md>
+								</solution><answer>
+									<md>
+										<mrow>
+											\text{basis of } \row (C):\quad \amp \span \left\{
+											\begin{bmatrix}1 \amp 0 \amp 3\end{bmatrix},
+											\begin{bmatrix}0 \amp 1 \amp 1\end{bmatrix}\right\},
+											\quad \rank (C) = 2
+										</mrow>
+										<mrow>
+											\text{basis of } \col (C):\quad \amp \span \left\{
+											\begin{bmatrix}1 \\ 3 \\ 1 \\ 1\end{bmatrix},
+											\begin{bmatrix}0 \\ 1 \\ 1 \\ -1\end{bmatrix}
+											\right\}.
+										</mrow>
+										<mrow>
+											\text{basis of } \null (C):\quad \amp
+											\span
+											\left\{
+												\begin{bmatrix} -3 \\ -1 \\ 1\end{bmatrix}
+											\right\},
+											\quad \nullity (C) = 1
+										</mrow>
+									</md>
+								</answer></li>
+								<li> <me> D = \begin{bmatrix} 0 \amp 0  \amp -1 \amp 0 \amp 1 \\ 1 \amp 2 \amp 3 \amp -2 \amp -18\\ 1 \amp 2 \amp 2 \amp 1 \amp 11 \\ -1 \amp -2 \amp -2 \amp 1 \amp 11 \end{bmatrix}</me>
+								<solution>
+									We row-reduce <m>D</m>:
+									<md>
+										<mrow>
+											\begin{bmatrix} 0 \amp 0  \amp -1 \amp 0 \amp 1 \\ 1 \amp 2 \amp 3 \amp -2 \amp -18\\ 1 \amp 2 \amp 2 \amp 1 \amp 11 \\ -1 \amp -2 \amp -2 \amp 1 \amp 11 \end{bmatrix}
+											\longrightarrow
+											\begin{bmatrix}
+											  	1 \amp 2  \amp 0 \amp 0 \amp 0
+											  	\\
+											  	0 \amp 0 \amp 1 \amp 0 \amp 0
+											  	\\
+											  	0 \amp 0 \amp 0 \amp 1 \amp 0
+											  	\\
+											  	0 \amp 0 \amp 0 \amp 0 \amp 1
+											  \end{bmatrix}
+										</mrow>										
+									</md>
+									The reduced row echelon form of <m>D</m> has four non-zero rows, so that
+									<md>
+										<mrow>
+											\rank (D) = 4
+											\text{ and }
+											\nullity (D) = 5-4 = 1.
+										</mrow>										
+									</md>	
+									Moreover, using <xref ref=" hint-equivalent-matrices-same-row-and-null"/> for the row space and <xref ref="Casting-out-algorithm"/> for the column space, we find the following bases:
+									<md>
+										<mrow>
+											\text{basis of } \row (D):\quad \amp \span \left\{
+											\begin{bmatrix}1 \amp 2  \amp 0 \amp 0 \amp 0\end{bmatrix},
+											\begin{bmatrix}0 \amp 0 \amp 1 \amp 0 \amp 0\end{bmatrix},
+											\right.
+										</mrow>
+										<mrow>
+											\amp \hphantom{\span}\left.
+											\begin{bmatrix}0 \amp 0 \amp 0 \amp 1 \amp 0\end{bmatrix},
+											\begin{bmatrix}0 \amp 0 \amp 0 \amp 0 \amp 1\end{bmatrix}
+											\right\}
+										</mrow>
+										<mrow>
+											\text{basis of } \col (D):\quad \amp \span \left\{
+											\begin{bmatrix}0 \\ 1 \\ 1 \\ -1\end{bmatrix},
+											\begin{bmatrix}-1 \\ 3 \\ 2 \\ -2\end{bmatrix},
+											\begin{bmatrix}0 \\ -2 \\ 1 \\ 1\end{bmatrix},
+											\begin{bmatrix}1 \\ -18 \\ 11 \\ 11\end{bmatrix}
+											\right\}.
+										</mrow>
+									</md>
+									Lastly, for the null space, we use <xref ref="hint-basis-of-null-space"/>: From the RREF of <m>D</m>, we are looking for the solution set of
+									<me>
+										\matr{ccccc|c}{
+											1 \amp 2  \amp 0 \amp 0 \amp 0  \amp 0
+										  	\\
+										  	0 \amp 0 \amp 1 \amp 0 \amp 0 \amp 0
+										  	\\
+										  	0 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0
+										  	\\
+										  	0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0
+										}
+									</me>
+									We have that <m>x_{2}</m> is the only free variable, and 
+									<md>
+										<mrow>
+											\text{basis of } \null (D):\quad \amp
+											\span
+											\left\{
+												\begin{bmatrix} -2 \\ 1 \\ 0 \\ 0 \\ 0\end{bmatrix}
+											\right\}.
+										</mrow>
+									</md>
+								</solution><answer>
+									<md>
+										<mrow>
+											\text{basis of } \row (D):\quad \amp \span \left\{
+											\begin{bmatrix}1 \amp 2  \amp 0 \amp 0 \amp 0\end{bmatrix},
+											\begin{bmatrix}0 \amp 0 \amp 1 \amp 0 \amp 0\end{bmatrix},
+											\right.
+										</mrow>
+										<mrow>
+											\amp \hphantom{\span}\left.
+											\begin{bmatrix}0 \amp 0 \amp 0 \amp 1 \amp 0\end{bmatrix},
+											\begin{bmatrix}0 \amp 0 \amp 0 \amp 0 \amp 1\end{bmatrix}
+											\right\},
+										</mrow>
+										<mrow>
+											\amp  \rank (D) = 4
+										</mrow>
+										<mrow>
+											\text{basis of } \col (D):\quad \amp \span \left\{
+											\begin{bmatrix}0 \\ 1 \\ 1 \\ -1\end{bmatrix},
+											\begin{bmatrix}-1 \\ 3 \\ 2 \\ -2\end{bmatrix},
+											\begin{bmatrix}0 \\ -2 \\ 1 \\ 1\end{bmatrix},
+											\begin{bmatrix}1 \\ -18 \\ 11 \\ 11\end{bmatrix}
+											\right\}
+										</mrow>
+										<mrow>
+											\text{basis of } \null (D):\quad \amp
+											\span
+											\left\{
+												\begin{bmatrix} -2 \\ 1 \\ 0 \\ 0 \\ 0\end{bmatrix}
+											\right\},
+											\quad \nullity (D) = 1.
+										</mrow>
+									</md>
+								</answer></li>
+								<li> <me>  E = \begin{bmatrix} 1 \amp 0 \amp 3 \amp 0 \\ 3 \amp 1 \amp 10 \amp 0 \\ -1 \amp 1 \amp -2 \amp 1\\ 1 \amp -1 \amp 2 \amp -2 \end{bmatrix} </me>
+								<solution>
+									We row-reduce <m>E</m>:
+									<md>
+										<mrow>
+											\begin{bmatrix}
+												1 \amp 0 \amp 3 \amp 0 \\
+												3 \amp 1 \amp 10 \amp 0 \\
+												-1 \amp 1 \amp -2 \amp 1\\
+												1 \amp -1 \amp 2 \amp -2 \end{bmatrix}
+											\longrightarrow
+											\begin{bmatrix}
+											  	1 \amp 0  \amp 3 \amp 0
+											  	\\
+											  	0 \amp 1 \amp 1 \amp 0
+											  	\\
+											  	0 \amp 0 \amp 0 \amp 1
+											  	\\
+											  	0 \amp 0 \amp 0 \amp 0
+											  \end{bmatrix}
+										</mrow>										
+									</md>
+									The reduced row echelon form of <m>E</m> has three non-zero rows, so that
+									<md>
+										<mrow>
+											\rank (D) = 3
+											\text{ and }
+											\nullity (D) = 4-3 = 1.
+										</mrow>										
+									</md>	
+									Moreover, using <xref ref=" hint-equivalent-matrices-same-row-and-null"/> for the row space and <xref ref="Casting-out-algorithm"/> for the column space, we find the following bases:
+									<md>
+										<mrow>
+											\text{basis of } \row (E):\quad \amp \span \left\{
+											\begin{bmatrix}1 \amp 0  \amp 3 \amp 0	\end{bmatrix},
+											\begin{bmatrix}0 \amp 1 \amp 1 \amp 0\end{bmatrix},
+											\begin{bmatrix}0 \amp 0 \amp 0 \amp 1\end{bmatrix}\right\}
+										</mrow>
+										<mrow>
+											\text{basis of } \col (E):\quad \amp \span \left\{
+											\begin{bmatrix}1 \\ 3 \\ -1 \\ 1\end{bmatrix},
+											\begin{bmatrix}0 \\ 1 \\ 1 \\ -1\end{bmatrix},
+											\begin{bmatrix}0 \\ 0 \\ 1 \\ -2\end{bmatrix}
+											\right\}.
+										</mrow>
+									</md>
+									Lastly, for the null space, we use <xref ref="hint-basis-of-null-space"/>: From the RREF of <m>E</m>, we are looking for the solution set of
+									<me>
+										\matr{cccc|c}{
+											1 \amp 0  \amp 3 \amp 0\amp 0  
+										  	\\
+										  	0 \amp 1 \amp 1 \amp 0\amp 0  
+										  	\\
+										  	0 \amp 0 \amp 0 \amp 1\amp 0  
+										  	\\
+										  	0 \amp 0 \amp 0 \amp 0\amp 0  
+										}
+									</me>
+									We have that <m>x_{3}</m> is the only free variable, and <m>x_{1}=-3x_{3}</m> and <m>x_{2}=-x_{3}</m>. Thus,
+									<md>
+										<mrow>
+											\text{basis of } \null (E):\quad \amp
+											\span
+											\left\{
+												\begin{bmatrix} -3 \\ -1 \\ 1 \\ 0 \end{bmatrix}
+											\right\}.
+										</mrow>
+									</md>
+								</solution><answer>	
+									<md>
+										<mrow>
+											\text{basis of } \row (E):\quad \amp \span \left\{
+											\begin{bmatrix}1 \amp 0  \amp 3 \amp 0	\end{bmatrix},
+											\begin{bmatrix}0 \amp 1 \amp 1 \amp 0\end{bmatrix},
+											\begin{bmatrix}0 \amp 0 \amp 0 \amp 1\end{bmatrix}\right\},
+										</mrow>										
+										<mrow>
+											\amp  \rank (E) = 3
+										</mrow>
+										<mrow>
+											\text{basis of } \col (E):\quad \amp \span \left\{
+											\begin{bmatrix}1 \\ 3 \\ -1 \\ 1\end{bmatrix},
+											\begin{bmatrix}0 \\ 1 \\ 1 \\ -1\end{bmatrix},
+											\begin{bmatrix}0 \\ 0 \\ 1 \\ -2\end{bmatrix}
+											\right\}
+										</mrow>
+										<mrow>
+											\text{basis of } \null (E):\quad \amp
+											\span
+											\left\{
+												\begin{bmatrix} -3 \\ -1 \\ 1 \\ 0 \end{bmatrix}
+											\right\},
+											\quad \nullity (E) = 1
+										</mrow>
+									</md></answer></li>
+							</ol>
 
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint><aside><p> (Source: <xref ref="ref-PS" />, Definition 1.24 and p. 213) </p></aside>
+							Let <m>A</m> be a matrix and consider any echelon form of <m>A</m>. Then, the number of pivot entries of <m>A</m> does not depend on the echelon form we choose, and is called the <em>rank of <m>A</m></em>. We denote it by <m>\rank(A)</m>.
+
+							The dimension of the null space is called the <em>nullity</em> of <m>A</m>, and is written <m>\nullity(A)</m>. 
+						</hint>
+						<hint xml:id="hint-equivalent-matrices-same-row-and-null"><aside><p> (Source: <xref ref="ref-PS" />, Proposition 5.53 and p. 212) </p></aside>
+							Let <m>A</m> and <m>B</m> be row equivalent matrices. Then <m>\row(A) =\row(B)</m> and <m>\null(A) =\null(B)</m>. In particular, the non-zero rows of the reduced echelon form of <m>A</m> form a basis of the row space, <m>\row(A)</m>.
+						</hint>
+						<hint xml:id="Casting-out-algorithm"><aside><p> (Source: <xref ref="ref-PS" />, Algorithm 5.8) </p></aside>
+							<em>Casting-out algorithm</em>:
+							<ol>
+								<li>
+									<em>Input</em>: a list of <m>k</m> vectors <m>u_1,...,u_k\in \mathbb{R}^n</m>.
+								</li>
+								<li>
+									<em>Output</em>: the set of indices <m>j</m> such that <m>u_j</m> is redundant.
+								</li>
+								<li>
+									<em>Algorithm</em>: Write the vectors <m>u_1,\ldots,u_k</m> as the columns of an <m>n\times k</m> matrix, and reduce to echelon form. Every non-pivot column, if any, corresponds to a redundant vector.
+								</li>
+							</ol>
+						</hint>
+						<hint xml:id="hint-basis-of-null-space"><aside><p> (Source: <xref ref="ref-PS" />, p. 212) </p></aside>
+							The <em>null space</em> of <m>A</m> is the solution space of the homogeneous system <m>A\mathbf{x}=\mathbf{0}</m>. Thus, finding a basis of the null space is the same as finding a set of basic solutions. From the reduced echelon form, we can easily find the general solution of <m>A\mathbf{x}=\mathbf{0}</m>, using parameters corresponding to the non-pivot columns of <m>\RREF(A)</m>.
+						</hint>
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>

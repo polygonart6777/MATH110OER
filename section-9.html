@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-14T10:49:29-08:00    *-->
+<!--*    on 2020-02-16T10:49:11-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -62,6 +62,13 @@ var js_version = 0.11;
 \let\mbf\mathbf
 \newcommand{\norm}[1]{\left\| #1 \right\|}
 \newcommand{\abs}[1]{\left\vert #1 \right\vert}
+\DeclareMathOperator{\nullity}{nullity}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\row}{row}
+\DeclareMathOperator{\col}{col}
+\DeclareMathOperator{\null}{null}
+\DeclareMathOperator{\span}{span}
+\DeclareMathOperator{\RREF}{RREF}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -263,64 +270,494 @@ w_{3} + w_{1}
 <p id="p-591"><article class="exercise-like" id="exercise-89"><h6 class="heading"><span class="codenumber">3.</span></h6>
 <aside class="aside-like" id="aside-97"><p id="p-592">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 5, Exercise 5.1.24)</p></aside> Show that every proper subspace \(U \) of \(\mathbb{R}^2 \) is a line through the origin. Hint: If \(\mathbf{d} \) is a nonzero vector in \(U \) , let \(L = \mathbb{R}\textbf{d} = \{ r\textbf{d} \ | \ r  \text{ in } \mathbb{R}\} \) denote the line with direction vector \(\mathbf{d}. \) If \(\mathbf{u} \) is in \(U \) but not in \(L \text{,}\) argue geometrically that every vector \(\mathbf{v} \) in \(\mathbb{R}^2 \) is a linear combination of \(\mathbf{u} \) and \(\mathbf{d}. \)</article></p>
 <p id="p-593"><article class="exercise-like" id="exercise-90"><h6 class="heading"><span class="codenumber">4.</span></h6>
-<aside class="aside-like" id="aside-98"><p id="p-594">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 5, Exercise 5.5.1)</p></aside> Determine the rank and nullity and find a basis of the column space, row space, and null space of each of the following matrices. <ol class="lower-alpha cols2">
-<li id="li-454"><div class="displaymath">
+<aside class="aside-like" id="aside-98"><p id="p-594">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 5, Exercise 5.5.1)</p></aside> Determine the rank and nullity and find a basis of the column space, row space, and null space of each of the following matrices. <ol class="lower-alpha">
+<li id="li-454">
+<div class="displaymath">
 \begin{equation*}
 A = \begin{bmatrix} 1 \amp 3 \amp 2 \\ 3 \amp 9 \amp 6 \\ 1 \amp 3 \amp 2 \end{bmatrix} 
 \end{equation*}
-</div></li>
-<li id="li-455"><div class="displaymath">
+</div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-168" id="solution-168"><span class="type">Solution</span></a><div id="hk-solution-168" class="hidden-content tex2jax_ignore"><div class="solution">We row-reduce \(A\text{:}\)<div class="displaymath">
+\begin{align*}
+\begin{bmatrix}
+1 \amp 3 \amp 2
+\\
+3 \amp 9 \amp 6
+\\
+1 \amp 3 \amp 2
+\end{bmatrix}
+\overset{-3R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+\begin{bmatrix}
+1 \amp 3 \amp 2
+\\
+0 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 0
+\end{bmatrix}.
+\end{align*}
+</div>We have found a row echelon form of \(A\) (actually, we have found its RREF). It has one non-zero row, so that<div class="displaymath">
+\begin{gather*}
+\rank (A) = 1
+\text{ and }
+\nullity (A) = 3-1 = 2.
+\end{gather*}
+</div>Moreover, using <a data-knowl="./knowl/hint-equivalent-matrices-same-row-and-null.html" title="Hint 3.4.4.2">Hint 3.4.4.2</a> for the row space and <a data-knowl="./knowl/Casting-out-algorithm.html" title="Hint 3.4.4.3">Hint 3.4.4.3</a> for the column space, we find the following bases:<div class="displaymath">
+\begin{align*}
+\text{basis of } \row (A):\quad \amp \span \left\{\begin{bmatrix}1 \amp 3 \amp 2\end{bmatrix}\right\} \\
+\text{basis of } \col (A):\quad \amp \span \left\{\begin{bmatrix}1 \\ 3 \\ 1\end{bmatrix}\right\}.
+\end{align*}
+</div>Lastly, for the null space, we use <a data-knowl="./knowl/hint-basis-of-null-space.html" title="Hint 3.4.4.4">Hint 3.4.4.4</a>: From the RREF of \(A\text{,}\) we are looking for the solution set of<div class="displaymath">
+\begin{equation*}
+\matr{ccc|c}{
+1 \amp 3 \amp 2 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 0
+}.
+\end{equation*}
+</div>We have that \(x_{2}\) and \(x_{3}\) are free variables, and \(x_{1}=-3x_{2}-2x_{3}\text{,}\) so that<div class="displaymath">
+\begin{align*}
+\text{basis of } \null (B):\quad \amp
+\span
+\left\{
+\begin{bmatrix} -3 \\ 1 \\ 0\end{bmatrix},
+\begin{bmatrix} -2 \\ 0 \\ 1\end{bmatrix}
+\right\}.
+\end{align*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-141" id="answer-141"><span class="type">Answer</span></a><div id="hk-answer-141" class="hidden-content tex2jax_ignore"><div class="solution"><div class="displaymath">
+\begin{align*}
+\text{basis of } \row (A):\quad \amp \span \left\{\begin{bmatrix}1 \amp 3 \amp 2\end{bmatrix}\right\}
+,\quad\rank (A) = 1\\
+\text{basis of } \col (A):\quad \amp \span \left\{\begin{bmatrix}1 \\ 3 \\ 1\end{bmatrix}\right\}\\
+\text{basis of } \null (A):\quad \amp
+\span
+\left\{
+\begin{bmatrix} -3 \\ 1 \\ 0\end{bmatrix},
+\begin{bmatrix} -2 \\ 0 \\ 1\end{bmatrix}
+\right\},\quad\nullity (A) =  2
+\end{align*}
+</div></div></div>
+</li>
+<li id="li-455">
+<div class="displaymath">
 \begin{equation*}
 B = \begin{bmatrix} 1 \amp 3 \amp 0  \amp 2 \\ 3 \amp 9 \amp 1 \amp 7 \\ 1 \amp 3 \amp 1 \amp 3 \end{bmatrix} 
 \end{equation*}
-</div></li>
-<li id="li-456"><div class="displaymath">
+</div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-169" id="solution-169"><span class="type">Solution</span></a><div id="hk-solution-169" class="hidden-content tex2jax_ignore"><div class="solution">We row-reduce \(B\text{:}\)<div class="displaymath">
+\begin{align*}
+\begin{bmatrix}
+1 \amp 3 \amp 0  \amp 2
+\\
+3 \amp 9 \amp 1 \amp 7
+\\
+1 \amp 3 \amp 1 \amp 3
+\end{bmatrix}
+\overset{-3R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+\amp\begin{bmatrix}
+1 \amp 3 \amp 0  \amp 2
+\\
+0 \amp 0 \amp 1 \amp 1
+\\
+0 \amp 0 \amp 1 \amp 1											\end{bmatrix}\\
+\overset{-R_{2}+R_{3}}{\longrightarrow}
+\amp\begin{bmatrix}
+1 \amp 3 \amp 0  \amp 2
+\\
+0 \amp 0 \amp 1 \amp 1
+\\
+0 \amp 0 \amp 0 \amp 0
+\end{bmatrix}.
+\end{align*}
+</div>We have found a row echelon form of \(B\) (actually, we have found its RREF).It has two non-zero rows, so that<div class="displaymath">
+\begin{gather*}
+\rank (B) = 2
+\text{ and }
+\nullity (B) = 4-2 = 2.
+\end{gather*}
+</div>Moreover, using <a data-knowl="./knowl/hint-equivalent-matrices-same-row-and-null.html" title="Hint 3.4.4.2">Hint 3.4.4.2</a> for the row space and <a data-knowl="./knowl/Casting-out-algorithm.html" title="Hint 3.4.4.3">Hint 3.4.4.3</a> for the column space, we find the following bases:<div class="displaymath">
+\begin{align*}
+\text{basis of } \row (B):\quad \amp \span \left\{\begin{bmatrix}1 \amp 3 \amp 0  \amp 2\end{bmatrix},
+\begin{bmatrix}0 \amp 0 \amp 1 \amp 1\end{bmatrix}\right\} \\
+\text{basis of } \col (B):\quad \amp \span \left\{
+\begin{bmatrix}1 \\ 3 \\ 1\end{bmatrix},
+\begin{bmatrix}0 \\ 1 \\ 1\end{bmatrix}
+\right\}.
+\end{align*}
+</div>Lastly, for the null space, we use <a data-knowl="./knowl/hint-basis-of-null-space.html" title="Hint 3.4.4.4">Hint 3.4.4.4</a>: From the RREF of \(B\text{,}\) we are looking for the solution set of<div class="displaymath">
+\begin{equation*}
+\matr{cccc|c}{
+1 \amp 3 \amp 0  \amp 2 \amp 0  
+\\
+0 \amp 0 \amp 1 \amp 1 \amp 0  
+\\
+0 \amp 0 \amp 0 \amp 0 \amp 0 
+}
+\end{equation*}
+</div>We have that \(x_{2}\) and \(x_{4}\) are free variables, and \(x_{1}=-3x_{2}-2x_{4}\text{,}\) \(x_{3}=-x_{4}\text{,}\) so that<div class="displaymath">
+\begin{align*}
+\text{basis of } \null (B):\quad \amp
+\span
+\left\{
+\begin{bmatrix} -3 \\ 1 \\ 0 \\ 0\end{bmatrix},
+\begin{bmatrix} -2 \\ 0 \\ -1 \\ 1\end{bmatrix}
+\right\}.
+\end{align*}
+</div>
+</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-142" id="answer-142"><span class="type">Answer</span></a><div id="hk-answer-142" class="hidden-content tex2jax_ignore"><div class="solution"><div class="displaymath">
+\begin{align*}
+\text{basis of } \row (B):\quad \amp \span \left\{\begin{bmatrix}1 \amp 3 \amp 0  \amp 2\end{bmatrix},
+\begin{bmatrix}0 \amp 0 \amp 1 \amp 1\end{bmatrix}\right\}, \quad
+\rank (B) = 2\\
+\text{basis of } \col (B):\quad \amp \span \left\{
+\begin{bmatrix}1 \\ 3 \\ 1\end{bmatrix},
+\begin{bmatrix}0 \\ 1 \\ 1\end{bmatrix}
+\right\}\\
+\text{basis of } \null (B):\quad \amp
+\span
+\left\{
+\begin{bmatrix} -3 \\ 1 \\ 0 \\ 0\end{bmatrix},
+\begin{bmatrix} -2 \\ 0 \\ -1 \\ 1\end{bmatrix}
+\right\}
+,
+\quad \nullity (B) = 2.
+\end{align*}
+</div></div></div>
+</li>
+<li id="li-456">
+<div class="displaymath">
 \begin{equation*}
 C = \begin{bmatrix} 1 \amp 0 \amp 3 \\ 3 \amp 1 \amp 10  \\ 1 \amp 1 \amp 4 \\ 1 \amp -1 \amp 2 \end{bmatrix} 
 \end{equation*}
-</div></li>
-<li id="li-457"><div class="displaymath">
+</div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-170" id="solution-170"><span class="type">Solution</span></a><div id="hk-solution-170" class="hidden-content tex2jax_ignore"><div class="solution">We row-reduce \(C\text{:}\)<div class="displaymath">
+\begin{align*}
+\begin{bmatrix}
+1 \amp 0 \amp 3
+\\
+3 \amp 1 \amp 10
+\\
+1 \amp 1 \amp 4
+\\
+1 \amp -1 \amp 2
+\end{bmatrix}
+\overset{-3R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+\amp\begin{bmatrix}
+1 \amp 0 \amp 3
+\\
+0 \amp 1 \amp 1
+\\
+0 \amp 1 \amp 1
+\\
+1 \amp -1 \amp 2
+\end{bmatrix}\\
+\overset{-R_{1}+R_{4}}{\longrightarrow}
+\amp\begin{bmatrix}
+1 \amp 0 \amp 3
+\\
+0 \amp 1 \amp 1
+\\
+0 \amp 1 \amp 1
+\\
+0 \amp -1 \amp -1
+\end{bmatrix}\\
+\overset{R_{2}+R_{4}}{\underset{-R_{2}+R_{3}{\longrightarrow}}
+\amp\begin{bmatrix}
+1 \amp 0 \amp 3
+\\
+0 \amp 1 \amp 1
+\\
+0 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 0
+\end{bmatrix}.
+\end{align*}
+</div>We have found a row echelon form of \(C\) (actually, we have found its RREF). It has two non-zero rows, so that<div class="displaymath">
+\begin{gather*}
+\rank (C) = 2
+\text{ and }
+\nullity (C) = 3-2 = 1.
+\end{gather*}
+</div>Moreover, using <a data-knowl="./knowl/hint-equivalent-matrices-same-row-and-null.html" title="Hint 3.4.4.2">Hint 3.4.4.2</a> for the row space and <a data-knowl="./knowl/Casting-out-algorithm.html" title="Hint 3.4.4.3">Hint 3.4.4.3</a> for the column space, we find the following bases:<div class="displaymath">
+\begin{align*}
+\text{basis of } \row (C):\quad \amp \span \left\{
+\begin{bmatrix}1 \amp 0 \amp 3\end{bmatrix},
+\begin{bmatrix}0 \amp 1 \amp 1\end{bmatrix}\right\}\\
+\text{basis of } \col (C):\quad \amp \span \left\{
+\begin{bmatrix}1 \\ 3 \\ 1 \\ 1\end{bmatrix},
+\begin{bmatrix}0 \\ 1 \\ 1 \\ -1\end{bmatrix}
+\right\}.
+\end{align*}
+</div>Lastly, for the null space, we use <a data-knowl="./knowl/hint-basis-of-null-space.html" title="Hint 3.4.4.4">Hint 3.4.4.4</a>: From the RREF of \(C\text{,}\) we are looking for the solution set of<div class="displaymath">
+\begin{equation*}
+\matr{ccc|c}{
+1 \amp 0 \amp 3 \amp 0
+\\
+0 \amp 1 \amp 1 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 0
+}
+\end{equation*}
+</div>We have that \(x_{3}\) is a free variable, and \(x_{1}=-3x_{3}\text{,}\) \(x_{2}=-x_{3}\text{,}\) so that<div class="displaymath">
+\begin{align*}
+\text{basis of } \null (C):\quad \amp
+\span
+\left\{
+\begin{bmatrix} -3 \\ -1 \\ 1\end{bmatrix}
+\right\}.
+\end{align*}
+</div>
+</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-143" id="answer-143"><span class="type">Answer</span></a><div id="hk-answer-143" class="hidden-content tex2jax_ignore"><div class="solution"><div class="displaymath">
+\begin{align*}
+\text{basis of } \row (C):\quad \amp \span \left\{
+\begin{bmatrix}1 \amp 0 \amp 3\end{bmatrix},
+\begin{bmatrix}0 \amp 1 \amp 1\end{bmatrix}\right\},
+\quad \rank (C) = 2\\
+\text{basis of } \col (C):\quad \amp \span \left\{
+\begin{bmatrix}1 \\ 3 \\ 1 \\ 1\end{bmatrix},
+\begin{bmatrix}0 \\ 1 \\ 1 \\ -1\end{bmatrix}
+\right\}.\\
+\text{basis of } \null (C):\quad \amp
+\span
+\left\{
+\begin{bmatrix} -3 \\ -1 \\ 1\end{bmatrix}
+\right\},
+\quad \nullity (C) = 1
+\end{align*}
+</div></div></div>
+</li>
+<li id="li-457">
+<div class="displaymath">
 \begin{equation*}
 D = \begin{bmatrix} 0 \amp 0  \amp -1 \amp 0 \amp 1 \\ 1 \amp 2 \amp 3 \amp -2 \amp -18\\ 1 \amp 2 \amp 2 \amp 1 \amp 11 \\ -1 \amp -2 \amp -2 \amp 1 \amp 11 \end{bmatrix}
 \end{equation*}
-</div></li>
-<li id="li-458"><div class="displaymath">
+</div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-171" id="solution-171"><span class="type">Solution</span></a><div id="hk-solution-171" class="hidden-content tex2jax_ignore"><div class="solution">We row-reduce \(D\text{:}\)<div class="displaymath">
+\begin{align*}
+\begin{bmatrix} 0 \amp 0  \amp -1 \amp 0 \amp 1 \\ 1 \amp 2 \amp 3 \amp -2 \amp -18\\ 1 \amp 2 \amp 2 \amp 1 \amp 11 \\ -1 \amp -2 \amp -2 \amp 1 \amp 11 \end{bmatrix}
+\longrightarrow
+\begin{bmatrix}
+1 \amp 2  \amp 0 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 1 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 0 \amp 1
+\end{bmatrix}
+\end{align*}
+</div>The reduced row echelon form of \(D\) has four non-zero rows, so that<div class="displaymath">
+\begin{gather*}
+\rank (D) = 4
+\text{ and }
+\nullity (D) = 5-4 = 1.
+\end{gather*}
+</div>Moreover, using <a data-knowl="./knowl/hint-equivalent-matrices-same-row-and-null.html" title="Hint 3.4.4.2">Hint 3.4.4.2</a> for the row space and <a data-knowl="./knowl/Casting-out-algorithm.html" title="Hint 3.4.4.3">Hint 3.4.4.3</a> for the column space, we find the following bases:<div class="displaymath">
+\begin{align*}
+\text{basis of } \row (D):\quad \amp \span \left\{
+\begin{bmatrix}1 \amp 2  \amp 0 \amp 0 \amp 0\end{bmatrix},
+\begin{bmatrix}0 \amp 0 \amp 1 \amp 0 \amp 0\end{bmatrix},
+\right.\\
+\amp \hphantom{\span}\left.
+\begin{bmatrix}0 \amp 0 \amp 0 \amp 1 \amp 0\end{bmatrix},
+\begin{bmatrix}0 \amp 0 \amp 0 \amp 0 \amp 1\end{bmatrix}
+\right\}\\
+\text{basis of } \col (D):\quad \amp \span \left\{
+\begin{bmatrix}0 \\ 1 \\ 1 \\ -1\end{bmatrix},
+\begin{bmatrix}-1 \\ 3 \\ 2 \\ -2\end{bmatrix},
+\begin{bmatrix}0 \\ -2 \\ 1 \\ 1\end{bmatrix},
+\begin{bmatrix}1 \\ -18 \\ 11 \\ 11\end{bmatrix}
+\right\}.
+\end{align*}
+</div>Lastly, for the null space, we use <a data-knowl="./knowl/hint-basis-of-null-space.html" title="Hint 3.4.4.4">Hint 3.4.4.4</a>: From the RREF of \(D\text{,}\) we are looking for the solution set of<div class="displaymath">
+\begin{equation*}
+\matr{ccccc|c}{
+1 \amp 2  \amp 0 \amp 0 \amp 0  \amp 0
+\\
+0 \amp 0 \amp 1 \amp 0 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0
+}
+\end{equation*}
+</div>We have that \(x_{2}\) is the only free variable, and<div class="displaymath">
+\begin{align*}
+\text{basis of } \null (D):\quad \amp
+\span
+\left\{
+\begin{bmatrix} -2 \\ 1 \\ 0 \\ 0 \\ 0\end{bmatrix}
+\right\}.
+\end{align*}
+</div>
+</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-144" id="answer-144"><span class="type">Answer</span></a><div id="hk-answer-144" class="hidden-content tex2jax_ignore"><div class="solution"><div class="displaymath">
+\begin{align*}
+\text{basis of } \row (D):\quad \amp \span \left\{
+\begin{bmatrix}1 \amp 2  \amp 0 \amp 0 \amp 0\end{bmatrix},
+\begin{bmatrix}0 \amp 0 \amp 1 \amp 0 \amp 0\end{bmatrix},
+\right.\\
+\amp \hphantom{\span}\left.
+\begin{bmatrix}0 \amp 0 \amp 0 \amp 1 \amp 0\end{bmatrix},
+\begin{bmatrix}0 \amp 0 \amp 0 \amp 0 \amp 1\end{bmatrix}
+\right\},\\
+\amp  \rank (D) = 4\\
+\text{basis of } \col (D):\quad \amp \span \left\{
+\begin{bmatrix}0 \\ 1 \\ 1 \\ -1\end{bmatrix},
+\begin{bmatrix}-1 \\ 3 \\ 2 \\ -2\end{bmatrix},
+\begin{bmatrix}0 \\ -2 \\ 1 \\ 1\end{bmatrix},
+\begin{bmatrix}1 \\ -18 \\ 11 \\ 11\end{bmatrix}
+\right\}\\
+\text{basis of } \null (D):\quad \amp
+\span
+\left\{
+\begin{bmatrix} -2 \\ 1 \\ 0 \\ 0 \\ 0\end{bmatrix}
+\right\},
+\quad \nullity (D) = 1.
+\end{align*}
+</div></div></div>
+</li>
+<li id="li-458">
+<div class="displaymath">
 \begin{equation*}
 E = \begin{bmatrix} 1 \amp 0 \amp 3 \amp 0 \\ 3 \amp 1 \amp 10 \amp 0 \\ -1 \amp 1 \amp -2 \amp 1\\ 1 \amp -1 \amp 2 \amp -2 \end{bmatrix} 
 \end{equation*}
-</div></li>
-</ol></article></p>
-<p id="p-595"><article class="exercise-like" id="exercise-91"><h6 class="heading"><span class="codenumber">5.</span></h6>
-<aside class="aside-like" id="aside-99"><p id="p-596">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 5, Exercise 5.2.3)</p></aside> Find a basis and calculate the dimension of the following subspaces of \(\mathbb{R}^4 \text{.}\) <ol class="lower-alpha">
-<li id="li-459"><div class="displaymath">
+</div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-172" id="solution-172"><span class="type">Solution</span></a><div id="hk-solution-172" class="hidden-content tex2jax_ignore"><div class="solution">We row-reduce \(E\text{:}\)<div class="displaymath">
+\begin{align*}
+\begin{bmatrix}
+1 \amp 0 \amp 3 \amp 0 \\
+3 \amp 1 \amp 10 \amp 0 \\
+-1 \amp 1 \amp -2 \amp 1\\
+1 \amp -1 \amp 2 \amp -2 \end{bmatrix}
+\longrightarrow
+\begin{bmatrix}
+1 \amp 0  \amp 3 \amp 0
+\\
+0 \amp 1 \amp 1 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 1
+\\
+0 \amp 0 \amp 0 \amp 0
+\end{bmatrix}
+\end{align*}
+</div>The reduced row echelon form of \(E\) has three non-zero rows, so that<div class="displaymath">
+\begin{gather*}
+\rank (D) = 3
+\text{ and }
+\nullity (D) = 4-3 = 1.
+\end{gather*}
+</div>Moreover, using <a data-knowl="./knowl/hint-equivalent-matrices-same-row-and-null.html" title="Hint 3.4.4.2">Hint 3.4.4.2</a> for the row space and <a data-knowl="./knowl/Casting-out-algorithm.html" title="Hint 3.4.4.3">Hint 3.4.4.3</a> for the column space, we find the following bases:<div class="displaymath">
+\begin{align*}
+\text{basis of } \row (E):\quad \amp \span \left\{
+\begin{bmatrix}1 \amp 0  \amp 3 \amp 0	\end{bmatrix},
+\begin{bmatrix}0 \amp 1 \amp 1 \amp 0\end{bmatrix},
+\begin{bmatrix}0 \amp 0 \amp 0 \amp 1\end{bmatrix}\right\}\\
+\text{basis of } \col (E):\quad \amp \span \left\{
+\begin{bmatrix}1 \\ 3 \\ -1 \\ 1\end{bmatrix},
+\begin{bmatrix}0 \\ 1 \\ 1 \\ -1\end{bmatrix},
+\begin{bmatrix}0 \\ 0 \\ 1 \\ -2\end{bmatrix}
+\right\}.
+\end{align*}
+</div>Lastly, for the null space, we use <a data-knowl="./knowl/hint-basis-of-null-space.html" title="Hint 3.4.4.4">Hint 3.4.4.4</a>: From the RREF of \(E\text{,}\) we are looking for the solution set of<div class="displaymath">
+\begin{equation*}
+\matr{cccc|c}{
+1 \amp 0  \amp 3 \amp 0\amp 0  
+\\
+0 \amp 1 \amp 1 \amp 0\amp 0  
+\\
+0 \amp 0 \amp 0 \amp 1\amp 0  
+\\
+0 \amp 0 \amp 0 \amp 0\amp 0  
+}
+\end{equation*}
+</div>We have that \(x_{3}\) is the only free variable, and \(x_{1}=-3x_{3}\) and \(x_{2}=-x_{3}\text{.}\) Thus,<div class="displaymath">
+\begin{align*}
+\text{basis of } \null (E):\quad \amp
+\span
+\left\{
+\begin{bmatrix} -3 \\ -1 \\ 1 \\ 0 \end{bmatrix}
+\right\}.
+\end{align*}
+</div>
+</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-145" id="answer-145"><span class="type">Answer</span></a><div id="hk-answer-145" class="hidden-content tex2jax_ignore"><div class="solution"><div class="displaymath">
+\begin{align*}
+\text{basis of } \row (E):\quad \amp \span \left\{
+\begin{bmatrix}1 \amp 0  \amp 3 \amp 0	\end{bmatrix},
+\begin{bmatrix}0 \amp 1 \amp 1 \amp 0\end{bmatrix},
+\begin{bmatrix}0 \amp 0 \amp 0 \amp 1\end{bmatrix}\right\},\\
+\amp  \rank (E) = 3\\
+\text{basis of } \col (E):\quad \amp \span \left\{
+\begin{bmatrix}1 \\ 3 \\ -1 \\ 1\end{bmatrix},
+\begin{bmatrix}0 \\ 1 \\ 1 \\ -1\end{bmatrix},
+\begin{bmatrix}0 \\ 0 \\ 1 \\ -2\end{bmatrix}
+\right\}\\
+\text{basis of } \null (E):\quad \amp
+\span
+\left\{
+\begin{bmatrix} -3 \\ -1 \\ 1 \\ 0 \end{bmatrix}
+\right\},
+\quad \nullity (E) = 1
+\end{align*}
+</div></div></div>
+</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-105" id="hint-105"><span class="type">Hint</span> <span class="codenumber">1</span></a><div id="hk-hint-105" class="hidden-content tex2jax_ignore"><div class="solution">
+<aside class="aside-like" id="aside-99"><p id="p-595">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Definition 1.24 and p. 213)</p></aside> Let \(A\) be a matrix and consider any echelon form of \(A\text{.}\) Then, the number of pivot entries of \(A\) does not depend on the echelon form we choose, and is called the <em class="emphasis">rank of \(A\)</em>. We denote it by \(\rank(A)\text{.}\) The dimension of the null space is called the <em class="emphasis">nullity</em> of \(A\text{,}\) and is written \(\nullity(A)\text{.}\)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-equivalent-matrices-same-row-and-null" id="hint-equivalent-matrices-same-row-and-null"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-equivalent-matrices-same-row-and-null" class="hidden-content tex2jax_ignore"><div class="solution">
+<aside class="aside-like" id="aside-100"><p id="p-596">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Proposition 5.53 and p. 212)</p></aside> Let \(A\) and \(B\) be row equivalent matrices. Then \(\row(A) =\row(B)\) and \(\null(A) =\null(B)\text{.}\) In particular, the non-zero rows of the reduced echelon form of \(A\) form a basis of the row space, \(\row(A)\text{.}\)</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-Casting-out-algorithm" id="Casting-out-algorithm"><span class="type">Hint</span> <span class="codenumber">3</span></a><div id="hk-Casting-out-algorithm" class="hidden-content tex2jax_ignore"><div class="solution">
+<aside class="aside-like" id="aside-101"><p id="p-597">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Algorithm 5.8)</p></aside><em class="emphasis">Casting-out algorithm</em>: <ol class="lower-alpha">
+<li id="li-459">
+<em class="emphasis">Input</em>: a list of \(k\) vectors \(u_1,...,u_k\in \mathbb{R}^n\text{.}\)</li>
+<li id="li-460">
+<em class="emphasis">Output</em>: the set of indices \(j\) such that \(u_j\) is redundant.</li>
+<li id="li-461">
+<em class="emphasis">Algorithm</em>: Write the vectors \(u_1,\ldots,u_k\) as the columns of an \(n\times k\) matrix, and reduce to echelon form. Every non-pivot column, if any, corresponds to a redundant vector.</li>
+</ol>
+</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-basis-of-null-space" id="hint-basis-of-null-space"><span class="type">Hint</span> <span class="codenumber">4</span></a><div id="hk-hint-basis-of-null-space" class="hidden-content tex2jax_ignore"><div class="solution">
+<aside class="aside-like" id="aside-102"><p id="p-598">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, p. 212)</p></aside> The <em class="emphasis">null space</em> of \(A\) is the solution space of the homogeneous system \(A\mathbf{x}=\mathbf{0}\text{.}\) Thus, finding a basis of the null space is the same as finding a set of basic solutions. From the reduced echelon form, we can easily find the general solution of \(A\mathbf{x}=\mathbf{0}\text{,}\) using parameters corresponding to the non-pivot columns of \(\RREF(A)\text{.}\)</div></div>
+</div></article></p>
+<p id="p-599"><article class="exercise-like" id="exercise-91"><h6 class="heading"><span class="codenumber">5.</span></h6>
+<aside class="aside-like" id="aside-103"><p id="p-600">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 5, Exercise 5.2.3)</p></aside> Find a basis and calculate the dimension of the following subspaces of \(\mathbb{R}^4 \text{.}\) <ol class="lower-alpha">
+<li id="li-462"><div class="displaymath">
 \begin{equation*}
 \text{span}\{ (1,-1,2,0), (2,3,0,3), (1,9,-6,6)\} 
 \end{equation*}
 </div></li>
-<li id="li-460"><div class="displaymath">
+<li id="li-463"><div class="displaymath">
 \begin{equation*}
 \text{span}\{(2,1,0,-1), (-1,1,1,1), (2,7,4,1)\} 
 \end{equation*}
 </div></li>
-<li id="li-461"><div class="displaymath">
+<li id="li-464"><div class="displaymath">
 \begin{equation*}
 \text{span}\{(-1,2,1,0), (2,0,3,-1), (4,4,11,-3), (3, -2, 2, -1)\} 
 \end{equation*}
 </div></li>
-<li id="li-462"><div class="displaymath">
+<li id="li-465"><div class="displaymath">
 \begin{equation*}
 \text{span}\{(-2,0,3,1), (1,2,-1,0), (-2,8,5,3), (-1, 2, 2, 1)\} 
 \end{equation*}
 </div></li>
 </ol></article></p>
-<p id="p-597"><article class="exercise-like" id="exercise-92"><h6 class="heading"><span class="codenumber">6.</span></h6>
-<aside class="aside-like" id="aside-100"><p id="p-598">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 5, Exercise 5.4.3)</p></aside><ol class="lower-alpha">
-<li id="li-463">Can a \(3 \times 4 \) matrix have independent columns? Independent rows? Explain.</li>
-<li id="li-464">If  \(A \) is \(4 \times 3 \) and rank \(A \) =2, can  \(A \) have independent columns? Independent rows? Explain.</li>
-<li id="li-465">If \(A \) is an \(m \times n \) matrix and rank \(A = m \text{,}\) show that \(\le n \text{.}\)</li>
-<li id="li-466">Can a nonsquare matrix have its rows independent and its columns independent? Explain.</li>
-<li id="li-467">Can the nullspace of a \(3 \times 6 \) matrix have dimension 2? Explain.</li>
-<li id="li-468">Suppose that \(A \) is \(5 \times 4 \) and null\((A) = \mathbb{R}x \) for some column \(\mathbf{x}\ne 0 \text{.}\) Can \(\dim( \text{Im}A)=2? \)</li>
+<p id="p-601"><article class="exercise-like" id="exercise-92"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<aside class="aside-like" id="aside-104"><p id="p-602">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 5, Exercise 5.4.3)</p></aside><ol class="lower-alpha">
+<li id="li-466">Can a \(3 \times 4 \) matrix have independent columns? Independent rows? Explain.</li>
+<li id="li-467">If  \(A \) is \(4 \times 3 \) and rank \(A \) =2, can  \(A \) have independent columns? Independent rows? Explain.</li>
+<li id="li-468">If \(A \) is an \(m \times n \) matrix and rank \(A = m \text{,}\) show that \(\le n \text{.}\)</li>
+<li id="li-469">Can a nonsquare matrix have its rows independent and its columns independent? Explain.</li>
+<li id="li-470">Can the nullspace of a \(3 \times 6 \) matrix have dimension 2? Explain.</li>
+<li id="li-471">Suppose that \(A \) is \(5 \times 4 \) and null\((A) = \mathbb{R}x \) for some column \(\mathbf{x}\ne 0 \text{.}\) Can \(\dim( \text{Im}A)=2? \)</li>
 </ol></article></p></section></section></div></main>
 </div>
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>
