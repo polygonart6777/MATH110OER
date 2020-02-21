@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-16T10:49:11-08:00    *-->
+<!--*    on 2020-02-20T18:33:20-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -713,7 +713,7 @@ E = \begin{bmatrix} 1 \amp 0 \amp 3 \amp 0 \\ 3 \amp 1 \amp 10 \amp 0 \\ -1 \amp
 <a data-knowl="" class="id-ref" data-refid="hk-hint-105" id="hint-105"><span class="type">Hint</span> <span class="codenumber">1</span></a><div id="hk-hint-105" class="hidden-content tex2jax_ignore"><div class="solution">
 <aside class="aside-like" id="aside-99"><p id="p-595">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Definition 1.24 and p. 213)</p></aside> Let \(A\) be a matrix and consider any echelon form of \(A\text{.}\) Then, the number of pivot entries of \(A\) does not depend on the echelon form we choose, and is called the <em class="emphasis">rank of \(A\)</em>. We denote it by \(\rank(A)\text{.}\) The dimension of the null space is called the <em class="emphasis">nullity</em> of \(A\text{,}\) and is written \(\nullity(A)\text{.}\)</div></div>
 <a data-knowl="" class="id-ref" data-refid="hk-hint-equivalent-matrices-same-row-and-null" id="hint-equivalent-matrices-same-row-and-null"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-equivalent-matrices-same-row-and-null" class="hidden-content tex2jax_ignore"><div class="solution">
-<aside class="aside-like" id="aside-100"><p id="p-596">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Proposition 5.53 and p. 212)</p></aside> Let \(A\) and \(B\) be row equivalent matrices. Then \(\row(A) =\row(B)\) and \(\null(A) =\null(B)\text{.}\) In particular, the non-zero rows of the reduced echelon form of \(A\) form a basis of the row space, \(\row(A)\text{.}\)</div></div>
+<aside class="aside-like" id="aside-100"><p id="p-596">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Proposition 5.53 and p. 212)</p></aside> Let \(A\) and \(B\) be row equivalent matrices. Then \(\row(A) =\row(B)\) and \(\null(A) =\null(B)\text{.}\) In particular, the non-zero rows of a row echelon form of \(A\) form a basis of the row space, \(\row(A)\text{.}\)</div></div>
 <a data-knowl="" class="id-ref" data-refid="hk-Casting-out-algorithm" id="Casting-out-algorithm"><span class="type">Hint</span> <span class="codenumber">3</span></a><div id="hk-Casting-out-algorithm" class="hidden-content tex2jax_ignore"><div class="solution">
 <aside class="aside-like" id="aside-101"><p id="p-597">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Algorithm 5.8)</p></aside><em class="emphasis">Casting-out algorithm</em>: <ol class="lower-alpha">
 <li id="li-459">
@@ -729,27 +729,206 @@ E = \begin{bmatrix} 1 \amp 0 \amp 3 \amp 0 \\ 3 \amp 1 \amp 10 \amp 0 \\ -1 \amp
 </div></article></p>
 <p id="p-599"><article class="exercise-like" id="exercise-91"><h6 class="heading"><span class="codenumber">5.</span></h6>
 <aside class="aside-like" id="aside-103"><p id="p-600">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 5, Exercise 5.2.3)</p></aside> Find a basis and calculate the dimension of the following subspaces of \(\mathbb{R}^4 \text{.}\) <ol class="lower-alpha">
-<li id="li-462"><div class="displaymath">
+<li id="li-462">
+<div class="displaymath">
 \begin{equation*}
 \text{span}\{ (1,-1,2,0), (2,3,0,3), (1,9,-6,6)\} 
 \end{equation*}
-</div></li>
-<li id="li-463"><div class="displaymath">
+</div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-173" id="solution-173"><span class="type">Solution</span></a><div id="hk-solution-173" class="hidden-content tex2jax_ignore"><div class="solution">We will write the vectors as rows of a matrix and then use <a data-knowl="./knowl/hint-equivalent-matrices-same-row-and-null.html" title="Hint 3.4.4.2">Hint 3.4.4.2</a> to determine a basis of its row space. We row-reduce:<div class="displaymath">
+\begin{align*}
+\matr{cccc}{
+1 \amp -1 \amp 2 \amp 0
+\\
+2 \amp 3 \amp 0 \amp 3
+\\
+1 \amp 9 \amp -6 \amp 6
+}
+\overset{-2R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+\amp\matr{cccc}{
+1 \amp -1 \amp 2 \amp 0
+\\
+0 \amp 5 \amp -4 \amp 3
+\\
+0 \amp 10 \amp -8 \amp 6
+}\\
+\overset{-2R_{2}+R_{3}}{\longrightarrow}
+\amp\matr{cccc}{
+1 \amp -1 \amp 2 \amp 0
+\\
+0 \amp 5 \amp -4 \amp 3
+\\
+0 \amp 0 \amp 0 \amp 0
+}\\
+\overset{\frac{1}{5}R_{2}+R_{1}}{\underset{\frac{1}{5}R_{2}}{\longrightarrow}}
+\amp\matr{cccc}{
+1 \amp 0 \amp \frac{6}{5} \amp 0
+\\
+0 \amp 1 \amp -\frac{4}{5} \amp \frac{3}{5}
+\\
+0 \amp 0 \amp 0 \amp 0
+}.
+\end{align*}
+</div>We see that the rank of the matrix and thus the dimension of the subspace is \(2\text{.}\) Moreover, a basis for the space in question is given by<div class="displaymath">
+\begin{equation*}
+\left\{ (1 , 0 , \frac{6}{5} , 0), (0 , 1 , -\frac{4}{5} , \frac{3}{5})\right\}.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-146" id="answer-146"><span class="type">Answer</span></a><div id="hk-answer-146" class="hidden-content tex2jax_ignore"><div class="solution">The dimension is \(2\) and a basis is given by<div class="displaymath">
+\begin{equation*}
+\left\{ (1 , 0 , \frac{6}{5} , 0), (0 , 1 , -\frac{4}{5} , \frac{3}{5})\right\}.
+\end{equation*}
+</div>
+</div></div>
+</li>
+<li id="li-463">
+<div class="displaymath">
 \begin{equation*}
 \text{span}\{(2,1,0,-1), (-1,1,1,1), (2,7,4,1)\} 
 \end{equation*}
-</div></li>
-<li id="li-464"><div class="displaymath">
+</div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-174" id="solution-174"><span class="type">Solution</span></a><div id="hk-solution-174" class="hidden-content tex2jax_ignore"><div class="solution">We will write the vectors as rows of a matrix and then use <a data-knowl="./knowl/hint-equivalent-matrices-same-row-and-null.html" title="Hint 3.4.4.2">Hint 3.4.4.2</a> to determine a basis of its row space. We row-reduce:<div class="displaymath">
+\begin{align*}
+\matr{cccc}{
+2 \amp 1 \amp 0 \amp -1
+\\
+-1 \amp 1 \amp 1 \amp 1
+\\
+2 \amp 7 \amp 4 \amp 1
+}
+\overset{-R_{1}+R_{2}}{\underset{R_{1}+2R_{3}}{\longrightarrow}}
+\amp\matr{cccc}{
+2 \amp 1 \amp 0 \amp -1
+\\
+0 \amp 3 \amp 2 \amp 1
+\\
+0 \amp 6 \amp 4 \amp 2
+}\\
+\overset{-2R_{2}+R_{3}}{\longrightarrow}
+\amp\matr{cccc}{
+2 \amp 1 \amp 0 \amp -1
+\\
+0 \amp 3 \amp 2 \amp 1
+\\
+0 \amp 0 \amp 0 \amp 0
+}.
+\end{align*}
+</div>We see that the rank of the matrix and thus the dimension of the subspace is \(2\text{.}\) Moreover, a basis for the space in question is given by<div class="displaymath">
+\begin{equation*}
+\left\{ (2 , 1 , 0 , -1), (0 , 3 , 2 , 1)\right\}.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-147" id="answer-147"><span class="type">Answer</span></a><div id="hk-answer-147" class="hidden-content tex2jax_ignore"><div class="solution">The dimension is \(2\) and a basis is given by<div class="displaymath">
+\begin{equation*}
+\left\{ (2 , 1 , 0 , -1), (0 , 3 , 2 , 1)\right\}.
+\end{equation*}
+</div>
+</div></div>
+</li>
+<li id="li-464">
+<div class="displaymath">
 \begin{equation*}
 \text{span}\{(-1,2,1,0), (2,0,3,-1), (4,4,11,-3), (3, -2, 2, -1)\} 
 \end{equation*}
-</div></li>
-<li id="li-465"><div class="displaymath">
+</div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-175" id="solution-175"><span class="type">Solution</span></a><div id="hk-solution-175" class="hidden-content tex2jax_ignore"><div class="solution">We will write the vectors as rows of a matrix and then use <a data-knowl="./knowl/hint-equivalent-matrices-same-row-and-null.html" title="Hint 3.4.4.2">Hint 3.4.4.2</a> to determine a basis of its row space. We row-reduce:<div class="displaymath">
+\begin{align*}
+\matr{cccc}{
+-1 \amp 2 \amp 1 \amp 0
+\\
+2 \amp 0 \amp 3 \amp -1
+\\
+4 \amp 4 \amp 11 \amp -3
+\\
+3 \amp -2 \amp 2 \amp -1
+}
+\overset{2R_{1}+R_{2}, 4R_{1}+R_{3}}{\underset{3R_{1}+R_{4}}{\longrightarrow}}
+\amp\matr{ccc}{
+-1 \amp 2 \amp 1 \amp 0
+\\
+0 \amp 4 \amp 5 \amp -1
+\\
+0 \amp 12 \amp 15 \amp -3
+\\
+0 \amp 4 \amp 5 \amp -1
+}\\
+\overset{-R_{2}+R_{4}}{\underset{-2R_{2}+R_{3}}{\longrightarrow}}
+\amp\matr{cccc}{
+-1 \amp 2 \amp 1 \amp 0
+\\
+0 \amp 4 \amp 5 \amp -1
+\\
+0 \amp 0 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 0
+}.
+\end{align*}
+</div>We see that the rank of the matrix and thus the dimension of the subspace is \(2\text{.}\) Moreover, a basis for the space in question is given by<div class="displaymath">
+\begin{equation*}
+\left\{ (-1 , 2 , 1 , 0), (0 , 4 , 5 , -1)\right\}.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-148" id="answer-148"><span class="type">Answer</span></a><div id="hk-answer-148" class="hidden-content tex2jax_ignore"><div class="solution">The dimension is \(2\) and a basis is given by<div class="displaymath">
+\begin{equation*}
+\left\{ (-1 , 2 , 1 , 0), (0 , 4 , 5 , -1)\right\}.
+\end{equation*}
+</div>
+</div></div>
+</li>
+<li id="li-465">
+<div class="displaymath">
 \begin{equation*}
 \text{span}\{(-2,0,3,1), (1,2,-1,0), (-2,8,5,3), (-1, 2, 2, 1)\} 
 \end{equation*}
-</div></li>
-</ol></article></p>
+</div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-176" id="solution-176"><span class="type">Solution</span></a><div id="hk-solution-176" class="hidden-content tex2jax_ignore"><div class="solution">We will write the vectors as rows of a matrix and then use <a data-knowl="./knowl/hint-equivalent-matrices-same-row-and-null.html" title="Hint 3.4.4.2">Hint 3.4.4.2</a> to determine a basis of its row space. We row-reduce:<div class="displaymath">
+\begin{align*}
+\matr{cccc}{
+-2 \amp 0 \amp 3 \amp 1
+\\
+1 \amp 2 \amp -1 \amp 0
+\\
+-2 \amp 8 \amp 5 \amp 3
+\\
+-1 \amp 2 \amp 2 \amp 1
+}
+\overset{R_{1}+2R_{2}, -R_{1}+R_{3}}{\underset{-R_{1}+2R_{4}}{\longrightarrow}}
+\amp\matr{cccc}{
+-2 \amp 0 \amp 3 \amp 1
+\\
+0 \amp 4 \amp 1 \amp 1
+\\
+0 \amp 8 \amp 2 \amp 2
+\\
+0 \amp 4 \amp 1 \amp 1
+}\\
+\overset{-R_{2}+R_{4}}{\underset{-2R_{2}+R_{3}}{\longrightarrow}}
+\amp\matr{cccc}{
+-2 \amp 0 \amp 3 \amp 1
+\\
+0 \amp 4 \amp 1 \amp 1
+\\
+0 \amp 0 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 0
+}.
+\end{align*}
+</div>We see that the rank of the matrix and thus the dimension of the subspace is \(2\text{.}\) Moreover, a basis for the space in question is given by<div class="displaymath">
+\begin{equation*}
+\left\{ (-2 , 0 , 3 , 1), (0 , 4 , 1 , 1)\right\}.
+\end{equation*}
+</div>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-149" id="answer-149"><span class="type">Answer</span></a><div id="hk-answer-149" class="hidden-content tex2jax_ignore"><div class="solution">The dimension is \(2\) and a basis is given by<div class="displaymath">
+\begin{equation*}
+\left\{ (-2 , 0 , 3 , 1), (0 , 4 , 1 , 1)\right\}.
+\end{equation*}
+</div>
+</div></div>
+</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-109" id="hint-109"><span class="type">Hint</span></a><div id="hk-hint-109" class="hidden-content tex2jax_ignore"><div class="solution">You can write the vectors as rows of a matrix. Then use <a data-knowl="./knowl/hint-equivalent-matrices-same-row-and-null.html" title="Hint 3.4.4.2">Hint 3.4.4.2</a> to determine a basis of its row space.</div></div>
+</div></article></p>
 <p id="p-601"><article class="exercise-like" id="exercise-92"><h6 class="heading"><span class="codenumber">6.</span></h6>
 <aside class="aside-like" id="aside-104"><p id="p-602">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 5, Exercise 5.4.3)</p></aside><ol class="lower-alpha">
 <li id="li-466">Can a \(3 \times 4 \) matrix have independent columns? Independent rows? Explain.</li>

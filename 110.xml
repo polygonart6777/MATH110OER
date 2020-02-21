@@ -12135,7 +12135,7 @@
 											\nullity (D) = 5-4 = 1.
 										</mrow>										
 									</md>	
-									Moreover, using <xref ref=" hint-equivalent-matrices-same-row-and-null"/> for the row space and <xref ref="Casting-out-algorithm"/> for the column space, we find the following bases:
+									Moreover, using <xref ref="hint-equivalent-matrices-same-row-and-null"/> for the row space and <xref ref="Casting-out-algorithm"/> for the column space, we find the following bases:
 									<md>
 										<mrow>
 											\text{basis of } \row (D):\quad \amp \span \left\{
@@ -12245,7 +12245,7 @@
 											\nullity (D) = 4-3 = 1.
 										</mrow>										
 									</md>	
-									Moreover, using <xref ref=" hint-equivalent-matrices-same-row-and-null"/> for the row space and <xref ref="Casting-out-algorithm"/> for the column space, we find the following bases:
+									Moreover, using <xref ref="hint-equivalent-matrices-same-row-and-null"/> for the row space and <xref ref="Casting-out-algorithm"/> for the column space, we find the following bases:
 									<md>
 										<mrow>
 											\text{basis of } \row (E):\quad \amp \span \left\{
@@ -12319,7 +12319,7 @@
 							The dimension of the null space is called the <em>nullity</em> of <m>A</m>, and is written <m>\nullity(A)</m>. 
 						</hint>
 						<hint xml:id="hint-equivalent-matrices-same-row-and-null"><aside><p> (Source: <xref ref="ref-PS" />, Proposition 5.53 and p. 212) </p></aside>
-							Let <m>A</m> and <m>B</m> be row equivalent matrices. Then <m>\row(A) =\row(B)</m> and <m>\null(A) =\null(B)</m>. In particular, the non-zero rows of the reduced echelon form of <m>A</m> form a basis of the row space, <m>\row(A)</m>.
+							Let <m>A</m> and <m>B</m> be row equivalent matrices. Then <m>\row(A) =\row(B)</m> and <m>\null(A) =\null(B)</m>. In particular, the non-zero rows of a row echelon form of <m>A</m> form a basis of the row space, <m>\row(A)</m>.
 						</hint>
 						<hint xml:id="Casting-out-algorithm"><aside><p> (Source: <xref ref="ref-PS" />, Algorithm 5.8) </p></aside>
 							<em>Casting-out algorithm</em>:
@@ -12343,15 +12343,196 @@
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 5, Exercise 5.2.3) </p></aside>
 							 Find a basis and calculate the dimension of the following subspaces of <m> \mathbb{R}^4 </m>.
-<ol> 
-	<li>  <me>  \text{span}\{ (1,-1,2,0), (2,3,0,3), (1,9,-6,6)\} </me> </li>
-	<li> <me> \text{span}\{(2,1,0,-1), (-1,1,1,1), (2,7,4,1)\} </me> </li>
-	<li> <me> \text{span}\{(-1,2,1,0), (2,0,3,-1), (4,4,11,-3), (3, -2, 2, -1)\} </me> </li>
-		<li> <me>  \text{span}\{(-2,0,3,1), (1,2,-1,0), (-2,8,5,3), (-1, 2, 2, 1)\} </me> </li>
-</ol> 
+							<ol> 
+								<li>  <me>  \text{span}\{ (1,-1,2,0), (2,3,0,3), (1,9,-6,6)\} </me>
+								<solution>
+									We will write the vectors as rows of a matrix and then use <xref ref="hint-equivalent-matrices-same-row-and-null"/> to determine a basis of its row space. We row-reduce:
+									<md>
+										<mrow>
+											\matr{cccc}{
+												1 \amp -1 \amp 2 \amp 0
+												\\
+												2 \amp 3 \amp 0 \amp 3
+												\\
+												1 \amp 9 \amp -6 \amp 6
+											}
+											\overset{-2R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+											\amp\matr{cccc}{
+												1 \amp -1 \amp 2 \amp 0
+												\\
+												0 \amp 5 \amp -4 \amp 3
+												\\
+												0 \amp 10 \amp -8 \amp 6
+											}
+										</mrow>
+										<mrow>
+											\overset{-2R_{2}+R_{3}}{\longrightarrow}
+											\amp\matr{cccc}{
+												1 \amp -1 \amp 2 \amp 0
+												\\
+												0 \amp 5 \amp -4 \amp 3
+												\\
+												0 \amp 0 \amp 0 \amp 0
+											}.
+										</mrow>
+									</md>
+									We see that the rank of the matrix and thus the dimension of the subspace is <m>2</m>. Moreover, a basis for the space in question is given by
+									<me>
+										\left\{ (1 , -1 , 2 , 0), (0 , 5 , -4 , 3)\right\}.
+									</me>
+								</solution>
+								<answer>
+									The dimension is <m>2</m> and a basis is given by
+									<me>
+										\left\{ (1 , -1 , 2 , 0), (0 , 5 , -4 , 3)\right\}.
+									</me>
+								</answer></li>
+								<li> <me> \text{span}\{(2,1,0,-1), (-1,1,1,1), (2,7,4,1)\} </me>
+								<solution>
+									We will write the vectors as rows of a matrix and then use <xref ref="hint-equivalent-matrices-same-row-and-null"/> to determine a basis of its row space. We row-reduce:
+									<md>
+										<mrow>
+											\matr{cccc}{
+												2 \amp 1 \amp 0 \amp -1
+												\\
+												-1 \amp 1 \amp 1 \amp 1
+												\\
+												2 \amp 7 \amp 4 \amp 1
+											}
+											\overset{-R_{1}+R_{2}}{\underset{R_{1}+2R_{3}}{\longrightarrow}}
+											\amp\matr{cccc}{
+												2 \amp 1 \amp 0 \amp -1
+												\\
+												0 \amp 3 \amp 2 \amp 1
+												\\
+												0 \amp 6 \amp 4 \amp 2
+											}
+										</mrow>
+										<mrow>
+											\overset{-2R_{2}+R_{3}}{\longrightarrow}
+											\amp\matr{cccc}{
+												2 \amp 1 \amp 0 \amp -1
+												\\
+												0 \amp 3 \amp 2 \amp 1
+												\\
+												0 \amp 0 \amp 0 \amp 0
+											}.
+										</mrow>
+									</md>
+									We see that the rank of the matrix and thus the dimension of the subspace is <m>2</m>. Moreover, a basis for the space in question is given by
+									<me>
+										\left\{ (2 , 1 , 0 , -1), (0 , 3 , 2 , 1)\right\}.
+									</me>
+								</solution>
+								<answer>
+									The dimension is <m>2</m> and a basis is given by
+									<me>
+										\left\{ (2 , 1 , 0 , -1), (0 , 3 , 2 , 1)\right\}.
+									</me>
+								</answer> </li>
+								<li> <me> \text{span}\{(-1,2,1,0), (2,0,3,-1), (4,4,11,-3), (3, -2, 2, -1)\} </me>
+								<solution>
+									We will write the vectors as rows of a matrix and then use <xref ref="hint-equivalent-matrices-same-row-and-null"/> to determine a basis of its row space. We row-reduce:
+									<md>
+										<mrow>
+											\matr{cccc}{
+												-1 \amp 2 \amp 1 \amp 0
+												\\
+												2 \amp 0 \amp 3 \amp -1
+												\\
+												4 \amp 4 \amp 11 \amp -3
+												\\
+												3 \amp -2 \amp 2 \amp -1
+											}
+											\overset{2R_{1}+R_{2}, 4R_{1}+R_{3}}{\underset{3R_{1}+R_{4}}{\longrightarrow}}
+											\amp\matr{ccc}{
+												-1 \amp 2 \amp 1 \amp 0
+												\\
+												0 \amp 4 \amp 5 \amp -1
+												\\
+												0 \amp 12 \amp 15 \amp -3
+												\\
+												0 \amp 4 \amp 5 \amp -1
+											}
+										</mrow>
+										<mrow>
+											\overset{-R_{2}+R_{4}}{\underset{-2R_{2}+R_{3}}{\longrightarrow}}
+											\amp\matr{cccc}{
+												-1 \amp 2 \amp 1 \amp 0
+												\\
+												0 \amp 4 \amp 5 \amp -1
+												\\
+												0 \amp 0 \amp 0 \amp 0
+												\\
+												0 \amp 0 \amp 0 \amp 0
+											}.
+										</mrow>
+									</md>
+									We see that the rank of the matrix and thus the dimension of the subspace is <m>2</m>. Moreover, a basis for the space in question is given by
+									<me>
+										\left\{ (-1 , 2 , 1 , 0), (0 , 4 , 5 , -1)\right\}.
+									</me>
+								</solution>
+								<answer>
+									The dimension is <m>2</m> and a basis is given by
+									<me>
+										\left\{ (-1 , 2 , 1 , 0), (0 , 4 , 5 , -1)\right\}.
+									</me>
+								</answer> </li>
+									<li> <me>  \text{span}\{(-2,0,3,1), (1,2,-1,0), (-2,8,5,3), (-1, 2, 2, 1)\} </me>
+								<solution>
+									We will write the vectors as rows of a matrix and then use <xref ref="hint-equivalent-matrices-same-row-and-null"/> to determine a basis of its row space. We row-reduce:
+									<md>
+										<mrow>
+											\matr{cccc}{
+												-2 \amp 0 \amp 3 \amp 1
+												\\
+												1 \amp 2 \amp -1 \amp 0
+												\\
+												-2 \amp 8 \amp 5 \amp 3
+												\\
+												-1 \amp 2 \amp 2 \amp 1
+											}
+											\overset{R_{1}+2R_{2}, -R_{1}+R_{3}}{\underset{-R_{1}+2R_{4}}{\longrightarrow}}
+											\amp\matr{cccc}{
+												-2 \amp 0 \amp 3 \amp 1
+												\\
+												0 \amp 4 \amp 1 \amp 1
+												\\
+												0 \amp 8 \amp 2 \amp 2
+												\\
+												0 \amp 4 \amp 1 \amp 1
+											}
+										</mrow>
+										<mrow>
+											\overset{-R_{2}+R_{4}}{\underset{-2R_{2}+R_{3}}{\longrightarrow}}
+											\amp\matr{cccc}{
+												-2 \amp 0 \amp 3 \amp 1
+												\\
+												0 \amp 4 \amp 1 \amp 1
+												\\
+												0 \amp 0 \amp 0 \amp 0
+												\\
+												0 \amp 0 \amp 0 \amp 0
+											}.
+										</mrow>
+									</md>
+									We see that the rank of the matrix and thus the dimension of the subspace is <m>2</m>. Moreover, a basis for the space in question is given by
+									<me>
+										\left\{ (-2 , 0 , 3 , 1), (0 , 4 , 1 , 1)\right\}.
+									</me>
+								</solution>
+								<answer>
+									The dimension is <m>2</m> and a basis is given by
+									<me>
+										\left\{ (-2 , 0 , 3 , 1), (0 , 4 , 1 , 1)\right\}.
+									</me>
+								</answer> </li>
+							</ol> 
 						</statement>
-						<!-- <hint>
-						</hint> -->
+						<hint>
+							You can write the vectors as rows of a matrix. Then use <xref ref="hint-equivalent-matrices-same-row-and-null"/> to determine a basis of its row space.
+						</hint>
 						<!-- <solution>
 						</solution> -->
 						<!--<answer>
