@@ -12312,8 +12312,11 @@
 									</md></answer></li>
 							</ol>
 
-						</statement>
-						<hint><aside><p> (Source: <xref ref="ref-PS" />, Definition 1.24 and p. 213) </p></aside>
+						</statement>						
+						<hint xml:id="hint-basis-of-null-space"><aside><p> (Source: <xref ref="ref-PS" />, p. 212) </p></aside>
+							The <em>null space</em> of <m>A</m> is the solution space of the homogeneous system <m>A\mathbf{x}=\mathbf{0}</m>. Thus, finding a basis of the null space is the same as finding a set of basic solutions. From the reduced echelon form, we can easily find the general solution of <m>A\mathbf{x}=\mathbf{0}</m>, using parameters corresponding to the non-pivot columns of <m>\RREF(A)</m>.
+						</hint>
+						<hint xml:id="hint-def-rank-and-nullity"><aside><p> (Source: <xref ref="ref-PS" />, Definition 1.24 and p. 213) </p></aside>
 							Let <m>A</m> be a matrix and consider any echelon form of <m>A</m>. Then, the number of pivot entries of <m>A</m> does not depend on the echelon form we choose, and is called the <em>rank of <m>A</m></em>. We denote it by <m>\rank(A)</m>.
 
 							The dimension of the null space is called the <em>nullity</em> of <m>A</m>, and is written <m>\nullity(A)</m>. 
@@ -12334,9 +12337,6 @@
 									<em>Algorithm</em>: Write the vectors <m>u_1,\ldots,u_k</m> as the columns of an <m>n\times k</m> matrix, and reduce to echelon form. Every non-pivot column, if any, corresponds to a redundant vector.
 								</li>
 							</ol>
-						</hint>
-						<hint xml:id="hint-basis-of-null-space"><aside><p> (Source: <xref ref="ref-PS" />, p. 212) </p></aside>
-							The <em>null space</em> of <m>A</m> is the solution space of the homogeneous system <m>A\mathbf{x}=\mathbf{0}</m>. Thus, finding a basis of the null space is the same as finding a set of basic solutions. From the reduced echelon form, we can easily find the general solution of <m>A\mathbf{x}=\mathbf{0}</m>, using parameters corresponding to the non-pivot columns of <m>\RREF(A)</m>.
 						</hint>
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
@@ -12543,20 +12543,87 @@
 							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 5, Exercise 5.4.3) </p></aside>
 
 							<ol>
-	<li>  Can a <m> 3 \times 4 </m> matrix have independent columns? Independent rows? Explain. </li>
-	<li>  If  <m> A </m> is <m> 4 \times 3 </m> and rank <m> A </m> =2, can  <m> A </m> have independent columns? Independent rows? Explain. </li>
-	<li> If <m> A </m> is an <m> m \times n </m> matrix and rank <m> A = m </m>, show that <m> \le n </m>. </li>
-	<li>  Can a nonsquare matrix have its rows independent and its columns independent? Explain. </li>
-	<li> Can the nullspace of a <m> 3 \times 6 </m> matrix have dimension 2? Explain. </li>
-	<li>  Suppose that <m> A </m> is <m> 5 \times 4 </m> and null<m>(A) = \mathbb{R}x </m> for some column <m> \mathbf{x}\ne 0 </m>. Can <m> \dim( \text{Im}A)=2? </m> </li>
-</ol>
+								<li>  Can a <m> 3 \times 4 </m> matrix have independent columns? Independent rows? Explain.
+								<!-- <hint>
+								</hint> -->
+								<solution>
+									Recall that the dimension of the row space always coincides with the dimension of the column space. Since the matrix only has three rows, its column space can have at most dimension three. Since four vectors in a three dimensional space are always linearly dependent, the answer is: No, it cannot have independent columns.
+
+									For the other statement, consider
+									<me>
+										\matr{cccc}{
+											1 \amp 0 \amp 0 \amp 0
+											\\
+											0 \amp 1 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp 1 \amp 0
+										}
+									</me>
+									This matrix has three rows and four columns (i.e. it is <m> 3 \times 4 </m>) and its rows are linearly independent. So the answer is yes, it can have independent rows.
+								</solution>
+								<answer>
+									It cannot have independent columns, it can have independent rows.
+								</answer>
+								</li>
+								<li>  If  <m> A </m> is <m> 4 \times 3 </m> and <m> \rank (A) </m> =2, can  <m> A </m> have independent columns? Independent rows? Explain.
+								<hint>
+									It might help to look back into <xref ref="hint-equivalent-matrices-same-row-and-null"/> and <xref ref="hint-def-rank-and-nullity"/>.
+								</hint>
+								<solution xml:id="soln-rank-equals-dimrow">
+									By <xref ref="hint-equivalent-matrices-same-row-and-null"/>, we know that the number of non-zero rows in a row-echelon form of <m>A</m> is the number of basis vectors for the row space of <m>A</m>, i.e. the dimension of <m>\row (A)</m>. Recall the definition of <m>\rank (A)</m> from <xref ref="hint-def-rank-and-nullity"/>: since <m>\rank(A)</m> is the number of pivot entries in a row-echelon form of <m>A</m>, we see that <m>\dim \row (A)= \rank(A)</m>, which was assumed to be <m>2</m>. Since the matrix has <m>4</m> rows but its row space is only of dimension <m>2</m>, it cannot have linearly independent rows.
+
+									Similarly, we know that <m>\dim\row(A)=\dim\col(A)</m>, so the column space of <m>A</m> has dimension <m>2</m>, which is strictly smaller than the number of columns, <m>3</m>. Thus, it cannot have linearly independent columns.
+								</solution>
+								<answer>
+									No and no.
+								</answer>
+								 </li>
+								<li> If <m> A </m> is an <m> m \times n </m> matrix and <m> \rank(A) = m </m>, show that <m> m \le n </m>.
+								<solution xml:id="soln-rank-bounded-by-size">
+									As we have argued in <xref ref="soln-rank-equals-dimrow"/>, <m>\rank (A) = \dim\row(A)</m>, and this number also coincides with <m>\dim\col(A)</m>. Thus, <m>\dim\col(A) = m</m> by assumption. This means, in particular, that among the <m>n</m> many columns of <m>A</m>, there must exist <m>m</m> many linearly independent ones. Thus, <m> m \le n </m>.
+								</solution>
+								 </li>
+								<li>  Can a nonsquare matrix have its rows independent <em>and</em> its columns independent? Explain.
+								<solution>
+									Suppose <m>A</m> is of size <m>m\times n</m>.
+									If <em>all</em> rows of <m>A</m> are linearly independent, then the row space dimension the number of rows in <m>A</m>, i.e. <m>\dim\row(A)=m</m>. Similarly, if <em>all</em> columns of <m>A</m> are linearly independent, then the column space dimension the number of columns in <m>A</m>, i.e. <m>\dim\col(A)=n</m>. Since we always have <m>\dim\row(A) = \dim\col(A)</m>, this implies <m>m=n</m>, i.e. <m>A</m> is square. Thus, the answer is no.
+								</solution>
+								<answer>
+									No.
+								</answer>
+								 </li>
+								<li> Can the nullspace of a <m> 3 \times 6 </m> matrix have dimension 2? Explain.
+								<hint>
+									It might help to look back into <xref ref="hint-basis-of-null-space"/>.
+								</hint>
+								<solution>
+									No. By <xref ref="Rank-Nullity"/>, we have for an <m>3\times 6</m> matrix <m>A</m>:
+									<me>
+										\nullity(A) = \dim\null(A) = 6 - \rank(A).
+									</me>
+									Thus, if <m>\nullity(A)=2</m>, then the rank of the matrix would be <m>4</m>. Since <m>\rank(A) = \dim\row(A)</m>, this would imply that <m>A</m> must have <m>4</m> independent rows; this is impossible since <m>A</m> only has <m>3</m> rows.
+								</solution>
+								<answer>
+									No.
+								</answer>
+								 </li>
+								<li>  Suppose that <m> A </m> is <m> 5 \times 4 </m> and null<m>(A) = \mathbb{R}x </m> for some column vector <m> \mathbf{x}\ne \mathbf{0} </m>. Can <m> \dim( \text{Im}A)=2? </m>
+								<!-- <hint>
+								</hint> -->
+								<solution>
+								</solution>
+								<answer>
+								</answer>
+								 </li>
+							</ol>
+							<hint xml:id="Rank-Nullity">
+								Rank nullity theorem, incl dimcol=dimrow
+							</hint>
+							<hint>
+								def linearly dependent/independent, basis
+							</hint>
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						
 					</exercise></p>
 	</exercises>
 </section>
