@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-25T12:11:44-08:00    *-->
+<!--*    on 2020-02-25T12:20:18-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -721,9 +721,9 @@ T\left(\begin{bmatrix} 1  \\ -7  \end{bmatrix}\right)
 <div class="solutions">
 <a data-knowl="" class="id-ref" data-refid="hk-hint-119" id="hint-119"><span class="type">Hint</span></a><div id="hk-hint-119" class="hidden-content tex2jax_ignore"><div class="solution">The first two can be solved right away, using only linearity of \(T\text{.}\) For the second two, you first need to write the vector at which you need to evaluate \(T\) as a linear combination of the vectors at which you know the values of \(T\text{.}\)</div></div>
 </div></article></p>
-<p id="p-612"><article class="exercise-like" id="exercise-97"><h6 class="heading"><span class="codenumber">5.</span></h6>
+<p id="p-612"><article class="exercise-like" id="ex-matr-of-rot"><h6 class="heading"><span class="codenumber">5.</span></h6>
 <aside class="aside-like" id="aside-110"><p id="p-613">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.1)</p></aside> Find the matrix of the linear transformation that rotates every vector of \(\mathbb{R}^2 \) by an angle of \(\frac{\pi}{3} \) (counterclockwise).</article></p>
-<p id="p-614"><article class="exercise-like" id="exercise-98"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<p id="p-614"><article class="exercise-like" id="ex-matrix-of-reflection-about-x-axis"><h6 class="heading"><span class="codenumber">6.</span></h6>
 <aside class="aside-like" id="aside-111"><p id="p-615">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.2)</p></aside> Find the matrix of the linear transformation that reflects every vectors of \(\mathbb{R}^2 \) about the \(x\)-axis.</article></p>
 <p id="p-616"><article class="exercise-like" id="exercise-99"><h6 class="heading"><span class="codenumber">7.</span></h6>
 <aside class="aside-like" id="aside-112"><p id="p-617">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.3)</p></aside> Find the matrix of the linear transformation that reflects every vectors of \(\mathbb{R}^2 \) about the line \(y = -x\text{.}\)</article></p>
@@ -731,7 +731,7 @@ T\left(\begin{bmatrix} 1  \\ -7  \end{bmatrix}\right)
 <aside class="aside-like" id="aside-113"><p id="p-619">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.4)</p></aside> Find the matrix of the linear transformation that stretches \(\mathbb{R}^2 \) by a factor of 3 in the vertical direction.</article></p>
 <p id="p-620"><article class="exercise-like" id="exercise-101"><h6 class="heading"><span class="codenumber">9.</span></h6>
 <aside class="aside-like" id="aside-114"><p id="p-621">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 5, Exercise 5.2.11)</p></aside> Find the matrix for \(T(\mathbf{w}) = proj_{\mathbf{v}}(\mathbf{w}) \text{,}\) where \(v = \begin{bmatrix} 1 \\ -2 \\ 3 \end{bmatrix}. \)</article></p>
-<p id="p-622"><article class="exercise-like" id="exercise-102"><h6 class="heading"><span class="codenumber">10.</span></h6>
+<p id="p-622"><article class="exercise-like" id="ex-comp-of-transf-equals-mult-of-matr"><h6 class="heading"><span class="codenumber">10.</span></h6>
 <aside class="aside-like" id="aside-115"><p id="p-623">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 5, Exercise 5.3.2)</p></aside> Let \(T \) be a linear transformation induced by the matrix \(A = \begin{bmatrix} 3 \amp 1 \\ -1 \amp 2 \end{bmatrix} \) and \(S \) a linear transformation induced by \(B =  \begin{bmatrix} 0 \amp -2 \\ 4 \amp 2 \end{bmatrix}. \) Find the matrix of \(S \circ T \) and find \((S \circ T )(\mathbf{x}) \) for \(\mathbf{x} = \begin{bmatrix} 2 \\ -1 \end{bmatrix}. \)<div class="solutions">
 <a data-knowl="" class="id-ref" data-refid="hk-hint-120" id="hint-120"><span class="type">Hint</span></a><div id="hk-hint-120" class="hidden-content tex2jax_ignore"><div class="solution">It might help to look back into the solution of <a data-knowl="./knowl/ex-from-linear-transf-to-matrix.html" title="Exercise 3.5.3">Exercise 3.5.3</a> to see how to find the matrix corresponding to a linear transformation.</div></div>
 <a data-knowl="" class="id-ref" data-refid="hk-answer-169" id="answer-169"><span class="type">Answer</span></a><div id="hk-answer-169" class="hidden-content tex2jax_ignore"><div class="solution">
@@ -753,15 +753,23 @@ T\left(\begin{bmatrix} 1  \\ -7  \end{bmatrix}\right)
 \end{equation*}
 </div>
 </div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-198" id="solution-198"><span class="type">Solution</span></a><div id="hk-solution-198" class="hidden-content tex2jax_ignore"><div class="solution">We will show that the matrix of \(S \circ T \) is exactly the product \(BA \text{.}\) By definition of \(T\) and \(S\text{,}\) we have<div class="displaymath">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-198" id="solution-198"><span class="type">Solution</span></a><div id="hk-solution-198" class="hidden-content tex2jax_ignore"><div class="solution">We will show that the matrix of \(S \circ T \) is exactly the product<div class="displaymath">
+\begin{equation*}
+BA
+=
+\begin{bmatrix} 2 \amp -4 \\ 10 \amp 8 \end{bmatrix}.
+\end{equation*}
+</div>By definition of \(T\) and \(S\text{,}\) we have<div class="displaymath">
 \begin{equation*}
 T \left(\begin{bmatrix} x \\ y \end{bmatrix}\right)
 =
 A\begin{bmatrix} x \\ y \end{bmatrix}
 =
 \begin{bmatrix} 3x + y \\ -x + 2y \end{bmatrix} ,
+\text{ and }
 \end{equation*}
-</div>and<div class="displaymath">
+</div>
+<div class="displaymath">
 \begin{equation*}
 S \left(\begin{bmatrix} v \\ w \end{bmatrix}\right)
 =
@@ -806,9 +814,13 @@ BA
 </div></div>
 </div></article></p>
 <p id="p-624"><article class="exercise-like" id="exercise-103"><h6 class="heading"><span class="codenumber">11.</span></h6>
-<aside class="aside-like" id="aside-116"><p id="p-625">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.4.4)</p></aside> Find the matrix of the linear transformation that reflects every vector in \(\mathbb{R}^2 \) about the \(x\)-axis and then rotates by an angle of \(\pi/4. \)</article></p>
+<aside class="aside-like" id="aside-116"><p id="p-625">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.4.4)</p></aside> Find the matrix of the linear transformation that reflects every vector in \(\mathbb{R}^2 \) about the \(x\)-axis and then rotates by an angle of \(\frac{\pi}{4}. \)<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-121" id="hint-121"><span class="type">Hint</span></a><div id="hk-hint-121" class="hidden-content tex2jax_ignore"><div class="solution">You might want to combine the solution to <a data-knowl="./knowl/ex-matrix-of-reflection-about-x-axis.html" title="Exercise 3.5.6">Exercise 3.5.6</a> and (a variant of) <a data-knowl="./knowl/ex-matr-of-rot.html" title="Exercise 3.5.5">Exercise 3.5.5</a> by using <a data-knowl="./knowl/ex-comp-of-transf-equals-mult-of-matr.html" title="Exercise 3.5.10">Exercise 3.5.10</a>. Be careful with the correct order of operation!</div></div>
+</div></article></p>
 <p id="p-626"><article class="exercise-like" id="exercise-104"><h6 class="heading"><span class="codenumber">12.</span></h6>
-<aside class="aside-like" id="aside-117"><p id="p-627">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.4.3)</p></aside> Find the matrix of the linear transformation that rotates every vector in \(\mathbb{R}^2 \) by an angle of \(\pi/6 \) and then reflects about the \(x\)-axis followed by a reflection about the \(y\)-axis.</article></p>
+<aside class="aside-like" id="aside-117"><p id="p-627">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.4.3)</p></aside> Find the matrix of the linear transformation that rotates every vector in \(\mathbb{R}^2 \) by an angle of \(\frac{\pi}{6} \) and then reflects about the \(x\)-axis, followed by a reflection about the \(y\)-axis.<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-122" id="hint-122"><span class="type">Hint</span></a><div id="hk-hint-122" class="hidden-content tex2jax_ignore"><div class="solution">You might want to combine previous solutions by using <a data-knowl="./knowl/ex-comp-of-transf-equals-mult-of-matr.html" title="Exercise 3.5.10">Exercise 3.5.10</a>. Be careful with the correct order of operation!</div></div>
+</div></article></p>
 <p id="p-628"><article class="exercise-like" id="exercise-105"><h6 class="heading"><span class="codenumber">13.</span></h6>
 <aside class="aside-like" id="aside-118"><p id="p-629">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.7)</p></aside> Describe the linear transformation that is given by each of the following matrices. Draw a before-and-after picture for each. <ol class="lower-alpha cols2">
 <li id="li-492">\(A = \begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix}.\)</li>
