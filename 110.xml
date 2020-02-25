@@ -183,9 +183,9 @@
 								\text{ where } O \text{ denotes the origin.}
 							</me>
 							Since we are looking for a point <m>Q</m>, we should rephrase this equation:
-							<me xml:id="ex-vec-betw-pts-eq-vec-OQ">
+							<men xml:id="ex-vec-betw-pts-eq-vec-OQ">
 								\vect{OQ} = \vect{OP} + \vect{PQ}.
-							</me>
+							</men>
 							Secondly, recall that <m>\vect{PQ}</m> has the same (resp. the opposite) direction of <m>\mbf{v}</m> if <m>\vect{PQ} = c \mbf{v}</m> for some positive (resp. negative) real number <m>c</m>. Plugging this back into <xref ref="ex-vec-betw-pts-eq-vec-OQ"/>, we see that we would like <m>Q</m> to satisfy
 							<me>
 								\vect{OQ} = \vect{OP} + c\mbf{v} 
@@ -11798,12 +11798,35 @@
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 5, Exercise 5.1.24) </p></aside>
-							Show that every proper subspace <m> U </m> of <m> \mathbb{R}^2 </m> is a line through the origin. Hint: If <m> \mathbf{d} </m> is a nonzero vector in <m> U </m> , let <m> L = \mathbb{R}\textbf{d} = \{ r\textbf{d} \ | \ r  \text{ in } \mathbb{R}\} </m> denote the line with direction vector <m> \mathbf{d}. </m> If <m> \mathbf{u} </m> is in <m> U </m> but not in <m> L </m>, argue geometrically that every vector <m> \mathbf{v} </m> in <m> \mathbb{R}^2 </m> is a linear combination of <m> \mathbf{u} </m> and <m> \mathbf{d}. </m> 
+							Show that every proper subspace <m> U </m> of <m> \mathbb{R}^2 </m> is a line through the origin.
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
+						<hint>
+							Recall that <m>U</m> is a <em>proper</em> subspace of <m>\mathbb{R}^2 </m> if <m>U</m> is a subspace that is neither <m>\{\mathbf{0}\}</m> nor <m>\mathbb{R}^2 </m>.
+						</hint>
+						<hint>
+							If <m> \mathbf{d} </m> is a nonzero vector in <m> U </m>, let <m> \mathbb{R}\textbf{d} = \{ r\textbf{d} \ | \ r  \text{ in } \mathbb{R}\} </m> denote the line with direction vector <m> \mathbf{d}. </m> If <m> \mathbf{u} </m> is in <m> U </m> but not in <m> \mathbb{R}\textbf{d} </m>, argue that every vector in <m> \mathbb{R}^2 </m> is a linear combination of <m> \mathbf{u} </m> and <m> \mathbf{d}. </m> 
+						</hint>
+						<solution>
+							Since <m>U</m> is proper, there exists a <em>non-zero</em> vector in <m>U</m>, say <m>\mathbf{d}</m>. We want to show that <m>U = \mathbb{R}\textbf{d}</m>, where
+							<me>\mathbb{R}\textbf{d}:=\{ r\textbf{d} \ | \ r  \text{ in } \mathbb{R}\} \subseteq \mathbb{R}^{2},</me>
+							a line through the origin in direction of <m>\mathbf{d}</m>. 
+
+							Assume otherwise: there exists <m>\mathbf{u}\in U</m> which is not in <m>\mathbb{R}\textbf{d}</m>. Note that, since <m>U</m> is a subspace, this means that <m>\span \{\mathbf{d} , \mathbf{u}\} \subseteq U</m>.
+
+							Consider the vector equation
+							<men xml:id="eq-linear-comb">
+								t \mathbf{d} + s \mathbf{u} = \mathbf{0}.
+							</men>
+							If <m>s\neq 0</m>, then this is equivalent to
+							<me>
+								\frac{-t}{s} \mathbf{d} = \mathbf{u}.
+							</me> 
+							If this were true for some choice of <m>t, s</m>, then that would mean <m> \mathbf{u} \in \mathbb{R}\textbf{d},</m> which contradicts our assumption. If <m>s=0</m>, then <xref ref="eq-linear-comb"/> is equivalent to
+							<me>
+								t \mathbf{d} = \mathbf{0}.
+							</me>
+							Since <m>\mathbf{d} \neq \mathbf{0}</m> by assumption, this implies <m>t=0</m>. Thus, we have shown that the only solution to <xref ref="eq-linear-comb"/> is <m>(t,s)=(0,0)</m>. This means exactly that <m>\{\mathbf{d} , \mathbf{u}\}</m> is linearly independent. Since <m>\dim (\mathbb{R}^2) = 2</m>, we onclude that <m>\mathbb{R}^2 = \span \{\mathbf{d} , \mathbf{u}\} \subseteq U \subsetneq \mathbb{R}^2</m>, a contradiction to <m>U</m> being proper.
+						</solution>
 						<!--<answer>
 						</answer> -->
 					</exercise></p>
