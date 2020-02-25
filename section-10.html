@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-24T21:21:35-08:00    *-->
+<!--*    on 2020-02-24T21:54:05-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -138,88 +138,211 @@ var js_version = 0.11;
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
 <p id="p-603"><article class="exercise-like" id="exercise-93"><h6 class="heading"><span class="codenumber">1.</span></h6>
-<aside class="aside-like" id="aside-105"><p id="p-604">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.1.1)</p></aside> Which of the following vector functions are linear transformations? Explain.<div class="displaymath">
+<aside class="aside-like" id="aside-105"><p id="p-604">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.1.1)</p></aside> Which of the following vector functions are linear transformations? Explain. <ol class="lower-alpha">
+<li id="li-472">\(T_1\left( \begin{bmatrix} x \\ y \end{bmatrix}\right) = \begin{bmatrix} 2x + y \\ x-2y \\ -x-y \end{bmatrix}\) <a data-knowl="" class="id-ref" data-refid="hk-solution-184" id="solution-184"><span class="type">Solution</span></a><div id="hk-solution-184" class="hidden-content tex2jax_ignore"><div class="solution">Note first that \(T_{1} \colon \mathbb{R}^{2} \to \mathbb{R}^{3}\text{.}\) We claim that \(T_{1}\) is indeed a linear transformation, so we check the properties in <a data-knowl="./knowl/def-linear-transformation.html" title="Hint 3.5.1.1">Hint 3.5.1.1</a>: <ol class="lower-roman">
+<li id="li-473">
+<em class="emphasis">\(T_{1}\) preserves addition</em>: let \(\mathbf{v} = \begin{bmatrix} v_{1} \\ v_{2} \end{bmatrix}, \mathbf{u} = \begin{bmatrix} u_{1} \\ u_{2} \end{bmatrix}\in\mathbb{R}^2\) be arbitrary. We compute:<div class="displaymath">
 \begin{equation*}
-T_1\left( \begin{bmatrix} x \\ y \end{bmatrix}\right) = \begin{bmatrix} 2x + y \\ x-2y \\ -x-y \end{bmatrix}, \
-T_2 \left(\begin{bmatrix} x \\ y \\ z \end{bmatrix} \right) = \begin{bmatrix} x + y^2 \\ (x+y)z \\ 0 \end{bmatrix}, \ 
-T_3 \left(\begin{bmatrix} x \\ y \\ z \end{bmatrix}\right) = \begin{bmatrix} 0 \\ 0 \end{bmatrix} 
+T_{1}(\mathbf{v}+ \mathbf{u})
+=
+T_{1}\left(\begin{bmatrix} v_{1} + u_{1} \\ v_{2} + u_{2} \end{bmatrix}\right)
+=
+\begin{bmatrix} 2(v_{1}+u_{1}) + v_{2} + u_{2}  \\ v_{1}+u_{1}-2(v_{2} + u_{2} ) \\ -(v_{1}+u_{1})-(v_{2} + u_{2} ) \end{bmatrix}
+.
 \end{equation*}
+</div>On the other hand:<div class="displaymath">
+\begin{align*}
+T_{1}(\mathbf{v})+T(\mathbf{u})
+=\amp
+\begin{bmatrix} 2v_{1} + v_{2} \\ v_{1}-2v_{2} \\ -v_{1}-v_{2}\end{bmatrix}
++
+\begin{bmatrix} 2u_{1} + u_{2} \\ u_{1}-2u_{2} \\ -u_{1}-u_{2} \end{bmatrix}\\
+=\amp
+\begin{bmatrix} 2(v_{1}+u_{1}) + v_{2} + u_{2}  \\ v_{1}+u_{1}-2(v_{2} + u_{2} ) \\ -(v_{1}+u_{1})-(v_{2} + u_{2} ) \end{bmatrix}
+=
+T_{1}(\mathbf{v}+ \mathbf{u}).
+\end{align*}
+</div>Since the two are equal, we conclude that \(T_{1}\) preserves addition.</li>
+<li id="li-474">
+<em class="emphasis">\(T_{1}\) preserves scalar multiplication</em>: let \(\mathbf{u} = \begin{bmatrix} u_{1} \\ u_{2} \end{bmatrix}\in\mathbb{R}^2\) and \(k\in\mathbb{R}\) be arbitrary. We compute:<div class="displaymath">
+\begin{equation*}
+T_{1}(k\mathbf{u})
+=
+T_{1}\left( \begin{bmatrix} k u_{1} \\ k u_{2} \end{bmatrix}\right)
+=
+\begin{bmatrix} 2 (k u_{1}) + k u_{2} \\ k u_{1} -2(k u_{2}) \\ -k u_{1}-k u_{2} \end{bmatrix}.
+\end{equation*}
+</div>On the other hand:<div class="displaymath">
+\begin{align*}
+kT_{1}(\mathbf{u})
+=\amp
+k \begin{bmatrix} 2 u_{1} + u_{2} \\ u_{1} -2 u_{2} \\ - u_{1}- u_{2} \end{bmatrix}\\
+=\amp													
+\begin{bmatrix} 2 (k u_{1}) + k u_{2} \\ k u_{1} -2(k u_{2}) \\ -k u_{1}-k u_{2} \end{bmatrix}
+=
+T_{1}(k\mathbf{u}).
+\end{align*}
+</div>Since the two are equal, we conclude that \(T_{1}\) preserves scalar multiplication.</li>
+</ol>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-155" id="answer-155"><span class="type">Answer</span></a><div id="hk-answer-155" class="hidden-content tex2jax_ignore"><div class="solution">Yes, it is a linear transformation.</div></div>
+</li>
+<li id="li-475">\(T_2 \left(\begin{bmatrix} x \\ y \\ z \end{bmatrix} \right) = \begin{bmatrix} x + y^2 \\ (x+y)z \\ 0 \end{bmatrix}\) <a data-knowl="" class="id-ref" data-refid="hk-solution-185" id="solution-185"><span class="type">Solution</span></a><div id="hk-solution-185" class="hidden-content tex2jax_ignore"><div class="solution">Note first that \(T_{2} \colon \mathbb{R}^{3} \to \mathbb{R}^{3}\text{.}\) We claim that \(T_{2}\) is not linear. For example,<div class="displaymath">
+\begin{equation*}
+T_{2} \left(3 \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \right)
+=
+T_{2} \left(\begin{bmatrix} 0 \\ 3 \\ 0 \end{bmatrix} \right)
+=
+\begin{bmatrix} 0 + 3^2 \\ (0+3)0 \\ 0 \end{bmatrix}
+=
+\begin{bmatrix} 9 \\ 0 \\ 0 \end{bmatrix},
+\end{equation*}
+</div>while<div class="displaymath">
+\begin{equation*}
+3 T_{2} \left(\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \right)
+=
+3\begin{bmatrix} 0 + 1^2 \\ (0+1)0 \\ 0 \end{bmatrix}
+=
+\begin{bmatrix} 3 \\ 0 \\ 0 \end{bmatrix}.
+\end{equation*}
+</div>This shows that<div class="displaymath">
+\begin{equation*}
+T_{2} \left(3 \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \right)
+\neq
+3 T_{2} \left(\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \right),
+\end{equation*}
+</div>so \(T_{2}\) does not preserve scalar multiplication.</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-156" id="answer-156"><span class="type">Answer</span></a><div id="hk-answer-156" class="hidden-content tex2jax_ignore"><div class="solution">No, it is not a linear transformation.</div></div>
+</li>
+<li id="li-476">\(T_3 \left(\begin{bmatrix} x \\ y \\ z \end{bmatrix}\right) = \begin{bmatrix} 0 \\ 0 \end{bmatrix}\) <a data-knowl="" class="id-ref" data-refid="hk-solution-186" id="solution-186"><span class="type">Solution</span></a><div id="hk-solution-186" class="hidden-content tex2jax_ignore"><div class="solution">Note first that \(T_{3} \colon \mathbb{R}^{3} \to \mathbb{R}^{2}\text{.}\)  We claim that \(T_{3}\) is indeed a linear transformation, so we check the properties in <a data-knowl="./knowl/def-linear-transformation.html" title="Hint 3.5.1.1">Hint 3.5.1.1</a>: <ol class="lower-roman">
+<li id="li-477">
+<em class="emphasis">\(T_{3}\) preserves addition</em>: let \(\mathbf{v} = \begin{bmatrix} v_{1} \\ v_{2} \\ v_{3} \end{bmatrix}, \mathbf{u} = \begin{bmatrix} u_{1} \\ u_{2} \\ u_{3} \end{bmatrix}\in\mathbb{R}^3\) be arbitrary. We compute:<div class="displaymath">
+\begin{equation*}
+T_{3}(\mathbf{v}+ \mathbf{u})
+=
+T_{3}\left(\begin{bmatrix} v_{1} + u_{1} \\ v_{2} + u_{2} \\ v_{3} + u_{3} \end{bmatrix}\right)
+=
+\begin{bmatrix} 0 \\ 0 \end{bmatrix}
+.
+\end{equation*}
+</div>On the other hand:<div class="displaymath">
+\begin{align*}
+T_{3}(\mathbf{v})+T(\mathbf{u})
+=\amp
+\begin{bmatrix} 0 \\ 0 \end{bmatrix} + \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+=
+\begin{bmatrix} 0 \\ 0 \end{bmatrix}
+=
+T_{3}(\mathbf{v}+ \mathbf{u}).
+\end{align*}
+</div>Since the two are equal, we conclude that \(T_{3}\) preserves addition.</li>
+<li id="li-478">
+<em class="emphasis">\(T_{3}\) preserves scalar multiplication</em>: let \(\mathbf{u} = \begin{bmatrix} u_{1} \\ u_{2} \\ u_{3} \end{bmatrix}\in\mathbb{R}^3\) and \(k\in\mathbb{R}\) be arbitrary. We compute:<div class="displaymath">
+\begin{equation*}
+T_{3}(k\mathbf{u})
+=
+T_{3}\left( \begin{bmatrix} k u_{1} \\ k u_{2} \\ k u_{3}\end{bmatrix}\right)
+=
+\begin{bmatrix} 0 \\ 0 \end{bmatrix}.
+\end{equation*}
+</div>On the other hand:<div class="displaymath">
+\begin{align*}
+k T_{3}(\mathbf{u})
+=\amp
+k \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+=												
+\begin{bmatrix} 0 \\ 0 \end{bmatrix}
+=
+T_{3}(k\mathbf{u}).
+\end{align*}
+</div>Since the two are equal, we conclude that \(T_{1}\) preserves scalar multiplication.</li>
+</ol>
+</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-157" id="answer-157"><span class="type">Answer</span></a><div id="hk-answer-157" class="hidden-content tex2jax_ignore"><div class="solution">Yes, it is a linear transformation.</div></div>
+</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-def-linear-transformation" id="def-linear-transformation"><span class="type">Hint</span></a><div id="hk-def-linear-transformation" class="hidden-content tex2jax_ignore"><div class="solution">
+<aside class="aside-like" id="aside-106"><p id="p-605">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Definition 6.1)</p></aside> A vector function \(T\colon \mathbb{R}^n \to \mathbb{R}^m\) is called <em class="emphasis">linear transformation</em> if it satisfies the following two conditions: <ol class="lower-alpha">
+<li id="li-479">
+<em class="emphasis">\(T\) preserves addition</em>: for all \(\mathbf{v}, \mathbf{u}\in\mathbb{R}^n\text{,}\) \(T(\mathbf{v}+ \mathbf{u})= T(\mathbf{v})+T(\mathbf{u})\text{,}\) and</li>
+<li id="li-480">
+<em class="emphasis">\(T\) preserves scalar multiplication</em>: for all \(\mathbf{u}\in\mathbb{R}^n\) and \(k\in\mathbb{R}\text{,}\) \(T(k\mathbf{u})= kT(\mathbf{u})\text{.}\)</li>
+</ol>
+</div></div>
 </div></article></p>
-<p id="p-605"><article class="exercise-like" id="exercise-94"><h6 class="heading"><span class="codenumber">2.</span></h6>
-<aside class="aside-like" id="aside-106"><p id="p-606">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 5, Exercise 5.2.9)</p></aside> Consider the following functions \(T: \mathbb{R}^3 \to \mathbb{R}^2. \) Explain why each of these functions \(T \) is not linear. <ol class="lower-alpha cols2">
-<li id="li-472"><div class="displaymath">
+<p id="p-606"><article class="exercise-like" id="exercise-94"><h6 class="heading"><span class="codenumber">2.</span></h6>
+<aside class="aside-like" id="aside-107"><p id="p-607">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 5, Exercise 5.2.9)</p></aside> Consider the following functions \(T: \mathbb{R}^3 \to \mathbb{R}^2. \) Explain why each of these functions \(T \) is not linear. <ol class="lower-alpha cols2">
+<li id="li-481"><div class="displaymath">
 \begin{equation*}
 T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} x + 2y + 3z + 1 \\ 2y - 3x + z \end{bmatrix} 
 \end{equation*}
 </div></li>
-<li id="li-473"><div class="displaymath">
+<li id="li-482"><div class="displaymath">
 \begin{equation*}
 T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} x + 2y^2 + 3z \\ 2y + 3x + z \end{bmatrix} 
 \end{equation*}
 </div></li>
-<li id="li-474"><div class="displaymath">
+<li id="li-483"><div class="displaymath">
 \begin{equation*}
 T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} \sin(x) + 2y + 3z \\ 2y - 3x + z \end{bmatrix} 
 \end{equation*}
 </div></li>
-<li id="li-475"><div class="displaymath">
+<li id="li-484"><div class="displaymath">
 \begin{equation*}
 T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} x + 2y + 3z  \\ 2y - 3x -\ln(z) \end{bmatrix} 
 \end{equation*}
 </div></li>
 </ol></article></p>
-<p id="p-607"><article class="exercise-like" id="exercise-95"><h6 class="heading"><span class="codenumber">3.</span></h6>
-<aside class="aside-like" id="aside-107"><p id="p-608">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.2.5)</p></aside> Consider the following linear transformations \(T: \mathbb{R}^3 \to \mathbb{R}^2. \) For each, determine the matrix \(A \) such that \(T(x) = Ax. \)<ol class="lower-alpha cols2">
-<li id="li-476"><div class="displaymath">
+<p id="p-608"><article class="exercise-like" id="exercise-95"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<aside class="aside-like" id="aside-108"><p id="p-609">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.2.5)</p></aside> Consider the following linear transformations \(T: \mathbb{R}^3 \to \mathbb{R}^2. \) For each, determine the matrix \(A \) such that \(T(x) = Ax. \)<ol class="lower-alpha cols2">
+<li id="li-485"><div class="displaymath">
 \begin{equation*}
 T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} x + 2y + 3z \\ 2y - 3x + z \end{bmatrix} 
 \end{equation*}
 </div></li>
-<li id="li-477"><div class="displaymath">
+<li id="li-486"><div class="displaymath">
 \begin{equation*}
 T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 7x + 2y + z\\ 3x - 11y + 2z \end{bmatrix} 
 \end{equation*}
 </div></li>
-<li id="li-478"><div class="displaymath">
+<li id="li-487"><div class="displaymath">
 \begin{equation*}
 T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 3x + 2y + z \\ x + 2y + 6z \end{bmatrix} 
 \end{equation*}
 </div></li>
-<li id="li-479"><div class="displaymath">
+<li id="li-488"><div class="displaymath">
 \begin{equation*}
 T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 2y - 5x + z  \\ x + y + z \end{bmatrix} 
 \end{equation*}
 </div></li>
 </ol></article></p>
-<p id="p-609"><article class="exercise-like" id="exercise-96"><h6 class="heading"><span class="codenumber">4.</span></h6>
-<aside class="aside-like" id="aside-108"><p id="p-610">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 7, Exercise 7.1.3)</p></aside> In each case, assume that \(T \) is a linear transformation. <ol class="lower-alpha">
-<li id="li-480">If \(T : V \to \mathbb{R} \) and \(T(\mathbf{v_1}) =1, T(\mathbf{v_2}) = -1 \text{,}\) find \(T(3 \mathbf{v_1} - 5 \mathbf{v_2}).\)</li>
-<li id="li-481">If \(T : V \to \mathbb{R} \) and \(T(\mathbf{v_1}) =2, T(\mathbf{v_2}) = -3 \text{,}\) find \(T(3 \mathbf{v_1} + 2 \mathbf{v_2}).\)</li>
-<li id="li-482">If \(T : \mathbb{R}^2 \to \mathbb{R}^2 \) and \(T\begin{bmatrix}1 \\ 3 \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \ T\begin{bmatrix}1 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \) find \(T\begin{bmatrix} -1  \\ 3 \end{bmatrix}. \)</li>
-<li id="li-483">If \(T : \mathbb{R}^2 \to \mathbb{R}^2 \) and \(T\begin{bmatrix}1 \\ -1 \end{bmatrix} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \ T\begin{bmatrix}1 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \) find \(T\begin{bmatrix} 1  \\ -7 \end{bmatrix}. \)</li>
+<p id="p-610"><article class="exercise-like" id="exercise-96"><h6 class="heading"><span class="codenumber">4.</span></h6>
+<aside class="aside-like" id="aside-109"><p id="p-611">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 7, Exercise 7.1.3)</p></aside> In each case, assume that \(T \) is a linear transformation. <ol class="lower-alpha">
+<li id="li-489">If \(T : V \to \mathbb{R} \) and \(T(\mathbf{v_1}) =1, T(\mathbf{v_2}) = -1 \text{,}\) find \(T(3 \mathbf{v_1} - 5 \mathbf{v_2}).\)</li>
+<li id="li-490">If \(T : V \to \mathbb{R} \) and \(T(\mathbf{v_1}) =2, T(\mathbf{v_2}) = -3 \text{,}\) find \(T(3 \mathbf{v_1} + 2 \mathbf{v_2}).\)</li>
+<li id="li-491">If \(T : \mathbb{R}^2 \to \mathbb{R}^2 \) and \(T\begin{bmatrix}1 \\ 3 \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \ T\begin{bmatrix}1 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \) find \(T\begin{bmatrix} -1  \\ 3 \end{bmatrix}. \)</li>
+<li id="li-492">If \(T : \mathbb{R}^2 \to \mathbb{R}^2 \) and \(T\begin{bmatrix}1 \\ -1 \end{bmatrix} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \ T\begin{bmatrix}1 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \) find \(T\begin{bmatrix} 1  \\ -7 \end{bmatrix}. \)</li>
 </ol></article></p>
-<p id="p-611"><article class="exercise-like" id="exercise-97"><h6 class="heading"><span class="codenumber">5.</span></h6>
-<aside class="aside-like" id="aside-109"><p id="p-612">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.1)</p></aside> Find the matrix of the linear transformation that rotates every vector of \(\mathbb{R}^2 \) by an angle of \(\pi/3 \) (counterclockwise).</article></p>
-<p id="p-613"><article class="exercise-like" id="exercise-98"><h6 class="heading"><span class="codenumber">6.</span></h6>
-<aside class="aside-like" id="aside-110"><p id="p-614">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.2)</p></aside> Find the matrix of the linear transformation that reflects every vectors of \(\mathbb{R}^2 \) about the \(x-\)axis.</article></p>
-<p id="p-615"><article class="exercise-like" id="exercise-99"><h6 class="heading"><span class="codenumber">7.</span></h6>
-<aside class="aside-like" id="aside-111"><p id="p-616">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.3)</p></aside> Find the matrix of the linear transformation that reflects every vectors of \(\mathbb{R}^2 \) about the line \(y = -x\text{.}\)</article></p>
-<p id="p-617"><article class="exercise-like" id="exercise-100"><h6 class="heading"><span class="codenumber">8.</span></h6>
-<aside class="aside-like" id="aside-112"><p id="p-618">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.4)</p></aside> Find the matrix of the linear transformation that stretches \(\mathbb{R}^2 \) by a factor of 3 in the vertical direction.</article></p>
-<p id="p-619"><article class="exercise-like" id="exercise-101"><h6 class="heading"><span class="codenumber">9.</span></h6>
-<aside class="aside-like" id="aside-113"><p id="p-620">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 5, Exercise 5.2.11)</p></aside> Find the matrix for \(T(\mathbf{w}) = proj_{\mathbf{v}}(\mathbf{w}) \) where \(v = \begin{bmatrix} 1 \\ -2 \\ 3 \end{bmatrix}. \)</article></p>
-<p id="p-621"><article class="exercise-like" id="exercise-102"><h6 class="heading"><span class="codenumber">10.</span></h6>
-<aside class="aside-like" id="aside-114"><p id="p-622">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 5, Exercise 5.3.2)</p></aside> Let \(T \) be a linear transformation induced by the matrix \(A = \begin{bmatrix} 3 \amp 1 \\ -1 \amp 2 \end{bmatrix} \) and \(S \) a linear transformation induced by \(B =  \begin{bmatrix} 0 \amp -2 \\ 4 \amp 2 \end{bmatrix}. \)  Find the matrix of \(S \circ T \) and find \((S \circ T )(\mathbf{x}) \) for \(\mathbf{x} = \begin{bmatrix} 2 \\ -1 \end{bmatrix}. \)</article></p>
-<p id="p-623"><article class="exercise-like" id="exercise-103"><h6 class="heading"><span class="codenumber">11.</span></h6>
-<aside class="aside-like" id="aside-115"><p id="p-624">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.4.4)</p></aside> Find the matrix of the linear transformation that reflects every vector in \(\mathbb{R}^2 \) about the \(x\)-axis and then rotates by an angle of \(\pi/4. \)</article></p>
-<p id="p-625"><article class="exercise-like" id="exercise-104"><h6 class="heading"><span class="codenumber">12.</span></h6>
-<aside class="aside-like" id="aside-116"><p id="p-626">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.4.3)</p></aside> Find the matrix of the linear transformation that rotates every vector in \(\mathbb{R}^2 \) by an angle of \(\pi/6 \) and then reflects about the \(x\)-axis followed by a reflection about the \(y\)-axis.</article></p>
-<p id="p-627"><article class="exercise-like" id="exercise-105"><h6 class="heading"><span class="codenumber">13.</span></h6>
-<aside class="aside-like" id="aside-117"><p id="p-628">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.7)</p></aside> Describe the linear transformation that is given by each of the following matrices. Draw a before-and-after picture for each. <ol class="lower-alpha cols2">
-<li id="li-484">\(A = \begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix}.\)</li>
-<li id="li-485">\(B = \begin{bmatrix} 0 \amp 2 \\ 1 \amp 0 \end{bmatrix}.\)</li>
-<li id="li-486">\(C = \begin{bmatrix} 1 \amp 0 \\ -1 \amp 1 \end{bmatrix}.\)</li>
-<li id="li-487">\(D = \begin{bmatrix} 1 \amp 0\\ 0 \amp 0 \end{bmatrix}.\)</li>
+<p id="p-612"><article class="exercise-like" id="exercise-97"><h6 class="heading"><span class="codenumber">5.</span></h6>
+<aside class="aside-like" id="aside-110"><p id="p-613">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.1)</p></aside> Find the matrix of the linear transformation that rotates every vector of \(\mathbb{R}^2 \) by an angle of \(\pi/3 \) (counterclockwise).</article></p>
+<p id="p-614"><article class="exercise-like" id="exercise-98"><h6 class="heading"><span class="codenumber">6.</span></h6>
+<aside class="aside-like" id="aside-111"><p id="p-615">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.2)</p></aside> Find the matrix of the linear transformation that reflects every vectors of \(\mathbb{R}^2 \) about the \(x-\)axis.</article></p>
+<p id="p-616"><article class="exercise-like" id="exercise-99"><h6 class="heading"><span class="codenumber">7.</span></h6>
+<aside class="aside-like" id="aside-112"><p id="p-617">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.3)</p></aside> Find the matrix of the linear transformation that reflects every vectors of \(\mathbb{R}^2 \) about the line \(y = -x\text{.}\)</article></p>
+<p id="p-618"><article class="exercise-like" id="exercise-100"><h6 class="heading"><span class="codenumber">8.</span></h6>
+<aside class="aside-like" id="aside-113"><p id="p-619">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.4)</p></aside> Find the matrix of the linear transformation that stretches \(\mathbb{R}^2 \) by a factor of 3 in the vertical direction.</article></p>
+<p id="p-620"><article class="exercise-like" id="exercise-101"><h6 class="heading"><span class="codenumber">9.</span></h6>
+<aside class="aside-like" id="aside-114"><p id="p-621">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 5, Exercise 5.2.11)</p></aside> Find the matrix for \(T(\mathbf{w}) = proj_{\mathbf{v}}(\mathbf{w}) \) where \(v = \begin{bmatrix} 1 \\ -2 \\ 3 \end{bmatrix}. \)</article></p>
+<p id="p-622"><article class="exercise-like" id="exercise-102"><h6 class="heading"><span class="codenumber">10.</span></h6>
+<aside class="aside-like" id="aside-115"><p id="p-623">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 5, Exercise 5.3.2)</p></aside> Let \(T \) be a linear transformation induced by the matrix \(A = \begin{bmatrix} 3 \amp 1 \\ -1 \amp 2 \end{bmatrix} \) and \(S \) a linear transformation induced by \(B =  \begin{bmatrix} 0 \amp -2 \\ 4 \amp 2 \end{bmatrix}. \)  Find the matrix of \(S \circ T \) and find \((S \circ T )(\mathbf{x}) \) for \(\mathbf{x} = \begin{bmatrix} 2 \\ -1 \end{bmatrix}. \)</article></p>
+<p id="p-624"><article class="exercise-like" id="exercise-103"><h6 class="heading"><span class="codenumber">11.</span></h6>
+<aside class="aside-like" id="aside-116"><p id="p-625">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.4.4)</p></aside> Find the matrix of the linear transformation that reflects every vector in \(\mathbb{R}^2 \) about the \(x\)-axis and then rotates by an angle of \(\pi/4. \)</article></p>
+<p id="p-626"><article class="exercise-like" id="exercise-104"><h6 class="heading"><span class="codenumber">12.</span></h6>
+<aside class="aside-like" id="aside-117"><p id="p-627">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.4.3)</p></aside> Find the matrix of the linear transformation that rotates every vector in \(\mathbb{R}^2 \) by an angle of \(\pi/6 \) and then reflects about the \(x\)-axis followed by a reflection about the \(y\)-axis.</article></p>
+<p id="p-628"><article class="exercise-like" id="exercise-105"><h6 class="heading"><span class="codenumber">13.</span></h6>
+<aside class="aside-like" id="aside-118"><p id="p-629">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.7)</p></aside> Describe the linear transformation that is given by each of the following matrices. Draw a before-and-after picture for each. <ol class="lower-alpha cols2">
+<li id="li-493">\(A = \begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix}.\)</li>
+<li id="li-494">\(B = \begin{bmatrix} 0 \amp 2 \\ 1 \amp 0 \end{bmatrix}.\)</li>
+<li id="li-495">\(C = \begin{bmatrix} 1 \amp 0 \\ -1 \amp 1 \end{bmatrix}.\)</li>
+<li id="li-496">\(D = \begin{bmatrix} 1 \amp 0\\ 0 \amp 0 \end{bmatrix}.\)</li>
 </ol></article></p></section></section></div></main>
 </div>
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>

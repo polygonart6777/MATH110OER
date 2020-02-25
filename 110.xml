@@ -2459,7 +2459,7 @@
 								<me> \mathbf{w} = \begin{bmatrix} 1 \\ 0 \\ -2 \end{bmatrix} , \mathbf{v} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} </me>
 						</statement>
 						<hint xml:id="def-proj-vect-onto-vect">
-							Definition: If <m>\mbf{v}</m> and <m>\mbf{w}</m> are two vectors in <m>\mbb{R}^n</m> and <m>\mbf{v}\neq \mbf{0}</m>, then the <em>projection of <m>\mbf{w}</m> onto <m>\mbf{v}</m></em> is the vector <m>\operatorname{proj}_{\mathbf{v}}(\mathbf{w})</m> defined by
+							Definition: If <m>\mbf{v}</m> and <m>\mbf{w}</m> are two vectors in <m>\mathbb{R}^n</m> and <m>\mbf{v}\neq \mbf{0}</m>, then the <em>projection of <m>\mbf{w}</m> onto <m>\mbf{v}</m></em> is the vector <m>\operatorname{proj}_{\mathbf{v}}(\mathbf{w})</m> defined by
 							<me>
 								\operatorname{proj}_{\mathbf{v}}(\mathbf{w})
 								=
@@ -12656,16 +12656,171 @@
 						<statement>
 							<aside><p> (Source: <xref ref="ref-PS" />, Chapter 6, Exercise 6.1.1) </p></aside>
 							Which of the following vector functions are linear transformations? Explain. 
-							<me> T_1\left( \begin{bmatrix} x \\ y \end{bmatrix}\right) = \begin{bmatrix} 2x + y \\ x-2y \\ -x-y \end{bmatrix}, \
-							  T_2 \left(\begin{bmatrix} x \\ y \\ z \end{bmatrix} \right) = \begin{bmatrix} x + y^2 \\ (x+y)z \\ 0 \end{bmatrix}, \ 
-							  T_3 \left(\begin{bmatrix} x \\ y \\ z \end{bmatrix}\right) = \begin{bmatrix} 0 \\ 0 \end{bmatrix} </me>
+							<ol>
+								<li>
+									<m>T_1\left( \begin{bmatrix} x \\ y \end{bmatrix}\right) = \begin{bmatrix} 2x + y \\ x-2y \\ -x-y \end{bmatrix}</m>
+										<solution>
+											Note first that <m>T_{1} \colon \mathbb{R}^{2} \to \mathbb{R}^{3}</m>. We claim that <m>T_{1}</m> is indeed a linear transformation, so we check the properties in <xref ref="def-linear-transformation"/>:
+											<ol>
+											<li>
+												<em><m>T_{1}</m> preserves addition</em>: let <m>\mathbf{v} = \begin{bmatrix} v_{1} \\ v_{2} \end{bmatrix}, \mathbf{u} = \begin{bmatrix} u_{1} \\ u_{2} \end{bmatrix}\in\mathbb{R}^2</m> be arbitrary. We compute:
+												<me>
+													T_{1}(\mathbf{v}+ \mathbf{u})
+													=
+													T_{1}\left(\begin{bmatrix} v_{1} + u_{1} \\ v_{2} + u_{2} \end{bmatrix}\right)
+													=
+													\begin{bmatrix} 2(v_{1}+u_{1}) + v_{2} + u_{2}  \\ v_{1}+u_{1}-2(v_{2} + u_{2} ) \\ -(v_{1}+u_{1})-(v_{2} + u_{2} ) \end{bmatrix}
+													.
+												</me>
+												On the other hand:
+												<md>
+													<mrow>
+													T_{1}(\mathbf{v})+T(\mathbf{u})
+													=\amp
+													\begin{bmatrix} 2v_{1} + v_{2} \\ v_{1}-2v_{2} \\ -v_{1}-v_{2}\end{bmatrix}
+													+
+													\begin{bmatrix} 2u_{1} + u_{2} \\ u_{1}-2u_{2} \\ -u_{1}-u_{2} \end{bmatrix}
+												</mrow>
+												<mrow>
+													=\amp
+													\begin{bmatrix} 2(v_{1}+u_{1}) + v_{2} + u_{2}  \\ v_{1}+u_{1}-2(v_{2} + u_{2} ) \\ -(v_{1}+u_{1})-(v_{2} + u_{2} ) \end{bmatrix}
+													=
+													T_{1}(\mathbf{v}+ \mathbf{u}).
+												</mrow>
+												</md>
+												Since the two are equal, we conclude that <m>T_{1}</m> preserves addition.
+											</li>
+											<li>
+												<em><m>T_{1}</m> preserves scalar multiplication</em>: let <m>\mathbf{u} = \begin{bmatrix} u_{1} \\ u_{2} \end{bmatrix}\in\mathbb{R}^2</m> and <m>k\in\mathbb{R}</m> be arbitrary. We compute:
+												<me>
+													T_{1}(k\mathbf{u})
+													=
+													T_{1}\left( \begin{bmatrix} k u_{1} \\ k u_{2} \end{bmatrix}\right)
+													=
+													\begin{bmatrix} 2 (k u_{1}) + k u_{2} \\ k u_{1} -2(k u_{2}) \\ -k u_{1}-k u_{2} \end{bmatrix}.
+												</me>
+												On the other hand:
+												<md>
+													<mrow>
+													kT_{1}(\mathbf{u})
+													=\amp
+													k \begin{bmatrix} 2 u_{1} + u_{2} \\ u_{1} -2 u_{2} \\ - u_{1}- u_{2} \end{bmatrix}
+													</mrow>
+													<mrow>
+													=\amp													
+													\begin{bmatrix} 2 (k u_{1}) + k u_{2} \\ k u_{1} -2(k u_{2}) \\ -k u_{1}-k u_{2} \end{bmatrix}
+													=
+													T_{1}(k\mathbf{u}).
+													</mrow>
+												</md>
+												Since the two are equal, we conclude that <m>T_{1}</m> preserves scalar multiplication.
+											</li>
+											</ol>
+										</solution>
+										<answer>
+											Yes, it is a linear transformation.
+										</answer>
+								</li>
+								<li>
+									<m>T_2 \left(\begin{bmatrix} x \\ y \\ z \end{bmatrix} \right) = \begin{bmatrix} x + y^2 \\ (x+y)z \\ 0 \end{bmatrix}</m>									
+										<solution>
+											Note first that <m>T_{2} \colon \mathbb{R}^{3} \to \mathbb{R}^{3}</m>. We claim that <m>T_{2}</m> is not linear. For example,
+											<me>
+												T_{2} \left(3 \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \right)
+												=
+												T_{2} \left(\begin{bmatrix} 0 \\ 3 \\ 0 \end{bmatrix} \right)
+												=
+												\begin{bmatrix} 0 + 3^2 \\ (0+3)0 \\ 0 \end{bmatrix}
+												=
+												\begin{bmatrix} 9 \\ 0 \\ 0 \end{bmatrix},
+											</me>
+											while
+											<me>
+												3 T_{2} \left(\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \right)
+												=
+												3\begin{bmatrix} 0 + 1^2 \\ (0+1)0 \\ 0 \end{bmatrix}
+												=
+												\begin{bmatrix} 3 \\ 0 \\ 0 \end{bmatrix}.
+											</me>
+											This shows that 
+											<me>
+												T_{2} \left(3 \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \right)
+												\neq
+												3 T_{2} \left(\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \right),
+											</me>
+											so <m>T_{2}</m> does not preserve scalar multiplication.
+										</solution>
+										<answer>
+											No, it is not a linear transformation.
+										</answer>
+								</li>
+								<li>
+									<m>T_3 \left(\begin{bmatrix} x \\ y \\ z \end{bmatrix}\right) = \begin{bmatrix} 0 \\ 0 \end{bmatrix}</m>
+										<solution>
+											Note first that <m>T_{3} \colon \mathbb{R}^{3} \to \mathbb{R}^{2}</m>.  We claim that <m>T_{3}</m> is indeed a linear transformation, so we check the properties in <xref ref="def-linear-transformation"/>:
+											<ol>
+												<li>
+												<em><m>T_{3}</m> preserves addition</em>: let <m>\mathbf{v} = \begin{bmatrix} v_{1} \\ v_{2} \\ v_{3} \end{bmatrix}, \mathbf{u} = \begin{bmatrix} u_{1} \\ u_{2} \\ u_{3} \end{bmatrix}\in\mathbb{R}^3</m> be arbitrary. We compute:
+												<me>
+													T_{3}(\mathbf{v}+ \mathbf{u})
+													=
+													T_{3}\left(\begin{bmatrix} v_{1} + u_{1} \\ v_{2} + u_{2} \\ v_{3} + u_{3} \end{bmatrix}\right)
+													=
+													\begin{bmatrix} 0 \\ 0 \end{bmatrix}
+													.
+												</me>
+												On the other hand:
+												<md>
+													<mrow>
+													T_{3}(\mathbf{v})+T(\mathbf{u})
+													=\amp
+													\begin{bmatrix} 0 \\ 0 \end{bmatrix} + \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+												=
+													\begin{bmatrix} 0 \\ 0 \end{bmatrix}
+													=
+													T_{3}(\mathbf{v}+ \mathbf{u}).
+												</mrow>
+												</md>
+												Since the two are equal, we conclude that <m>T_{3}</m> preserves addition.
+											</li>
+											<li>
+												<em><m>T_{3}</m> preserves scalar multiplication</em>: let <m>\mathbf{u} = \begin{bmatrix} u_{1} \\ u_{2} \\ u_{3} \end{bmatrix}\in\mathbb{R}^3</m> and <m>k\in\mathbb{R}</m> be arbitrary. We compute:
+												<me>
+													T_{3}(k\mathbf{u})
+													=
+													T_{3}\left( \begin{bmatrix} k u_{1} \\ k u_{2} \\ k u_{3}\end{bmatrix}\right)
+													=
+													\begin{bmatrix} 0 \\ 0 \end{bmatrix}.
+												</me>
+												On the other hand:
+												<md>
+													<mrow>
+													k T_{3}(\mathbf{u})
+													=\amp
+													k \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+												=												
+													\begin{bmatrix} 0 \\ 0 \end{bmatrix}
+													=
+													T_{3}(k\mathbf{u}).
+													</mrow>
+												</md>
+												Since the two are equal, we conclude that <m>T_{1}</m> preserves scalar multiplication.
+											</li>
+											</ol>
+										</solution>
+										<answer>
+											Yes, it is a linear transformation.
+										</answer>
+								</li>
+							</ol>
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint xml:id="def-linear-transformation"><aside><p> (Source: <xref ref="ref-PS" />, Definition 6.1) </p></aside>
+							A vector function <m>T\colon \mathbb{R}^n \to \mathbb{R}^m</m> is called <em>linear transformation</em> if it satisfies the following two conditions:
+							<ol>
+								<li><em><m>T</m> preserves addition</em>: for all <m>\mathbf{v}, \mathbf{u}\in\mathbb{R}^n</m>, <m>T(\mathbf{v}+ \mathbf{u})= T(\mathbf{v})+T(\mathbf{u})</m>, and</li>
+								<li><em><m>T</m> preserves scalar multiplication</em>: for all <m>\mathbf{u}\in\mathbb{R}^n</m> and <m>k\in\mathbb{R}</m>, <m>T(k\mathbf{u})= kT(\mathbf{u})</m>.</li>
+							</ol>
+						</hint>
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
