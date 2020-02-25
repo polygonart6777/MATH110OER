@@ -12829,15 +12829,15 @@
 							<ol>
 							<li> <me> T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} x + 2y + 3z + 1 \\ 2y - 3x + z \end{bmatrix} </me>
 								<solution xml:id="linear-implies-0-to-0">
-									The problem is the <m>`+1'</m> in the first component: For a vector function <m>S</m> to be linear, we need that <m>S(k\mathbf{u}) = k S(\mathbf{u})</m> for all scalars <m>k</m> and vectors <m> \mathbf{u}</m>. In particular, <m>S(\mathbf{0}) = 0 S(\mathbf{0}) = \mathbf{0}.</m> However, <m>T(\mathbf{0}) = \begin{bmatrix} 1 \\ 0 \end{bmatrix}\neq \mathbf{0}</m>, so <m>T</m> cannot be linear.
+									The problem is the <m>+1</m> in the first component: For a vector function <m>S</m> to be linear, we need that <m>S(k\mathbf{u}) = k S(\mathbf{u})</m> for all scalars <m>k</m> and vectors <m> \mathbf{u}</m>. In particular, <m>S(\mathbf{0})  = S(0\mathbf{0})= 0 S(\mathbf{0}) = \mathbf{0}.</m> However, <m>T(\mathbf{0}) = \begin{bmatrix} 1 \\ 0 \end{bmatrix}\neq \mathbf{0}</m>, so <m>T</m> cannot be linear.
 								</solution>
 								<answer>
-									The problem is the <m>`+1'</m>.
+									The problem is in the <m>+1</m>.
 								</answer>
 							</li>
 							<li> <me> T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} x + 2y^2 + 3z \\ 2y + 3x + z \end{bmatrix} </me>
 								<solution>
-									The problem is in the <m>` y^2 '</m>: Consider
+									The problem is in the <m> y^2</m>: Consider
 									<me>
 										T \left(4 \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \right)
 										=
@@ -12868,7 +12868,7 @@
 									so <m>T</m> does not preserve scalar multiplication.
 								</solution>
 								<answer>
-									The problem is in the <m>` y^2 '</m>.
+									The problem is in the <m>y^2</m>.
 								</answer>
 							</li>
 							<li> <me> T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} \sin(x) + 2y + 3z \\ 2y - 3x + z \end{bmatrix} </me>
@@ -12904,7 +12904,7 @@
 									so <m>T</m> does not preserve scalar multiplication.
 								</solution>
 								<answer>
-									The problem is the <m>`\sin(x)'</m>.
+									The problem is in the <m>\sin(x)</m>.
 								</answer>
 							</li>
 							<!-- Anna cut out the following because it is not defined on all of \mathbb{R}^{3}. -->
@@ -12926,19 +12926,212 @@
 						<statement>
 							<aside><p> (Source: <xref ref="ref-PS" />, Chapter 6, Exercise 6.2.5) </p></aside>
 							Consider the following linear transformations <m> T: \mathbb{R}^3 \to \mathbb{R}^2. </m> For each, determine the matrix <m> A </m> such that <m> T(x) = Ax. </m> 
-							<ol cols = "2"> 
-								<li> <me> T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} x + 2y + 3z \\ 2y - 3x + z \end{bmatrix} </me> </li>
-								<li> <me> T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 7x + 2y + z\\ 3x - 11y + 2z \end{bmatrix} </me> </li>
-								<li> <me> T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 3x + 2y + z \\ x + 2y + 6z \end{bmatrix} </me> </li>
-								<li> <me> T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 2y - 5x + z  \\ x + y + z \end{bmatrix} </me> </li>
+							<ol> 
+								<li> <me> T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} x + 2y + 3z \\ 2y - 3x + z \end{bmatrix} </me>
+									<solution>
+										We apply <m>T</m> to the standard basis <m>\left\{\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix},\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix},\begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}\right\}</m> of <m>\mathbb{R}^{3}</m>:
+										<md>
+											<mrow>
+												T\left(\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}\right)
+												=\amp
+												\begin{bmatrix} 1 + 2\cdot 0 + 3\cdot 0 \\ 2\cdot 0 - 3\cdot 1 + 0 \end{bmatrix}
+												=
+												\begin{bmatrix} 1 \\ -3 \end{bmatrix},
+											</mrow>
+											<mrow>
+												T\left(\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}\right)
+												=\amp
+												\begin{bmatrix} 0 + 2\cdot 1 + 3\cdot 0 \\ 2\cdot 1 - 3\cdot 0 + 0\end{bmatrix}
+												=												
+												\begin{bmatrix} 2 \\ 2\end{bmatrix},
+											</mrow>											
+											<mrow>
+												T\left(\begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}\right)
+												=\amp
+												\begin{bmatrix} 0 + 2\cdot 0 + 3\cdot 1 \\ 2\cdot 0 - 3\cdot 0 + 1 \end{bmatrix}
+												=												
+												\begin{bmatrix} 3 \\ 1 \end{bmatrix}.
+											</mrow>
+										</md>
+										We conclude that <m>T</m> corresponds to the matrix
+										<me>
+											A
+											=
+											\matr{ccc}
+											{
+												1 \amp 2 \amp   3
+												\\
+												-3 \amp 2 \amp 1
+											}.
+										</me>
+									</solution>
+									<answer>
+										<me>
+											A
+											=
+											\matr{ccc}
+											{
+												1 \amp 2 \amp   3
+												\\
+												-3 \amp 2 \amp 1
+											}
+										</me>
+									</answer></li>
+								<li> <me> T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 7x + 2y + z\\ 3x - 11y + 2z \end{bmatrix} </me>							
+									<solution>
+										We apply <m>T</m> to the standard basis <m>\left\{\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix},\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix},\begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}\right\}</m> of <m>\mathbb{R}^{3}</m>:
+										<md>
+											<mrow>
+												T\left(\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}\right)
+												=\amp
+												\begin{bmatrix} 7\cdot 1 + 2\cdot 0 + 0\\ 3\cdot 1 - 11\cdot 0 + 2\cdot 0\end{bmatrix}
+												=
+												\begin{bmatrix} 7 \\ 3 \end{bmatrix},
+											</mrow>
+											<mrow>
+												T\left(\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}\right)
+												=\amp
+												\begin{bmatrix} 7\cdot 0 + 2\cdot 1 + 0\\ 3\cdot 0 - 11\cdot 1 + 2\cdot 0\end{bmatrix}
+												=												
+												\begin{bmatrix} 2 \\ -11 \end{bmatrix},
+											</mrow>											
+											<mrow>
+												T\left(\begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}\right)
+												=\amp
+												\begin{bmatrix} 7\cdot 0 + 2\cdot 0 + 1\\ 3\cdot 0 - 11\cdot 0 + 2\cdot 1\end{bmatrix}
+												=												
+												\begin{bmatrix} 1 \\ 2 \end{bmatrix}.
+											</mrow>
+										</md>
+										We conclude that <m>T</m> corresponds to the matrix
+										<me>
+											A
+											=
+											\matr{ccc}
+											{
+												7 \amp 2 \amp 1
+												\\
+												3 \amp -11 \amp 2
+											}.
+										</me>
+									</solution>
+									<answer>
+										<me>
+											A
+											=
+											\matr{ccc}
+											{
+												7 \amp 2 \amp 1
+												\\
+												3 \amp -11 \amp 2
+											}
+										</me>
+									</answer></li>
+								<li> <me> T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 3x + 2y + z \\ x + 2y + 6z \end{bmatrix} </me>
+									<solution>
+										We apply <m>T</m> to the standard basis <m>\left\{\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix},\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix},\begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}\right\}</m> of <m>\mathbb{R}^{3}</m>:
+										<md>
+											<mrow>
+												T\left(\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}\right)
+												=\amp
+												\begin{bmatrix} 3\cdot 1 + 2\cdot 0 + 0 \\ 1 + 2\cdot 0 + 6\cdot 0\end{bmatrix}
+												=
+												\begin{bmatrix} 3 \\ 1 \end{bmatrix},
+											</mrow>
+											<mrow>
+												T\left(\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}\right)
+												=\amp
+												\begin{bmatrix} 3\cdot 0 + 2\cdot 1 + 0 \\ 0 + 2\cdot 1 + 6\cdot 0\end{bmatrix}
+												=												
+												\begin{bmatrix} 2 \\ 2\end{bmatrix},
+											</mrow>											
+											<mrow>
+												T\left(\begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}\right)
+												=\amp
+												\begin{bmatrix} 3\cdot 0 + 2\cdot 0 + 1 \\ 0 + 2\cdot 0 + 6\cdot 1\end{bmatrix}
+												=												
+												\begin{bmatrix} 1 \\ 6 \end{bmatrix}.
+											</mrow>
+										</md>
+										We conclude that <m>T</m> corresponds to the matrix
+										<me>
+											A
+											=
+											\matr{ccc}
+											{
+												3 \amp 2 \amp 1
+												 \\
+												1 \amp 2 \amp 6
+											}.
+										</me>
+									</solution>
+									<answer>
+										<me>
+											A
+											=
+											\matr{ccc}
+											{
+												3 \amp 2 \amp 1
+												 \\
+												1 \amp 2 \amp 6
+											}
+										</me>
+									</answer></li>
+								<li> <me> T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 2y - 5x + z  \\ x + y + z \end{bmatrix} </me>
+									<solution>
+										We apply <m>T</m> to the standard basis <m>\left\{\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix},\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix},\begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}\right\}</m> of <m>\mathbb{R}^{3}</m>:
+										<md>
+											<mrow>
+												T\left(\begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}\right)
+												=\amp
+												\begin{bmatrix} 2\cdot 0 - 5\cdot 1 + 0  \\ 1 + 0 + 0 \end{bmatrix}
+												=
+												\begin{bmatrix} -5 \\ 1 \end{bmatrix},
+											</mrow>
+											<mrow>
+												T\left(\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}\right)
+												=\amp
+												\begin{bmatrix}2\cdot 1 - 5\cdot 0 + 0  \\ 0 + 1 + 0 \end{bmatrix}
+												=												
+												\begin{bmatrix} 2 \\ 1\end{bmatrix},
+											</mrow>											
+											<mrow>
+												T\left(\begin{bmatrix} 0 \\ 0 \\ 1 \end{bmatrix}\right)
+												=\amp
+												\begin{bmatrix}2\cdot 0 - 5\cdot 0 + 1  \\ 0 + 0 + 1 \end{bmatrix}
+												=												
+												\begin{bmatrix} 1 \\ 1 \end{bmatrix}.
+											</mrow>
+										</md>
+										We conclude that <m>T</m> corresponds to the matrix
+										<me>
+											A
+											=
+											\matr{ccc}
+											{
+												-5 \amp 2 \amp 1
+												 \\
+												1 \amp 1 \amp 1
+											}.
+										</me>
+									</solution>
+									<answer>
+										<me>
+											A
+											=
+											\matr{ccc}
+											{
+												-5 \amp 2 \amp 1
+												 \\
+												1 \amp 1 \amp 1
+											}
+										</me>
+									</answer></li>
 							</ol>
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint>
+							The <m>m\times n</m> matrix <m>A</m> that corresponds to the linear transformation <m>T\colon \mathbb{R}^n \to \mathbb{R}^m</m> has the vector <m>T\mathbf{e}_{i}</m> as its <m>i^{\text{th}}</m> column, where <m>\mathbf{e}_{i}</m> is the <m>i^{\text{th}}</m> standard basis vector of <m>\mathbb{R}^n</m>. 
+						</hint>
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
