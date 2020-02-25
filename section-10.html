@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-25T11:52:41-08:00    *-->
+<!--*    on 2020-02-25T12:11:44-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -354,7 +354,7 @@ T \left(2 \begin{bmatrix} \frac{\pi}{2} \\ 0 \\ 0 \end{bmatrix}\right)
 <div class="solutions">
 <a data-knowl="" class="id-ref" data-refid="hk-hint-117" id="hint-117"><span class="type">Hint</span></a><div id="hk-hint-117" class="hidden-content tex2jax_ignore"><div class="solution">See <a data-knowl="./knowl/def-linear-transformation.html" title="Hint 3.5.1.1">Hint 3.5.1.1</a> for the definition of linear.</div></div>
 </div></article></p>
-<p id="p-608"><article class="exercise-like" id="exercise-95"><h6 class="heading"><span class="codenumber">3.</span></h6>
+<p id="p-608"><article class="exercise-like" id="ex-from-linear-transf-to-matrix"><h6 class="heading"><span class="codenumber">3.</span></h6>
 <aside class="aside-like" id="aside-108"><p id="p-609">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.2.5)</p></aside> Consider the following linear transformations \(T: \mathbb{R}^3 \to \mathbb{R}^2. \) For each, determine the matrix \(A \) such that \(T(x) = Ax. \)<ol class="lower-alpha">
 <li id="li-484">
 <div class="displaymath">
@@ -558,7 +558,7 @@ A
 </div></article></p>
 <p id="p-610"><article class="exercise-like" id="exercise-96"><h6 class="heading"><span class="codenumber">4.</span></h6>
 <aside class="aside-like" id="aside-109"><p id="p-611">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 7, Exercise 7.1.3)</p></aside> In each case, assume that \(T \) is a linear transformation. <ol class="lower-alpha">
-<li id="li-488">If \(T : V \to \mathbb{R} \) and \(T(\mathbf{v_1}) =1, T(\mathbf{v_2}) = -1 \text{,}\) find \(T(3 \mathbf{v_1} - 5 \mathbf{v_2}).\) <a data-knowl="" class="id-ref" data-refid="hk-solution-194" id="solution-194"><span class="type">Solution</span></a><div id="hk-solution-194" class="hidden-content tex2jax_ignore"><div class="solution">Since \(T\) is linear, we know (see Proposition 6.3 in <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>)that<div class="displaymath">
+<li id="li-488">If \(T : V \to \mathbb{R} \) and \(T(\mathbf{v_1}) =1, T(\mathbf{v_2}) = -1 \text{,}\) find \(T(3 \mathbf{v_1} - 5 \mathbf{v_2}).\) <a data-knowl="" class="id-ref" data-refid="hk-solution-194" id="solution-194"><span class="type">Solution</span></a><div id="hk-solution-194" class="hidden-content tex2jax_ignore"><div class="solution">Since \(T\) is linear, we know (see Proposition 6.3 in <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>) that<div class="displaymath">
 \begin{equation*}
 T(3 \mathbf{v_1} - 5 \mathbf{v_2})
 =
@@ -578,7 +578,7 @@ T(3 \mathbf{v_1} - 5 \mathbf{v_2})
 \end{equation*}
 </div></div></div>
 </li>
-<li id="li-489">If \(T : V \to \mathbb{R} \) and \(T(\mathbf{v_1}) =2, T(\mathbf{v_2}) = -3 \text{,}\) find \(T(3 \mathbf{v_1} + 2 \mathbf{v_2}).\) <a data-knowl="" class="id-ref" data-refid="hk-solution-195" id="solution-195"><span class="type">Solution</span></a><div id="hk-solution-195" class="hidden-content tex2jax_ignore"><div class="solution">Since \(T\) is linear, we know (see Proposition 6.3 in <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>)that<div class="displaymath">
+<li id="li-489">If \(T : V \to \mathbb{R} \) and \(T(\mathbf{v_1}) =2, T(\mathbf{v_2}) = -3 \text{,}\) find \(T(3 \mathbf{v_1} + 2 \mathbf{v_2}).\) <a data-knowl="" class="id-ref" data-refid="hk-solution-195" id="solution-195"><span class="type">Solution</span></a><div id="hk-solution-195" class="hidden-content tex2jax_ignore"><div class="solution">Since \(T\) is linear, we know (see Proposition 6.3 in <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>) that<div class="displaymath">
 \begin{equation*}
 T(3 \mathbf{v_1} +2 \mathbf{v_2})
 =
@@ -598,9 +598,9 @@ T(3 \mathbf{v_1} +2 \mathbf{v_2})
 \end{equation*}
 </div></div></div>
 </li>
-<li id="li-490">If \(T : \mathbb{R}^2 \to \mathbb{R}^2 \) and \(T\begin{bmatrix}1 \\ 3 \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix},
+<li id="li-490">If \(T : \mathbb{R}^2 \to \mathbb{R}^2 \) and \(T\left(\begin{bmatrix}1 \\ 3 \end{bmatrix}\right) = \begin{bmatrix} 1 \\ 1 \end{bmatrix},
 \
-T\begin{bmatrix}1 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \end{bmatrix},\) find \(T\begin{bmatrix} -1  \\ 3 \end{bmatrix}. \) <a data-knowl="" class="id-ref" data-refid="hk-solution-196" id="solution-196"><span class="type">Solution</span></a><div id="hk-solution-196" class="hidden-content tex2jax_ignore"><div class="solution">First, we have to write the vector at which we want to evaluate \(T\) in terms of the known vectors. In other words, we need to solve the following system of linear equations:<div class="displaymath">
+T\left(\begin{bmatrix}1 \\ 1 \end{bmatrix} \right) = \begin{bmatrix} 1 \\ 0 \end{bmatrix},\) find \(T\left(\begin{bmatrix} -1  \\ 3 \end{bmatrix}\right). \) <a data-knowl="" class="id-ref" data-refid="hk-solution-196" id="solution-196"><span class="type">Solution</span></a><div id="hk-solution-196" class="hidden-content tex2jax_ignore"><div class="solution">First, we have to write the vector at which we want to evaluate \(T\) in terms of the known vectors. In other words, we need to solve the following system of linear equations:<div class="displaymath">
 \begin{align*}
 \matr{cc|c}
 {
@@ -616,7 +616,7 @@ T\begin{bmatrix}1 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \end{bmatrix},\) f
 \\
 0 \amp -2 \amp 6
 }\\
-\overset{\frac{1}{-2}R_{2}}{-R_{2}' + R_{1}\longrightarrow}
+\overset{\frac{1}{-2}R_{2}}{\underset{-R_{2}' + R_{1}}{\longrightarrow}}
 \amp
 \matr{cc|c}
 {
@@ -634,7 +634,7 @@ T\begin{bmatrix}1 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \end{bmatrix},\) f
 \end{equation*}
 </div>Therefore,<div class="displaymath">
 \begin{align*}
-T\begin{bmatrix} -1  \\ 3 \end{bmatrix}
+T\left(\begin{bmatrix} -1  \\ 3 \end{bmatrix}\right)
 =\amp
 T
 \left(
@@ -642,8 +642,8 @@ T
 -3 \begin{bmatrix}1 \\ 1 \end{bmatrix}
 \right)\\
 =\amp
-2T\begin{bmatrix}1 \\ 3 \end{bmatrix}
--3 T \begin{bmatrix}1 \\ 1 \end{bmatrix}
+2T\left(\begin{bmatrix}1 \\ 3 \end{bmatrix}\right)
+-3 T\left(\begin{bmatrix}1 \\ 1 \end{bmatrix}\right)
 =
 2 \begin{bmatrix} 1 \\ 1 \end{bmatrix} - 3 \begin{bmatrix} 1 \\ 0 \end{bmatrix}
 =
@@ -652,13 +652,13 @@ T
 </div>
 </div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-167" id="answer-167"><span class="type">Answer</span></a><div id="hk-answer-167" class="hidden-content tex2jax_ignore"><div class="solution"><div class="displaymath">
 \begin{equation*}
-T\begin{bmatrix} -1  \\ 3 \end{bmatrix}
+T\left(\begin{bmatrix} -1  \\ 3 \end{bmatrix}\right)
 =
 \begin{bmatrix} -1 \\ 2 \end{bmatrix}
 \end{equation*}
 </div></div></div>
 </li>
-<li id="li-491">If \(T : \mathbb{R}^2 \to \mathbb{R}^2 \) and \(T\begin{bmatrix}1 \\ -1 \end{bmatrix} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \ T\begin{bmatrix}1 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \) find \(T\begin{bmatrix} 1  \\ -7 \end{bmatrix}. \) <a data-knowl="" class="id-ref" data-refid="hk-solution-197" id="solution-197"><span class="type">Solution</span></a><div id="hk-solution-197" class="hidden-content tex2jax_ignore"><div class="solution">First, we have to write the vector at which we want to evaluate \(T\) in terms of the known vectors. In other words, we need to solve the following system of linear equations:<div class="displaymath">
+<li id="li-491">If \(T : \mathbb{R}^2 \to \mathbb{R}^2 \) and \(T\left(\begin{bmatrix}1 \\ -1 \end{bmatrix} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}\right), \ T\left(\begin{bmatrix}1 \\ 1 \end{bmatrix}\right) = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \) find \(T\left(\begin{bmatrix} 1  \\ -7 \end{bmatrix}\right). \) <a data-knowl="" class="id-ref" data-refid="hk-solution-197" id="solution-197"><span class="type">Solution</span></a><div id="hk-solution-197" class="hidden-content tex2jax_ignore"><div class="solution">First, we have to write the vector at which we want to evaluate \(T\) in terms of the known vectors. In other words, we need to solve the following system of linear equations:<div class="displaymath">
 \begin{align*}
 \matr{cc|c}
 {
@@ -674,7 +674,7 @@ T\begin{bmatrix} -1  \\ 3 \end{bmatrix}
 \\
 0 \amp 2 \amp -6
 }\\
-\overset{\frac{1}{2}R_{2}}{-R_{2}' + R_{1}\longrightarrow}
+\overset{\frac{1}{2}R_{2}}{\underset{-R_{2}' + R_{1}}{\longrightarrow}}
 \amp
 \matr{cc|c}
 {
@@ -692,7 +692,7 @@ T\begin{bmatrix} -1  \\ 3 \end{bmatrix}
 \end{equation*}
 </div>Therefore,<div class="displaymath">
 \begin{align*}
-T\begin{bmatrix} 1  \\ -7 \end{bmatrix}
+T\left(\begin{bmatrix} 1  \\ -7 \end{bmatrix}\right)
 =\amp
 T
 \left(
@@ -700,8 +700,8 @@ T
 -3 \begin{bmatrix}1 \\ 1 \end{bmatrix}
 \right)\\
 =\amp
-4T \begin{bmatrix}1 \\ -1 \end{bmatrix}
--3 T\begin{bmatrix}1 \\ 1 \end{bmatrix}
+4T \left(\begin{bmatrix}1 \\ -1 \end{bmatrix}\right)
+-3 T\left(\begin{bmatrix}1 \\ 1 \end{bmatrix}\right)
 =
 4 \begin{bmatrix} 0 \\ 1 \end{bmatrix}
 -3 \begin{bmatrix} 1 \\ 0 \end{bmatrix}
@@ -711,7 +711,7 @@ T
 </div>
 </div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-168" id="answer-168"><span class="type">Answer</span></a><div id="hk-answer-168" class="hidden-content tex2jax_ignore"><div class="solution"><div class="displaymath">
 \begin{equation*}
-T\begin{bmatrix} 1  \\ -7  \end{bmatrix}
+T\left(\begin{bmatrix} 1  \\ -7  \end{bmatrix}\right)
 =
 \begin{bmatrix} -3 \\ 4 \end{bmatrix}
 \end{equation*}
@@ -719,20 +719,92 @@ T\begin{bmatrix} 1  \\ -7  \end{bmatrix}
 </li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-119" id="hint-119"><span class="type">Hint</span></a><div id="hk-hint-119" class="hidden-content tex2jax_ignore"><div class="solution"></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-hint-119" id="hint-119"><span class="type">Hint</span></a><div id="hk-hint-119" class="hidden-content tex2jax_ignore"><div class="solution">The first two can be solved right away, using only linearity of \(T\text{.}\) For the second two, you first need to write the vector at which you need to evaluate \(T\) as a linear combination of the vectors at which you know the values of \(T\text{.}\)</div></div>
 </div></article></p>
 <p id="p-612"><article class="exercise-like" id="exercise-97"><h6 class="heading"><span class="codenumber">5.</span></h6>
-<aside class="aside-like" id="aside-110"><p id="p-613">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.1)</p></aside> Find the matrix of the linear transformation that rotates every vector of \(\mathbb{R}^2 \) by an angle of \(\pi/3 \) (counterclockwise).</article></p>
+<aside class="aside-like" id="aside-110"><p id="p-613">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.1)</p></aside> Find the matrix of the linear transformation that rotates every vector of \(\mathbb{R}^2 \) by an angle of \(\frac{\pi}{3} \) (counterclockwise).</article></p>
 <p id="p-614"><article class="exercise-like" id="exercise-98"><h6 class="heading"><span class="codenumber">6.</span></h6>
-<aside class="aside-like" id="aside-111"><p id="p-615">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.2)</p></aside> Find the matrix of the linear transformation that reflects every vectors of \(\mathbb{R}^2 \) about the \(x-\)axis.</article></p>
+<aside class="aside-like" id="aside-111"><p id="p-615">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.2)</p></aside> Find the matrix of the linear transformation that reflects every vectors of \(\mathbb{R}^2 \) about the \(x\)-axis.</article></p>
 <p id="p-616"><article class="exercise-like" id="exercise-99"><h6 class="heading"><span class="codenumber">7.</span></h6>
 <aside class="aside-like" id="aside-112"><p id="p-617">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.3)</p></aside> Find the matrix of the linear transformation that reflects every vectors of \(\mathbb{R}^2 \) about the line \(y = -x\text{.}\)</article></p>
 <p id="p-618"><article class="exercise-like" id="exercise-100"><h6 class="heading"><span class="codenumber">8.</span></h6>
 <aside class="aside-like" id="aside-113"><p id="p-619">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.4)</p></aside> Find the matrix of the linear transformation that stretches \(\mathbb{R}^2 \) by a factor of 3 in the vertical direction.</article></p>
 <p id="p-620"><article class="exercise-like" id="exercise-101"><h6 class="heading"><span class="codenumber">9.</span></h6>
-<aside class="aside-like" id="aside-114"><p id="p-621">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 5, Exercise 5.2.11)</p></aside> Find the matrix for \(T(\mathbf{w}) = proj_{\mathbf{v}}(\mathbf{w}) \) where \(v = \begin{bmatrix} 1 \\ -2 \\ 3 \end{bmatrix}. \)</article></p>
+<aside class="aside-like" id="aside-114"><p id="p-621">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 5, Exercise 5.2.11)</p></aside> Find the matrix for \(T(\mathbf{w}) = proj_{\mathbf{v}}(\mathbf{w}) \text{,}\) where \(v = \begin{bmatrix} 1 \\ -2 \\ 3 \end{bmatrix}. \)</article></p>
 <p id="p-622"><article class="exercise-like" id="exercise-102"><h6 class="heading"><span class="codenumber">10.</span></h6>
-<aside class="aside-like" id="aside-115"><p id="p-623">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 5, Exercise 5.3.2)</p></aside> Let \(T \) be a linear transformation induced by the matrix \(A = \begin{bmatrix} 3 \amp 1 \\ -1 \amp 2 \end{bmatrix} \) and \(S \) a linear transformation induced by \(B =  \begin{bmatrix} 0 \amp -2 \\ 4 \amp 2 \end{bmatrix}. \)  Find the matrix of \(S \circ T \) and find \((S \circ T )(\mathbf{x}) \) for \(\mathbf{x} = \begin{bmatrix} 2 \\ -1 \end{bmatrix}. \)</article></p>
+<aside class="aside-like" id="aside-115"><p id="p-623">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 5, Exercise 5.3.2)</p></aside> Let \(T \) be a linear transformation induced by the matrix \(A = \begin{bmatrix} 3 \amp 1 \\ -1 \amp 2 \end{bmatrix} \) and \(S \) a linear transformation induced by \(B =  \begin{bmatrix} 0 \amp -2 \\ 4 \amp 2 \end{bmatrix}. \) Find the matrix of \(S \circ T \) and find \((S \circ T )(\mathbf{x}) \) for \(\mathbf{x} = \begin{bmatrix} 2 \\ -1 \end{bmatrix}. \)<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-120" id="hint-120"><span class="type">Hint</span></a><div id="hk-hint-120" class="hidden-content tex2jax_ignore"><div class="solution">It might help to look back into the solution of <a data-knowl="./knowl/ex-from-linear-transf-to-matrix.html" title="Exercise 3.5.3">Exercise 3.5.3</a> to see how to find the matrix corresponding to a linear transformation.</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-answer-169" id="answer-169"><span class="type">Answer</span></a><div id="hk-answer-169" class="hidden-content tex2jax_ignore"><div class="solution">
+<div class="displaymath">
+\begin{equation*}
+(S \circ T )\left(\begin{bmatrix} 2 \\ -1 \end{bmatrix}\right) 
+=
+\begin{bmatrix} 8 \\ 12 \end{bmatrix}
+\end{equation*}
+</div>and the matrix corresponding to the linear transformation \(S\circ T\) is given by<div class="displaymath">
+\begin{equation*}
+\matr{cc}
+{
+2 \amp -4 
+\\
+10 \amp 8
+}
+.
+\end{equation*}
+</div>
+</div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-198" id="solution-198"><span class="type">Solution</span></a><div id="hk-solution-198" class="hidden-content tex2jax_ignore"><div class="solution">We will show that the matrix of \(S \circ T \) is exactly the product \(BA \text{.}\) By definition of \(T\) and \(S\text{,}\) we have<div class="displaymath">
+\begin{equation*}
+T \left(\begin{bmatrix} x \\ y \end{bmatrix}\right)
+=
+A\begin{bmatrix} x \\ y \end{bmatrix}
+=
+\begin{bmatrix} 3x + y \\ -x + 2y \end{bmatrix} ,
+\end{equation*}
+</div>and<div class="displaymath">
+\begin{equation*}
+S \left(\begin{bmatrix} v \\ w \end{bmatrix}\right)
+=
+B\begin{bmatrix} v \\ w \end{bmatrix}
+=
+\begin{bmatrix} -2w \\ 4v + 2w \end{bmatrix} .
+\end{equation*}
+</div>Thus,<div class="displaymath">
+\begin{align*}
+(S\circ T)\left(\begin{bmatrix} x \\ y \end{bmatrix}\right)
+=\amp
+S \left( T \left(\begin{bmatrix} x \\ y \end{bmatrix}\right) \right)
+=
+S \left( \begin{bmatrix} 3x + y \\ -x + 2y \end{bmatrix}  \right)\\
+=\amp
+\begin{bmatrix} -2(-x + 2y) \\ 4(3x + y ) + 2(-x + 2y) \end{bmatrix} 
+=
+\begin{bmatrix} 2x - 4y \\ 10x + 8y \end{bmatrix} .
+\end{align*}
+</div>We see from this that<div class="displaymath">
+\begin{equation*}
+(S \circ T )\left(\begin{bmatrix} 2 \\ -1 \end{bmatrix}\right) 
+=
+\begin{bmatrix} 2\cdot 2 - 4\cdot (-1) \\ 10\cdot 2 + 8\cdot (-1) \end{bmatrix}
+=
+\begin{bmatrix} 8 \\ 12 \end{bmatrix}
+.
+\end{equation*}
+</div>Moreover, using the same techniques as in <a data-knowl="./knowl/ex-from-linear-transf-to-matrix.html" title="Exercise 3.5.3">Exercise 3.5.3</a>, we conclude that the matrix corresponding to the linear transformation \(S\circ T\) is given by<div class="displaymath">
+\begin{equation*}
+\matr{cc}
+{
+2 \amp -4 
+\\
+10 \amp 8
+}
+=
+BA
+.
+\end{equation*}
+</div>
+</div></div>
+</div></article></p>
 <p id="p-624"><article class="exercise-like" id="exercise-103"><h6 class="heading"><span class="codenumber">11.</span></h6>
 <aside class="aside-like" id="aside-116"><p id="p-625">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.4.4)</p></aside> Find the matrix of the linear transformation that reflects every vector in \(\mathbb{R}^2 \) about the \(x\)-axis and then rotates by an angle of \(\pi/4. \)</article></p>
 <p id="p-626"><article class="exercise-like" id="exercise-104"><h6 class="heading"><span class="codenumber">12.</span></h6>
