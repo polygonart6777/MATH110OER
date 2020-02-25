@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-24T21:54:05-08:00    *-->
+<!--*    on 2020-02-24T22:12:29-08:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -269,46 +269,109 @@ T_{3}(k\mathbf{u}).
 </div></div>
 </div></article></p>
 <p id="p-606"><article class="exercise-like" id="exercise-94"><h6 class="heading"><span class="codenumber">2.</span></h6>
-<aside class="aside-like" id="aside-107"><p id="p-607">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 5, Exercise 5.2.9)</p></aside> Consider the following functions \(T: \mathbb{R}^3 \to \mathbb{R}^2. \) Explain why each of these functions \(T \) is not linear. <ol class="lower-alpha cols2">
-<li id="li-481"><div class="displaymath">
+<aside class="aside-like" id="aside-107"><p id="p-607">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 5, Exercise 5.2.9)</p></aside> Consider the following functions \(T\colon \mathbb{R}^3 \to \mathbb{R}^2. \) Explain why each of these functions \(T \) is not linear. <ol class="lower-alpha">
+<li id="li-481">
+<div class="displaymath">
 \begin{equation*}
 T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} x + 2y + 3z + 1 \\ 2y - 3x + z \end{bmatrix} 
 \end{equation*}
-</div></li>
-<li id="li-482"><div class="displaymath">
+</div>
+<a data-knowl="" class="id-ref" data-refid="hk-linear-implies-0-to-0" id="linear-implies-0-to-0"><span class="type">Solution</span></a><div id="hk-linear-implies-0-to-0" class="hidden-content tex2jax_ignore"><div class="solution">The problem is the \(`+1'\) in the first component: For a vector function \(S\) to be linear, we need that \(S(k\mathbf{u}) = k S(\mathbf{u})\) for all scalars \(k\) and vectors \(\mathbf{u}\text{.}\) In particular, \(S(\mathbf{0}) = 0 S(\mathbf{0}) = \mathbf{0}.\) However, \(T(\mathbf{0}) = \begin{bmatrix} 1 \\ 0 \end{bmatrix}\neq \mathbf{0}\text{,}\) so \(T\) cannot be linear.</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-158" id="answer-158"><span class="type">Answer</span></a><div id="hk-answer-158" class="hidden-content tex2jax_ignore"><div class="solution">The problem is the \(`+1'\text{.}\)</div></div>
+</li>
+<li id="li-482">
+<div class="displaymath">
 \begin{equation*}
 T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} x + 2y^2 + 3z \\ 2y + 3x + z \end{bmatrix} 
 \end{equation*}
-</div></li>
-<li id="li-483"><div class="displaymath">
+</div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-188" id="solution-188"><span class="type">Solution</span></a><div id="hk-solution-188" class="hidden-content tex2jax_ignore"><div class="solution">The problem is in the \(` y^2 '\text{:}\) Consider<div class="displaymath">
+\begin{equation*}
+T \left(4 \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \right)
+=
+T \left(\begin{bmatrix} 0 \\ 4 \\ 0 \end{bmatrix} \right)
+=
+\begin{bmatrix} 0 + 2\cdot 4^2 + 2\cdot 0 \\ 2\cdot 4 + 3\cdot 0 + 0 \end{bmatrix}
+=
+\begin{bmatrix} 32 \\ 8 \\ 0 \end{bmatrix},
+\end{equation*}
+</div>while<div class="displaymath">
+\begin{equation*}
+4 T \left(\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \right)
+=
+4 \begin{bmatrix} 0 + 2\cdot 1^2 + 3\cdot 0 \\ 2\cdot 1 + 3\cdot 0 + 0 \end{bmatrix}
+=
+4
+\begin{bmatrix} 2 \\ 2 \\ 0 \end{bmatrix}
+=
+\begin{bmatrix} 8 \\ 8 \\ 0 \end{bmatrix}
+.
+\end{equation*}
+</div>This shows that<div class="displaymath">
+\begin{equation*}
+T \left(4 \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \right)
+\neq
+4 T \left(\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \right),
+\end{equation*}
+</div>so \(T\) does not preserve scalar multiplication.</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-159" id="answer-159"><span class="type">Answer</span></a><div id="hk-answer-159" class="hidden-content tex2jax_ignore"><div class="solution">The problem is in the \(` y^2 '\text{.}\)</div></div>
+</li>
+<li id="li-483">
+<div class="displaymath">
 \begin{equation*}
 T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} \sin(x) + 2y + 3z \\ 2y - 3x + z \end{bmatrix} 
 \end{equation*}
-</div></li>
-<li id="li-484"><div class="displaymath">
+</div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-189" id="solution-189"><span class="type">Solution</span></a><div id="hk-solution-189" class="hidden-content tex2jax_ignore"><div class="solution">The problem is in the \(\sin (x)\text{:}\) Consider<div class="displaymath">
 \begin{equation*}
-T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} x + 2y + 3z  \\ 2y - 3x -\ln(z) \end{bmatrix} 
+T \left(2 \begin{bmatrix} \frac{\pi}{2} \\ 0 \\ 0 \end{bmatrix} \right)
+=
+T \left(\begin{bmatrix} \pi \\ 0 \\ 0 \end{bmatrix} \right)
+=
+\begin{bmatrix}\sin(\pi) + 2\cdot 0 + 3\cdot 0 \\ 2\cdot 0 - 3\pi + 0\end{bmatrix}
+=
+\begin{bmatrix} 0 \\ - 3\pi\end{bmatrix},
 \end{equation*}
-</div></li>
-</ol></article></p>
+</div>while<div class="displaymath">
+\begin{equation*}
+2 T \left(\begin{bmatrix} \frac{\pi}{2} \\ 0 \\ 0  \end{bmatrix} \right)
+=
+2 \begin{bmatrix} \sin\left(\frac{\pi}{2}\right) + 2\cdot 0 + 3\cdot 0 \\ 2\cdot 0 - 3\cdot \frac{\pi}{2} + 0\end{bmatrix}
+=
+2
+\begin{bmatrix} 1 \\ - 3\cdot \frac{\pi}{2} \end{bmatrix}
+=
+\begin{bmatrix} 2 \\ - 3 \pi \end{bmatrix}
+.
+\end{equation*}
+</div>This shows that<div class="displaymath">
+\begin{equation*}
+T \left(2 \begin{bmatrix} \frac{\pi}{2} \\ 0 \\ 0 \end{bmatrix}\right)
+\neq
+2 T \left(\begin{bmatrix} \frac{\pi}{2} \\ 0 \\ 0 \end{bmatrix} \right),
+\end{equation*}
+</div>so \(T\) does not preserve scalar multiplication.</div></div> <a data-knowl="" class="id-ref" data-refid="hk-answer-160" id="answer-160"><span class="type">Answer</span></a><div id="hk-answer-160" class="hidden-content tex2jax_ignore"><div class="solution">The problem is the \(`\sin(x)'\text{.}\)</div></div>
+</li>
+</ol>
+<div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-hint-117" id="hint-117"><span class="type">Hint</span></a><div id="hk-hint-117" class="hidden-content tex2jax_ignore"><div class="solution">See <a data-knowl="./knowl/def-linear-transformation.html" title="Hint 3.5.1.1">Hint 3.5.1.1</a> for the definition of linear.</div></div>
+</div></article></p>
 <p id="p-608"><article class="exercise-like" id="exercise-95"><h6 class="heading"><span class="codenumber">3.</span></h6>
 <aside class="aside-like" id="aside-108"><p id="p-609">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.2.5)</p></aside> Consider the following linear transformations \(T: \mathbb{R}^3 \to \mathbb{R}^2. \) For each, determine the matrix \(A \) such that \(T(x) = Ax. \)<ol class="lower-alpha cols2">
-<li id="li-485"><div class="displaymath">
+<li id="li-484"><div class="displaymath">
 \begin{equation*}
 T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} x + 2y + 3z \\ 2y - 3x + z \end{bmatrix} 
 \end{equation*}
 </div></li>
-<li id="li-486"><div class="displaymath">
+<li id="li-485"><div class="displaymath">
 \begin{equation*}
 T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 7x + 2y + z\\ 3x - 11y + 2z \end{bmatrix} 
 \end{equation*}
 </div></li>
-<li id="li-487"><div class="displaymath">
+<li id="li-486"><div class="displaymath">
 \begin{equation*}
 T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 3x + 2y + z \\ x + 2y + 6z \end{bmatrix} 
 \end{equation*}
 </div></li>
-<li id="li-488"><div class="displaymath">
+<li id="li-487"><div class="displaymath">
 \begin{equation*}
 T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 2y - 5x + z  \\ x + y + z \end{bmatrix} 
 \end{equation*}
@@ -316,10 +379,10 @@ T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 2y - 5x + z  \\ x 
 </ol></article></p>
 <p id="p-610"><article class="exercise-like" id="exercise-96"><h6 class="heading"><span class="codenumber">4.</span></h6>
 <aside class="aside-like" id="aside-109"><p id="p-611">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 7, Exercise 7.1.3)</p></aside> In each case, assume that \(T \) is a linear transformation. <ol class="lower-alpha">
-<li id="li-489">If \(T : V \to \mathbb{R} \) and \(T(\mathbf{v_1}) =1, T(\mathbf{v_2}) = -1 \text{,}\) find \(T(3 \mathbf{v_1} - 5 \mathbf{v_2}).\)</li>
-<li id="li-490">If \(T : V \to \mathbb{R} \) and \(T(\mathbf{v_1}) =2, T(\mathbf{v_2}) = -3 \text{,}\) find \(T(3 \mathbf{v_1} + 2 \mathbf{v_2}).\)</li>
-<li id="li-491">If \(T : \mathbb{R}^2 \to \mathbb{R}^2 \) and \(T\begin{bmatrix}1 \\ 3 \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \ T\begin{bmatrix}1 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \) find \(T\begin{bmatrix} -1  \\ 3 \end{bmatrix}. \)</li>
-<li id="li-492">If \(T : \mathbb{R}^2 \to \mathbb{R}^2 \) and \(T\begin{bmatrix}1 \\ -1 \end{bmatrix} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \ T\begin{bmatrix}1 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \) find \(T\begin{bmatrix} 1  \\ -7 \end{bmatrix}. \)</li>
+<li id="li-488">If \(T : V \to \mathbb{R} \) and \(T(\mathbf{v_1}) =1, T(\mathbf{v_2}) = -1 \text{,}\) find \(T(3 \mathbf{v_1} - 5 \mathbf{v_2}).\)</li>
+<li id="li-489">If \(T : V \to \mathbb{R} \) and \(T(\mathbf{v_1}) =2, T(\mathbf{v_2}) = -3 \text{,}\) find \(T(3 \mathbf{v_1} + 2 \mathbf{v_2}).\)</li>
+<li id="li-490">If \(T : \mathbb{R}^2 \to \mathbb{R}^2 \) and \(T\begin{bmatrix}1 \\ 3 \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \ T\begin{bmatrix}1 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \) find \(T\begin{bmatrix} -1  \\ 3 \end{bmatrix}. \)</li>
+<li id="li-491">If \(T : \mathbb{R}^2 \to \mathbb{R}^2 \) and \(T\begin{bmatrix}1 \\ -1 \end{bmatrix} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \ T\begin{bmatrix}1 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \) find \(T\begin{bmatrix} 1  \\ -7 \end{bmatrix}. \)</li>
 </ol></article></p>
 <p id="p-612"><article class="exercise-like" id="exercise-97"><h6 class="heading"><span class="codenumber">5.</span></h6>
 <aside class="aside-like" id="aside-110"><p id="p-613">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.1)</p></aside> Find the matrix of the linear transformation that rotates every vector of \(\mathbb{R}^2 \) by an angle of \(\pi/3 \) (counterclockwise).</article></p>
@@ -339,10 +402,10 @@ T \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 2y - 5x + z  \\ x 
 <aside class="aside-like" id="aside-117"><p id="p-627">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.4.3)</p></aside> Find the matrix of the linear transformation that rotates every vector in \(\mathbb{R}^2 \) by an angle of \(\pi/6 \) and then reflects about the \(x\)-axis followed by a reflection about the \(y\)-axis.</article></p>
 <p id="p-628"><article class="exercise-like" id="exercise-105"><h6 class="heading"><span class="codenumber">13.</span></h6>
 <aside class="aside-like" id="aside-118"><p id="p-629">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 6, Exercise 6.3.7)</p></aside> Describe the linear transformation that is given by each of the following matrices. Draw a before-and-after picture for each. <ol class="lower-alpha cols2">
-<li id="li-493">\(A = \begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix}.\)</li>
-<li id="li-494">\(B = \begin{bmatrix} 0 \amp 2 \\ 1 \amp 0 \end{bmatrix}.\)</li>
-<li id="li-495">\(C = \begin{bmatrix} 1 \amp 0 \\ -1 \amp 1 \end{bmatrix}.\)</li>
-<li id="li-496">\(D = \begin{bmatrix} 1 \amp 0\\ 0 \amp 0 \end{bmatrix}.\)</li>
+<li id="li-492">\(A = \begin{bmatrix} 1 \amp -1 \\ 1 \amp 1 \end{bmatrix}.\)</li>
+<li id="li-493">\(B = \begin{bmatrix} 0 \amp 2 \\ 1 \amp 0 \end{bmatrix}.\)</li>
+<li id="li-494">\(C = \begin{bmatrix} 1 \amp 0 \\ -1 \amp 1 \end{bmatrix}.\)</li>
+<li id="li-495">\(D = \begin{bmatrix} 1 \amp 0\\ 0 \amp 0 \end{bmatrix}.\)</li>
 </ol></article></p></section></section></div></main>
 </div>
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>
