@@ -43,4 +43,27 @@ All of the following instructions can be found on the [PreTeXt](https://pretextb
 
 * Enter the following command to compile the main PTX or XML file.  
 
- &nbsp;&nbsp;&nbsp; `~/xsltproc/xsltproc --xinclude ~/mathbook/xsl/mathbook-html.xsl main.ptx`
+ &nbsp;&nbsp;&nbsp; `~/xsltproc/xsltproc --xinclude ~/mathbook/xsl/mathbook-html.xsl index.ptx`
+
+ ## Regularly contributing
+
+ ### Pulling the latest changes from master
+* To do
+ ### Branching off of master
+* To do
+ ### Pushing up your changes and making a Pull Request
+* To do
+ 
+ ## Seeing the xrefs
+
+ You won't be able to see the `xref`s when running locally because of the [Cross Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) issues.  Therefore, you can run a simple local host if you have python installed.  First check which version of python you have installed by running the command:
+ 
+`python --version`
+
+In the folder of your Math110OER repo, run the command (first is for python 2, second is for python 3)
+
+ `python -m SimpleHTTPServer` or  `python3 -m http.server`
+
+ Then go to 'http://localhost:8000/
+
+You should now be able to see the references!  You can check this by going to any exercise and clicking on its resource link on the right.  

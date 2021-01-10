@@ -6,7 +6,7 @@
 		If an Ex starts with an ol, get rid of spacing.
 		right-alignment of Ex#??
 -->
- <pretext xmlns:xi="http://www.w3.org/2001/XInclude">
+ <mathbook xmlns:xi="http://www.w3.org/2001/XInclude">
 <docinfo>
 <macros>
 	\newcommand{\matr}[2]{\left[\begin{array}{#1}#2\end{array}\right]}
@@ -145,4 +145,4 @@
 		<xi:include href="backmatter.ptx" />
 
 	</book>
-</pretext>
+</mathbook>
