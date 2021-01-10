@@ -1,0 +1,44 @@
+		<backmatter>
+			<references xml:id="ref-references">
+				<biblio xml:id="ref-KK">
+					<pubtitle>A First Course in Linear Algebra </pubtitle> 
+					by K. Kuttler.
+					<p><url href="https://lyryx.com/wp-content/uploads/2017/06/Kuttler-LinearAlgebra-AFirstCourse-2017A.pdf">Link to Kuttler's book</url></p>
+					<p>Used under the terms of the CC-BY license.</p>
+				</biblio>
+
+				<biblio xml:id="ref-JH">
+					<pubtitle>Linear Algebra</pubtitle>
+					by J. Hefferon and Wikibooks contributors.
+					<p><url href="https://en.wikibooks.org/wiki/Linear_Algebra">Link to wikibook</url></p>
+					<p>Used under the terms of the CC-BY-SA license.</p>
+				</biblio>
+
+				<biblio xml:id="ref-PS">
+					<pubtitle> Matrix Theory and Linear Algebra</pubtitle>
+					by P. Selinger.
+					<p><url href="https://www.mathstat.dal.ca/%7Eselinger/linear-algebra/downloads/LinearAlgebra.pdf">Link to Selinger's book</url></p>
+					<p>Used under the terms of the CC-BY license.</p>
+				</biblio>
+
+				<biblio xml:id="ref-KN">
+					<pubtitle> Linear Algebra with Applications (Open Edition)</pubtitle>
+					by W. K. Nicholson.
+					<p><url href="https://lila1.lyryx.com/textbooks/OPEN_LAWA_1/marketing/Nicholson-OpenLAWA-2018B.pdf">Link to Nicholson's book</url></p>
+					<p>Used under the terms of the CC-BY-NC-SA license.</p>
+				</biblio>
+
+				<biblio xml:id="ref-RB">
+					<pubtitle>A First Course in Linear Algebra</pubtitle>
+					by R. Beezer.
+					<p><url href="http://linear.ups.edu/">Link to Beezer's book</url></p>
+					<p>Used under the terms of the GFDL license.</p>
+				</biblio>
+
+				<biblio xml:id="ref-DP">
+					<pubtitle>Linear Algebra: A Modern Introduction</pubtitle> (4th edition)
+					by D. Poole
+					<p>Published by CENGAGE Learning, 2015.</p>
+				</biblio>
+			</references>
+	</backmatter>

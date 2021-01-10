@@ -1,0 +1,1369 @@
+
+				<exercises>
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 1.2, Exercise 3-->
+						<statement><aside><p> (Source: <xref ref="ref-KN"/>, Section 4.2, Exercise 4.2.1.) </p></aside>
+							Compute <m>\mathbf{u \cdot v}</m>  where:
+							<ol label="[a]" cols="2">
+								<li>
+									<m>\mathbf{u} = \begin{bmatrix} 2 \\ -1 \\ 3\end{bmatrix} </m>
+									and
+									<m>\mathbf{v} =  \begin{bmatrix} -1 \\ 1 \\ 1 \end{bmatrix} </m>
+								</li>
+								<li>
+									<m>\mathbf{u} = \begin{bmatrix} 1 \\ 2 \\ -1\end{bmatrix} </m>
+									and
+									<m>\mathbf{v} =  \mathbf{u}</m>.
+								</li>
+								<li>
+									<m>\mathbf{u} = \begin{bmatrix} 1 \\ 1 \\ -3\end{bmatrix} </m>
+									and
+									<m>\mathbf{v} =  \begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix} </m>
+								</li>
+								<li>
+									<m>\mathbf{u} = \begin{bmatrix} 3 \\ -1 \\ 5\end{bmatrix} </m>
+									and
+									<m>\mathbf{v} =  \begin{bmatrix} 6 \\ -7 \\ -5 \end{bmatrix} </m>
+								</li>
+								<li>
+									<m>\mathbf{u} = \begin{bmatrix} x \\ y \\ z\end{bmatrix} </m>
+									and
+									<m>\mathbf{v} =  \begin{bmatrix} a \\ b \\ c \end{bmatrix} </m>
+								</li>
+								<li>
+									<m>\mathbf{u} = \begin{bmatrix} x \\ y \\ z\end{bmatrix} </m>
+									and
+									<m>\mathbf{v} =  0</m>
+								</li>					
+							</ol>
+						</statement>
+						<hint>
+							The <em>dot product</em> of two vectors is the sum of the product of the components. 
+						</hint>
+						<solution>
+							Recall: the <em>dot product</em> of two vectors is the sum of the product of the components. 
+							<ol label="[a]">
+								<li>
+									<md>
+										<mrow>
+											\mbf{u}\cdot \mbf{v}
+											\amp =
+											\begin{bmatrix} 2 \\ -1 \\ 3\end{bmatrix} 
+											\cdot
+											\begin{bmatrix} -1 \\ 1 \\ 1 \end{bmatrix} 
+											=
+											2\cdot (-1) + (-1)\cdot 1 + 3\cdot 1
+											=
+											-2 -1+3
+											=
+											0.
+										</mrow>
+									</md>
+								</li>
+								<li>
+									<md>
+										<mrow>
+											\mbf{u}\cdot \mbf{v}
+											\amp =
+											\begin{bmatrix} 1 \\ 2 \\ -1\end{bmatrix} 
+											\cdot 
+											\begin{bmatrix} 1 \\ 2 \\ -1\end{bmatrix} 	
+											=
+											1\cdot 1 + 2\cdot 2 + (-1)\cdot (-1)
+											=
+											1+4+1
+											=
+											6.
+										</mrow>
+									</md>
+								</li>
+								<li>
+									<md>
+										<mrow>
+											\mbf{u}\cdot \mbf{v}
+											\amp =
+											\begin{bmatrix} 1 \\ 1 \\ -3\end{bmatrix} 
+											\cdot 
+											\begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix} 	
+											=
+											1\cdot 2 + 1\cdot (-1) + (-3)\cdot 1
+											=
+											2-1-3=-2
+										</mrow>
+									</md>
+								</li>
+								<li>
+									<md>
+										<mrow>
+											\mbf{u}\cdot \mbf{v}
+											\amp =
+											\begin{bmatrix} 3 \\ -1 \\ 5\end{bmatrix} 
+											\cdot 
+											\begin{bmatrix} 6 \\ -7 \\ -5 \end{bmatrix} 
+											=
+											3\cdot 6 + (-1)\cdot (-7)+5\cdot(-5)
+										</mrow>	
+										<mrow>
+											\amp =
+											18 + 7 -25
+											=
+											0.
+										</mrow>
+									</md>
+								</li>
+								<li>
+									<md>
+										<mrow>
+											\mbf{u}\cdot \mbf{v}
+											\amp =
+											\begin{bmatrix} x \\ y \\ z\end{bmatrix} 
+											\cdot 
+											\begin{bmatrix} a \\ b \\ c \end{bmatrix} 
+											=
+											x\cdot a + y\cdot b + z\cdot c.
+										</mrow>
+									</md>
+								</li>
+								<li>
+									<md>
+										<mrow>
+											\mbf{u}\cdot \mbf{v}
+											\amp =
+											\begin{bmatrix} x \\ y \\ z\end{bmatrix} 
+											\cdot 
+											\begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} 
+											=
+											x\cdot 0 + y\cdot 0 + z\cdot 0
+											=
+											0 + 0 + 0 = 0.
+										</mrow>
+									</md>
+								</li>
+							</ol>
+						</solution>
+						<answer>
+							<ol label="[a]" cols="3">
+								<li>
+									<m>
+										0
+									</m>
+								</li>
+								<li>
+									<m>
+										6
+									</m>
+								</li>
+								<li>
+									<m>
+										-2
+									</m>
+								</li>
+								<li>
+									<m>
+										0
+									</m>
+								</li>
+								<li>
+									<m>
+										x\cdot a + y\cdot b + z\cdot c
+									</m>
+								</li>
+								<li>
+									<m>
+										0
+									</m>
+								</li>
+							</ol>
+						</answer>
+					</exercise></p>
+
+					<p>
+					<exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 1.2, Exercise 9-->
+						<statement>	<aside><p> (Source: <xref ref="ref-KN"/>, Section 4.1, Exercise 4.1.1.) </p></aside>
+							Compute <m>\norm{\mathbf{v}}</m> if <m>\mathbf{v}</m> equals:						 
+						 	<ol label="[a]" cols="3">
+							 	<li>
+									<m>\begin{bmatrix} 2 \\ -1 \\ 2\end{bmatrix} </m>	
+							 	</li>
+								<li>
+									<m>\begin{bmatrix} 1 \\ -1 \\ 2\end{bmatrix} </m>
+							 	</li>
+								<li>
+									<m>\begin{bmatrix} 1 \\ 0 \\ -1\end{bmatrix} </m>	
+							 	</li>
+								<li>
+									<m>\begin{bmatrix} -1 \\ 0 \\ 2\end{bmatrix} </m>	
+							 	</li>
+								<li>
+									<m>2\begin{bmatrix} 1 \\ -1 \\ 2\end{bmatrix} </m>
+							 	</li>
+								<li>
+									<m>-3\begin{bmatrix} 1 \\ 1 \\ 2\end{bmatrix} </m>
+								</li>
+						 	</ol>
+						</statement>
+						<hint>
+							Definition: The <em>norm</em> <m>\norm{\mathbf{v}}</m> of a vector <m>\mbf{v}</m> is defined as
+							<me>
+								\norm{\mathbf{v}}
+								=
+								\sqrt{\mbf{v}\cdot \mbf{v}}
+								.
+							</me>
+						</hint>
+						<solution>
+							<ol label="[a]">
+							 	<li>
+							 		<p><md>
+										<mrow>
+											\norm{\mbf{v}}^2
+											\amp =
+											\begin{bmatrix} 2 \\ -1 \\ 2\end{bmatrix} 
+											\cdot
+											\begin{bmatrix} 2 \\ -1 \\ 2\end{bmatrix} 
+										</mrow>	
+										<mrow>
+											\amp =
+											2\cdot 2 + (-1)\cdot (-1)+ 2\cdot 2
+											=
+											4 +1+4=9
+											.
+										</mrow>
+									</md></p>
+									<p>Therefore, <m>\norm{\mbf{v}}=\sqrt{\mbf{v}\cdot\mbf{v}} = 3</m>.</p>
+							 	</li>
+							 	<li>
+							 		<p><md>
+										<mrow>
+											\norm{\mbf{v}}^2
+											\amp =
+											\begin{bmatrix} 1 \\ -1 \\ 2\end{bmatrix} 
+											\cdot
+											\begin{bmatrix} 1 \\ -1 \\ 2\end{bmatrix} 
+										</mrow>	
+										<mrow>
+											\amp =
+											1\cdot 1+(-1)\cdot (-1)+2\cdot 2
+											=
+											1+1+4
+											=
+											6
+											.
+										</mrow>
+									</md></p>
+									<p>Therefore, <m>\norm{\mbf{v}}=\sqrt{\mbf{v}\cdot\mbf{v}} =\sqrt{6}</m>.</p>
+							 	</li>
+							 	<li>
+							 		<p><md>
+										<mrow>
+											\norm{\mbf{v}}^2
+											\amp =
+											\begin{bmatrix} 1 \\ 0 \\ -1\end{bmatrix} 
+											\cdot
+											\begin{bmatrix} 1 \\ 0 \\ -1\end{bmatrix} 									
+										</mrow>	
+										<mrow>
+											\amp =
+											1\cdot 1+0\cdot 0+(-1)\cdot (-1)
+											=
+											1+0+1
+											=2
+											.
+										</mrow>
+									</md></p>
+									<p>Therefore, <m>\norm{\mbf{v}}=\sqrt{\mbf{v}\cdot\mbf{v}} =\sqrt{2}</m>.</p>
+							 	</li>
+							 	<li>
+							 		<p><md>
+										<mrow>
+											\norm{\mbf{v}}^2
+											\amp =
+											\begin{bmatrix} -1 \\ 0 \\ 2\end{bmatrix} 
+											\cdot
+											\begin{bmatrix} -1 \\ 0 \\ 2\end{bmatrix} 
+										</mrow>	
+										<mrow>
+											\amp =
+											(-1)\cdot (-1) + 0\cdot 0 + 2\cdot 2
+											=
+											1+0+4
+											=
+											5
+											.
+										</mrow>
+									</md></p>
+									<p>Therefore, <m>\norm{\mbf{v}}=\sqrt{\mbf{v}\cdot\mbf{v}} =\sqrt{5}</m>.</p>
+							 	</li>
+							 	<li><p><md>
+										<mrow>
+											\norm{\mbf{v}}^2
+											\amp =
+											\left(
+												2\begin{bmatrix} 1 \\ -1 \\ 2\end{bmatrix} 
+											\right)
+											\cdot
+											\left(
+												2\begin{bmatrix} 1 \\ -1 \\ 2\end{bmatrix} 
+											\right)
+										</mrow>	
+										<mrow>
+											\amp =
+											\begin{bmatrix} 2 \\ -2 \\ 4\end{bmatrix} 
+											\cdot
+											\begin{bmatrix} 2 \\ -2 \\ 4\end{bmatrix} 
+										</mrow>
+										<mrow>
+											\amp =
+											2\cdot 2 + (-2)\cdot (-2) + 4\cdot 4
+											=
+											4+4+16
+											=
+											24
+											.
+										</mrow>
+									</md></p>
+									<p>Therefore, <m>\norm{\mbf{v}}=\sqrt{\mbf{v}\cdot\mbf{v}} =\sqrt{4\cdot 6}=2\sqrt{6}</m>.</p>
+							 	</li>
+							 	<li>
+							 		<p><md>
+										<mrow>
+											\norm{\mbf{v}}^2
+											\amp =
+											\left(-3\begin{bmatrix} 1 \\ 1 \\ 2\end{bmatrix} \right)
+											\cdot
+											\left(-3\begin{bmatrix} 1 \\ 1 \\ 2\end{bmatrix} \right)
+										</mrow>	
+										<mrow>
+											\amp =
+											\begin{bmatrix} -3 \\ -3 \\ -6\end{bmatrix} 
+											\cdot
+											\begin{bmatrix} -3 \\ -3 \\ -6\end{bmatrix} 
+										</mrow>
+										<mrow>
+											\amp =
+											(-3)\cdot (-3) + (-3)\cdot (-3) + (-6)\cdot (-6)
+											=
+											9+9+36
+											=
+											54
+										</mrow>
+									</md></p>
+									<p>Therefore, <m>\norm{\mbf{v}}=\sqrt{\mbf{v}\cdot\mbf{v}} =\sqrt{54}</m>.</p>
+								</li>
+						 	</ol>
+						</solution>
+						<answer>
+							<ol label="[a]" cols="3">
+							 	<li>
+									<m>3</m>
+							 	</li>
+							 	<li>
+									<m>\sqrt{6}</m>
+							 	</li>
+							 	<li>
+									<m>\sqrt{2}</m>
+							 	</li>
+							 	<li>
+									<m>\sqrt{5}</m>
+							 	</li>
+							 	<li>
+									<m>2\sqrt{6}</m>
+							 	</li>
+							 	<li>
+									<m>\sqrt{54}</m>
+								</li>
+						 	</ol>
+						</answer>
+					</exercise></p>
+
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 1.2, Exercise 9-->
+						<statement>	<aside><p> (Source: <xref ref="ref-KN"/>, Section 4.1, Exercise 4.1.2.) </p></aside>
+							Find a unit vector in the direction of:		 	
+						 	<ol label="[a]" cols="2">
+						 		<li>
+									<m>\begin{bmatrix} 7 \\ -1 \\ 5\end{bmatrix} </m>	
+						 		</li>
+								<li>
+									<m>\begin{bmatrix} -2 \\ -1 \\ 2\end{bmatrix} </m>
+							 	</li>
+						 	</ol>
+						</statement>
+						<hint>
+							Definition: A vector <m>\mbf{v}</m> is called <em>unit vector</em> if <m>\norm{\mbf{v}}=1.</m>
+						</hint>
+						<hint>
+							Given a non-zero vector <m>\mbf{w}</m>, what norm and direction does <m>\mbf{v}=\frac{1}{\norm{\mbf{w}}}\mbf{w}</m> have?
+						</hint>
+						<solution>
+							<ol label="[a]">
+						 		<li><p>
+						 			We first compute the square of the norm of the vector:
+						 			</p><p><md>
+						 			<mrow>
+						 				\norm{\begin{bmatrix} 7 \\ -1 \\ 5\end{bmatrix} }^2
+						 				\amp =
+						 				\begin{bmatrix} 7 \\ -1 \\ 5\end{bmatrix} 
+						 				\cdot 
+						 				\begin{bmatrix} 7 \\ -1 \\ 5\end{bmatrix} 
+						 			</mrow>
+						 			<mrow>
+						 				\amp =
+						 				7^2 + (-1)^2 + 5^2
+						 				=
+						 				49+1+25
+						 				=
+						 				75,
+						 			</mrow>
+						 			</md>	
+						 			</p><p>so that <m>\norm{\begin{bmatrix} 7 \\ -1 \\ 5\end{bmatrix} } = \sqrt{75}=5\sqrt{3}</m>. Thus, a unit vector in the same direction is given by</p><p>
+						 			<me>
+						 				\frac{1}{\norm{\begin{bmatrix} 7 \\ -1 \\ 5\end{bmatrix} }} \begin{bmatrix} 7 \\ -1 \\ 5\end{bmatrix} 
+						 				=
+						 				\begin{bmatrix} \frac{7}{5\sqrt{3}} \\ \frac{-1}{5\sqrt{3}} \\ \frac{5}{5\sqrt{3}}\end{bmatrix} 
+						 				.
+						 			</me></p>
+						 		</li> 
+						 		<li><p>
+									We first compute the square of the norm of the vector:
+						 			</p><p><md>
+						 			<mrow>
+						 				\norm{\begin{bmatrix} -2 \\ -1 \\ 2\end{bmatrix} }^2
+						 				\amp =
+						 				\begin{bmatrix} -2 \\ -1 \\ 2\end{bmatrix} 
+						 				\cdot 
+						 				\begin{bmatrix} -2 \\ -1 \\ 2\end{bmatrix} 
+						 			</mrow>
+						 			<mrow>
+						 				\amp =
+						 				(-2)^2+(-1)^2+2^2
+						 				=
+						 				4+1+4
+						 				=
+						 				9
+						 				,
+						 			</mrow>
+						 			</md>	
+						 			</p><p>so that <m>\norm{\begin{bmatrix} -2 \\ -1 \\ 2\end{bmatrix} } = \sqrt{9}=3</m>. Thus, a unit vector in the same direction is given by</p><p>
+						 			<me>
+						 				\frac{1}{\norm{\begin{bmatrix} -2 \\ -1 \\ 2\end{bmatrix} }} \begin{bmatrix} -2 \\ -1 \\ 2\end{bmatrix} 
+						 				=
+						 				\begin{bmatrix} \frac{-2}{3} \\ \frac{-1}{3} \\ \frac{2}{3}\end{bmatrix} 
+						 				.
+						 			</me></p>
+							 	</li>
+						 	</ol>
+						</solution>
+						<answer>
+							<ol label="[a]" cols="2">
+						 		<li>
+						 			<m>
+						 				\begin{bmatrix} \frac{7}{5\sqrt{3}} \\ \frac{-1}{5\sqrt{3}} \\ \frac{5}{5\sqrt{3}}\end{bmatrix} 
+						 			</m>
+						 		</li> 
+						 		<li>
+									<m>
+						 				\begin{bmatrix} \frac{-2}{3} \\ \frac{-1}{3} \\ \frac{2}{3}\end{bmatrix} 
+						 			</m>
+							 	</li>
+						 	</ol>
+						</answer>
+					</exercise></p>
+
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 1.2, Exercise 15-->
+						<statement> <aside><p> (Source: <xref ref="ref-KN"/>, Section 4.1, Exercise 4.1.4.) </p></aside>
+							Find the distance between the following pairs of points:
+							<ol label="[a]" cols="2">
+								<li>
+									<m>( 3  ,  -1  ,  0)</m> and <m> ( 2  ,  -1  ,  1 )</m>
+								</li>
+								<li>
+									<m>( 2  ,  -1  ,  2)</m> and <m>( 2  ,  0  ,  1)</m>.
+								</li>
+								<li>
+									<m>( -3 ,  5  ,  2)</m> and <m> ( 1  ,  3  ,  3 )</m>
+								</li>
+								<li>
+									<m>( 4  ,  0  ,  -2)</m> and <m> ( 3  ,  2  ,  0 )</m>
+								</li> 
+							</ol>
+						</statement>
+						<hint>
+							The distance from a point <m>P</m> to a point <m>Q</m> is the length of the vector from <m>P</m> to <m>Q</m>.
+						</hint>
+						<solution>
+							We need to find the length of the vector between the points.
+							<ol label="[a]">
+								<li>
+									For <m>P=( 3  ,  -1  ,  0)</m> and <m> Q=( 2  ,  -1  ,  1 )</m>, we compute:
+									<me>
+										\vect{PQ}
+										=
+										\begin{bmatrix} 
+											2-3 \\ -1-(-1) \\ 1-0 \end{bmatrix} 
+										=
+										\begin{bmatrix} 
+											-1 \\ 0 \\ 1 \end{bmatrix} 
+										.
+									</me>
+									Therefore,
+									<me>
+										\norm{\vect{PQ}}
+										=
+										\sqrt{(-1)^2 + 0^2 + 1^2} = \sqrt{2}.
+									</me>
+								</li>
+								<li>For <m>P=( 2  ,  -1  ,  2)</m> and <m> Q=( 2  ,  0  ,  1)</m>, we compute:
+									<me>
+										\vect{PQ}
+										=
+										\begin{bmatrix} 
+											2-2 \\ 0-(-1) \\ 1-2 \end{bmatrix} 
+										=
+										\begin{bmatrix} 
+											0 \\ 1 \\ -1 \end{bmatrix} 
+										.
+									</me>
+									Therefore,
+									<me>
+										\norm{\vect{PQ}}
+										=
+										\sqrt{0^2 + 1^2 + (-1)^2} = \sqrt{2}.
+									</me>
+								</li>
+								<li>
+									For <m>P=( -3 ,  5  ,  2)</m> and <m> Q=( 1  ,  3  ,  3 )</m>, we compute:
+									<me>
+										\vect{PQ}
+										=
+										\begin{bmatrix} 
+											1-(-3) \\ 3-5 \\ 3-2 \end{bmatrix} 
+										=
+										\begin{bmatrix} 
+											4 \\ 2 \\ 1 \end{bmatrix} 
+										.
+									</me>
+									Therefore,
+									<me>
+										\norm{\vect{PQ}}
+										=
+										\sqrt{4^2 + 2^2 + 1^2} = \sqrt{21}.
+									</me>
+								</li>
+								<li>
+									For <m>P=( 4  ,  0  ,  -2)</m> and <m> Q=( 3  ,  2  ,  0 )</m>, we compute:
+									<me>
+										\vect{PQ}
+										=
+										\begin{bmatrix} 
+											3-4 \\ 2-0 \\ 0-(-2) \end{bmatrix} 
+										=
+										\begin{bmatrix} 
+											-1 \\ 2 \\ 2 \end{bmatrix} 
+										.
+									</me>
+									Therefore,
+									<me>
+										\norm{\vect{PQ}}
+										=
+										\sqrt{(-1)^2 + 2^2 + 2^2} = \sqrt{9}=3.
+									</me>
+								</li> 
+							</ol>
+							We should point out that, in each of the above cases, we could just as well have computed <m>\norm{\vect{QP}}</m> and would have gotten the same result.
+						</solution>
+						<answer>
+							<ol label="[a]" cols="2">
+								<li>
+									<m>\sqrt{2}.</m>
+								</li>
+								<li>
+									<m>\sqrt{2}.</m>
+								</li>
+								<li>
+									<m>\sqrt{21}.</m>
+								</li>
+								<li>
+									<m>3.</m>
+								</li> 
+							</ol>
+						</answer>
+					</exercise></p>
+
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 1.2, Exercise 19, 21-->
+						<statement> <aside><p> (Source: <xref ref="ref-JH"/>, Section 2.6, Exercise 2.6.4.) </p></aside>
+							Find <m>\cos(\theta)</m> where <m>\theta</m> is the angle between the vectors
+							<me>
+								\mathbf{u} = \begin{bmatrix} 3 \\ -1 \\ -1 \end{bmatrix} 
+								\;\text{ and }\;									
+								\mathbf{v} = \begin{bmatrix} 1 \\ 4 \\ 2 \end{bmatrix} 
+							</me> 
+						</statement>
+						<hint xml:id="cosine-formula">
+							<em>Cosine formula</em>: The <em>angle</em> between two non-zero vectors <m>\mathbf{u}</m> and <m>\mathbf{v}</m> is the number <m>\theta \in [0,\pi)</m> which satisfies
+							<me>
+								\cos (\theta)
+								=
+								\frac{ \mbf{u}\cdot \mbf{v}}{ \norm{\mbf{u}}\cdot \norm{\mbf{v}}}
+								.
+							</me>
+							Notice that <m>\cdot</m> in the expression <m>\norm{\mbf{u}}\cdot \norm{\mbf{v}}</m> is just multiplication of real numbers, while <m>\cdot</m> in the expression <m>\mbf{u}\cdot \mbf{v}</m> is the dot product of vectors.
+						</hint>
+						<solution>
+							<p>
+							According to the <xref ref="cosine-formula">Cosine Formula</xref>, we have to compute the norm of the vectors and their dot product:
+							</p><p>
+							<md>
+								<mrow>
+									\norm{\mbf{u}}
+									\amp =
+									\sqrt{\mbf{u}\cdot\mbf{u}}
+									=
+									\sqrt{ 3^2 + (-1)^2 + (-1)^2}
+									=
+									\sqrt{11}
+								</mrow>
+								<mrow>
+									\norm{\mbf{v}}
+									\amp =
+									\sqrt{\mbf{v}\cdot\mbf{v}}
+									=
+									\sqrt{ 1^2 + 4^2 + 2^2}
+									=
+									\sqrt{21}
+								</mrow>
+								<mrow>
+									\mbf{u}\cdot\mbf{v}
+									\amp =
+									3\cdot 1 + (-1)\cdot 4 + (-1)\cdot 2
+									<!--=
+									3-4-2-->
+									=
+									-3
+								</mrow>
+							</md> 
+							</p><p>
+							Therefore,
+							</p><p>
+							<me>
+								\cos (\theta)
+								=
+								\frac{ \mbf{u}\cdot \mbf{v}}{ \norm{\mbf{u}}\cdot \norm{\mbf{v}}}
+								=
+								\frac{-3}{ \sqrt{11}\cdot \sqrt{21}}
+								=
+								\frac{-3}{ \sqrt{231}}
+								.
+							</me>
+							</p>
+						</solution>
+						<answer>
+							<me>
+								\cos (\theta)
+								=
+								\frac{-3}{ \sqrt{231}}
+							</me>
+						</answer>
+					</exercise></p>
+
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 1.2, Exercise 23, 25-->
+						<statement> <aside><p> (Source: <xref ref="ref-KK"/>, Section 4.7, Exercise 4.7.9.) </p></aside>
+							Find the angle between the vectors
+								<me>
+									\mathbf{u} = \begin{bmatrix} 1 \\ -2 \\ 1 \end{bmatrix} 
+									\;\text{ and }\;
+									\mathbf{v} = \begin{bmatrix} 1 \\ 2 \\ -7 \end{bmatrix} 
+								</me> 
+						</statement>
+						<hint>
+							Look back at the <xref ref="cosine-formula">Cosine Formula</xref>.
+						</hint>
+						<solution>
+							<p>
+							According to the <xref ref="cosine-formula">Cosine Formula</xref>, we have to compute the norm of the vectors and their dot product:
+							</p><p>
+							<md>
+								<mrow>
+									\norm{\mbf{u}}
+									\amp =
+									\sqrt{\mbf{u}\cdot\mbf{u}}
+									=
+									\sqrt{ 1^2 + (-2)^2 + 1^2}
+									=
+									\sqrt{6}
+								</mrow>
+								<mrow>
+									\norm{\mbf{v}}
+									\amp =
+									\sqrt{\mbf{v}\cdot\mbf{v}}
+									=
+									\sqrt{ 1^2 + 2^2 + (-7)^2}
+									=
+									\sqrt{54}
+								</mrow>
+								<mrow>
+									\mbf{u}\cdot\mbf{v}
+									\amp =
+									1\cdot 1 + (-2)\cdot 2 + 1\cdot (-7)
+									<!--=
+									1-4-7-->
+									=
+									-10
+								</mrow>
+							</md> 
+							</p><p>
+							Therefore,
+							</p><p>
+							<me>
+								\cos (\theta)
+								=
+								\frac{ \mbf{u}\cdot \mbf{v}}{ \norm{\mbf{u}}\cdot \norm{\mbf{v}}}
+								=
+								\frac{-10}{ \sqrt{6}\cdot \sqrt{54}}
+								=
+								\frac{-10}{18}
+								=
+								\frac{-5}{9}
+							</me>
+							</p><p> and</p><p>
+							<me>
+								\theta
+								=\mathrm{arcos} \left(\frac{-5}{9}\right)
+								.
+							</me>
+							</p>
+						</solution>
+						<answer>
+							<me>
+								\theta
+								=\mathrm{arcos} \left(\frac{-5}{9}\right)
+							</me>
+						</answer>
+					</exercise></p>
+
+					<p><exercise xml:id="ex-dot-product-solve-for-angle"><!-- -->
+						<statement>	<aside><p> (Source: <xref ref="ref-KN"/>, Section 4.2, Exercise 4.2.3.) </p></aside>
+							Find all real numbers <m>x</m> such that:
+							<ol label="[a]">
+								<li>
+									<m>\begin{bmatrix} 2 \\ -1 \\ 3 \end{bmatrix} </m> and <m>\begin{bmatrix} x \\ -2 \\ 1 \end{bmatrix} </m> are orthogonal.
+								</li>
+								<li>
+									<m>\begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix} </m> and <m>\begin{bmatrix} 1 \\ x \\ 2 \end{bmatrix} </m> are at an angle of <m>\frac{\pi}{3}</m>.
+								</li>
+							</ol>
+						</statement>
+						<hint>
+							Two vectors <m>\mbf{u}</m> and <m>\mbf{v}</m> are called <em>orthogonal</em> if their dot product is zero, i.e. <m>\mbf{u}\cdot \mbf{v} = 0</m>.
+						</hint>
+						<hint>
+							Look back at the <xref ref="cosine-formula">Cosine Formula</xref>.
+						</hint>
+						<solution>
+							<ol label="[a]">
+								<li><p>We want the dot product of the two vectors to be zero, i.e. we want</p>
+									<p><me>
+										0
+										\stackrel{!}{=}
+										\begin{bmatrix} 2 \\ -1 \\ 3 \end{bmatrix} 
+										\cdot
+										\begin{bmatrix} x \\ -2 \\ 1 \end{bmatrix} 
+										=
+										2x + (-1)(-2) + 3\cdot 1
+										=
+										2x + 5
+									</me></p> 
+									<p>Thus, we need <m>x=\frac{-5}{2}</m>.</p>
+								</li>
+								<li>
+									<p>To use the <xref ref="cosine-formula">Cosine Formula</xref>, we have to compute the norm of the vectors and their dot product:
+									</p><p>
+									<md>
+										<mrow>
+											\norm{\begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix} }
+											\amp =
+											\sqrt{\begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix} \cdot\begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix} }
+											=
+											\sqrt{ 2^2 + (-1)^2 + 1^2}
+											=
+											\sqrt{6}
+										</mrow>
+										<mrow>
+											\norm{\begin{bmatrix} 1 \\ x \\ 2 \end{bmatrix} }
+											\amp =
+											\sqrt{\begin{bmatrix} 1 \\ x \\ 2 \end{bmatrix} \cdot\begin{bmatrix} 1 \\ x \\ 2 \end{bmatrix} }
+											=
+											\sqrt{ 1^2 + x^2 + 2^2}
+											=
+											\sqrt{5+x^2}
+										</mrow>
+										<mrow>
+											\begin{bmatrix} 2 \\ -1 \\ 1 \end{bmatrix} 
+											\cdot
+											\begin{bmatrix} 1 \\ x \\ 2 \end{bmatrix} 
+											\amp =
+											2\cdot 1 + (-1)\cdot x + 1\cdot 2
+											=
+											4-x
+										</mrow>
+									</md> 
+									</p><p>
+									Therefore,
+									</p><p>
+									<me>
+										\cos (\theta)
+										\stackrel{!}{=}
+										\frac{ 4-x }{\sqrt{6}\sqrt{5+x^2}},
+										\text{ i.e. }
+										\cos (\theta)\sqrt{6}\sqrt{5+x^2}
+										\stackrel{!}{=}
+										4-x
+										.
+									</me></p><p>
+									Since <m>\cos (\frac{\pi}{3}) = \frac{1}{2}</m>, we can rewrite that to
+									</p><p><men xml:id="ex-dot-product-solve-for-angle-eq">
+										\sqrt{6(5+x^2)}
+										\stackrel{!}{=}
+										2(4-x)
+										=
+										8-2x
+										.
+									</men></p><p>
+									If we square both sides of this equation, we get
+									</p><p><md>
+										<mrow>
+											\amp
+											6(5+x^2)
+											=
+											30 + 6x^2
+											\stackrel{!}{=}
+											(8-2x)^2
+											=
+											64 - 32x + 4x^2
+										</mrow>
+										<mrow>
+											\iff\amp
+											-34 + 32x + 2x^2
+											\stackrel{!}{=}
+											0
+										</mrow>
+										<mrow>
+											\iff\amp
+											-17 + 16x + x^2
+											\stackrel{!}{=}
+											0
+										</mrow>
+										<mrow>
+											\iff\amp
+											x
+											\stackrel{!}{=}
+											-\frac{16}{2}
+											\pm
+											\sqrt{
+												\left(\frac{16}{2}\right)^2
+												-
+												(-17)
+											}
+											=
+											-8
+											\pm
+											\sqrt{
+												81
+											}
+											=
+											-8
+											\pm
+											9
+										</mrow>
+										<mrow>
+											\iff\amp
+											x
+											\stackrel{!}{=}
+											1
+											\text{ or }
+											x \stackrel{!}{=} -17
+										</mrow>
+									</md></p><p>
+									Therefore, the answer is: for <m>x=1</m> and <m>x=-17</m>, the angle between the two vectors is <m>\frac{\pi}{3}</m>.</p>
+								</li>
+							</ol>
+						</solution>
+						<answer>
+							<ol label="[a]">
+								<li>
+									<m>x=\frac{-5}{2}</m>
+								</li>
+								<li>
+									<m>x=1</m> and <m>x=-17</m>
+								</li>
+							</ol>
+						</answer>
+					</exercise></p>
+
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 1.2, Exercise 41-->
+						<statement>	<aside><p> (Source: <xref ref="ref-KK"/>, Section 4.7, Exercise 4.7.10.) </p></aside>
+							Find the <m>\operatorname{proj}_{\mathbf{v}}(\mathbf{w})</m> where
+								<me> \mathbf{w} = \begin{bmatrix} 1 \\ 0 \\ -2 \end{bmatrix} , \mathbf{v} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} </me>
+						</statement>
+						<hint xml:id="def-proj-vect-onto-vect">
+							Definition: If <m>\mbf{v}</m> and <m>\mbf{w}</m> are two vectors in <m>\mathbb{R}^n</m> and <m>\mbf{v}\neq \mbf{0}</m>, then the <em>projection of <m>\mbf{w}</m> onto <m>\mbf{v}</m></em> is the vector <m>\operatorname{proj}_{\mathbf{v}}(\mathbf{w})</m> defined by
+							<me>
+								\operatorname{proj}_{\mathbf{v}}(\mathbf{w})
+								=
+								\left(
+									\frac{\mbf{v}\cdot \mbf{w}}{\mbf{v}\cdot \mbf{v}}
+								\right)
+								\mbf{v}
+								.
+							</me>
+						</hint>
+						<solution>
+							Since
+							<me>
+								\operatorname{proj}_{\mathbf{v}}(\mathbf{w})
+								=
+								\left(
+									\frac{\mbf{v}\cdot \mbf{w}}{\mbf{v}\cdot \mbf{v}}
+								\right)
+								\mbf{v}
+								,
+							</me>
+							we should first compute the dot products:
+							<md>
+								<mrow>
+									\mbf{v}\cdot \mbf{w}
+									\amp =
+									\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} 
+									\cdot
+									\begin{bmatrix} 1 \\ 0 \\ -2 \end{bmatrix} 
+									=
+									1\cdot 1 + 2\cdot 0 + 3\cdot (-2)
+									=
+									-5,
+								</mrow>
+								<mrow>
+									\mbf{v}\cdot \mbf{v}
+									\amp =
+									\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} 
+									\cdot
+									\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} 
+									=
+									1^2 + 2^2 + 3^2
+									=
+									14,
+									\text{ and so }
+								</mrow>
+								<mrow>
+									\amp \frac{\mbf{v}\cdot \mbf{w}}{\mbf{v}\cdot \mbf{v}}
+									=
+									\frac{-5}{14}
+									.
+								</mrow>
+							</md>
+							Therefore,
+							<me>
+								\operatorname{proj}_{\mathbf{v}}(\mathbf{w})
+								=
+								\frac{-5}{14}
+								\mathbf{v} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} 
+								=
+								\mathbf{v} = \begin{bmatrix} \frac{-5}{14} \\ \frac{-10}{14} \\ \frac{-15}{14} \end{bmatrix} 
+								.
+							</me>
+						</solution>
+						<answer>
+							<m>
+								\operatorname{proj}_{\mathbf{v}}(\mathbf{w})
+								=
+								\mathbf{v} = \begin{bmatrix} \frac{-5}{14} \\ \frac{-10}{14} \\ \frac{-15}{14} \end{bmatrix} 
+							</m>
+						</answer>
+					</exercise></p>
+
+					<p><exercise xml:id="ex-decompose-into-parallel-and-orthogonal-parts"><!-- xml:id="ex-" -->
+						<statement>	<aside><p> (Source: <xref ref="ref-JH"/>, Section 2.6, Exercise 2.6.14.) </p></aside>
+							Decompose the vector <m>\mathbf{v}</m> into <m>\mathbf{v} = \mathbf{a}+\mathbf{b}</m> where <m>\mathbf{a}</m> is parallel to <m>\mathbf{u}</m> and <m>\mathbf{b}</m> is perpendicular to <m>\mathbf{u}</m>.		
+								<me> \mathbf{u} = \begin{bmatrix} 3 \\ 2\\ -5 \end{bmatrix} , \mathbf{v} = \begin{bmatrix} 1 \\ -1 \\ 2 \end{bmatrix} </me> 
+						</statement>
+						<hint xml:id="ex-decompose-into-parallel-and-orthogonal-parts-hint-defn">
+							Write down the definition of <m>``\mathbf{a}</m> is parallel to <m>\mathbf{u}"</m> and use the condition <m>``\mathbf{v} = \mathbf{a}+\mathbf{b}"</m> to find a formula for <m>\mathbf{b}</m> as linear combination of <m>\mathbf{v}</m> and <m>\mathbf{u}</m>.
+						</hint>
+						<hint>
+							Write down the definition of <m>``\mathbf{b}</m> is perpendicular to <m>\mathbf{u}"</m>, and then replace <m>\mbf{b}</m> with your solution to <xref ref="ex-decompose-into-parallel-and-orthogonal-parts-hint-defn"/>.
+						</hint>
+						<solution>
+							We require <m>\mbf{a}</m> to be parallel to <m>\mbf{u}</m>, i.e. <m>\mbf{a} = c \mbf{u}</m> for some real number <m>c</m> that is yet to be determined. Plugging that into <m>\mathbf{v} = \mathbf{a}+\mathbf{b}</m>, we get a definition of <m>\mbf{b}</m> that also depends on <m>c</m>: <m>\mathbf{b} = \mathbf{v} - c \mbf{u}</m>. As <m>\mbf{b}</m> needs to be orthogonal to <m>\mbf{u}</m>, we want <m>\mbf{b}\cdot \mbf{u}=0</m>. If we plug our tentative solution for <m>\mbf{b}</m> into this, we get
+							<me>
+								(\mathbf{v} - c \mbf{u})\cdot \mbf{u}=0
+								.
+							</me>
+							Using the properties of the dot product, we arrive at
+							<me>
+								\mathbf{v}\cdot \mbf{u} = c \mbf{u}\cdot \mbf{u},
+								\text{ i.e. }
+								c = \frac{\mathbf{v}\cdot \mbf{u}}{\mbf{u}\cdot \mbf{u}}
+								\text{ using that }\mbf{u}\neq \mbf{0}
+								.
+							</me>
+							We can now compute both sides and get a value for <m>c</m>:
+							<md>
+								<mrow>
+									\mathbf{v}\cdot \mbf{u}
+									\amp =
+									\begin{bmatrix} 1 \\ -1 \\ 2 \end{bmatrix} 
+									\cdot
+									\begin{bmatrix} 3 \\ 2\\ -5 \end{bmatrix} 
+									=
+									1\cdot 3 + (-1)\cdot 2 + 2\cdot (-5)
+									=
+									-9,
+								</mrow>
+								<mrow>
+									\mbf{u}\cdot \mbf{u}
+									\amp =
+									\begin{bmatrix} 3 \\ 2\\ -5 \end{bmatrix}<!-- \end{bmatrix*}-->
+									\cdot
+									\begin{bmatrix} 3 \\ 2\\ -5 \end{bmatrix}<!-- \end{bmatrix*}-->
+									=
+									3^2 + 2^2 + (-5)^2
+									=
+									38, \text{ so that }
+								</mrow>
+							</md>
+							<me>
+								c
+								=
+								\frac{-9}{38}.
+							</me>
+							We can now solve for our vectors <m>\mbf{a}</m> and <m>\mbf{b}</m>:
+							<md>
+								<mrow>
+									\mbf{a} = c \mbf{u}	= \frac{-9}{38}\begin{bmatrix} 3 \\ 2\\ -5 \end{bmatrix} 
+									=
+									\begin{bmatrix} \frac{-27}{38} \\ \frac{-18}{38}\\ \frac{45}{38}\end{bmatrix} 
+								</mrow>
+								<mrow>
+									\mathbf{b}
+									=
+									\mathbf{v} - \mbf{a}
+									=
+									\begin{bmatrix} 1 \\ -1 \\ 2 \end{bmatrix} 
+									-
+									\begin{bmatrix} \frac{-27}{38} \\ \frac{-18}{38}\\ \frac{45}{38}\end{bmatrix} 
+									=
+									\begin{bmatrix} \frac{65}{38} \\ \frac{-20}{38}\\ \frac{31}{38}\end{bmatrix} 
+									.
+								</mrow>
+							</md>
+							Let us do a sanity check: Is our <m>\mbf{b}</m> indeed orthogonal to <m>\mbf{u}</m>? We compute:
+							<md>
+								<mrow>
+									\mbf{b}\cdot \mbf{u}
+									\amp =
+									\begin{bmatrix} \frac{65}{38} \\ \frac{-20}{38}\\ \frac{31}{38}\end{bmatrix} 
+									\cdot
+									\begin{bmatrix} 3 \\ 2\\ -5 \end{bmatrix} 
+								=
+									\frac{65}{38} \cdot 3 + \frac{-20}{38}\cdot 2 + \frac{31}{38}\cdot (-5)
+								</mrow>
+								<mrow>
+									\amp =
+									\frac{195-40-155}{38}
+									=
+									0,
+								</mrow>
+							</md>
+							so yes!
+						</solution> 
+						<answer>
+							<m>\mbf{a} 
+									=
+									\begin{bmatrix} \frac{-27}{38} \\ \frac{-18}{38}\\ \frac{45}{38}\end{bmatrix} 
+							</m>,
+							<m>\mathbf{b}=
+								\begin{bmatrix} \frac{65}{38} \\ \frac{-20}{38}\\ \frac{31}{38}\end{bmatrix} 
+							</m>
+						</answer>
+					</exercise></p>
+
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 1.2, Exercise 33-->
+						<statement><aside><p> (Source: <xref ref="ref-KN"/>, Section 4.2, Exercise 4.2.26.) </p></aside>
+							<ol> 
+								<li>
+									Show that, of the four diagonals of a cube, no pair is perpendicular.
+								</li>
+								<li>
+									Show that each diagonal is perpendicular to the face diagonals it does not meet.
+								</li>
+							</ol>
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+
+
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>	<aside><p> (Source: <xref ref="ref-KN"/>, Section 4.2, Exercise 4.2.45.) </p></aside>
+							Prove that the triangle inequality <m>\mathbf{\|u+v\| \le \|u\| + \|v\|}</m> holds for all vectors <m>\mathbf{u}</m> and <m>\mathbf{v}</m>.
+						</statement>
+						<hint>
+							Consider the triangle with <m>\mathbf{u}</m> and <m>\mathbf{v}</m> as two sides.
+						</hint>
+						<solution>
+							First, let us draw the triangle as suggested by the hint:
+							<p>
+							<figure> <!-- the <figure> container isn't strictly necessary, but it's nice if you want the figure to be numbered, or if you want to xref it later-->
+									<caption>A triangle with <m>\mathbf{u}</m> and <m>\mathbf{v}</m> as two sides</caption> <!-- also not necessary -->
+									<image>
+									<latex-image>
+										\begin{tikzpicture}[line cap=round, line join=round, >=triangle 45, x=1.0cm,y=1.0cm]
+										\begin{axis}[
+											anchor=origin,  % Align the origins
+											x=1cm, y=1cm, % Set the same unit vectors
+											hide axis
+													]
+												\addplot [-latex] table {
+													0 0
+													1 2
+													}
+											node[near end, above] {\scriptsize $\mathbf{u}$};
+													\addplot [-latex] table {
+													0 0
+													3 1
+													} node[near end, below] {\scriptsize $\mathbf{v}$};
+											\end{axis}
+											\end{tikzpicture}
+									</latex-image>
+								</image>
+							</figure>
+							</p>
+						</solution>
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+
+					<p><exercise xml:id="ex-same-norm-iff-two-things-are-perp"><!-- Replacement for Poole's Section 1.2, Exercise 65-->
+						<statement>	<aside><p> (Source: <xref ref="ref-JH"/>, for Chapter II, Section "Length and Angle Measures",  Problem 24.) </p></aside>
+							Show that <m>\norm{\mathbf{u}} = \norm{\mathbf{v}}</m> if and only if <m>\mathbf{u} + \mathbf{v}</m> and <m>\mathbf{u} - \mathbf{v}</m> are perpendicular. Give an example in <m>\mathbb{R}^2</m>.
+						</statement>
+						<hint>
+							Remember that an <em>if and only if</em> statement goes both ways.
+						</hint>
+						<hint>
+							Use the properties of the dot product to find a formula for the dot product of <m>\mathbf{u} + \mathbf{v}</m> and <m>\mathbf{u} - \mathbf{v}</m> in terms of <m>\mathbf{u}</m> and <m>\mathbf{v}</m>.
+						</hint>
+						<solution>
+							<p>Since we are making a claim about the dot product of <m>\mathbf{u} + \mathbf{v}</m> and <m>\mathbf{u} - \mathbf{v}</m>, let us use the properties of the dot product to simplify it:
+							</p>
+							<p><mdn>
+								<mrow number="no">
+									(\mathbf{u} + \mathbf{v})\cdot(\mathbf{u} - \mathbf{v})
+									\amp =
+									(\mathbf{u} + \mathbf{v})\cdot\mathbf{u} - (\mathbf{u} + \mathbf{v})\cdot\mathbf{v}
+									\amp\amp
+									(\text{Distributivity})
+								</mrow>
+								<mrow number="no">
+									\amp =
+									(\mathbf{u}\cdot\mathbf{u} + \mathbf{v}\cdot\mathbf{u})
+									-
+									(\mathbf{u}\cdot\mathbf{v} + \mathbf{v}\cdot\mathbf{v})
+									\amp\amp
+									(\text{Distributivity})
+								</mrow>
+								<mrow number="no">
+									\amp =
+									\norm{\mbf{u}}^2 + \mathbf{v}\cdot\mathbf{u}
+									-
+									\mathbf{u}\cdot\mathbf{v} - \norm{\mbf{v}}^2
+									\amp\amp
+									(\text{definition of } \norm{\cdot})
+								</mrow>
+								<mrow number="no">
+									\amp =
+									\norm{\mbf{u}}^2 + \mathbf{u}\cdot \mathbf{v}
+									-
+									\mathbf{u}\cdot\mathbf{v} - \norm{\mbf{v}}^2
+									\amp\amp
+									(\text{Commutativity})
+								</mrow>
+								<mrow xml:id="ex-same-norm-iff-two-things-are-perp-manipulation">
+									\amp =
+									\norm{\mbf{u}}^2  - \norm{\mbf{v}}^2
+									.
+								</mrow>
+							</mdn></p>
+							<p>The two vectors being perpendicular means exactly that their dot product is zero, i.e.</p>
+							<p><me>
+								(\mathbf{u} + \mathbf{v})\perp (\mathbf{u} - \mathbf{v})
+								\iff
+								(\mathbf{u} + \mathbf{v})\cdot(\mathbf{u} - \mathbf{v}) = 0
+							</me></p><p>
+							By <xref ref="ex-same-norm-iff-two-things-are-perp-manipulation"/>, this happens if and only if <m>\norm{\mbf{u}}^2  - \norm{\mbf{v}}^2 = 0</m>, or in other words:</p>
+							<p><me>
+								(\mathbf{u} + \mathbf{v})\perp (\mathbf{u} - \mathbf{v})
+								\iff
+								\norm{\mbf{u}}^2 = \norm{\mbf{v}}^2 
+								\iff
+								\norm{\mbf{u}}= \norm{\mbf{v}}
+								,
+							</me></p>
+							<p>as claimed.</p>
+							<p>For example, the vectors <m> \mathbf{u} = \begin{bmatrix} 3 \\ 4 \end{bmatrix} </m> and <m>\mathbf{v} = \begin{bmatrix} 5 \\ 0 \end{bmatrix} </m> have the same norm since
+							</p><p><me>
+								\norm{\mbf{u}}^2
+								=
+								\mbf{u}\cdot \mbf{u}
+								=
+								3^2 + 4^2 = 25
+								\;\text{ and }\;
+								\norm{\mbf{v}}^2
+								=
+								\mbf{v}\cdot \mbf{v}
+								=
+								5^2 + 0^2 = 25
+								.
+							</me></p>
+							<p>We check that indeed</p>
+							<p><md>
+								<mrow>
+									(\mathbf{u} + \mathbf{v})\cdot (\mathbf{u} - \mathbf{v})
+									\amp =
+									\left(
+										\begin{bmatrix} 3 \\ 4 \end{bmatrix} 
+										+
+										\begin{bmatrix} 5 \\ 0 \end{bmatrix} 
+									\right)
+									\cdot
+									\left(	
+										\begin{bmatrix} 3 \\ 4 \end{bmatrix} 
+										-
+										\begin{bmatrix} 5 \\ 0 \end{bmatrix} 
+									\right)
+								</mrow>
+								<mrow>
+									\amp =
+									\begin{bmatrix} 3+5 \\ 4+0 \end{bmatrix} 
+									\cdot
+									\begin{bmatrix} 3-5 \\ 4-0 \end{bmatrix} 
+									=
+									\begin{bmatrix} 8 \\ 4 \end{bmatrix} 
+									\cdot
+									\begin{bmatrix} -2 \\ 4 \end{bmatrix} 
+								</mrow>
+								<mrow>
+									\amp =
+									8\cdot (-2) + 4\cdot 4 = 0.
+								</mrow>
+							</md></p>
+						</solution>
+					</exercise></p>
+
+					<p><exercise xml:id="ex-parallelogram-diagonals-rectangle"><!-- Replacement for Poole's Section 1.2, Exercise 59-->
+						<statement>	<aside><p> (Source: <xref ref="ref-KN"/>, Section 4.2, Exercise 4.2.30.) </p></aside>
+							If the diagonals of a parallelogram have equal length, show that the parallelogram is a rectangle.
+						</statement>
+						<hint>
+							Let two adjacent sides of the parallelogram be described by vectors <m>\mbf{x}</m> and <m>\mbf{y}</m>. What does it mean, in terms of <m>\mbf{x}</m> and <m>\mbf{y}</m>, that the parallelogram is a rectangle?
+						</hint>
+						<hint>
+							It might help to look back at <xref ref="ex-same-norm-iff-two-things-are-perp"/>.
+						</hint>
+						<solution>
+							To show that a parallelogram is a rectangle, we need to see that the enclosed angles are <m>90^\circ</m>. If we think of two adjacent sides of the parallelogram as vectors <m>\mbf{x}</m> and <m>\mbf{y}</m>, then its other two sides are translates of  <m>\mbf{x}</m> and <m>\mbf{y}</m>, as depicted in <xref ref="ex-parallelogram-diagonals-rectangle-fig-parallelogram"/>:
+							<p>
+							<figure xml:id="ex-parallelogram-diagonals-rectangle-fig-parallelogram"> <!-- the <figure> container isn't strictly necessary, but it's nice if you want the figure to be numbered, or if you want to xref it later-->
+									<caption>A parallelogram with <m>\mbf{x}</m> and <m>\mbf{y}</m> as two adjacent sides</caption> <!-- also not necessary -->
+									<image>
+									<latex-image>
+										\begin{tikzpicture}[line cap=round, line join=round, >=triangle 45, x=1.0cm,y=1.0cm, scale=0.5]
+										\begin{axis}[
+											anchor=origin,  % Align the origins
+											x=2cm, y=2cm, % Set the same unit vectors
+											hide axis
+													]
+											\addplot [-latex] table {
+													0 0
+													1 2
+													}
+											node[left] {\scriptsize $\mbf{x}$};
+													\addplot [-latex] table {
+													0 0
+													3 1
+													} node[below] {\scriptsize $\mbf{y}$};
+											\addplot [-latex] table {
+													3 1
+													4 3
+													}
+											node[right] {\scriptsize $\mbf{x}$};
+											\addplot [-latex] table {
+													1 2
+													4 3
+													} node[above] {\scriptsize $\mbf{y}$};
+											\end{axis}
+											\end{tikzpicture}
+									</latex-image>
+								</image>
+							</figure>
+							</p>
+							We now see that the two diagonals can be described by the vectors <m>\mbf{x}+\mbf{y}</m> and <m>\mbf{x} - \mbf{y}</m>:
+							<p>
+							<figure xml:id="ex-parallelogram-diagonals-rectangle-fig-diagonals"> <!-- the <figure> container isn't strictly necessary, but it's nice if you want the figure to be numbered, or if you want to xref it later-->
+									<caption>The diagonals of the parallelogram from <xref ref="ex-parallelogram-diagonals-rectangle-fig-parallelogram"/> </caption> <!-- also not necessary -->
+									<image>
+									<latex-image>
+										\begin{tikzpicture}[line cap=round, line join=round, >=triangle 45, x=0.5cm,y=0.5cm]
+										\begin{axis}[
+											anchor=origin,  % Align the origins
+											x=2cm, y=2cm, % Set the same unit vectors
+											hide axis
+													]
+											\addplot [-, gray, ultra thin] table {
+													0 0
+													1 2
+													};
+											\addplot [-, gray, ultra thin] table {
+													0 0
+													3 1
+													};
+											\addplot [-, gray, ultra thin] table {
+													3 1
+													4 3
+													};
+											\addplot [-, gray, ultra thin] table {
+													1 2
+													4 3
+													};
+											\addplot [-latex] table {
+													3 1
+													1 2
+													} node[near end] {\scriptsize $\mbf{x}-\mbf{y}$};
+											\addplot [-latex] table {
+													0 0
+													4 3
+													} node[near end] {\scriptsize $\mbf{x}+\mbf{y}$};
+											\end{axis}
+											\end{tikzpicture}
+									</latex-image>
+								</image>
+							</figure>
+							</p>
+							If we assume that our parallelogram's diagonals have the same length, then by the above argument, that means that <m>\norm{\mbf{x}+\mbf{y}} = \norm{\mbf{x}-\mbf{y}}</m>. We can therefore apply <xref ref="ex-same-norm-iff-two-things-are-perp"/> to the vectors <m>\mbf{u}:= \mbf{x}+\mbf{y}</m> and <m>\mbf{v}:= \mbf{x} - \mbf{y}</m>: Since <m>\norm{\mbf{u}} = \norm{\mbf{v}}</m>, we conclude that <m>\mbf{u} + \mbf{v}</m> and <m>\mbf{u} - \mbf{v}</m> are orthogonal. Plugging in the definition of <m>\mbf{u}</m> and <m>\mbf{v}</m>, this means that
+							<me>
+								(\mbf{x}+\mbf{y}) + (\mbf{x} - \mbf{y}) 
+								=								
+								2\mbf{x}
+							</me>
+							and
+							<me>
+								(\mbf{x}+\mbf{y}) - (\mbf{x} - \mbf{y})
+								=
+								2\mbf{y}
+							</me>
+							are orthogonal, and therefore, so are  <m>\mbf{x}</m> and <m>\mbf{y}</m>. Since twp adjacent sides of the parallelogram are orthogonal, it is a rectangle.
+						</solution>
+					</exercise></p>
+				</exercises>
+			

@@ -1,0 +1,1257 @@
+			<exercises>
+ 					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 3.2, Exercise 39-->
+						<statement>
+						<aside><p> (Source: <xref ref="ref-PS" />, Chapter 4, Exercise 4.5.4) </p></aside>
+						For each of the following matrices, find the inverse if possible.  If it doesn't exist, explain why.
+						<ol cols = "2">
+							<li>
+								<m> \begin{bmatrix} 2 \amp 1 \\ -1 \amp 3 \end{bmatrix} </m> </li>
+							<li>
+								<m> \begin{bmatrix} 0 \amp 1 \\ 5 \amp 3 \end{bmatrix} </m> </li>
+							<li>
+								<m> \begin{bmatrix} 2 \amp 1 \\ 3 \amp 0 \end{bmatrix} </m> </li>
+							<li>
+								<m> \begin{bmatrix} 2 \amp 1 \\ 4 \amp 2 \end{bmatrix} </m> </li>
+							<li>
+								<m> \begin{bmatrix} 0 \amp 1  \amp 2 \\ 1 \amp 2 \amp 5 \end{bmatrix} </m> </li>
+							</ol> 
+				</statement>
+						<hint xml:id="hint-how-to-find-inverse-matrix">
+							To find the inverse of a matrix <m>A</m> of size <m>n\times n</m>, one writes down the augmented matrix
+							<me>
+								\matr{c|c}
+									{A\amp I_{n}}
+							</me>
+							and then row-reduces. If the RREF of <m>A</m> is <m>I_{n}</m> (the identity matrix of size <m>n\times n</m>), so that the above augmented matrix becomes
+							<me>
+								\matr{c|c}
+									{A\amp I_{n}}
+								\overset{\text{row reduction}}{\longrightarrow}
+									\matr{c|c}
+									{I_{n}\amp B}
+							</me>
+							for some matrix <m>B</m>, then <m>B</m> is the inverse <m>A^{-1}</m> of <m>A</m>. If the RREF of <m>A</m> is not <m>I_{n}</m>, then <m>A</m> is not invertible.
+						</hint>
+						<solution>
+							
+							<ol>
+							<li><solution>
+								We will use the approach explained in <xref ref="hint-how-to-find-inverse-matrix"/>.
+								<md><mrow>
+									\matr{cc|cc}
+									{
+										2 \amp 1 \amp 1 \amp 0
+										\\
+										-1 \amp 3 \amp 0 \amp 1
+									}
+									\overset{R_{1}+2R_{2}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										2 \amp 1 \amp 1 \amp 0
+										\\
+										0 \amp 7 \amp 1 \amp 2
+									}
+								</mrow><mrow>
+									\overset{-R_{2}+7R_{1}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										14 \amp 0 \amp 6 \amp -2
+										\\
+										0 \amp 7 \amp 1 \amp 2
+									}
+								</mrow><mrow>
+									\overset{\frac{1}{14}R_{1}}{\underset{\frac{1}{7}R_{2}}{\longrightarrow}}
+									\amp
+									\matr{cc|cc}
+									{
+										1 \amp 0 \amp \frac{3}{7} \amp -\frac{1}{7}
+										\\
+										0 \amp 1 \amp \frac{1}{7} \amp \frac{2}{7}
+									}.
+								</mrow></md>
+								We conclude that <m>\begin{bmatrix} 2 \amp 1 \\ -1 \amp 3 \end{bmatrix}^{-1} = \frac{1}{7}\begin{bmatrix} 3 \amp -1 \\ 1 \amp 2 \end{bmatrix}.</m>
+							</solution></li>
+							<li><solution>
+								<md><mrow>
+									\matr{cc|cc}
+									{
+										0 \amp 1 \amp 1 \amp 0
+										\\
+										5 \amp 3 \amp 0 \amp 1
+									}
+									\overset{R_{1}\leftrightarrow R_{2}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										5 \amp 3 \amp 0 \amp 1
+										\\
+										0 \amp 1 \amp 1 \amp 0
+									}
+									</mrow><mrow>
+									\overset{-3R_{2}+R_{1}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										5 \amp 0 \amp -3 \amp 1
+										\\
+										0 \amp 1 \amp 1 \amp 0
+									}
+									</mrow>
+									<mrow>
+									\overset{\frac{1}{5}R_{1}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										1 \amp 0 \amp \frac{-3}{5} \amp \frac{1}{5}
+										\\
+										0 \amp 1 \amp 1 \amp 0
+									}
+									</mrow></md>
+									We conclude that <m>\begin{bmatrix} 0 \amp 1 \\ 5 \amp 3 \end{bmatrix}^{-1}=\frac{1}{5}\begin{bmatrix} -3 \amp 1 \\ 5 \amp 0 \end{bmatrix}</m>.
+								</solution></li>
+							<li><solution>
+								<md><mrow>\matr{cc|cc}
+									{
+										2 \amp 1 \amp 1 \amp 0
+										\\
+										3 \amp 0 \amp 0 \amp 1
+									}
+									\overset{R_{1}\leftrightarrow R_{2}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										3 \amp 0 \amp 0 \amp 1
+										\\
+										2 \amp 1 \amp 1 \amp 0
+									}
+								</mrow><mrow>
+									\overset{-2R_{1}+3R_{2}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										3 \amp 0 \amp 0 \amp 1
+										\\
+										0 \amp 3 \amp 3 \amp -2
+									}
+								</mrow><mrow>
+									\overset{\frac{1}{3}R_{1}}{\underset{\frac{1}{3}R_{2}}{\longrightarrow}}
+									\amp
+									\matr{cc|cc}
+									{
+										1 \amp 0 \amp 0 \amp \frac{1}{3}
+										\\
+										0 \amp 1 \amp 1 \amp -\frac{2}{3}
+									}
+								</mrow></md>
+									We conclude that <m>\begin{bmatrix} 2 \amp 1 \\ 3 \amp 0 \end{bmatrix}^{-1} = \frac{1}{3}\begin{bmatrix} 0 \amp 1 \\ 3 \amp -2 \end{bmatrix}</m>.</solution></li>
+							<li><solution>
+								<md><mrow>\matr{cc|cc}
+									{
+										2 \amp 1  \amp 1 \amp 0
+										\\
+										4 \amp 2 \amp 0 \amp 1
+									}
+									\overset{-2R_{1}+R_{2}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										2 \amp 1  \amp 1 \amp 0
+										\\
+										0 \amp 0 \amp -2 \amp 1
+									} 
+								</mrow></md>We see that the left-hand side will not have the identity matrix as its RREF. Therefore, the matrix <m>\begin{bmatrix} 2 \amp 1 \\ 4 \amp 2 \end{bmatrix}</m> does not have an inverse. </solution></li>
+							<li><solution>
+								The matrix
+								<m>\begin{bmatrix} 0 \amp 1  \amp 2 \\ 1 \amp 2 \amp 5 \end{bmatrix} </m> is not a square matrix, so it cannot be invertible.</solution></li>
+							</ol>
+						</solution>
+						<answer>
+							<ol>
+							<li><answer>
+								<m>\begin{bmatrix} 2 \amp 1 \\ -1 \amp 3 \end{bmatrix}^{-1} = \frac{1}{7}\begin{bmatrix} 3 \amp -1 \\ 1 \amp 2 \end{bmatrix}</m>
+							</answer></li>
+							<li><answer>
+								<m>\begin{bmatrix} 0 \amp 1 \\ 5 \amp 3 \end{bmatrix}^{-1}=\frac{1}{5}\begin{bmatrix} -3 \amp 1 \\ 5 \amp 0 \end{bmatrix}</m>
+								</answer></li>
+							<li><answer>
+								<m>\begin{bmatrix} 2 \amp 1 \\ 3 \amp 0 \end{bmatrix}^{-1} = \frac{1}{3}\begin{bmatrix} 0 \amp 1 \\ 3 \amp -2 \end{bmatrix}</m></answer></li>
+							<li><answer>
+								The matrix <m>\begin{bmatrix} 2 \amp 1 \\ 4 \amp 2 \end{bmatrix}</m> does not have an inverse. </answer></li>
+							<li><answer>
+								The matrix
+								<m>\begin{bmatrix} 0 \amp 1  \amp 2 \\ 1 \amp 2 \amp 5 \end{bmatrix} </m> does not have an inverse.</answer></li>
+							</ol>
+						</answer>
+
+				</exercise> </p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-PS" />, Chapter 4, Exercise 4.5.6) </p></aside>
+							Let <m> A </m> be a <m> 2 \times 2 </m> invertible matrix, with <m> A = \begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix}. </m> Find a formula for <m> A^{-1} </m> in terms of <m> a,b,c,d. </m> 
+						</statement>
+						<hint>
+							You can use <xref ref="hint-how-to-find-inverse-matrix"/>. Be careful not to divide by zero (you need to make a case distinction).
+						</hint>
+						<solution>
+							We use the approach from <xref ref="hint-how-to-find-inverse-matrix"/>, i.e. we want to row-reduce the following augmented matrix:
+							<md>
+								<mrow>
+									\matr{cc|cc}
+									{
+										a \amp b \amp 1 \amp 0
+										\\
+										c \amp d \amp 0 \amp 1
+									}
+								</mrow>
+							</md>
+							But we need to be careful not to divide by zero in the process.
+
+							By assumption, the matrix <m>A</m> is invertible. In particular, according to <xref ref="hint-how-to-find-inverse-matrix"/>, the reduced row-echelon form of <m>A</m> is the identity matrix. Therefore, if <m>a=0</m>, then neither <m>c</m> nor <m>b</m> can be zero (because else the first column resp. row of <m>A</m> would be zero). This means that we can make a case distinction: Assume first that <m>a\neq 0</m>, so that multiplying a row by <m>a</m> is a valid row operation:
+							<md>
+								<mrow>
+									\matr{cc|cc}
+									{
+										a \amp b \amp 1 \amp 0
+										\\
+										c \amp d \amp 0 \amp 1
+									}
+									\overset{aR_{2}}{\longrightarrow}
+									\amp 
+									\matr{cc|cc}
+									{
+										a \amp b \amp 1 \amp 0
+										\\
+										ac \amp ad \amp 0 \amp a
+									}
+								</mrow>
+								<mrow>
+									\overset{-cR_{1} + R_{2}}{\longrightarrow}
+									\amp\matr{cc|cc}
+									{
+										a \amp b \amp 1 \amp 0
+										\\
+										0 \amp ad-bc \amp -c \amp a
+									}
+									.
+								</mrow>
+							</md>
+							Since the RREF of <m>A</m> is the identity (by the assumption that <m>A</m> is invertible), we conclude that <m>\det(A) = ad-bc \neq 0</m>. We proceed:
+							<md>
+								<mrow>
+									\matr{cc|cc}{
+										a \amp b \amp 1 \amp 0
+										\\
+										0 \amp ad-bc \amp -c \amp a
+									}
+									\overset{\frac{1}{\det(A)}R_{2}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										a \amp b \amp 1 \amp 0
+										\\
+										0 \amp 1 \amp \frac{-c}{\det(A)} \amp \frac{a}{\det(A)}
+									}
+								</mrow>
+								<mrow>
+									\overset{-bR_{2}+R_{1}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										a \amp 0 \amp 1 + \frac{bc}{\det(A)} \amp \frac{-ab}{\det(A)}
+										\\
+										0 \amp 1 \amp \frac{-c}{\det(A)} \amp \frac{a}{\det(A)}
+									}
+								</mrow>
+								<mrow>
+									=\amp
+									\matr{cc|cc}
+									{
+										a \amp 0 \amp \frac{ad}{\det(A)} \amp \frac{-ab}{\det(A)}
+										\\
+										0 \amp 1 \amp \frac{-c}{\det(A)} \amp \frac{a}{\det(A)}
+									}
+								</mrow>
+								<mrow>
+									\overset{\frac{1}{a}R_{1}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										1 \amp 0 \amp \frac{d}{\det(A)} \amp \frac{-b}{\det(A)}
+										\\
+										0 \amp 1 \amp \frac{-c}{\det(A)} \amp \frac{a}{\det(A)}
+									}
+									,
+								</mrow>
+							</md>
+							where the last operation is valid since <m>a\neq 0</m>.	We conclude: If <m>A= \begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix}</m> is invertible and <m>a\neq 0</m>, then <m>\det(A) \neq 0</m>, and <m>A^{-1} =\frac{1}{\det(A)} \begin{bmatrix} d \amp -b \\ -c \amp a \end{bmatrix}.</m>
+
+
+							The case where <m>a=0</m> works similarly: As explained above, this implies that <m>c\neq 0</m> and <m>b\neq 0</m>. This allows us to do the following row operations:
+							<md>
+								<mrow>
+									\matr{cc|cc}
+									{
+										a \amp b \amp 1 \amp 0
+										\\
+										c \amp d \amp 0 \amp 1
+									}
+									=
+									\amp
+									\matr{cc|cc}
+									{
+										0 \amp b \amp 1 \amp 0
+										\\
+										c \amp d \amp 0 \amp 1
+									}
+								</mrow>
+								<mrow>
+									\overset{ \frac{1}{c}R_{2}}{\underset{\frac{1}{b}R_{1}}{\longrightarrow}}
+									\amp
+									\matr{cc|cc}
+									{
+										0 \amp 1 \amp \frac{1}{b} \amp 0
+										\\
+										1 \amp \frac{d}{c} \amp 0 \amp \frac{1}{c}
+									}
+								</mrow>
+								<mrow>
+									\overset{R_{1}\leftrightarrow R_{2}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										1 \amp \frac{d}{c} \amp 0 \amp \frac{1}{c}
+										\\
+										0 \amp 1 \amp \frac{1}{b} \amp 0
+									}
+								</mrow>
+								<mrow>
+									\overset{-\frac{d}{c}R_{1}+R_{2}}{\longrightarrow}
+									\amp
+									\matr{cc|cc}
+									{
+										1 \amp 0 \amp -\frac{d}{c}\cdot \frac{1}{b} \amp \frac{1}{c}
+										\\
+										0 \amp 1 \amp \frac{1}{b} \amp 0
+									}
+									.
+								</mrow>
+							</md>
+							In the case where <m>a=0</m>, we have found the inverse of <m>A</m> to be 
+							<me>
+								A^{-1}
+								=
+								\begin{bmatrix}
+									-\frac{d}{c}\cdot \frac{1}{b} \amp \frac{1}{c}
+									\\
+									\frac{1}{b} \amp 0
+								\end{bmatrix}
+								=
+								\frac{1}{-bc} 
+								\begin{bmatrix}
+									d \amp -b
+									\\
+									-c \amp a
+								\end{bmatrix}
+								=
+								\frac{1}{\det (A)} 
+								\begin{bmatrix}
+									d \amp -b
+									\\
+									-c \amp a
+								\end{bmatrix}.
+							</me>
+							All in all, we have shown:  If <m>A= \begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix}</m> is invertible (where <m>a</m> is any value), then <m>\det(A) \neq 0</m>, and <m>A^{-1} =\frac{1}{\det(A)} \begin{bmatrix} d \amp -b \\ -c \amp a \end{bmatrix}.</m>
+						</solution>
+						<answer xml:id="eq-inverse-of-2-times-2-matrix">
+							If <m> A = \begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix}</m> is invertible, its inverse is given by
+							<me>
+									\begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix}^{-1}
+									=
+									\frac{1}{ad-bc}
+									\begin{bmatrix} d \amp -b \\ -c \amp a \end{bmatrix}
+									.
+							</me>
+						</answer>
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 2, Exercise 2.1.44) </p></aside>
+							Using the inverse of the matrix, find the solution to the systems:
+							<ol>
+								<li> <me> \begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix} \begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \end{bmatrix} </me></li>
+								<li> <me> \begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix} \begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} 2 \\ 0 \end{bmatrix} </me></li>
+								<li>
+									<me> \begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix} \begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} a \\ b \end{bmatrix}</me> 
+									(give the solution in terms of <m> a </m> and <m> b </m>)
+								</li>
+							</ol>							
+						</statement>
+						<hint>
+							It is easiest to use <xref ref="eq-inverse-of-2-times-2-matrix"/> to determine the inverse matrix.
+						</hint>
+						<hint>
+							Note that, given an invertible matrix <m>A</m>, we can multiply the vector equation
+							<me>
+								A \vec{x} = \vec{y}
+							</me>
+							on the left by <m>A^{-1}</m>, which yields the equivalent equation:
+							<me>
+								\vec{x} = A^{-1}\vec{y}
+								.
+							</me>
+						</hint>
+						<solution>
+							First, we determine the inverse of <m> \begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix} </m> using <xref ref="eq-inverse-of-2-times-2-matrix"/>:
+							<me>
+								\begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix}^{-1}
+								=
+								\frac{1}{2\cdot 1 - 4\cdot 1}
+								\begin{bmatrix} 1 \amp -4 \\ -1 \amp 2 \end{bmatrix}
+								=
+								\frac{1}{2}
+								\begin{bmatrix} -1 \amp 4 \\ 1 \amp -2 \end{bmatrix}
+								.
+							</me>
+							<ol>
+								<li>
+								<solution>
+									Note that
+									<me>
+										\begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix} \begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}
+										\iff
+										\begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix}^{-1}
+										\begin{bmatrix} 1 \\ 2 \end{bmatrix}.
+									</me>
+									We compute:
+									<me>
+										\begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix}^{-1}
+										\begin{bmatrix} 1 \\ 2 \end{bmatrix}
+										=
+										\frac{1}{2}
+										\begin{bmatrix} -1 \amp 4 \\ 1 \amp -2 \end{bmatrix}
+										\begin{bmatrix} 1 \\ 2 \end{bmatrix}
+										=
+										\frac{1}{2}
+										\begin{bmatrix} -1 + 4\cdot 2 \\ 1 - 2 \cdot 2 \end{bmatrix}
+										=
+										\begin{bmatrix} \frac{7}{2} \\ \frac{-3}{2} \end{bmatrix}
+										.
+									</me>
+									The solution is therefore given by <m>\begin{bmatrix} x \\ y \end{bmatrix}=\begin{bmatrix} \frac{7}{2} \\ \frac{-3}{2} \end{bmatrix}.</m>
+								</solution></li>
+								<li><solution>
+									Note that
+									<me>\begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix} \begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} 2 \\ 0 \end{bmatrix} 
+										\iff
+										\begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix}^{-1}\begin{bmatrix} 2 \\ 0 \end{bmatrix} .
+									</me>
+									We compute:
+									<me>
+										\begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix}^{-1}\begin{bmatrix} 2 \\ 0 \end{bmatrix}
+										=
+										\frac{1}{2}
+										\begin{bmatrix} -1 \amp 4 \\ 1 \amp -2 \end{bmatrix}
+										\begin{bmatrix} 2 \\ 0 \end{bmatrix}
+										=
+										\frac{1}{2}
+										\begin{bmatrix} -2 + 4\cdot 0 \\ 2 -2\cdot 0 \end{bmatrix}
+										=
+										\begin{bmatrix} -1 \\ 1 \end{bmatrix}
+										.
+									</me>
+									The solution is therefore given by <m>\begin{bmatrix} x \\ y \end{bmatrix}=\begin{bmatrix} -1 \\ 1 \end{bmatrix}</m>.
+								</solution></li>
+								<li><solution>
+									Just as before, we see that
+									<me> \begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix} \begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} a \\ b \end{bmatrix}
+										\iff
+									 \begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix}^{-1}\begin{bmatrix} a \\ b \end{bmatrix}.
+									</me> 
+									We compute:
+									<me>
+										\begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix}^{-1}
+										\begin{bmatrix} a \\ b \end{bmatrix}
+										=
+										\frac{1}{2}
+										\begin{bmatrix} -1 \amp 4 \\ 1 \amp -2 \end{bmatrix}
+										\begin{bmatrix} a \\ b \end{bmatrix}
+										=
+										\frac{1}{2}
+										\begin{bmatrix} -a + 4 b \\ a - 2b \end{bmatrix}.
+									</me> 
+									The solution is therefore given by <m>\begin{bmatrix} x \\ y \end{bmatrix}=\begin{bmatrix} \frac{-a}{2} + 2 b \\ \frac{a}{2} - b \end{bmatrix}.</m>
+								</solution></li>
+							</ol>
+						</solution>
+						<answer>
+							<ol>
+								<li>
+								<answer>
+									<m>\begin{bmatrix} x \\ y \end{bmatrix}=\begin{bmatrix} \frac{7}{2} \\ \frac{-3}{2} \end{bmatrix}</m>
+								</answer></li>
+								<li><answer>
+									<m>\begin{bmatrix} x \\ y \end{bmatrix}=\begin{bmatrix} -1 \\ 1 \end{bmatrix}</m>
+								</answer></li>
+								<li><answer>
+									<m>\begin{bmatrix} x \\ y \end{bmatrix}=\begin{bmatrix} \frac{-a}{2} + 2 b \\ \frac{a}{2} - b \end{bmatrix}</m>
+								</answer></li>
+							</ol>
+						</answer>
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-PS" />, Chapter 4, Exercise 4.5.1) </p></aside>
+							For each of the following matrices, determine whether <m> B </m> is an inverse of <m> A. </m>
+							<ol>
+								<li> <me> A = \begin{bmatrix} 2 \amp 4 \\ 1 \amp 4 \end{bmatrix}, \ \ B = \frac{1}{2}\begin{bmatrix} 3 \amp -4 \\ -1 \amp 2 \end{bmatrix}. </me> </li>
+								<li> <me> A = \begin{bmatrix} 1 \amp -2 \\ 4 \amp -7 \end{bmatrix}, \ \ B = \begin{bmatrix} -1 \amp 2 \\ -4 \amp 7 \end{bmatrix}. </me> </li>
+								<li> <me> A = \begin{bmatrix} 4 \amp 1  \amp 3 \\ 2 \amp 1 \amp 2 \\ 1 \amp 0 \amp 1 \end{bmatrix}, \ \ B = \begin{bmatrix} 1  \amp -1 \amp -1  \\ 0 \amp 1 \amp -2 \\ -1 \amp 1 \amp 2 \end{bmatrix}. </me> </li>
+							</ol>
+						</statement>
+						<hint>
+							You can use <xref ref="eq-inverse-of-2-times-2-matrix"/> to find the inverse of a <m>2\times 2</m> matrix.
+						</hint>
+						<solution>
+							In the situation of  <m>2\times 2</m> matrices, we can approach the question in two different ways: one option is using <xref ref="eq-inverse-of-2-times-2-matrix"/> to compute the inverse <m>A^{-1}</m> of <m>A</m> and then check whether it coincides with the given matrix <m>B</m>. The second option is to check whether <m>AB=I</m> and <m>BA=I</m>, which is exactly the case if <m>B=A^{-1}</m>. This latter approach also works for matrices of larger size.
+							<ol>
+								<li><solution>
+									For this example, we use <xref ref="eq-inverse-of-2-times-2-matrix"/> to compute <m>A^{-1}</m>:
+									<md>
+										<mrow>
+											A^{-1}
+										=\amp
+										\begin{bmatrix} 2 \amp 4 \\ 1 \amp 4 \end{bmatrix}^{-1}
+										=
+										\frac{1}{2\cdot 4 - 1\cdot 4}
+										\begin{bmatrix} 4 \amp -4 \\ -1 \amp 2 \end{bmatrix}
+									</mrow>
+									<mrow>	=\amp
+										\frac{1}{4}
+										\begin{bmatrix} 4 \amp -4 \\ -1 \amp 2 \end{bmatrix}
+										\neq
+										\frac{1}{2}\begin{bmatrix} 3 \amp -4 \\ -1 \amp 2 \end{bmatrix}
+										=
+										B.</mrow>
+									 </md>
+									 We conclude that, no, <m>B</m> is not the inverse of <m>A</m>.
+								</solution></li>
+								<li><solution>
+									For this example, we will actually check whether <m>B</m> behaves like the inverse of <m>A</m>, so we compute:
+									<md><mrow> AB \amp=
+										\begin{bmatrix} 1 \amp -2 \\ 4 \amp -7 \end{bmatrix}
+										\begin{bmatrix} -1 \amp 2 \\ -4 \amp 7 \end{bmatrix}
+									</mrow>
+										<mrow>
+										\amp=
+										\begin{bmatrix}	1\cdot (-1) - 2 \cdot (-4) 
+												\amp 	1 \cdot 2 - 2 \cdot 7
+												\\
+														4\cdot (-1) - 7 \cdot (-4) 
+												\amp 	4 \cdot 2 - 7 \cdot 7	
+										\end{bmatrix}
+										=
+										\begin{bmatrix}	7 \amp -12	\\ 24 \amp -41	\end{bmatrix}.
+									</mrow>
+									</md>
+									Since <m>AB \neq I</m>, we conclude that, no, <m>B</m> is not the inverse of <m>A</m>. (We note that it was not necessary to compute all entries of <m>AB</m>; it suffices to see that its <m>(1,1)</m>-entry is not equal to <m>1</m>.)
+								</solution></li>
+								<li><solution>
+									We compute:
+									<md>
+										<mrow>
+											AB \amp=
+											\begin{bmatrix} 4 \amp 1  \amp 3 \\ 2 \amp 1 \amp 2 \\ 1 \amp 0 \amp 1 \end{bmatrix}
+											\begin{bmatrix} 1  \amp -1 \amp -1  \\ 0 \amp 1 \amp -2 \\ -1 \amp 1 \amp 2 \end{bmatrix}
+										</mrow>
+										<mrow>
+											\amp=
+											\begin{bmatrix} 4 +0 -3 \amp -4+1+3  \amp -4-2+6 \\ 2+0-2 \amp -2+1+2 \amp -2-2+4 \\ 1+0-1 \amp -1+0+1 \amp -1+0+2 \end{bmatrix}
+											=
+											\begin{bmatrix} 1 \amp 0  \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix}.
+										</mrow>
+									</md>
+									At this point, there is hope that <m>B</m> is the inverse of <m>A</m>, but we still need to check the other equation, so we compute:
+									<md>
+										<mrow>
+											BA \amp=											
+											\begin{bmatrix} 1  \amp -1 \amp -1  \\ 0 \amp 1 \amp -2 \\ -1 \amp 1 \amp 2 \end{bmatrix}
+											\begin{bmatrix} 4 \amp 1  \amp 3 \\ 2 \amp 1 \amp 2 \\ 1 \amp 0 \amp 1 \end{bmatrix}
+										</mrow>
+										<mrow>
+											\amp=
+											\begin{bmatrix} 4-2-1 \amp  1-1+0  \amp 3-2-1 \\ 0+2-2  \amp 0+1+0 \amp 0+2-2  \\  -4+2+2 \amp -1+1+0 \amp -3+2+2  \end{bmatrix}
+											=
+											\begin{bmatrix} 1 \amp 0  \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix}.
+										</mrow>
+									</md>
+									We conclude that, indeed, <m>B</m> is the inverse of <m>A</m>.
+							</solution></li>
+							</ol>
+						</solution>
+						<answer>
+							<ol>
+								<li><answer>No.</answer></li>
+								<li><answer>No.</answer></li>
+								<li><answer>Yes.</answer></li>
+							</ol>
+						</answer>
+					</exercise></p>
+
+					<p><exercise xml:id="ex-prod-of-invertible-matrices">
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 2, Exercise 2.1.50) </p></aside>
+							Suppose <m>A, B</m> are two invertible matrices of the same size. Show that <m> (AB)^{-1} = B^{-1}A^{-1} </m> by verifying that 
+							<me> A B (B^{-1}A^{-1}) =I \quad\text{and}\quad B^{-1}A^{-1} (AB) =I. </me>
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<solution>
+							Recall that <m>A^{-1}</m> is the unique matrix that satisfies <m>AA^{-1}=I=A^{-1}A</m>, and similarly for <m>B^{-1}</m>. We use this in the following computation:
+							<md>
+								<mrow>
+									A B (B^{-1}A^{-1})
+									\amp=
+									A (B B^{-1})A^{-1}
+									\amp \text{by associativity of matrix multiplication}
+								</mrow>
+								<mrow>
+									\amp=
+									A (I)A^{-1}
+									\amp \text{since } B B^{-1}=I
+								</mrow>
+								<mrow>
+									\amp=
+									A A^{-1}
+									\amp \text{by the properties of } I
+								</mrow>
+								<mrow>
+									\amp=
+									I
+									\amp\text{since } AA^{-1} = I.
+								</mrow>
+							</md>
+							For the other equality, we proceed similarly:
+							<md>
+								<mrow>
+									B^{-1}A^{-1} (AB)
+									\amp=
+									B^{-1}(A^{-1} A)B
+									\amp \text{by associativity of matrix multiplication}
+								</mrow>
+								<mrow>
+									\amp=
+									B^{-1}(I)B
+									\amp \text{since } A^{-1}A=I
+								</mrow>
+								<mrow>
+									\amp=
+									B^{-1}B
+									\amp \text{by the properties of } I
+								</mrow>
+								<mrow>
+									\amp=
+									I
+									\amp\text{since } B^{-1}B=I.
+								</mrow>
+							</md>
+							</solution>
+					</exercise></p>
+
+
+					<p><exercise xml:id="ex-sums-of-inverses-of-matrices">
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 2, Exercise 2.4.41) </p></aside>
+							Let <m> A </m> and <m> B </m> denote <m> n \times n </m> invertible matrices.
+							<ol>
+								<li> <p>Show that <m> A^{-1} + B^{-1}  = A^{-1}(A + B) B^{-1}. </m></p>
+								<p><hint>
+									Recall that, for a matrix <m>A</m>, its inverse <m>A^{-1}</m> is <em>uniquely</em> determined by satisfying the property <m>AA^{-1}=I</m> and <m>A^{-1}A=I</m>. This means: If a matrix <m>C</m> satisfies <m>AC=I</m> and <m>CA=I</m>, then <m>C=A^{-1}</m>.
+								</hint></p>
+									<p><solution>
+										By substracting <m>B^{-1}</m> from each side of the equation, we see that the claim is equivalent to showing that <m> A^{-1}  = A^{-1}(A + B) B^{-1} - B^{-1}. </m> Recall that <m>A^{-1}</m> is the unique matrix that satisfies both <m>AA^{-1}=I</m> and <m>A^{-1}A=I</m>, so it suffices to show that  <m>A^{-1}(A + B) B^{-1} - B^{-1}</m> has this property. We compute (using Theorem 2.1.1 in Section 2.1 of <xref ref="ref-KN"/>):
+										<md>
+											<mrow>
+												\amp A \bigl( A^{-1}(A + B) B^{-1} - B^{-1} \bigr)
+												\amp
+											</mrow>
+											<mrow>
+												\quad\amp=
+												AA^{-1}(A + B) B^{-1} - AB^{-1} 
+												\amp\text{by distributivity}
+											</mrow>
+											<mrow>
+												\quad\amp=
+												I(A + B) B^{-1} - AB^{-1} 												
+												\amp\text{by the properties of } A^{-1}
+											</mrow>
+											<mrow>
+												\amp
+												=
+												I(AB^{-1} + BB^{-1}) - AB^{-1}											
+												\amp\text{by distributivity}
+											</mrow>
+											<mrow>
+												\quad\amp=
+												AB^{-1} + BB^{-1} - AB^{-1}												
+												\amp\text{by the properties of } I
+											</mrow>
+											<mrow>
+												\amp
+												=
+												AB^{-1} + I - AB^{-1}												
+												\amp\text{by the properties of } B^{-1}
+											</mrow>
+											<mrow>
+												\quad\amp=
+												I.
+											</mrow>
+										</md>
+										Similarly,
+										<md>
+											<mrow>
+												\amp\bigl( A^{-1}(A + B) B^{-1} - B^{-1} \bigr) A
+											</mrow>
+											<mrow>
+												\quad\amp=
+												A^{-1}(A + B) B^{-1}A - B^{-1}A
+												\amp\text{by distributivity}
+											</mrow>
+											<mrow>
+												\quad\amp=
+												(A^{-1}A + A^{-1}B) B^{-1}A - B^{-1}A
+												\amp\text{by distributivity}
+											</mrow>
+											<mrow>
+												\amp
+												=
+												(I + A^{-1}B) B^{-1}A - B^{-1}A
+												\amp\text{by the properties of } A^{-1}
+											</mrow>
+											<mrow>
+												\quad\amp=
+												IB^{-1}A + A^{-1}BB^{-1}A - B^{-1}A
+												\amp\text{by distributivity}
+											</mrow>
+											<mrow>
+												\quad\amp=
+												B^{-1}A + A^{-1}IA  - B^{-1}A
+												\amp\text{by the properties of } I \text{ and } B^{-1}
+											</mrow>
+											<mrow>
+												\quad\amp=
+												A^{-1}A 
+												=
+												I
+												\amp\text{by the properties of } A^{-1}.
+											</mrow>
+										</md>
+										We have checked that the matrix <m> A^{-1}(A + B) B^{-1} - B^{-1} </m> indeed satisfies the defining property of <m>A^{-1}</m>.
+									</solution></p>
+								</li>
+								<li> <p>If <m> A + B </m> is also invertible, show that <m> A^{-1} + B^{-1} </m> is invertible and find a formula for <m> (A^{-1} + B^{-1})^{-1}. </m></p>
+									<p><hint>Use the first part of the exercise. Then use <xref ref="ex-prod-of-invertible-matrices"/>.</hint></p>
+									<p><solution>
+										By assumption, <m>C:= A + B </m> is invertible. By the first part of the exercise, we know that <m> A^{-1} + B^{-1}  = A^{-1}(A + B) B^{-1},</m> i.e. <m>A^{-1} + B^{-1}= A^{-1}CB^{-1}.</m> The matrix <m>A^{-1}CB^{-1}</m> is invertible as product of invertible matrices by <xref ref="ex-prod-of-invertible-matrices"/>, which shows that <m>A^{-1} + B^{-1}</m> is invertible. <xref ref="ex-prod-of-invertible-matrices"/> also gives a formula for the inverse of a product, which we use for the equalities <m>(*)</m> in the following computation:
+										<md>
+											<mrow>
+												(A^{-1}CB^{-1})^{-1} 
+												\amp=(A^{-1}[CB^{-1}])^{-1}
+												\overset{(*)}{=}[CB^{-1}]^{-1} (A^{-1})^{-1}
+											</mrow>
+											<mrow>
+												\amp\overset{(*)}{=}(B^{-1})^{-1} C^{-1} A
+												=B C^{-1} A.
+											</mrow>
+										</md>
+										We conclude: The inverse of <m> A^{-1} + B^{-1} </m> is given by <m>B C^{-1} A = B (A + B)^{-1} A.</m>
+									</solution></p>
+									<p><answer>The inverse of <m> A^{-1} + B^{-1} </m> is given by <m>B (A + B)^{-1} A.</m></answer></p>
+								</li>
+							</ol>
+						</statement>
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 2, Exercise 2.5.2) </p></aside>
+							In each case, find the elementary matrix <m> E </m> such that <m> B = EA. </m>
+							<ol>
+								<li>
+									<me> A =\begin{bmatrix} 2 \amp 1 \\ 3 \amp -1 \end{bmatrix},
+										\ \ B = \begin{bmatrix} 2 \amp 1 \\ 1 \amp -2 \end{bmatrix} </me>
+
+									<solution>
+										We see that <m>A \overset{-R_{1} + R_{2}}{\longrightarrow}B</m>, so the row operation is of type III. This means:
+										<me>
+											B = EA
+											\ \text{ where } \
+											E
+											=
+											\begin{bmatrix} 1 \amp 0 \\ -1 \amp 1 \end{bmatrix}.
+										</me>
+									</solution>
+									<answer>
+										<me>
+											E
+											=
+											\begin{bmatrix} 1 \amp 0 \\ -1 \amp 1 \end{bmatrix}.
+										</me>
+									</answer>
+								</li>
+								<li>
+									<me> A =\begin{bmatrix} -1 \amp 2 \\ 0 \amp 1 \end{bmatrix},
+									\ \ B = \begin{bmatrix} 1 \amp -2 \\ 0 \amp 1 \end{bmatrix} </me>
+									<solution>
+										We see that <m>A \overset{(-1)R_{1}}{\longrightarrow}B</m>, so the row operation is of type I. This means:
+										<me>
+											B = EA
+											\ \text{ where } \
+											E
+											=
+											\begin{bmatrix} -1 \amp 0 \\ 0 \amp 1 \end{bmatrix}.
+										</me>
+									</solution>
+									<answer>
+										<me>
+											E
+											=
+											\begin{bmatrix} -1 \amp 0 \\ 0 \amp 1 \end{bmatrix}.
+										</me>
+									</answer>
+								</li> 
+								<li> <me> A = \begin{bmatrix} 1 \amp 1 \\ -1 \amp 2 \end{bmatrix}, \ \ B = \begin{bmatrix} -1 \amp 2 \\ 1 \amp 1 \end{bmatrix} </me>
+									<solution>
+										We see that <m>A \overset{R_{1}\leftrightarrow R_{2}}{\longrightarrow}B</m>, so the row operation is of type II. This means:
+										<me>
+											B = EA
+											\ \text{ where } \
+											E
+											=
+											\begin{bmatrix} 0 \amp 1 \\ 1 \amp 0 \end{bmatrix}.
+										</me>
+									</solution>
+									<answer>
+										<me>
+											E
+											=
+											\begin{bmatrix} 0 \amp 1 \\ 1 \amp 0 \end{bmatrix}.
+										</me>
+									</answer>
+								</li>
+								<li>
+									<me> A =\begin{bmatrix} 4 \amp 1 \\ 3 \amp 2 \end{bmatrix}, \ \ B = \begin{bmatrix} 1 \amp -1 \\ 3 \amp 2 \end{bmatrix} </me>
+
+									<solution>
+										We see that <m>A \overset{-R_{2}+R_{1}}{\longrightarrow}B</m>, so the row operation is of type III. This means:
+										<me>
+											B = EA
+											\ \text{ where } \
+											E
+											=
+											\begin{bmatrix} 1 \amp -1 \\ 0 \amp 1 \end{bmatrix}.
+										</me>
+									</solution>
+									<answer>
+										<me>
+											E
+											=
+											\begin{bmatrix} 1 \amp -1 \\ 0 \amp 1 \end{bmatrix}.
+										</me>
+									</answer>
+								</li>
+								<li>
+									<me> A =\begin{bmatrix} -1 \amp 1 \\ 1 \amp -1 \end{bmatrix}, \ \ B = \begin{bmatrix} -1 \amp 1 \\ -1 \amp 1 \end{bmatrix} </me>
+
+									<solution>
+										We see that <m>A \overset{(-1)R_{2}}{\longrightarrow}B</m>, so the row operation is of type I. This means:
+										<me>
+											B = EA
+											\ \text{ where } \
+											E
+											=
+											\begin{bmatrix} 1 \amp 0 \\ 0 \amp -1 \end{bmatrix}.
+										</me>
+									</solution>
+									<answer>
+										<me>
+											E
+											=
+											\begin{bmatrix} 1 \amp 0 \\ 0 \amp -1 \end{bmatrix}.
+										</me>
+									</answer>
+								</li>
+								<li>
+									<me> A =\begin{bmatrix} 2 \amp 1 \\ -1 \amp 3 \end{bmatrix}, \ \ B = \begin{bmatrix} -1 \amp 3 \\ 2 \amp 1 \end{bmatrix} </me>
+									<solution>
+										We see that <m>A \overset{R_{1}\leftrightarrow R_{2}}{\longrightarrow}B</m>, so the row operation is of type II. This means:
+										<me>
+											B = EA
+											\ \text{ where } \
+											E
+											=
+											\begin{bmatrix} 0 \amp 1 \\ 1 \amp 0 \end{bmatrix}.
+										</me>
+									</solution>
+									<answer>
+										<me>
+											E
+											=
+											\begin{bmatrix} 0 \amp 1 \\ 1 \amp 0 \end{bmatrix}.
+										</me>
+									</answer>
+								</li>
+							</ol>
+						</statement>
+						<hint xml:id="hint-elementary-matrices">
+							Recall the three different types of elementary row operations from <xref ref="hint-row-operations"/>. Each of them corresponds to left-multiplication by an elementary matrix <m>E</m>:
+							<hint>
+								The row operation <m>R_{k}\leftrightarrow R_{l}</m> corresponds to multiplication on the left with the matrix <m>[e_{i,j}]</m>, where
+							 	<md>
+							 		<mrow>
+							 		e_{k,l} \amp= 1 = e_{l,k},
+							 		</mrow>
+							 		<mrow>
+							 		e_{i,i} \amp=
+							 		\left\{
+							 			\begin{array}{2}
+							 				1 \amp\amp \text{if } i\neq k \text{ and } i \neq l,
+							 				\\
+							 				0 \amp\amp \text{if } i= k \text{ or } i = l,
+							 			\end{array}
+							 		\right.
+							 		</mrow>
+							 		<mrow>
+							 		e_{i,j} \amp= 0 \text{ for all remaining } i,j .
+								 	</mrow>
+							 	</md>
+							 	We define elementary matrices of this type to be <em>of type I</em>.
+							</hint>
+							<hint>
+								The row operation <m>\alpha R_{k}</m> where <m>\alpha</m> is a non-zero number corresponds to multiplication on the left with the matrix <m>[e_{i,j}]</m>, where
+								<md>
+									<mrow>
+							 		e_{i,j} \amp=
+							 		\left\{
+							 			\begin{array}{2}
+							 				1 \amp\amp \text{if } i=j\neq k,
+							 				\\						 				
+							 				\alpha \amp\amp \text{if } i=j= k, \text{ and}
+							 				\\
+							 				0 \amp\amp \text{if } i\neq j.
+							 			\end{array}
+							 		\right.
+							 		</mrow>
+								</md>
+								We define elementary matrices of this type to be <em>of type II</em>.
+							</hint>
+							<hint>
+								The row operation <m>\alpha R_{k} + R_{l}</m> corresponds to multiplication on the left with the matrix <m>[e_{i,j}]</m>, where
+								<md>
+									<mrow>
+							 		e_{i,j} \amp=
+							 		\left\{
+							 			\begin{array}{2}
+							 				1 \amp\amp \text{if } i=j,
+							 				\\						 				
+							 				\alpha \amp\amp \text{if } i=l \text{ and } j=k, \text{ and}
+							 				\\
+							 				0 \amp\amp \text{for all remaining } i, j.
+							 			\end{array}
+							 		\right.
+							 		</mrow>
+								</md>
+								We define elementary matrices of this type to be <em>of type III</em>.
+							</hint>						
+						</hint>
+					</exercise></p>
+						<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 2, Exercise 2.1.59) </p></aside>
+							Let <m> A = \begin{bmatrix}  1 \amp 2 \amp 1 \\ 0 \amp 5 \amp 1 \\ 2 \amp -1 \amp 4 \end{bmatrix}. </m>
+							<!--  Suppose a row operation is applied to <m> A </m>  and the result is-->
+							and <m> B  = \begin{bmatrix} 1 \amp 2 \amp 1 \\ 0 \amp 5 \amp 1 \\ 1 \amp -\frac{1}{2} \amp 2 \end{bmatrix}.</m>
+							<ol>
+								<li> Find the elementary matrix <m> E </m> such that <m> EA = B. </m></li>
+								<li> Find the inverse of <m> E, E^{-1},</m> such that <m> E^{-1}B = A. </m> </li>
+							</ol>
+						</statement>
+						<hint>
+							Look into <xref ref="hint-elementary-matrices"/> for the different types of elementary matrices.
+						</hint>
+						<solution>
+							We see that <m>A\overset{\frac{1}{2}R_{3}}{\longrightarrow}B</m>, so the row operation is of type I. This means that
+							<me>
+								B = EA
+								\ \text{ where } \
+								E
+								=
+								\begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp \frac{1}{2}  \end{bmatrix}.
+							</me>
+							In particular, <m>B\overset{2R_{3}}{\longrightarrow}A</m> undoes this operation, so that 
+							<me>
+								E^{-1}
+								=
+								\begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 2 \end{bmatrix}.
+							</me>					
+						</solution>
+						<answer>
+							<ol>
+								<li> <m> E=\begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp \frac{1}{2}  \end{bmatrix} </m></li>
+								<li> <m> E^{-1}=\begin{bmatrix} 1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 2 \end{bmatrix}</m> </li>
+							</ol>
+						</answer>
+					</exercise></p>
+
+						<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-PS" />, Chapter 4, Exercise 4.5.2) </p></aside>
+							Suppose <m> AB = AC </m> and <m> A </m> is an invertible <m> n \times n </m> matrix.  Does it follow that <m> B = C? </m> Explain why or why not.
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<solution>
+							By assumption, <m>A^{-1}</m> exists. In particular, we can multiply the equation <m> AB = AC </m> on the left by <m>A^{-1}</m> and we get <m>A^{-1}AB = A^{-1}AC </m>. Recall that <m>A^{-1}</m> has the property that <m>A^{-1}A=I</m>, so our equation can be rewritten as <m>IB=IC</m>. Since <m>I</m> has the property <m>B=IB</m> and <m>C=IC</m>, we conclude that, indeed, <m> B = C. </m>
+						</solution>
+						<answer>
+							Yes, <m> B = C. </m>
+						</answer> 
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-PS" />, Chapter 4, Exercise 4.5.3) </p></aside>
+							Suppose <m> AB = AC </m> and <m> A </m> is a non-invertible <m> n \times n </m> matrix.  Does it follow that <m> B = C? </m> Explain why or why not.
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<solution>
+							Suppose <m>A=0</m>, the matrix all of whose entries are <m>0</m>. Then for <em>any</em> matrix <m>B</m>, we have <m>AB=0</m>. In particular, <m>AB=AC</m> for <em>all</em> matrices <m>B, C</m>. This shows that <m> AB = AC </m> does not necessarily imply <m> B = C </m>.
+						</solution>
+						<answer>
+							No, <m> B</m> is not necessarily equal to <m>C</m>.
+						</answer>
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-RB" />, Chapter Matrix Inverses, Exercise MISLE.T10) </p></aside>
+							Construct an example to demonstrate that <m> (A + B)^{-1} = A^{-1} + B^{-1} </m> is not true for all invertible square matrices <m> A </m> and <m> B </m> of the same size.  
+						</statement>
+						<hint>
+							It is possible to choose <m>A=B</m> to be a very nice matrix.
+						</hint>
+						<solution>
+							We choose <m>A=B=I</m>, so that
+							<me>
+								(A + B)^{-1} = (2I)^{-1} = \frac{1}{2}I^{-1} = \frac{1}{2}I,
+							</me>
+							while
+							<me>
+								A^{-1} + B^{-1} = 2 I^{-1} = 2 I.
+							</me>
+							This shows that <m>(A + B)^{-1}</m> does not equal <m>A^{-1} + B^{-1}</m>.
+						</solution>
+						<answer>
+							The equality is not true for <m>A=B=I</m>.
+						</answer>
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 2, Exercise 2.1.40) </p></aside>
+							Let 
+							<me> A = \begin{bmatrix} 1 \amp 2 \amp 3 \\ 2 \amp 1 \amp 4 \\ 1 \amp 0 \amp 4 \end{bmatrix}. </me>
+							Find <m> A^{-1} </m> if possible.  If <m> A^{-1} </m> does not exist, explain why.    
+						</statement>
+						<hint>
+							See <xref ref="hint-how-to-find-inverse-matrix"/> for an algorithm to find <m>A^{-1}</m>, if it exists.
+						</hint>
+						<solution>
+							We compute
+							<md>
+								<mrow>
+									\matr{ccc|ccc}
+									{
+										1 \amp 2 \amp 3 \amp 1 \amp 0 \amp 0
+										\\
+										2 \amp 1 \amp 4 \amp 0 \amp 1 \amp 0
+										\\
+										1 \amp 0 \amp 4 \amp 0 \amp 0 \amp 1
+									}
+									\overset{-2R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+									\amp\matr{ccc|ccc}
+									{
+										1 \amp 2 \amp 3 \amp 1 \amp 0 \amp 0
+										\\
+										0 \amp -3 \amp -2 \amp -2 \amp 1 \amp 0
+										\\
+										0 \amp -2 \amp 1 \amp -1 \amp 0 \amp 1
+									}
+								</mrow>
+								<mrow>
+									\overset{-2R_{2}+3R_{3}}{\longrightarrow}
+									\amp\matr{ccc|ccc}
+									{
+										1 \amp 2 \amp 3 \amp 1 \amp 0 \amp 0
+										\\
+										0 \amp -3 \amp -2 \amp -2 \amp 1 \amp 0
+										\\
+										0 \amp 0 \amp 7 \amp 1 \amp -2 \amp 3
+									}
+								</mrow>
+							</md>
+							From this, we can already see that the matrix is invertible. We continue:
+							<md>
+								<mrow>
+									\matr{ccc|ccc}
+									{
+										1 \amp 2 \amp 3 \amp 1 \amp 0 \amp 0
+										\\
+										0 \amp -3 \amp -2 \amp -2 \amp 1 \amp 0
+										\\
+										0 \amp 0 \amp 7 \amp 1 \amp -2 \amp 3
+									}
+									\overset{\frac{1}{7}R_{3}}{\underset{2R_{3}'+R_{2}}{\longrightarrow}}
+									\amp\matr{ccc|ccc}
+									{
+										1 \amp 2 \amp 3 \amp 1 \amp 0 \amp 0
+										\\
+										0 \amp -3 \amp 0 \amp \frac{-12}{7} \amp \frac{3}{7} \amp \frac{6}{7}
+										\\
+										0 \amp 0 \amp 1 \amp \frac{1}{7} \amp \frac{-2}{7} \amp \frac{3}{7}
+									}
+								</mrow>								
+								<mrow>
+									\overset{-\frac{1}{3}R_{2}}{\underset{-3R_{3}+R_{1}}{\longrightarrow}}
+									\amp\matr{ccc|ccc}
+									{
+										1 \amp 2 \amp 0 \amp \frac{4}{7} \amp \frac{6}{7} \amp \frac{-9}{7}
+										\\
+										0 \amp 1 \amp 0 \amp \frac{4}{7} \amp \frac{-1}{7} \amp \frac{-2}{7}
+										\\
+										0 \amp 0 \amp 1 \amp \frac{1}{7} \amp \frac{-2}{7} \amp \frac{3}{7}
+									}
+								</mrow>
+								<mrow>
+									\overset{-2R_{2}+R_{1}}{\longrightarrow}
+									\amp\matr{ccc|ccc}
+									{
+										1 \amp 0 \amp 0 \amp \frac{-4}{7} \amp \frac{8}{7} \amp \frac{-5}{7}
+										\\
+										0 \amp 1 \amp 0 \amp \frac{4}{7} \amp \frac{-1}{7} \amp \frac{-2}{7}
+										\\
+										0 \amp 0 \amp 1 \amp \frac{1}{7} \amp \frac{-2}{7} \amp \frac{3}{7}
+									}.
+								</mrow>
+							</md>
+							We conclude that <m>A^{-1}=
+							\frac{1}{7}
+							\begin{bmatrix} -4 \amp 8 \amp -5 \\ 4 \amp -1 \amp -2 \\ 1 \amp -2 \amp 3 \end{bmatrix}</m>
+						</solution>
+						<answer>
+							<m>A^{-1}=
+							\frac{1}{7}
+							\begin{bmatrix} -4 \amp 8 \amp -5 \\ 4 \amp -1 \amp -2 \\ 1 \amp -2 \amp 3 \end{bmatrix}</m>.
+						</answer>
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 2, Exercise 2.4.17) </p></aside>
+							If <m> c \ne 0, </m> find the inverse of <m>A=\begin{bmatrix} 1 \amp -1 \amp 1 \\ 2 \amp -1 \amp 2 \\ 0 \amp 2 \amp c \end{bmatrix}</m> in terms of <m> c. </m>      
+						</statement>
+						<hint>
+							See <xref ref="hint-how-to-find-inverse-matrix"/> for an algorithm to find <m>A^{-1}</m>, if it exists.
+						</hint>
+						<solution>
+							We use <xref ref="hint-how-to-find-inverse-matrix"/>, i.e. we will row-reduce the augmented matrix <m>\matr{c|c}{A\amp I_{3}}</m>:
+							<md>
+								<mrow>
+									\matr{ccc|ccc}
+									{
+										1 \amp -1 \amp 1 \amp 1 \amp 0 \amp 0
+										\\
+										2 \amp -1 \amp 2 \amp 0 \amp 1 \amp 0
+										\\
+										0 \amp 2 \amp c  \amp 0 \amp 0 \amp 1
+									}
+									\overset{-2R_{1}+R_{2}}{\longrightarrow}
+									\amp\matr{ccc|ccc}
+									{
+										1 \amp -1 \amp 1 \amp 1 \amp 0 \amp 0
+										\\
+										0 \amp 1 \amp 0 \amp -2 \amp 1 \amp 0
+										\\
+										0 \amp 2 \amp c  \amp 0 \amp 0 \amp 1
+									}
+								</mrow>
+								<mrow>
+									\overset{-2R_{2}+R_{3}}{\underset{R_{2}+R_{1}}{\longrightarrow}}
+									\amp\matr{ccc|ccc}
+									{
+										1 \amp 0 \amp 1 \amp -1 \amp 1 \amp 0
+										\\
+										0 \amp 1 \amp 0 \amp -2 \amp 1 \amp 0
+										\\
+										0 \amp 0 \amp c  \amp 4 \amp -2 \amp 1
+									}.
+								</mrow>
+							</md>
+							Since <m>c\neq 0</m>, dividing by <m>c</m> is a valid row-operation, so that
+							<md>
+								<mrow>
+									\matr{ccc|ccc}
+									{
+										1 \amp 0 \amp 1 \amp -1 \amp 1 \amp 0
+										\\
+										0 \amp 1 \amp 0 \amp -2 \amp 1 \amp 0
+										\\
+										0 \amp 0 \amp c  \amp 4 \amp -2 \amp 1
+									}
+									\overset{\frac{1}{c}R_{3}}{\longrightarrow}
+									\amp\matr{ccc|ccc}
+									{
+										1 \amp 0 \amp 1 \amp -1 \amp 1 \amp 0
+										\\
+										0 \amp 1 \amp 0 \amp -2 \amp 1 \amp 0
+										\\
+										0 \amp 0 \amp 1  \amp \frac{4}{c} \amp \frac{-2}{c} \amp \frac{1}{c}
+									}
+								</mrow>
+								<mrow>
+									\overset{-R_{3}+R_{1}}{\longrightarrow}
+									\amp\matr{ccc|ccc}
+									{
+										1 \amp 0 \amp 0 \amp -1-\frac{4}{c} \amp 1+\frac{2}{c} \amp \frac{-1}{c}
+										\\
+										0 \amp 1 \amp 0 \amp -2 \amp 1 \amp 0
+										\\
+										0 \amp 0 \amp 1  \amp \frac{4}{c} \amp \frac{-2}{c} \amp \frac{1}{c}
+									}.
+								</mrow>
+							</md>
+							We conclude that
+							<me>
+								A^{-1}
+								=
+								\begin{bmatrix}
+									-1-\frac{4}{c} \amp 1+\frac{2}{c} \amp \frac{-1}{c} \\ -2 \amp 1 \amp 0 \\ \frac{4}{c} \amp \frac{-2}{c} \amp \frac{1}{c}
+								\end{bmatrix}
+								=
+								\frac{1}{c}
+								\begin{bmatrix}
+									-c-4 \amp c+2 \amp -1 \\ -2c \amp c \amp 0 \\ 4 \amp -2 \amp 1
+								\end{bmatrix}
+								.
+							</me>
+						</solution>
+						<answer>
+							<me>
+								A^{-1}
+								=
+								\frac{1}{c}
+								\begin{bmatrix}
+									-c-4 \amp c+2 \amp -1 \\ -2c \amp c \amp 0 \\ 4 \amp -2 \amp 1
+								\end{bmatrix}
+								.
+							</me>
+						</answer>
+					</exercise></p>
+				</exercises>

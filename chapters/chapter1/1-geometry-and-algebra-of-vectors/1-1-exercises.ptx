@@ -1,0 +1,1471 @@
+				<exercises>
+ 					<p><exercise xml:id="ex-vec-betw-pts"><!-- Replacement for Poole's Section 1.1, Exercise 5. -->
+						<statement>	<aside><p>(Source: <xref ref="ref-PS" />, Section 2.1, Exercise 2.1.2)</p></aside>	
+							Given the points <m>P = (2,0,4)</m> and <m>Q= (5,-2,1)</m>, find <m>\overrightarrow{PQ}</m> and <m>\overrightarrow{QP}</m>.
+						</statement>
+						<hint xml:id="hint1-vec-betw-pts">
+							By definition, the components of <m>\overrightarrow{PQ}</m> are the difference of the respective components of the point <m>Q</m> and of the point <m>P</m>.
+						</hint>
+						<hint xml:id="hint2-vec-betw-pts">
+							Be careful with the order: for example, <m>\vect{PQ}</m> has first component <m>q_1 - p_1 = 5 - 2 = 3</m>. 
+						</hint>
+						<solution>							
+							The components of <m>\overrightarrow{PQ}</m> are the difference of the respective components of the point <m>Q</m> and of the point <m>P</m>. Therefore,
+							<me>
+								\overrightarrow{PQ}
+								= 
+								\begin{bmatrix} 
+									5 - 2\\
+									-2 - 0\\
+									1-4
+								\end{bmatrix} 
+								= 
+								\begin{bmatrix} 
+									3\\
+									-2\\
+									-3
+								\end{bmatrix} 
+								.
+							</me>
+							Similarly,
+							<me>
+								\overrightarrow{QP}
+								= 
+								\begin{bmatrix} 
+									2-5\\
+									0-(-2) \\
+									4-1
+								\end{bmatrix} 
+								= 
+								\begin{bmatrix} 
+									-3\\
+									2\\
+									3
+								\end{bmatrix} 
+								.
+							</me>
+							Notice that <m>\overrightarrow{PQ} = (-1)\overrightarrow{QP}</m>.
+						</solution>
+						<answer>
+							<me>
+								\overrightarrow{PQ}
+								= 
+								\begin{bmatrix} 
+									3\\
+									-2\\
+									-3
+								\end{bmatrix} 
+								\text{ and }
+								\overrightarrow{QP}
+								=
+								\begin{bmatrix} 
+									-3\\
+									2\\
+									3
+								\end{bmatrix} 
+								.
+							</me>
+						</answer>
+					</exercise></p>
+					<p><exercise xml:id="ex-pt-vec-direction"><!-- Replacement for Poole's Section 1.1, Exercise 5.-->
+						<statement>	<aside><p>(Source: <xref ref="ref-KN"/>, Section 4.1, Exercise 4.1.10)</p></aside>
+							In each case, find a point <m>Q</m> such that <m>\overrightarrow{PQ}</m> has
+							<ol label="(i)" cols="2">
+								<li xml:id="ex-pt-vec-direction-item-same">the same direction as <m>\mathbf{v}</m>;
+								</li>
+								<li xml:id="ex-pt-vec-direction-item-opposite">the opposite direction of <m>\mathbf{v}</m>.
+								</li>							  
+							</ol>
+							<ol cols="2">
+								<li xml:id="ex-pt-vec-direction-item-first-combo">
+									<m>P=(-1,2,2)</m>, <m>\mathbf{v} = \begin{bmatrix} 1 \\ 3 \\ 1 \end{bmatrix}</m>		
+								</li>
+								<li xml:id="ex-pt-vec-direction-item-second-combo">
+								 	<m>P=(3,0,-1)</m>, <m>\mathbf{v} = \begin{bmatrix} 2 \\ -1 \\ 3 \end{bmatrix} </m>
+								</li>
+							</ol>
+						</statement>
+						<hint xml:id="ex-pt-vec-direction-hint-def-PQ">
+							The vector <m>\vect{PQ}</m> can be computed as
+							<me>
+								\vect{PQ} = \vect{OQ}-\vect{OP},
+							</me>
+							where <m>O</m> denotes the origin.
+						</hint>
+						<hint xml:id="ex-pt-vec-direction-hint-def-direction">
+							A vector <m>\mbf{w}</m> has <em>the same direction as <m>\mbf{v}</m></em> if <m>\mbf{w} = c \mbf{v}</m> for some positive real number <m>c</m>. It has <em>the opposite direction</em> if <m>\mbf{w} = c \mbf{v}</m> for some negative real number <m>c</m>.
+						</hint>
+						<hint>
+							For <m>c=1</m>, what does <xref text="local" ref="ex-pt-vec-direction-hint-def-direction">Hint</xref> tell you about <m>\vect{PQ}</m>? Can you then use <xref text="local" ref="ex-pt-vec-direction-hint-def-PQ">Hint</xref> to find <m>Q</m> for <xref text="local" ref="ex-pt-vec-direction-item-same">Part</xref>? 
+						</hint>
+						<solution>
+							First, recall that the vector <m>\vect{PQ}</m> can be computed as
+							<me>
+								\vect{PQ} = \vect{OQ}-\vect{OP},
+								\text{ where } O \text{ denotes the origin.}
+							</me>
+							Since we are looking for a point <m>Q</m>, we should rephrase this equation:
+							<men xml:id="ex-vec-betw-pts-eq-vec-OQ">
+								\vect{OQ} = \vect{OP} + \vect{PQ}.
+							</men>
+							Secondly, recall that <m>\vect{PQ}</m> has the same (resp. the opposite) direction of <m>\mbf{v}</m> if <m>\vect{PQ} = c \mbf{v}</m> for some positive (resp. negative) real number <m>c</m>. Plugging this back into <xref ref="ex-vec-betw-pts-eq-vec-OQ"/>, we see that we would like <m>Q</m> to satisfy
+							<me>
+								\vect{OQ} = \vect{OP} + c\mbf{v} 
+							</me>
+							for some positive (resp. negative) number <m>c</m>.
+							Therefore, we should compute <m>\vect{OP}+\mbf{v}</m> (resp. <m>\vect{OP}-\mbf{v}</m>) for the given point <m>P</m> and the given vector <m>\mbf{v}</m>.<fn>Notice that we could also compute <m>\vect{OP}+5\mbf{v}</m>, <m>\vect{OP}+ \pi \mbf{v}</m>, or many other things for <xref ref="ex-pt-vec-direction-item-same"/>, but the positive number <m>+1</m> is an easy choice. Similarly, for <xref ref="ex-pt-vec-direction-item-opposite"/>, we could also compute <m>\vect{OP}-5\mbf{v}</m>, <m>\vect{OP} - \frac{1}{8} \mbf{v}</m>, etc. - there are many correct answers.</fn>
+							
+							<p>First, our solution for <xref text="title" ref="ex-pt-vec-direction-item-first-combo">
+								<m>P=(-1,2,2)</m> and <m>\mathbf{v} = \begin{bmatrix} 1 \\ 3 \\ 1 \end{bmatrix}</m></xref>:</p>
+							<p>
+							<xref text="title" ref="ex-pt-vec-direction-item-same"><em>same direction</em></xref>:
+								We compute
+
+								<me>
+									\vect{OP}+\mbf{v}
+									=
+									\begin{bmatrix}  -1 \\ 2 \\ 2 \end{bmatrix}  
+									+
+									\begin{bmatrix}  1 \\ 3 \\ 1 \end{bmatrix}  
+									=
+									\begin{bmatrix}  -1+1 \\ 2+3 \\ 2+1 \end{bmatrix}  
+									=
+									\begin{bmatrix}  0 \\ 5 \\ 3 \end{bmatrix}  
+									.
+								</me>
+
+								We have argued before that this should equal <m>\vect{OQ}</m>, so we conclude:
+								<me>
+									Q = (0 , 5 , 3).
+								</me>
+								Let us check our solution: we have
+
+								<me>
+									\vect{PQ}
+									=
+									\begin{bmatrix}  0 \\ 5 \\ 3 \end{bmatrix}  
+									-
+									\begin{bmatrix}  -1 \\ 2 \\ 2 \end{bmatrix}  
+									=
+									\begin{bmatrix}  0-(-1) \\ 5-2 \\ 3-2 \end{bmatrix}  
+									=
+									\begin{bmatrix}  1 \\ 3 \\ 1 \end{bmatrix}  
+									=
+									\mbf{v},
+								</me>
+
+								so that <m>\vect{PQ}</m> indeed has the same direction as <m>\mbf{v}</m> (since they are equal).
+							</p>
+							<p>
+							<xref text="title" ref="ex-pt-vec-direction-item-opposite"><em>opposite direction</em></xref>:
+								We compute
+
+								<me>
+									\vect{OP}-\mbf{v}
+									=
+									\begin{bmatrix}  -1 \\ 2 \\ 2 \end{bmatrix}  
+									-
+									\begin{bmatrix}  1 \\ 3 \\ 1 \end{bmatrix}  
+									=
+									\begin{bmatrix}  -1-1 \\ 2-3 \\ 2-1 \end{bmatrix}  
+									=
+									\begin{bmatrix}  -2 \\ -1 \\ 1 \end{bmatrix}  
+									.
+								</me>
+
+								We have argued before that this should equal <m>\vect{OQ}</m>, so we conclude:
+								<me>
+									Q = (-2 , -1 , 1).
+								</me>
+								Let us check our solution: we have
+
+								<me>
+									\vect{PQ}
+									=
+									\begin{bmatrix}  -2 \\ -1 \\ 1 \end{bmatrix}  
+									-
+									\begin{bmatrix}  -1 \\ 2 \\ 2 \end{bmatrix}  
+									=
+									\begin{bmatrix}  -2-(-1) \\ -1-2 \\ 1-2 \end{bmatrix}  
+									=
+									\begin{bmatrix}  -1 \\ -3 \\ -1 \end{bmatrix}  
+									=
+									(-1)
+									\mbf{v},
+								</me>
+
+								so that <m>\vect{PQ}</m> indeed has the opposite direction as <m>\mbf{v}</m>.
+							</p>		
+							
+							<p>Next, our solution for <m>P=(3,0,-1)</m> and <m>\mathbf{v} = \begin{bmatrix} 2 \\ -1 \\ 3 \end{bmatrix} </m>:</p>
+							<p>
+							<xref text="title" ref="ex-pt-vec-direction-item-same"><em>same direction</em></xref>:
+								We compute
+
+								<me>
+									\vect{OP}+\mbf{v}
+									=
+									\begin{bmatrix}  3 \\ 0 \\ -1 \end{bmatrix}  
+									+
+									\begin{bmatrix}  2 \\ -1 \\ 3 \end{bmatrix}  
+									=
+									\begin{bmatrix}  3+2 \\ 0+(-1) \\ -1+3 \end{bmatrix}  
+									=
+									\begin{bmatrix}  5 \\ -1 \\ 2 \end{bmatrix}  
+									.
+								</me>
+
+								We have argued before that this should equal <m>\vect{OQ}</m>, so we conclude:
+								
+								<me>
+									Q = (5 , -1 , 2).
+								
+								</me>
+								
+								Let us check our solution: we have
+								
+								<me>
+									\vect{PQ}
+									=
+									\begin{bmatrix}  5 \\ -1 \\ 2 \end{bmatrix}  
+									-
+									\begin{bmatrix}  3 \\ 0 \\ -1 \end{bmatrix}  
+									=
+									\begin{bmatrix}  5-3 \\ -1-0 \\ 2-(-1) \end{bmatrix}  
+									=
+									\begin{bmatrix}  2 \\ -1 \\ 3 \end{bmatrix}  
+									=
+									\mbf{v},
+								</me>
+								
+								so that <m>\vect{PQ}</m> indeed has the same direction as <m>\mbf{v}</m> (since they are equal).
+							</p>
+							<p>
+							<xref text="title" ref="ex-pt-vec-direction-item-opposite"><em>opposite direction</em></xref>:
+									
+								We compute
+								
+								<me>
+									\vect{OP}-\mbf{v}
+									=
+									\begin{bmatrix}  3 \\ 0 \\ -1 \end{bmatrix}  
+									-
+									\begin{bmatrix}  2 \\ -1 \\ 3 \end{bmatrix}  
+									=
+									\begin{bmatrix}  3-2 \\ 0-(-1) \\ -1-3 \end{bmatrix}  
+									=
+									\begin{bmatrix}  1 \\ 1 \\ -4 \end{bmatrix}  
+									.
+								</me>
+								
+								We have argued before that this should equal <m>\vect{OQ}</m>, so we conclude:
+								
+								<me>
+									Q = (1 , 1 , -4).
+								</me>
+								
+								Let us check our solution: we have
+								
+								<me>
+									\vect{PQ}
+									=
+									\begin{bmatrix}  1 \\ 1 \\ -4\end{bmatrix}  
+									-
+									\begin{bmatrix}  3 \\ 0 \\ -1 \end{bmatrix}  
+									=
+									\begin{bmatrix}  1-3 \\ 1-0 \\ -4-(-1) \end{bmatrix}  
+									=
+									\begin{bmatrix}  -2 \\ 1 \\ -3 \end{bmatrix}  
+									=
+									(-1)
+									\mbf{v},
+								</me>
+								
+								so that <m>\vect{PQ}</m> indeed has the opposite direction as <m>\mbf{v}</m>.
+							</p>
+						</solution>
+						<answer>
+							There are multiple correct answers, for example:
+							<p><ol>
+								<li><!--<p><m>P=(-1,2,2)</m> and <m>\mathbf{v} = \begin{bmatrix} 1 \\ 3 \\ 1 \end{bmatrix}</m>:</p>-->
+									<p>
+										<em>same direction</em>:
+										<m>
+											Q = (0 , 5 , 3).
+										</m>
+									</p>
+									<p>
+										<em>opposite direction</em>:
+										<m>
+											Q = (-2 , -1 , 1).
+										</m>
+									</p>
+								</li>
+								<li><!--<p>
+								 	<m>P=(3,0,-1)</m> and <m>\mathbf{v} = \begin{bmatrix}2 \\ -1 \\ 3 \end{bmatrix}</m>
+								 	</p> -->
+								 	<p>
+										<em>same direction</em>:
+										<m>
+											Q = (5 , -1 , 2).
+										</m>
+									</p>
+									<p>
+										<em>opposite direction</em>:
+										<m>
+											Q = (1 , 1 , -4).
+										</m>
+									</p>
+								</li>
+							</ol>
+							</p>
+						</answer>
+					</exercise></p>
+					<p><exercise xml:id="ex-equality-of-vects"><!-- Replacement for Poole's Section 1.1, Exercise 5-->
+						<statement>	<aside><p>(Source: <xref ref="ref-JH"/>, Chapter II, Section "Vectors in Space", Problem 2)</p></aside>
+							Decide if the two vectors are equal.
+							  <ol> 
+									<li>
+										The vector from <m>(5,3)</m> to <m>(6,2)</m> and the vector from <m>(1,-2)</m> to <m>(1,1)</m>.
+									</li>
+									<li>
+										The vector from <m>(2,1,1)</m> to <m>(3,0,4)</m> and the vector from <m>(5,1,4)</m> and <m>(6,0,7)</m>.
+									</li>
+								</ol>
+						</statement>
+						<hint>
+							It might be helpful to look back at <xref text="type-hybrid" ref="hint1-vec-betw-pts"/> and <xref  text="type-hybrid" ref="hint2-vec-betw-pts"/>.
+						</hint>
+						<solution>
+							<ol> 
+								<li>
+									By definition, the vector <m>\vect{v}</m> from <m>(5,3)</m> to <m>(6,2)</m> is given by
+									<me>
+										\vect{v}=\begin{bmatrix} 6 - 5 \\ 2 - 3 \end{bmatrix} =\begin{bmatrix}<!-- \begin{bmatrix*} --> 1 \\ -1 \end{bmatrix} 
+										.
+									</me>
+									Similarly, the vector <m>\vect{w}</m> from <m>(1,-2)</m> to <m>(1,1)</m> is given by
+									<me>
+										\vect{w}=\begin{bmatrix} 1 - 1 \\ 1 - (-2) \end{bmatrix} =\begin{bmatrix}0 \\ 3 \end{bmatrix}
+										.
+									</me>
+									Since <m>\vect{v}</m> and <m>\vect{w}</m> do not have the same components, we conclude that they are different.
+								</li>
+								<li>
+									By definition, the vector <m>\vect{v}</m> from <m>(2,1,1)</m> to <m>(3,0,4)</m> is given by
+									<me>
+										\vect{v}=\begin{bmatrix} 3-2 \\ 0 - 1 \\ 4 - 1 \end{bmatrix} =\begin{bmatrix}<!-- \begin{bmatrix*} --> 1 \\ -1 \\ 3 \end{bmatrix} 
+										.
+									</me>
+									Similarly, the vector <m>\vect{w}</m> from <m>(5,1,4)</m> and <m>(6,0,7)</m> is given by
+									<me>
+										\vect{w}=\begin{bmatrix} 6 - 5 \\ 0 - 1 \\ 7 - 4 \end{bmatrix} =\begin{bmatrix}<!-- \begin{bmatrix*} -->1 \\ -1 \\ 3 \end{bmatrix} 
+										.
+									</me>
+									Since <m>\vect{v}</m> and <m>\vect{w}</m> have the same components, we conclude that they are the same.
+								</li>
+							</ol>
+						</solution>
+						<answer>
+							<ol> 
+								<li> The two vectors are different.</li>
+								<li> The two vectors are the same.</li>
+							</ol>
+						</answer>
+					</exercise></p>
+					<p><exercise xml:id="ex-sums-of-vecs1"><!-- Replacement for Poole's Section 1.1, Exercise 5.-->
+						<statement>	<aside><p>(Source: <xref ref="ref-KN"/>, Section 4.1, Exercise 4.1.8)</p></aside>
+							Let <m>\mathbf{p}</m> and <m>\mathbf{q}</m> be the vectors of points <m>P</m> and <m>Q</m>, respectively, and let <m>R</m> be the point whose vector is <m>\mathbf{p+q}</m>. Express the following in terms of <m>\mathbf{p}</m> and <m>\mathbf{q}</m>:
+								<ol cols="2"> 
+									<li>										
+											<m>\overrightarrow{QP}</m>,										
+									</li>
+									<li>										
+											<m>\overrightarrow{QR}</m>,
+									</li>
+									<li>										
+											<m>\overrightarrow{RP}</m>,										
+									</li>
+									<li>										
+											<m>\overrightarrow{RO}</m> where <m>O</m> is the origin.							
+									</li>
+								</ol>
+						</statement>
+						<hint>
+							If <m>\mathbf{a}</m> and <m>\mathbf{b}</m> are the vectors of points <m>A</m> and <m>B</m>, respectively, and if <m>O</m> denotes the origin, then by definition <m>\vect{AB} = \vect{OB}-\vect{OA} = \mbf{b}-\mbf{a}</m>.
+						</hint>
+						<solution>
+							In the following, let <m>\mbf{r}</m> be the vector of the point <m>R</m>. In other words,
+								<me>
+									\mbf{r}
+									=
+									\mbf{p}+\mbf{q}
+								</me>
+							by the choice of <m>R</m>.
+							<ol> 
+								<li>
+									By definition, the components of <m>\overrightarrow{QP}</m> are the difference of the respective components of the point <m>P</m> and of the point <m>Q</m>, or in other words:
+									<me>
+										\overrightarrow{QP}
+										=
+										\mbf{p}-\mbf{q}.
+									</me>	
+								</li>
+								<li>
+									<p>Similarly, we have</p>
+									<p>
+									<me>
+										\overrightarrow{QR}
+										=
+										\mbf{r}-\mbf{q}
+										=
+										(\mbf{p}+\mbf{q}) -\mbf{q}
+										=
+										\mbf{p}.
+									</me>
+									</p>
+								</li>
+								<li>
+									<p>Just as above, we have</p>
+									<p>
+									<me>
+										\overrightarrow{RP}
+										=
+										\mbf{p}-\mbf{r}
+										=
+										\mbf{p}-(\mbf{p}+\mbf{q})
+										=
+										-\mbf{q}.
+									</me>
+									</p>							
+								</li>
+								<li>
+									<p>If we write <m>\mbf{0}</m> for the vector of the origin <m>O</m>, all of whose components are zero, then	</p>
+									<p>
+									<me>
+										\overrightarrow{RO}
+										=
+										\mbf{0} - \mbf{r}
+										=
+										- (\mbf{p}+\mbf{q})
+										=
+										-\mbf{p} - \mbf{q}.
+									</me>
+									</p>					
+								</li>
+							</ol>
+						</solution>
+						<answer>
+							<ol cols="2"> 
+							<li>
+								<me>
+									\overrightarrow{QP}
+									=
+									\mbf{p}-\mbf{q}.
+								</me>	
+							</li>
+							<li>										
+								<me>
+									\overrightarrow{QR}
+									=
+									\mbf{p}.
+								</me>
+							</li>
+							<li>								
+								<me>
+									\overrightarrow{RP}
+									=
+									-\mbf{q}.
+								</me>								
+							</li>
+							<li>								
+								<me>
+									\overrightarrow{RO}
+									=
+									-\mbf{p} - \mbf{q}.
+								</me>						
+							</li>
+						</ol>
+						</answer>
+					</exercise></p>
+					<p><exercise xml:id="ex-sums-of-vecs4"><!-- Replacement for Poole's Section 1.1, Exercise 11.-->
+						<statement>	<aside><p>(Source: <xref ref="ref-PS"/>, from Section 2.2, Exercise 2.2.1.)</p></aside>
+							Find 
+							<me>
+								\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
+								+
+								\begin{bmatrix} 1 \\ 5 \\ 1 \end{bmatrix} 
+								+
+								\begin{bmatrix} -1 \\ 2 \\ -4 \end{bmatrix} .
+							</me>
+						</statement>
+						<hint>
+							Vector addition is defined componentwise. For example,
+							<me>
+								\begin{bmatrix} 5 \\ 6 \end{bmatrix}
+								+
+								\begin{bmatrix} -2 \\ 3 \end{bmatrix} 
+								=
+								\begin{bmatrix} 5+(-2) \\ 6+3 \end{bmatrix} 
+								=
+								\begin{bmatrix} 3 \\ 9 \end{bmatrix} 
+								.
+							</me>
+						</hint>
+						<solution>
+							By definition of vector addition, we have to add the numbers componentwise, so:
+							<me>
+								\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
+								+
+								\begin{bmatrix} 1 \\ 5 \\ 1 \end{bmatrix} 
+								+
+								\begin{bmatrix} -1 \\ 2 \\ -4 \end{bmatrix} 
+								=
+								\begin{bmatrix}  1+1+(-1) \\ 2+5+2 \\ 3+1+(-4) \end{bmatrix} 
+								=
+								\begin{bmatrix}  1 \\ 9 \\ 0 \end{bmatrix} 	
+								.
+							</me>
+						</solution>
+						<answer>
+							<me>
+								\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}
+								+
+								\begin{bmatrix} 1 \\ 5 \\ 1 \end{bmatrix} 
+								+
+								\begin{bmatrix} -1 \\ 2 \\ -4 \end{bmatrix} 
+								=
+								\begin{bmatrix}  1 \\ 9 \\ 0 \end{bmatrix} 	
+								.
+							</me>
+						</answer>
+					</exercise></p>
+					<p><exercise xml:id="ex-draw-vects"><!-- Replacement for Poole's Section 1.1, Exercises 7 and 9.-->
+						<statement><aside><p>(Source: <xref ref="ref-PS"/>, from Section 2.3, Exercise 2.3.1<!-- and Dina's brain. (Anna: haha!)-->)</p></aside>
+							Draw the vectors <m>\mathbf{u} =\begin{bmatrix} 2 \\ 1 \end{bmatrix} </m> and <m>\mathbf{v}=\begin{bmatrix} 1 \\ -1 \end{bmatrix} </m>.
+							Then draw <m>-\mbf{u}, 2\mbf{v}, -1/2\mbf{v}, \mbf{u}+\mbf{v},</m> and <m> -\mbf{u}+\mbf{v}</m> on the same set of coordinate axes.
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<solution>
+							<p>We choose to have all seven vectors anchored at the origin.</p>
+							<p><figure> <!-- the <figure> container isn't strictly necessary, but it's nice if you want the figure to be numbered, or if you want to xref it later-->
+								<caption>A picture of <m>\mbf{u}, \mbf{v}, -\mbf{u}, 2\mbf{v}, -1/2\mbf{v}, \mbf{u}+\mbf{v},</m> and <m> -\mbf{u}+\mbf{v}</m></caption> <!-- also not necessary -->
+									<image>
+									<latex-image>
+										\begin{tikzpicture}[line cap=round, line join=round, >=triangle 45, x=1.0cm,y=1.0cm]
+										\draw[->,color=black] (-2.5,0) -- (3.5,0); % x-axis
+										\foreach \x in {-2,-1,1,2,3}
+												\draw[shift={(\x,0)},color=black] (0pt,1pt) -- (0pt,-1pt);
+										\foreach \x in {-2,2,3}
+												\draw[shift={(\x,0)},color=black] node[below] {\scriptsize $\x$};
+										\draw[->,color=black] (0,-2.5) -- (0,2); % y-axis
+										\foreach \y in {-2,-1, 1}
+												\draw[shift={(0,\y)},color=black] (1pt,0pt) -- (-1pt,0pt);
+										\foreach \y in {-2, -1, 1}
+												\draw[shift={(0,\y)},color=black]		node[right] {\scriptsize $\y$};
+												\begin{axis}[
+										anchor=origin,  % Align the origins
+										x=1cm, y=1cm, % Set the same unit vectors
+										hide axis
+												]
+												\addplot [-latex] table {
+												0 0
+												2 1
+												}
+										node[above] {\scriptsize $\mathbf{u}$};
+												\addplot [-latex] table {
+												0 0
+												1 -1
+												} node[near end, right] {\scriptsize $\mathbf{v}$};
+												\addplot [-latex, thick] table {
+												0 0
+												3 0
+												} node[near end, above] {\scriptsize $\mathbf{u}+\mathbf{v}$};
+												\addplot [-latex] table {
+													0 0
+													-2 -1
+												} node[left] {\scriptsize $-\mathbf{u}$};
+												\addplot [-latex, dashed] table {
+													0 0
+													2 -2
+												} node[near end, right] {\scriptsize $2\mathbf{v}$};
+												\addplot [-latex] table {
+													0 0
+													-0.5 0.5
+												} node[above] {\scriptsize $-\frac{1}{2}\mathbf{v}$};
+												\addplot [-latex] table {
+												0 0
+												-1 -2
+												} node[left] {\scriptsize $-\mathbf{u}+\mathbf{v}$};
+										\end{axis}
+										\end{tikzpicture}
+									</latex-image>
+									</image>
+							</figure></p>
+							<p>Notice that <m>\mbf{u}+\mbf{v}</m> represents the diagonal of the parallelogram with sides <m>\mbf{u}</m> and <m>\mbf{v}</m>, and similarly, <m>-\mbf{u}+\mbf{v}</m> represents the diagonal of the parallelogram with sides <m>-\mbf{u}</m> and <m>\mbf{v}</m>. Furthermore, <m>-1/2\mbf{v}</m> has the opposite direction of <m>\mbf{v}</m>, and <m>-\mbf{u}</m> the opposite direction of <m>\mbf{v}</m>.</p>
+						</solution>
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise xml:id="ex-vertices-of-hexagon"><!-- Replacement for Poole's Section 1.1, Exercise 14.-->
+						<statement>	<aside><p> (Source: <xref ref="ref-KN"/>, from Section 4.1, Exercise 4.1.30.) </p></aside>
+
+							Let <m>A, B, C, D, E,</m> and <m>F</m> be the vertices of a regular hexagon, taken in order. Show that
+							<me>
+								\overrightarrow{AB} + \overrightarrow{AC} + \overrightarrow{AD} + \overrightarrow{AE}+ \overrightarrow{AF} =  3\overrightarrow{AD}
+								.
+							</me>
+						</statement>
+						<hint>
+							If <m>X</m> denotes the barycentre of the hexagon, what is the relationship between <m>\vect{AB}</m>, and <m>\vect{XA}</m> and <m>\vect{XB}</m>?
+						</hint>
+						<hint>
+							If <m>X</m> denotes the barycentre of the hexagon, what is the relationship between <m>\vect{XA}</m> and <m>\vect{XD}</m>? What about <m>\vect{XB}</m> and <m>\mbf{e}</m>?
+						</hint>
+						<solution>
+							Denote by <m>X</m> the barycentre of the hexagon.
+							By construction,
+							<me>
+								\vect{XA} = -\vect{XD},\;
+								\vect{XB} = -\mbf{e},\;
+								\vect{XC} = -\vect{XF}.
+							</me>
+							Now, by definition <m>\vect{AB} = \vect{OB}-\vect{OA}</m>, where <m>O</m> denotes the origin. If we add and substract <m>\vect{OX}</m> on the right hand-side, we do not change the equality, so
+							<me>
+								\vect{AB}
+								= \vect{OB}-\vect{OA} + \vect{OX} - \vect{OX}
+								= (\vect{OB} - \vect{OX}) - (\vect{OA} - \vect{OX})
+								= \vect{XB} - \vect{XA}.
+							</me>
+							For convenience, let us denote <m>\vect{XA}, \ldots, \vect{XF}</m> by <m>\mbf{a}, \ldots, \mbf{f}</m>. We can now rewrite the left-hand side of the equation in question as follows:
+							<md>
+								<mrow>
+									\amp
+									\overrightarrow{AB} + \overrightarrow{AC} + \overrightarrow{AD} + \overrightarrow{AE}+ \overrightarrow{AF} 
+								</mrow>
+								<mrow>
+									\amp\quad =
+									(\mbf{b}-\mbf{a})
+									+
+									(\mbf{c}-\mbf{a})
+									+
+									(\mbf{d}-\mbf{a})
+									+
+									(\mbf{e}-\mbf{a})
+									+
+									(\mbf{f}-\mbf{a})
+									\amp\amp
+								</mrow>
+								<mrow>
+									\amp\quad =
+									(\mbf{b}+\mbf{d})
+									+
+									(\mbf{c}+\mbf{d})
+									+
+									(\mbf{d}+\mbf{d})
+									+
+									(\mbf{e}+\mbf{d})
+									+
+									(\mbf{f}+\mbf{d})
+									\amp\amp \text{ since } \mbf{a} = -\mbf{d}
+								</mrow>
+								<mrow>
+									\amp\quad =
+									\mbf{b}
+									+
+									\mbf{c}
+									+
+									\mbf{e}
+									+
+									\mbf{f}
+									+
+									6
+									\mbf{d}
+									\amp\amp
+								</mrow>
+							</md>
+							Since <m>\mbf{b}=-\mbf{e}</m> and <m>\mbf{c}=-\mbf{f}</m>, we conclude:
+							<me>
+									\overrightarrow{AB} + \overrightarrow{AC} + \overrightarrow{AD} + \overrightarrow{AE}+ \overrightarrow{AF} 
+									=
+									6
+									\mbf{d}
+									.
+							</me>
+							Now, since <m>\mbf{a}=-\mbf{d}</m>, we can write <m>2\mbf{d}=\mbf{d} - \mbf{a}</m>, so that
+							<me>
+									\overrightarrow{AB} + \overrightarrow{AC} + \overrightarrow{AD} + \overrightarrow{AE}+ \overrightarrow{AF} 
+									=
+									3(\mbf{d} - \mbf{a})
+									=
+									3\vect{AD},
+							</me>
+							as claimed.
+
+						</solution>
+					</exercise></p>
+					<p><exercise xml:id="ex-sums-of-vecs2"><!-- Replacement for Poole's Section 1.1, Exercise 15.-->
+						<statement>	<aside><p> (Source: <xref ref="ref-PS"/>, from Section 2.3, Exercise 2.2.2.) </p></aside>
+							Use the properties of vector addition to show the following equalities. Justify every step.
+							<ol cols="2"> 
+								<li>									
+										<m>(\mathbf{u}+\mathbf{v})+\mathbf{w} =(\mathbf{v}+\mathbf{w})+\mathbf{u}</m>									
+								</li>
+								<li>									
+										<m>(\mathbf{u}+\mathbf{0})+(\mathbf{v}+(-\mathbf{u})) =\mathbf{v}.</m>									
+								</li>
+							</ol>	 
+						</statement>
+						<hint xml:id="ex-sums-of-vecs2-axioms-for-vector-addition">
+							Recall the properties of vector addition: for any vectors <m>\mbf{x}, \mbf{y}, \mbf{z}</m> with the same number of components, and <m>c,d</m> any real numbers, we have
+							<mdn>
+								<mrow xml:id="axioms-vector-addition-associativity">
+									\text{Associativity:}
+									\amp\amp
+									\mbf{x} + (\mbf{y} + \mbf{z})
+									\amp =
+									(\mbf{x} + \mbf{y}) + \mbf{z}
+								</mrow>
+								<mrow xml:id="axioms-vector-addition-commutativity">
+									\text{Commutativity:}
+									\amp\amp
+									\mbf{x} + \mbf{y} 
+									\amp =
+									\mbf{y} + \mbf{x}
+								</mrow>
+								<mrow xml:id="axioms-vector-addition-neutral-elt">
+									\text{Neutral element } \mbf{0} \text{ of addition}:
+									\amp\amp
+									\mbf{0} + \mbf{x}
+									\amp =
+									\mbf{x}
+								</mrow>
+								<mrow xml:id="axioms-vector-addition-inverses">
+									\text{Existence of inverse elements:} 
+									\amp\amp
+									\mbf{x} + (-\mbf{x})
+									\amp =
+									\mbf{0}
+								</mrow>
+							<!--
+								<mrow>
+									\amp\amp
+									\amp =
+									(-\mbf{x}) + \mbf{x}
+								</mrow>
+							-->
+								<mrow xml:id="axioms-vector-addition-scalar-1">
+									\text{Identity of scalar multiplication:}
+									\amp\amp
+									1\mbf{x}
+									\amp =
+									\mbf{x}
+								</mrow>
+								<mrow xml:id="axioms-vector-addition-compatibility">
+									\text{Compatibility:}
+									\amp\amp
+									c(d\mbf{x})
+									\amp =
+									(cd)\mbf{x}
+								</mrow>
+								<mrow xml:id="axioms-vector-addition-distributivity-1">
+									\text{Distributivity 1:}
+									\amp\amp
+									c(\mbf{x} + \mbf{y})
+									\amp =
+									c\mbf{x} + c\mbf{y}
+								</mrow>
+								<mrow xml:id="axioms-vector-addition-distributivity-2">
+									\text{Distributivity 2:}
+									\amp\amp
+									(c+d)\mbf{x}
+									\amp =
+									c\mbf{x} + d\mbf{x}
+								</mrow>
+							</mdn>
+						</hint>
+						<hint>
+							For this question, you will only need the following axioms:
+							<xref text="type-hybrid" ref="axioms-vector-addition-associativity">Associativity</xref>,
+							<xref text="type-hybrid" ref="axioms-vector-addition-commutativity">Commutativity</xref>,
+							<xref text="type-hybrid" ref="axioms-vector-addition-neutral-elt">Neutral element</xref>,
+							<xref text="type-hybrid" ref="axioms-vector-addition-inverses">Inverse element</xref>.
+						</hint>
+						<solution>
+							<ol> 
+								<li>									
+									<md>
+										<mrow>
+											(\mathbf{u}+\mathbf{v})+\mathbf{w}
+											\amp =
+											\mathbf{u}+(\mathbf{v}+\mathbf{w})
+											\amp (<xref text="type-hybrid" ref="axioms-vector-addition-associativity">Associativity</xref>)
+										</mrow>
+										<mrow>
+											\amp =
+											(\mathbf{v}+\mathbf{w})+\mathbf{u}
+											\amp (<xref text="type-hybrid" ref="axioms-vector-addition-commutativity">Commutativity</xref>)
+										</mrow>
+									</md>									
+								</li>
+								<li>
+									<p>First, notice that</p>
+									<p><md>
+										<mrow>
+											\mathbf{u}+\mathbf{0}
+											\amp =
+											\mathbf{0}+\mathbf{u}
+											\amp (<xref text="type-hybrid" ref="axioms-vector-addition-commutativity">Commutativity</xref>)
+										</mrow>
+										<mrow>
+											\amp =
+											\mathbf{u}
+											\amp (<xref text="type-hybrid" ref="axioms-vector-addition-neutral-elt">Neutral element</xref>)
+										</mrow>
+									</md></p>
+									<p>Therefore,</p>
+									<p><md>
+										<mrow>
+											(\mathbf{u}+\mathbf{0})+(\mathbf{v}+(-\mathbf{u}))
+											\amp =
+											\mathbf{u}+(\mathbf{v}+(-\mathbf{u}))
+											\amp \text{ (above argument)}
+										</mrow>
+										<mrow>
+											\amp =
+											\mathbf{u}+((-\mathbf{u})+\mathbf{v})
+											\amp (<xref text="type-hybrid" ref="axioms-vector-addition-commutativity">Commutativity</xref>)
+										</mrow>										
+										<mrow>
+											\amp =
+											(\mathbf{u}+(-\mathbf{u}))+\mathbf{v}
+											\amp  (<xref text="type-hybrid" ref="axioms-vector-addition-associativity">Associativity</xref>)
+										</mrow>																			
+										<mrow>
+											\amp =
+											\mathbf{0}+\mathbf{v}
+											\amp (<xref text="type-hybrid" ref="axioms-vector-addition-inverses">Inverse element</xref>)
+										</mrow>
+										<mrow>
+											\amp =
+											\mathbf{v}
+											\amp (<xref text="type-local" ref="axioms-vector-addition-neutral-elt">Neutral Element</xref>)
+										</mrow>
+									</md></p>								
+								</li>
+							</ol>	
+						</solution>
+					</exercise></p>
+					<p><exercise xml:id="ex-sums-of-vecs3"><!-- Replacement for Poole's Section 1.1, Exercise 15.-->
+						<statement>	<aside><p> (Source: <xref ref="ref-PS"/>, from Section 2.3, Exercise 2.3.3.) </p></aside>
+							Use the properties of vector addition to show the following equalities, where <m>k, l</m> are scalars.  Justify every step.
+							<ol> 
+							 	<li>							 		
+								 	<m>(k+l)(\mathbf{u}+\mathbf{v}) = k \mathbf{u} +k \mathbf{v} + l\mathbf{u} + l \mathbf{v}</m>.							 		
+							 	</li>
+							 	<li xml:id="ex-sums-of-vecs3-item-neutral">							 		
+							 		<m>0 \mathbf{u} = \mathbf{0}</m>							 
+							 	</li>
+							 	<li xml:id="ex-sums-of-vecs3-item-inverse">							 		
+							 		<m>(-1)\mathbf{u} =-\mathbf{u}</m>							 		
+							 	</li>
+							 	<li>							 		
+							 		<m>-(k\mathbf{u}) = k(-\mathbf{u}) =(-k)\mathbf{u}</m>									
+								</li>
+							</ol>
+						</statement>
+						<hint>
+							It might help to look back to <xref ref="ex-sums-of-vecs2-axioms-for-vector-addition"/>.
+						</hint>
+						<hint>
+							Once you have proved one of the statements, you may use it to prove another statement.
+						</hint>
+						<solution>
+							<ol> 
+							 	<li>							 		
+								 	<p><md>
+									 	<mrow>
+									 		(k+l)(\mathbf{u}+\mathbf{v})
+									 		\amp =
+											(k+l)\mathbf{u}+ (k+l)\mathbf{v}
+									 		\amp (<xref text="type-hybrid" ref="axioms-vector-addition-distributivity-1">Distributivity 1</xref>)
+									 	</mrow>
+									 	<mrow>
+									 		\amp =
+											k\mathbf{u}+l\mathbf{u}+ k\mathbf{v}+l\mathbf{v}
+									 		\amp (<xref text="type-hybrid" ref="axioms-vector-addition-distributivity-2">Distributivity 2</xref>)
+									 	</mrow>
+									 	<mrow>
+									 		\amp =
+									 		k \mathbf{u} +k \mathbf{v} + l\mathbf{u} + l \mathbf{v}
+									 		\amp (<xref text="type-hybrid" ref="axioms-vector-addition-commutativity">Commutativity</xref>)
+									 	</mrow>
+								 	</md></p>
+								 	<p>Notice that one could also first have used <xref text="type-hybrid" ref="axioms-vector-addition-distributivity-2">Distributivity 2</xref> and only then <xref text="type-hybrid" ref="axioms-vector-addition-distributivity-1">Distributivity 1</xref>.</p>
+							 	</li>
+							 	<li>
+							 		<p>First, we compute:</p>						 								 		
+							 		<p><md>
+								 		<mrow>
+								 			0 \mathbf{u}
+									 		\amp =
+									 		(0 \cdot 2)\mathbf{u}
+									 		\amp
+									 		\text{ because } 0=0\cdot 2
+									 	</mrow>
+									 	<mrow>
+										 	\amp =
+									 		0 ( 2  \mathbf{u})
+									 		\amp (<xref text="type-hybrid" ref="axioms-vector-addition-compatibility">Compatibility</xref>)
+									 	</mrow>
+									 	<mrow>
+										 	\amp =
+									 		0 (\mathbf{u}+\mathbf{u})
+									 		\amp \text{(Definition)}
+									 	</mrow>
+									 	<mrow>
+										 	\amp =
+									 		0\mathbf{u} + 0\mathbf{u}
+									 		\amp (<xref text="type-hybrid" ref="axioms-vector-addition-distributivity-2">Distributivity 2</xref>)
+									 	</mrow>									 	
+							 		</md></p>
+							 		<p>To sum up, we have proved:</p>	
+							 		<p><me>
+							 			0 \mathbf{u}
+								 		=
+								 		0\mathbf{u} + 0\mathbf{u}
+									</me></p>
+									<p> If we add <m>- 0\mathbf{u}</m> on both sides, we get:</p>
+									<p><me>
+							 			0 \mathbf{u} +(-0\mathbf{u}) 
+								 		=
+								 		(0\mathbf{u} + 0\mathbf{u}) + (-0\mathbf{u})
+									</me></p>
+									<p>For the left-hand side, note that</p>
+									<p><me>
+							 			0 \mathbf{u} +(-0\mathbf{u}) 
+								 		=
+								 		\mbf{0}
+								 	</me></p>
+								 	<p>by the axiom of the <xref text="type-hybrid" ref="axioms-vector-addition-inverses">inverse element</xref>. For the right-hand side, we have</p>
+									<p><md>
+								 		<mrow>
+								 			(0\mathbf{u} + 0\mathbf{u}) + (-0\mathbf{u})
+								 			\amp =
+								 			0\mathbf{u} + (0\mathbf{u} + (-0\mathbf{u}))
+								 			\amp (<xref text="type-hybrid" ref="axioms-vector-addition-associativity">Associativity</xref>)
+								 		</mrow>
+								 		<mrow>
+								 			\amp =
+								 			0\mathbf{u} + \mbf{0}
+								 			\amp (<xref text="type-hybrid" ref="axioms-vector-addition-inverses">Inverse elements</xref>)
+								 		</mrow>
+								 		<mrow>
+								 			\amp =
+								 			0\mathbf{u}
+								 			\amp (<xref text="type-hybrid" ref="axioms-vector-addition-neutral-elt">Neutral element</xref>)
+								 		</mrow>
+								 	</md></p>
+								 	<p>All in all, we have shown</p>
+								 	<p><me>
+								 		\mbf{0}
+								 		=
+							 			0 \mathbf{u} +(-0\mathbf{u}) 
+								 		=
+								 		(0\mathbf{u} + 0\mathbf{u}) + (-0\mathbf{u})
+								 		=
+								 		0\mbf{u},
+									</me></p>
+									<p>as claimed.</p>
+							 	</li>
+							 	<li>
+							 		We have to show that <m>(-1)\mathbf{u}</m> behaves like the inverse elements <m>-\mathbf{u}</m> whose existence is claimed in  <xref text="type-hybrid" ref="axioms-vector-addition-inverses">this axiom</xref>. In other words, it suffices to show that
+							 		<me>
+							 			\mbf{u} + (-1)\mbf{u}
+							 			=
+							 			\mbf{0}.
+							 		</me> 		
+							 		We compute:
+							 		<md>
+								 		<mrow>
+								 			\mbf{u} + (-1)\mbf{u}
+									 		\amp =
+									 		1\mbf{u} + (-1)\mbf{u}
+									 		\amp (<xref text="type-hybrid" ref="axioms-vector-addition-scalar-1">Identity of scalar multiplication</xref>)
+									 	</mrow>
+									 	<mrow>
+									 		\amp =
+									 		(1+ (-1))\mbf{u}
+									 		\amp (<xref text="type-hybrid" ref="axioms-vector-addition-distributivity-2">Distributivity 2</xref>)
+									 	</mrow>
+									 	<mrow>
+									 		\amp =
+									 		0\mbf{u}
+									 		\amp
+									 	</mrow>
+									 	<mrow>
+									 		\amp =
+									 		\mathbf{0}
+									 		\amp (<xref text="type-hybrid" ref="ex-sums-of-vecs3-item-neutral"/>)
+									 	</mrow>
+							 		</md>							 		
+							 	</li>
+							 	<li>
+							 		<p>First of all,</p>						 		
+							 		<p><md>
+								 		<mrow>
+								 			-(k\mathbf{u})
+									 		\amp =
+									 		(-1)(k\mathbf{u})	
+									 		\amp (<xref text="type-hybrid" ref="ex-sums-of-vecs3-item-inverse"/>)
+									 	</mrow>
+									 	<mrow>
+									 		\amp =
+									 		((-1)k)\mathbf{u}
+									 		\amp (<xref text="type-hybrid" ref="axioms-vector-addition-compatibility">Compatibility</xref>)
+									 	</mrow>
+							 		</md></p>
+							 		<p>We can now do two things: on the one hand, <m>(-1)k=-k</m>, which proves that <m>-(k\mathbf{u}) = -k \mbf{u}</m>. On the other hand, <m>(-1)k = k(-1)</m>, so that:</p>
+							 		<p><md>
+								 		<mrow>
+								 			-(k\mathbf{u})
+									 		\amp =
+									 		((-1)k)\mathbf{u}
+									 		\amp \text{ as argued above}
+									 	</mrow>
+									 	<mrow>
+									 		\amp =
+									 		(k(-1))\mathbf{u}
+									 		\amp							 		
+									 	</mrow>
+									 	<mrow>
+									 		\amp =
+									 		k((-1)\mathbf{u})
+									 		\amp (<xref text="type-hybrid" ref="axioms-vector-addition-compatibility">Compatibility</xref>)
+									 	</mrow>
+									 	<mrow>
+									 		\amp =
+									 		k(-\mathbf{u})
+									 		\amp (<xref text="type-hybrid" ref="ex-sums-of-vecs3-item-inverse"/>)
+									 	</mrow>
+							 		</md></p>
+								</li>
+							</ol>
+						</solution>
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise xml:id="ex-find-vec-for-eqns"><!-- Replacement for Poole's Section 1.1, Exercise 17.-->
+						<statement>
+						<aside><p> (Source: <xref ref="ref-KN"/>, from Section 4.1, Exercise 4.1.11.) </p></aside>
+							Let <m>\mathbf{u} = \begin{bmatrix} 3 \\ -1 \\ 0 \end{bmatrix} </m>, <m>\mathbf{v} = \begin{bmatrix} 4 \\ 0 \\ 1 \end{bmatrix} </m>, and <m>\mathbf{w} = \begin{bmatrix} -1 \\ 1 \\ 5 \end{bmatrix} </m>.  In each case, find <m>\mathbf{x}</m> such that:
+							<ol cols="2"> 
+								<li>
+									
+										<m>3(2\mathbf{u}+ \mathbf{x}) + \mathbf{w} = 2\mathbf{x} -\mathbf{v}</m>
+									
+								</li>
+								<li>
+									
+										<m>2(3\mathbf{v}- \mathbf{x})  = 5\mathbf{w} +\mathbf{u} - 3\mathbf{x}</m>.
+									
+								</li>
+							</ol>
+						</statement>
+						<hint>
+							Because of <xref ref="ex-sums-of-vecs3-item-inverse"/> in <xref ref="ex-sums-of-vecs3"/>, substracting some vector <m>\mbf{y}</m> from a vector <m>\mbf{z}</m> is the same as adding the vector <m>-\mbf{y}</m> to <m>\mbf{z}</m>.
+						</hint>
+						<solution>
+							We will make extensive use of <xref text="local" ref="ex-sums-of-vecs2-axioms-for-vector-addition">the axioms of vector addition</xref> and the things we have proved in <xref ref="ex-sums-of-vecs2,ex-sums-of-vecs3"/>.
+							<ol> 
+								<li>
+									<p><md>
+										<mrow>
+											\amp\amp
+											3(2\mathbf{u}+ \mathbf{x}) + \mathbf{w}
+											\amp
+											= 2\mathbf{x} -\mathbf{v}
+											\amp
+										</mrow>
+										<mrow>
+											\iff \amp\amp
+											6\mathbf{u}+ 3\mathbf{x} + \mathbf{w}
+											\amp
+											= 2\mathbf{x} -\mathbf{v}
+											\amp
+										</mrow>
+										<mrow>
+											\iff \amp\amp
+											6\mathbf{u}+ 3\mathbf{x} + \mathbf{w} - 2\mathbf{x}
+											\amp
+											= 2\mathbf{x} -\mathbf{v} - 2\mathbf{x}
+											\amp
+											(-2\mathbf{x} \text{ on both sides})
+										</mrow>
+										<mrow>
+											\iff \amp\amp
+											6\mathbf{u}+ 1\mathbf{x} + \mathbf{w}
+											\amp
+											= -\mathbf{v}
+											\amp
+											<!--\text{ (several axioms)}-->
+										</mrow>
+										<mrow>
+											\iff \amp\amp
+											\mathbf{x}
+											\amp
+											= -\mathbf{v}- 6\mathbf{u}  -\mathbf{w}
+											\amp
+											<!--\text{ (several axioms)}-->
+										</mrow>
+									</md></p>
+									<p>Using that</p>
+									<p>
+										<me>
+											-6\mathbf{u}
+											=
+											(-6)
+											\begin{bmatrix} 3 \\ -1 \\ 0 \end{bmatrix} 
+											=
+											\begin{bmatrix} (-6)3 \\ (-6)(-1) \\ (-6)0 \end{bmatrix} 
+											=
+											\begin{bmatrix} -18 \\ 6 \\ 0 \end{bmatrix} 
+										</me>
+									</p>
+									<p>and so forth, we can now just plug in the values in the equation for <m>\mbf{x}</m>:</p>
+									<p><md>
+										<mrow>
+											\mathbf{x}
+											=
+											-\mathbf{v}- 6\mathbf{u}  -\mathbf{w}
+											\amp =
+											\begin{bmatrix} -4 \\ 0 \\ -1 \end{bmatrix} 
+											+
+											\begin{bmatrix} (-6)3 \\ (-6)(-1) \\ 0 \end{bmatrix} 
+											+
+											\begin{bmatrix} (-1)(-1) \\ (-1)1 \\ (-1)5 \end{bmatrix} 
+										</mrow>
+										<mrow>
+											\amp =
+											\begin{bmatrix} -4+(-18)+1 \\ 0+6+(-1) \\ -1+0+(-5) \end{bmatrix} 
+										</mrow>
+										<mrow>
+											\amp =
+											\begin{bmatrix} -21 \\ 5 \\ -6 \end{bmatrix} 
+										</mrow>
+									</md></p>
+								</li>
+								<li>
+									<p>First, we compute:</p>
+									<p><md>
+										<mrow>
+											\amp\amp
+											2(3\mathbf{v}- \mathbf{x})
+											\amp =
+											5\mathbf{w} +\mathbf{u} - 3\mathbf{x}
+										</mrow>
+										<mrow>
+											\iff\amp\amp
+											6\mathbf{v} - 2\mathbf{x}
+											\amp =
+											5\mathbf{w} +\mathbf{u} - 3\mathbf{x}
+										</mrow>
+										<mrow>
+											\iff\amp\amp
+											- 2\mathbf{x}+3\mathbf{x}
+											\amp =
+											5\mathbf{w} +\mathbf{u}-6\mathbf{v}
+										</mrow>
+										<mrow>
+											\iff\amp\amp
+											\mathbf{x}
+											\amp =
+											5\mathbf{w} +\mathbf{u}-6\mathbf{v}
+										</mrow>
+									</md>
+								</p><p>Plugging in the vectors, we get:</p>
+								<p><md>
+									<mrow>
+										\mathbf{x}
+										\amp =
+										5\begin{bmatrix} -1 \\ 1 \\ 5 \end{bmatrix} 
+										+\begin{bmatrix} 3 \\ -1 \\ 0 \end{bmatrix} 
+										-6\begin{bmatrix} 4 \\ 0 \\ 1 \end{bmatrix} 
+									</mrow>
+									<mrow>
+										\amp =
+										\begin{bmatrix} -5 \\ 5 \\ 25 \end{bmatrix} 
+										+\begin{bmatrix} 3 \\ -1 \\ 0 \end{bmatrix} 
+										+\begin{bmatrix} -24 \\ 0 \\ -6 \end{bmatrix} 
+									</mrow>
+									<mrow>
+										\amp =
+										\begin{bmatrix} -5+3-24 \\ 5-1+0 \\ 25+0-6 \end{bmatrix} 
+										=
+										\begin{bmatrix} -26 \\ 4 \\ 19 \end{bmatrix} 
+									</mrow>
+								</md></p>
+								</li>
+							</ol>
+						</solution>
+						<answer>
+							<ol cols="2">
+								<li> <me> \mbf{x}=\begin{bmatrix} -21 \\ 5 \\ -6 \end{bmatrix} </me></li>
+								<li> <me> \mbf{x}=\begin{bmatrix} -26 \\ 4 \\ 19 \end{bmatrix} </me></li>
+							</ol>
+						</answer>
+					</exercise></p>
+					<p><exercise xml:id="ex-lin-comb-of-vecs1"><!-- Replacement for Poole's Section 1.1, Exercise 19.-->
+						<statement><aside><p> (Source: <xref ref="ref-PS"/>, from Section 2.4, Exercise 2.4.2.) </p></aside>
+							Decide whether 
+							<me>
+								\mathbf{v} = \begin{bmatrix} 4\\ 4 \\ -3 \end{bmatrix} 
+							</me>
+							is a linear combination of the vectors
+							<me>
+								\mathbf{u}_1 = \begin{bmatrix} 3\\ 1 \\ -1 \end{bmatrix} 
+								\text{ and }
+								\mathbf{u}_2 = \begin{bmatrix} 2\\ -2 \\ 1 \end{bmatrix} .
+							</me>
+						</statement>
+						<hint>
+							<m>\mathbf{v}</m> is a <em>linear combination</em> of <m>\mathbf{u}_1</m> and <m>\mathbf{u}_2</m> if and only if there exists real numbers <m>c_1, c_2</m> such that
+							<me>
+								\mbf{v}
+								=
+								c_1 \mathbf{u}_1
+								+
+								c_2 \mathbf{u}_2
+								.
+							</me>
+						</hint>
+						<hint>
+							Two vectors are equal if and only if they have the same components.
+						</hint>
+						<solution>
+							We want to find real numbers <m>c_1, c_2</m> such that
+							<me>
+								\mbf{v}
+								=
+								c_1 \mathbf{u}_1
+								+
+								c_2 \mathbf{u}_2
+								.
+							</me>
+							We compute the right-hand side:
+							<md>
+								<mrow>
+									c_1 \mathbf{u}_1
+									+
+									c_2 \mathbf{u}_2
+									\amp =
+									c_1 \begin{bmatrix} 3\\ 1 \\ -1 \end{bmatrix} 
+									+
+									c_2 \begin{bmatrix} 2\\ -2 \\ 1 \end{bmatrix} 
+								</mrow>
+								<mrow>
+									\amp =
+									\begin{bmatrix} c_1 3\\ c_1  \\ -c_1  \end{bmatrix} 
+									+
+									\begin{bmatrix} c_2 2\\ c_2 (-2) \\ c_2  \end{bmatrix} 
+								</mrow>
+								<mrow>
+									\amp =
+									\begin{bmatrix} c_1 3 + c_2 2 \\ c_1 -  c_2 2  \\ -c_1 + c_2  \end{bmatrix} 
+									.
+								</mrow>
+							</md>
+							We want this to equal <m>\mbf{v}</m>, i.e. we want
+							<me>
+								\begin{bmatrix} 4\\ 4 \\ -3 \end{bmatrix} 
+								=
+								\begin{bmatrix} c_1 3 + c_2 2 \\ c_1 -  c_2 2  \\ -c_1 + c_2  \end{bmatrix} 
+								.
+							</me>
+							In other words, we need all of the following to be true:
+							<mdn>
+								<mrow number="no">
+									4 \amp = c_1 3 + c_2 2 
+								</mrow>
+								<mrow xml:id="ex-lin-comb-of-vecs1-eq1">
+									4 \amp = c_1 -  c_2 2
+								</mrow>
+								<mrow number="no">
+									-3 \amp = -c_1 + c_2  
+								</mrow>
+							</mdn>
+							The <xref ref="ex-lin-comb-of-vecs1-eq1">second equation</xref> yields <m>c_1 = 4 + c_2 2</m>, which we will plug into the other two equations to get:
+							<mdn>
+								<mrow xml:id="ex-lin-comb-of-vecs1-eq2">
+									4 \amp = (4 + c_2 2) 3 + c_2 2 
+								</mrow>
+								<mrow xml:id="ex-lin-comb-of-vecs1-eq3">
+									-3 \amp = -(4 + c_2 2) + c_2  
+								</mrow>
+							</mdn>
+							The <xref ref="ex-lin-comb-of-vecs1-eq2">first equation</xref> yields:
+							<me>
+								4
+								= (4 + c_2 2) 3 + c_2 2
+								= 12 + c_2 8,
+								\text{ i.e. }
+								c_2 = -1,
+							</me>
+							and the <xref ref="ex-lin-comb-of-vecs1-eq3">second equation</xref> yields
+							<me>
+								-3
+								= -(4 + c_2 2) + c_2  
+								= -4 -c_2,
+								\text{ i.e. }
+								c_2 = -1
+								.
+							</me>
+							We got the same value for <m>c_2</m>, so the answer to our question is: Yes, the vector <m>\mbf{v}</m> is a linear combination of the vectors <m>\mbf{u}_1</m> and <m>\mbf{u}_2</m>.
+
+							<p>For good measure, let us check that we did not make a mistake. With <m>c_2=-1</m>, we get <m>c_1 =  4 + c_2 2 =  4 + (-1) 2 = 2</m>. For these values, we compute:</p>
+							<me>
+								c_1 \mathbf{u}_1
+								+
+								c_2 \mathbf{u}_2
+								=
+								\begin{bmatrix} 2 \cdot 3 + (-1) 2 \\ 2 -  (-1) 2  \\ -2 + (-1)  \end{bmatrix} 
+								=
+								\begin{bmatrix} 4 \\ 4  \\ -3  \end{bmatrix} 
+								=
+								\mbf{v},
+							</me>
+							as claimed.
+						</solution>
+						<answer>
+							Yes, the vector <m>\mbf{v}</m> is a linear combination of the vectors <m>\mbf{u}_1</m> and <m>\mbf{u}_2</m>. To be precise,
+							<me>
+								\mbf{v}
+								=
+								2 \mathbf{u}_1
+								+
+								(-1) \mathbf{u}_2
+								.
+							</me>
+						</answer>
+					</exercise></p>
+					<p><exercise xml:id="ex-lin-comb-of-vecs2"><!-- Replacement for Poole's Section 1.1, Exercise 21.-->
+						<statement>	<aside><p> (Source: <xref ref="ref-PS"/>, from Section 2.4, Exercise 2.4.2.) </p></aside>
+							Decide whether
+							<me>
+								\mathbf{v} = \begin{bmatrix} 4\\ 4 \\ 4 \end{bmatrix} 
+							</me>
+							is a linear combination of the vectors
+							<me>
+								\mathbf{u_1} = \begin{bmatrix} 3\\ 1 \\ -1 \end{bmatrix} ,
+								\mathbf{u_2} = \begin{bmatrix} 8\\ 0 \\ -1 \end{bmatrix}  
+								\text{ and }
+								\mathbf{u_3} = \begin{bmatrix} 2\\ -2 \\ 1 \end{bmatrix} .
+							</me>		 
+						</statement>
+						<hint>
+							<m>\mathbf{v}</m> is a <em>linear combination</em> of <m>\mathbf{u}_1</m>, <m>\mathbf{u}_2</m>, and  <m>\mathbf{u}_3</m> if and only if there exists real numbers <m>c_1, c_2, c_3</m> such that
+							<me>
+								\mbf{v}
+								=
+								c_1 \mathbf{u}_1
+								+
+								c_2 \mathbf{u}_2
+								+
+								c_3 \mathbf{u}_2
+								.
+							</me>
+						</hint>
+						<hint>
+							Two vectors are equal if and only if they have the same components.
+						</hint>
+						<solution>
+							We want to find real numbers <m>c_1, c_2, c_3</m> such that
+							<me>
+								\mbf{v}
+								=
+								c_1 \mathbf{u}_1
+								+
+								c_2 \mathbf{u}_2
+								+
+								c_3 \mathbf{u}_3
+								.
+							</me>
+							We compute the right-hand side:
+							<md>
+								<mrow>
+									c_1 \mathbf{u}_1
+									+
+									c_2 \mathbf{u}_2
+									+
+									c_3 \mathbf{u}_3
+									\amp =
+									c_1 \begin{bmatrix} 3\\ 1 \\ -1 \end{bmatrix} 
+									+
+									c_2 \begin{bmatrix} 8\\ 0 \\ -1 \end{bmatrix} 
+									+
+									c_3 \begin{bmatrix} 2\\ -2 \\ 1 \end{bmatrix} 
+								</mrow>
+								<mrow>
+									\amp =
+									\begin{bmatrix} c_1 3\\ c_1  \\ -c_1  \end{bmatrix} 
+									+
+									\begin{bmatrix} c_2 8\\ 0 \\ -c_2 \end{bmatrix} 
+									+
+									\begin{bmatrix} c_3 2\\ c_3(-2) \\ c_3 \end{bmatrix} 
+								</mrow>
+								<mrow>
+									\amp =
+									\begin{bmatrix} c_1 3 + c_2 8 + c_3 2\\ c_1  +0 - c_3 2\\ -c_1  -c_2 +c_3 \end{bmatrix} 
+								</mrow>
+							</md>
+							We want this to equal <m>\mbf{v}</m>, i.e. we want
+							<me>
+								\begin{bmatrix} 4 \\ 4 \\ 4  \end{bmatrix} 
+								=
+								\begin{bmatrix} c_1 3 + c_2 8 + c_3 2\\ c_1  +0 - c_3 2\\ -c_1  -c_2 +c_3 \end{bmatrix} 
+								.
+							</me>
+							In other words, we need
+							<mdn>
+								<mrow number="no">
+									4 \amp =c_1 3 + c_2 8 + c_3 2
+								</mrow>
+								<mrow xml:id="ex-lin-comb-of-vecs2-eq1">
+									4 \amp = c_1 - c_3 2
+								</mrow>
+								<mrow number="no">
+									4 \amp = -c_1  -c_2 + c_3
+								</mrow>
+							</mdn>
+							The <xref ref="ex-lin-comb-of-vecs2-eq1">second equation</xref> yields <m>c_1 = 4 + c_3 2</m>. Plugging this into the other two equations, we get:
+							<mdn>
+								<mrow xml:id="ex-lin-comb-of-vecs2-eq2">
+									4 \amp =(4 + c_3 2) 3 + c_2 8 + c_3 2
+								</mrow>
+								<mrow xml:id="ex-lin-comb-of-vecs2-eq3">
+									4 \amp = -(4 + c_3 2)  -c_2  + c_3
+								</mrow>
+								.
+							</mdn>
+							The <xref ref="ex-lin-comb-of-vecs2-eq2">first equation</xref> yields:
+							<me>
+								4
+								=(4 + c_3 2) 3 + c_2 8 + c_3 2
+								=12 + c_3 6 + c_2 8 + c_3 2
+								=12 +  c_2 8 + c_3 8,
+							</me>
+							i.e. <m>c_2 = -1 - c_3</m>.	Plugging this, in turn, into the <xref ref="ex-lin-comb-of-vecs2-eq3">last remaining equation</xref> yields:
+							<me>
+								4
+								= -(4 + c_3 2)  -c_2  + c_3
+								= -4 - c_3 2  -(-1 - c_3)  + c_3
+								= -3.
+							</me>
+							Since this is false, we conclude: No, the vector <m>\mbf{v}</m> is not a linear combination of the vectors <m>\mbf{u}_1</m>, <m>\mbf{u}_2</m>, and <m>\mbf{u}_3</m>.							
+						</solution>
+						<answer>
+							No, the vector <m>\mbf{v}</m> is not a linear combination of the vectors <m>\mbf{u}_1</m>, <m>\mbf{u}_2</m>, and <m>\mbf{u}_3</m>.
+						</answer>
+					</exercise></p>
+				</exercises>

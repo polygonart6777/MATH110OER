@@ -1,0 +1,607 @@
+			<exercises>
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 3.2, Exercise 1, 3-->
+						<statement>
+						<aside><p> (Source: <xref ref="ref-KN" />, Chapter 2, Exercise 2.1.5) </p></aside>
+						Find <m> A </m> in terms of <m> B </m> if: 
+						<ol cols="2">
+							<li> 
+								<me> A + B = 3A + 2B </me>
+							</li>
+							<li>
+								<me>
+									2A - B = 5(A + 2B) </me>
+							</li>
+						</ol>
+					</statement>
+						<hint>
+							Theorem 2.1.1 in Section 2.1 of <xref ref="ref-KN" /> might help.
+						</hint>
+						<solution>
+							Because of the properties listed in Theorem 2.1.1 of <xref ref="ref-KN" />, we can manipulate both sides of the equations just like we would if <m>A</m> and <m>B</m> were numbers:
+							<ol>
+							<li> 
+								<md>
+									<mrow> A + B = 3A + 2B \iff \amp (1-3)A = (2-1)B </mrow>									
+									<mrow>\iff \amp -2A = B </mrow>																
+									<mrow>\iff \amp A= -\frac{1}{2} B. </mrow>
+								</md>
+							</li>
+							<li>
+								<md>
+									<mrow>2A - B = 5(A + 2B)  \iff \amp 2A - B = 5A + 10B</mrow>
+									<mrow>\iff \amp -3A = 11B</mrow>
+									<mrow>\iff \amp A = -\frac{11}{3}B. </mrow>
+								</md>
+							</li>
+						</ol>
+						</solution>
+						<answer>
+							<ol cols="2">
+							<li> 
+								<me> A= -\frac{1}{2} B  </me>
+							</li>
+							<li>
+								<me>
+									A = -\frac{11}{3}B 
+								</me>
+							</li>
+						</ol>
+						</answer>
+					</exercise></p>
+ 					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 3.2, Exercise 1 and 3-->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 2, Exercise 2.1.6) </p></aside>
+							If <m> X, Y, A, </m> and <m> B </m> are matrices of the same size, solve the following systems of equations to obtain <m> X </m> and <m> Y </m> in terms of <m> A </m> and <m> B </m>.
+							<ol cols="2">
+								<li>
+									<md>
+										<mrow>
+											5X + 3Y  \amp =  A
+										</mrow>
+										<mrow>
+											2X + Y  \amp =  B
+										</mrow>
+									</md>
+								</li>
+								<li>
+									<md>
+										<mrow>
+											4X + 3Y  \amp =  A
+										</mrow>
+										<mrow>
+											5X + 4Y  \amp =  B
+										</mrow>
+									</md>
+								</li>
+							</ol>
+						</statement>
+						<hint>
+							It might help to look back into Theorem 2.1.1 of <xref ref="ref-KN" />.
+						</hint>
+						<solution>
+							Because of the properties listed in Theorem 2.1.1 of <xref ref="ref-KN" />, we can manipulate both sides of the equations just like we would if <m>A, B</m> were numbers and <m>X, Y</m> were variables (however, we cannot simply divide by a matrix!).
+							<ol>
+								<li> <solution>The system can also be written as
+									<me>
+										\matr{cc|c}{ 5 \amp 3 \amp A \\ 2 \amp 1 \amp B},
+									</me>
+									where it is important that we remember that <m>A,B</m> are not numbers, so we cannot divide by them. We row-reduce:
+									<md>
+										<mrow>\matr{cc|c}{5 \amp 3 \amp A
+												\\ 	2 \amp 1 \amp B}
+										\underset{5R_{2}}{\overset{2R_{1}}{\longrightarrow}}
+										\amp
+										\matr{cc|c}{10 \amp 6 \amp 2A
+												\\ 	10 \amp 5 \amp 5B}
+										\overset{-R_{1}+R_{2}}{\longrightarrow}
+										\matr{cc|c}{10 \amp 6 \amp 2A
+												\\ 	0 \amp -1 \amp 5B-2A}
+										</mrow>
+										<mrow>
+										\overset{6R_{2}+R_{1}}{\longrightarrow}
+										\amp
+										\matr{cc|c}{10 \amp 0 \amp 2A + 6 (5B-2A)
+												\\ 	0 \amp -1 \amp 5B-2A}
+											</mrow><mrow>
+										\amp=
+										\matr{cc|c}{10 \amp 0 \amp -10A + 30 B
+										\\ 	0 \amp -1 \amp 5B-2A}.
+										</mrow>
+									</md>
+									We conclude that <m> X= \frac{1}{10} (-10A + 30 B) = -A + 3 B</m> and <m>Y=-5B+2A</m>.</solution>
+								</li>
+								<li><solution>The system can also be written as
+									<me>
+										\matr{cc|c}{ 4 \amp 3 \amp A \\ 5 \amp 4 \amp B},
+									</me>
+									where it is important that we remember that <m>A,B</m> are not numbers, so we cannot divide by them. We row-reduce:
+									<md>
+										<mrow>
+											\matr{cc|c}{ 4 \amp 3 \amp A
+														\\ 5 \amp 4 \amp B}
+											\overset{5R_{1}}{\underset{4R_{2}}{\longrightarrow}}
+											\amp\matr{cc|c}{ 20 \amp 15 \amp 5A
+														\\ 20 \amp 16 \amp 4B}
+											\overset{-R_{1}+R_{2}}{\longrightarrow}										
+											\matr{cc|c}{ 20 \amp 15 \amp 5A
+														\\ 0 \amp 1 \amp 4B-5A}
+										</mrow>
+										<mrow>
+											\overset{-15R_{2}+R_{1}}{\longrightarrow}
+											\amp\matr{cc|c}{ 20 \amp 0 \amp 5A-15(4B-5A)
+														\\ 0 \amp 1 \amp 4B-5A}
+										</mrow>
+										<mrow>
+											\amp=\matr{cc|c}{ 20 \amp 0 \amp 80A-60B
+														\\ 0 \amp 1 \amp 4B-5A}
+										</mrow>
+									</md>
+									We conclude that <m> X= \frac{1}{20} (80A-60B) = 4A - 3 B</m> and <m>Y=4B-5A</m>.</solution>
+								</li>
+							</ol>
+						</solution>
+						<answer>
+							<ol>
+								<li> <answer><m> X= -A + 3 B</m>, <m>Y=-5B+2A</m>.</answer>
+								</li>
+								<li><answer>
+									<m> X= 4A - 3 B</m>, <m>Y=4B-5A</m>
+								</answer>
+								</li>
+							</ol>
+						</answer>
+					</exercise></p>
+						<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 3.2, Exercise 5, 13-->
+						<statement>
+						<aside><p> (Source: <xref ref="ref-PS" />, Chapter 9, Exercise 9.2.7) </p></aside>
+						Determine whether  each of the following sets of matrices is linearly indpendent.  If it is linearly independent, write one matrix as a linear combination of the other matrices in the set. 
+						<ol>
+							<li> 
+								<me> \left\{ \begin{bmatrix} 1 \amp 2 \\ 0 \amp 1 \end{bmatrix},\begin{bmatrix} -7 \amp 2 \\ -2\amp -3 \end{bmatrix},\begin{bmatrix} 4 \amp 0 \\ 1 \amp 2 \end{bmatrix}\right\}  </me>
+							</li>
+							<li>
+								<me>
+									\left\{ \begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix},\begin{bmatrix} 0 \amp 1 \\ 0\amp 1 \end{bmatrix},\begin{bmatrix} 1 \amp 0 \\ 1 \amp 0 \end{bmatrix},\begin{bmatrix} 0 \amp 0 \\ 1 \amp 1 \end{bmatrix}\right\} </me>
+							</li>
+						</ol>
+					</statement>
+						<hint xml:id="hint-matrix-linear-dependence">
+							Matrices <m>A_{1}, \ldots, A_{m}</m> of the same size are called <em>linearly dependent</em> if there exist numbers <m>c_{1},\ldots, c_{m}</m>, not all of which are zero, so that 
+							<me>
+								c_{1}A_{1}+c_{2}A_{2}+\ldots + c_{m}A_{m} = 0.
+							</me>
+							Otherwise, they are called <em>linearly independent</em>. 
+						</hint>
+						<hint xml:id="hint-matrix-linear-independence">
+							Another way of phrasing linear independence is: Matrices <m>A_{1}, \ldots, A_{m}</m> of the same size are linearly independent if the only solution <m>(c_{1}, \ldots, c_{m})</m> to the system of linear equations
+							<me>
+								x_{1}A_{1}+x_{2}A_{2}+\ldots + x_{m}A_{m} = 0
+							</me>
+							is the trivial solution, <m>(0,\ldots, 0).</m>
+						</hint>
+						<solution>							
+							<ol>
+							<li> <solution>We are wondering whether there exist numbers <m>x,y,z</m>, not all zero, such that
+								<me>
+									x \begin{bmatrix} 1 \amp 2 \\ 0 \amp 1 \end{bmatrix}
+									+ y\begin{bmatrix} -7 \amp 2 \\ -2\amp -3 \end{bmatrix}
+									+ z\begin{bmatrix} 4 \amp 0 \\ 1 \amp 2 \end{bmatrix}\right\} 
+									=
+									\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}.
+								</me>
+								Note that an equality of matrices means componentwise equality, so for example, the equality of the <m>(1,1)</m>-entry says:
+								<me> x - 7 y + 4 z = 0.</me>
+								Proceeding in this way, we arrive at a system of 4 linear equations with augmented matrix that we can row-reduce:
+								<md><mrow>
+									\matr{ccc|c}
+									{
+										1 \amp -7 \amp 4 \amp 0
+										\\
+										2 \amp 2 \amp 0 \amp 0
+										\\
+										0 \amp -2 \amp 1 \amp 0
+										\\
+										1 \amp -2 \amp 2 \amp 0
+									}
+									\overset{-2R_{1}+R_{2}}{\underset{-R_{1}+R_{4}}{\longrightarrow}}
+									\amp\matr{ccc|c}
+									{
+										1 \amp -7 \amp 4 \amp 0
+										\\
+										0 \amp 16 \amp -8 \amp 0
+										\\
+										0 \amp -2 \amp 1 \amp 0
+										\\
+										0 \amp 5 \amp -2 \amp 0
+									}
+									\overset{8R_{3}+R_{2}}{\underset{2R_{4}}{\longrightarrow}}
+									\matr{ccc|c}
+									{
+										1 \amp -7 \amp 4 \amp 0
+										\\
+										0 \amp 0 \amp 0 \amp 0
+										\\
+										0 \amp -2 \amp 1 \amp 0
+										\\
+										0 \amp 10 \amp -4 \amp 0
+									}</mrow>
+									<mrow>
+									\overset{5R_{3}+R_{4}}{\longrightarrow}
+									\amp \matr{ccc|c}
+									{
+										1 \amp -7 \amp 4 \amp 0
+										\\
+										0 \amp 0 \amp 0 \amp 0
+										\\
+										0 \amp -2 \amp 1 \amp 0
+										\\
+										0 \amp 0 \amp 1 \amp 0
+									}</mrow>
+									<!-- <mrow>
+									\overset{-R_{4}+R_{3}}{\underset{-4R_{4}+R_{1}}{\longrightarrow}}
+									\amp \matr{ccc|c}
+									{
+										1 \amp -7 \amp 0 \amp 0
+										\\
+										0 \amp 0 \amp 0 \amp 0
+										\\
+										0 \amp -2 \amp 0 \amp 0
+										\\
+										0 \amp 0 \amp 1 \amp 0
+									}</mrow>
+									<mrow>
+									\overset{-R_{4}+R_{3}}{\underset{-4R_{4}+R_{1}}{\longrightarrow}}
+									\amp \matr{ccc|c}
+									{
+										1 \amp -7 \amp 0 \amp 0
+										\\
+										0 \amp 0 \amp 0 \amp 0
+										\\
+										0 \amp -2 \amp 0 \amp 0
+										\\
+										0 \amp 0 \amp 1 \amp 0
+									}</mrow> -->
+									.
+								</md>
+								At this point, we can already see that further row reduction will yield that the only solution is <m>(x,y,z)=(0,0,0)</m>. Therefore, the matrices are linearly independent.
+							</solution>
+							</li>
+							<li><solution>We are wondering whether there exist numbers <m>w,x,y,z</m>, not all zero, such that
+								<me>
+									w\begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix}
+									+x\begin{bmatrix} 0 \amp 1 \\ 0\amp 1 \end{bmatrix}
+									+y\begin{bmatrix} 1 \amp 0 \\ 1 \amp 0 \end{bmatrix}
+									+z\begin{bmatrix} 0 \amp 0 \\ 1 \amp 1 \end{bmatrix}
+									=
+									\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}
+									.
+								</me>
+								Just as in the last part, we could turn this into an augmented matrix of size <m>4\times 5</m> and row-reduce, but since the entries of these matrices are easier, we will do it by hand: <p>Equality of the <m>(1,2)</m>-entries says that <m>x=0</m>.</p> <p>Equality of the <m>(1,1)</m>-entries says that <m>w+y=0</m>, i.e. <m>w=-y</m>.</p> <p>Equality of the <m>(2,1)</m>-entries says that <m>y+z=0</m>, i.e. <m>z=-y=w</m>.</p><p> Lastly, equality of the <m>(2,2)</m>-entries says that <m>w+x+z=0</m>, which means that <m>w=-z</m> since <m>x=0</m>.</p> <p>Since <m>-z=w=z</m> also, we conclude that <m>z=0</m> and so also <m>0=z=-y=w</m>. All in all, the only solution is <m>(w,x,y,z)=(0,0,0,0)</m>, so the matrices are linearly independent.</p></solution>
+							</li>
+						</ol>
+						</solution>
+						<answer>
+							<ol>
+							<li> <answer>The matrices are linearly independent.
+							</answer>
+							</li>
+							<li><answer>The matrices are linearly independent.</answer>
+							</li>
+						</ol>
+						</answer>
+					</exercise></p>
+
+						<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 3.2, Exercise 9-->
+						<statement>
+						<aside><p> (Source: <xref ref="ref-RB" />, LISS.C20 </p></aside> <!-- Anna Thinks that ref-RB has other numbers in the matrices, but whatever.-->
+						Let 
+						<me>  S = \left\{ \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}, \begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}, \begin{bmatrix} 0 \amp 1 \\ 1 \amp 2 \end{bmatrix} \right\}</me>
+						<ol>
+							<li> 
+								Determine if <m> S </m> spans the set of all <m> 2 \times 2 </m> matrices.
+							</li>
+							<li>
+								Determine if <m> S </m> is linearly independent.
+							</li>
+						</ol>
+
+
+						</statement>
+						<!-- <hint>
+							span
+						</hint> -->						
+						<hint>
+							See <xml ref="hint-matrix-linear-dependence"/> and <xml ref="hint-matrix-linear-independence"/> for the definition of linear independence.
+						</hint>
+						<solution>
+							<ol>
+							<li><solution xml:id="soln-3-2-4a">
+								The set <m> S </m> spans the set of all <m> 2 \times 2 </m> matrices if and only if, for any <m> 2 \times 2 </m> matrix <m>A</m>, there exist numbers <m>x_{1}, x_{2}, x_{3}</m> so that
+								<me>
+									x_{1} \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}
+									+ x_{2}\begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}
+									+ x_{3} \begin{bmatrix} 0 \amp 1 \\ 1 \amp 2 \end{bmatrix}
+									=
+									A
+									.
+								</me>
+								If we write <m> A = \begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix}</m>, then this is equivalent to saying that there exists a solution to the following system of linear equations:
+								<md>
+									<mrow>
+										x_{1} + 2x_{2}  \amp = a
+									</mrow>
+									<mrow>
+										2 x_{1} + x_{2} + x_{3} \amp= b
+									</mrow>
+									<mrow>
+										2x_{1} - x_{2} + x_{3} \amp = c
+									</mrow>
+									<mrow>
+										x_{1} + 2x_{2} + 2x_{3} \amp = d
+									</mrow>
+								</md>
+								Let us transfer this into an augmented matrix and then row-reduce:
+								<md>
+									<mrow>
+										\amp\matr{ccc|c}
+										{
+										 1 \amp 2 \amp 0 \amp a
+										 \\
+										 2 \amp 1 \amp 1 \amp b
+										 \\
+										 2 \amp -1 \amp 1 \amp c
+										 \\
+										 1 \amp 2 \amp 2 \amp d
+										}
+										\overset{-R_{1}+R_{4}}{\underset{-2R_{1}+R_{3}, -2R_{1}+R_{2}}{\longrightarrow}}					
+										\matr{ccc|c}
+										{
+										 1 \amp 2 \amp 0 \amp a
+										 \\
+										 0 \amp -3 \amp 1 \amp b-2a
+										 \\
+										 0 \amp -5 \amp 1 \amp c-2a
+										 \\
+										 0 \amp 0 \amp 2 \amp d - a
+										}
+									</mrow>									
+									<mrow>
+										\amp\overset{\frac{1}{2}R_{4}}{\underset{-R_{4}'+R_{3}, -R_{4}'+R_{2}}{\longrightarrow}}					
+										\matr{ccc|c}
+										{
+										 1 \amp 2 \amp 0 \amp a
+										 \\
+										 0 \amp -3 \amp 0 \amp b-2a -\frac{1}{2}(d - a)
+										 \\
+										 0 \amp -5 \amp 0 \amp c-2a - \frac{1}{2}(d - a)
+										 \\
+										 0 \amp 0 \amp 1 \amp \frac{1}{2}(d - a)
+										}
+									</mrow>
+									<mrow>
+										\amp\overset{5R_{2}}{\underset{-3R_{3}}{\longrightarrow}}					
+										\matr{ccc|c}
+										{
+										 1 \amp 2 \amp 0 \amp a
+										 \\
+										 0 \amp -15 \amp 0 \amp 5b-\frac{15}{2}a  -\frac{5}{2}d
+										 \\
+										 0 \amp 15 \amp 0 \amp -3c+ \frac{9}{2}a + \frac{3}{2}d 
+										 \\
+										 0 \amp 0 \amp 1 \amp \frac{1}{2}(d - a)
+										}
+									</mrow>
+									<mrow>
+										\amp\overset{R_{2}+R_{3}}{\longrightarrow}
+										\matr{ccc|c}
+										{
+										 1 \amp 2 \amp 0 \amp a
+										 \\
+										 0 \amp -15 \amp 0 \amp 5b-\frac{15}{2}a  -\frac{5}{2}d
+										 \\
+										 0 \amp 0 \amp 0 \amp (-3c+ \frac{9}{2}a + \frac{3}{2}d)  + (5b-\frac{15}{2}a  -\frac{5}{2}d)
+										 \\
+										 0 \amp 0 \amp 1 \amp \frac{1}{2}(d - a)
+										}.
+									</mrow>
+								</md>
+								We see from the third row that the system is inconsistent if 
+								<me>
+									-3c -3 a - d  + 5b   
+									=
+									\left(-3c+ \frac{9}{2}a + \frac{3}{2}d)  + (5b-\frac{15}{2}a  -\frac{5}{2}d\right)
+									\neq 0.
+								</me>
+								Since <m>\begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix} = \begin{bmatrix} 1 \amp 0 \\ 0 \amp 0 \end{bmatrix}</m> is an example of a choice of numbers which makes the system inconsistent, we conclude that, no, <m>S</m> does not span the set of all <m>2\times 2</m> matrices.
+							</solution></li>
+							<li><solution>
+								We need to figure out wheter
+								<me>
+									x_{1} \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}
+									+ x_{2}\begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}
+									+ x_{3} \begin{bmatrix} 0 \amp 1 \\ 1 \amp 2 \end{bmatrix}
+									=
+									\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}
+								</me>
+								has a non-zero solution. We reuse our computation from <xref ref="soln-3-2-4a"/> for the case <m>\begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix} = \begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}</m>:
+								<md>
+									<mrow>
+										\matr{ccc|c}
+										{
+										 1 \amp 2 \amp 0 \amp a
+										 \\
+										 2 \amp 1 \amp 1 \amp b
+										 \\
+										 2 \amp -1 \amp 1 \amp c
+										 \\
+										 1 \amp 2 \amp 2 \amp d
+										}
+										\amp\overset{\text{row reduction}}{\longrightarrow}
+										\matr{ccc|c}
+										{
+										 1 \amp 2 \amp 0 \amp 0
+										 \\
+										 0 \amp -15 \amp 0 \amp 0
+										 \\
+										 0 \amp 0 \amp 0 \amp 0
+										 \\
+										 0 \amp 0 \amp 1 \amp 0
+										}
+									</mrow>
+									<mrow>
+									\amp\overset{2R_{2}+15R_{1}}{\longrightarrow}
+										\matr{ccc|c}
+										{
+										 15 \amp 0 \amp 0 \amp 0
+										 \\
+										 0 \amp -15 \amp 0 \amp 0
+										 \\
+										 0 \amp 0 \amp 0 \amp 0
+										 \\
+										 0 \amp 0 \amp 1 \amp 0
+										}.
+									</mrow>
+								</md>
+									From this, we see that the only solution to the system of equations
+									<me>
+										x_{1} \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}
+										+ x_{2}\begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}
+										+ x_{3} \begin{bmatrix} 0 \amp 1 \\ 1 \amp 2 \end{bmatrix}
+										=
+										\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}
+									</me>
+									is <m>(x_{1},x_{2},x_{3})=(0,0,0)</m>. Thus, the set <m>S</m> is linearly independent.
+							</solution></li>
+						</ol>
+						</solution>
+						<answer>
+							<ol>
+							<li><answer>No, <m>S</m> does not span the set of all <m>2\times 2</m> matrices.
+							</answer></li>
+							<li><answer>
+								Yes, the set <m>S</m> is linearly independent.
+							</answer></li>
+						</ol>
+						</answer>
+					</exercise></p>
+						<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 3.2, Exercise 23-->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 2, Exercise 2.1.14) </p></aside>
+							Let <m>A = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}</m> and <m> B = \begin{bmatrix} 1 \amp 2 \\ 3 \amp k \end{bmatrix}</m>.  Is it possible to find <m>k</m> such that <m> AB = BA</m>? If so, what should <m> k </m> equal? 
+						</statement>
+						<hint>
+							Compute both <m>AB</m> and <m>BA</m> and compare the answer.
+						</hint>
+						<solution>
+							We compute
+							<me>
+								AB = \begin{bmatrix} 7 \amp 2+2k \\ 15 \amp 6+4k \end{bmatrix}
+								\text{ and }
+								BA = \begin{bmatrix} 7 \amp 10 \\ 3+3k \amp 6+4k \end{bmatrix}.
+							</me>
+							For these to be equal, we need them to be equal entrywise. The <m>(1,1)</m>- and the <m>(2,2)</m>-entry coincide for every choice of <m>k</m>, and for the other two entries we need
+							<me> 2 + 2k = 10, \text{ i.e. } k = 4, \text{ and also }15 = 3+3k, \text{ i.e. } k= 4.</me>
+						We see that <m>k=4</m> makes <m>AB=BA</m>.
+						</solution>
+						<answer>
+							Yes, <m>k=4</m>.
+						</answer>
+					</exercise></p>
+
+						<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 3.2, Exercise 25-->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 2, Exercise 2.1.15) </p></aside>
+							Let <m>A = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}</m> and <m> B = \begin{bmatrix} 1 \amp 2 \\ 1 \amp k \end{bmatrix}</m>.  Is it possible to find <m>k</m> such that <m> AB = BA</m>? If so, what should <m> k </m> equal? 
+						</statement>
+						<hint>
+							Compute both <m>AB</m> and <m>BA</m> and compare the answer.
+						</hint>
+						<solution>
+							We compute
+							<me>
+								AB = \begin{bmatrix} 3 \amp 2+2k \\ 7 \amp 6+4k \end{bmatrix}
+								\text{ and }
+								BA = \begin{bmatrix} 7 \amp 10 \\ 1+3k \amp 6+4k \end{bmatrix}.
+							</me>
+							For these to be equal, we need them to be equal entrywise, but no matter what <m>k</m> we choose, the <m>(1,1)</m>-entries will never coincide (<m>3\neq 7</m>). Thus, the answer is no.
+					</solution>
+						<answer>
+							No.
+						</answer>
+					</exercise></p>
+
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 3.2, Exercise 35-->
+						<statement>
+						<aside><p> (Source: <xref ref="ref-KN" />, Chapter 2, Exercise 2.1.16) </p></aside>
+						Let <m> A </m> and <m> B </m> be square matrices of the same size. 
+						<ol>
+							<li>
+								If <m> A </m> and <m> B </m> are symmetric, then so is <m> A - B </m>. 
+							</li>						
+							<li>
+								If <m>A</m> is symmetric, then so is <m> kA </m> for any scalar <m> k </m>.
+							</li>
+						</ol>
+					</statement>
+					<hint>See <xref ref="hint-def-symmetric"/> for the defintion of symmetric.</hint>
+					<!-- <hint>
+						</hint> -->
+						<solution>
+							<ol>
+							<li><solution>
+								Let <m>A=[a_{ij}]</m> and <m>B=[b_{ij}]</m>, so that <m>A-B=[a_{ij}-b_{ij}]</m>. Since <m>A=A^T</m>, we have <m>a_{ij} = a_{ji}</m> for all choices of <m>i,j</m>, and similarly <m>b_{ij} = b_{ji}</m>. Thus,
+								<md>
+									<mrow>(A-B)^{T} \amp= [a_{ij}-b_{ij}]^{T} = [a_{ji}-b_{ji}] </mrow>
+									<mrow>\amp= [a_{ij}-b_{ij}]  =  [a_{ij}]-[b_{ij}]  = A-B,</mrow>
+								</md>
+								so <m>A-B</m> is symmetric.
+							</solution>
+						</li>
+							<li><solution>
+								We need to show that <m>(kA)^{T} = k A</m> to conclude that <m>kA</m> is symmetric. Since equality of matrices is entrywise equality, we will consider their <m>(i,j)</m>-entries:
+								<p>Let <m>A=[a_{ij}]</m>. By definition of scalar multiplication, <m>kA=[ka_{ij}]</m>. By definition of the transpose, the <m>(i,j)</m>-entry of <m>(kA)^{T}</m> is therefore <m>ka_{ji}</m> (where we swapped the roles of <m>i</m> and <m>j</m>).</p>
+								<p>Since <m>A</m> is symmetric, we know that <m>a_{ij}=a_{ji}</m> for any choice of <m>i,j</m>, so in particular <m>ka_{ij}=ka_{ji}</m> also. This means that the <m>(i,j)</m>-entry of <m>kA</m> (namely <m>ka_{ij}</m>) coincides with the <m>(i,j)</m>-entry of <m>(kA)^{T}</m> (namely <m>ka_{ji}</m>), which shows that <m> k A = (kA)^{T} </m> since they are equal entrywise.</p>
+							</solution>
+							</li>
+						</ol>
+						</solution>
+				</exercise></p>
+						<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 3.2, Exercise 39-->
+						<statement>
+						<aside><p> (Source: <xref ref="ref-KK" />, Chapter 2, Exercise 2.1.29) </p></aside>
+						A square matrix is called <em> skew-symmetric </em> if <m> A^T = -A </m>.  Show that the main diagonal of a skew-symmetric matrix consists of only zeros.
+				</statement>
+						<hint>
+							If <m>A=[a_{ij}]</m>, then the main diagonal consists of every entry of the matrix which is of the form <m> a_{ii} </m>.
+						</hint>
+						<solution>
+							Write <m>A=[a_{ij}]</m>. By assumption, 
+							<me>
+								[a_{ji}] = A^{T} = -A = [-a_{ij}],
+							</me>
+							so that <m>a_{ji}=-a_{ij} </m> for all choices of <m>i,j</m>. In particular, if <m>i=j</m>, then <m>a_{ii}=-a_{ii} </m>, so <m>a_{ii}=0</m>.
+						</solution>
+				</exercise> </p>
+
+				<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 3.2, Exercise 39-->
+						<statement>
+						<aside><p> (Source: <xref ref="ref-KN" />, Chapter 2, Exercise 2.1.17) </p></aside>
+						Show that <m> A + A^T </m> is symmetric for <em> any </em> square matrix <m> A </m>.
+				</statement>
+						<hint>
+							See <xref ref="hint-def-symmetric"/> for the definition of symmetric.
+						</hint>
+						<solution>
+							Recall first that <m>(A+B)^T = A^T + B^T</m> for any matrices <m>A, B</m> of the same size. Now, since <m>A</m> is square, <m>A</m> and <m>A^T</m> are of the same size, so we may use this fact for <m>B=A^T</m>:
+							<md>
+								<mrow> (A+A^T)^T \amp= A^T + (A^T)^T</mrow>
+								<mrow> \amp = A^T + A,\qquad\text{ since } (A^T)^=A</mrow>
+								<mrow> \amp = A + A^T,\qquad\text{ since addition is commutative.}</mrow>
+							</md>
+							This shows that <m>A+A^T</m> is its own transpose, i.e. symmetric.
+						</solution>
+						<!--<answer>
+						</answer> -->
+
+				</exercise> </p>
+				</exercises>
