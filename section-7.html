@@ -1,17 +1,19 @@
-<!DOCTYPE html>
-<!--**************************************-->
-<!--*    Generated from PreTeXt source   *-->
-<!--*    on 2020-02-25T12:20:16-08:00    *-->
-<!--*                                    *-->
-<!--*      https://pretextbook.org       *-->
-<!--*                                    *-->
-<!--**************************************-->
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-01-09T21:01:38-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
 <html lang="en-US">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Matrix Algebra</title>
 <meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -24,7 +26,7 @@ MathJax.Hub.Config({
     jax: ["input/AsciiMath"],
     extensions: ["asciimath2jax.js"],
     TeX: {
-        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", "AMScd.js", ],
         // scrolling to fragment identifiers is controlled by other Javascript
         positionToHash: false,
         equationNumbers: { autoNumber: "none", useLabelIds: true, },
@@ -41,23 +43,21 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
-<script>var logged_in = false;
-var role = 'student';
-var guest_access = true;
-var login_required = false;
-var js_version = 0.11;
-</script>
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
 </head>
 <body class="mathbook-book has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\matr}[2]{\left[\begin{array}{#1}#2\end{array}\right]}
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" class="hidden-content" style="display:none">\(\newcommand{\matr}[2]{\left[\begin{array}{#1}#2\end{array}\right]}
 \newcommand{\vect}[1]{\overrightarrow{#1}}
 \let\mbf\mathbf
 \newcommand{\norm}[1]{\left\| #1 \right\|}
@@ -79,7 +79,7 @@ var js_version = 0.11;
 <p class="byline">Christopher Eagle</p>
 </div>
 </div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="section-6.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter-3.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="section-8.html" title="Next">Next</a></span></div>
 </div>
@@ -87,9 +87,9 @@ var js_version = 0.11;
 <button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-6.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter-3.html" title="Up">Up</a><a class="next-button button toolbar-item" href="section-8.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
 <nav id="toc"><ul>
-<li class="link">
+<li class="link frontmatter">
 <a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
 <li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1">Acknowledgements</a></li>
 <li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
@@ -125,20 +125,20 @@ var js_version = 0.11;
 </ul>
 </li>
 <li class="link">
-<a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">5</span> <span class="title">Orthogonality</span></a><ul><li><a href="exercises-14.html" data-scroll="exercises-14">Exercises</a></li></ul>
+<a href="chapter-5.html" data-scroll="chapter-5"><span class="codenumber">5</span> <span class="title">Orthogonality</span></a><ul><li><a href="section-14.html" data-scroll="section-14">Orthogonality</a></li></ul>
 </li>
-<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link backmatter"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
 <li class="link"><a href="ref-references.html" data-scroll="ref-references"><span class="title">References</span></a></li>
 </ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
-<main class="main"><div id="content" class="pretext-content"><section class="section" id="section-7"><h2 class="heading hide-type">
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="section-7"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">Matrix Algebra</span>
 </h2>
 <section class="exercises" id="exercises-7"><h3 class="heading hide-type">
 <span class="type">Exercises</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<p id="p-529"><article class="exercise-like" id="exercise-65"><h6 class="heading"><span class="codenumber">1.</span></h6>
-<aside class="aside-like" id="aside-73"><p id="p-530">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.1.5)</p></aside> Find \(A \) in terms of \(B \) if: <ol class="lower-alpha cols2">
+<p id="p-529"><article class="exercise exercise-like" id="exercise-65"><h6 class="heading"><span class="codenumber">1<span class="period">.</span></span></h6>
+<aside class="aside aside-like" id="aside-73"><p id="p-530">(Source: <a class="xref" data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.1.5)</p></aside> Find \(A \) in terms of \(B \) if: <ol class="lower-alpha cols2">
 <li id="li-364"><div class="displaymath">
 \begin{equation*}
 A + B = 3A + 2B 
@@ -151,28 +151,28 @@ A + B = 3A + 2B
 </div></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-78" id="hint-78"><span class="type">Hint</span></a><div id="hk-hint-78" class="hidden-content tex2jax_ignore"><div class="solution">Theorem 2.1.1 in Section 2.1 of <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a> might help.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-96" id="answer-96"><span class="type">Answer</span></a><div id="hk-answer-96" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha cols2">
-<li id="li-368"><div class="displaymath">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-78" id="hint-78"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-78"><div class="hint solution-like">Theorem 2.1.1 in Section 2.1 of <a class="xref" data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a> might help.</div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-96" id="answer-96"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-96"><div class="answer solution-like"><ol class="lower-alpha cols2">
+<li id="li-366"><div class="displaymath">
 \begin{equation*}
 A= -\frac{1}{2} B  
 \end{equation*}
 </div></li>
-<li id="li-369"><div class="displaymath">
+<li id="li-367"><div class="displaymath">
 \begin{equation*}
 A = -\frac{11}{3}B 
 \end{equation*}
 </div></li>
 </ol></div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-115" id="solution-115"><span class="type">Solution</span></a><div id="hk-solution-115" class="hidden-content tex2jax_ignore"><div class="solution">Because of the properties listed in Theorem 2.1.1 of <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, we can manipulate both sides of the equations just like we would if \(A\) and \(B\) were numbers: <ol class="lower-alpha">
-<li id="li-366"><div class="displaymath">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-115" id="solution-115"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-115"><div class="solution solution-like">Because of the properties listed in Theorem 2.1.1 of <a class="xref" data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, we can manipulate both sides of the equations just like we would if \(A\) and \(B\) were numbers: <ol class="lower-alpha">
+<li id="li-368"><div class="displaymath">
 \begin{align*}
 A + B = 3A + 2B \iff \amp (1-3)A = (2-1)B \\
 \iff \amp -2A = B \\
 \iff \amp A= -\frac{1}{2} B. 
 \end{align*}
 </div></li>
-<li id="li-367"><div class="displaymath">
+<li id="li-369"><div class="displaymath">
 \begin{align*}
 2A - B = 5(A + 2B)  \iff \amp 2A - B = 5A + 10B\\
 \iff \amp -3A = 11B\\
@@ -182,8 +182,8 @@ A + B = 3A + 2B \iff \amp (1-3)A = (2-1)B \\
 </ol>
 </div></div>
 </div></article></p>
-<p id="p-531"><article class="exercise-like" id="exercise-66"><h6 class="heading"><span class="codenumber">2.</span></h6>
-<aside class="aside-like" id="aside-74"><p id="p-532">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.1.6)</p></aside> If \(X, Y, A, \) and \(B \) are matrices of the same size, solve the following systems of equations to obtain \(X \) and \(Y \) in terms of \(A \) and \(B \text{.}\) <ol class="lower-alpha cols2">
+<p id="p-531"><article class="exercise exercise-like" id="exercise-66"><h6 class="heading"><span class="codenumber">2<span class="period">.</span></span></h6>
+<aside class="aside aside-like" id="aside-74"><p id="p-532">(Source: <a class="xref" data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.1.6)</p></aside> If \(X, Y, A, \) and \(B \) are matrices of the same size, solve the following systems of equations to obtain \(X \) and \(Y \) in terms of \(A \) and \(B \text{.}\) <ol class="lower-alpha cols2">
 <li id="li-370"><div class="displaymath">
 \begin{align*}
 5X + 3Y  \amp =  A\\
@@ -198,18 +198,18 @@ A + B = 3A + 2B \iff \amp (1-3)A = (2-1)B \\
 </div></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-79" id="hint-79"><span class="type">Hint</span></a><div id="hk-hint-79" class="hidden-content tex2jax_ignore"><div class="solution">It might help to look back into Theorem 2.1.1 of <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-97" id="answer-97"><span class="type">Answer</span></a><div id="hk-answer-97" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
-<li id="li-374">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-98" id="answer-98"><span class="type">Answer</span></a><div id="hk-answer-98" class="hidden-content tex2jax_ignore"><div class="solution">\(X= -A + 3 B\text{,}\) \(Y=-5B+2A\text{.}\)</div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-79" id="hint-79"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-79"><div class="hint solution-like">It might help to look back into Theorem 2.1.1 of <a class="xref" data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>.</div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-97" id="answer-97"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-97"><div class="answer solution-like"><ol class="lower-alpha">
+<li id="li-372">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-98" id="answer-98"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-98"><div class="answer solution-like">\(X= -A + 3 B\text{,}\) \(Y=-5B+2A\text{.}\)</div></div>
 </li>
-<li id="li-375">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-99" id="answer-99"><span class="type">Answer</span></a><div id="hk-answer-99" class="hidden-content tex2jax_ignore"><div class="solution">\(X= 4A - 3 B\text{,}\) \(Y=4B-5A\)</div></div>
+<li id="li-373">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-99" id="answer-99"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-99"><div class="answer solution-like">\(X= 4A - 3 B\text{,}\) \(Y=4B-5A\)</div></div>
 </li>
 </ol></div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-116" id="solution-116"><span class="type">Solution</span></a><div id="hk-solution-116" class="hidden-content tex2jax_ignore"><div class="solution">Because of the properties listed in Theorem 2.1.1 of <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, we can manipulate both sides of the equations just like we would if \(A, B\) were numbers and \(X, Y\) were variables (however, we cannot simply divide by a matrix!). <ol class="lower-alpha">
-<li id="li-372">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-117" id="solution-117"><span class="type">Solution</span></a><div id="hk-solution-117" class="hidden-content tex2jax_ignore"><div class="solution">The system can also be written as<div class="displaymath">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-116" id="solution-116"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-116"><div class="solution solution-like">Because of the properties listed in Theorem 2.1.1 of <a class="xref" data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, we can manipulate both sides of the equations just like we would if \(A, B\) were numbers and \(X, Y\) were variables (however, we cannot simply divide by a matrix!). <ol class="lower-alpha">
+<li id="li-374">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-117" id="solution-117"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-117"><div class="solution solution-like">The system can also be written as<div class="displaymath">
 \begin{equation*}
 \matr{cc|c}{ 5 \amp 3 \amp A \\ 2 \amp 1 \amp B},
 \end{equation*}
@@ -234,8 +234,8 @@ A + B = 3A + 2B \iff \amp (1-3)A = (2-1)B \\
 \end{align*}
 </div>We conclude that \(X= \frac{1}{10} (-10A + 30 B) = -A + 3 B\) and \(Y=-5B+2A\text{.}\)</div></div>
 </li>
-<li id="li-373">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-118" id="solution-118"><span class="type">Solution</span></a><div id="hk-solution-118" class="hidden-content tex2jax_ignore"><div class="solution">The system can also be written as<div class="displaymath">
+<li id="li-375">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-118" id="solution-118"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-118"><div class="solution solution-like">The system can also be written as<div class="displaymath">
 \begin{equation*}
 \matr{cc|c}{ 4 \amp 3 \amp A \\ 5 \amp 4 \amp B},
 \end{equation*}
@@ -260,8 +260,8 @@ A + B = 3A + 2B \iff \amp (1-3)A = (2-1)B \\
 </ol>
 </div></div>
 </div></article></p>
-<p id="p-533"><article class="exercise-like" id="exercise-67"><h6 class="heading"><span class="codenumber">3.</span></h6>
-<aside class="aside-like" id="aside-75"><p id="p-534">(Source: <a data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 9, Exercise 9.2.7)</p></aside> Determine whether  each of the following sets of matrices is linearly indpendent.  If it is linearly independent, write one matrix as a linear combination of the other matrices in the set. <ol class="lower-alpha">
+<p id="p-533"><article class="exercise exercise-like" id="exercise-67"><h6 class="heading"><span class="codenumber">3<span class="period">.</span></span></h6>
+<aside class="aside aside-like" id="aside-75"><p id="p-534">(Source: <a class="xref" data-knowl="./knowl/ref-PS.html" title="Bibliographic Entry 3">[3]</a>, Chapter 9, Exercise 9.2.7)</p></aside> Determine whether  each of the following sets of matrices is linearly indpendent.  If it is linearly independent, write one matrix as a linear combination of the other matrices in the set. <ol class="lower-alpha">
 <li id="li-376"><div class="displaymath">
 \begin{equation*}
 \left\{ \begin{bmatrix} 1 \amp 2 \\ 0 \amp 1 \end{bmatrix},\begin{bmatrix} -7 \amp 2 \\ -2\amp -3 \end{bmatrix},\begin{bmatrix} 4 \amp 0 \\ 1 \amp 2 \end{bmatrix}\right\}  
@@ -274,27 +274,27 @@ A + B = 3A + 2B \iff \amp (1-3)A = (2-1)B \\
 </div></li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-matrix-linear-dependence" id="hint-matrix-linear-dependence"><span class="type">Hint</span> <span class="codenumber">1</span></a><div id="hk-hint-matrix-linear-dependence" class="hidden-content tex2jax_ignore"><div class="solution">Matrices \(A_{1}, \ldots, A_{m}\) of the same size are called <em class="emphasis">linearly dependent</em> if there exist numbers \(c_{1},\ldots, c_{m}\text{,}\) not all of which are zero, so that<div class="displaymath">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-matrix-linear-dependence" id="hint-matrix-linear-dependence"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">1</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-matrix-linear-dependence"><div class="hint solution-like">Matrices \(A_{1}, \ldots, A_{m}\) of the same size are called <em class="emphasis">linearly dependent</em> if there exist numbers \(c_{1},\ldots, c_{m}\text{,}\) not all of which are zero, so that<div class="displaymath">
 \begin{equation*}
 c_{1}A_{1}+c_{2}A_{2}+\ldots + c_{m}A_{m} = 0.
 \end{equation*}
 </div>Otherwise, they are called <em class="emphasis">linearly independent</em>.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-hint-matrix-linear-independence" id="hint-matrix-linear-independence"><span class="type">Hint</span> <span class="codenumber">2</span></a><div id="hk-hint-matrix-linear-independence" class="hidden-content tex2jax_ignore"><div class="solution">Another way of phrasing linear independence is: Matrices \(A_{1}, \ldots, A_{m}\) of the same size are linearly independent if the only solution \((c_{1}, \ldots, c_{m})\) to the system of linear equations<div class="displaymath">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-matrix-linear-independence" id="hint-matrix-linear-independence"><span class="type">Hint</span><span class="space"> </span><span class="codenumber">2</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-matrix-linear-independence"><div class="hint solution-like">Another way of phrasing linear independence is: Matrices \(A_{1}, \ldots, A_{m}\) of the same size are linearly independent if the only solution \((c_{1}, \ldots, c_{m})\) to the system of linear equations<div class="displaymath">
 \begin{equation*}
 x_{1}A_{1}+x_{2}A_{2}+\ldots + x_{m}A_{m} = 0
 \end{equation*}
 </div>is the trivial solution, \((0,\ldots, 0).\)</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-100" id="answer-100"><span class="type">Answer</span></a><div id="hk-answer-100" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
-<li id="li-380">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-101" id="answer-101"><span class="type">Answer</span></a><div id="hk-answer-101" class="hidden-content tex2jax_ignore"><div class="solution">The matrices are linearly independent.</div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-100" id="answer-100"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-100"><div class="answer solution-like"><ol class="lower-alpha">
+<li id="li-378">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-101" id="answer-101"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-101"><div class="answer solution-like">The matrices are linearly independent.</div></div>
 </li>
-<li id="li-381">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-102" id="answer-102"><span class="type">Answer</span></a><div id="hk-answer-102" class="hidden-content tex2jax_ignore"><div class="solution">The matrices are linearly independent.</div></div>
+<li id="li-379">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-102" id="answer-102"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-102"><div class="answer solution-like">The matrices are linearly independent.</div></div>
 </li>
 </ol></div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-119" id="solution-119"><span class="type">Solution</span></a><div id="hk-solution-119" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
-<li id="li-378">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-120" id="solution-120"><span class="type">Solution</span></a><div id="hk-solution-120" class="hidden-content tex2jax_ignore"><div class="solution">We are wondering whether there exist numbers \(x,y,z\text{,}\) not all zero, such that<div class="displaymath">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-119" id="solution-119"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-119"><div class="solution solution-like"><ol class="lower-alpha">
+<li id="li-380">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-120" id="solution-120"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-120"><div class="solution solution-like">We are wondering whether there exist numbers \(x,y,z\text{,}\) not all zero, such that<div class="displaymath">
 \begin{equation*}
 x \begin{bmatrix} 1 \amp 2 \\ 0 \amp 1 \end{bmatrix}
 + y\begin{bmatrix} -7 \amp 2 \\ -2\amp -3 \end{bmatrix}
@@ -354,8 +354,8 @@ x - 7 y + 4 z = 0.
 \end{align*}
 </div>At this point, we can already see that further row reduction will yield that the only solution is \((x,y,z)=(0,0,0)\text{.}\) Therefore, the matrices are linearly independent.</div></div>
 </li>
-<li id="li-379">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-121" id="solution-121"><span class="type">Solution</span></a><div id="hk-solution-121" class="hidden-content tex2jax_ignore"><div class="solution">We are wondering whether there exist numbers \(w,x,y,z\text{,}\) not all zero, such that<div class="displaymath">
+<li id="li-381">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-121" id="solution-121"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-121"><div class="solution solution-like">We are wondering whether there exist numbers \(w,x,y,z\text{,}\) not all zero, such that<div class="displaymath">
 \begin{equation*}
 w\begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix}
 +x\begin{bmatrix} 0 \amp 1 \\ 0\amp 1 \end{bmatrix}
@@ -374,8 +374,8 @@ w\begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix}
 </li>
 </ol></div></div>
 </div></article></p>
-<p id="p-540"><article class="exercise-like" id="exercise-68"><h6 class="heading"><span class="codenumber">4.</span></h6>
-<aside class="aside-like" id="aside-76"><p id="p-541">(Source: <a data-knowl="./knowl/ref-RB.html" title="Bibliographic Entry 5">[5]</a>, LISS.C20</p></aside> Let<div class="displaymath">
+<p id="p-540"><article class="exercise exercise-like" id="exercise-68"><h6 class="heading"><span class="codenumber">4<span class="period">.</span></span></h6>
+<aside class="aside aside-like" id="aside-76"><p id="p-541">(Source: <a class="xref" data-knowl="./knowl/ref-RB.html" title="Bibliographic Entry 5">[5]</a>, LISS.C20</p></aside> Let<div class="displaymath">
 \begin{equation*}
 S = \left\{ \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}, \begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}, \begin{bmatrix} 0 \amp 1 \\ 1 \amp 2 \end{bmatrix} \right\}
 \end{equation*}
@@ -385,18 +385,18 @@ S = \left\{ \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}, \begin{bmatrix} 
 <li id="li-383">Determine if \(S \) is linearly independent.</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-82" id="hint-82"><span class="type">Hint</span></a><div id="hk-hint-82" class="hidden-content tex2jax_ignore"><div class="solution">See  and  for the definition of linear independence.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-103" id="answer-103"><span class="type">Answer</span></a><div id="hk-answer-103" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
-<li id="li-386">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-104" id="answer-104"><span class="type">Answer</span></a><div id="hk-answer-104" class="hidden-content tex2jax_ignore"><div class="solution">No, \(S\) does not span the set of all \(2\times 2\) matrices.</div></div>
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-82" id="hint-82"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-82"><div class="hint solution-like">See  and  for the definition of linear independence.</div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-103" id="answer-103"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-103"><div class="answer solution-like"><ol class="lower-alpha">
+<li id="li-384">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-104" id="answer-104"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-104"><div class="answer solution-like">No, \(S\) does not span the set of all \(2\times 2\) matrices.</div></div>
 </li>
-<li id="li-387">
-<a data-knowl="" class="id-ref" data-refid="hk-answer-105" id="answer-105"><span class="type">Answer</span></a><div id="hk-answer-105" class="hidden-content tex2jax_ignore"><div class="solution">Yes, the set \(S\) is linearly independent.</div></div>
+<li id="li-385">
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-105" id="answer-105"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-105"><div class="answer solution-like">Yes, the set \(S\) is linearly independent.</div></div>
 </li>
 </ol></div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-122" id="solution-122"><span class="type">Solution</span></a><div id="hk-solution-122" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
-<li id="li-384">
-<a data-knowl="" class="id-ref" data-refid="hk-soln-3-2-4a" id="soln-3-2-4a"><span class="type">Solution</span></a><div id="hk-soln-3-2-4a" class="hidden-content tex2jax_ignore"><div class="solution">The set \(S \) spans the set of all \(2 \times 2 \) matrices if and only if, for any \(2 \times 2 \) matrix \(A\text{,}\) there exist numbers \(x_{1}, x_{2}, x_{3}\) so that<div class="displaymath">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-122" id="solution-122"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-122"><div class="solution solution-like"><ol class="lower-alpha">
+<li id="li-386">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-soln-3-2-4a" id="soln-3-2-4a"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-soln-3-2-4a"><div class="solution solution-like">The set \(S \) spans the set of all \(2 \times 2 \) matrices if and only if, for any \(2 \times 2 \) matrix \(A\text{,}\) there exist numbers \(x_{1}, x_{2}, x_{3}\) so that<div class="displaymath">
 \begin{equation*}
 x_{1} \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}
 + x_{2}\begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}
@@ -478,8 +478,8 @@ x_{1} + 2x_{2} + 2x_{3} \amp = d
 \end{equation*}
 </div>Since \(\begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix} = \begin{bmatrix} 1 \amp 0 \\ 0 \amp 0 \end{bmatrix}\) is an example of a choice of numbers which makes the system inconsistent, we conclude that, no, \(S\) does not span the set of all \(2\times 2\) matrices.</div></div>
 </li>
-<li id="li-385">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-124" id="solution-124"><span class="type">Solution</span></a><div id="hk-solution-124" class="hidden-content tex2jax_ignore"><div class="solution">We need to figure out wheter<div class="displaymath">
+<li id="li-387">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-124" id="solution-124"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-124"><div class="solution solution-like">We need to figure out wheter<div class="displaymath">
 \begin{equation*}
 x_{1} \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}
 + x_{2}\begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}
@@ -487,7 +487,7 @@ x_{1} \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}
 =
 \begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}
 \end{equation*}
-</div>has a non-zero solution. We reuse our computation from <a data-knowl="./knowl/soln-3-2-4a.html" title="Solution 3.2.4.a.1">Solution 3.2.4.a.1</a> for the case \(\begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix} = \begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}\text{:}\)<div class="displaymath">
+</div>has a non-zero solution. We reuse our computation from <a class="xref" data-knowl="./knowl/soln-3-2-4a.html" title="Solution 3.2.4.a.1">Solution 3.2.4.a.1</a> for the case \(\begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix} = \begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}\text{:}\)<div class="displaymath">
 \begin{align*}
 \matr{ccc|c}
 {
@@ -534,11 +534,11 @@ x_{1} \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}
 </li>
 </ol></div></div>
 </div></article></p>
-<p id="p-542"><article class="exercise-like" id="exercise-69"><h6 class="heading"><span class="codenumber">5.</span></h6>
-<aside class="aside-like" id="aside-77"><p id="p-543">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.14)</p></aside> Let \(A = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}\) and \(B = \begin{bmatrix} 1 \amp 2 \\ 3 \amp k \end{bmatrix}\text{.}\)  Is it possible to find \(k\) such that \(AB = BA\text{?}\) If so, what should \(k \) equal?<div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-83" id="hint-83"><span class="type">Hint</span></a><div id="hk-hint-83" class="hidden-content tex2jax_ignore"><div class="solution">Compute both \(AB\) and \(BA\) and compare the answer.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-106" id="answer-106"><span class="type">Answer</span></a><div id="hk-answer-106" class="hidden-content tex2jax_ignore"><div class="solution">Yes, \(k=4\text{.}\)</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-125" id="solution-125"><span class="type">Solution</span></a><div id="hk-solution-125" class="hidden-content tex2jax_ignore"><div class="solution">We compute<div class="displaymath">
+<p id="p-542"><article class="exercise exercise-like" id="exercise-69"><h6 class="heading"><span class="codenumber">5<span class="period">.</span></span></h6>
+<aside class="aside aside-like" id="aside-77"><p id="p-543">(Source: <a class="xref" data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.14)</p></aside> Let \(A = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}\) and \(B = \begin{bmatrix} 1 \amp 2 \\ 3 \amp k \end{bmatrix}\text{.}\)  Is it possible to find \(k\) such that \(AB = BA\text{?}\) If so, what should \(k \) equal?<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-83" id="hint-83"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-83"><div class="hint solution-like">Compute both \(AB\) and \(BA\) and compare the answer.</div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-106" id="answer-106"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-106"><div class="answer solution-like">Yes, \(k=4\text{.}\)</div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-125" id="solution-125"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-125"><div class="solution solution-like">We compute<div class="displaymath">
 \begin{equation*}
 AB = \begin{bmatrix} 7 \amp 2+2k \\ 15 \amp 6+4k \end{bmatrix}
 \text{ and }
@@ -550,11 +550,11 @@ BA = \begin{bmatrix} 7 \amp 10 \\ 3+3k \amp 6+4k \end{bmatrix}.
 \end{equation*}
 </div>We see that \(k=4\) makes \(AB=BA\text{.}\)</div></div>
 </div></article></p>
-<p id="p-544"><article class="exercise-like" id="exercise-70"><h6 class="heading"><span class="codenumber">6.</span></h6>
-<aside class="aside-like" id="aside-78"><p id="p-545">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.15)</p></aside> Let \(A = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}\) and \(B = \begin{bmatrix} 1 \amp 2 \\ 1 \amp k \end{bmatrix}\text{.}\)  Is it possible to find \(k\) such that \(AB = BA\text{?}\) If so, what should \(k \) equal?<div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-84" id="hint-84"><span class="type">Hint</span></a><div id="hk-hint-84" class="hidden-content tex2jax_ignore"><div class="solution">Compute both \(AB\) and \(BA\) and compare the answer.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-answer-107" id="answer-107"><span class="type">Answer</span></a><div id="hk-answer-107" class="hidden-content tex2jax_ignore"><div class="solution">No.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-126" id="solution-126"><span class="type">Solution</span></a><div id="hk-solution-126" class="hidden-content tex2jax_ignore"><div class="solution">We compute<div class="displaymath">
+<p id="p-544"><article class="exercise exercise-like" id="exercise-70"><h6 class="heading"><span class="codenumber">6<span class="period">.</span></span></h6>
+<aside class="aside aside-like" id="aside-78"><p id="p-545">(Source: <a class="xref" data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.15)</p></aside> Let \(A = \begin{bmatrix} 1 \amp 2 \\ 3 \amp 4 \end{bmatrix}\) and \(B = \begin{bmatrix} 1 \amp 2 \\ 1 \amp k \end{bmatrix}\text{.}\)  Is it possible to find \(k\) such that \(AB = BA\text{?}\) If so, what should \(k \) equal?<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-84" id="hint-84"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-84"><div class="hint solution-like">Compute both \(AB\) and \(BA\) and compare the answer.</div></div>
+<a data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-107" id="answer-107"><span class="type">Answer</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-107"><div class="answer solution-like">No.</div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-126" id="solution-126"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-126"><div class="solution solution-like">We compute<div class="displaymath">
 \begin{equation*}
 AB = \begin{bmatrix} 3 \amp 2+2k \\ 7 \amp 6+4k \end{bmatrix}
 \text{ and }
@@ -562,16 +562,16 @@ BA = \begin{bmatrix} 7 \amp 10 \\ 1+3k \amp 6+4k \end{bmatrix}.
 \end{equation*}
 </div>For these to be equal, we need them to be equal entrywise, but no matter what \(k\) we choose, the \((1,1)\)-entries will never coincide (\(3\neq 7\)). Thus, the answer is no.</div></div>
 </div></article></p>
-<p id="p-546"><article class="exercise-like" id="exercise-71"><h6 class="heading"><span class="codenumber">7.</span></h6>
-<aside class="aside-like" id="aside-79"><p id="p-547">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.1.16)</p></aside> Let \(A \) and \(B \) be square matrices of the same size. <ol class="lower-alpha">
+<p id="p-546"><article class="exercise exercise-like" id="exercise-71"><h6 class="heading"><span class="codenumber">7<span class="period">.</span></span></h6>
+<aside class="aside aside-like" id="aside-79"><p id="p-547">(Source: <a class="xref" data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.1.16)</p></aside> Let \(A \) and \(B \) be square matrices of the same size. <ol class="lower-alpha">
 <li id="li-388">If \(A \) and \(B \) are symmetric, then so is \(A - B \text{.}\)</li>
 <li id="li-389">If \(A\) is symmetric, then so is \(kA \) for any scalar \(k \text{.}\)</li>
 </ol>
 <div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-85" id="hint-85"><span class="type">Hint</span></a><div id="hk-hint-85" class="hidden-content tex2jax_ignore"><div class="solution">See <a data-knowl="./knowl/hint-def-symmetric.html" title="Hint 3.1.5.1">Hint 3.1.5.1</a> for the defintion of symmetric.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-127" id="solution-127"><span class="type">Solution</span></a><div id="hk-solution-127" class="hidden-content tex2jax_ignore"><div class="solution"><ol class="lower-alpha">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-85" id="hint-85"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-85"><div class="hint solution-like">See <a class="xref" data-knowl="./knowl/hint-def-symmetric.html" title="Hint 3.1.5.1">Hint 3.1.5.1</a> for the defintion of symmetric.</div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-127" id="solution-127"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-127"><div class="solution solution-like"><ol class="lower-alpha">
 <li id="li-390">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-128" id="solution-128"><span class="type">Solution</span></a><div id="hk-solution-128" class="hidden-content tex2jax_ignore"><div class="solution">Let \(A=[a_{ij}]\) and \(B=[b_{ij}]\text{,}\) so that \(A-B=[a_{ij}-b_{ij}]\text{.}\) Since \(A=A^T\text{,}\) we have \(a_{ij} = a_{ji}\) for all choices of \(i,j\text{,}\) and similarly \(b_{ij} = b_{ji}\text{.}\) Thus,<div class="displaymath">
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-128" id="solution-128"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-128"><div class="solution solution-like">Let \(A=[a_{ij}]\) and \(B=[b_{ij}]\text{,}\) so that \(A-B=[a_{ij}-b_{ij}]\text{.}\) Since \(A=A^T\text{,}\) we have \(a_{ij} = a_{ji}\) for all choices of \(i,j\text{,}\) and similarly \(b_{ij} = b_{ji}\text{.}\) Thus,<div class="displaymath">
 \begin{align*}
 (A-B)^{T} \amp= [a_{ij}-b_{ij}]^{T} = [a_{ji}-b_{ji}] \\
 \amp= [a_{ij}-b_{ij}]  =  [a_{ij}]-[b_{ij}]  = A-B,
@@ -579,25 +579,25 @@ BA = \begin{bmatrix} 7 \amp 10 \\ 1+3k \amp 6+4k \end{bmatrix}.
 </div>so \(A-B\) is symmetric.</div></div>
 </li>
 <li id="li-391">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-129" id="solution-129"><span class="type">Solution</span></a><div id="hk-solution-129" class="hidden-content tex2jax_ignore"><div class="solution">We need to show that \((kA)^{T} = k A\) to conclude that \(kA\) is symmetric. Since equality of matrices is entrywise equality, we will consider their \((i,j)\)-entries: <p id="p-548">Let \(A=[a_{ij}]\text{.}\) By definition of scalar multiplication, \(kA=[ka_{ij}]\text{.}\) By definition of the transpose, the \((i,j)\)-entry of \((kA)^{T}\) is therefore \(ka_{ji}\) (where we swapped the roles of \(i\) and \(j\)).</p>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-129" id="solution-129"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-129"><div class="solution solution-like">We need to show that \((kA)^{T} = k A\) to conclude that \(kA\) is symmetric. Since equality of matrices is entrywise equality, we will consider their \((i,j)\)-entries: <p id="p-548">Let \(A=[a_{ij}]\text{.}\) By definition of scalar multiplication, \(kA=[ka_{ij}]\text{.}\) By definition of the transpose, the \((i,j)\)-entry of \((kA)^{T}\) is therefore \(ka_{ji}\) (where we swapped the roles of \(i\) and \(j\)).</p>
 <p id="p-549">Since \(A\) is symmetric, we know that \(a_{ij}=a_{ji}\) for any choice of \(i,j\text{,}\) so in particular \(ka_{ij}=ka_{ji}\) also. This means that the \((i,j)\)-entry of \(kA\) (namely \(ka_{ij}\)) coincides with the \((i,j)\)-entry of \((kA)^{T}\) (namely \(ka_{ji}\)), which shows that \(k A = (kA)^{T} \) since they are equal entrywise.</p>
 </div></div>
 </li>
 </ol></div></div>
 </div></article></p>
-<p id="p-550"><article class="exercise-like" id="exercise-72"><h6 class="heading"><span class="codenumber">8.</span></h6>
-<aside class="aside-like" id="aside-80"><p id="p-551">(Source: <a data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.29)</p></aside> A square matrix is called <em class="emphasis">skew-symmetric</em> if \(A^T = -A \text{.}\)  Show that the main diagonal of a skew-symmetric matrix consists of only zeros.<div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-86" id="hint-86"><span class="type">Hint</span></a><div id="hk-hint-86" class="hidden-content tex2jax_ignore"><div class="solution">If \(A=[a_{ij}]\text{,}\) then the main diagonal consists of every entry of the matrix which is of the form \(a_{ii} \text{.}\)</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-130" id="solution-130"><span class="type">Solution</span></a><div id="hk-solution-130" class="hidden-content tex2jax_ignore"><div class="solution">Write \(A=[a_{ij}]\text{.}\) By assumption,<div class="displaymath">
+<p id="p-550"><article class="exercise exercise-like" id="exercise-72"><h6 class="heading"><span class="codenumber">8<span class="period">.</span></span></h6>
+<aside class="aside aside-like" id="aside-80"><p id="p-551">(Source: <a class="xref" data-knowl="./knowl/ref-KK.html" title="Bibliographic Entry 1">[1]</a>, Chapter 2, Exercise 2.1.29)</p></aside> A square matrix is called <em class="emphasis">skew-symmetric</em> if \(A^T = -A \text{.}\)  Show that the main diagonal of a skew-symmetric matrix consists of only zeros.<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-86" id="hint-86"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-86"><div class="hint solution-like">If \(A=[a_{ij}]\text{,}\) then the main diagonal consists of every entry of the matrix which is of the form \(a_{ii} \text{.}\)</div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-130" id="solution-130"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-130"><div class="solution solution-like">Write \(A=[a_{ij}]\text{.}\) By assumption,<div class="displaymath">
 \begin{equation*}
 [a_{ji}] = A^{T} = -A = [-a_{ij}],
 \end{equation*}
 </div>so that \(a_{ji}=-a_{ij} \) for all choices of \(i,j\text{.}\) In particular, if \(i=j\text{,}\) then \(a_{ii}=-a_{ii} \text{,}\) so \(a_{ii}=0\text{.}\)</div></div>
 </div></article></p>
-<p id="p-552"><article class="exercise-like" id="exercise-73"><h6 class="heading"><span class="codenumber">9.</span></h6>
-<aside class="aside-like" id="aside-81"><p id="p-553">(Source: <a data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.1.17)</p></aside> Show that \(A + A^T \) is symmetric for <em class="emphasis">any</em> square matrix \(A \text{.}\)<div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-hint-87" id="hint-87"><span class="type">Hint</span></a><div id="hk-hint-87" class="hidden-content tex2jax_ignore"><div class="solution">See <a data-knowl="./knowl/hint-def-symmetric.html" title="Hint 3.1.5.1">Hint 3.1.5.1</a> for the definition of symmetric.</div></div>
-<a data-knowl="" class="id-ref" data-refid="hk-solution-131" id="solution-131"><span class="type">Solution</span></a><div id="hk-solution-131" class="hidden-content tex2jax_ignore"><div class="solution">Recall first that \((A+B)^T = A^T + B^T\) for any matrices \(A, B\) of the same size. Now, since \(A\) is square, \(A\) and \(A^T\) are of the same size, so we may use this fact for \(B=A^T\text{:}\)<div class="displaymath">
+<p id="p-552"><article class="exercise exercise-like" id="exercise-73"><h6 class="heading"><span class="codenumber">9<span class="period">.</span></span></h6>
+<aside class="aside aside-like" id="aside-81"><p id="p-553">(Source: <a class="xref" data-knowl="./knowl/ref-KN.html" title="Bibliographic Entry 4">[4]</a>, Chapter 2, Exercise 2.1.17)</p></aside> Show that \(A + A^T \) is symmetric for <em class="emphasis">any</em> square matrix \(A \text{.}\)<div class="solutions">
+<a data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-87" id="hint-87"><span class="type">Hint</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-87"><div class="hint solution-like">See <a class="xref" data-knowl="./knowl/hint-def-symmetric.html" title="Hint 3.1.5.1">Hint 3.1.5.1</a> for the definition of symmetric.</div></div>
+<a data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-131" id="solution-131"><span class="type">Solution</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-131"><div class="solution solution-like">Recall first that \((A+B)^T = A^T + B^T\) for any matrices \(A, B\) of the same size. Now, since \(A\) is square, \(A\) and \(A^T\) are of the same size, so we may use this fact for \(B=A^T\text{:}\)<div class="displaymath">
 \begin{align*}
 (A+A^T)^T \amp= A^T + (A^T)^T\\
 \amp = A^T + A,\qquad\text{ since } (A^T)^=A\\
@@ -606,7 +606,5 @@ BA = \begin{bmatrix} 7 \amp 10 \\ 1+3k \amp 6+4k \end{bmatrix}.
 </div>This shows that \(A+A^T\) is its own transpose, i.e. symmetric.</div></div>
 </div></article></p></section></section></div></main>
 </div>
-<div class="login-link"><span id="loginlogout" class="login">login</span></div>
-<script src="https://pretextbook.org/js/0.11/login.js"></script>
 </body>
 </html>

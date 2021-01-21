@@ -1,0 +1,2311 @@
+				<exercises>
+ 					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 2.2, Exercises 1, 3, 5, 7-->
+						<statement>
+							<aside><p>(Source: <xref ref="ref-KN"/> in Section 1.2, Exercise 1.2.1.)</p></aside>
+							Which of the following matrices are in reduced row-echelon form?  Which are in row-echelon form?		
+							<ol label="[a]" cols="2">
+								<li>
+									<m>\begin{bmatrix}<!-- \begin{bmatrix*}[r] --> 1\amp  -1 \amp  2\\ 0 \amp  0 \amp  0 \\ 0 \amp  0 \amp  1 \end{bmatrix}<!-- \end{bmatrix*} --></m>
+								</li>
+								<li>
+									<m>\begin{bmatrix}<!-- \begin{bmatrix*}[r] --> 2\amp  1 \amp  -1 \amp  3 \\ 0 \amp  0 \amp  0 \amp  0 \end{bmatrix}<!-- \end{bmatrix*} --></m>
+								</li>
+								<li>
+									<m>\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->1\amp  -2 \amp  3 \amp  5 \\ 0 \amp  0 \amp  0 \amp  1 \end{bmatrix}<!-- \end{bmatrix*} --></m>
+								</li>
+								<li>
+									<m>\begin{bmatrix}<!-- \begin{bmatrix*}[r] --> 1\amp  0 \amp  0 \amp  3 \amp  1 \\ 0 \amp  0 \amp  0 \amp  1 \amp  1\\ 0 \amp  0 \amp  0 \amp  0 \amp  1 \end{bmatrix}<!-- \end{bmatrix*} --></m>
+								</li>
+								<li>
+									<m>\begin{bmatrix}<!-- \begin{bmatrix*}[r] --> 1 \amp  1 \\ 0 \amp  1\end{bmatrix}<!-- \end{bmatrix*} --></m>
+								</li>
+								<li>
+									<m>\begin{bmatrix}<!-- \begin{bmatrix*}[r] --> 0 \amp  0 \amp  1 \\  0 \amp  0 \amp  1 \\  0 \amp  0 \amp  1 \end{bmatrix}<!-- \end{bmatrix*} --></m>
+								</li>
+							</ol>
+						</statement>
+						<hint xml:id="def-REF">
+							<aside><p>(Source: <xref ref="ref-KN"/> Section 1.2, Definition 1.12)</p></aside>
+							A matrix is in <em>row-echelon form</em> (REF) if
+							<ol label="1.">
+								<li> all nonzero rows are above any rows of zeros, </li>
+								<li> each leading entry of a row is in a column to the right of the leading entries of any row above it, and</li>
+								<li> each leading entry of a row is equal to <m>1</m>.</li>
+							</ol>
+							
+							<p>
+							(Note that some sources <em>do not</em> assume that the leading entries are <m>1</m> for the REF.)</p>
+						</hint>
+						<hint xml:id="def-RREF">
+							<aside><p>(Source: <xref ref="ref-KN"/> Section 1.2, Definition 1.13)</p></aside>
+							A matrix is in <em>reduced row-echelon form</em> (RREF) if
+							<ol label="1.">
+								<li> it is in REF and</li>
+								<li> all entries in a column above and below a leading entry are zero.</li>
+							</ol>
+						</hint>
+						<answer>
+							<ol label="[a]" cols="2">
+								<li>
+									Neither in REF nor in RREF.
+								</li>
+								<li>
+									Neither in REF nor in RREF.
+								</li>
+								<li>
+									In REF, but not in RREF.
+								</li>
+								<li>
+									In REF, but not in RREF.
+								</li>
+								<li>
+									In REF, but not in RREF.
+								</li>
+								<li>
+									Neither in REF nor in RREF.
+								</li>
+							</ol>
+						</answer>
+						<solution>
+								<ol label="[a]">
+								<li>
+									The matrix is not in REF: The zero row is not at the bottom.
+								</li>
+								<li>
+									The matrix is in not in REF: The leading entry of the first row is not <m>1</m>. In particular, the matrix is not in RREF.
+								</li>
+								<li>
+									The matrix is in REF, but not in RREF: The last column, which contains a leading <m>1</m> in the second row, has a non-zero entry (<m>5</m>).
+								</li>
+								<li>
+									The matrix is in REF, but not in RREF: The fourth column, which contains a leading <m>1</m> in the second row, has a non-zero entry (<m>3</m>).
+								</li>
+								<li>
+									The matrix is in REF, but not in RREF: The second column, which contains a leading <m>1</m> in the second row, has a non-zero entry (<m>1</m>).
+								</li>
+								<li>
+									The matrix is not in REF: The leading entry of the second row (<m>1</m> in the <m>(2, 3)</m>-entry) is not strictly to the right of the leading entry of the first row (<m>1</m> in the <m>(1, 3)</m>-entry). In particular, the matrix is not in RREF.
+								</li>
+							</ol>
+						</solution>
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 2.2, Exercise 9-->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-JH"/>,  Chapter 3, Section 1 (Gauss-Jordan Reduction) Problem 4.) </p></aside>
+							Give two distinct echelon form versions of this matrix.
+							<me>
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									2 \amp  1 \amp  1 \amp  3
+									\\
+									6 \amp  4 \amp  1 \amp  2
+									\\ 
+									1 \amp  5 \amp  1 \amp  5
+								\end{bmatrix}<!-- \end{bmatrix*} -->
+							</me>
+						</statement>
+						<hint>
+							See <xref ref="def-REF"/> for the definition of the row-echelon form.
+						</hint>
+						<solution>
+							We start by row reducing from top to botteom:
+							<md>
+								<mrow>
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										2 \amp  1 \amp  1 \amp  3
+										\\
+										6 \amp  4 \amp  1 \amp  2
+										\\ 
+										1 \amp  5 \amp  1 \amp  5
+									\end{bmatrix}<!-- \end{bmatrix*} -->
+									\overset{-3R_{1}+R_{2}}{\underset{-R_{1}+2R_{3}}{\longrightarrow}}
+									\amp\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										2 \amp  1 \amp  1 \amp  3
+										\\
+										0 \amp  1 \amp  -2 \amp  -7
+										\\ 
+										0 \amp  9 \amp  1 \amp  7
+									\end{bmatrix}<!-- \end{bmatrix*} -->
+								</mrow>
+								<mrow>
+									\overset{-9R_{2} + R_{3}}{\underset{\frac{1}{2}R_{1}}{\longrightarrow}}
+									\amp\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+										\\
+										0 \amp  1 \amp  -2 \amp  -7
+										\\ 
+										0 \amp  0 \amp  19 \amp  70
+									\end{bmatrix}<!-- \end{bmatrix*} -->
+								</mrow>
+								<mrow>
+									\overset{\frac{1}{19}R_{3}}{\longrightarrow}
+									\amp\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+										\\
+										0 \amp  1 \amp  -2 \amp  -7
+										\\ 
+										0 \amp  0 \amp  1 \amp  \frac{70}{19}
+									\end{bmatrix}<!-- \end{bmatrix*} -->.
+								</mrow>
+							</md>
+							We have arrived at a matrix in REF. (We recall that some books do not require the leading entries to be <m>1</m> for a matrix to be in REF, in which case the second to last matrix in the above computation would also be considered to be in REF.)
+							Since we are supposed to give <em>two</em> answers, we continue:
+							<md>
+								<mrow>
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+										\\
+										0 \amp  1 \amp  -2 \amp  -7
+										\\ 
+										0 \amp  0 \amp  1 \amp  \frac{70}{19}
+									\end{bmatrix}<!-- \end{bmatrix*} -->									
+									\overset{2R_{3}+R_{2}}{\longrightarrow}
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+										\\
+										0 \amp  1 \amp  0 \amp  \frac{7}{19}
+										\\ 
+										0 \amp  0 \amp  1 \amp  \frac{70}{19}
+									\end{bmatrix}<!-- \end{bmatrix*} -->.	
+								</mrow>
+							</md>
+							Since we were not asked for a matrix in RREF, we could stop here and have our second answer. But instead, we might as well continue to manipulate our matrix to arrive at RREF:
+							<md>
+								<mrow>
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+										\\
+										0 \amp  1 \amp  0 \amp  \frac{7}{19}
+										\\ 
+										0 \amp  0 \amp  1 \amp  \frac{70}{19}
+									\end{bmatrix}<!-- \end{bmatrix*} -->	
+									\overset{-\frac{1}{2}R_{2}+R_{1}}{\longrightarrow}
+									\amp\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										1 \amp  0 \amp  \frac{1}{2} \amp  \frac{25}{19}
+										\\
+										0 \amp  1 \amp  0 \amp  \frac{7}{19}
+										\\ 
+										0 \amp  0 \amp  1 \amp  \frac{70}{19}
+									\end{bmatrix}<!-- \end{bmatrix*} -->
+								</mrow>
+								<mrow>
+									\overset{-\frac{1}{2}R_{3} + R_{1}}{\longrightarrow}
+									\amp\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										1 \amp  0 \amp  0 \amp  \frac{-10}{19}
+										\\
+										0 \amp  1 \amp  0 \amp \frac{7}{19}
+										\\ 
+										0 \amp  0 \amp  1 \amp  \frac{70}{19}
+									\end{bmatrix}<!-- \end{bmatrix*} -->.
+								</mrow>
+							</md>
+						</solution>
+						<answer>
+							<me>
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+									\\
+									0 \amp  1 \amp  -2 \amp  -7
+									\\ 
+									0 \amp  0 \amp  1 \amp  \frac{70}{19}
+								\end{bmatrix}<!-- \end{bmatrix*} -->
+								\quad\text{ and }\quad
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp  0 \amp  0 \amp  \frac{-10}{19}
+									\\
+									0 \amp  1 \amp  0 \amp  \frac{7}{19}
+									\\ 
+									0 \amp  0 \amp  1 \amp  \frac{70}{19}
+								\end{bmatrix}<!-- \end{bmatrix*} -->
+							</me>
+
+
+							(There are many other solutions, since the REF is <em>not</em> unique.)
+						</answer>
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 2.2, Exercise 9-->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK"/>, Section 1.2, Exercise 1.2.20.) </p></aside>
+							Row reduce the following matrix to obtain a row-echelon form. Then continue to obtain the reduced row-echelon form.
+		 
+							<me>
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									2 \amp  -1 \amp  3 \amp  -1  \\ 1 \amp  0 \amp  2 \amp  1 \\  1 \amp  -1 \amp  1 \amp  -2 
+								\end{bmatrix}<!-- \end{bmatrix*} -->.
+							</me> 
+						</statement>
+						<hint>
+							See <xref ref="def-REF"/> for the definition of REF and <xref ref="def-RREF"/> for the definition of the RREF.
+						</hint>
+						<solution>
+							<md>
+								<mrow>
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										2 \amp  -1 \amp  3 \amp  -1
+										\\
+										1 \amp  0 \amp  2 \amp  1
+										\\
+										1 \amp  -1 \amp  1 \amp  -2 
+									\end{bmatrix}<!-- \end{bmatrix*} -->
+									\overset{-\frac{1}{2}R_{1} + R_{2}}{\underset{-\frac{1}{2}R_{1} + R_{3}}{\longrightarrow}}
+									\amp
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										2 \amp  -1 \amp  3 \amp  -1
+										\\
+										0 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+										\\
+										0 \amp  -\frac{1}{2} \amp  -\frac{1}{2} \amp  -\frac{3}{2}
+									\end{bmatrix}<!-- \end{bmatrix*} -->
+								</mrow>
+								<mrow>
+									\overset{\frac{1}{2}R_{1}}{\underset{R_{2}+R_{3}}{\longrightarrow}}
+									\amp
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										1 \amp  -\frac{1}{2} \amp  \frac{3}{2} \amp  -\frac{1}{2}
+										\\
+										0 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+										\\
+										0 \amp  0 \amp  0 \amp  0
+									\end{bmatrix}<!-- \end{bmatrix*} -->
+								</mrow>
+								<mrow>
+									\overset{2R_{2}}{\longrightarrow}
+									\amp
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										1 \amp  -\frac{1}{2} \amp  \frac{3}{2} \amp  -\frac{1}{2}
+										\\
+										0 \amp  1 \amp 1 \amp  3
+										\\
+										0 \amp  0 \amp  0 \amp  0
+									\end{bmatrix}<!-- \end{bmatrix*} -->.
+								</mrow>
+							</md> 
+							We have arrived at a matrix in REF. To get it into RREF, we need to make sure that any column with a leading <m>1</m> has no other non-zero entries, so:
+							<me>
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										1 \amp  -\frac{1}{2} \amp  \frac{3}{2} \amp  -\frac{1}{2}
+										\\
+										0 \amp  1 \amp 1 \amp  3
+										\\
+										0 \amp  0 \amp  0 \amp  0
+									\end{bmatrix}<!-- \end{bmatrix*} -->.
+									\overset{\frac{1}{2}R_{2} + R_{1}}{\longrightarrow}
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+										1 \amp  0 \amp  2 \amp  -1
+										\\
+										0 \amp  1 \amp 1 \amp  3
+										\\
+										0 \amp  0 \amp  0 \amp  0
+									\end{bmatrix}<!-- \end{bmatrix*} -->.
+							</me> 
+						</solution>
+						<answer>
+							There are many answers for the REF, for example
+							<me>
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp  -\frac{1}{2} \amp  \frac{3}{2} \amp  -\frac{1}{2}
+									\\
+									0 \amp  1 \amp 1 \amp  3
+									\\
+									0 \amp  0 \amp  0 \amp  0
+								\end{bmatrix}<!-- \end{bmatrix*} -->.
+							</me>
+							As always, the RREF is unique, and in this case, it is given by
+							<me>
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp  0 \amp  2 \amp  -1
+									\\
+									0 \amp  1 \amp 1 \amp  3
+									\\
+									0 \amp  0 \amp  0 \amp  0
+								\end{bmatrix}<!-- \end{bmatrix*} -->.
+							</me>
+						</answer>
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-JH"/>, Chapter 3, Section 1 (Gauss-Jordan Reduction), Problem 5) </p></aside>
+							List the reduced row-echelon forms possible for each size.
+							<ol label="[a]" cols="2">
+								<li>
+									<m>2 \times 2</m>
+								</li>
+								<li>
+									<m>2 \times 3</m> 
+								</li>
+								<li>
+									<m>3 \times 2</m> 
+								</li>
+								<li>
+									<m>3 \times 3</m>
+								</li>
+							</ol>
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<answer>
+							In the following, <m>\ast</m> can be any number.
+							<ol label="[a]">
+								<li>
+								<me> \begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									0 \amp  0 
+									\\ 
+									0 \amp  0
+								\end{bmatrix}<!-- \end{bmatrix*} -->
+									,
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp  \ast
+									\\ 
+									0 \amp  0
+								\end{bmatrix}<!-- \end{bmatrix*} -->
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									0 \amp  1
+									\\ 
+									0 \amp  0
+								\end{bmatrix}<!-- \end{bmatrix*} -->
+									,
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp  0 
+									\\ 
+									0 \amp  1
+								\end{bmatrix}<!-- \end{bmatrix*} -->.									
+								</me>
+								</li>
+								<li>
+								<md>
+								<mrow>
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									0 \amp  0 \amp 0
+									\\ 
+									0 \amp  0\amp 0
+								\end{bmatrix}<!-- \end{bmatrix*} -->,
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp  \ast \amp \ast
+									\\ 
+									0 \amp  0\amp 0
+								\end{bmatrix}<!-- \end{bmatrix*} -->
+								,
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									0 \amp 	1 \amp \ast
+									\\ 
+									0 \amp  0\amp 0
+								\end{bmatrix}<!-- \end{bmatrix*} -->
+								,
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									0 \amp 	0 \amp 1
+									\\ 
+									0 \amp  0\amp 0
+								\end{bmatrix}<!-- \end{bmatrix*} -->,
+								</mrow>
+								<mrow>
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp  0 \amp \ast
+									\\ 
+									0 \amp  1 \amp \ast
+								\end{bmatrix}<!-- \end{bmatrix*} -->
+								,
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp 	\ast \amp 0
+									\\ 
+									0 \amp  0 \amp 1
+								\end{bmatrix}<!-- \end{bmatrix*} -->.
+								\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									0 \amp 	1 \amp 0
+									\\ 
+									0 \amp  0 \amp 1
+								\end{bmatrix}<!-- \end{bmatrix*} -->.
+								</mrow>
+								</md>
+								</li>
+								<li>
+								<me>
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									0 \amp  0
+									\\
+									0 \amp 0
+									\\ 
+									0 \amp  0
+									\end{bmatrix}<!-- \end{bmatrix*} -->,
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp  \ast
+									\\
+									0 \amp 0
+									\\ 
+									0 \amp  0
+									\end{bmatrix}<!-- \end{bmatrix*} -->,
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									0 \amp  1
+									\\
+									0 \amp 0
+									\\ 
+									0 \amp  0
+									\end{bmatrix}<!-- \end{bmatrix*} -->,
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp  0
+									\\
+									0 \amp 1
+									\\ 
+									0 \amp  0
+									\end{bmatrix}<!-- \end{bmatrix*} -->.
+								</me>
+								</li>
+								<li>
+								<md>
+								<mrow>
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									0 \amp  0 \amp 0
+									\\
+									0 \amp 0 \amp 0
+									\\ 
+									0 \amp  0 \amp 0
+									\end{bmatrix}<!-- \end{bmatrix*} -->,
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp \ast \amp \ast
+									\\
+									0 \amp 0 \amp 0
+									\\ 
+									0 \amp  0 \amp 0
+									\end{bmatrix}<!-- \end{bmatrix*} -->,
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									0 \amp 1 \amp \ast
+									\\
+									0 \amp 0 \amp 0
+									\\ 
+									0 \amp  0 \amp 0
+									\end{bmatrix}<!-- \end{bmatrix*} -->,
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									0 \amp 0 \amp 1
+									\\
+									0 \amp 0 \amp 0
+									\\ 
+									0 \amp  0 \amp 0
+									\end{bmatrix}<!-- \end{bmatrix*} -->,
+								</mrow>
+								<mrow>
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp  0 \amp \ast
+									\\
+									0 \amp 1 \amp \ast
+									\\ 
+									0 \amp  0 \amp 0
+									\end{bmatrix}<!-- \end{bmatrix*} -->,
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp \ast \amp 0
+									\\
+									0 \amp 0 \amp 1
+									\\ 
+									0 \amp  0 \amp 0
+									\end{bmatrix}<!-- \end{bmatrix*} -->,
+									\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->
+									1 \amp 0 \amp 0
+									\\
+									0 \amp 1 \amp 0
+									\\ 
+									0 \amp  0 \amp 1
+									\end{bmatrix}.
+								</mrow>
+								</md>
+								</li>
+							</ol>
+						</answer>
+						<!-- <solution>
+						</solution> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-RB"/> in the Section for <url href="http://linear.ups.edu/fcla/section-RREF.html">Row-reduced Echelon Form</url>, Exercise RREF.T10.) </p></aside>
+							Prove that each of the three row operations is reversible. More precisely, if the matrix <m>B</m> is obtained from <m>A</m> by application of a single row operation, show that there is a single row operation that will transform B back into <m>A</m>.
+						</statement>
+						<hint xml:id="hint-row-operations"><aside><p>(Adapted from <xref ref="ref-RB"/>, the Section for <url href="http://linear.ups.edu/fcla/section-RREF.html">Row-reduced Echelon Form</url>)</p></aside>
+							 The three row operations are given by:
+							 <ol>
+							 	<li> Swap the locations of row <m>i</m> with row <m>j</m>: <m>R_{i} \leftrightarrow R_{j}</m>.</li>
+							 	<li> Multiply each entry of a single row <m>i</m> by a nonzero quantity <m>\alpha</m>: <m>\alpha R_{i}</m>.</li>
+							 	<li> Multiply each entry of one row <m>R_{i}</m> by some quantity <m>\alpha</m>, and add these values to the entries in the same columns of a second row <m>R_{j}</m> (where <m>i\neq j</m>). Leave the first row the same after this operation (i.e. <m>R_{i}</m> remains unchanged), but replace the second row by the new values (i.e. row <m>j</m> is new): <m>\alpha R_{i} + R_{j}</m>.</li>
+							 </ol>
+						</hint>
+						<solution>
+							First, assume that <m>B \overset{R_{i}\leftrightarrow R_{j}}{\longrightarrow} A</m>. Then <m>A \overset{R_{j}\leftrightarrow R_{i}}{\longrightarrow} B</m>, so the first row operation is invertible. To be more precise, the first row operation is its own inverse.
+
+
+							Next, assume that <m>B \overset{\alpha R_{i}}{\longrightarrow} A</m>. For this to be a legitimate row operation, we must have <m>\alpha\neq 0</m>. In particular, <m>\frac{1}{\alpha}</m> exists and
+							<m>A \overset{\frac{1}{\alpha} R_{i}}{\longrightarrow} B</m> is also a legitimate row operation. Thus, the row operation of multiplication by <m>\alpha</m> is invertible with inverse the row operation of multiplication by <m>\frac{1}{\alpha}</m>.
+
+
+							Lastly, assume that <m>B \overset{\alpha R_{i} + R_{j}}{\longrightarrow} A</m>. If <m>\alpha = 0 </m> or row <m>i</m> in <m>B</m> is a zero-row, then the operation does nothing and <m>B=A</m>. If <m>\alpha\neq 0</m> and row <m>i</m> in <m>B</m> is not a zero-row, then <m>A</m> differs from <m>B</m> exactly in row <m>j</m>; in particular, row <m>i</m> is the same in <m>A</m> and <m>B</m>. We see from this that <m>A \overset{-\frac{1}{\alpha} R_{i} + R_{j}}{\longrightarrow} B</m> inverts the row operation.
+						</solution>
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 2.2, Exercises 23-->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KN"/> in Section 1.2.) </p></aside>
+							Find the rank of each of the matrices in Problem 1, that is:
+							<ol label="[a]" cols="2">
+								<li>
+									<m>\begin{bmatrix}<!-- \begin{bmatrix*}[r] --> 1\amp  -1 \amp  2\\ 0 \amp  0 \amp  0 \\ 0 \amp  0 \amp  1 \end{bmatrix}<!-- \end{bmatrix*} --></m>
+								</li>
+								<li>
+									<m>\begin{bmatrix}<!-- \begin{bmatrix*}[r] --> 2\amp  1 \amp  -1 \amp  3 \\ 0 \amp  0 \amp  0 \amp  0 \end{bmatrix}<!-- \end{bmatrix*} --></m>
+								</li>
+								<li>
+									<m>\begin{bmatrix}<!-- \begin{bmatrix*}[r] -->1\amp  -2 \amp  3 \amp  5 \\ 0 \amp  0 \amp  0 \amp  1 \end{bmatrix}<!-- \end{bmatrix*} --></m>
+								</li>
+								<li>
+									<m>\begin{bmatrix}<!-- \begin{bmatrix*}[r] --> 1\amp  0 \amp  0 \amp  3 \amp  1 \\ 0 \amp  0 \amp  0 \amp  1 \amp  1\\ 0 \amp  0 \amp  0 \amp  0 \amp  1 \end{bmatrix}<!-- \end{bmatrix*} --></m>
+								</li>
+								<li>
+									<m>\begin{bmatrix}<!-- \begin{bmatrix*}[r] --> 1 \amp  1 \\ 0 \amp  1\end{bmatrix}<!-- \end{bmatrix*} --></m>
+								</li>
+								<li>
+									<m>\begin{bmatrix}<!-- \begin{bmatrix*}[r] --> 0 \amp  0 \amp  1 \\  0 \amp  0 \amp  1 \\  0 \amp  0 \amp  1 \end{bmatrix}<!-- \end{bmatrix*} --></m>
+								</li>
+							</ol>
+						</statement>
+						<hint>
+							<aside><p> (Source: <xref ref="ref-KN"/> Definition 1.4 in Section 1.2.) </p></aside>
+							The <em>rank</em> of a matrix <m>A</m> is the number of leading <m>1</m>s in any row-echelon matrix to which <m>A</m> can be carried by row operations. (For the definition of the row-echelon form, see <xref ref="def-REF"/>.)
+						</hint>
+						<solution>
+							<ol label="[a]">
+								<li>
+									By exchanging row <m>2</m> and <m>3</m>, we arrive at a matrix in row-echelon form with two leading <m>1</m>s. Thus, the rank of the matrix is <m>2</m>.
+								</li>
+								<li>
+									By dividing the first row by <m>2</m>, we arrive at a matrix in row-echelon form with one leading  <m>1</m>. Thus, the rank of the matrix is <m>1</m>.
+								</li>
+								<li>
+									Since the matrix is in REF, we just need to count the leading <m>1</m>s: the rank of the matrix is <m>2</m>.
+								</li>
+								<li>
+									Since the matrix is in REF, we just need to count the leading <m>1</m>s: the rank of the matrix is <m>3</m>.
+								</li>
+								<li>
+									Since the matrix is in REF, we just need to count the leading <m>1</m>s: the rank of the matrix is <m>2</m>.
+								</li>
+								<li>
+									To bring the matrix in REF, we substract the first row from the second and from the third row. The resulting matrix is
+									<me>\begin{bmatrix}<!-- \begin{bmatrix*}[r] --> 0 \amp  0 \amp  1 \\  0 \amp  0 \amp  0 \\  0 \amp  0 \amp  0 \end{bmatrix}<!-- \end{bmatrix*} -->,</me>
+									which has one leading <m>1</m> and hence rank <m>1</m>.
+								</li>
+							</ol>
+						</solution>
+						<answer>
+								<ol label="[a]" cols="2">
+								<li>
+									rank <m>2</m>
+								</li>
+								<li>
+									rank <m>1</m>
+								</li>
+								<li>
+									rank <m>2</m>
+								</li>
+								<li>
+									rank <m>3</m>
+								</li>
+								<li>
+									rank <m>2</m>
+								</li>
+								<li>
+									rank <m>1</m>
+								</li>
+							</ol>
+						</answer>
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 2.2, Exercises 25, 27, 29, 33-->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KN"/> in Section 1.2, Exercise 1.2.5.) </p></aside>
+							Find all solutions (if any) to each of the following systems of linear equations.
+		  
+							<ol cols="2">
+								<li>
+									<md>
+										<mrow>
+											x + y + 2z \amp = 8
+										</mrow>
+										<mrow>
+											3x - y + z \amp = 0
+										</mrow>
+										<mrow>
+											-x + 3y + 4z \amp = -4
+										</mrow>
+									</md>
+								</li>
+								<li>
+									<md>
+										<mrow>
+										-2x + 3y + 3z \amp = -9
+										</mrow>
+										<mrow>
+										 3x - 4y + z \amp = 5
+										</mrow>
+										<mrow>
+										-5x + 7y + 2z \amp = -14
+									</mrow>
+									</md>
+								</li>
+								<li>
+									<md>
+										<mrow>
+										x + y - z \amp = 10
+										</mrow>
+										<mrow>
+										-x + 4y + 5z \amp = -5
+										</mrow>
+										<mrow>
+										x + 6y + 3z \amp = 15 
+										</mrow>
+									</md>
+								</li>
+								<li>
+									<md>
+										<mrow> 
+										x + 2y - z \amp = 2
+										</mrow>
+										<mrow>
+										2x + 5y - 3z \amp = 1
+										</mrow>
+										<mrow>
+										x + 4y - 3z \amp = 3 
+										</mrow>
+									</md>
+								</li>
+								<li>
+									<md>
+										<mrow> 
+										5x + y \amp = 2
+										</mrow>
+										<mrow>
+										3x - y - 2z \amp = 1
+										</mrow>
+										<mrow>
+										x + y - z \amp = 5 
+										</mrow>
+									</md>		
+								</li>
+								<li>
+									<md>
+										<mrow>
+										3x - 2y + z \amp = -2
+										</mrow>
+										<mrow>
+										x - y + 3z \amp = 5
+										</mrow>
+										<mrow>
+										-x + y + z \amp = -1
+										</mrow>
+									</md>
+								</li>
+								<li>
+									<md>
+										<mrow> 
+										x + y + z \amp = 2
+										</mrow>
+										<mrow>
+										x  + z \amp = 1
+										</mrow>
+										<mrow>
+										2x + 5y + 2z \amp = 7 
+										</mrow>
+									</md>
+								</li>
+								<li>
+									<md>
+										<mrow>
+										x + 2y - 4z \amp = 10
+										</mrow>
+										<mrow> 
+										2x - y + 2z \amp = 5
+										</mrow>
+										<mrow> 
+										x + y - 2z \amp = 7 
+										</mrow>
+									</md>
+								</li>
+							</ol>
+	 
+			
+						</statement>
+						<hint>
+							Write the system of linear equations as an augmented matrix and then row reduce.
+						</hint>
+						<solution>
+							For each of these solutions, the first step is to turn the system of linear equations into an augmented matrix form. Then, we row reduce until we (at least almost) reach the RREF of the the augmented matrix.
+							<ol>
+								<li><solution>
+									<md>
+									<mrow>
+										\matr{ccc|c}{
+											1 \amp 1 \amp 2 \amp 8
+											\\
+											3 \amp -1 \amp 1 \amp 0
+											\\
+											-1 \amp 3 \amp 4 \amp -4
+											}
+										\overset{-3R_{1}+R_{2}}{\underset{R_{1}+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											1 \amp 1 \amp 2 \amp 8
+											\\
+											0 \amp -4 \amp -5 \amp -24
+											\\
+											0 \amp 4 \amp 6 \amp 4
+											}
+									</mrow>
+									<mrow>
+										\overset{R_{2}+R_{3}}{\longrightarrow}
+										\amp
+										\matr{ccc|c}{
+											1 \amp 1 \amp 2 \amp 8
+											\\
+											0 \amp -4 \amp -5 \amp -24
+											\\
+											0 \amp 0 \amp 1 \amp -20
+											}
+										.
+									</mrow>
+									</md>
+
+
+									<p>From this, we can already see that the system of linear equations has a unique solution. To find it, we proceed until we arrive at the RREF:</p>
+									<md>
+										<mrow>
+											\matr{ccc|c}{
+											1 \amp 1 \amp 2 \amp 8
+											\\
+											0 \amp -4 \amp -5 \amp -24
+											\\
+											0 \amp 0 \amp 1 \amp -20
+											}
+											\overset{ 5R_{3}+R_{2} }{ \underset{ -2R_{3}+R_{1} }{\longrightarrow}}
+											\amp
+											\matr{ccc|c}{
+											1 \amp 1 \amp 0 \amp 48
+											\\
+											0 \amp -4 \amp 0 \amp -124
+											\\
+											0 \amp 0 \amp 1 \amp -20 
+											}
+										</mrow>
+										<mrow>
+											\overset{\frac{-1}{4}R_{2}}{\longrightarrow}
+											\amp
+											\matr{ccc|c}{
+											1 \amp 1 \amp 0 \amp 48
+											\\
+											0 \amp 1 \amp 0 \amp 31
+											\\
+											0 \amp 0 \amp 1 \amp -20
+											}
+										</mrow>
+										<mrow>
+											\overset{-R_{2}+R_{1}}{\longrightarrow}
+											\amp
+											\matr{ccc|c}{
+											1 \amp 0 \amp 0 \amp 17
+											\\
+											0 \amp 1 \amp 0 \amp 31
+											\\
+											0 \amp 0 \amp 1 \amp -20
+											}.
+										</mrow>
+									</md>
+									<p>We conclude that the unique solution is given by <m>(x,y,z)= (17,31,-20)</m>.</p>
+								</solution></li>
+							<li><solution>
+								<md>
+									<mrow>
+										 \matr{ccc|c}{
+										 	-2 \amp 3 \amp 3 \amp -9
+										 	\\
+										 	3 \amp -4 \amp 1 \amp 5
+										 	\\
+										 	-5 \amp 7 \amp 2 \amp -14
+										 	}
+										\overset{-2R_{3}}{\underset{2 R_{2}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+										 	-2 \amp 3 \amp 3 \amp -9
+										 	\\
+										 	6 \amp -8 \amp 2 \amp 10
+										 	\\
+										 	10 \amp -14 \amp -4 \amp 28
+										 	}
+									</mrow>
+									<mrow>
+										\overset{3R_{1}+R_{2}}{\underset{5 R_{1}+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+										 	-2 \amp 3 \amp 3 \amp -9
+										 	\\
+										 	0 \amp 1 \amp 11 \amp -17
+										 	\\
+										 	0 \amp 1 \amp 11 \amp -17
+										 	}.
+									</mrow>
+								</md>
+
+								<p>From this, we already see that there is not a unique solution because the last two rows are identical. We proceed to compute the RREF:</p>
+								<md>
+									<mrow>
+										\matr{ccc|c}{
+										 	-2 \amp 3 \amp 3 \amp -9
+										 	\\
+										 	0 \amp 1 \amp 11 \amp -17
+										 	\\
+										 	0 \amp 1 \amp 11 \amp -17
+										 	}
+										\overset{-R_{2}+R_{3}}{\underset{-3R_{2}+R_{1}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+										 	-2 \amp 0 \amp -30 \amp 42
+										 	\\
+										 	0 \amp 1 \amp 11 \amp -17
+										 	\\
+										 	0 \amp 0 \amp 0 \amp 0
+										 	}
+									</mrow>
+									<mrow>
+										\overset{\frac{-1}{2}R_{1}}{\longrightarrow}
+										\amp
+										\matr{ccc|c}{
+										 	1 \amp 0 \amp 15 \amp -21
+										 	\\
+										 	0 \amp 1 \amp 11 \amp -17
+										 	\\
+										 	0 \amp 0 \amp 0 \amp 0
+										 	}
+									</mrow>
+								</md>
+								<p>We conclude that <m>z</m> is a free variable and the solution is given by</p>
+								<me>
+									\left\{
+										(-21 - 15z,-17 -  11 z,z) \vert z \in \mathbb{R}
+									\right\}.
+								</me>
+								</solution></li>
+							<li><solution>
+								<md>
+									<mrow>
+										\matr{ccc|c}{
+											1 \amp 1 \amp -1 \amp 10
+											\\
+											-1 \amp 4 \amp 5 \amp -5
+											\\
+											1 \amp 6 \amp 3 \amp 15
+										}
+										\overset{R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											1 \amp 1 \amp -1 \amp 10
+											\\
+											0 \amp 5 \amp 4 \amp 5
+											\\
+											0 \amp 5 \amp 4 \amp 5
+										}
+									</mrow>
+								</md>
+								<p>We already see that there is no unique solution, because the last two rows are identical. We proceed:</p>
+								<md>
+									<mrow>
+										\matr{ccc|c}{
+											1 \amp 1 \amp -1 \amp 10
+											\\
+											0 \amp 5 \amp 4 \amp 5
+											\\
+											0 \amp 5 \amp 4 \amp 5
+										}
+										\overset{-R_{2}+R_{3}}{\underset{-\frac{1}{5}R_{2}+R_{1}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											1 \amp 0 \amp -\frac{9}{5} \amp 9
+											\\
+											0 \amp 5 \amp 4 \amp 5
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}
+									</mrow>
+									<mrow>
+										\overset{\frac{1}{5}R_{2}}{\longrightarrow}
+										\amp
+										\matr{ccc|c}{
+											1 \amp 0 \amp -\frac{9}{5} \amp 9
+											\\
+											0 \amp 1 \amp \frac{4}{5} \amp 1
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}
+									</mrow> </md>
+									<p>We conclude that <m>z</m> is a free variable and the solution is given by</p>
+									<me>
+										\left\{
+											\left(9+\frac{9}{5}z, 1 - \frac{4}{5},z\right) \vert z \in \mathbb{R}
+										\right\}.
+									</me>
+								</solution></li>
+							<li><solution>
+								<md>
+									<mrow>
+										\matr{ccc|c}{
+											1 \amp 2 \amp -1 \amp 2
+											\\
+											2 \amp 5 \amp -3 \amp 1
+											\\
+											1 \amp 4 \amp -3 \amp 3
+										}
+										\overset{-2R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											1 \amp 2 \amp -1 \amp 2
+											\\
+											0 \amp 1 \amp -1 \amp 0
+											\\
+											0 \amp 2 \amp -2 \amp 1
+										}
+									</mrow>
+									<mrow>
+										\overset{-2R_{2}+R_{3}}{\longrightarrow}
+										\amp
+										\matr{ccc|c}{
+											1 \amp 2 \amp -1 \amp 2
+											\\
+											0 \amp 1 \amp -1 \amp 0
+											\\
+											0 \amp 0 \amp 0 \amp 1
+										}.
+									</mrow>
+									</md>
+									<p>We see from this that the system has no solution, since the last line means</p>
+									<me>
+										0x+0y+0z=1.
+									</me>
+								</solution></li>
+							<li><solution>
+								<md>
+									<mrow>
+										\matr{ccc|c}{
+											5 \amp 1 \amp 0 \amp 2
+											\\
+											3 \amp -1 \amp -2 \amp 1
+											\\
+											1 \amp 1 \amp -1 \amp 5
+										}
+										\overset{5R_{2}}{\underset{5R_{3}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											5 \amp 1 \amp 0 \amp 2
+											\\
+											15 \amp -5 \amp -10 \amp 5
+											\\
+											5 \amp 5 \amp -5 \amp 25
+										}
+									</mrow> 
+									<mrow>
+										\overset{-3R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											5 \amp 1 \amp 0 \amp 2
+											\\
+											0 \amp -8 \amp -10 \amp -1
+											\\
+											0 \amp 4 \amp -5 \amp 23
+										}
+									</mrow>
+									<mrow>
+										\overset{\frac{1}{2}R_{2}+R_{3}}{\longrightarrow}
+										\amp
+										\matr{ccc|c}{
+											5 \amp 1 \amp 0 \amp 2
+											\\
+											0 \amp -8 \amp -10 \amp -1
+											\\
+											0 \amp 0 \amp -10 \amp \frac{45}{2}
+										}
+									</mrow>
+									<mrow>
+										\overset{-R_{3}+R_{2}}{\underset{-\frac{1}{10}R_{3}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											5 \amp 1 \amp 0 \amp 2
+											\\
+											0 \amp -8 \amp 0 \amp -\frac{47}{2}
+											\\
+											0 \amp 0 \amp 1 \amp -\frac{9}{4}
+										}
+									</mrow>
+									<mrow>
+										\overset{-\frac{1}{8}R_{2}}{\underset{-R_{2}'+R_{1}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											5 \amp 0 \amp 0 \amp -\frac{15}{16}
+											\\
+											0 \amp 1 \amp 0 \amp \frac{47}{16}
+											\\
+											0 \amp 0 \amp 1 \amp -\frac{9}{4}
+										}
+									</mrow>
+									<mrow>
+										\overset{\frac{1}{5}R_{1}}{\longrightarrow}
+										\amp
+										\matr{ccc|c}{
+											1 \amp 0 \amp 0 \amp -\frac{3}{16}
+											\\
+											0 \amp 1 \amp 0 \amp \frac{47}{16}
+											\\
+											0 \amp 0 \amp 1 \amp -\frac{9}{4}
+										}
+									</mrow>
+								</md>		
+								<p>We conclude that the unique solution is given by <m>(x,y,z)= \left(-\frac{3}{16},\frac{47}{16},-\frac{9}{4}\right)</m>.</p>
+								</solution></li>
+							<li><solution>
+									 <md>
+									<mrow>
+										\matr{ccc|c}{
+											3 \amp -2 \amp 1 \amp -2
+											\\
+											1 \amp -1 \amp 3 \amp 5
+											\\
+											-1 \amp 1 \amp 1 \amp -1
+										}
+										\overset{3R_{2}}{\underset{3R_{3}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											3 \amp -2 \amp 1 \amp -2
+											\\
+											3 \amp -3 \amp 9 \amp 15
+											\\
+											-3 \amp 3 \amp 3 \amp -3
+										}
+									</mrow>
+									<mrow>
+										\overset{-R_{1}+R_{2}}{\underset{R_{1}+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											3 \amp -2 \amp 1 \amp -2
+											\\
+											0 \amp -1 \amp 8 \amp 17
+											\\
+											0 \amp 1 \amp 4 \amp -5
+										}
+									</mrow>
+									<mrow>
+										\overset{R_{2}+R_{3}}{\longrightarrow}
+										\amp
+										\matr{ccc|c}{
+											3 \amp -2 \amp 1 \amp -2
+											\\
+											0 \amp -1 \amp 8 \amp 17
+											\\
+											0 \amp 0 \amp 12 \amp 12
+										}
+									</mrow>
+									<mrow>
+										\overset{\frac{1}{12}R_{3}}{\underset{-8R_{3}' + R_{2}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											3 \amp -2 \amp 1 \amp -2
+											\\
+											0 \amp -1 \amp 0 \amp 9
+											\\
+											0 \amp 0 \amp 1 \amp 1
+										}
+									</mrow>
+									<mrow>
+										\overset{-2R_{2}+R_{1}}{\underset{-R_{2}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											3 \amp 0 \amp 1 \amp -20
+											\\
+											0 \amp 1 \amp 0 \amp -9
+											\\
+											0 \amp 0 \amp 1 \amp 1
+										}
+									</mrow>
+									<mrow>
+										\overset{-R_{3}+R_{1}}{\underset{\frac{1}{3}R_{1}'}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											1 \amp 0 \amp 0 \amp -7
+											\\
+											0 \amp 1 \amp 0 \amp -9
+											\\
+											0 \amp 0 \amp 1 \amp 1
+										}.
+									</mrow>
+								</md>
+								<p>We conclude that the unique solution is given by <m>(x,y,z)= \left(-7,-9,1\right)</m>.</p>
+								</solution></li>
+							<li><solution>
+								<md>
+									<mrow>
+										\matr{ccc|c}{
+											1 \amp 1 \amp 1 \amp 2
+											\\
+											1 \amp 0 \amp 1 \amp 1
+											\\
+											2 \amp 5 \amp 2 \amp 7
+										}
+										\overset{-R_{1}+R_{2}}{\underset{-2R_{1}+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											1 \amp 1 \amp 1 \amp 2
+											\\
+											0 \amp -1 \amp 0 \amp -1
+											\\
+											0 \amp 3 \amp 0 \amp 3
+										}
+									</mrow>
+								</md>
+								<p>We already see that there is not going to be a unique solution. We proceed:</p>
+								<md>
+									<mrow>
+										\matr{ccc|c}{
+											1 \amp 1 \amp 1 \amp 2
+											\\
+											0 \amp -1 \amp 0 \amp -1
+											\\
+											0 \amp 3 \amp 0 \amp 3
+										}
+										\overset{3R_{2}+R_{3}}{\underset{R_{2}+R_{1}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											1 \amp 0 \amp 1 \amp 1
+											\\
+											0 \amp -1 \amp 0 \amp -1
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}.
+									</mrow>
+								</md>
+									<p>We conclude that there is one free variable and the solution set is given by</p>
+									<me>
+										\left\{
+											\left(1-z, 1, z\right) \vert z \in \mathbb{R}
+										\right\}.
+									</me>
+								</solution></li>
+							<li><solution>
+								<md>
+									<mrow>
+										\matr{ccc|c}{
+											1 \amp 2 \amp -4 \amp 10
+											\\
+											2 \amp -1 \amp 2 \amp 5
+											\\
+											1 \amp 1 \amp -2 \amp 7
+										}
+										\overset{-R_{1}+R_{3}}{\underset{-2R_{1}+R_{2}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											1 \amp 2 \amp -4 \amp 10
+											\\
+											0 \amp -5 \amp 10 \amp -15
+											\\
+											0 \amp -1 \amp 2 \amp -3
+										}.
+									</mrow>
+								</md>
+									<p>From this, we see that there is no unique solution. We proceed:</p>
+								<md>	<mrow>
+										\matr{ccc|c}{
+											1 \amp 2 \amp -4 \amp 10
+											\\
+											0 \amp -5 \amp 10 \amp -15
+											\\
+											0 \amp -1 \amp 2 \amp -3
+										}
+										\overset{-\frac{1}{5}R_{2}+R_{3}}{\underset{5R_{1}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											5 \amp 10 \amp -20 \amp 50
+											\\
+											0 \amp -5 \amp 10 \amp -15
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}
+									</mrow>
+									<mrow>
+										\overset{2R_{2}+R_{1}}{\underset{\frac{-1}{5}R_{2}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											5 \amp 0 \amp 0 \amp 20
+											\\
+											0 \amp 1 \amp -2 \amp 3
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}.
+									</mrow>
+								</md>
+								<p>We conclude that there is one free variable and the solution set is given by</p>
+									<me>
+										\left\{
+											\left(4, 3+2z, z\right) \vert z \in \mathbb{R}
+										\right\}.
+									</me>
+								</solution></li>
+							</ol>
+						</solution>
+						<answer>
+							<ol>
+								<li><answer>
+									The unique solution is given by <m>(x,y,z)= (17,31,-20)</m>.</answer>
+								</li>
+								<li><answer>There is one free variable and the solution set is given by
+								<me>
+									\left\{
+										(-21 - 15z,-17 -  11 z,z) \vert z \in \mathbb{R}
+									\right\}.
+								</me></answer>
+								</li>
+								<li><answer>There is one free variable and the solution set is given by
+									<me>
+									\left\{
+										\left(9+\frac{9}{5}z, 1 - \frac{4}{5},z\right) \vert z \in \mathbb{R}
+									\right\}.
+									</me></answer>
+								</li>
+								<li><answer>No solution.</answer></li>
+							<li><answer>
+									The unique solution is given by <m>(x,y,z)= \left(-\frac{3}{16},\frac{47}{16},-\frac{9}{4}\right)</m>		
+								</answer></li>
+							<li><answer>
+									The unique solution is given by <m>(x,y,z)= \left(-7,-9,1\right)</m>.
+								</answer></li>
+							<li><answer>
+								There is one free variable and the solution set is given by
+								<me>
+									\left\{
+										\left(1-z, 1, z\right) \vert z \in \mathbb{R}
+									\right\}.
+								</me>
+								</answer>
+								</li>
+							<li><answer>
+								There is one free variable and the solution set is given by
+								<me>
+									\left\{
+											\left(4, 3+2z, z\right) \vert z \in \mathbb{R}
+										\right\}.
+								</me>
+									</answer>
+								</li>
+							</ol>
+						</answer>
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK"/>, Chapter 1, Exercise 1.2.3.) </p></aside>
+							Do the three lines, <m>x + 2y =1</m>, <m>2x -y =1</m>, and <m>4x + 3y=3</m> have a common point of intersection? If so, find the point and if not, tell why they don't have such a common point of intersection.
+						</statement>
+						<hint>
+							Write the system of linear equations as an augmented matrix and row-reduce.
+						</hint>
+						<solution>
+							<p>The question can be rephrased to: "Does the system of linear equations have a solution?", and we know that such a question is easily answered using an augmented matrix, which we row-reduce:</p>
+							<md>
+							<mrow>
+								\matr{cc|c}{
+									1 \amp 2 \amp 1
+									\\
+									2 \amp -1 \amp 1
+									\\
+									4 \amp 3 \amp 3
+								}
+								\overset{-2R_{1}+R_{2}}{\underset{-4R_{1}+R_{3}}{\longrightarrow}}
+								\matr{cc|c}{
+									1 \amp 2 \amp 1
+									\\
+									0 \amp -5 \amp -1
+									\\
+									0 \amp -5 \amp -1
+								}
+								.
+							</mrow>
+							</md>
+							<p>We can already see that there is going to be a solution, and that said solution is unique. We proceed to find the intersection point:</p>
+							<md>
+							<mrow>
+								\matr{cc|c}{
+									1 \amp 2 \amp 1
+									\\
+									0 \amp -5 \amp -1
+									\\
+									0 \amp -5 \amp -1
+								}
+								\overset{-R_{2}+R_{3}}{\underset{2R_{2}+5R_{1}}{\longrightarrow}}
+								\amp\matr{cc|c}{
+									5 \amp 0 \amp 3
+									\\
+									0 \amp -5 \amp -1
+									\\
+									0 \amp 0 \amp 0
+								}
+							</mrow>
+							<mrow>
+								\overset{\frac{-1}{5}R_{2}}{\underset{\frac{1}{5}R_{1}}{\longrightarrow}}
+								\amp\matr{cc|c}{
+									1 \amp 0 \amp \frac{3}{5}
+									\\
+									0 \amp 1 \amp \frac{1}{5}
+									\\
+									0 \amp 0 \amp 0
+								}
+							</mrow>
+							</md>
+							<p>We conclude that the three lines intersect in the point <m>\left( \frac{3}{5}, \frac{1}{5}\right)</m>.</p>
+						</solution>
+						<answer>
+							The three lines intersect in the point <m>\left( \frac{3}{5}, \frac{1}{5}\right)</m>.
+						</answer>
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK"/>, Chapter 1, Exercise 1.2.4.) </p></aside>
+							Do the three planes, <m>x+y - 3z=2</m>, <m>2x+y+z =1</m> and <m>3x+2y-2z=0</m> have a common point of intersection? If so, find one and if not, tell why there is no such point.
+						</statement>
+						<hint>
+							Write the system of linear equations as an augmented matrix and row-reduce.
+						</hint>
+						<solution>
+							<p>The question can be rephrased to: "Does the system of linear equations have a solution?", and we know that such a question is easily answered using an augmented matrix, which we row-reduce:</p>
+							<md>
+							<mrow>
+								\matr{ccc|c}{
+									1 \amp 1 \amp -3 \amp 2
+									\\
+									2 \amp 1 \amp 1 \amp 1
+									\\
+									3 \amp 2 \amp -2 \amp 0
+								}
+								\amp
+								\overset{-2R_{1}+R_{2}}{\underset{-3R_{1}+R_{3}}{\longrightarrow}}
+								\amp\matr{ccc|c}{
+									1 \amp 1 \amp -3 \amp 2
+									\\
+									0 \amp -1 \amp 7 \amp -3
+									\\
+									0 \amp -1 \amp 7 \amp -6
+								}
+							</mrow>
+							<mrow>
+								\amp
+								\overset{-R_{2}+R_{3}}{\longrightarrow}
+								\amp\matr{ccc|c}{
+									1 \amp 1 \amp -3 \amp 2
+									\\
+									0 \amp -1 \amp 7 \amp -3
+									\\
+									0 \amp 0 \amp 0 \amp -3
+								}
+							</mrow>
+							</md>
+							<p>Since the last line of the augmented matrix reads as <m>0x + 0y + 0z = -3</m>, we see that there is no solution to the system. In other words, the three planes do not intersect.</p>
+						</solution>
+						<answer>
+							The three planes do not intersect.
+						</answer>
+					</exercise></p>
+				<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-JH"/>, Section 1.6, Exercise 1.6.3.) </p></aside>
+							My system of equations has a solution <m>(x,y,z)= (1,2,4)</m>.  The associated homogenous system has basic solutions <m>(x,y,z) =(1,0,1)</m> and <m>(x,y,z)= (0,1,-1)</m>.  What is the general solution of my system of equations?  
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+			<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 2.2, Exercise 35-->
+					<statement>
+						<aside><p>(Source: <xref ref="ref-KK"/>, Chapter 1, Exercise 1.2.7.) </p></aside>
+							Consider the following augmented matrix in which <m>*</m> denotes an arbitrary number and <m>\blacksquare</m> denotes a nonzero number.  Determine whether the given augmented matrix is consistent.  If consistent, is the solution unique?
+							<me>
+								\matr{ccc|c} { \blacksquare\amp  * \amp  * \amp  *\\
+									0 \amp  \blacksquare \amp  * \amp  * \\
+									0 \amp  0 \amp  \blacksquare \amp  *}								
+							</me>
+					</statement>
+						<!-- <hint>
+						</hint> -->
+						<solution>
+							The system is consistend and has a unique solution. To prove this, let us give names to the entries of the matrix:
+							<me>
+								\matr{ccc|c} { a \amp  b \amp  c \amp  d\\
+									0 \amp  e \amp  f \amp  g \\
+									0 \amp  0 \amp  h \amp  i}	
+							</me>
+							By assumption, <m>a, e, h</m> are non-zero, so in particular, we may manipulate the augmented matrix as follows:							
+							<md>
+							<mrow>
+								\matr{ccc|c} {
+									a \amp  b \amp  c \amp  d\\
+									0 \amp  e \amp  f \amp  g \\
+									0 \amp  0 \amp  h \amp  i}
+								\overset{\frac{1}{h}R_{3}}{\longrightarrow}
+								\amp
+								\matr{ccc|c} { a \amp  b \amp  c \amp  d\\
+									0 \amp  e \amp  f \amp  g \\
+									0 \amp  0 \amp  1 \amp  \frac{i}{h}
+									}	
+							</mrow>							
+							<mrow>
+								\overset{-cR_{3}+R_{1}}{\underset{-fR_{3}+R_{2}}{\longrightarrow}}
+								\amp
+								\matr{ccc|c} {
+									a \amp  b \amp  0 \amp  d - c\frac{i}{h}\\
+									0 \amp  e \amp  0 \amp  g - f\frac{i}{h} \\
+									0 \amp  0 \amp  1 \amp  \frac{i}{h}
+									}
+									.	
+							</mrow>
+							</md>
+							Since <m>e\neq 0</m> by assumption, we can divide by it:
+							<md>						
+							<mrow>
+								\matr{ccc|c} {
+									a \amp  b \amp  0 \amp  d - c\frac{i}{h}\\
+									0 \amp  e \amp  0 \amp  g - f\frac{i}{h} \\
+									0 \amp  0 \amp  1 \amp  \frac{i}{h}
+									}
+								\overset{\frac{1}{e}R_{2}}{\longrightarrow}
+								\amp
+								\matr{ccc|c} {
+									a \amp  b \amp  0 \amp  d - c\frac{i}{h}\\
+									0 \amp  1 \amp  0 \amp  \frac{gh-fi}{he} \\
+									0 \amp  0 \amp  1 \amp  \frac{i}{h}
+									}	
+							</mrow>						
+							<mrow>
+								\overset{-bR_{2}+R_{1}}{\longrightarrow}
+								\amp
+								\matr{ccc|c} {
+									a \amp  0 \amp  0 \amp  d - c\frac{i}{h} - b \frac{gh-fi}{he}\\
+									0 \amp  1 \amp  0 \amp  \frac{gh-fi}{he} \\
+									0 \amp  0 \amp  1 \amp  \frac{i}{h}
+									}	
+								.
+							</mrow>
+							</md>
+							Lastly, since <m>a\neq 0</m> by assumption, we can divide by it and see that the unique solution to the system is given by 
+							<m>\left( \frac{dhe-cie - bgh+bfi}{ahe} , \frac{gh-fi}{he}, \frac{i}{h}\right)</m>.
+						</solution>
+						<answer>
+							The system is consistent and has a unique solution. 
+						</answer> 
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-JH"/>, Section 1.4, Exercise 1.4.5.) </p></aside>
+							Suppose a system of equations has fewer equations than variables.  Will such a system necessarily be consistent? If so, explain  why and if not, give an example which is not consistent.
+						</statement>	 
+						<!-- <hint>
+						</hint> -->
+						<solution>
+							No, it does not have to be consistent: consider
+							<me>
+								\matr{ccc|c}
+								{
+									1 \amp 0 \amp 0 \amp 5
+									\\
+									1 \amp 0 \amp 0 \amp -5
+								}.
+							</me>
+							This system consists of only two equations but three variables. Nonetheless, the first row asks for <m>x=5</m>, while the second row asks for <m>x=-5</m>, so there cannot be any solution and the system is inconsistent.
+						</solution>
+						<answer>
+							No, it does not have to be consistent.
+						</answer>
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 2.2, Exercise 37.  Not exactly the same question, but I think this one is better-->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-JH"/>, Section 1.4, Exercise 1.4.22.) </p></aside>
+							Suppose a system of equations has fewer equations than variables and you have found a solution to this system of equations.  Is it possible that your solution is the only one?  Explain.
+			 
+					  </statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 2.2, Exercise 43-->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK"/>, Section 1.2, Exercise 1.2.15.) </p></aside>
+							Choose <m>h</m> and <m>k</m> such that the augmented matrix shown has each of the following:
+							<ol>
+								<li>
+									one solution
+								</li>
+								<li>
+									no solution
+								</li>
+								<li>
+									infinitely many solutions
+								</li>
+							</ol>
+		  					<me>
+		  						\matr{cc|c} { 
+		  							1 \amp  h \amp  2\\ 2 \amp  4 \amp  k
+		  						}
+		  					</me>
+		  				</statement>
+						<!-- <hint>
+							Here should maybe be a hint reminding the students of over/under/exactly determined systems, and of consistent/inconsistent systems.
+						</hint> -->
+						<solution>
+							<p>We row reduce:</p>
+							<me>
+		  						\matr{cc|c}{ 
+		  							1 \amp  h \amp  2
+		  							\\
+		  							2 \amp  4 \amp  k
+		  						}
+		  						\overset{-2R_{1}+R_{2}}{\longrightarrow}
+		  						\matr{cc|c}{ 
+		  							1 \amp  h \amp  2
+		  							\\
+		  							0 \amp  4-2h \amp  k-4
+		  						}.
+		  					</me>
+		  					<p>For there to be <em>one solution</em>, we need <m>4-2h \neq 0</m> (i.e. <m> h \neq 2</m>), so that the system is exactly determined. In that case, we can continue reducing:</p>
+		  					<md>
+		  					<mrow>
+		  						\matr{cc|c}{ 
+		  							1 \amp  h \amp  2
+		  							\\
+		  							0 \amp  4-2h \amp  k-4
+		  						}
+		  						\overset{\frac{1}{4-2h}R_{2}}{\longrightarrow}
+		  						\amp\matr{cc|c}{ 
+		  							1 \amp  h \amp  2
+		  							\\
+		  							0 \amp  1 \amp  \frac{k-4}{4-2h}
+		  						}
+		  					</mrow>
+		  					<mrow>
+		  						\overset{-hR_{2}+R_{1}}{\longrightarrow}
+		  						\amp\matr{cc|c}{ 
+		  							1 \amp  0 \amp  2 - h \frac{k-4}{4-2h}
+		  							\\
+		  							0 \amp  1 \amp  \frac{k-4}{4-2h}
+		  						}.
+		  					</mrow>
+		  					</md>
+		  					<p>The unique solution is therefore given by <m>\left(2 - h \frac{k-4}{4-2h}, \frac{k-4}{4-2h}\right)</m>.</p>
+
+		  					<p>For there to be <em>no solution</em>, we need that <m>4-2h = 0 </m> while <m>k-4 \neq 0</m>, because then, the last row of the matrix reads as <m>0x + 0y = k-4 \neq 0</m>, i.e. <m>0\neq 0</m>, which is false. In other words, the system is inconsistent if and only if <m>h = 2</m> and <m>k\neq 4</m>.</p>
+
+		  					<p>For there to be <em>infinitely many solutions</em>, we need <m>4-2h = 0 </m> and <m>k-4 = 0</m>, so that the last line reads as  <m>0x + 0y = 0</m>, which is always true. In other words, if  <m>h = 2</m> and <m>k = 4</m>, then the solution set is given by</p>
+		  					<me>
+		  						\left\{
+		  							(2-hy,y)
+		  							\,\vert\,
+		  							y\in\mathbb{R}
+		  						\right\}.
+		  					</me>
+						</solution>
+						<answer>
+							<ol>
+								<li>
+									If <m>h \neq 2</m> and <m>k</m> is arbitrary, then the system has a unique solution.
+								</li>
+								<li>
+									If <m>h = 2</m> and <m>k\neq 4</m>, then the system has no solutions.
+								</li>
+								<li>
+									If <m>h = 2</m> and <m>k = 4</m>, then the system has infinitely many solutions.
+								</li>
+							</ol>
+						</answer>
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 2.2, Exercise 43-->
+						<statement>
+							<aside><p> (Source: "ref-KN" Section 1.2, Exercise 1.2.9)) </p></aside>
+							In each of the following, find (if possible) conditions on <m>a,b,</m> and <m>c</m> such that the system has one solution, no solution or infinitely many solutions.		 
+							<ol cols="2">
+								<li>
+									<md>
+										<mrow> 
+											3x +  y - z \amp =  a
+										</mrow>
+										<mrow>
+											x -  y + 2z \amp =  b
+										</mrow>
+										<mrow>
+											5x +  3y  - 4z \amp =  c
+										</mrow>
+									</md>
+								</li>
+								<!-- <li>
+									<md>
+										<mrow>
+											2x + y - z \amp =  a
+										</mrow>
+										<mrow>
+											2y + 3z \amp =  b
+										</mrow>
+										<mrow>
+											x +  - z \amp =  c
+										</mrow>
+									</md>
+								</li> -->
+								<li>
+									<md>
+										<mrow>
+											-x + 3y  +  2z \amp =  -8
+										</mrow>
+										<mrow>
+											x  + z \amp =  2
+										</mrow>
+										<mrow>
+											3x + 3y + az \amp =  b
+										</mrow>
+									</md>
+								</li>
+								<li>
+									<md>
+										<mrow>
+											x + ay   \amp =  0
+										</mrow>
+										<mrow>
+											y  + bz \amp =  0
+										</mrow>
+										<mrow>
+											cx 	  + z \amp =  0
+										</mrow>
+									</md>
+								</li>
+								<li>
+									<md>
+										<mrow>
+											3x - y  + 2z \amp =  3
+										</mrow>
+										<mrow>
+											x + y  - z \amp =  2
+										</mrow>
+										<mrow>
+											2x - 2y  + 3z \amp =  b
+										</mrow>
+									</md>
+								</li>
+								<li>
+									<md>
+										<mrow>
+											x + ay  - z \amp =  1
+										</mrow>
+										<mrow>
+											-x + (a-2)y  + z \amp =  -1
+										</mrow>
+										<mrow>
+											2x + 2y  + (a-2)z \amp =  1
+										</mrow>
+									</md>
+								</li>
+							</ol>
+
+						</statement>
+						<hint>
+							Write each system of linear equations as an augmented matrix and start to row-reduce. Be careful not to divide by zero. For example, if you have the following row in a matrix:
+							<md>
+							<mrow>
+								\matr{ccc|c}{
+									0 \amp a-2 \amp 0 \amp 8
+								},
+							</mrow>
+							</md>
+							you need to distinguish between the case <m> a=2</m> (so that the equation does not have a solution) and the case <m>a\neq 2</m> (so that you can divide by <m>a-2</m>).
+						</hint>
+						<solution>
+							The approach for each of these questions is the same: We write the system as an augmented matrix and then row-reduce.
+							<ol>
+								<li>
+									<solution>
+									<md><mrow>
+										\matr{ccc|c}{
+											3 \amp 1 \amp -1 \amp a
+											\\
+											1 \amp -1 \amp 2 \amp b
+											\\
+											5 \amp 3 \amp -4 \amp c
+										}
+										\overset{-3R_{2}+R_{1}}{\underset{-5R_{2}+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											0 \amp 4 \amp -7 \amp a-3b
+											\\
+											1 \amp -1 \amp 2 \amp b
+											\\
+											0 \amp 8 \amp -14 \amp c-5b
+										}
+									</mrow>
+									<mrow>
+										\overset{R_{1}\leftrightarrow R_{2}}{\underset{-2R_{2}'+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											1 \amp -1 \amp 2 \amp b
+											\\
+											0 \amp 4 \amp -7 \amp a-3b
+											\\
+											0 \amp 0 \amp 0 \amp (c-5b) - 2(a-3b)
+										}
+									</mrow>
+									<mrow>
+										\amp=
+										\matr{ccc|c}{
+											1 \amp -1 \amp 2 \amp b
+											\\
+											0 \amp 4 \amp -7 \amp a-3b
+											\\
+											0 \amp 0 \amp 0 \amp - 2a + c + b
+										}
+									</mrow>
+									</md>
+									We see: If <m>-2a+c+b\neq 0</m>, then the system is inconsistent and has no solutions. If <m>-2a+c+b = 0</m>, then we proceed:
+									<md>
+									<mrow>
+										\matr{ccc|c}{
+											1 \amp -1 \amp 2 \amp b
+											\\
+											0 \amp 4 \amp -7 \amp a-3b
+											\\
+											0 \amp 0 \amp 0 \amp - 2a + c + b
+										}
+										\overset{\frac{1}{4}R_{2}}{\underset{R_{2}+R_{1}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											1 \amp 0 \amp \frac{1}{4} \amp \frac{a+b}{4}
+											\\
+											0 \amp 1 \amp -\frac{7}{4} \amp \frac{a-3b}{4}
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}
+										.
+									</mrow>
+									</md>
+									We conclude that, if <m>-2a+c+b = 0</m>, i.e. <m> c = 2a-b</m>, then the solution set for the system is
+									<me>
+										\left\{
+											\left(
+												\frac{a+b}{4} - \frac{1}{4}z,
+												\frac{a-3b}{4} + \frac{7}{4}z,z
+											\right) \,\vert\,
+											z\in\mathbb{R}
+										\right\}
+										.
+									</me>
+									<!-- To be safe, we do a check by plugging the values back into the equations, where <m>z</m> is allowed to be any real number:
+									<md>
+										<mrow> 
+											3\left(\frac{a+b}{4} - \frac{1}{4}z\right) +  \left(\frac{a-3b}{4} + \frac{7}{4}z\right) - z 
+											=
+											\frac{3a+3b - 3z+a-3b+7z - 4z}{4}
+											\amp =  a
+										</mrow>
+										<mrow>
+											\left(\frac{a+b}{4} - \frac{1}{4}z\right) -  \left(\frac{a-3b}{4} + \frac{7}{4}z\right) + 2z
+											=
+											\frac{a+b-z-a+3b-7z+8z}{4}
+											\amp =  b
+										</mrow>
+										<mrow>
+											5\left(\frac{a+b}{4} - \frac{1}{4}z\right) +  3\left(\frac{a-3b}{4} + \frac{7}{4}z\right)  - 4z 
+											=
+											\frac{5a+5b-5z+3a-9b+21z -16z}{4}
+											=
+											\frac{4(2a-b)}{4}\amp =  c,
+										</mrow>
+									</md>
+									where the last equality is due to the assumption <m> c = 2a-b</m>. -->
+									</solution>
+								</li>
+<!-- 								<li>
+									<solution>
+									<md><mrow>
+										\matr{ccc|c}{
+											2 \amp 1 \amp -1  \amp a
+											\\
+											2 \amp 0 \amp 3 \amp b
+											\\
+											1 \amp ? \amp -1 \amp c
+										}
+									</mrow></md>
+									</solution>
+								</li> -->
+								<li>
+									<solution>
+										<md><mrow>
+											\matr{ccc|c}{
+												-1 \amp 3 \amp 2 \amp -8
+												\\
+												1 \amp 0 \amp 1 \amp 2
+												\\
+												3 \amp 3 \amp a \amp b
+											}
+											\overset{R_{1}+R_{2}}{\underset{3R_{1}+R_{3}}{\longrightarrow}}
+											\amp
+											\matr{ccc|c}{
+												-1 \amp 3 \amp 2 \amp -8
+												\\
+												0 \amp 3 \amp 3 \amp -6
+												\\
+												0 \amp 12 \amp a+6 \amp b-24
+											}										
+										</mrow>
+										<mrow>
+											\overset{-4R_{2}+R_{3}}{\underset{\frac{1}{3}R_{2}}{\longrightarrow}}
+											\amp
+											\matr{ccc|c}{
+												-1 \amp 3 \amp 2 \amp -8
+												\\
+												0 \amp 1 \amp 1 \amp -2
+												\\
+												0 \amp 0 \amp a-6 \amp b
+											}.									
+										</mrow>
+										</md>
+											We now have to make a case distinction: Suppose first that <m>a=6</m>. Then the last line of the augmented matrix reads as <m>0x+0y+0z=b</m>, which has no solution if <m>b\neq 0</m>. If, however, both <m>a=6</m> and <m>b=0</m>, then we can proceed:
+										<md>
+											<mrow>
+												\matr{ccc|c}{
+													-1 \amp 3 \amp 2 \amp -8
+													\\
+													0 \amp 1 \amp 1 \amp -2
+													\\
+													0 \amp 0 \amp 0 \amp 0
+												}
+												\overset{-3R_{2}+R_{1}}{\longrightarrow}
+												\amp
+												\matr{ccc|c}{
+													-1 \amp 0 \amp -1 \amp -2
+													\\
+													0 \amp 1 \amp 1 \amp -2
+													\\
+													0 \amp 0 \amp 0 \amp 0
+												}.									
+											</mrow>
+										</md>
+										Thus, if <m>a=6</m> and <m>b=0</m>, then the solution set to the system is given by
+										<me>
+											\left\{
+												(2-z,-2-z,z)\,\vert\, z\in\mathbb{R}
+											\right\}.
+										</me>
+										The second case is when <m>a\neq 6</m>, so that we can divide by <m>a- 6</m>:
+											<md>
+											<mrow>
+												\matr{ccc|c}{
+													-1 \amp 3 \amp 2 \amp -8
+													\\
+													0 \amp 1 \amp 1 \amp -2
+													\\
+													0 \amp 0 \amp a-6 \amp b
+												}
+												\overset{\frac{1}{a-6}R_{3}}{\longrightarrow}
+												\amp
+												\matr{ccc|c}{
+													-1 \amp 3 \amp 2 \amp -8
+													\\
+													0 \amp 1 \amp 1 \amp -2
+													\\
+													0 \amp 0 \amp 1 \amp \frac{b}{a-6}
+												}								
+											</mrow>
+											<mrow>
+												\overset{-R_{3}+R_{2}}{\underset{-2R_{3}+R_{1}}{\longrightarrow}}
+												\amp
+												\matr{ccc|c}{
+													-1 \amp 3 \amp 0 \amp -8 - 2\frac{b}{a-6}
+													\\
+													0 \amp 1 \amp 0 \amp -2-\frac{b}{a-6}
+													\\
+													0 \amp 0 \amp 1 \amp \frac{b}{a-6}
+												}							
+											</mrow>
+											<mrow>
+												\overset{-R_{1}}{\underset{3R_{2}+R_{1}'}{\longrightarrow}}
+												\amp
+												\matr{ccc|c}{
+													1 \amp 0 \amp 0 \amp 8 + 2\frac{b}{a-6}-6-3\frac{b}{a-6}
+													\\
+													0 \amp 1 \amp 0 \amp -2-\frac{b}{a-6}
+													\\
+													0 \amp 0 \amp 1 \amp \frac{b}{a-6}
+												}.									
+											</mrow>
+										</md>
+										We see that, if <m>a\neq 6</m>, then the system has a unique solution, namely <m>\left(2 -\frac{b}{a-6}, -2-\frac{b}{a-6},\frac{b}{a-6} \right)</m>.
+									</solution>
+								</li>
+								<li>
+									<solution>
+										<md><mrow>
+											\matr{ccc|c}{
+												1 \amp a \amp 0 \amp 0
+												\\
+												0 \amp 1 \amp b \amp 0
+												\\
+												c \amp 0 \amp 1 \amp 0 
+											}
+											\overset{-cR_{1}+R_{3}}{\longrightarrow}
+											\amp
+											\matr{ccc|c}{
+												1 \amp a \amp 0 \amp 0
+												\\
+												0 \amp 1 \amp b \amp 0
+												\\
+												0 \amp -ca \amp 1 \amp 0 
+											}
+										</mrow>
+										<mrow>
+											\overset{caR_{2}+R_{3}}{\underset{-aR_{2}+R_{1}}{\longrightarrow}}
+											\amp
+											\matr{ccc|c}{
+												1 \amp 0 \amp -ab \amp 0
+												\\
+												0 \amp 1 \amp b \amp 0
+												\\
+												0 \amp 0 \amp 1 + cab  \amp 0 
+											}.
+										</mrow>
+										</md>
+										To proceed, we need to make a case distinction: If <m>1+cab = 0</m>, then we have found the RREF of the matrix and the solution set is given  by
+										<me>
+											\left\{
+												(abz, -bz, z)
+												\,\vert\,
+												z\in\mathbb{R}
+											\right\}.
+										</me>
+										If <m>1+cab \neq 0</m>, then we can divide by <m>1+cab</m>:
+										<md>
+										<mrow>
+											\matr{ccc|c}{
+												1 \amp 0 \amp -ab \amp 0
+												\\
+												0 \amp 1 \amp b \amp 0
+												\\
+												0 \amp 0 \amp 1 + cab  \amp 0 
+											}
+											\overset{\frac{1}{1+cab}R_{3}}{\longrightarrow}
+											\amp
+											\matr{ccc|c}{
+												1 \amp 0 \amp -ab \amp 0
+												\\
+												0 \amp 1 \amp b \amp 0
+												\\
+												0 \amp 0 \amp 1 \amp 0 
+											}
+										</mrow>
+										<mrow>
+											\overset{abR_{3}+R_{1}}{\underset{-bR_{3}+R_{2}}{\longrightarrow}}
+											\amp
+											\matr{ccc|c}{
+												1 \amp 0 \amp 0 \amp 0
+												\\
+												0 \amp 1 \amp 0 \amp 0
+												\\
+												0 \amp 0 \amp 1 \amp 0 
+											}.
+										</mrow>
+										</md>
+										Thus, if <m>1+cab \neq 0</m>, then the unique solution to the system is <m>(0,0,0)</m>.
+									</solution>
+								</li>
+								<li>
+									<solution>
+									<md><mrow>
+										\matr{ccc|c}{
+											3 \amp -1 \amp 2 \amp 3
+											\\
+											1 \amp 1 \amp -1 \amp 2
+											\\
+											2 \amp -2 \amp 3 \amp b
+										}
+										\overset{3R_{2}}{\underset{3R_{3}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											3 \amp -1 \amp 2 \amp 3
+											\\
+											3 \amp 3 \amp -3 \amp 6
+											\\
+											6 \amp -6 \amp 9 \amp 3b
+										}
+									</mrow>
+									<mrow>
+										\overset{-R_{1}+R_{2}}{\underset{-2R_{1}+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											3 \amp -1 \amp 2 \amp 3
+											\\
+											0 \amp 4 \amp -5 \amp 3
+											\\
+											0 \amp -4 \amp 5 \amp 3b-6
+										}
+									</mrow>
+									<mrow>
+										\overset{R_{2}+R_{3}}{\underset{4R_{1}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											12 \amp -4 \amp 8 \amp 12
+											\\
+											0 \amp 4 \amp -5 \amp 3
+											\\
+											0 \amp 0 \amp 0 \amp 3b-3
+										}
+										.
+									</mrow></md>
+									If <m>b\neq 1</m>, then this system is inconsistent and has no solution. Otherwise,
+									<md>
+										<mrow>
+										\matr{ccc|c}{
+											12 \amp -4 \amp 8 \amp 12
+											\\
+											0 \amp 4 \amp -5 \amp 3
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}
+										\overset{R_{2}+R_{1}}{\longrightarrow}
+										\amp
+										\matr{ccc|c}{
+											12 \amp 0 \amp 3 \amp 15
+											\\
+											0 \amp 4 \amp -5 \amp 3
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}
+									</mrow>
+									<mrow>
+										\overset{\frac{1}{12}R_{1}}{\underset{\frac{1}{4}R_{2}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											1 \amp 0 \amp \frac{1}{4} \amp \frac{5}{4}
+											\\
+											0 \amp 1 \amp -\frac{5}{4} \amp \frac{3}{4}
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}.
+									</mrow>
+									</md>
+									Thus, if <m>b = 1</m>, then the solution set of the system is
+									<me>
+										\left\{
+										 \left(\frac{5}{4} - \frac{1}{4}z,\frac{3}{4}+\frac{5}{4}z,z\right)
+										\,\vert\,
+										z\in\mathbb{R}
+										\right\}.
+									</me>
+									</solution>
+								</li>
+								<li>
+									<solution>
+									<md><mrow>
+										\matr{ccc|c}{
+											1 \amp a \amp -1 \amp 1
+											\\
+											-1 \amp a-2 \amp 1 \amp -1
+											\\
+											2 \amp 2 \amp a-2 \amp 1
+										}
+										\overset{R_{1}+R_{2}}{\underset{-2R_{1}+R_{3}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											1 \amp a \amp -1 \amp 1
+											\\
+											0 \amp 2a-2 \amp 0 \amp 0
+											\\
+											0 \amp 2-2a \amp a \amp -1
+										}
+									</mrow><mrow>
+										\overset{R_{2}+R_{3}}{\longrightarrow}
+										\amp
+										\matr{ccc|c}{
+											1 \amp a \amp -1 \amp 1
+											\\
+											0 \amp 2a-2 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp a \amp -1
+										}
+										.
+									</mrow></md>
+									If <m>a=0</m>, then the system is inconsistent (because of the third row) and there is no solution. Otherwise, we can divide by <m>a</m>:
+									<md><mrow>
+										\matr{ccc|c}{
+											1 \amp a \amp -1 \amp 1
+											\\
+											0 \amp 2a-2 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp a \amp -1
+										}
+										\overset{\frac{1}{a}R_{3}}{\underset{R_{3}'+R_{1}}{\longrightarrow}}
+										\amp
+										\matr{ccc|c}{
+											1 \amp a \amp 0 \amp 1-\frac{1}{a}
+											\\
+											0 \amp 2a-2 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp 1 \amp -\frac{1}{a}
+										}
+										.
+									</mrow></md>
+									If <m>a=1</m>, then switching the second and third row yields the RREF:
+									<me>
+										\matr{ccc|c}{
+											1 \amp 1 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp 1 \amp -1
+										}
+										\overset{R_{2}\leftrightarrow R_{3}}{\longrightarrow}
+										\matr{ccc|c}{
+											1 \amp 1 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp 1 \amp -1										
+											\\
+											0 \amp 0 \amp 0 \amp 0
+										}.
+									</me>
+									Thus, the solution set is given by
+									<me>
+										\left\{
+											\left(-y,y,-1
+											\right)
+											\,\vert\, y\in\mathbb{R}
+										\right\}.
+									</me>
+									If <m>a\neq 1</m>, then we can divide by <m>2a-2 </m>:
+									<md><mrow>
+										\matr{ccc|c}{
+											1 \amp a \amp 0 \amp 1-\frac{1}{a}
+											\\
+											0 \amp 2a-2 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp 1 \amp -\frac{1}{a}
+										}
+										\overset{\frac{1}{2a-2}R_{2}}{\longrightarrow}
+										\amp
+										\matr{ccc|c}{
+											1 \amp a \amp 0 \amp 1-\frac{1}{a}
+											\\
+											0 \amp 1 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp 1 \amp -\frac{1}{a}
+										}
+									</mrow>
+									<mrow>
+										\overset{-aR_{2}+R_{1}}{\longrightarrow}
+										\amp
+										\matr{ccc|c}{
+											1 \amp 0 \amp 0 \amp 1-\frac{1}{a}
+											\\
+											0 \amp 1 \amp 0 \amp 0
+											\\
+											0 \amp 0 \amp 1 \amp -\frac{1}{a}
+										}
+										.
+									</mrow></md>
+									Thus, in this case, the unique solution is given by <m>\left(1-\frac{1}{a}, 0, -\frac{1}{a} \right)</m>.
+									</solution>
+								</li>
+							</ol>
+						</solution>
+						<answer>
+							<ol>
+								<li><answer>
+									If <m>-2a+c+b\neq 0</m>, then the system is inconsistent and has therefore no solutions. If <m>-2a+c+b = 0</m>, then the solution set for the system is
+									<me>
+										\left\{
+											\left(
+												\frac{a+b}{4} - \frac{1}{4}z,
+												\frac{a-3b}{4} + \frac{7}{4}z,z
+											\right) \,\vert\,
+											z\in\mathbb{R}
+										\right\}
+										.
+									</me>
+								</answer></li>
+								<!-- <li><answer>
+									<md>
+										<mrow>
+											2x + y - z \amp =  a
+										</mrow>
+										<mrow>
+											2y + 3z \amp =  b
+										</mrow>
+										<mrow>
+											x +  - z \amp =  c
+										</mrow>
+									</md>
+								</answer></li> -->
+								<li><answer>
+									If <m>a=6</m> and <m>b\neq 0</m>, then  there is no solution. If <m>a=6</m> and <m>b=0</m>, then the solution set to the system is given by
+									<me>
+										\left\{
+											(2-z,-2-z,z)\,\vert\, z\in\mathbb{R}
+										\right\}.
+									</me>
+									If <m>a\neq 6</m>, then the system has a unique solution, namely <m>\left(2 -\frac{b}{a-6}, -2-\frac{b}{a-6},\frac{b}{a-6} \right)</m>
+								</answer></li>
+								<li><answer>
+									If <m>1+cab = 0</m>, then the solution set is given  by
+										<me>
+											\left\{
+												(abz, -bz, z)
+												\,\vert\,
+												z\in\mathbb{R}
+											\right\}.
+										</me>
+									If <m>1+cab \neq 0</m>, then the unique solution to the system is <m>(0,0,0)</m>.
+								</answer></li>
+								<li><answer>
+									If <m>b\neq 1</m>, then this system is inconsistent and has no solution. If <m>b = 1</m>, then the solution set of the system is
+									<me>
+										\left\{
+										 \left(\frac{5}{4} - \frac{1}{4}z,\frac{3}{4}+\frac{5}{4}z,z\right)
+										\,\vert\,
+										z\in\mathbb{R}
+										\right\}.
+									</me>
+								</answer></li>
+								<li><answer>
+									If <m>a=0</m>, then there is no solution.
+									If <m>a=1</m>, then the solution set is given by
+									<me>
+										\left\{
+											\left(-y,y,-1
+											\right)
+											\,\vert\, y\in\mathbb{R}
+										\right\}.
+									</me>
+									If <m>a\neq 1</m>, then the unique solution is given by <m>\left(1-\frac{1}{a}, 0, -\frac{1}{a} \right)</m>.
+								</answer></li>
+							</ol>
+
+						</answer>
+					</exercise></p>
+					<p><exercise xml:id="ex--three-lines-intersect">
+						<statement> <aside><p>(Source: <xref ref="ref-KK" />, Chapter 1, Exercise 1.2.3)</p></aside>
+							Do the three lines <m>x+2y=1</m>, <m>2x-y=1</m>, and <m>4x+3y=3</m> in <m>\mathbb{R}^2</m> have a common point of intersection?  If so, find the point.  If not, explain why they don't have a common point of intersection.
+						</statement>
+						<hint>
+							If <m>(x, y)</m> is a point of intersection of the three lines, then <m>(x, y)</m> must satisfy the equations of all three lines.
+						</hint>
+						<solution>
+							To find out if there is a common point of intersection we want to find out if the three given equations have a simultaneous solution.  We therefore turn the equations into an augmented matrix and row reduce:
+							<me>
+								\matr{cc|c}{1\amp 2\amp 1\\2\amp -1\amp 1\\4\amp 3\amp 3}
+								\to \matr{cc|c}{1\amp 2\amp 1 \\ 0 \amp  -5 \amp  -1 \\ 0 \amp  -5 \amp  -1} 
+								\to \matr{cc|c}{1 \amp  0 \amp  \frac{3}{5} \\ 0 \amp  1 \amp  \frac{1}{5} \\ 0 \amp  0 \amp  0}
+							</me>
+							The row reduced form tells us that there is a solution to this system, and that the only solution is <m>x=\frac{3}{5}, y = \frac{1}{5}</m>.  Therefore the three given lines do have a common point of intersection, and that point is <m>\left(\frac{3}{5}, \frac{1}{5}\right)</m>.
+						</solution>
+						<answer>
+							The three lines intersect at <m>\left(\frac{3}{5}, \frac{1}{5}\right)</m>.
+						</answer>
+					</exercise></p>
+				</exercises>
+		

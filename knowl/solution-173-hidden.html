@@ -1,0 +1,74 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-01-10T00:50:56-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like">We row-reduce \(E\text{:}\)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\begin{bmatrix}
+1 \amp 0 \amp 3 \amp 0 \\
+3 \amp 1 \amp 10 \amp 0 \\
+-1 \amp 1 \amp -2 \amp 1\\
+1 \amp -1 \amp 2 \amp -2 \end{bmatrix}
+\longrightarrow
+\begin{bmatrix}
+1 \amp 0  \amp 3 \amp 0
+\\
+0 \amp 1 \amp 1 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 1
+\\
+0 \amp 0 \amp 0 \amp 0
+\end{bmatrix}
+\end{align*}
+</div>The reduced row echelon form of \(E\) has three non-zero rows, so that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{gather*}
+\rank (D) = 3
+\text{ and }
+\nullity (D) = 4-3 = 1.
+\end{gather*}
+</div>Moreover, using <a class="xref" data-knowl="./knowl/hint-equivalent-matrices-same-row-and-null.html" title="Hint 3.4.4.3">Hint 3.4.4.3</a> for the row space and <a class="xref" data-knowl="./knowl/Casting-out-algorithm.html" title="Hint 3.4.4.4">Hint 3.4.4.4</a> for the column space, we find the following bases:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\text{basis of } \row (E):\quad \amp \span \left\{
+\begin{bmatrix}1 \amp 0  \amp 3 \amp 0	\end{bmatrix},
+\begin{bmatrix}0 \amp 1 \amp 1 \amp 0\end{bmatrix},
+\begin{bmatrix}0 \amp 0 \amp 0 \amp 1\end{bmatrix}\right\}\\
+\text{basis of } \col (E):\quad \amp \span \left\{
+\begin{bmatrix}1 \\ 3 \\ -1 \\ 1\end{bmatrix},
+\begin{bmatrix}0 \\ 1 \\ 1 \\ -1\end{bmatrix},
+\begin{bmatrix}0 \\ 0 \\ 1 \\ -2\end{bmatrix}
+\right\}.
+\end{align*}
+</div>Lastly, for the null space, we use <a class="xref" data-knowl="./knowl/hint-basis-of-null-space.html" title="Hint 3.4.4.1">Hint 3.4.4.1</a>: From the RREF of \(E\text{,}\) we are looking for the solution set of<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\matr{cccc|c}{
+1 \amp 0  \amp 3 \amp 0\amp 0  
+\\
+0 \amp 1 \amp 1 \amp 0\amp 0  
+\\
+0 \amp 0 \amp 0 \amp 1\amp 0  
+\\
+0 \amp 0 \amp 0 \amp 0\amp 0  
+}
+\end{equation*}
+</div>We have that \(x_{3}\) is the only free variable, and \(x_{1}=-3x_{3}\) and \(x_{2}=-x_{3}\text{.}\) Thus,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\text{basis of } \null (E):\quad \amp
+\span
+\left\{
+\begin{bmatrix} -3 \\ -1 \\ 1 \\ 0 \end{bmatrix}
+\right\}.
+\end{align*}
+</div>
+</div></body>
+</html>

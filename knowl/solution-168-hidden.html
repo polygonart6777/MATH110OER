@@ -1,0 +1,33 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-01-10T00:50:55-08:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution solution-like">Since \(U\) is proper, there exists a <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">non-zero</em> vector in \(U\text{,}\) say \(\mathbf{d}\text{.}\) We want to show that \(U = \mathbb{R}\textbf{d}\text{,}\) where<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mathbb{R}\textbf{d}:=\{ r\textbf{d} \ | \ r  \text{ in } \mathbb{R}\} \subseteq \mathbb{R}^{2},
+\end{equation*}
+</div>a line through the origin in direction of \(\mathbf{d}\text{.}\) Assume otherwise: there exists \(\mathbf{u}\in U\) which is not in \(\mathbb{R}\textbf{d}\text{.}\) Note that, since \(U\) is a subspace, this means that \(\span \{\mathbf{d} , \mathbf{u}\} \subseteq U\text{.}\) Consider the vector equation<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+t \mathbf{d} + s \mathbf{u} = \mathbf{0}.\tag{3.4.1}
+\end{equation}
+</div>If \(s\neq 0\text{,}\) then this is equivalent to<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{-t}{s} \mathbf{d} = \mathbf{u}.
+\end{equation*}
+</div>If this were true for some choice of \(t, s\text{,}\) then that would mean \(\mathbf{u} \in \mathbb{R}\textbf{d},\) which contradicts our assumption. If \(s=0\text{,}\) then <a class="xref" data-knowl="./knowl/eq-linear-comb.html" title="Equation 3.4.1">(3.4.1)</a> is equivalent to<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+t \mathbf{d} = \mathbf{0}.
+\end{equation*}
+</div>Since \(\mathbf{d} \neq \mathbf{0}\) by assumption, this implies \(t=0\text{.}\) Thus, we have shown that the only solution to <a class="xref" data-knowl="./knowl/eq-linear-comb.html" title="Equation 3.4.1">(3.4.1)</a> is \((t,s)=(0,0)\text{.}\) This means exactly that \(\{\mathbf{d} , \mathbf{u}\}\) is linearly independent. Since \(\dim (\mathbb{R}^2) = 2\text{,}\) we onclude that \(\mathbb{R}^2 = \span \{\mathbf{d} , \mathbf{u}\} \subseteq U \subsetneq \mathbb{R}^2\text{,}\) a contradiction to \(U\) being proper.</div></body>
+</html>

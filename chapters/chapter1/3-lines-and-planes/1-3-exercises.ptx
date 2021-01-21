@@ -1,0 +1,3277 @@
+<exercises>
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 1.3, Exercise 1-->
+						<statement>	<aside><p> (Source: <xref ref="ref-JH"/>, Section 3.1, Exercise 3.1.1.) </p></aside>
+							Find the vector equation for the line through <m>(-7,6,0)</m> and <m>(-1,1,4)</m>.  Then, find the parametric equations for this line.
+						</statement>
+						<hint>
+							The <em>vector equation</em> of a line <m>\ell</m> through points <m>P</m> and <m>Q</m> is given by
+							<me>
+								\mbf{x}
+								=
+								\vect{OP}
+								+
+								t
+								\vect{PQ}
+								.
+							</me>
+						</hint>
+						<hint>
+							The <em>parametric equations</em> of a line <m>\ell</m> are the equations for each of the coordinates in the vector equation.
+						</hint>
+						<solution>
+							The vector equation of the line is given by 
+							<me>
+								\mbf{x} 
+								=
+								\begin{bmatrix} -7\\ 6 \\ 0 \end{bmatrix} 
+								+
+								t
+								\left(
+									\begin{bmatrix} -1\\ 1 \\ 4 \end{bmatrix} 
+									-
+									\begin{bmatrix} -7\\ 6 \\ 0 \end{bmatrix} 
+								\right)
+								=
+								\begin{bmatrix} -7\\ 6 \\ 0 \end{bmatrix} 
+								+
+								t
+								\begin{bmatrix} 6\\ -5 \\ 4 \end{bmatrix} 
+								.
+							</me>
+							To check that we did not make a mistake: for <m>t=0</m>, we are indeed at the point <m>(-7,6,0)</m>, and for <m>t=1</m>, we are at the point
+							<me>
+								\begin{bmatrix} -7\\ 6 \\ 0 \end{bmatrix} 
+								+
+								\begin{bmatrix} 6\\ -5 \\ 4 \end{bmatrix} 
+								=
+								\begin{bmatrix} -1\\ 1 \\ 4 \end{bmatrix} ,
+							</me>
+							the second point.
+
+							For the parametric equations, we just have to rephrase the above vector equation in terms of its coordinates:
+							<me>
+								x_1 = -7 + 6t
+								;
+								x_2 = 6 - 5t
+								;
+								x_3 = 4t
+								.
+							</me>
+						</solution>
+						<answer>
+							The vector equation is given by
+							<me>
+								\mbf{x} 
+								=
+								\begin{bmatrix} -7\\ 6 \\ 0 \end{bmatrix} 
+								+
+								t
+								\begin{bmatrix} 6\\ -5 \\ 4 \end{bmatrix} 
+								,
+							</me>
+							and the parametric equations by
+							<me>
+								x_1 = -7 + 6t
+								;
+								x_2 = 6 - 5t
+								;
+								x_3 = 4t
+								.
+							</me>
+						</answer>
+					</exercise></p>
+
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 1.3, Exercises 1, 5, 23-->
+						<statement>	<aside><p> (Adapted from <xref ref="ref-KN"/>, Section 4.1, Exercise 4.1.22.) </p></aside>
+							Find the vector <!-- general,--> and parametric form of the following lines:
+							<ol label="[a]"> 
+							 	<li><p>The line parallel to <m>\begin{bmatrix} 2 \\ -1\\ 0 \end{bmatrix} </m> and passing through <m>P=(1,-1,3)</m>.</p>
+							 	<p>
+								 	<!-- <hint>
+									</hint> -->
+							 		<solution>
+								 		<p>The vector equation is given by</p>
+									 	<p><me>
+									 		\mbf{x}
+									 		=
+									 		\begin{bmatrix} 1\\ -1 \\ 3 \end{bmatrix} 
+									 		+
+									 		t
+									 		\begin{bmatrix} 2 \\ -1\\ 0 \end{bmatrix} ,
+									 	</me></p>
+									 	<p>because for <m>t=0</m>, we are at the perscribed point, and the directional vector has the perscribed direction.</p>
+									 	<p>The parametric form is therefore given by</p>
+									 	<p><me>
+											x_1 = 1 +2t
+											;
+											x_2 = -1 - t
+											;
+											x_3 = 3
+											.
+										</me>
+										</p>
+										<!--<p>Lastly, for the general form, we can solve for <m>t</m> in the above system of equations: We have <m>x_3 = 3</m> and also</p>
+										<p><md>
+											<mrow>
+												\amp t = -1 - x_2
+												\text{ and }
+												t = \frac{1}{2}(x_1 - 1),
+											</mrow>
+											<mrow>
+												\iff \amp
+												-1 - x_2
+												=
+												\frac{1}{2}(x_1 - 1),
+											</mrow>
+											<mrow>
+												\iff \amp
+												x_1 + 2x_2 = 1.
+											</mrow>
+										</md></p>
+										<p>The general form is therefore</p>
+										<p><md><mrow>x_3 = 3</mrow>
+												<mrow>x_1 + 2x_2 = 1.</mrow></md></p>-->
+								 	</solution>
+								 	<answer>
+								 		<p>Vector equation:</p>
+									 	<p><me>
+									 		\mbf{x}
+									 		=
+									 		\begin{bmatrix} 1\\ -1 \\ 3 \end{bmatrix} 
+									 		+
+									 		t
+									 		\begin{bmatrix} 2 \\ -1\\ 0 \end{bmatrix} ,
+									 	</me></p>
+									 	<p>Parametric form:</p>
+									 	<p><me>
+											x_1 = 1 +2t
+											;
+											x_2 = -1 - t
+											;
+											x_3 = 3
+											.
+										</me>
+										</p>
+										<!--<p>General form:</p>
+										<p><md><mrow>x_3 = 3</mrow>
+												<mrow>x_1 + 2x_2 = 1.</mrow></md></p>-->
+									</answer>
+								</p>
+							 	</li>
+							 	<li><p>
+							 		The line passing through <m>P=(3, -1,4)</m> and <m>Q=(1,0,-1)</m>.</p>
+							 		<p>
+									<!-- <hint>
+									</hint> -->
+									<solution>
+										<p>Our line can be described by <m>\mbf{x} = \vect{OP} + t\vect{PQ}</m> since this makes sure that, for <m>t=0</m>, our line passes through <m>P</m>, and for <m>t=1</m>, it passes through <m>Q</m>. The vector equation is therefore given by</p>
+									 	<p><me>
+									 		\mbf{x}
+									 		=
+									 		\begin{bmatrix} 
+									 			3\\-1\\4
+									 		\end{bmatrix} 
+									 		+
+									 		t
+									 		\left(
+									 		\begin{bmatrix} 
+									 			1\\0\\-1
+									 		\end{bmatrix} 
+									 		-
+									 		\begin{bmatrix} 
+									 			3\\-1\\4
+									 		\end{bmatrix} 
+									 		\right)
+									 		=
+									 		\begin{bmatrix} 
+									 			3\\-1\\4
+									 		\end{bmatrix} 
+									 		+
+									 		t
+									 		\begin{bmatrix} 
+									 			-2\\1\\-5
+									 		\end{bmatrix} 
+									 		,
+									 	</me></p>
+									 	<p>The parametric form is therefore given by</p>
+									 	<p><me>
+											x_1 = 3 - 2t
+											;
+											x_2 = -1 + t
+											;
+											x_3 = 4 - 5t
+											.
+										</me>
+										</p>
+										<!--<p>Lastly, for the general form, we can solve for <m>t</m> in the above system of equations: We have </p>
+										<p><md>
+											<mrow>
+												\amp t = \frac{1}{2} (3-x_1)
+												\text{ and }
+												t = x_2 + 1
+												\text{ and }
+												t = \frac{1}{5} (4-x_3)
+											</mrow>									
+											<mrow>
+												\iff \amp 
+												x_2 + 1 = \frac{1}{2} (3-x_1)
+												\text{ and }
+												x_2 + 1 = \frac{1}{5} (4-x_3)
+											</mrow>
+											<mrow>
+												\iff \amp 
+												x_2 = \frac{1}{2} (3-x_1) - 1
+												\text{ and }
+												x_2 = \frac{1}{5} (4-x_3) - 1
+											</mrow>
+											<mrow>
+												\iff \amp 
+												x_2 = \frac{1}{2} (1-x_1)
+												\text{ and }
+												\frac{1}{2} (1-x_1) = \frac{1}{5} (-1-x_3)
+											</mrow>									
+											<mrow>
+												\iff \amp 
+												2 x_2 + x_1 = 1
+												\text{ and }
+												5-5x_1 = -2-2x_3
+											</mrow>																	
+											<mrow>
+												\iff \amp 
+												2 x_2 + x_1 = 1
+												\text{ and }
+												-2x_3 + 5x_1 = 7
+											</mrow>
+										</md></p>
+										<p>The general form is therefore</p>
+										<p><me>
+											\begin{array}{ l l l l l l }
+												1 x_1  \amp  + \amp  2 x_2  \amp \amp		 \amp  =  \amp  1 \\
+												5 x_1  \amp	\amp		\amp  - \amp  2 x_3  \amp  =  \amp  7
+											\end{array}
+										</me></p>-->
+									</solution>
+									<answer>
+								 		<p>Vector equation:</p>
+									 	<p><me>
+									 		\mbf{x}
+									 		=
+									 		\begin{bmatrix} 
+									 			3\\-1\\4
+									 		\end{bmatrix} 
+									 		+
+									 		t
+									 		\begin{bmatrix} 
+									 			-2\\1\\-5
+									 		\end{bmatrix} 
+									 	</me></p>
+									 	<p>Parametric form:</p>
+									 	<p><me>
+											x_1 = 3 - 2t
+											;
+											x_2 = -1 + t
+											;
+											x_3 = 4 - 5t
+										</me>
+										</p>
+										<!--<p>General form:</p>
+										<p><me>
+											\begin{array}{ l l l l l l }
+												1 x_1  \amp  + \amp  2 x_2  \amp \amp		 \amp  =  \amp  1 \\
+												5 x_1  \amp	\amp		\amp  - \amp  2 x_3  \amp  =  \amp  7
+											\end{array}
+										</me></p>-->
+									</answer>
+									</p>
+							 	</li>
+							 	<li>
+							 		<p>The line passing through the point <m>P=(3, -1,4)</m> and <m>Q=(3,-1,5)</m>.</p>
+							 		<p>
+								 	<!-- <hint>
+									</hint> -->
+							  		<solution>
+								  		<p>Our line can be described by <m>\mbf{x} = \vect{OP} + t\vect{PQ}</m> since this makes sure that, for <m>t=0</m>, our line passes through <m>P</m>, and for <m>t=1</m>, it passes through <m>Q</m>. The vector equation is therefore given by</p>
+									  	<p><me>
+									  		\mbf{x}
+									  		=
+									  		\begin{bmatrix} 
+									  			3\\-1\\4
+									  		\end{bmatrix} 
+									  		+
+									  		t
+									  		\left(
+									  		\begin{bmatrix} 
+									  			3\\-1\\5
+									  		\end{bmatrix} 
+									  		-
+									  		\begin{bmatrix} 
+									  			3\\-1\\4
+									  		\end{bmatrix} 
+									  		\right)
+									  		=
+									  		\begin{bmatrix} 
+									  			3\\-1\\4
+									  		\end{bmatrix} 
+									  		+
+									  		t
+									  		\begin{bmatrix} 
+									  			0\\0\\1
+									  		\end{bmatrix} 
+									  	</me></p>
+									  	<p>The parametric form is then</p>
+									  	<p><me>
+											x_1 = 3
+											;
+											x_2 = -1
+											;
+											x_3 = 4+t
+											.
+										</me>
+										</p>
+								  	</solution>
+								  	<answer>
+								  		<p>Vector equation:</p>
+									  	<p><me>
+									  		\mbf{x}
+									  		=
+									  		\begin{bmatrix} 
+									  			3\\-1\\4
+									  		\end{bmatrix} 
+									  		+
+									  		t
+									  		\begin{bmatrix} 
+									  			0\\0\\1
+									  		\end{bmatrix} 
+									  	</me></p>
+									  	<p>Parametric form:</p>
+									  	<p><me>
+											x_1 = 3
+											;
+											x_2 = -1
+											;
+											x_3 = 4+t
+										</me>
+										</p>
+									</answer>
+								</p>
+							 	</li>
+							 	<li>
+							 		<p>The line parallel to <m>\begin{bmatrix} 1 \\ 1\\ 1 \end{bmatrix} </m> and passing through <m>P=(1,1,1)</m>.</p>
+							 		<p>
+								 	<!-- <hint>
+									</hint> -->
+							 		<solution>
+								 		<p>The vector equation is given by</p>
+									 	<p><me>
+									 		\mbf{x}
+									 		=
+									 		\begin{bmatrix} 
+									 			1\\1\\1
+									 		\end{bmatrix} 
+									 		+
+									 		t
+									 		\begin{bmatrix} 
+									 			1\\1\\1
+									 		\end{bmatrix} ,
+									 	</me></p>
+									 	<p>because for <m>t=1</m>, we are at the perscribed point, and we have given the line the perscribed direction.</p>
+									 	<p>The parametric form is therefore given by</p>
+									 	<p><me>
+											x_1 = 1+t
+											;
+											x_2 = 1+t
+											;
+											x_3 = 1+t
+											.
+										</me>
+										</p>
+								 	</solution>
+								 	<answer>
+								 		<p>Vector equation:</p>
+									 	<p><me>
+									 		\mbf{x}
+									 		=
+									 		=
+									 		\begin{bmatrix} 
+									 			1\\1\\1
+									 		\end{bmatrix} 
+									 		+
+									 		t
+									 		\begin{bmatrix} 
+									 			1\\1\\1
+									 		\end{bmatrix} 
+									 	</me></p>
+									 	<p>Parametric form:</p>
+									 	<p><me>
+											x_1 = 1+t
+											;
+											x_2 = 1+t
+											;
+											x_3 = 1+t
+										</me>
+										</p>
+									</answer>
+								</p>
+							 	</li>
+							 	<li>
+							 		<p>The line passing through <m>P=(1,0,-3)</m> and parallel to the line with parametric equations <m>x_1 = -1 +2t</m>, <m>x_2 = 2-t</m>, and <m>x_3= 3+3t</m>.</p>
+							 		<p>
+								 	<!-- <hint>
+									</hint> -->
+							 		<solution>
+								 		<p>
+								 			First, let us find a directional vector for the line whose parametric equations are given. For <m>t=0</m>, that line passes through the point <m>Q=(-1,2,3)</m> and for <m>t=1</m>, it passes through <m>R=(1,1,6)</m>. Therefore, the vector
+								 		</p>
+								 			<p><me>
+								 				\vect{QR}=
+								 				\begin{bmatrix} 
+									 				1-(-1) \\ 1-2 \\ 6-3
+										 		\end{bmatrix} 
+										 		=
+										 		\begin{bmatrix} 
+									 				2 \\ -1 \\ 3
+										 		\end{bmatrix} 			 		
+										 	</me></p>
+										<p>gives the direction of said line.</p>
+								 		<p>The vector equation of the line in question is therefore given by</p>
+									 	<p><me>
+									 		\mbf{x}
+									 		=
+									 		\begin{bmatrix} 
+									 			1 \\ 0\\ -3
+									 		\end{bmatrix} 
+									 		+
+									 		t
+									 		\begin{bmatrix} 
+									 			2 \\ -1 \\ 3
+									 		\end{bmatrix} ,
+									 	</me></p>
+									 	<p>
+									 	because for <m>t=0</m>, it passes through <m>P</m>, and it has the perscribed directional vector.</p>
+									 	<p>The parametric form is then given by</p>
+									 	<p><me>
+											x_1 = 1+2t
+											;
+											x_2 = -t
+											;
+											x_3 = -3+3t
+											.
+										</me>
+										</p>
+								 	</solution>
+								 	<answer>
+								 		<p>Vector equation:</p>
+									 	<p><me>
+									 		\mbf{x}
+									 		=
+									 		\begin{bmatrix} 
+									 			1 \\ 0\\ -3
+									 		\end{bmatrix} 
+									 		+
+									 		t
+									 		\begin{bmatrix} 
+									 			2 \\ -1 \\ 3
+									 		\end{bmatrix} 
+									 	</me></p>
+									 	<p>Parametric form:</p>
+									 	<p><me>
+											x_1 = 1+2t
+											;
+											x_2 = -t
+											;
+											x_3 = -3+3t.
+										</me>
+										</p>
+									</answer>
+								</p>
+							 	</li>
+							 	<li>
+							 		<p>The line passing through <m>P=(2,-1,1)</m> and parallel to the line with parametric equations <m>x_1 =2-t</m>, <m>x_2 =1</m> and <m>x_3 = t</m>.</p>
+							 		<p>
+								 	<!-- <hint>
+									</hint> -->
+							 		<solution>
+								 		<p>
+								 			First, let us find a directional vector for the line whose parametric equations are given. For <m>t=0</m>, that line passes through the point <m>Q=(2,1,0)</m> and for <m>t=1</m>, it passes through <m>R=(1,1,1)</m>. Therefore, the vector
+								 		</p>
+								 			<p><me>
+								 				\vect{QR}=
+								 				\begin{bmatrix} 
+									 				1-2 \\ 1-1 \\ 1-0
+										 		\end{bmatrix} 
+										 		=
+										 		\begin{bmatrix} 
+									 				-1 \\ 0 \\ 1
+										 		\end{bmatrix} 			 		
+										 	</me></p>
+										<p>gives the direction of said line.</p>
+								 		<p>The vector equation of the line in question is therefore given by</p>
+									 	<p><me>
+									 		\mbf{x}
+									 		=
+									 		\begin{bmatrix} 
+									 			2 \\ -1 \\ 1
+									 		\end{bmatrix} 
+									 		+
+									 		t
+									 		\begin{bmatrix} 
+									 			-1 \\ 0 \\ 1
+									 		\end{bmatrix} 
+									 	</me></p>
+									 	<p>The parametric form is therefore given by</p>
+									 	<p><me>
+											x_1 = 2-t
+											;
+											x_2 = -1
+											;
+											x_3 = 1+t
+											.
+										</me>
+										</p>
+								 	</solution>
+								 	<answer>
+								 		<p>Vector equation:</p>
+									 	<p><me>
+									 		\mbf{x}
+									 		=
+									 		\begin{bmatrix} 
+									 			2 \\ -1 \\ 1
+									 		\end{bmatrix} 
+									 		+
+									 		t
+									 		\begin{bmatrix} 
+									 			-1 \\ 0 \\ 1
+									 		\end{bmatrix} 
+									 	</me></p>
+									 	<p>Parametric form:</p>
+									 	<p><me>
+											x_1 = 2-t
+											;
+											x_2 = -1
+											;
+											x_3 = 1+t
+										</me>
+										</p>
+									</answer>
+								</p>
+							 	</li>
+							 	<li>
+							 		<p>The lines through <m>P=(1,0,1)</m> that meet the line <m>\ell</m> whose vector equation is given by <m>\mathbf{x} = \begin{bmatrix} 1 \\ 2\\ 0 \end{bmatrix}  +t \begin{bmatrix} 2 \\ -1\\ 2 \end{bmatrix} </m> at points with distance 3 from <m>Q=(1,2,0)</m>.</p>
+							 		<p>
+								 	<!-- <hint>
+									</hint> -->
+							 		<solution>
+								 		<p>First, let us find the points <m>R</m> on <m>\ell</m> that have distance <m>3</m> from <m>Q</m>: Having distance <m>3</m> means exactly that
+								 		</p>
+								 		<p><me>
+								 			\norm{ \vect{QR} } = 3.
+								 		</me></p>
+								 		<p>The fact that <m>R</m> is on <m>\ell</m> means that, for some real number <m>t</m>, we have</p>
+								 		<p><me>
+								 			\vect{OR} = 
+								 			\begin{bmatrix} 
+								 				1 \\ 2\\ 0
+								 			\end{bmatrix} 
+								 			+
+								 			t
+								 			\begin{bmatrix} 
+								 				2 \\ -1\\ 2
+								 			\end{bmatrix} 
+								 		</me></p>
+								 		<p>Thus,</p>
+								 		<p><me>
+								 			\vect{QR} = 
+								 			\left(
+									 			\begin{bmatrix} 
+									 				1 \\ 2\\ 0
+									 			\end{bmatrix} 
+									 			+
+									 			t
+									 			\begin{bmatrix} 
+									 				2 \\ -1\\ 2
+									 			\end{bmatrix} 
+								 			\right)
+								 			-
+								 			\begin{bmatrix} 
+								 				1\\2\\0
+								 			\end{bmatrix}
+								 			=
+								 			\begin{bmatrix} 
+								 				2t \\ -t\\ 2t
+								 			\end{bmatrix}
+								 		</me></p>
+								 		<p>and we therefore want</p>
+								 		<p><me>
+								 			\norm{ \begin{bmatrix} 
+								 				2t \\ -t\\ 2t
+								 			\end{bmatrix} } = 3,
+								 			\text{ i.e. }
+								 			(2t)^2 + (-t)^2 + (2t)^2 = 9.
+								 		</me></p>
+								 		<p>This means, we need <m>9t^2=9</m>, or in other words, <m>t=\pm 1</m>. Therefore, there are two points <m>R_+, R_-</m> on <m>\ell</m> which have distance <m>3</m> from <m>Q</m>, namely the points that satisfy</p>
+								 		<p><me>
+								 			\vect{O R_+} = 
+								 			\begin{bmatrix} 
+								 				1 \\ 2\\ 0
+								 			\end{bmatrix} 
+								 			+
+								 			1
+								 			\begin{bmatrix} 
+								 				2 \\ -1\\ 2
+								 			\end{bmatrix}
+								 			=
+								 			\begin{bmatrix} 
+								 				3 \\ 1\\ 2
+								 			\end{bmatrix} 
+								 		</me></p>
+								 		<p>and</p>
+								 		<p><me>
+								 			\vect{OR_-} = 
+								 			\begin{bmatrix} 
+								 				1 \\ 2\\ 0
+								 			\end{bmatrix} 
+								 			-
+								 			1
+								 			\begin{bmatrix} 
+								 				2 \\ -1\\ 2
+								 			\end{bmatrix} 
+								 			=
+								 			\begin{bmatrix} 
+								 				-1 \\ 3\\ -2
+								 			\end{bmatrix} 
+								 			.
+								 		</me></p>
+								 		<p>Any line through <m>P</m> can be described by the vector equation </p>
+									 	<p><me>
+									 		\mbf{x}
+									 		=
+									 		\vect{OP}
+									 		+
+									 		s
+									 		\mbf{d}
+									 	</me></p>
+									 	<p>for some directional vector <m>\mbf{d}</m>. For our line to go through <m>R_+</m>, we need to choose</p>
+									 	<p><me>
+									 		\mbf{d}
+									 		=
+									 		\vect{PR_+}
+									 		=
+									 		\begin{bmatrix} 
+								 				3 \\ 1\\ 2
+								 			\end{bmatrix} 
+								 			-
+								 			\begin{bmatrix} 
+								 				1 \\ 0\\ 1
+								 			\end{bmatrix} 
+								 			=
+								 			\begin{bmatrix} 
+								 				2 \\ 1\\ 1
+								 			\end{bmatrix}
+								 		</me></p>
+								 		<p>and the vector equation for this line is then given by </p>
+								 		<p><me>
+									 		\mbf{x}
+									 		=
+									 		\begin{bmatrix} 
+								 				1 \\ 0\\ 1
+								 			\end{bmatrix} 
+									 		+
+									 		s
+									 		\begin{bmatrix} 
+								 				2 \\ 1\\ 1
+								 			\end{bmatrix}
+								 			.
+									 	</me></p>
+									 	<p>Its parametric form is therefore given by</p>
+									 	<p><me>
+											x_1 = 1+2s
+											;
+											x_2 = s
+											;
+											x_3 = 1+s
+											.
+										</me>
+										</p>
+									 	<p>For the line to go through <m>R_-</m> on the other hand, we need to choose</p>
+									 	<p><me>
+									 		\mbf{d}
+									 		=
+									 		\vect{PR_-}
+									 		=
+									 		\begin{bmatrix} 
+								 				-1 \\ 3\\ -2
+								 			\end{bmatrix} 
+								 			-
+								 			\begin{bmatrix} 
+								 				1 \\ 0\\ 1
+								 			\end{bmatrix} 
+								 			=
+								 			\begin{bmatrix} 
+								 				-2 \\ 3\\ -3
+								 			\end{bmatrix}
+								 		</me></p>
+								 		<p>and the vector equation for this line is then given by </p>
+								 		<p><me>
+									 		\mbf{x}
+									 		=
+									 		\begin{bmatrix} 
+								 				1 \\ 0\\ 1
+								 			\end{bmatrix} 
+									 		+
+									 		s
+									 		\begin{bmatrix} 
+								 				-2 \\ 3\\ -3
+								 			\end{bmatrix}
+								 			.
+									 	</me></p>
+									 	<p>Its parametric form is then given by</p>
+									 	<p><me>
+											x_1 = 1-2s
+											;
+											x_2 = 3s
+											;
+											x_3 = 1-3s
+											.
+										</me>
+										</p>
+								 	</solution>
+								 	<answer>
+								 		There are two lines that meet the given line at distance <m>3</m> from <m>Q</m> and go through <m>P</m>:
+								 		<p>Vector equation of the first line:</p>
+									 	<p><me>
+									 		\mbf{x}
+									 		=
+									 		\begin{bmatrix} 
+								 				1 \\ 0\\ 1
+								 			\end{bmatrix} 
+									 		+
+									 		t
+									 		\begin{bmatrix} 
+								 				2 \\ 1\\ 1
+								 			\end{bmatrix}
+									 	</me></p>
+									 	<p>Parametric form of the first line:</p>
+									 	<p><me>
+											x_1 = 1+2t
+											;
+											x_2 = t
+											;
+											x_3 = 1+t
+										</me>
+										</p>
+										<p>Vector equation of the second line:</p>
+									 	<p><me>
+									 		\mbf{x}
+									 		=
+									 		\begin{bmatrix} 
+								 				1 \\ 0\\ 1
+								 			\end{bmatrix} 
+									 		+
+									 		t
+									 		\begin{bmatrix} 
+								 				-2 \\ 3\\ -3
+								 			\end{bmatrix}
+									 	</me></p>
+									 	<p>Parametric form of the second line:</p>
+									 	<p><me>
+											x_1 = 1-2t
+											;
+											x_2 = 3t
+											;
+											x_3 = 1-3t
+											.
+										</me>
+										</p>
+									</answer>
+								</p>
+							 	</li>
+							</ol>
+						</statement>
+					</exercise></p>
+
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 1.3, Exercises 7,9, 13.-->
+						<statement>	<aside><p> (Source: <xref ref="ref-KN"/>, Section 4.2, Exercise 4.2.14.) </p></aside>
+							Find the normal, general, and parametric form of each of the following planes.					
+							<hint xml:id="hint-def-cross-product-and-it-is-normal">
+							To find a vector in <m>\mathbb{R}^3</m> that is normal to a plane, you need to find two <em>non-parallel</em> vectors <m>\mbf{a}</m> and <m>\mbf{b}</m> in the plane and compute their <em>cross product</em>
+							<me>
+								\mbf{a}\times \mbf{b}
+								=
+								\begin{bmatrix}
+									a_2b_3-a_3b_2\\
+									a_3b_1-a_1b_3\\
+									a_1b_2-a_2b_1
+								\end{bmatrix}
+							</me>
+							where <m>a_i, b_i</m> are the three components of <m>\mbf{a}</m> resp. <m>\mbf{b}</m>. This vector is orthogonal to both <m>\mbf{a}</m> and <m>\mbf{b}</m> and hence normal to the plane.
+						</hint>
+						<hint xml:id="hint-what-is-needed-for-normal-form">
+							In order to determine the <em>normal form</em> of a plane, you need both a single point <m>P</m> on the plane and a normal vector <m>\mbf{n}</m> to the plane. Then, any point <m>X=(x_1,x_2,x_3)</m> on the plane can be described by the normal form <m>\mbf{n}\cdot\vect{PX}=0</m>. 
+						</hint>
+					 	 <ol label="[a]"> 
+					 		<li>
+					 			<p>Passing through <m>A=(2,1,3)</m>,  <m>B=(1,1,3)</m>, and <m>C=(1,2,-3)</m>.</p>
+					 			<p>
+					 				<solution>
+					 					<p>To find a normal vector <m>\mbf{n}</m>, we need two <em>non-parallel</em> vectors in the plane; for example, the two vectors</p>
+					 					<p><me>
+					 						\vect{AB}
+					 						=
+									 		\begin{bmatrix} 
+								 				3 \\ -1\\ 5
+								 			\end{bmatrix} 
+								 			-
+								 			\begin{bmatrix} 
+								 				1 \\ 1\\ 3
+								 			\end{bmatrix} 
+								 			=
+								 			\begin{bmatrix} 
+								 				2 \\ -2\\ 2
+								 			\end{bmatrix} 
+								 		</me></p>
+								 		<p>and</p>
+								 		<p><me>
+					 						\vect{AC}
+					 						=
+									 		\begin{bmatrix} 
+								 				1 \\ 2\\ -3
+								 			\end{bmatrix} 
+								 			-
+								 			\begin{bmatrix} 
+								 				1 \\ 1\\ 3
+								 			\end{bmatrix} 
+								 			=
+								 			\begin{bmatrix} 
+								 				0 \\ 1 \\ -6
+								 			\end{bmatrix}								 			
+					 					</me></p>
+					 					<p>would do. (If these two vectors had turned out to be parallel, then the three given points <m>A, B, C</m> would lie on a line, so they would not determine a plane.) A vector <m>\mbf{n}</m> which is orthogonal to both <m>\vect{AB}</m> and <m>\vect{AC}</m> is then given by their cross product (see <xref ref="hint-def-cross-product-and-it-is-normal"/>):</p>
+					 					<p><me>
+					 						\mbf{n}
+					 						=
+					 						\vect{AB}
+					 						\times
+					 						\vect{AC}
+					 						=
+					 						\begin{bmatrix}
+											 (-2) \cdot (-6) - 2 \cdot 1 \\
+											 2 \cdot 0 - 2 \cdot (-6) \\
+											 2 \cdot 1 - (-2)\cdot  0
+											\end{bmatrix}
+											=
+					 						\begin{bmatrix}
+											 10 \\
+											 12 \\
+											 2
+											\end{bmatrix}
+											.
+					 					</me></p>
+					 					<p>The normal form, <m>\mbf{n}\cdot\vect{AX}=0</m>, is now explicitly given by</p>
+					 					<p><me>
+					 						\begin{bmatrix}
+											 10 \\
+											 12 \\
+											 2
+											\end{bmatrix}
+											\cdot
+											\begin{bmatrix} 
+								 				x_1 - 1 \\ x_2 - 1\\ x_3 -3
+								 			\end{bmatrix} 
+								 			=
+											0
+					 					</me></p>
+					 					<p>or equivalently</p>
+					 					<p><me>
+					 						\begin{bmatrix}
+											 10 \\
+											 12 \\
+											 2
+											\end{bmatrix}
+											\cdot
+											\mbf{x}
+								 			=
+								 			\begin{bmatrix}
+											 10 \\
+											 12 \\
+											 2
+											\end{bmatrix}
+											\cdot
+											\begin{bmatrix} 
+								 				1 \\ 1\\ 3
+								 			\end{bmatrix}
+								 			=
+								 			28
+								 			.
+					 					</me></p>
+					 					<p>We get the general form by simply computing the dot product on both sides:</p>
+					 					<p><me>
+					 						10x_1
+					 						+
+											12x_2
+											+
+											2x_3
+											=
+											28.
+					 					</me></p>
+					 					<p>Lastly, we compute the parametric form by first giving the vector form:</p>
+					 					<p><me>
+					 						\mbf{x}
+					 						=
+					 						\vect{OA}
+					 						+t\vect{AB}
+					 						+s\vect{AC}
+					 						=
+					 						\begin{bmatrix} 
+								 				1 \\ 1\\ 3
+								 			\end{bmatrix} 
+					 						+t\begin{bmatrix} 
+								 				2 \\ -2\\ 2
+								 			\end{bmatrix} 
+					 						+s
+								 			\begin{bmatrix} 
+								 				0 \\ 1 \\ -6
+								 			\end{bmatrix}.
+								 		</me></p>
+								 		<p>The parametric form can now be read off:</p>
+										<p><me>
+											x_1 = 1+2t
+											;
+											x_2 = 1-2t+s
+											;
+											x_3 = 3+2t-6s.
+										</me>
+										</p>
+					 				</solution>
+					 				<answer>
+					 					<p>Normal form:</p>
+					 					<p><me>
+					 						\begin{bmatrix}
+											 10 \\
+											 12 \\
+											 2
+											\end{bmatrix}
+											\cdot
+											\begin{bmatrix} 
+								 				x_{1} \\ x_{2}\\ x_{3}
+								 			\end{bmatrix} 
+								 			=
+											28
+					 					</me></p>
+					 					<p>General form:</p>
+					 					<p><me>
+					 						5x_1
+					 						+
+											6x_2
+											+
+											x_3
+											=
+											14
+					 					</me></p>
+					 					<p>Parametric form:</p>
+										<p><me>
+											x_1 = 1+2t
+											;
+											x_2 = 1-2t+s
+											;
+											x_3 = 3+2t-6s
+										</me>
+										</p>					 					
+					 				</answer>
+					 			</p>
+					 		</li>
+					 		<li>
+					 			<p>Passing through <m>A=(1,-1,6)</m>, <m>B=(0,0,1)</m>, and <m>C=(4,7,-11)</m>.</p>
+					 			<p>
+					 				<solution>
+					 					<p>To find a normal vector <m>\mbf{n}</m> to the plane, we need two <em>non-parallel</em> vectors in the plane; for example, the two vectors</p>
+					 					<p><me>
+					 						\vect{BA}
+					 						=
+									 		\begin{bmatrix} 
+								 				1 \\ -1\\ 6
+								 			\end{bmatrix} 
+								 			-
+								 			\begin{bmatrix} 
+								 				0 \\ 0\\ 1
+								 			\end{bmatrix} 
+								 			=
+								 			\begin{bmatrix} 
+								 				1 \\ -1\\ 5
+								 			\end{bmatrix} 
+								 		</me></p>
+								 		<p>and</p>
+								 		<p><me>
+					 						\vect{BC}
+					 						=
+									 		\begin{bmatrix} 
+								 				4 \\ 7\\ -11
+								 			\end{bmatrix} 
+								 			-
+								 			\begin{bmatrix} 
+								 				0\\0\\1
+								 			\end{bmatrix} 
+								 			=
+								 			\begin{bmatrix} 
+								 				4 \\ 7\\ -12
+								 			\end{bmatrix}								 			
+					 					</me></p>
+					 					<p>would do. (If these two vectors had turned out to be parallel, then the three given points <m>A, B, C</m> would lie on a line, so they would not determine a plane.) A vector <m>\mbf{n}</m> which is orthogonal to both <m>\vect{BA}</m> and <m>\vect{BC}</m> is then given by their cross product:</p>
+					 					<p><me>
+					 						\mbf{n}
+					 						=
+					 						\vect{BA}
+					 						\times
+					 						\vect{BC}
+					 						=
+					 						\begin{bmatrix}
+											 (-1) \cdot (-12) - 5 \cdot 7 \\
+											 5 \cdot 4 - 1 \cdot (-12) \\
+											 1 \cdot 7 - 4\cdot (-1)
+											\end{bmatrix}
+											=
+					 						\begin{bmatrix}
+											 -23 \\
+											 32 \\
+											 11
+											\end{bmatrix}
+											.
+					 					</me></p>
+					 					<p>The normal form, <m>\mbf{n}\cdot\vect{BX}=0</m>, is now explicitly given by</p>
+					 					<p><me>
+					 						\begin{bmatrix}
+											 -23 \\
+											 32 \\
+											 11
+											\end{bmatrix}
+											\cdot
+											\begin{bmatrix} 
+								 				x_1 - 0 \\ x_2 - 0\\ x_3 - 1
+								 			\end{bmatrix} 
+								 			=
+											0
+					 					</me></p>
+					 					<p>or equivalently</p>
+					 					<p><me>
+					 						\begin{bmatrix}
+											 -23 \\
+											 32 \\
+											 11
+											\end{bmatrix}
+											\cdot
+											\mbf{x}
+								 			=
+								 			\begin{bmatrix}
+											 -23 \\
+											 32 \\
+											 11
+											\end{bmatrix}
+											\cdot
+											\begin{bmatrix} 
+								 				0 \\ 0\\ 1
+								 			\end{bmatrix}
+								 			=
+								 			11
+								 			.
+					 					</me></p>
+					 					<p>We get the general form by simply computing the dot product on both sides:</p>
+					 					<p><me>
+					 						-23x_1
+					 						+
+											32x_2
+											+
+											11x_3
+											=
+											11.
+					 					</me></p>
+					 					<p>Lastly, we compute the parametric form by first giving the vector form:</p>
+					 					<p><me>
+					 						\mbf{x}
+					 						=
+					 						\vect{OB}
+					 						+t\vect{BA}
+					 						+s\vect{BC}
+					 						=
+					 						\begin{bmatrix} 
+								 				0 \\ 0 \\ 1
+								 			\end{bmatrix} 
+					 						+t\begin{bmatrix} 
+								 				1 \\ -1\\ 5
+								 			\end{bmatrix} 
+					 						+s
+								 			\begin{bmatrix} 
+								 				4 \\ 7\\ -12
+								 			\end{bmatrix}.
+								 		</me></p>
+								 		<p>The parametric form can now be read off:</p>
+										<p><me>
+											x_1 =  t + 4s
+											;
+											x_2 = -t + 7s
+											;
+											x_3 =  1+ 5t - 12s.
+										</me></p>
+					 				</solution>
+					 				<answer>
+					 					<p>Normal form:</p>
+					 					<p><me>
+					 						\begin{bmatrix}
+											 -23 \\
+											 32 \\
+											 11
+											\end{bmatrix}
+											\cdot
+											\mbf{x}
+								 			=
+								 			11
+					 					</me></p>
+					 					<p>General form:</p>
+					 					<p><me>
+					 						-23x_1
+					 						+
+											32x_2
+											+
+											11x_3
+											=
+											11
+					 					</me></p>
+					 					<p>Parametric form:</p>
+										<p><me>
+											x_1 =  t + 4s
+											;
+											x_2 = -t + 7s
+											;
+											x_3 = 1+ 5t - 12s
+										</me>
+										</p>					 					
+					 				</answer>
+					 			</p>
+					 		</li>
+					 		<li>
+					 			<p>Passing through <m>P=(2,-3,5)</m> and parallel to the plane with general equation <m>3x_1-2x_2-x_3=0</m>.</p>
+					 			<p>
+					 				<solution>
+					 					Two planes are parallel if and only if they have the same normal vectors. Therefore, we should first find a  normal vector to the plane whose general equation is given: If we chose
+					 					<p><me>
+					 						\mbf{n}
+					 						=
+					 						\begin{bmatrix}
+											 3 \\
+											 -2 \\
+											 -1
+											\end{bmatrix},
+										</me></p>
+										then the given general form is equivalent to
+										<p><me>
+					 						\mbf{n}
+					 						\cdot\mbf{x}
+					 						=0,
+										</me></p>
+										so <m>\mbf{n}</m> is indeed a normal vector. With this at hand, any point <m>X=(x_1,x_2,x_3)</m> on the plane whose normal form we are after can be described by <m>\mbf{n}\cdot\vect{PX}=0</m>, or more explicitly:
+										<p><me>
+											\begin{bmatrix}
+											 3 \\
+											 -2 \\
+											 -1
+											\end{bmatrix}
+											\cdot
+											\left(
+												\mbf{x}
+												-
+												\begin{bmatrix}
+												 2 \\
+												 - 3 \\
+												 5
+												\end{bmatrix}
+											\right)
+											=0
+										</me></p>
+										To get the general form, we have to compute the dot product on the left-hand side and rearrange:
+										<p><me>
+											3x_{1} - 2 x_{2} - x_{3}							
+											= 7.
+										</me></p>
+										For the vector form, we need two <em>non-parallel</em> vectors <m>\mbf{u}</m>, <m>\mbf{v}</m> which are orthogonal to <m>\mbf{n}</m>, i.e. they need to satisfy
+										<p><me>
+											\mbf{u}\cdot \begin{bmatrix}
+											 3 \\
+											 -2 \\
+											 -1
+											\end{bmatrix}
+											=
+											0
+											\text{ and }
+											\mbf{v}\cdot \begin{bmatrix}
+											 3 \\
+											 -2 \\
+											 -1
+											\end{bmatrix}
+											=
+											0.
+										</me></p>
+										For example,
+										<p><me>
+											\mbf{u}
+											=
+											\begin{bmatrix}
+											 0 \\
+											 1 \\
+											 -2
+											\end{bmatrix}
+											\text{ and }
+											\mbf{v}
+											=
+											\begin{bmatrix}
+											 2 \\
+											 3 \\
+											 0
+											\end{bmatrix}
+										</me></p>
+										work. Therefore, the vector equation of the plane is
+										<p><me>
+											\mbf{x}
+											=
+											\vect{OP}
+											+t\mbf{u}
+											+s\mbf{v}
+											=
+											\begin{bmatrix}
+											 2\\-3\\5
+											\end{bmatrix}
+											+t\begin{bmatrix}
+											 0 \\
+											 1 \\
+											 -2
+											\end{bmatrix}
+											+s\begin{bmatrix}
+											 2 \\
+											 3 \\
+											 0
+											\end{bmatrix}
+										</me></p>
+										and so the parametric equations are
+										<p><me>
+											x_1 =  2 +2s
+											;
+											x_2 =  -3 + t + 3s
+											;
+											x_3 =  5 -2t.
+										</me></p>
+					 				</solution>
+					 				<answer>
+					 					<p>Normal form:</p>
+					 					<p><me>
+											\begin{bmatrix}
+											 3 \\
+											 -2 \\
+											 -1
+											\end{bmatrix}
+											\cdot
+											\begin{bmatrix}
+											 x_1 \\
+											 x_2 \\
+											 x_3
+											\end{bmatrix}=
+											7
+										</me></p>
+										<p>General form:</p>
+										<p><me>
+											3x_{1} - 2 x_{2} - x_{3}							
+											= 7
+										</me></p>
+										<p>Parametric form:</p>
+										<p><me>
+											x_1 =  2 +2s
+											;
+											x_2 =  -3 + t + 3s
+											;
+											x_3 =  5 -2t
+										</me></p>
+					 				</answer>
+					 			</p>
+					 		</li>
+					 		<li>
+					 			<p>Passing through <m>P=(3,0,-1)</m> and parallel to the plane with equation <m>2x_1-x_2+x_3=3</m>.</p>
+					 			<p>
+					 				<solution>
+					 					Two planes are parallel if and only if they have the same normal vectors. Therefore, we should first find a  normal vector to the plane whose general equation is given: If we chose
+					 					<p><me>
+					 						\mbf{n}
+					 						=
+					 						\begin{bmatrix}
+											 2 \\
+											 -1 \\
+											 1
+											\end{bmatrix},
+										</me></p>
+										then the given general form is equivalent to
+										<p><me>
+					 						\mbf{n}
+					 						\cdot\mbf{x}
+					 						=3,
+										</me></p>
+										so <m>\mbf{n}</m> is indeed a normal vector. With this at hand, any point <m>X=(x_1,x_2,x_3)</m> on the plane whose normal form we are after can be described by <m>\mbf{n}\cdot\vect{PX}=0</m>, or more explicitly:
+										<p><me>
+											\begin{bmatrix}
+											 2 \\
+											 -1 \\
+											 1
+											\end{bmatrix}
+											\cdot
+											\left(
+												\mbf{x}
+												-
+												\begin{bmatrix}
+												 3 \\
+												 0 \\
+												 -1
+												\end{bmatrix}
+											\right)
+											=0
+										</me></p>
+										To get the general form, we have to compute the dot product on the left-hand side and rearrange:
+										<p><me>
+											2x_{1} - x_{2} + x_{3}							
+											= 5.
+										</me></p>
+										For the vector form, we need two <em>non-parallel</em> vectors <m>\mbf{u}</m>, <m>\mbf{v}</m> which are orthogonal to <m>\mbf{n}</m>, i.e. they need to satisfy
+										<p><me>
+											\mbf{u}\cdot \begin{bmatrix}
+											 2 \\
+											 -1 \\
+											 1
+											\end{bmatrix}
+											=
+											0
+											\text{ and }
+											\mbf{v}\cdot \begin{bmatrix}
+											 2 \\
+											 -1 \\
+											 1
+											\end{bmatrix}
+											=
+											0.
+										</me></p>
+										For example,
+										<p><me>
+											\mbf{u}
+											=
+											\begin{bmatrix}
+											 0 \\
+											 1 \\
+											 1
+											\end{bmatrix}
+											\text{ and }
+											\mbf{v}
+											=
+											\begin{bmatrix}
+											 1 \\
+											 2 \\
+											 0
+											\end{bmatrix}
+										</me></p>
+										work. Therefore, the vector equation of the plane is
+										<p><me>
+											\mbf{x}
+											=
+											\vect{OP}
+											+t\mbf{u}
+											+s\mbf{v}
+											=
+											\begin{bmatrix}
+											 3 \\
+											 0 \\
+											 -1
+											\end{bmatrix}
+											+t\begin{bmatrix}
+											 0 \\
+											 1 \\
+											 1
+											\end{bmatrix}
+											+s\begin{bmatrix}
+											 1 \\
+											 2 \\
+											 0
+											\end{bmatrix}
+										</me></p>
+										and so the parametric equations are
+										<p><me>
+											x_1 = 3 + s
+											;
+											x_2 =  t+2s
+											;
+											x_3 =  -1+t.
+										</me></p>
+					 				</solution>
+					 				<answer>
+					 					<p>Normal form:</p>
+					 					<p><me>
+											\begin{bmatrix}
+											 2 \\
+											 -1 \\
+											 1
+											\end{bmatrix}
+											\cdot
+											\left(
+												\mbf{x}
+												-
+												\begin{bmatrix}
+												 3 \\
+												 0 \\
+												 -1
+												\end{bmatrix}
+											\right)
+											=0
+										</me></p>
+										<p>General form:</p>
+										<p><me>
+											2x_{1} - x_{2} + x_{3}							
+											= 5
+										</me></p>
+										<p>Parametric form:</p>
+										<p><me>
+											x_1 = 3 + s
+											;
+											x_2 =  t+2s
+											;
+											x_3 =  -1+t
+										</me></p>
+					 				</answer>
+					 			</p>
+					 		</li>
+					 		<li>
+					 			<p>Containing <m>P=(3,0,-1)</m> and the line 
+					 			<me>
+					 				\mbf{x}  = \begin{bmatrix} 0 \\ 0\\ 2 \end{bmatrix} +t\begin{bmatrix} 1 \\ 0\\ 1 \end{bmatrix} 
+					 			</me>
+					 			</p>
+					 			<p>
+					 				<solution>
+					 					Since the plane contains the line, it in particular contains the point <m>Q=(0,0,2)</m> (choose <m>t=0</m> in the line equation). Since <m>P</m> is assumed to be in the plane, we conclude that the line that goes through <m>Q=(0,0,2)</m> and <m>P</m>, whose vector form is given by
+										<p><me>
+							 				\mbf{x}  =
+							 				\vect{OQ}
+							 				+
+							 				s\vect{QP}
+							 				= 
+							 				\begin{bmatrix} 0 \\ 0\\ 2 \end{bmatrix}
+							 				+
+							 				s\begin{bmatrix} 3 \\ 0\\ -3 \end{bmatrix}
+							 				,
+							 			</me></p>
+							 			is also contained in the plane. Since this second line's directional vector is not parallel to the first line's directional vector, we conclude that the plane is spanned by those two directional vectors and thus has vector form
+					 					<p><me>
+							 				\mbf{x} 
+							 				=
+							 				\begin{bmatrix} 0 \\ 0\\ 2 \end{bmatrix} 
+							 				+
+							 				t\begin{bmatrix} 1 \\ 0\\ 1 \end{bmatrix}
+							 				+
+							 				s \begin{bmatrix} 3 \\ 0\\ -3 \end{bmatrix}
+							 				.
+							 			</me></p>
+							 			In particular, the parametric equations are
+										<p><men xml:id="eq1">
+											x_1 = t + 3s
+											;
+											x_2 =  0
+											;
+											x_3 =  2+t-3s.
+										</men></p>
+										We should remark that we can find a better set of parametric equations, namely
+										<p><me>
+											x_1 = r
+											;
+											x_2 =  0
+											;
+											x_3 =  q,
+										</me></p>
+										where <m>r,q</m> are any real numbers. To see this, just plug in the following values in <xref ref="eq1"/>:
+										<me>
+											t = \frac{1}{2}(r+q-2)
+											\text{ and }
+											s = \frac{1}{6}(r-q+2)
+											.
+										</me>
+										We can find a normal vector <m>\mbf{n}</m> by taking the cross product of the two directional vectors:
+										<p><me>
+											\mbf{n}
+											=
+											\begin{bmatrix} 1 \\ 0\\ 1 \end{bmatrix}
+							 				\times
+							 				\begin{bmatrix} 3 \\ 0\\ -3 \end{bmatrix}
+							 				=
+							 				\begin{bmatrix}
+							 					0\cdot(-3) + 1\cdot 0 \\
+							 					1\cdot 3 - 1\cdot (-3) \\
+							 					1\cdot 0 - 0 \cdot 3
+							 				\end{bmatrix}
+							 				=							 				
+							 				\begin{bmatrix}
+							 					0\\
+							 					6 \\
+							 					0
+							 				\end{bmatrix}
+							 				.
+										</me></p>
+										The normal equation of the plane is now given by <m>\mbf{n}\cdot\vect{PX}=0</m>, or more explicitly:
+										<p><me>
+											\begin{bmatrix}
+							 					0\\
+							 					6 \\
+							 					0
+							 				\end{bmatrix}
+											\cdot
+											\left(
+												\mbf{x}
+												-
+												\begin{bmatrix}
+												 3 \\
+												 0 \\
+												 -1
+												\end{bmatrix}
+											\right)=0
+										</me></p>
+										and we get the general form by computing the dot product on the left-hand side and rearranging:
+										<p><me>
+											6x_2
+											=
+											0,\text{ i.e. }
+											x_2 = 0.
+										</me></p>
+					 				</solution>	
+					 				<answer>
+					 					<p>Normal form:</p>
+					 					<p><me>
+											\begin{bmatrix}
+							 					0\\
+							 					6 \\
+							 					0
+							 				\end{bmatrix}
+											\cdot
+											\left(
+												\mbf{x}
+												-
+												\begin{bmatrix}
+												 3 \\
+												 0 \\
+												 -1
+												\end{bmatrix}
+											\right)=0
+										</me></p>
+										<p>General form:</p>
+										<p><me>
+											x_2 = 0
+										</me></p>
+										<p>Parametric form:</p>
+										<p><me>
+											x_1 =  s
+											;
+											x_2 =  0
+											;
+											x_3 =  t
+										</me></p>
+					 				</answer>
+					 			</p>
+					 		</li>
+					 		<li>
+					 			<p>Containing <m>P=(2,1,0)</m> and the line </p>
+						 		<p><me>
+						 			\mbf{x} = \begin{bmatrix} 3 \\ -1\\ 2 \end{bmatrix} +t\begin{bmatrix} 1 \\ 0\\ -1 \end{bmatrix} 
+						 		</me></p>
+					 			<p>
+					 				<solution>
+					 					Since the plane contains the line, it in particular contains the point <m>Q=(3,-1,2)</m> (choose <m>t=0</m> in the line equation). Since <m>P</m> is assumed to be in the plane, we conclude that the line that goes through <m>Q</m> and <m>P</m>, whose vector form is given by
+										<p><me>
+							 				\mbf{x}  =
+							 				\vect{OQ}
+							 				+
+							 				s\vect{QP}
+							 				= 
+							 				\begin{bmatrix} 3 \\ -1 \\ 2 \end{bmatrix}
+							 				+
+							 				s\begin{bmatrix} -1 \\ 2 \\ -2 \end{bmatrix}
+							 				,
+							 			</me></p>
+							 			is also contained in the plane. Since this second line's directional vector is not parallel to the first line's directional vector, we conclude that the plane is spanned by those two directional vectors and thus has vector form
+					 					<p><me>
+							 				\mbf{x} 
+							 				=
+							 				\begin{bmatrix} 3 \\ -1\\ 2 \end{bmatrix} 
+							 				+
+							 				t\begin{bmatrix} 1 \\ 0\\ - 1 \end{bmatrix}
+							 				+
+							 				s \begin{bmatrix} -1 \\ 2 \\ -2 \end{bmatrix}
+							 				.
+							 			</me></p>
+							 			In particular, the parametric equations are
+										<p><me>
+											x_1 =  3 + t - s
+											;
+											x_2 =  -1 + 2s
+											;
+											x_3 =  2-t-2s.
+										</me></p>
+										We can find a normal vector <m>\mbf{n}</m> by taking the cross product of the two directional vectors (see <xref ref="hint-def-cross-product-and-it-is-normal"/>):
+										<p><me>
+											\mbf{n}
+											=
+											\begin{bmatrix} 1 \\ 0\\ - 1 \end{bmatrix}
+							 				\times
+							 				\begin{bmatrix} -1 \\ 2 \\ -2 \end{bmatrix}
+							 				=
+							 				\begin{bmatrix}
+												0 \cdot (-2)-(-1) \cdot 2\\
+												(-1) \cdot (-1) -1 \cdot (-2)\\
+												1 \cdot 2-0\cdot (-1)
+											\end{bmatrix})
+											=
+							 				\begin{bmatrix}
+												2\\
+												3\\
+												2
+											\end{bmatrix})
+							 				.
+										</me></p>
+										The normal equation of the plane is now given by <m>\mbf{n}\cdot\vect{PX}=0</m>, or more explicitly:
+										<p><me>
+											\begin{bmatrix}
+							 					2\\
+												3\\
+												2
+							 				\end{bmatrix}
+											\cdot
+											\left(
+												\mbf{x}
+												-
+												\begin{bmatrix}
+												 3 \\ -1\\ 2
+												\end{bmatrix}
+											\right)=0
+										</me></p>
+										and we get the general form by computing the dot product on the left-hand side and rearranging:
+										<p><me>
+											2x_1 + 3x_2 + 2x_3 
+											=
+											7.
+										</me></p>
+					 				</solution>	
+					 				<answer>
+					 					<p>Normal form:</p>
+					 					<p><me>
+											\begin{bmatrix}
+							 					2\\
+												3\\
+												2
+							 				\end{bmatrix}
+											\cdot
+											\left(
+												\mbf{x}
+												-
+												\begin{bmatrix}
+												 3 \\ -1\\ 2
+												\end{bmatrix}
+											\right)=0
+										</me></p>
+										<p>General form:</p>
+										<p><me>
+											2x_1 + 3x_2 + 2x_3 
+											=
+											7
+										</me></p>
+										<p>Parametric form:</p>
+										<p><me>
+											x_1 =  3 + t - s
+											;
+											x_2 =  -1 + 2s
+											;
+											x_3 =  2-t-2s
+										</me></p>
+					 				</answer>
+					 			</p> 
+						 	</li>
+						 	<li>
+							 	<p>Containing the lines</p>
+							 	<p><me>
+								 	\mbf{x} = \begin{bmatrix} 1 \\ -1\\ 2 \end{bmatrix} +t\begin{bmatrix} 1 \\ 1\\ 1 \end{bmatrix}  \ \text{and} \ \
+								 	\mbf{x} = \begin{bmatrix} 0 \\ 0\\ 2 \end{bmatrix} +t\begin{bmatrix} 1 \\ -1\\ 0 \end{bmatrix} .
+							 	</me></p>
+							 	<p>
+							 		<solution>
+							 			First, we have to find out in which point the two lines meet. (If they do not meet, then they are skew lines since they are clearly not parallel. In this case, they are not in the same plane.) In other words, we are looking for two real numbers <m>s, t</m> such that
+							 			<me>
+							 				\begin{bmatrix} 
+							 					1 \\ -1\\ 2
+							 				\end{bmatrix}
+							 				+
+							 				s
+							 				\begin{bmatrix}
+							 					1 \\ 1\\ 1
+							 				\end{bmatrix}
+							 				=
+										 	\begin{bmatrix}
+										 		0 \\ 0\\ 2
+										 	\end{bmatrix}
+										 	+
+										 	t
+										 	\begin{bmatrix} 1 \\ -1\\ 0 \end{bmatrix}
+										 	.
+							 			</me>
+							 			Componentwise, this vector equation means:
+							 			<me>
+							 				1 + s = t;\;
+							 				-1 + s = -t;\;
+							 				2 + s = 2.
+							 			</me>
+							 			The last equation yields <m>s=0</m> and both other equations then yield <m> t =  1</m>. We conclude that the two lines meet in the point <m>(1,-1,2)</m> because
+							 			<me>
+							 				\begin{bmatrix} 
+							 					1 \\ -1\\ 2
+							 				\end{bmatrix}
+							 				+
+							 				0
+							 				\begin{bmatrix}
+							 					1 \\ 1\\ 1
+							 				\end{bmatrix}
+							 				=
+										 	\begin{bmatrix}
+										 		0 \\ 0\\ 2
+										 	\end{bmatrix}
+										 	+
+										 	1
+										 	\begin{bmatrix} 1 \\ -1\\ 0 \end{bmatrix}
+										 	=
+										 	\begin{bmatrix} 
+							 					1 \\ -1\\ 2
+							 				\end{bmatrix}
+							 				.
+							 			</me>
+							 			Since the two lines are not parallel, their directional vectors span the plane that contains them, so we arrive at the following vector equation of the plane,
+							 			<me>
+							 				\begin{bmatrix} 
+							 					x_1 \\ x_2 \\ x_3
+							 				\end{bmatrix}
+							 				=
+							 				\begin{bmatrix} 
+							 					1 \\ -1\\ 2
+							 				\end{bmatrix}
+							 				+
+							 				r
+							 				\begin{bmatrix}
+							 					1 \\ 1\\ 1
+							 				\end{bmatrix}
+							 				+
+							 				q
+							 				\begin{bmatrix}
+							 					1 \\ -1\\ 0
+							 				\end{bmatrix}
+							 				,
+							 			</me>
+							 			which means in parametric form:
+							 			<me>
+							 				x_1 = 1 + r + q
+							 				;
+							 				x_2 = -1 + r - q
+							 				;
+							 				x_3 = 2 + r
+							 				.
+							 			</me>
+							 			For the normal form, we form the cross product of the two directional vectors to find a normal vector (see <xref ref="hint-def-cross-product-and-it-is-normal"/>):
+							 			<me>
+							 				\mbf{n}
+							 				=
+							 				\begin{bmatrix}
+							 					1 \\ 1\\ 1
+							 				\end{bmatrix}
+							 				\times
+							 				\begin{bmatrix}
+							 					1 \\ -1\\ 0
+							 				\end{bmatrix}
+							 				=
+											\begin{bmatrix}
+												1 \cdot 0 -1 \cdot (-1)\\
+												1 \cdot 1 - 1 \cdot 0\\
+												1 \cdot (-1) -1 \cdot 1
+											\end{bmatrix}
+											=
+											\begin{bmatrix}
+												1\\
+												1\\
+												-2
+											\end{bmatrix}
+											.
+										</me>
+										We now only need a point on the plane, say <m>(1 , -1 ,2)</m>, to give the normal form <m>\mbf{n}\cdot\vect{PX}=0</m> explicitly:
+										<me>
+											\begin{bmatrix}
+												1\\
+												1\\
+												-2
+											\end{bmatrix}
+											\cdot
+											\left(
+											\begin{bmatrix}
+												x_1 - 1\\
+												x_2 + 1\\
+												x_3 - 2
+											\end{bmatrix}
+											\right)
+											=
+											0
+											.
+										</me>
+										The general form can then be computed to be:
+										<me>
+											x_1 + x_2 - 2 x_3
+											=
+											-4
+											.
+										</me>
+							 		</solution>
+							 		<answer>
+							 			<p>Normal form:</p>
+					 					<p><me>
+											\begin{bmatrix}
+												1\\
+												1\\
+												-2
+											\end{bmatrix}
+											\cdot
+											\begin{bmatrix}
+												x_1 - 1\\
+												x_2 + 1\\
+												x_3 - 2
+											\end{bmatrix}
+											=
+											0
+										</me></p>
+										<p>General form:</p>
+										<p><me>
+											x_1 + x_2 - 2 x_3
+											=
+											-4
+										</me></p>
+										<p>Parametric form:</p>
+										<p><me>
+											x_1 = 1 + s + t
+							 				;
+							 				x_2 = -1 + s - t
+							 				;
+							 				x_3 = 2 + s
+										</me></p>
+					 				</answer>
+							 	</p>
+						 	</li>
+						 	<li><p>Containing the lines</p>
+							 	<p>	<me>
+								 	\mbf{x} = \begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix} +t\begin{bmatrix} 1 \\ -1\\ 3 \end{bmatrix}  \ \text{and} \ \
+								 	\mbf{x} = \begin{bmatrix} 0 \\ -2\\ 5 \end{bmatrix} +t\begin{bmatrix} 2 \\ 1\\ -1 \end{bmatrix} .
+							 	</me></p>
+							 	<p><solution>
+							 			First, we have to find out in which point the two lines meet. (If they do not meet, then they are skew lines since they are clearly not parallel. In this case, they are not in the same plane.) In other words, we are looking for two real numbers <m>s, t</m> such that
+							 			<me>
+							 				\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix} +s\begin{bmatrix} 1 \\ -1\\ 3 \end{bmatrix}
+							 				=
+										 	\begin{bmatrix} 0 \\ -2\\ 5 \end{bmatrix} +t\begin{bmatrix} 2 \\ 1\\ -1 \end{bmatrix}
+										 	.
+							 			</me>
+							 			Componentwise, this vector equation means:
+							 			<me>
+							 				3 + s = 2t;\;
+							 				1 - s = -2+t;\;
+							 				3s = 5 - t.
+							 			</me>
+							 			The second equation says <m>t=3-s</m>, which we plug into the other equations to get <m>s = 1</m>.
+
+							 			We conclude that the two lines meet in the point <m>(4,0,3)</m> because
+							 			<me>
+							 				\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix} +1\begin{bmatrix} 1 \\ -1\\ 3 \end{bmatrix}
+							 				=\begin{bmatrix} 4 \\ 0\\ 3 \end{bmatrix}
+							 				.
+							 			</me>
+							 			Since the two lines are not parallel, their directional vectors span the plane that contains them, so we arrive at the following vector equation of the plane,
+							 			<me>
+							 				\begin{bmatrix} 
+							 					x_1 \\ x_2 \\ x_3
+							 				\end{bmatrix}
+							 				=
+							 				\begin{bmatrix} 
+							 					4 \\ 0\\ 3
+							 				\end{bmatrix}
+							 				+
+							 				r
+							 				\begin{bmatrix}
+							 					1 \\ -1\\ 3 
+							 				\end{bmatrix}
+							 				+
+							 				q
+							 				\begin{bmatrix}
+							 					2 \\ 1\\ -1
+							 				\end{bmatrix}
+							 				,
+							 			</me>
+							 			which means in parametric form:
+							 			<me>
+							 				x_1 =  4 + r + 2q
+							 				;
+							 				x_2 =  -r+q
+							 				;
+							 				x_3 = 3 +3r -q
+							 				.
+							 			</me>
+							 			For the normal form, we form the cross product of the two directional vectors to find a normal vector (see <xref ref="hint-def-cross-product-and-it-is-normal"/>):
+							 			<me>
+							 				\mbf{n}
+							 				=
+							 				\begin{bmatrix}
+							 					1 \\ -1\\ 3 
+							 				\end{bmatrix}
+							 				\times
+							 				\begin{bmatrix}
+							 					2 \\ 1\\ -1
+							 				\end{bmatrix}
+							 				=
+											\begin{bmatrix}
+												(-1) \cdot (-1)-3 \cdot 1\\
+												3 \cdot 2-1 \cdot (-1)\\
+												1 \cdot 1-(-1) \cdot 2
+											\end{bmatrix}
+											=
+											\begin{bmatrix}
+												-2\\
+												7\\
+												3
+											\end{bmatrix}
+											.
+										</me>
+										We now only need a point on the plane, say <m>(4,0,3)</m>, to give the normal form <m>\mbf{n}\cdot\vect{PX}=0</m> explicitly:
+										<me>
+											\begin{bmatrix}
+												-2\\
+												7\\
+												3
+											\end{bmatrix}
+											\cdot
+											\begin{bmatrix}
+												x_1 - 4\\
+												x_2 \\
+												x_3 - 3
+											\end{bmatrix}
+											.
+										</me>
+										The general form can then be computed to be:
+										<me>
+											-2x_1 + 7x_2 + 3 x_3 = 1.
+										</me>
+							 		</solution>
+							 		<answer>
+							 			<p>Normal form:</p>
+					 					<p><me>
+											\begin{bmatrix}
+												-2\\
+												7\\
+												3
+											\end{bmatrix}
+											\cdot
+											\begin{bmatrix}
+												x_1 - 4\\
+												x_2 \\
+												x_3 - 3
+											\end{bmatrix}
+											=
+											0
+										</me></p>
+										<p>General form:</p>
+										<p><me>
+											-2x_1 + 7x_2 + 3 x_3 = 1
+										</me></p>
+										<p>Parametric form:</p>
+										<p><me>
+											x_1 =  4 + s + 2t
+							 				;
+							 				x_2 =  -s+t
+							 				;
+							 				x_3 = 3 +3s -t
+										</me></p>
+					 				</answer>
+					 			</p>
+					 		</li>
+						 	<li xml:id="subex-plane-equidistant-to-two-points1">
+						 		<p>Each point which is equidistant from <m>P=(2,-1,3)</m> and <m>Q=(1,1,-1)</m>.</p>
+						 		<p>
+							 		<solution>
+							 			For a point <m>X</m> to be equidistant from <m>P</m> and <m>Q</m>, we must have
+							 			<me>
+							 				\norm{\vect{PX}}= \norm{\vect{QX}}.
+							 			</me>
+							 			By squaring both sides of the equation, we can rewrite this to
+							 			<men xml:id="eq-1">
+							 				\vect{PX}\cdot \vect{PX}= \vect{QX}\cdot \vect{QX}.
+							 			</men>
+							 			If we use that <m>\vect{PX} = \vect{OX} - \vect{OP}</m>, then using the properties of the dot product yields
+							 			<md>
+							 				<mrow>
+							 					\vect{PX}\cdot \vect{PX} 
+								 				\amp =
+								 				(\vect{OX} - \vect{OP})\cdot(\vect{OX} - \vect{OP})
+								 			</mrow>
+								 			<mrow>
+								 				\amp =
+								 				\vect{OX}\cdot\vect{OX} - \vect{OX}\cdot\vect{OP}
+								 				- \vect{OP}\cdot\vect{OX} + \vect{OP}\cdot\vect{OP}
+								 			</mrow>
+								 			<mrow>
+								 				\amp =
+								 				\norm{\vect{OX}}^2 + \norm{\vect{OP}}^2
+								 				- 2 \vect{OX}\cdot\vect{OP}.
+								 			</mrow>
+							 			</md>
+							 			Similarly,
+							 			<me>
+							 				\vect{QX}\cdot \vect{QX} 
+							 				=
+							 				\norm{\vect{OX}}^2 + \norm{\vect{OQ}}^2
+							 				- 2 \vect{OX}\cdot\vect{OQ}
+							 				.
+							 			</me>
+							 			So if we plug both of these into <xref ref="eq-1"/> and cancel the summand of <m>\norm{\vect{OX}}^2</m> on both sides, then we see that <m>\norm{\vect{PX}}= \norm{\vect{QX}}</m> is equivalent to
+							 			<men xml:id="eq-reformulation-of-equidistant">
+							 				\norm{\vect{OP}}^2
+							 				- 2 \vect{OX}\cdot\vect{OP}
+							 				=
+							 				\norm{\vect{OQ}}^2
+							 				- 2 \vect{OX}\cdot\vect{OQ}
+							 				.
+							 			</men>
+							 			We compute with <m>X=(x_1,x_2,x_3)</m>:
+							 			<md>
+							 				<mrow>
+							 					\vect{OX}\cdot\vect{OP}
+							 					=
+							 					2x_1 - x_2 + 3x_3
+							 				</mrow>
+							 				<mrow>
+							 					\vect{OX}\cdot\vect{OQ}
+							 					=
+							 					x_1 + x_2 - x_3
+							 				</mrow>
+							 				<mrow>
+							 					\norm{\vect{OP}}^2
+							 					=
+							 					2^2 + (-1)^2 +3^2
+							 					=
+							 					14
+							 				</mrow>
+							 				<mrow>
+							 					\norm{\vect{OQ}}^2
+							 					=
+							 					1^2 + 1^2 + (-1)^2
+							 					=
+							 					3,
+							 				</mrow>
+							 			</md>
+							 			so that <xref ref="eq-reformulation-of-equidistant"/> becomes:
+							 			<md>
+							 				<mrow>
+							 					\amp
+								 				14
+								 				- 2 (2x_1 - x_2 + 3x_3)
+								 				=
+								 				3
+								 				- 2 (x_1 + x_2 - x_3)
+								 			</mrow>
+								 			<mrow>
+								 				\iff \amp
+								 				11
+								 				=
+								 				(- 2 x_1 - 2  x_2 + 2  x_3)
+								 				+
+								 				(4x_1 - 2x_2 + 6x_3)
+							 				</mrow>
+								 			<mrow>
+								 				\iff \amp
+								 				11
+								 				=
+								 				2x_1 - 4x_2 + 8x_3,
+								 			</mrow>
+							 			</md>
+							 			<!-- the general form is correct; if a point satisfies it, then it is indeed equidistant to P and Q-->
+							 			which is the general form of our plane equation. We can rewrite this to
+							 			<me>
+							 				\begin{bmatrix}
+												2\\
+												-4\\
+												8
+											\end{bmatrix}
+											\cdot
+											\begin{bmatrix}
+												x_1 \\
+												x_2 \\
+												x_3 
+											\end{bmatrix}
+											=
+											11,
+										</me>
+										which is its normal form. Lastly, for the vector form, we need three points in the plane which do not lie on a line. Let us choose <m>R_1= (0, -3 , -\frac{1}{8} )</m>, <m>R_2= (\frac{3}{2}, 0, 1)</m>, and <m>R_3= (6,\frac{1}{4} ,0)</m> which all satisfy the general equation. Now, the plane's vector equation is given by
+										<md>
+											<mrow>
+												\mbf{x}
+												\amp =
+												\vect{OR_1}
+												+
+												t
+												\vect{R_1 R_2}
+												+
+												s
+												\vect{R_1 R_3}
+											</mrow><mrow>
+												\amp	=
+												\begin{bmatrix}
+													0 \\ -3 \\ -\frac{1}{8} 
+												\end{bmatrix}
+												+
+												t
+												\begin{bmatrix}
+													\frac{3}{2}  - 0 \\ 0 - (-3) \\ 1 - (-\frac{1}{8})
+												\end{bmatrix}
+												+
+												s
+												\begin{bmatrix}
+													6 - 0 \\ \frac{1}{4} - (-3) \\ 0 - (-\frac{1}{8})
+												\end{bmatrix}
+											</mrow><mrow>
+												\amp =
+												\begin{bmatrix}
+													0 \\ -3 \\ -\frac{1}{8} 
+												\end{bmatrix}
+												+
+												t
+												\begin{bmatrix}
+													\frac{3}{2} \\ 3 \\ \frac{9}{8}
+												\end{bmatrix}
+												+
+												s
+												\begin{bmatrix}
+													6 \\ \frac{13}{4} \\ \frac{1}{8}
+												\end{bmatrix}
+											</mrow>
+										</md>
+										We can rewrite this by rescaling (<m>t=8r</m> and <m>s=8q</m>) to:
+										<me>
+											\mbf{x}
+											=
+											\begin{bmatrix}
+												0 \\ -3 \\ -\frac{1}{8} 
+											\end{bmatrix}
+											+
+											r
+											\begin{bmatrix}
+												12 \\ 24 \\ 9
+											\end{bmatrix}
+											+
+											q
+											\begin{bmatrix}
+												48 \\ 26 \\ 1
+											\end{bmatrix}
+											,
+										</me>
+										which yields the parametric equations:
+										<me>
+											x_1 = 12r + 48q
+											;
+											x_2 = -3 +24r +26 q
+											;
+											x_3 = -\frac{1}{8} + 9r + q
+											.
+										</me>
+							 		</solution>
+							 		<answer>
+							 			<p>Normal form:</p>
+					 					<p><me>
+											\begin{bmatrix}
+												2\\
+												-4\\
+												8
+											\end{bmatrix}
+											\cdot
+											left(
+											\begin{bmatrix}
+												x_1 \\
+												x_2 \\
+												x_3 
+											\end{bmatrix}
+											\right)
+											=
+											11
+										</me></p>
+										<p>General form:</p>
+										<p><me>
+											11
+							 				=
+							 				2x_1 - 4x_2 + 8x_3
+										</me></p>
+										<p>Parametric form:</p>
+										<p><me>
+											x_1 = 12r + 48q
+											;
+											x_2 = -3 +24r +26 q
+											;
+											x_3 = -\frac{1}{8} + 9r + q
+										</me></p>
+							 		</answer>
+							 	</p>
+						 	</li>
+						 	<li>
+						 		<p>Each point which is equidistant from <m>P=(0,1,-1)</m> and <m>Q=(2,-1,-3)</m>.</p>
+						 		<p>
+							 		<solution>
+							 			A point <m>X</m> is equidistant from <m>P</m> and <m>Q</m> if and only if 
+							 			<me>
+							 				\norm{\vect{OP}}^2
+							 				- 2 \vect{OX}\cdot\vect{OP}
+							 				=
+							 				\norm{\vect{OQ}}^2
+							 				- 2 \vect{OX}\cdot\vect{OQ}
+							 				,
+							 			</me>
+							 			see the argument in <xref ref="subex-plane-equidistant-to-two-points1"/>and <xref ref="eq-reformulation-of-equidistant"/> in particular.
+							 			We compute with <m>X=(x_1,x_2,x_3)</m>:
+							 			<md>
+							 				<mrow>
+							 					\vect{OX}\cdot\vect{OP}
+							 					=
+							 					x_2 - x_3
+							 				</mrow>
+							 				<mrow>
+							 					\vect{OX}\cdot\vect{OQ}
+							 					=
+							 					2x_1 - x_2 - 3x_3
+							 				</mrow>
+							 				<mrow>
+							 					\norm{\vect{OP}}^2
+							 					=
+							 					0^2 + 1^2 +(-1)^2
+							 					=
+							 					2
+							 				</mrow>
+							 				<mrow>
+							 					\norm{\vect{OQ}}^2
+							 					=
+							 					2^2 + (-1)^2 + (-3)^2
+							 					=
+							 					14,
+							 				</mrow>
+							 			</md>
+							 			so that <xref ref="eq-reformulation-of-equidistant"/> becomes:
+							 			<md>
+							 				<mrow>
+							 					\amp
+								 				2
+								 				- 2 (x_2 - x_3)
+								 				=
+								 				14
+								 				- 2 (2x_1 - x_2 - 3x_3)
+								 			</mrow>
+								 			<mrow>
+								 				\iff \amp
+								 				2 (2x_1 - x_2 - 3x_3)
+								 				- 2 (x_2 - x_3)
+								 				=
+								 				12
+							 				</mrow>
+								 			<mrow>
+								 				\iff \amp
+								 				4x_1 - 4x_2 - 4x_3
+								 				=
+								 				12,
+								 			</mrow>
+							 			</md>
+							 			<!-- the general form is correct; if a point satisfies it, then it is indeed equidistant to P and Q-->
+							 			which is the general form of our plane equation. We can rewrite this to
+							 			<me>
+							 				\begin{bmatrix}
+												4 \\ -4 \\ - 4
+											\end{bmatrix}
+											\cdot
+											\begin{bmatrix}
+												x_1 \\
+												x_2 \\
+												x_3 
+											\end{bmatrix}
+											=
+											12,
+										</me>
+										which is its normal form. Lastly, for the vector form, we need three points in the plane which do not lie on a line. Let us choose <m>R_1= (3,0,0)</m>, <m>R_2= (0, -3, 0)</m>, and <m>R_3= (0,0,-3)</m> which all satisfy the general equation. Now, the plane's vector equation is given by
+										<md>
+											<mrow>
+												\mbf{x}
+												\amp =
+												\vect{OR_1}
+												+
+												t
+												\vect{R_1 R_2}
+												+
+												s
+												\vect{R_1 R_3}
+											</mrow><mrow>
+												\amp	=
+												\begin{bmatrix}
+													3\\0\\0
+												\end{bmatrix}
+												+
+												t
+												\begin{bmatrix}
+													-3\\-3\\0
+												\end{bmatrix}
+												+
+												s
+												\begin{bmatrix}
+													-3\\0\\-3
+												\end{bmatrix}
+											</mrow>
+										</md>
+										which yields the parametric equations:
+										<me>
+											x_1 = 3 -3t -3s
+											;
+											x_2 = -3t
+											;
+											x_3 = -3s
+											.
+										</me>
+							 		</solution>
+							 		<answer>
+							 			<p>Normal form:</p>
+					 					<p><me>
+											\begin{bmatrix}
+												4 \\ -4 \\ - 4
+											\end{bmatrix}
+											\cdot
+											\begin{bmatrix}
+												x_1 \\
+												x_2 \\
+												x_3 
+											\end{bmatrix}
+											=
+											12
+										</me></p>
+										<p>General form:</p>
+										<p><me>
+											4x_1 - 4x_2 - 4x_3
+								 				=
+								 				12
+										</me></p>
+										<p>Parametric form:</p>
+										<p><me>
+											x_1 = 3 -3t -3s
+											;
+											x_2 = -3t
+											;
+											x_3 = -3s
+										</me></p>
+							 		</answer>
+							 	</p>
+						 	</li>
+						 </ol>		
+						</statement>
+
+					</exercise></p>
+
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 1.3, Exercise 27.-->
+						<statement>	<aside><p> (Source: <xref ref="ref-KN"/>, Section 4.2, Exercise 4.2.12.) </p></aside>
+							In each case, calculate the distance from the point <m>P</m> to the line <m>\ell</m>, and find the point <m>Q</m> on <m>\ell</m> closest to <m>P</m>.
+							<ol> 
+								<li>	<m>P=(3,2,-1)</m>, <m>\ell \colon \mbf{x}  = \begin{bmatrix} 2 \\ 1\\ 3 \end{bmatrix} +t\begin{bmatrix} 3 \\ -1\\ -2 \end{bmatrix}  </m>
+								</li>
+								<li>	<m>P=(1,-1,3)</m>, <m>\ell \colon \mbf{x}  = \begin{bmatrix} 1 \\ 0\\ -1 \end{bmatrix} +t\begin{bmatrix} 3 \\ 1\\ 4 \end{bmatrix}  </m>
+							</li>
+							</ol>  
+						</statement>
+						<hint xml:id="hint-dist-line-pt">
+							If a line <m>\ell</m> is given by the vector equation
+							<me>
+								\mbf{x}
+								=
+								\mbf{a}
+								+
+								t\mbf{d},
+							</me>
+							then the distance from <m>\ell</m> to a point <m>P</m> is given by
+							<me>
+								\operatorname{dist}
+								(\ell, P) = 
+								\norm{(\mathbf{p}-\mathbf{a}) - \operatorname{proj}_{\mathbf{d}}(\mathbf{p}-\mathbf{a})},
+							</me>
+							where <m>\mbf{p}:=\vect{OP}</m> and <m>\operatorname{proj}</m> is as defined in <xref ref="def-proj-vect-onto-vect"/>.
+						</hint>
+						<hint xml:id="hint-pt-on-line-closest-to-pt">
+							If a line <m>\ell</m> is given by the vector equation
+							<me>
+								\mbf{x}
+								=
+								\mbf{a}
+								+
+								t\mbf{d}
+							</me>
+							and <m>\mbf{p}</m> is the position vector of a point <m>P</m>, then
+							<me>
+								\mbf{q}
+								:=
+								\mbf{a} + \operatorname{proj}_{\mathbf{d}}(\mathbf{p}-\mathbf{a}),
+							</me>
+							is the position vector of the point <m>Q</m> on <m>\ell</m> which is closest to the point <m>P</m>.
+						</hint>
+						<solution>
+							According to <xref ref="hint-dist-line-pt"/>, the formula for the distance between <m>\ell</m> and <m>P</m> is given by
+							<me>
+								\operatorname{dist}
+								(\ell, P) = 
+								\norm{(\mathbf{p}-\mathbf{a}) - \operatorname{proj}_{\mathbf{d}}(\mathbf{p}-\mathbf{a})},
+							</me>
+							where <m>\mbf{a}</m> is a point on the line and <m>\mathbf{d}</m> is a direction vector of the line. We now only have to plug in the values for the two situations:
+							<ol> 
+								<li> 
+								For the given <m>\ell</m>, we have
+								<me>
+									\mbf{a} = \begin{bmatrix} 2 \\ 1\\ 3 \end{bmatrix},
+									\mbf{d} = \begin{bmatrix} 3 \\ -1\\ -2 \end{bmatrix},
+									\text{ and }
+									\mbf{p} = \begin{bmatrix} 3 \\ 2\\ -1 \end{bmatrix}
+									,
+								</me>
+								so that
+								<me>
+									\mbf{v}
+									:=
+									\mathbf{p}-\mathbf{a}
+									=
+									\begin{bmatrix} 3 \\ 2\\ -1 \end{bmatrix}
+									-
+									\begin{bmatrix} 2 \\ 1\\ 3 \end{bmatrix}
+									=
+									\begin{bmatrix} 1 \\ 1\\ -4 \end{bmatrix}
+									.
+								</me>
+								We compute
+								<md>
+									<mrow>
+										\mathbf{v} \cdot  \mathbf{d}
+										\amp =
+										\begin{bmatrix} 1 \\ 1\\ -4 \end{bmatrix} \cdot \begin{bmatrix} 3 \\ -1\\ -2 \end{bmatrix}
+									</mrow>
+									<mrow>
+										\amp =
+										\bigl(1\cdot 3 + 1 \cdot (-1) + (-4)\cdot (-2)\bigr)
+										=10.
+									</mrow>
+								</md>
+								and
+								<me>
+									\mbf{d}\cdot \mbf{d}
+									=
+									\begin{bmatrix} 3 \\ -1\\ -2 \end{bmatrix}
+									\cdot
+									\begin{bmatrix} 3 \\ -1\\ -2 \end{bmatrix}
+									=
+									3^2 + (-1)^2 + (-2)^2
+									=
+									14,
+								</me>
+								so that (using <xref ref="def-proj-vect-onto-vect"/>)
+								<me>
+									\operatorname{proj}_{\mathbf{d}}\mathbf{v}
+									=
+									\left(
+										\frac{\mbf{d}\cdot \mbf{v}}{\mbf{d}\cdot \mbf{d}}
+									\right)
+									\mbf{d}
+									=
+									\tfrac{10}{14}\begin{bmatrix} 3 \\ -1\\ -2 \end{bmatrix}
+									.
+								</me>
+								Therefore,
+								<md>
+									<mrow>
+										\operatorname{dist}
+										(\ell, P) 
+										\amp =
+										\norm{\mathbf{v} - \operatorname{proj}_{\mathbf{d}}\mathbf{v}}
+										=
+										\norm{
+											\begin{bmatrix} 1 \\ 1\\ -4 \end{bmatrix}
+											-
+											\tfrac{10}{14}
+											\begin{bmatrix} 3 \\ -1\\ -2 \end{bmatrix}}
+									</mrow>
+									<mrow>
+										\amp = 
+										\norm{\tfrac{1}{14}\begin{bmatrix} -16 \\ 24 \\ -36 \end{bmatrix}}
+									</mrow>
+									<mrow>
+										\amp = 
+										\sqrt{ \left(\tfrac{-16}{14}\right)^2 + \left(\tfrac{24}{14}\right)^2 + \left(\tfrac{-36}{14}\right)^2}
+									</mrow>
+									<mrow>
+										\amp = 
+										\sqrt{\tfrac{152}{14}}.
+									</mrow>
+								</md>
+								Next, for the point <m>Q</m> on <m>\ell</m> which has distance <m>\sqrt{\tfrac{152}{14}}</m> from <m>P</m>, we use <xref ref="hint-pt-on-line-closest-to-pt"/>: we need
+								<me>
+									\mbf{q}
+									:=
+									\mbf{a} + \operatorname{proj}_{\mathbf{d}}\mbf{v}
+									=
+									\begin{bmatrix} 2 \\ 1\\ 3 \end{bmatrix} + \tfrac{10}{14}\begin{bmatrix} 3 \\ -1\\ -2 \end{bmatrix}
+									=
+									\tfrac{1}{14}\begin{bmatrix} 58 \\ 4\\ 22 \end{bmatrix}
+									,
+								</me>
+								so that <m>Q= (\tfrac{29}{7}, \tfrac{2}{7}, \tfrac{11}{7})</m>.
+								</li>
+								<li>
+								<m>P=(1,-1,3)</m>, <m>\ell \colon \mbf{x}  = \begin{bmatrix} 1 \\ 0\\ -1 \end{bmatrix} +t\begin{bmatrix} 3 \\ 1\\ 4 \end{bmatrix}  </m>
+								For the given <m>\ell</m>, we have
+								<me>
+									\mbf{a} = \begin{bmatrix} 1 \\ 0\\ -1 \end{bmatrix},
+									\mbf{d} = \begin{bmatrix} 3 \\ 1\\ 4 \end{bmatrix},
+									\text{ and }
+									\mbf{p} = \begin{bmatrix} 1 \\ -1\\ 3 \end{bmatrix}
+									,
+								</me>
+								so that
+								<me>
+									\mbf{v}
+									:=
+									\mathbf{p}-\mathbf{a}
+									=
+									\begin{bmatrix} 1 \\ -1\\ 3 \end{bmatrix}
+									-
+									\begin{bmatrix} 1 \\ 0\\ -1 \end{bmatrix}
+									=
+									\begin{bmatrix} 0 \\ -1\\ 4 \end{bmatrix}
+									.
+								</me>
+								We compute
+								<md>
+									<mrow>
+										\mathbf{v} \cdot  \mathbf{d}
+										\amp =
+										\begin{bmatrix} 0 \\ -1\\ 4 \end{bmatrix} 
+										\cdot
+										\begin{bmatrix} 3 \\ 1\\ 4 \end{bmatrix}
+									</mrow>
+									<mrow>
+										\amp =
+										\bigl(0\cdot 3 + (-1) \cdot 1 + 4\cdot 4\bigr)
+										=15.
+									</mrow>
+								</md>
+								and
+								<me>
+									\mbf{d}\cdot \mbf{d}
+									=
+									\begin{bmatrix} 3 \\ 1\\ 4 \end{bmatrix}
+									\cdot
+									\begin{bmatrix} 3 \\ 1\\ 4 \end{bmatrix}
+									=
+									3^2 + 1^2 + 4^2
+									=
+									26,
+								</me>
+								so that (using <xref ref="def-proj-vect-onto-vect"/>)
+								<me>
+									\operatorname{proj}_{\mathbf{d}}\mathbf{v}
+									=
+									\left(
+										\frac{\mbf{d}\cdot \mbf{v}}{\mbf{d}\cdot \mbf{d}}
+									\right)
+									\mbf{d}
+									=
+									\tfrac{15}{26}\begin{bmatrix} 3 \\ 1\\ 4 \end{bmatrix}
+									.
+								</me>
+								Therefore,
+								<md>
+									<mrow>
+										\operatorname{dist}
+										(\ell, P) 
+										\amp =
+										\norm{\mathbf{v} - \operatorname{proj}_{\mathbf{d}}\mathbf{v}}
+										=
+										\norm{
+											\begin{bmatrix}  0 \\ -1\\ 4  \end{bmatrix}
+											-
+											\tfrac{15}{26}\begin{bmatrix} 3 \\ 1\\ 4 \end{bmatrix}
+										}
+									</mrow>
+									<mrow>
+										\amp = 
+										\norm{\tfrac{1}{26}\begin{bmatrix} -45 \\ -41 \\ 44 \end{bmatrix}}
+									</mrow>
+									<mrow>
+										\amp = 
+										\sqrt{ \left(\tfrac{-45}{26}\right)^2 + \left(\tfrac{-41}{26}\right)^2 + \left(\tfrac{44}{26}\right)^2}
+									</mrow>
+									<mrow>
+										\amp = 
+										\sqrt{\tfrac{217}{26}}.
+									</mrow>
+								</md>
+								Next, for the point <m>Q</m> on <m>\ell</m> which has distance <m>\sqrt{\tfrac{217}{26}}</m> from <m>P</m>, we use <xref ref="hint-pt-on-line-closest-to-pt"/>: we need
+								<me>
+									\mbf{q}
+									:=
+									\mbf{a} + \operatorname{proj}_{\mathbf{d}}\mbf{v}
+									=
+									\begin{bmatrix}  1 \\ 0\\ -1  \end{bmatrix}
+									+
+									\tfrac{15}{26}\begin{bmatrix} 3 \\ 1\\ 4 \end{bmatrix}
+									=
+									\tfrac{1}{26}\begin{bmatrix} 71 \\ 15\\ 34 \end{bmatrix}
+									,
+								</me>
+								so that <m>Q= (\tfrac{71}{26}, \tfrac{15}{26}, \tfrac{34}{26})</m>.
+							</li>
+							</ol> 
+						</solution>
+						<answer>
+							<ol> 
+								<li> 
+								<me>
+									\operatorname{dist}
+									(\ell, P) 
+									=
+									\sqrt{\tfrac{152}{14}}
+									\text{ and }
+									Q= (\tfrac{29}{7}, \tfrac{2}{7}, \tfrac{11}{7})
+								</me>
+								</li>
+								<li>
+								<me>
+									\operatorname{dist}
+									(\ell, P) 
+									=
+									\sqrt{\tfrac{217}{26}}
+									\text{ and }
+									Q= (\tfrac{71}{26}, \tfrac{15}{26}, \tfrac{34}{26})
+								</me>
+							</li>
+							</ol> 
+						</answer>
+					</exercise></p>
+
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 1.3, Exercise 29-->
+						<statement>	<aside><p> (Source: <xref ref="ref-KN"/>, Section 4.2, Exercise 4.2.16.) </p></aside>
+						 	In each case, find the shortest distance from the point <m>P</m> to the plane and find <m>Q</m> on the plane closest to <m>P</m>.
+						 	<ol> 
+						 		<li>	<m>P=(2,3,0)</m> and plane equation: <m>5x_1+x_2+x_3 =1</m>
+						 		</li>
+						 		<li>	<m>P=(3,1,-1)</m> and plane equation: <m>2x_1+x_2-x_3 =6</m>
+						 	</li></ol>
+						</statement>
+						<hint xml:id="hint-dist-plane-pt">
+							The distance from a plane <m>\mathcal{P}</m> to a point <m>P</m> is given by
+							<me>
+								\operatorname{dist}
+								(\mathcal{P}, P) = 
+								\norm{\operatorname{proj}_{\mathbf{n}}(\mathbf{p}-\mathbf{a})},
+							</me>
+							where <m>\mbf{n}</m> is normal to the plane, <m>\mbf{a}</m> is the position vector of any point on the plane, <m>\mbf{p}:=\vect{OP}</m>, and <m>\operatorname{proj}</m> is as defined in <xref ref="def-proj-vect-onto-vect"/>.>
+						</hint>
+						<solution>
+							According to <xref ref="hint-dist-plane-pt"/>, we only need to find a point <m>A</m> on the plane and a normal vector <m>\mbf{n}</m> to the plane.
+							<ol> 
+						 		<li> For the plane with general equation <m>5x_1+x_2+x_3 =1</m>, we can choose 
+						 		<me>\mbf{n} = \begin{bmatrix}
+									5\\
+									1\\
+									1
+								\end{bmatrix}
+								\text{ and }
+									A = (1, -4, 0).
+								</me>
+								We then compute
+								<me>
+									\mbf{v}
+									:=
+									\vect{OP}-\vect{OA}
+									=
+									\begin{bmatrix}
+										2\\
+										3\\
+										0
+									\end{bmatrix}
+									-
+									\begin{bmatrix}
+										1\\
+										-4\\
+										0
+									\end{bmatrix}
+									=
+									\begin{bmatrix}
+										1\\
+										7\\
+										0
+									\end{bmatrix},
+								</me>
+								so that 
+								<me>
+									\mbf{n}
+									\cdot
+									\mbf{v}
+									=
+									\begin{bmatrix}
+										5\\
+										1\\
+										1
+									\end{bmatrix}
+									\cdot
+									\begin{bmatrix}
+										1\\
+										7\\
+										0
+									\end{bmatrix}
+									=
+									5+7 = 12
+								</me>
+								and
+								<me>
+									\mbf{n}
+									\cdot
+									\mbf{n}
+									=
+									\begin{bmatrix}
+										5\\
+										1\\
+										1
+									\end{bmatrix}
+									\cdot
+									\begin{bmatrix}
+										5\\
+										1\\
+										1
+									\end{bmatrix}
+									=
+									25+1+1 = 27.
+								</me>
+								We can now compute (using <xref ref="def-proj-vect-onto-vect"/>)
+								<me>
+									\operatorname{proj}_{\mathbf{n}}(\mathbf{v})
+									=
+									\left(
+										\frac{\mbf{n}\cdot \mbf{v}}{\mbf{n}\cdot \mbf{n}}
+									\right)
+									\mbf{n}
+									=
+									\frac{12}{27}
+									\begin{bmatrix}
+										5\\
+										1\\
+										1
+									\end{bmatrix}
+									=
+									\frac{4}{9}
+									\begin{bmatrix}
+										5\\
+										1\\
+										1
+									\end{bmatrix}
+								</me>
+								and thus
+								<md>
+									<mrow>
+										\operatorname{dist}
+										(\mathcal{P}, P)
+										\amp
+										= 
+										\norm{\operatorname{proj}_{\mathbf{n}}\mathbf{v}}
+									</mrow>
+									<mrow>
+										\amp =
+										\sqrt{
+											\left(\frac{20}{9}\right)^2 + \left(\frac{4}{9}\right)^2 + \left(\frac{4}{9}\right)^2
+										}
+										=
+										\sqrt{
+											\frac{16}{3}
+										}.
+									</mrow>
+								</md>
+								The point on the plane which is closest to <m>P</m> then has the position vector
+								<me>
+									\mbf{q}
+									=
+									\vect{OP} - \operatorname{proj}_{\mathbf{n}}\mathbf{v}
+									=
+									\begin{bmatrix}
+										2\\
+										3\\
+										0
+									\end{bmatrix}
+									-
+									\frac{4}{9}
+									\begin{bmatrix}
+										5\\
+										1\\
+										1
+									\end{bmatrix}
+									=
+									\frac{1}{9}
+									\begin{bmatrix}
+										-2 \\
+										23\\
+										-4
+									\end{bmatrix},
+								</me>
+								so that <m> Q =(\frac{-2}{9},\frac{23}{9},\frac{-4}{9})</m>.
+						 		</li>
+						 		<li>For the plane with general equation <m>2x_1+x_2-x_3 =6</m>, we can choose 
+						 		<me>\mbf{n} = \begin{bmatrix}
+									2\\
+									1\\
+									-1
+								\end{bmatrix}
+								\text{ and }
+									A = (3, 0, 0).
+								</me>
+								We then compute
+								<me>
+									\mbf{v}
+									:=
+									\vect{OP}-\vect{OA}
+									=
+									\begin{bmatrix}
+										3\\
+										1\\
+										-1
+									\end{bmatrix}
+									-
+									\begin{bmatrix}
+										3\\
+										0\\
+										0
+									\end{bmatrix}
+									=
+									\begin{bmatrix}
+										0\\
+										1\\
+										-1
+									\end{bmatrix},
+								</me>
+								so that 
+								<me>
+									\mbf{n}
+									\cdot
+									\mbf{v}
+									=
+									\begin{bmatrix}
+										2\\
+										1\\
+										-1
+									\end{bmatrix}
+									\cdot
+									\begin{bmatrix}
+										0\\
+										1\\
+										-1
+									\end{bmatrix}
+									=
+									2
+								</me>
+								and
+								<me>
+									\mbf{n}
+									\cdot
+									\mbf{n}
+									=
+									\begin{bmatrix}
+										2\\
+										1\\
+										-1
+									\end{bmatrix}
+									\cdot
+									\begin{bmatrix}
+										2\\
+										1\\
+										-1
+									\end{bmatrix}
+									=
+									4+1+1 = 6.
+								</me>
+								We can now compute (using <xref ref="def-proj-vect-onto-vect"/>)
+								<me>
+									\operatorname{proj}_{\mathbf{n}}(\mathbf{v})
+									=
+									\left(
+										\frac{\mbf{n}\cdot \mbf{v}}{\mbf{n}\cdot \mbf{n}}
+									\right)
+									\mbf{n}
+									=
+									\frac{1}{3}
+									\begin{bmatrix}
+										2\\
+										1\\
+										-1
+									\end{bmatrix}
+								</me>
+								and thus
+								<md>
+									<mrow>
+										\operatorname{dist}
+										(\mathcal{P}, P)
+										\amp
+										= 
+										\norm{\operatorname{proj}_{\mathbf{n}}\mathbf{v}}
+									</mrow>
+									<mrow>
+										\amp =
+										\sqrt{
+											\left(\frac{2}{3}\right)^2 + \left(\frac{1}{3}\right)^2 + \left(\frac{-1}{3}\right)^2
+										}
+										=
+										\sqrt{
+											\frac{2}{3}
+										}.
+									</mrow>
+								</md>
+								The point on the plane which is closest to <m>P</m> then has the position vector
+								<me>
+									\mbf{q}
+									=
+									\vect{OP} - \operatorname{proj}_{\mathbf{n}}\mathbf{v}
+									=
+									\begin{bmatrix}
+										3\\
+										1\\
+										-1
+									\end{bmatrix}
+									-
+									\frac{1}{3}
+									\begin{bmatrix}
+										2\\
+										1\\
+										-1
+									\end{bmatrix}
+									=
+									\frac{1}{3}
+									\begin{bmatrix}
+										7\\
+										2\\
+										-2
+									\end{bmatrix}
+								</me>
+								so that <m> Q =(\frac{7}{3}, \frac{2}{3}, \frac{-2}{3})</m>.
+						 	</li></ol>
+						</solution>
+						<answer>
+						<ol>
+							<li> 
+								<m>
+									\operatorname{dist}
+									(\mathcal{P}, P)
+									=
+									\sqrt{
+										\frac{16}{3}
+									},
+									Q =(\frac{-2}{9},\frac{23}{9},\frac{-4}{9})
+								</m>.
+					 		</li>
+						 	<li>
+						 		<m>
+									\operatorname{dist}
+									(\mathcal{P}, P)
+									=
+									\sqrt{
+										\frac{2}{3}
+									},
+									Q =(\frac{7}{3}, \frac{2}{3}, \frac{-2}{3})
+								</m>
+						 	</li>
+						 </ol>
+						</answer>
+					</exercise></p>
+
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 1.3, Exercise 35.-->
+						<statement>	<aside><p> (Source: <xref ref="ref-KN"/>, Section 4.2, Exercise 4.2.23.) </p></aside>
+							Find the shortest distance between the following pairs of parallel lines.
+						 	<ol> 
+						 		<li>	<m>\ell_1\colon\mbf{x}  = \begin{bmatrix} 2 \\ -1\\ 3 \end{bmatrix} +t\begin{bmatrix} 1 \\ -1\\ 4 \end{bmatrix}  </m> and 
+						 		<m>\ell_2\colon\mbf{x}  = \begin{bmatrix} 1 \\ 0\\ 1 \end{bmatrix} +t\begin{bmatrix} 1 \\ -1\\ 4 \end{bmatrix}  </m>
+						 		</li>
+								<li>	<m>\ell_1\colon\mbf{x}  = \begin{bmatrix} 3 \\ 0\\ 2 \end{bmatrix} +t\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix}  </m> and 
+						 	<m>\ell_1\colon\mbf{x}  = \begin{bmatrix} -1 \\ 2\\ 2 \end{bmatrix} +t\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix}  </m>
+						 	</li></ol>  	
+						</statement>
+						<hint xml:id="hint-dist-parallel-lines">
+							Find a plane <m>\mathcal{P}</m> to which <m>\ell_1</m> (and therefore also <m>\ell_2</m>) is orthogonal. In other words, the directional vector of <m>\ell_1</m> is normal to <m>\mathcal{P}</m>. Find the points <m>Q_1, Q_2</m> which <m>\mathcal{P}</m> has in common with <m>\ell_1</m> resp. <m>\ell_2</m>. What do you know about the line from <m>Q_1</m> to <m>Q_2</m>?
+						</hint>
+						<solution>
+							We follow the idea of <xref ref="hint-dist-parallel-lines"/> and make one additional remark: The line from <m>Q_1</m> to <m>Q_2</m> is, by construction, contained in the plane since the two points are in the plane. In particular, said line is orthogonal to  <m>\ell_1</m> and  <m>\ell_2</m> and hence describes the direct path from <m>\ell_1</m> to <m>\ell_2</m>, meaning
+							<me>
+					 			\operatorname{dist} (\ell_1, \ell_2)
+					 			=
+					 			\norm{\vect{Q_1 Q_2}}.
+					 		</me>
+					 		We now follow this recipe for the two given pairs of lines.
+							<ol> 
+						 		<li> We choose the point <m>Q_1= (2 , -1, 3 ) </m> on <m>\ell_1</m> and the declare the directional vector <m>\mbf{n}=\begin{bmatrix} 1 \\ -1\\ 4 \end{bmatrix} </m> of  <m>\ell_1</m> to be normal to the plane  <m>\mathcal{P}</m>. The normal form of  <m>\mathcal{P}</m> is then given by <m> \mbf{n} \cdot \mbf{x} = \mbf{n} \cdot \vect{OQ_1}</m>, so its general form is
+						 		<me>
+						 			x_1 - x_2 + 4 x_3
+						 			=
+						 			15
+						 			.
+						 		</me>
+						 		Next, we are looking for the intersection of <m>\mathcal{P}</m> with  <m>\ell_2</m>. In other words, we are looking for <m>t</m> such that <m>\begin{bmatrix} 1 \\ 0\\ 1 \end{bmatrix} +t\begin{bmatrix} 1 \\ -1\\ 4 \end{bmatrix}</m> satisfies the general equation of  <m>\mathcal{P}</m>:
+						 		<me>
+						 			(1+t) - (0-t) + 4 (1+4t) = 15
+						 			\iff
+						 			t = \tfrac{5}{9}.
+						 		</me>
+						 		We conclude that the point <m>Q_2</m> that <m>\mathcal{P}</m> and <m>\ell_2</m> share is given by
+						 		<me>
+						 			\begin{bmatrix} 1 \\ 0\\ 1 \end{bmatrix} +\tfrac{5}{9}\begin{bmatrix} 1 \\ -1\\ 4 \end{bmatrix}
+						 			=\begin{bmatrix} \tfrac{14}{9} \\ -\tfrac{5}{9}\\ \tfrac{29}{9}\end{bmatrix} 
+						 			.
+						 		</me>
+						 		The distance between the points <m>Q_1</m> and <m>Q_2</m> is then the distance between the lines:
+						 		<md>
+						 			<mrow>
+						 			\operatorname{dist} (\ell_1, \ell_2)
+						 			\amp=
+						 			\norm{\vect{Q_1 Q_2}}
+						 			</mrow>
+						 			<mrow>
+						 			\amp=
+						 			\sqrt{(\tfrac{14}{9} -2)^2 + (-\tfrac{5}{9} +1)^2 + (\tfrac{29}{9} -3)^2}
+						 			=
+						 			\sqrt{\tfrac{36}{81}}
+						 			=
+						 			\tfrac{2}{3}.</mrow>
+						 		</md>
+						 		</li>
+								<li>
+						 			We choose the point <m>Q_1= (3 , 0, 2 ) </m> on <m>\ell_1</m> and the declare the directional vector <m>\mbf{n}=\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix} </m> of  <m>\ell_1</m>to be normal to the plane  <m>\mathcal{P}</m>. The normal form of  <m>\mathcal{P}</m> is then given by <m> \mbf{n} \cdot \mbf{x} = \mbf{n} \cdot \vect{OQ_1}</m>, so its general form is
+							 		<me>
+							 			3x_1 + x_2 
+							 			=
+							 			9
+							 			.
+							 		</me>
+							 		Next, we are looking for the intersection of <m>\mathcal{P}</m> with  <m>\ell_2</m>. In other words, we are looking for <m>t</m> such that <m>\begin{bmatrix} -1 \\ 2\\ 2 \end{bmatrix} +t\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix}</m> satisfies the general equation of  <m>\mathcal{P}</m>:
+							 		<me>
+							 			3(-1+3t) + (2+t)  = 9
+							 			\iff
+							 			t = 1.
+							 		</me>
+							 		We conclude that the point <m>Q_2</m> that <m>\mathcal{P}</m> and <m>\ell_2</m> share is given by
+							 		<me>
+							 			\begin{bmatrix} -1 \\ 2\\ 2 \end{bmatrix} +1\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix}
+							 			=
+										\begin{bmatrix} 2 \\ 3\\ 2 \end{bmatrix}
+							 			.
+							 		</me>
+							 		The distance between the points <m>Q_1</m> and <m>Q_2</m> is then the distance between the lines:
+							 		<md>
+							 			<mrow>
+							 			\operatorname{dist} (\ell_1, \ell_2)
+							 			\amp=
+							 			\norm{\vect{Q_1 Q_2}}
+							 			</mrow>
+							 			<mrow>
+							 			\amp=
+							 			\sqrt{(2-3)^2 + (3-0)^2 + (2-2)^2}
+							 			=
+							 			\sqrt{10}
+							 			.</mrow>
+							 		</md>
+
+
+						 	</li></ol>  
+						</solution>
+						<answer>
+							<ol> 
+						 		<li>
+									<me>
+						 			\operatorname{dist} (\ell_1, \ell_2)
+						 			=
+						 			\tfrac{2}{3}.</me>
+						 		</li>
+						 		<li>
+									<me>
+						 			\operatorname{dist} (\ell_1, \ell_2)
+						 			=
+						 			\sqrt{10}.</me>
+						 	</li></ol>  
+						</answer>
+					</exercise></p>
+
+					<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 1.3, Exercise 43.-->
+						<statement>	<aside><p> (Source: <xref ref="ref-KN"/>, Section 3.2, Exercise 3.2.11.) </p></aside>
+							Find the angle between the planes <m>\mathcal{P}_1\colon x_1+x_2=5</m> and <m>\mathcal{P}_2\colon 2x_1+x_2-x_3 =4</m>.  	
+						</statement>
+						<hint>
+							Find a normal vector <m>\mbf{n}_1</m> resp. <m>\mbf{n}_2</m> for each of the planes. Using the <xref ref="cosine-formula">Cosine Formula</xref>, compute the angle <m>\theta=\sphericalangle (\mbf{n}_1, \mbf{n}_2)</m> between these vectors. Then,
+							<me>
+								\sphericalangle (\mathcal{P}_1, \mathcal{P}_2)
+								=
+								\left\{
+									\begin{array}{lc}
+										\theta \amp \text{ if } 0 \leq \theta \leq \tfrac{\pi}{2}\\
+										\pi - \theta \amp \text{ if } \tfrac{\pi}{2} \leq \theta \leq \pi \\
+									\end{array}
+								\right.
+							</me>
+						</hint>
+						<solution>
+							A normal vector to <m>\mathcal{P}_1</m> resp. <m>\mathcal{P}_2</m> is given by
+							<me>
+								\mbf{n}_1
+								=
+								\begin{bmatrix} 1 \\ 1\\ 0 \end{bmatrix} 
+								\text{ resp. }
+								\mbf{n}_2
+								=
+								\begin{bmatrix} 2 \\ 1\\ -1 \end{bmatrix}
+								.
+							</me> 
+							According to the <xref ref="cosine-formula">Cosine Formula</xref>, the angle between <m>\mbf{n}_1</m> and <m>\mbf{n}_2</m> is the number <m>\theta</m> that satisfies
+							<me>
+								\cos (\theta)
+								=
+								\frac{ \mbf{n}_1\cdot \mbf{n}_2}{ \norm{\mbf{n}_1}\cdot \norm{\mbf{n}_2}}
+								,
+							</me>
+							so we compute:
+							<md>
+								<mrow>
+									\mbf{n}_1\cdot \mbf{n}_2
+									\amp =
+									1\cdot 2 + 1\cdot 1 + 0\cdot (-1) = 3
+								</mrow>
+								<mrow>
+									\norm{\mbf{n}_1}
+									\amp =
+									\sqrt{ 1^2 + 1^2 + 0^2}
+									=
+									\sqrt{2}
+								</mrow>
+								<mrow>
+									\norm{\mbf{n}_1}
+									\amp =
+									\sqrt{ 2^2 + 1^2 + (-1)^2}
+									=
+									\sqrt{6},
+								</mrow>
+							</md>
+							so that
+							<me>
+								\cos (\theta)
+								=
+								\frac{ 3}{ \sqrt{2}\cdot \sqrt{6}}
+								=
+								\frac{ 3}{\sqrt{12}}
+								,
+								\text{ i.e. }
+								\sphericalangle (\mathcal{P}_1, \mathcal{P}_2)
+								=
+								\theta = \tfrac{\pi}{6}
+								.
+							</me>							
+						</solution>
+						<answer>
+							<me>
+								\sphericalangle (\mathcal{P}_1, \mathcal{P}_2)
+								= \tfrac{\pi}{6}
+							</me>	
+						</answer>
+					</exercise></p>
+
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>	<aside><p> (Source: <xref ref="ref-KN"/>, Section 3.2, Exercise 3.2.12.) </p></aside>
+							Find the angle between the line 
+							<me> 	\ell\colon \mbf{x}  = \begin{bmatrix} 0 \\ 3\\ 7 \end{bmatrix} +t\begin{bmatrix} 1 \\ 1\\ 4 \end{bmatrix}  </me> and <m>\mathcal{P}\colon 4x_1+7x_2+4x_3 =6</m>.  	
+						</statement>
+						<hint>
+							Find a normal vector <m>\mbf{n}</m> for <m>\mathcal{P}</m> and a directional vector <m>\mbf{d}</m> of <m>\ell</m>. Compute <m>\theta=\sphericalangle (\mbf{n}, \mbf{d})</m> using the <xref ref="cosine-formula">Cosine Formula</xref>. Then
+							<me>
+								\sphericalangle (\mathcal{P}, \ell)
+								=
+								\left\{
+									\begin{array}{lc}
+										\frac{\pi}{2}
+										-
+										\theta
+										\amp \text{ if } 0 \leq \theta \leq \frac{\pi}{2}
+										\\
+										\theta
+										-
+										\frac{\pi}{2}
+										\amp \text{ if } \frac{\pi}{2} \leq \theta \leq \pi
+									\end{array}
+									\right.
+								.
+							</me>
+						</hint>
+						<solution>
+							A normal vector to the plane is given by
+							<me>
+								\mbf{n} = \begin{bmatrix} 4 \\ 7\\ 4 \end{bmatrix}.
+							</me>
+							The angle <m>\theta</m> between this vector and the directional vector <m>\mbf{d} = \begin{bmatrix} 1 \\ 1\\ 4 \end{bmatrix}</m> of the line can be computed using the <xref ref="cosine-formula">Cosine Formula</xref>:
+							<me>
+								\cos (\theta)
+								=
+								\frac{ \mbf{n} \cdot \mbf{d}}{ \norm{\mbf{n}}\cdot \norm{\mbf{d}}}
+								,
+							</me>
+							so we compute
+							<md>
+								<mrow>
+									\mbf{n}\cdot \mbf{d}
+									\amp =
+									4\cdot 1 + 7\cdot 1 + 4\cdot 4
+									=
+									27
+								</mrow>
+								<mrow>
+									\norm{\mbf{n}}
+									\amp =
+									\sqrt{ 4^2 + 7^2 + 4^2}
+									=
+									\sqrt{81}
+									=
+									9
+								</mrow>
+								<mrow>
+									\norm{\mbf{d}}
+									\amp =
+									\sqrt{ 1^2 + 1^2 + 4^2}
+									=
+									\sqrt{18}
+									=
+									3\sqrt{2}.
+								</mrow>
+							</md>
+							It follows that
+							<me>
+								\cos (\theta)
+								=
+								\frac{ 27}{ 9\cdot 3\sqrt{2}} = \frac{\sqrt{2}}{2}
+								,
+								\text{ i.e. }
+								\theta=\tfrac{\pi}{4}.
+							</me>
+							The angle <m>\alpha</m> between the line and the plane is then given by <m>\alpha = \tfrac{\pi}{2} - \theta = \tfrac{\pi}{4}.</m>
+						</solution>
+						<answer>
+							<me>
+								\sphericalangle (\mathcal{P}, \ell)
+								=
+								\tfrac{\pi}{4}
+								.
+							</me>
+						</answer>
+					</exercise></p>
+
+				</exercises>
+			
