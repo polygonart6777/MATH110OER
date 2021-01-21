@@ -43,7 +43,7 @@ All of the following instructions can be found on the [PreTeXt](https://pretextb
 
 * Enter the following command to compile the main PTX or XML file.  
 
- &nbsp;&nbsp;&nbsp; `~/xsltproc/xsltproc --xinclude ~/mathbook/xsl/mathbook-html.xsl index.ptx`
+ &nbsp;&nbsp;&nbsp; `~/xsltproc/xsltproc --xinclude ~/mathbook/xsl/pretext-html.xsl index.ptx`
 
  ## Regularly contributing
 
