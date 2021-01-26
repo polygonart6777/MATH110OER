@@ -46,6 +46,7 @@ All of the following instructions can be found on the [PreTeXt](https://pretextb
  &nbsp;&nbsp;&nbsp; `~/xsltproc/xsltproc --xinclude ~/mathbook/xsl/pretext-html.xsl index.ptx`
 
  ## Regularly contributing
+ Make sure you have a terminal open and you have navigated to the MATH110OER repository.
 
  ### Pulling the latest changes from master
 * To do
