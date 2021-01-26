@@ -47,12 +47,17 @@ All of the following instructions can be found on the [PreTeXt](https://pretextb
 
  ## Regularly contributing
 
- ### Pulling the latest changes from master
-* To do
- ### Branching off of master
-* To do
+ ### Pulling the latest changes from main
+* `git pull`
+ ### Branching off of main
+* `git checkout -b section-5-1-exercise-set-solutions`
+* Now add solutions to Section 5.1
+
+### Committing your changes
+* `git add .`
+* `git commit -am "Adds solutions to all problems within Section 5.1"`
  ### Pushing up your changes and making a Pull Request
-* To do
+* `git push origin section-5-1-exercise-set-solutions`
  
  ## Seeing the xrefs
 
