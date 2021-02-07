@@ -1,7 +1,16 @@
-			<exercises>
- 					<p><exercise><!-- xml:id="ex-" -->
-						<statement>
-							<aside><p> ) </p></aside>
+<exercises>
+ 	<p><exercise><!-- xml:id="ex-" -->
+		<statement>
+			<aside><p> (Source: <xref ref="ref-KK" />, Chapter 3, Exercise 3.1.1) </p></aside>
+				Let <me> A= \begin{bmatrix} 1 \amp 2 \amp 4 \\ 0 \amp 1 \amp 3\\ -2 \amp 5 \amp 1 \end{bmatrix} </me>. Find the following.
+					<ol>
+						<li> minor<m>(A)_{11}</m> </li>
+						<li> minor<m>(A)_{21}</m> </li>
+						<li> minor<m>(A)_{32}</m> </li>
+						<li> cof<m>(A)_{11}</m> </li>
+						<li> cof<m>(A)_{21}</m> </li>
+						<li> cof<m>(A)_{32}</m> </li>
+					</ol>	
 						</statement>
 						<!-- <hint>
 						</hint> -->
@@ -12,7 +21,9 @@
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
-							<aside><p> ) </p></aside>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 3, Exercise 3.1.4) </p></aside>
+							Find the following determinant by expanding along the first row and the second column.
+							<me> \begin{vmatrix} 1 \amp 2 \amp 1 \\ 2 \amp 1 \amp 3 \\ 2 \amp 1 \amp 1 \end{vmatrix} </me>
 						</statement>
 						<!-- <hint>
 						</hint> -->
@@ -23,7 +34,9 @@
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
-							<aside><p> ) </p></aside>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 3, Exercise 3.1.5) </p></aside>
+							Find the following determinant by expanding along the first column and the third row.
+							<me> \begin{vmatrix} 1 \amp 2 \amp 1 \\ 1 \amp 0 \amp 1 \\ 2 \amp 1 \amp 1 \end{vmatrix} </me>
 						</statement>
 						<!-- <hint>
 						</hint> -->
@@ -34,7 +47,9 @@
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
-							<aside><p> ) </p></aside>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 3, Exercise 3.1.7) </p></aside>
+							Compute the determinant by cofactor expansion.  Pick the easiest row or column to use.
+							<me> \begin{vmatrix} 1 \amp 0 \amp 0 \amp 1 \\ 2 \amp 1 \amp 1 \amp 0 \\ 0 \amp 0 \amp 0 \amp 2\\  2 \amp 1 \amp 3 \amp 1 \end{vmatrix} </me>
 						</statement>
 						<!-- <hint>
 						</hint> -->
@@ -45,7 +60,13 @@
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
-							<aside><p> ) </p></aside>
+							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 3, Exercise 3.1.1) </p></aside>
+							Compute the determinants of the following matrices.
+							<ol cols="2">
+							<li> <m> \begin{bmatrix} \cos(\theta) \amp -\sin(\theta) \\ \sin(\theta) \amp \cos(\theta) \end{bmatrix} </m></li>
+							<li> <m> \begin{bmatrix} 0  \amp a \amp 0 \\ b \amp c \amp d \\ 0 \amp e \amp 0 \end{bmatrix} </m> </li>
+							<li> <m> \begin{bmatrix} 0 \amp 0 \amp 0 \amp a \\ 0  \amp 0 \amp b \amp p \\ 0 \amp c \amp q \amp k \\ d \amp s \amp t \amp u \end{bmatrix} </m> </li> 
+							</ol>
 						</statement>
 						<!-- <hint>
 						</hint> -->
@@ -56,7 +77,9 @@
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
-							<aside><p> ) </p></aside>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 3, Exercise 3.1.11) </p></aside>
+							An operation is done to get from the first matrix to the second. Identify what was done and tell how it will affect the value of the determinant.
+							<me> \begin{bmatrix}a \amp b \\  c \amp d \end{bmatrix} \to \ldots \to \begin{bmatrix}a \amp b \\  a+c \amp b+d \end{bmatrix} </me>
 						</statement>
 						<!-- <hint>
 						</hint> -->
@@ -67,7 +90,85 @@
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
-							<aside><p> ) </p></aside>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 3, Exercise 3.1.12) </p></aside>
+							An operation is done to get from the first matrix to the second. Identify what was done and tell how it will affect the value of the determinant.
+							<me> \begin{bmatrix}a \amp b \\  c \amp d \end{bmatrix} \to \ldots \to \begin{bmatrix}a \amp b \\  2c \amp 2d \end{bmatrix} </me>
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 3, Exercise 3.1.6) </p></aside>
+							Evaluate by cursory inspection:
+							<ol cols="1">
+							<li> <m>\det \begin{bmatrix} a \amp b \amp c \\ a+1 \amp b+1 \amp c+1 \\ a-1 \amp b-1 \amp c-1 \end{bmatrix}</m> </li>
+							<li> <m>\det \begin{bmatrix} a \amp b \amp c \\ a+b \amp 2b \amp c+b \\ 2 \amp 2 \amp 2 \end{bmatrix} </m> </li>
+							</ol>
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 3, Exercise 3.1.15) </p></aside>
+							<ol> 
+							<li> Find <m> b </m> if <m>det \begin{bmatrix} 5 \amp -1 \amp x \\ 2 \amp 6 \amp y \\ -5 \amp 4 \amp x \end{bmatrix} = ax + by cz.</m> </li>
+							<li> Find <m> c </m> if <m>det \begin{bmatrix} 2 \amp x \amp -1 \\ 1 \amp y \amp 3 \\ -3 \amp z \amp 4  \end{bmatrix} = ax + by cz.</m> </li>
+							</ol>
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+						<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 3, Exercise 3.1.14) </p></aside>
+							Let A b an <m> r \times r </m> matrix and suppose there are <m> r −1 </m> rows (columns) such that all rows
+							(columns) are linear combinations of these <m>r −1</m> rows (columns). Show <m>\det(A) = 0</m>.
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 3, Exercise 3.1.17) </p></aside>
+							Is it true that <m> det(A+B) = det(A)+det(B) </m>? If this is so, explain why. If it is not so, give a counter example.
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 3, Exercise 3.2.2) </p></aside>
+							Use determinants to find which real values of c make each of the following matrices invertible.
+							<ol cols="2">
+							<li> <m> \begin{bmatrix} 1 \amp 0 \amp 3 \\ 3  \amp -4 \amp c \\ 2 \amp 5 \amp 8 \end{bmatrix} </m></li>
+							<li> <m> \begin{bmatrix} 0 \amp c \amp -c \\ -1  \amp 2 \amp 1 \\ c \amp -c \amp c \end{bmatrix} </m> </li>
+							<li> <m>\begin{bmatrix} c \amp 1 \amp 0 \\ 0  \amp 2 \amp c \\ -1 \amp c \amp 5 \end{bmatrix} </m> </li>
+							<li> <m>\begin{bmatrix} 4 \amp c \amp 3 \\ c  \amp 2 \amp c \\ 5 \amp c \amp 4 \end{bmatrix}</m> </li>
+							<li> <m>\begin{bmatrix} 1 \amp 2 \amp -1 \\ 0  \amp -1 \amp c \\ 2 \amp c \amp 1 \end{bmatrix} </m></li>
+							<li> <m>\begin{bmatrix} 1 \amp c \amp -1 \\ c  \amp 1 \amp 1 \\ 0 \amp 1 \amp c \end{bmatrix} </m></li>
+							</ol>
 						</statement>
 						<!-- <hint>
 						</hint> -->
