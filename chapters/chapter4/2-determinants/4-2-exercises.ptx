@@ -213,7 +213,7 @@
 							</ol>
 						</statement>
 						 <hint> See hint <xref ref="hint-section-4-2-problem-1-hint"/> forr computing determinants of <m> 2 \times 2 </m> matrices. </hint>
-						<hint> See <xref ref="hint-section-4-2-problem-2-hint-1"/> for the definition of a matrix determinant found by expanding along the ith row. </hint>
+						<hint> See <xref ref="hint-section-4-2-problem-2-hint-1"/> for the definition of a matrix determinant of a 3 <m> \times </m> 3 matrix found by expanding along the ith row. </hint>
 						<hint> Let <m> A </m> be an upper or lower triangular matrix. Then <m> det(A) </m> is obtained by taking the product of the entries on the main diagonal. </hint>
 						 <hint> 
 						 Interchanging two distinct rows (or columns) of <m> A </m> means the determinant of the resulting matrix is − det <m> A </m>. </hint>        
@@ -272,41 +272,56 @@
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 3, Exercise 3.1.15) </p></aside>
 							<ol> 
-							<li> Find <m> b </m> if <m>det \begin{bmatrix} 5 \amp -1 \amp x \\ 2 \amp 6 \amp y \\ -5 \amp 4 \amp x \end{bmatrix} = ax + by cz.</m> </li>
-							<li> Find <m> c </m> if <m>det \begin{bmatrix} 2 \amp x \amp -1 \\ 1 \amp y \amp 3 \\ -3 \amp z \amp 4  \end{bmatrix} = ax + by cz.</m> </li>
+							<li> Find <m> b </m> if <m>det \begin{bmatrix} 5 \amp -1 \amp x \\ 2 \amp 6 \amp y \\ -5 \amp 4 \amp x \end{bmatrix} = ax + by.</m> 
+							<answer><m>b=-15</m></answer>
+							<solution> There are many ways to go about finding <m>b</m>, you may expand along various rows or columns.  For this solution, let us expand along the first row. 
+							<md> 
+								<mrow> det(A) \amp = 5 \begin{vmatrix}6 \amp y \\ 4 \amp x \end{vmatrix} + 1 \begin{vmatrix} 2 \amp y \\ -5 \amp x \end{vmatrix} + x \begin{vmatrix} 2 \amp 6 \\ -5 \amp 4 \end{vmatrix}</mrow>
+							<mrow>
+								\amp = 5(6x-4y) + (2x+5y) + x(8 + 30) 
+							</mrow>
+							<mrow> \amp = 30x - 20y+ 2x+5y+38x</mrow>
+							<mrow>\amp = 70x - 15y</mrow>
+							</md>
+							If <m> det(A) = ax + by</m>, then <m>b = -15</m>
+							</solution>
+						</li>
+							<li> Find <m> c </m> if <m>det \begin{bmatrix} 2 \amp x \amp -1 \\ 1 \amp y \amp 3 \\ -3 \amp z \amp 4  \end{bmatrix} = ax + by+cz.</m>
+							<answer><m>c = -7</m></answer>
+							<solution> As in the previous part (a), there are many ways to go about finding the answer by expanding along various rows or columns.  In this solution, we will expand along the first column.
+							<md> 
+								<mrow> det(A) \amp = 2 \begin{vmatrix}y \amp 3 \\ z \amp 4 \end{vmatrix} -1 \begin{vmatrix} x \amp -1 \\ z \amp 4 \end{vmatrix} -3 \begin{vmatrix} x \amp -1 \\ y \amp 3 \end{vmatrix}</mrow>
+							<mrow>
+								\amp = 2(4y-3z) - (4x+z) + -3(3x + y) 
+							</mrow>
+							<mrow> \amp = 8y-6z-4x-z-9x-3y</mrow>
+							<mrow>\amp = -13x +5y-7z</mrow>
+							</md>
+							If <m> det(A) = ax + by+cz</m>, then <m>c = -7</m>
+							</solution>
+							</li>
 							</ol>
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
-					</exercise></p>
-						<p><exercise><!-- xml:id="ex-" -->
-						<statement>
-							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 3, Exercise 3.1.14) </p></aside>
-							Let A b an <m> r \times r </m> matrix and suppose there are <m> r −1 </m> rows (columns) such that all rows
-							(columns) are linear combinations of these <m>r −1</m> rows (columns). Show <m>\det(A) = 0</m>.
-						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint> See <xref ref="hint-section-4-2-problem-2-hint-1"/> for the definition of a matrix determinant of a 3 <m> \times </m> 3 matrix found by expanding along the ith row. </hint>
+						<hint>See <xref ref="hint-section-4-2-problem-2-hint-2"/> for the definition of a matrix determinant found by expanding along the jth column.</hint>
+						<hint> See hint <xref ref="hint-section-4-2-problem-1-hint"/> for computing determinants of <m> 2 \times 2 </m> matrices. </hint>
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 3, Exercise 3.1.17) </p></aside>
 							Is it true that <m> det(A+B) = det(A)+det(B) </m>? If this is so, explain why. If it is not so, give a counter example.
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint> Consider a <m> 2 \times 2 </m> matrix with positive entries and another with negative entries.
+						</hint>
+						<answer>
+							There exists matrices <m>A</m> and <m>B</m> such that <m>det(A+B) \ne det(A) + det(B)</m> and so the statement of the exercise is false.
+						</answer>
+						<solution>
+							There exists matrices <m>A</m> and <m>B</m> such that <m>det(A+B) \ne det(A) + det(B)</m> and so the statement of the exercise is false.  We can show this witha counterexample.
+							Let <m> A </m> be the identity matrix, <m> A = \begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix}</m> and let <m> B = \begin{bmatrix} -1 \amp 0 \\ 0 \amp -1</m>, then
+							<me> det(A+B) = det\left(\begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix} + \begin{bmatrix} -1 \amp 0 \\ 0 \amp -1 \end{bmatrix}right) = det(\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix} \ne det(A) + det(B) = 1 + 1 =2 </me> 
+						</solution>
+						
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
