@@ -45,16 +45,6 @@ All of the following instructions can be found on the [PreTeXt](https://pretextb
 
  &nbsp;&nbsp;&nbsp; `~/xsltproc/xsltproc --xinclude ~/mathbook/xsl/pretext-html.xsl index.ptx`
 
- ## Regularly contributing
- Make sure you have a terminal open and you have navigated to the MATH110OER repository.
-
- ### Pulling the latest changes from master
-* To do
- ### Branching off of master
-* To do
- ### Pushing up your changes and making a Pull Request
-* To do
- 
  ## Seeing the xrefs
 
  You won't be able to see the `xref`s when running locally because of the [Cross Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) issues.  Therefore, you can run a simple local host if you have python installed.  First check which version of python you have installed by running the command:
@@ -68,3 +58,24 @@ In the folder of your Math110OER repo, run the command (first is for python 2, s
  Then go to 'http://localhost:8000/
 
 You should now be able to see the references!  You can check this by going to any exercise and clicking on its resource link on the right.  
+ ## Regularly contributing
+ We'll go through an example for contributing to the solutions for section 5.1, but this can be applied to contributing to any changes, including fixing typos and such.
+
+ Make sure you are at least in the `MATH110OER` folder and on the `master` branch. 
+ * `git checkout master`
+ ### Pulling the latest changes from main (master)
+* `git pull`
+ ### Branching off of main (master)
+* `git checkout -b section-5-1-exercise-set-solutions`
+
+Now add solutions to Section 5.1
+
+### Committing your changes
+* `git add .`
+* `git commit -am "Adds solutions to the first three problems within Section 5.1"`
+
+Add a commit message that describes the changes you are committing.
+ ### Pushing up your changes and making a Pull Request
+* `git push origin section-5-1-exercise-set-solutions`
+
+Now go to the [github repo](https://github.com/eaglecj/MATH110OER), you should see a message about opening a pull request.  Click on the button and add a description of your changes to open a pull request.  Merge your changes on approval.
