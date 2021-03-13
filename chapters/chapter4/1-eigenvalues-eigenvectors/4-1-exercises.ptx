@@ -1,7 +1,26 @@
 			<exercises>
  					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
-							<aside><p> ) </p></aside>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 7, Exercise 7.1.9) </p></aside>
+						</statement>
+						Find the eigenvalues and eigenvectors of the matrix
+
+						<me> \begin{bmatrix} -6 \amp -92 \amp 12 \\ 0 \amp 0 \amp 0 \\ -2 \amp -31 \amp 4 \end{bmatrix} </me>
+						One eigenvalue is -2.
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 7, Exercise 7.1.10) </p></aside>
+						Find the eigenvalues and eigenvectors of the matrix
+
+						<me> \begin{bmatrix} -2 \amp -17 \amp -6 \\ 0 \amp 0 \amp 0 \\ 1 \amp 9 \amp 3 \end{bmatrix} </me>
+						One eigenvalue is 1.
 						</statement>
 						<!-- <hint>
 						</hint> -->
@@ -12,7 +31,11 @@
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
-							<aside><p> ) </p></aside>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 7, Exercise 7.1.11) </p></aside>
+						Find the eigenvalues and eigenvectors of the matrix
+
+						<me> \begin{bmatrix} 9 \amp 2 \amp 8 \\ 2 \amp -6 \amp -2 \\ -8 \amp 2 \amp 5 \end{bmatrix} </me>
+						One eigenvalue is -3.
 						</statement>
 						<!-- <hint>
 						</hint> -->
@@ -23,7 +46,63 @@
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
-							<aside><p> ) </p></aside>
+							<aside><p> (Source: Adapted from <xref ref="ref-DP" /> </p></aside>
+						Without doing any explicite computation, find the eigenvlues of the matrix <m> B </m>
+						<me> \begin{bmatrix} 1 \amp 0 \\ 0 \amp -1 \end{bmatrix </me>
+						</statement>
+
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: Adapted from <xref ref="ref-DP" /> </p></aside>
+						Without doing any explicite computation, find the eigenvlues of the matrix <m> B </m>
+						<me> \begin{bmatrix} 0 \amp 0 \\ 0 \amp 1 \end{bmatrix </me>
+						</statement>
+
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: Adapted from <xref ref="ref-DP" /> </p></aside>
+						</statement>
+						Without doing any explicite computation, find the eigenvlues of the matrix <m> B </m>
+						<me> \begin{bmatrix} 2 \amp 0 \\ 0 \amp 2 \end{bmatrix </me>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-RB" />, Eigenvalues, Eigenvectors, and Diagonalization, Exercise C19) </p></aside>
+							Find the eigenvalues and eigenspaces for the matrix below. It is possible to do all these computations by hand, and it would be instructive to do so.
+							<me> \begin{bmatrix} -1 \amp 2 \\ -6 \amp 6 \end{bmatrix} </me>
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+						<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-RB" />, Eigenvalues, Eigenvectors, and Diagonalization, Exercise C20) </p></aside>
+							Find the eigenvalues and eigenspaces for the matrix below. It is possible to do all these computations by hand, and it would be instructive to do so.
+							<me> \begin{bmatrix} -12 \amp 30 \\ -5 \amp 13 \end{bmatrix} </me>
 						</statement>
 						<!-- <hint>
 						</hint> -->
@@ -34,7 +113,12 @@
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
-							<aside><p> ) </p></aside>
+							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 3, Exercise 3.3.37) </p></aside>
+							Given <m>A = \begin{bmatrix} a \amp b \\ c \amp d</m> show that :
+							\begin{itemize}
+							\item <m> c_A(x) = x^2-tr(A)x+det(A)</m> where <m>tr(A) = a+d </m> is called the <i> trace </i> of <m> A </m>
+							\item the eigenvalues are <m> \frac{1}{2}[ (a+d) \pm \sqrt{(a-b)^2+4bc}]</m>
+							\end{itemize}
 						</statement>
 						<!-- <hint>
 						</hint> -->
@@ -45,29 +129,22 @@
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
-							<aside><p> ) </p></aside>
-						</statement>
-						<!-- <hint>
-						</hint> -->
+							<aside><p> (Source: <xref ref="ref-JH" />, Eigenvalues and Eigenvectors, Exercise 3) </p></aside>
+						Find the characteristic equation, and the eigenvalues and associated eigenvectors for this matrix. 
+						</statement>      
+						 <hint> The eigenvalues are complex.
+						</hint> 
 						<!-- <solution>
 						</solution> -->
 						<!--<answer>
 						</answer> -->
 					</exercise></p>
+					
+
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
-							<aside><p> ) </p></aside>
-						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
-					</exercise></p>
-					<p><exercise><!-- xml:id="ex-" -->
-						<statement>
-							<aside><p> ) </p></aside>
+							<aside><p> (Source: <xref ref="ref-JH" />, Eigenvalues and eigenvectors, Exercise 9) </p></aside>
+							Prove that the eigenvalues of a triangular matrix (upper or lower) are the entries on the diagonal.
 						</statement>
 						<!-- <hint>
 						</hint> -->
