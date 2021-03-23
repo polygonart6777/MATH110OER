@@ -1,8 +1,8 @@
-<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!DOCTYPE html>
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-01-08T00:26:20-08:00       *-->
+<!--*       on 2021-03-06T14:18:31-08:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,14 +16,15 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.5.1.b.1</span><span class="period">.</span>
-</h6>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-5C = 5\begin{bmatrix} 3 \amp -1 \\ 2 \amp 0 \end{bmatrix} = \begin{bmatrix} 15 \amp -5 \\ 10 \amp 0 \end{bmatrix}\text{.}
-\end{equation*}
-</div>
-</div>
-<span class="incontext"><a href="section-10.html#solution-216">in-context</a></span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.2.11.c.1</span><span class="period">.</span>
+</h6>We know that the matrix is invertible if \(det(A) \ne 0 \text{,}\) therefore we can compute the determinant in order to identify the values of \(c \) which make the determinant non-zero. We choose to expand along the first row because the zero in the third column of the first row will simplify our cofactor calculation.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+det(A) = c (-1)^{1+1}\begin{vmatrix}2 \amp c \\ c \amp 5 \end{vmatrix} + 1 (-1)^{1+2}\begin{vmatrix} 0 \amp c \\ -1 \amp 5 \end{vmatrix} \amp \ne 0\\
+c(10-c^2) -(0-c) \amp \ne 0\\
+c(9-c^2) \amp \ne 0\\
+c \amp \ne 0,-3,3
+\end{align*}
+</div>The matrix will be invertile if \(c\) is not equal to 0, -3 or 3.</div>
+<span class="incontext"><a href="sec-determinants.html#solution-216">in-context</a></span>
 </body>
 </html>

@@ -4,12 +4,12 @@
 			<aside><p> (Source: <xref ref="ref-KK" />, Chapter 3, Exercise 3.1.1) </p></aside>
 				Let <me> A= \begin{bmatrix} 1 \amp 2 \amp 4 \\ 0 \amp 1 \amp 3\\ -2 \amp 5 \amp 1 \end{bmatrix} </me>. Find the following.
 					<ol>
-						<li> minor<m>(A)_{11}</m> 
+						<li> minor<m>(A)_{11}</m>
 						<hint>
 							This is the determinant of the <m> 2 \times 2 </m> matrix which results when the first row and column is deleted from <m> A </m>.
 						</hint>
 						<answer>
-						-14
+						The minor<m>(A)_{11}</m> is -14.
 						</answer>
 						<solution>
 						minor<m>(A)_{11}</m> is given by finding the determinant of the matrix which results when the first row and column is deleted from <m> A </m>.
@@ -21,10 +21,10 @@
 							This is the determinant of the <m> 2 \times 2 </m> matrix which results when the second row and first column is deleted from <m> A </m>.
 						</hint>
 						<answer>
-						-18
+						The minor<m>(A)_{21}</m> is -18.
 						</answer>
 						<solution>
-						minor<m>(A)_{11}</m> is given by finding the determinant of the matrix which results when the second row and first column is deleted from <m> A </m>.
+						minor<m>(A)_{21}</m> is given by finding the determinant of the matrix which results when the second row and first column is deleted from <m> A </m>.
 						<me>\text{minor}(A)_{11} = \begin{bmatrix} 2 \amp 4 \\ 5 \amp 1 \end{bmatrix} </me>
 						</solution>
 						</li>
@@ -33,7 +33,7 @@
 							This is the determinant of the <m> 2 \times 2 </m> matrix which results when the third row and second column is deleted from <m> A </m>.
 						</hint>
 						<answer>
-						3
+						The minor<m>(A)_{32}</m> is 3.
 						</answer>
 						<solution>
 						minor<m>(A)_{11}</m> is given by finding the determinant of the matrix which results when the third row and second column is deleted from <m> A </m>.
@@ -45,7 +45,7 @@
 							<m>cof(A)_{ij}=(-1)^{i+j}\text{minor}(A)_{ij} </m>
 						</hint>
 						<answer>
-							<m>-14</m>
+						The cofactor cof<m>(A)_{11}</m> is	<m>-14</m>
 						</answer>
 						<solution>
 						<m>cof(A)_{11}=(-1)^{1+1}minor(A)_{11} = -14</m>
@@ -56,7 +56,7 @@
 							<m>cof(A)_{ij}=(-1)^{i+j}\text{minor}(A)_{ij} </m>
 						</hint>
 						<answer>
-						18
+						The cofactor cof<m>(A)_{21}</m> is 18.
 						</answer>
 						<solution>
 						<m>cof(A)_{21}=(-1)^{2+1}\text{minor}(A)_{21} = 18</m>
@@ -67,7 +67,7 @@
 							<m>cof(A)_{ij}=(-1)^{i+j}\text{minor}(A)_{ij} </m>
 						</hint>
 						<answer>
-						-3
+						The cofactor cof<m>(A)_{32}</m> is -3.
 						</answer>
 						<solution>
 						<m>cof(A)_{32}=(-1)^{3+2}\text{minor}(A)_{21} = -3</m>
@@ -82,12 +82,15 @@
 						<!--<answer>
 						</answer> -->
 					</exercise></p>
+
 					<p><exercise><!-- xml:id="ex-" -->
+
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 3, Exercise 3.1.4) </p></aside>
 							Find the following determinant by expanding along the first row and the second column.
 							<me> \begin{vmatrix} 1 \amp 2 \amp 1 \\ 2 \amp 1 \amp 3 \\ 2 \amp 1 \amp 1 \end{vmatrix} </me>
 						</statement>
+
 						 <hint xml:id="hint-section-4-2-problem-2-hint-1">
 						For a <m>3\times3 </m> matrix,<m> A </m>, expanding along the <m>i</m>th row,
 						<me>\det(A) = a_{i1}cof(A)_{i1}+a_{i2}cof(A)_{i2}+a_{i3}cof(A)_{i3}</me>
@@ -97,7 +100,7 @@
 						<me>\det(A) = a_{1j}cof(A)_{1j}+a_{2j}cof(A)_{2j}+a_{3j}cof(A)_{3j}</me>
 						</hint>
 						<answer>
-						6
+						The determinant of the matrix is 6.
 						</answer> 
 						 <solution>
 						 For a <m>3\times3 </m> matrix, expanding along the <m>1</m>st row,
@@ -110,9 +113,12 @@
 						<me> cof(A)_{22} = (-1)^{2+2}\begin{vmatrix} 1 \amp 1 \\ 2 \amp 1 \end{vmatrix}=(-1)=-1 </me>
 						<me> cof(A)_{32} = (-1)^{3+2}\begin{vmatrix} 1 \amp 1 \\ 2 \amp 3 \end{vmatrix}=(-1)(1)=-1 </me>
 						<me>\det(A) = a_{12}cof(A)_{12}+a_{22}cof(A)_{22}+a_{32}cof(A)_{32}=(2)(4) + (1)(-1)+ (1)(-1)=6 </me>
+						The determinant of the matrix is 6.
 						</solution> 		
 					</exercise></p>
+
 					<p><exercise><!-- xml:id="ex-" -->
+
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 3, Exercise 3.1.5) </p></aside>
 							Find the following determinant by expanding along the first column and the third row.
@@ -126,7 +132,7 @@
 						See <xref ref="hint-section-4-2-problem-2-hint-1"/> for the definition of a matrix determinant found by expanding along the ith row.
 						</hint> 
 						<answer>
-						-6
+						The determinant of the matrix is -6.
 						</answer> 
 						<solution>
 						 For a <m>3\times3 </m> matrix, expanding along the <m>1</m>st column,
@@ -139,21 +145,25 @@
 						<me> cof(A)_{32} = (-1)^{3+2}\begin{vmatrix} 1 \amp 1 \\ 1 \amp 1 \end{vmatrix}=0 </me>
 						<me> cof(A)_{33} = (-1)^{3+3}\begin{vmatrix} 1 \amp 2 \\ 1 \amp 0 \end{vmatrix}=-2</me>
 						<me>\det(A) = a_{12}cof(A)_{12}+a_{22}cof(A)_{22}+a_{32}cof(A)_{32}=(2)(-2) + (1)(0)+ (1)(-2)=-6 </me>
+						The determinant of the matrix is -6.
+
 						</solution> 
 						
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
+
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 3, Exercise 3.1.7) </p></aside>
 							Compute the determinant by cofactor expansion.  Pick the easiest row or column to use.
 							<me> \begin{vmatrix} 1 \amp 0 \amp 0 \amp 1 \\ 2 \amp 1 \amp 1 \amp 0 \\ 0 \amp 0 \amp 0 \amp 2\\  2 \amp 1 \amp 3 \amp 1 \end{vmatrix} </me>
 						</statement>
+
 						<hint>
 						For a <m>4\times 4 </m> matrix,<m> A </m>, expanding along the <m>i</m>th row,
 						<me>\det(A) = a_{i1}cof(A)_{i1}+a_{i2}cof(A)_{i2}+a_{i3}cof(A)_{i3}+a_{i4}cof(A)_{i4}</me>
 						</hint> 
 						<answer>
-						-4
+						The determinant of the matrix is -4.
 						</answer>
 						 <solution>
 						 We choose the third row because this choice gives us the most amount of zeros, which means we have less cofactors to compute.
@@ -170,15 +180,18 @@
 						<mrow> \det(A) \amp = (0)cof(A)_{31}+(0)cof(A)_{32}+(0)cof(A)_{33}+(2)cof(A)_{34} </mrow>
 						<mrow> \amp = (2)(-2) </mrow>
 						<mrow> \amp = -4 </mrow> </md>
+						The determinant of the matrix is -4.
 						</solution> 
 						
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
+
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 3, Exercise 3.1.11) </p></aside>
 							An operation is done to get from the first matrix to the second. Identify what was done and tell how it will affect the value of the determinant.
 							<me> \begin{bmatrix}a \amp b \\  c \amp d \end{bmatrix} \to \ldots \to \begin{bmatrix}a \amp b \\  a+c \amp b+d \end{bmatrix} </me>
 						</statement>
+
 					 	<hint xml:id="hint-section-4-2-problem-6-hint">
 						If a multiple of one row of <m> A </m> is added to a different row (or if a multiple of a column is added
 						to a different column), the determinant of the resulting matrix is det <m> A</m>.
@@ -190,11 +203,13 @@
 						 
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
+
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 3, Exercise 3.1.12) </p></aside>
 							An operation is done to get from the first matrix to the second. Identify what was done and tell how it will affect the value of the determinant.
 							<me> \begin{bmatrix}a \amp b \\  c \amp d \end{bmatrix} \to \ldots \to \begin{bmatrix}a \amp b \\  2c \amp 2d \end{bmatrix} </me>
 						</statement>
+
 						 <hint xml:id= "hint-section-4-2-problem-7-hint"> If a row (or column) of <m> A </m>  is multiplied by a constant <m>u</m>, the determinant of the resulting matrix is <m>u(\det A) </m>.
 						</hint> 
 						<!-- <solution>
@@ -203,6 +218,7 @@
 						</answer> 
 					</exercise></p>
 						<p><exercise><!-- xml:id="ex-" -->
+
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 3, Exercise 3.1.1) </p></aside>
 							Compute the determinants of the following matrices.
@@ -212,16 +228,17 @@
 							<li> <m> \begin{bmatrix} 0 \amp 0 \amp 0 \amp a \\ 0  \amp 0 \amp b \amp p \\ 0 \amp c \amp q \amp k \\ d \amp s \amp t \amp u \end{bmatrix} </m> </li> 
 							</ol>
 						</statement>
+
 						 <hint> See hint <xref ref="hint-section-4-2-problem-1-hint"/> forr computing determinants of <m> 2 \times 2 </m> matrices. </hint>
-						<hint> See <xref ref="hint-section-4-2-problem-2-hint-1"/> for the definition of a matrix determinant found by expanding along the ith row. </hint>
+						<hint> See <xref ref="hint-section-4-2-problem-2-hint-1"/> for the definition of a matrix determinant of a 3 <m> \times </m> 3 matrix found by expanding along the ith row. </hint>
 						<hint> Let <m> A </m> be an upper or lower triangular matrix. Then <m> det(A) </m> is obtained by taking the product of the entries on the main diagonal. </hint>
 						 <hint> 
 						 Interchanging two distinct rows (or columns) of <m> A </m> means the determinant of the resulting matrix is − det <m> A </m>. </hint>        
 						<answer>
 						<ol>
-						<li> 1 </li>
-						<li> 0 </li>
-						<li> abcd </li>
+						<li> The determinant of the matrix in part (a) is one. </li>
+						<li> The determinant of the matrix in part (b) is zero. </li>
+						<li> The determinant of the matrix in part (c) is abcd. </li>
 						</ol>
 						</answer> 
 						<solution>
@@ -239,24 +256,38 @@
 						
 					</exercise></p>
 					<p><exercise><!-- xml:id="ex-" -->
+
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 3, Exercise 3.1.6) </p></aside>
 							Evaluate by cursory inspection:
 							<ol cols="1">
 							<li> <m>\det \begin{bmatrix} a \amp b \amp c \\ a+1 \amp b+1 \amp c+1 \\ a-1 \amp b-1 \amp c-1 \end{bmatrix}</m> 
 							<answer>
-						0
-						</answer>
-						<solution>
-						We subtract the first row from both the second and third row.
-						<me>  \begin{bmatrix} a \amp b \amp c \\ a+1 \amp b+1 \amp c+1 \\ a-1 \amp b-1 \amp c-1 \end{bmatrix}   \to  \begin{bmatrx} a \amp b \amp c \\ 1 \amp 1 \amp 1 \\ -1 \amp -1 \amp -1 \end{bmatrix} </me> 
-						Then we multiply the third row by -1 to obtain a matrix which has two rows that are the same.  Hence, the determinant of the original matrix would be (-1)(0) =0. 
-						<me>  \begin{vmatrix} a \amp b \amp c \\ a+1 \amp b+1 \amp c+1 \\ a-1 \amp b-1 \amp c-1 \end{vmatrix}=0  </me>
-						</solution> 
+								The determinant of the given matrix is zero.
+							</answer>
+							<solution>
+								We can subtract the first row from both the second and third row.
+								<me>  \begin{bmatrix} a \amp b \amp c \\ a+1 \amp b+1 \amp c+1 \\ a-1 \amp b-1 \amp c-1 \end{bmatrix}   \to  \begin{bmatrix} a \amp b \amp c \\ 1 \amp 1 \amp 1 \\ -1 \amp -1 \amp -1 \end{bmatrix} </me> 
+								Then we multiply the third row by -1 to obtain a matrix which has two rows that are the same.  Hence, the determinant of the original matrix would be (-1)(0) =0. 
+								<me>  \begin{vmatrix} a \amp b \amp c \\ a+1 \amp b+1 \amp c+1 \\ a-1 \amp b-1 \amp c-1 \end{vmatrix}=0  </me>
+							</solution> 
 							</li>
-							<li> <m>\det \begin{bmatrix} a \amp b \amp c \\ a+b \amp 2b \amp c+b \\ 2 \amp 2 \amp 2 \end{bmatrix} </m> </li>
+							<li> <m>\det \begin{bmatrix} a \amp b \amp c \\ a+b \amp 2b \amp c+b \\ 2 \amp 2 \amp 2 \end{bmatrix} </m> 
+							<answer> 
+								The determinant of the given matrix is zero.
+							</answer>
+							<solution>
+								We subtract the first row from the second row.
+								<me> \begin{bmatrix} a \amp b \amp c \\ a+b \amp 2b \amp c+b \\ 2 \amp 2 \amp 2 \end{bmatrix} \to   \begin{bmatrix} a \amp b \amp c \\ b \amp b \amp b\\ 2 \amp 2 \amp 2 \end{bmatrix} </me>
+								Now if <m> b </m> is equal to zero, then we have a matrix with a row of zeros and hence the determinant must be zero.
+								If <m> b </m> is not equal to zero, then we can multiple the second row by <m> \frac{2}{b} </m> to obtain a matrix which has two rows that are the same, and in this case the determinant must be zero as well.
+								<me> \begin{bmatrix} a \amp b \amp c \\ b \amp b \amp b\\ 2 \amp 2 \amp 2 \end{bmatrix} \to   \begin{bmatrix} a \amp b \amp c \\ 2 \amp 2 \amp 2\\ 2 \amp 2 \amp 2 \end{bmatrix} </me>
+								Therefore, the determinant of the matrix must be zero.
+							</solution>
+							</li>
 							</ol>
 						</statement>
+
 						 <hint>  See <xref ref="hint-section-4-2-problem-6-hint"/> for the determinant of the resulting matrix when adding/subtracting two rows.
 						</hint> 
 						<hint>
@@ -265,64 +296,213 @@
 						<hint>
 						If two distinct rows (or columns) of A are identical, det <m>A = 0 </m>
 						</hint>
-						
-						            
+	 
 					</exercise></p>
+
 					<p><exercise><!-- xml:id="ex-" -->
+
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 3, Exercise 3.1.15) </p></aside>
 							<ol> 
-							<li> Find <m> b </m> if <m>det \begin{bmatrix} 5 \amp -1 \amp x \\ 2 \amp 6 \amp y \\ -5 \amp 4 \amp x \end{bmatrix} = ax + by cz.</m> </li>
-							<li> Find <m> c </m> if <m>det \begin{bmatrix} 2 \amp x \amp -1 \\ 1 \amp y \amp 3 \\ -3 \amp z \amp 4  \end{bmatrix} = ax + by cz.</m> </li>
+							<li> Find <m> b </m> if <m>det \begin{bmatrix} 5 \amp -1 \amp x \\ 2 \amp 6 \amp y \\ -5 \amp 4 \amp x \end{bmatrix} = ax + by.</m> 
+							<answer><m>b=-15</m></answer>
+							<solution> There are many ways to go about finding <m>b</m>, you may expand along various rows or columns.  For this solution, let us expand along the first row. 
+							<md> 
+								<mrow> det(A) \amp = 5 \begin{vmatrix}6 \amp y \\ 4 \amp x \end{vmatrix} + 1 \begin{vmatrix} 2 \amp y \\ -5 \amp x \end{vmatrix} + x \begin{vmatrix} 2 \amp 6 \\ -5 \amp 4 \end{vmatrix}</mrow>
+							<mrow>
+								\amp = 5(6x-4y) + (2x+5y) + x(8 + 30) 
+							</mrow>
+							<mrow> \amp = 30x - 20y+ 2x+5y+38x</mrow>
+							<mrow>\amp = 70x - 15y</mrow>
+							</md>
+							If <m> det(A) = ax + by</m>, then <m>b = -15</m>
+							</solution>
+						</li>
+							<li> Find <m> c </m> if <m>det \begin{bmatrix} 2 \amp x \amp -1 \\ 1 \amp y \amp 3 \\ -3 \amp z \amp 4  \end{bmatrix} = ax + by+cz.</m>
+							<answer><m>c = -7</m></answer>
+							<solution> As in the previous part (a), there are many ways to go about finding the answer by expanding along various rows or columns.  In this solution, we will expand along the first column.
+							<md> 
+								<mrow> det(A) \amp = 2 \begin{vmatrix}y \amp 3 \\ z \amp 4 \end{vmatrix} -1 \begin{vmatrix} x \amp -1 \\ z \amp 4 \end{vmatrix} -3 \begin{vmatrix} x \amp -1 \\ y \amp 3 \end{vmatrix}</mrow>
+							<mrow>
+								\amp = 2(4y-3z) - (4x+z) + -3(3x + y) 
+							</mrow>
+							<mrow> \amp = 8y-6z-4x-z-9x-3y</mrow>
+							<mrow>\amp = -13x +5y-7z</mrow>
+							</md>
+							If <m> det(A) = ax + by+cz</m>, then <m>c = -7</m>
+							</solution>
+							</li>
 							</ol>
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+
+						<hint> See <xref ref="hint-section-4-2-problem-2-hint-1"/> for the definition of a matrix determinant of a 3 <m> \times </m> 3 matrix found by expanding along the ith row. </hint>
+						<hint>See <xref ref="hint-section-4-2-problem-2-hint-2"/> for the definition of a matrix determinant found by expanding along the jth column.</hint>
+						<hint> See hint <xref ref="hint-section-4-2-problem-1-hint"/> for computing determinants of <m> 2 \times 2 </m> matrices. </hint>
 					</exercise></p>
-						<p><exercise><!-- xml:id="ex-" -->
-						<statement>
-							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 3, Exercise 3.1.14) </p></aside>
-							Let A b an <m> r \times r </m> matrix and suppose there are <m> r −1 </m> rows (columns) such that all rows
-							(columns) are linear combinations of these <m>r −1</m> rows (columns). Show <m>\det(A) = 0</m>.
-						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
-					</exercise></p>
+
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 3, Exercise 3.1.17) </p></aside>
 							Is it true that <m> det(A+B) = det(A)+det(B) </m>? If this is so, explain why. If it is not so, give a counter example.
 						</statement>
-						<!-- <hint>
-						</hint> -->
-						<!-- <solution>
-						</solution> -->
-						<!--<answer>
-						</answer> -->
+						<hint> Consider a <m> 2 \times 2 </m> matrix with positive entries and another with negative entries.
+						</hint>
+						<answer>
+							There exists matrices <m>A</m> and <m>B</m> such that <m>det(A+B) \ne det(A) + det(B)</m> and so the statement of the exercise is false.
+						</answer>
+						<solution>
+							There exists matrices <m>A</m> and <m>B</m> such that <m>det(A+B) \ne det(A) + det(B)</m>. Therefore, the statement of the exercise is false.  Let us show this with a counterexample.
+							Let <m> A </m> be the identity matrix, <m> A = \begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix}</m> and let <m> B = \begin{bmatrix} -1 \amp 0 \\ 0 \amp -1 \end{bmatrix}</m>, then
+							<me> det(A+B) = det\left(\begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix} + \begin{bmatrix} -1 \amp 0 \\ 0 \amp -1 \end{bmatrix}right) = det(\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix} \ne det(A) + det(B) = 1 + 1 =2 </me> 
+						</solution>
+						
 					</exercise></p>
+
 					<p><exercise><!-- xml:id="ex-" -->
+
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 3, Exercise 3.2.2) </p></aside>
 							Use determinants to find which real values of c make each of the following matrices invertible.
-							<ol cols="2">
-							<li> <m> \begin{bmatrix} 1 \amp 0 \amp 3 \\ 3  \amp -4 \amp c \\ 2 \amp 5 \amp 8 \end{bmatrix} </m></li>
-							<li> <m> \begin{bmatrix} 0 \amp c \amp -c \\ -1  \amp 2 \amp 1 \\ c \amp -c \amp c \end{bmatrix} </m> </li>
-							<li> <m>\begin{bmatrix} c \amp 1 \amp 0 \\ 0  \amp 2 \amp c \\ -1 \amp c \amp 5 \end{bmatrix} </m> </li>
-							<li> <m>\begin{bmatrix} 4 \amp c \amp 3 \\ c  \amp 2 \amp c \\ 5 \amp c \amp 4 \end{bmatrix}</m> </li>
-							<li> <m>\begin{bmatrix} 1 \amp 2 \amp -1 \\ 0  \amp -1 \amp c \\ 2 \amp c \amp 1 \end{bmatrix} </m></li>
-							<li> <m>\begin{bmatrix} 1 \amp c \amp -1 \\ c  \amp 1 \amp 1 \\ 0 \amp 1 \amp c \end{bmatrix} </m></li>
+							<ol cols="1">
+							<li> <m> \begin{bmatrix} 1 \amp 0 \amp 3 \\ 3  \amp -4 \amp c \\ 2 \amp 5 \amp 8 \end{bmatrix} </m>
+								<answer>
+									The matrix will be invertible if <m> c </m> is not equal to <m> \frac{37}{5}. </m> 
+								</answer>
+								<solution> We know that the matrix is invertible if <m> det(A) \ne 0 </m>, therefore we can compute the determinant in order to identify the values of <m> c </m> which make the determinant non-zero. 
+									We choose to expand along the first row because the zero in the second column of the first row will simplify our cofactor calculation. 
+									<md>
+										<mrow>
+											det(A) = 1 (-1)^{1+1}\begin{vmatrix}-4 \amp c \\ 5 \amp 8 \end{vmatrix} + 0 + 3 (-1)^{1+3}\begin{vmatrix} 3 \amp -4 \\ 2 \amp 5 \end{vmatrix} \amp \ne 0
+										</mrow>
+										<mrow>
+											 (-32-5c) + 3(15+8) \amp \ne 0
+										</mrow>
+										<mrow>
+											-5c \amp \ne -37
+										</mrow>
+										<mrow>
+											c \amp \ne \frac{37}{5}
+										</mrow>
+										</md>
+										The matrix will be invertible if <m> c </m> is not equal to <m> \frac{37}{5}</m>.
+							 	</solution>
+							</li>
+							<li> <m> \begin{bmatrix} 0 \amp c \amp -c \\ -1  \amp 2 \amp 1 \\ c \amp -c \amp c \end{bmatrix} </m> 
+								<answer> The matrix will be invertiable if <m> c </m> is not equal to 0.
+								</answer>
+								<solution>
+									We know that the matrix is invertible if <m> det(A) \ne 0 </m>, therefore we can compute the determinant in order to identify the values of <m> c </m> which make the determinant non-zero. 
+									We choose to expand along the first row because the zero in the first column of the first row will simplify our cofactor calculation. 
+									<md>
+										<mrow>
+											det(A) = 0 + c (-1)^{1+2}\begin{vmatrix}-1 \amp 1 \\ c \amp c \end{vmatrix} + -c (-1)^{1+3}\begin{vmatrix} -1 \amp 2 \\ c \amp -c \end{vmatrix} \amp \ne 0
+										</mrow>
+										<mrow>
+											 -c(-c-c) + -c(c-2c) \amp \ne 0
+										</mrow>
+										<mrow>
+											3c^2 \amp \ne 0
+										</mrow>
+										<mrow>
+											c \amp \ne 0
+										</mrow>
+									</md>
+									The matrix will be invertiable if <m> c </m> is not equal to 0.
+								</solution>
+							</li>
+							<li> <m>\begin{bmatrix} c \amp 1 \amp 0 \\ 0  \amp 2 \amp c \\ -1 \amp c \amp 5 \end{bmatrix} </m>
+							<answer> The matrix will be invertile if <m> c</m> is not equal to 0, -3 or 3. 
+							</answer>
+							<solution>
+									We know that the matrix is invertible if <m> det(A) \ne 0 </m>, therefore we can compute the determinant in order to identify the values of <m> c </m> which make the determinant non-zero. 
+									We choose to expand along the first row because the zero in the third column of the first row will simplify our cofactor calculation. 
+									<md>
+										<mrow>
+											det(A) = c (-1)^{1+1}\begin{vmatrix}2 \amp c \\ c \amp 5 \end{vmatrix} + 1 (-1)^{1+2}\begin{vmatrix} 0 \amp c \\ -1 \amp 5 \end{vmatrix} \amp \ne 0
+										</mrow>
+										<mrow>
+											 c(10-c^2) -(0-c) \amp \ne 0
+										</mrow>
+										<mrow>
+											c(9-c^2) \amp \ne 0
+										</mrow>
+										<mrow>
+											c \amp \ne 0,-3,3
+										</mrow>
+									</md>
+									The matrix will be invertile if <m> c</m> is not equal to 0, -3 or 3.
+							</solution>
+							</li>
+							<li> <m>\begin{bmatrix} 4 \amp c \amp 3 \\ c  \amp 2 \amp c \\ 5 \amp c \amp 4 \end{bmatrix}</m>
+							<answer> Any real value <m> c</m> will make the matrix invertible because its determinant will always be equal to 2 regardless of the value of <m> c </m>. 
+							</answer>
+							<solution>
+									We know that the matrix is invertible if <m> det(A) \ne 0 </m>, therefore we can compute the determinant in order to identify the values of <m> c </m> which make the determinant non-zero. 
+									We choose to expand along the first column this time just to mix things up.  
+									<md>
+										<mrow>
+											det(A) = 4 (-1)^{1+1}\begin{vmatrix}2 \amp c \\ c \amp 4 \end{vmatrix} + c(-1)^{2+1}\begin{vmatrix} c \amp 3 \\ c \amp 4 \end{vmatrix}+ 5(-1)^{3+1}\begin{vmatrix} c \amp 3 \\ 2 \amp c \end{vmatrix} \amp \ne 0
+										</mrow>
+										<mrow>
+											 4(8-c^2) -(4c-3c) +5(c^2-6) \amp \ne 0
+										</mrow>
+										<mrow>
+											2 \amp \ne 0
+										</mrow>
+									We know that the statement <m> 2 \amp \ne 0</m> is always true, regardless of the value of <m> c </m>, therefore the matrix is invertible for any real value of <m> c </m>
+									</md>
+							</solution>
+							 </li>
+							<li> <m>\begin{bmatrix} 1 \amp 2 \amp -1 \\ 0  \amp -1 \amp c \\ 2 \amp c \amp 1 \end{bmatrix} </m>
+							<answer> The matrix will be invertible as long as <m> c </m> is not equal to neither 1 nor 3.
+							 </answer>
+							<solution>
+									We know that the matrix is invertible if <m> det(A) \ne 0 </m>, therefore we can compute the determinant in order to identify the values of <m> c </m> which make the determinant non-zero. 
+									We choose to expand along the first column because the zero in the second row of the first column will simplify our cofactor calculation. 
+									<md>
+										<mrow>
+											det(A) = (-1)^{1+1}\begin{vmatrix}-1 \amp c \\ c \amp 1 \end{vmatrix} + 2(-1)^{3+1}\begin{vmatrix} 2 \amp -1 \\ -1 \amp c \end{vmatrix} \amp \ne 0
+										</mrow>
+										<mrow>
+											-1 - c^2 + 2(2c-1) \amp \ne 0
+										</mrow>
+										<mrow>
+											c^2 - 4c + 3 \amp \ne 0
+										</mrow>
+										<mrow>
+											c\amp \ne 1,3
+										</mrow>
+										The matrix will be invertible as long as <m> c </m> is not equal to neither 1 or 3. 
+									</md>
+							</solution>
+							</li>
+							<li> <m>\begin{bmatrix} 1 \amp c \amp -1 \\ c  \amp 1 \amp 1 \\ 0 \amp 1 \amp c \end{bmatrix} </m>
+								<answer> The matrix will be invertible as long as <m> c </m> is not equal to -1. 
+								</answer>
+							<solution>
+									We know that the matrix is invertible if <m> det(A) \ne 0 </m>, therefore we can compute the determinant in order to identify the values of <m> c </m> which make the determinant non-zero. 
+									We choose to expand along the third row this time because the zero in the third row of the first column will simplify our cofactor calculation. 
+									<md>
+										<mrow>
+											det(A) = (-1)^{3+2}\begin{vmatrix}-1 \amp c \\ c \amp 1 \end{vmatrix} + c(-1)^{3+3}\begin{vmatrix} 1 \amp c \\ c \amp 1 \end{vmatrix} \amp \ne 0
+										</mrow>
+										<mrow>
+											-1(1+c) + c(1-c^2) \amp \ne 0
+										</mrow>
+										<mrow>
+											c^3 \amp \ne -1
+										</mrow>
+										<mrow>
+											c\amp \ne 1
+										</mrow>
+										The matrix will be invertible as long as <m> c </m> is not equal to neither -1. 
+									</md>
+							</solution>
+							</li>
 							</ol>
 						</statement>
-						<!-- <hint>
-						</hint> -->
+						<hint> An <m> n \times n </m> is invertible if and only if <m> det(A) \ne 0. </m> 
+						</hint>
 						<!-- <solution>
 						</solution> -->
 						<!--<answer>
