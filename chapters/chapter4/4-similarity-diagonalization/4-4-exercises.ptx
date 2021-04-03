@@ -1,0 +1,107 @@
+			<exercises>
+ 					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 3, Exercise 3.3.1) </p></aside>
+							In each case,if possible, find an invertible matrix <m> P </m> such that <m>P^{-1}AP </m> is diagonal. 
+							<ol>
+							<li> <m> A = \begin{bmatrix} 2 \amp -3 \\ -1 \amp -1 \end{bmatrix} </m> </li>
+							<li> <m> A = \begin{bmatrix} 1 \amp 1 \amp -3 \\ 2 \amp 0 \amp 6 \\ 1 \amp -1 \amp 5 \end{bmatrix} </m> </li>
+							<li> <m> A = \begin{bmatrix} 2 \amp 1 \amp 1 \\ 0 \amp 1 \amp 0 \\ 1 \amp -1 \amp 2 \end{bmatrix} </m> </li>
+							<li> <m> A = \begin{bmatrix} 2 \amp 1 \amp 1 \\ 0 \amp 1 \amp 0 \\ 1 \amp -1 \amp 2 \end{bmatrix} </m> </li>
+							<li> <m> A = \begin{bmatrix} \lambda \amp 0 \amp 0 \\ 0 \amp \lambda \amp 0 \\ 0 \amp 0 \amp \mu \end{bmatrix}  \ \lambda \ne \mu </m> </li>
+							</ol>
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 7, Exercise 7.3.1) </p></aside>
+							Let <m> A  = \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}.</m> Diagonalize <m> A </m> to find <m> A^{10}</m>.
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 7, Exercise 7.3.2) </p></aside>
+							Let <m> A  = \begin{bmatrix} 1 \amp 4 \amp 1 \\ 0 \amp 2 \amp 5 \\ 0 \amp 0 \amp 5 \end{bmatrix}.</m> Diagonalize <m> A </m> to find <m> A^{50}</m>.
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 7, Exercise 7.3.3) </p></aside>
+							Let <m> A  = \begin{bmatrix} 1 \amp -2 \amp -1 \\ 2 \amp -1 \amp 1 \\ -2 \amp 3 \amp 1 \end{bmatrix}.</m> Diagonalize <m> A </m> to find <m> A^{100}</m>.
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-PS" />, Chapter 8, Exercise 8.5.4) </p></aside>
+							Let <m> A = \begin{bmatrix} -5 \amp -6 \\ 9 \amp 10 \end{bmatrix} </m>.  Find a square root of <m> A </m> i.e. find a matrix <m> B </m> such that <m>B^2 =A </m>.  
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 3, Exercise 3.3.14) </p></aside>
+							If <m> A </m> is diagonalizable and 0 and 1 are the only eigenvalues of <m> A </m>, show that <m> A^2 = A </m>.  
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-RB" />, Chapter Similarity and Diagonalization, Exercise T15) </p></aside>
+							Suppose that 
+							<m> A </m> and <m> B </m> are similar matrices of size <m> n </m>.  Prove that <m>A^3 </m> and <m>B^3 </m> are similar matrices. Generalize.
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 3, Exercise 3.3.16) </p></aside>
+							If <m> P^{-1}AP </m> and <m>P^{-1}BP </m> are both diagonal, show that <m> AB = BA </m>.  
+						</statement>                 
+						 <hint> Diagonal matrices commute.
+						</hint> 
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+			</exercises>

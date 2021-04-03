@@ -130,6 +130,11 @@
 			<xi:include href="chapters/chapter4/3-eigenvalues-eigenvectors-of-n-by-n-matrices/4-3-lecture-notes.ptx" />
 			<xi:include href="chapters/chapter4/3-eigenvalues-eigenvectors-of-n-by-n-matrices/4-3-exercises.ptx" />	
 			</section>
+
+			<section xml:id="sec-similarity-diagonalization"><!--Sec 4.4 in Poole-->
+			<xi:include href="chapters/chapter4/4-similarity-diagonalization/4-4-lecture-notes.ptx" />
+			<xi:include href="chapters/chapter4/4-similarity-diagonalization/4-4-exercises.ptx" />	
+			</section>
 	</chapter>
 
 		<chapter><!--Orthogonality-->
