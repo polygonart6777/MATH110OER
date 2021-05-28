@@ -1,0 +1,42 @@
+<section xml:id="sec-Geom-and-Alg-of-Vects" xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>
+		Vectors and basic operations
+	</title>
+	
+	<introduction>
+		In this section we introduce <em>vectors</em>, which are the fundamental objects of study in linear algebra.  We begin in the plane, <m>\mathbb{R}^2</m>, where we can easily interpret vectors both algebraically and geometrically.  We then move on to the general setting of <m>\mathbb{R}^n</m>.  This section also introduces the two most important operations on vectors: Addition and scalar multiplication.
+	</introduction>
+				
+
+
+	<subsection>
+		<title>
+			Vectors in <m>\mathbb{R}^2</m>.
+		</title>
+		
+		<definition>
+			A vector
+		</definition>
+	</subsection>
+
+
+	<subsection>
+		<title>
+			Vectors in <m>\mathbb{R}^n</m>
+		</title>
+
+		<p>
+			Text here
+		</p>
+	</subsection>
+
+	<subsection>
+		<title>
+			A first look at linear combinations
+		</title>
+	</subsection>
+
+
+
+	<xi:include href="1-1-exercises.ptx" />
+</section>

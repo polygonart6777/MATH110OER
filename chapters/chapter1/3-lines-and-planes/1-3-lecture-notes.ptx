@@ -1,3 +1,17 @@
-<title>
-	Lines and Planes
-</title>
+<section xml:id="sec-Lines-and-Planes" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+	<title>
+		Lines and Planes in <m>\mathbb{R}^2</m> and <m>\mathbb{R}^3</m>
+	</title>
+
+
+		<introduction>
+			Introductory text
+		</introduction>
+
+		<subsection>
+			Stuff goes here
+		</subsection>
+
+	<xi:include href="1-3-exercises.ptx" />
+</section>

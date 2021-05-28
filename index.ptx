@@ -42,20 +42,17 @@
 				Vectors in <m>\mathbb{R}^n</m>
 			</title>
 
-			<section xml:id="sec-Geom-and-Alg-of-Vects"><!--Sec 1.1 in Poole-->
-				<xi:include href="chapters/chapter1/1-geometry-and-algebra-of-vectors/1-1-lecture-notes.ptx" />
-				<xi:include href="chapters/chapter1/1-geometry-and-algebra-of-vectors/1-1-exercises.ptx" />
-			</section>
+			<introduction>
+				Some introductory text here.
+			</introduction>
 
-			<section xml:id="sec-DotProd"><!--Sec 1.2 in Poole-->
-				<xi:include href="chapters/chapter1/2-length-and-angle-dot-product/1-2-lecture-notes.ptx" />
-				<xi:include href="chapters/chapter1/2-length-and-angle-dot-product/1-2-exercises.ptx" />
-			</section>
+			<!-- It seems to be necessary to put the <section> tag in the file to be included.  To get the numbering right it's then necessary that the lecture notes file includes the exercises file. -->
 
-			<section xml:id="sec-Lines-and-Planes"><!--Sec 1.3 in Poole-->
-				<xi:include href="chapters/chapter1/3-lines-and-planes/1-3-lecture-notes.ptx" />
-				<xi:include href="chapters/chapter1/3-lines-and-planes/1-3-exercises.ptx" />
-			</section>
+			<xi:include href="chapters/chapter1/1-vector-basics/1-1-lecture-notes.ptx" />
+
+			<xi:include href="chapters/chapter1/2-dot-product/1-2-lecture-notes.ptx" />
+
+			<xi:include href="chapters/chapter1/3-lines-and-planes/1-3-lecture-notes.ptx" />
 
 		</chapter>
 
