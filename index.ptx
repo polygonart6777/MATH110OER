@@ -14,6 +14,7 @@
 	\let\mbf\mathbf
 	\newcommand{\norm}[1]{\left\| #1 \right\|}
 	\newcommand{\abs}[1]{\left\vert #1 \right\vert}
+	\renewcommand{\vec}[1]{\overrightarrow{#1}}
 	\DeclareMathOperator{\nullity}{nullity}
 	\DeclareMathOperator{\rank}{rank}
 	\DeclareMathOperator{\row}{row}
