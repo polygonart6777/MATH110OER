@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-28T11:45:10-07:00       *-->
+<!--*       on 2021-05-28T15:20:08-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,16 +16,17 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.2.8.b.1</span><span class="period">.</span>
-</h6>We subtract the first row from the second row.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.2.8.a.1</span><span class="period">.</span>
+</h6>We can subtract the first row from both the second and third row.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\begin{bmatrix} a \amp b \amp c \\ a+b \amp 2b \amp c+b \\ 2 \amp 2 \amp 2 \end{bmatrix} \to   \begin{bmatrix} a \amp b \amp c \\ b \amp b \amp b\\ 2 \amp 2 \amp 2 \end{bmatrix} 
+\begin{bmatrix} a \amp b \amp c \\ a+1 \amp b+1 \amp c+1 \\ a-1 \amp b-1 \amp c-1 \end{bmatrix}   \to  \begin{bmatrix} a \amp b \amp c \\ 1 \amp 1 \amp 1 \\ -1 \amp -1 \amp -1 \end{bmatrix} 
 \end{equation*}
-</div>Now if \(b \) is equal to zero, then we have a matrix with a row of zeros and hence the determinant must be zero. If \(b \) is not equal to zero, then we can multiple the second row by \(\frac{2}{b} \) to obtain a matrix which has two rows that are the same, and in this case the determinant must be zero as well.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>Then we multiply the third row by -1 to obtain a matrix which has two rows that are the same.  Hence, the determinant of the original matrix would be (-1)(0) =0.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\begin{bmatrix} a \amp b \amp c \\ b \amp b \amp b\\ 2 \amp 2 \amp 2 \end{bmatrix} \to   \begin{bmatrix} a \amp b \amp c \\ 2 \amp 2 \amp 2\\ 2 \amp 2 \amp 2 \end{bmatrix} 
+\begin{vmatrix} a \amp b \amp c \\ a+1 \amp b+1 \amp c+1 \\ a-1 \amp b-1 \amp c-1 \end{vmatrix}=0  
 \end{equation*}
-</div>Therefore, the determinant of the matrix must be zero.</div>
+</div>
+</div>
 <span class="incontext"><a href="sec-determinants.html#solution-210">in-context</a></span>
 </body>
 </html>

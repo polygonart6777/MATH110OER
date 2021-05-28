@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-28T11:45:08-07:00       *-->
+<!--*       on 2021-05-28T15:20:06-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,21 +13,31 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">Since \(U\) is proper, there exists a <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">non-zero</em> vector in \(U\text{,}\) say \(\mathbf{d}\text{.}\) We want to show that \(U = \mathbb{R}\textbf{d}\text{,}\) where<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body><div class="solution solution-like">We have to check that \(V \cap W \) satisfies the properties listed in <a class="xref" data-knowl="./knowl/def-subspace.html" title="Hint 3.4.1.1">Hint 3.4.1.1</a>: <ol class="lower-alpha">
+<li>
+<em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Non-empty</em>: We know that \(V\) and \(W\) are both subspaces of \(\mathbb{R}^{n}\text{.}\) In particular, we know that they are both non-empty, so take any \(\mathbf{v}\in V\) and \(\mathbf{w}\in W\text{.}\) Since \(V\) and \(W\) are closed under scalar multiplication, we see that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\mathbb{R}\textbf{d}:=\{ r\textbf{d} \ | \ r  \text{ in } \mathbb{R}\} \subseteq \mathbb{R}^{2},
+\mathbf{0} = 0 \cdot \mathbf{v} \in V
+\quad\text{ and }\quad
+\mathbf{0} = 0 \cdot \mathbf{w} \in W.
 \end{equation*}
-</div>a line through the origin in direction of \(\mathbf{d}\text{.}\) Assume otherwise: there exists \(\mathbf{u}\in U\) which is not in \(\mathbb{R}\textbf{d}\text{.}\) Note that, since \(U\) is a subspace, this means that \(\span \{\mathbf{d} , \mathbf{u}\} \subseteq U\text{.}\) Consider the vector equation<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-t \mathbf{d} + s \mathbf{u} = \mathbf{0}.\tag{3.4.1}
-\end{equation}
-</div>If \(s\neq 0\text{,}\) then this is equivalent to<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>Thus, \(\mathbf{0}\) is in both \(V\) and \(W\text{,}\) so \(\mathbf{0}\in V \cap W \text{.}\)</li>
+<li>
+<em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Closed under scalar multiplication</em>: Suppose that \(\mathbf{u}\in V\cap W\) and \(\lambda\) is any scalar. By definition of \(V\cap W\text{,}\) we know that \(\mathbf{u} \in V\) and  \(\mathbf{u} \in W\text{.}\) Since \(V\) and \(W\) are closed under scalar multiplication, we know that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\frac{-t}{s} \mathbf{d} = \mathbf{u}.
+\lambda \cdot \mathbf{u} \in V
+\quad\text{ and }\quad
+\lambda \cdot \mathbf{u} \in W.
 \end{equation*}
-</div>If this were true for some choice of \(t, s\text{,}\) then that would mean \(\mathbf{u} \in \mathbb{R}\textbf{d},\) which contradicts our assumption. If \(s=0\text{,}\) then <a class="xref" data-knowl="./knowl/eq-linear-comb.html" title="Equation 3.4.1">(3.4.1)</a> is equivalent to<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>Thus, \(\lambda \cdot \mathbf{u} \in V \cap W\text{.}\) This shows that \(V\cap W\) is closed under scalar multiplication.</li>
+<li>
+<em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">Closed under addition</em>: Assume that \(\mathbf{x}, \mathbf{y}\in V\cap W\text{.}\) In particular,  \(\mathbf{x},\mathbf{y} \in V\) and  \(\mathbf{x},\mathbf{y} \in W\text{.}\) Since \(V\) and \(W\) are closed under addition, we know that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-t \mathbf{d} = \mathbf{0}.
+\mathbf{x}+\mathbf{y} \in V
+\quad\text{ and }\quad
+\mathbf{x}+\mathbf{y} \in W.
 \end{equation*}
-</div>Since \(\mathbf{d} \neq \mathbf{0}\) by assumption, this implies \(t=0\text{.}\) Thus, we have shown that the only solution to <a class="xref" data-knowl="./knowl/eq-linear-comb.html" title="Equation 3.4.1">(3.4.1)</a> is \((t,s)=(0,0)\text{.}\) This means exactly that \(\{\mathbf{d} , \mathbf{u}\}\) is linearly independent. Since \(\dim (\mathbb{R}^2) = 2\text{,}\) we onclude that \(\mathbb{R}^2 = \span \{\mathbf{d} , \mathbf{u}\} \subseteq U \subsetneq \mathbb{R}^2\text{,}\) a contradiction to \(U\) being proper.</div></body>
+</div>Thus, \(\mathbf{x}+\mathbf{y} \in V \cap W\text{.}\) This shows that \(V\cap W\) is closed under addition.</li>
+</ol>
+</div></body>
 </html>

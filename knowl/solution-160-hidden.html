@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-28T11:45:07-07:00       *-->
+<!--*       on 2021-05-28T15:20:05-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,74 +13,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">We compute<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\matr{ccc|ccc}
-{
-1 \amp 2 \amp 3 \amp 1 \amp 0 \amp 0
-\\
-2 \amp 1 \amp 4 \amp 0 \amp 1 \amp 0
-\\
-1 \amp 0 \amp 4 \amp 0 \amp 0 \amp 1
-}
-\overset{-2R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
-\amp\matr{ccc|ccc}
-{
-1 \amp 2 \amp 3 \amp 1 \amp 0 \amp 0
-\\
-0 \amp -3 \amp -2 \amp -2 \amp 1 \amp 0
-\\
-0 \amp -2 \amp 1 \amp -1 \amp 0 \amp 1
-}\\
-\overset{-2R_{2}+3R_{3}}{\longrightarrow}
-\amp\matr{ccc|ccc}
-{
-1 \amp 2 \amp 3 \amp 1 \amp 0 \amp 0
-\\
-0 \amp -3 \amp -2 \amp -2 \amp 1 \amp 0
-\\
-0 \amp 0 \amp 7 \amp 1 \amp -2 \amp 3
-}
-\end{align*}
-</div>From this, we can already see that the matrix is invertible. We continue:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\matr{ccc|ccc}
-{
-1 \amp 2 \amp 3 \amp 1 \amp 0 \amp 0
-\\
-0 \amp -3 \amp -2 \amp -2 \amp 1 \amp 0
-\\
-0 \amp 0 \amp 7 \amp 1 \amp -2 \amp 3
-}
-\overset{\frac{1}{7}R_{3}}{\underset{2R_{3}'+R_{2}}{\longrightarrow}}
-\amp\matr{ccc|ccc}
-{
-1 \amp 2 \amp 3 \amp 1 \amp 0 \amp 0
-\\
-0 \amp -3 \amp 0 \amp \frac{-12}{7} \amp \frac{3}{7} \amp \frac{6}{7}
-\\
-0 \amp 0 \amp 1 \amp \frac{1}{7} \amp \frac{-2}{7} \amp \frac{3}{7}
-}\\
-\overset{-\frac{1}{3}R_{2}}{\underset{-3R_{3}+R_{1}}{\longrightarrow}}
-\amp\matr{ccc|ccc}
-{
-1 \amp 2 \amp 0 \amp \frac{4}{7} \amp \frac{6}{7} \amp \frac{-9}{7}
-\\
-0 \amp 1 \amp 0 \amp \frac{4}{7} \amp \frac{-1}{7} \amp \frac{-2}{7}
-\\
-0 \amp 0 \amp 1 \amp \frac{1}{7} \amp \frac{-2}{7} \amp \frac{3}{7}
-}\\
-\overset{-2R_{2}+R_{1}}{\longrightarrow}
-\amp\matr{ccc|ccc}
-{
-1 \amp 0 \amp 0 \amp \frac{-4}{7} \amp \frac{8}{7} \amp \frac{-5}{7}
-\\
-0 \amp 1 \amp 0 \amp \frac{4}{7} \amp \frac{-1}{7} \amp \frac{-2}{7}
-\\
-0 \amp 0 \amp 1 \amp \frac{1}{7} \amp \frac{-2}{7} \amp \frac{3}{7}
-}.
-\end{align*}
-</div>We conclude that \(A^{-1}=
-\frac{1}{7}
-\begin{bmatrix} -4 \amp 8 \amp -5 \\ 4 \amp -1 \amp -2 \\ 1 \amp -2 \amp 3 \end{bmatrix}\)</div></body>
+<body><div class="solution solution-like">We choose \(A=B=I\text{,}\) so that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(A + B)^{-1} = (2I)^{-1} = \frac{1}{2}I^{-1} = \frac{1}{2}I,
+\end{equation*}
+</div>while<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+A^{-1} + B^{-1} = 2 I^{-1} = 2 I.
+\end{equation*}
+</div>This shows that \((A + B)^{-1}\) does not equal \(A^{-1} + B^{-1}\text{.}\)</div></body>
 </html>

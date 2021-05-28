@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-28T11:45:04-07:00       *-->
+<!--*       on 2021-05-28T15:20:02-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,84 +16,73 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.15.d.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.15.c.1</span><span class="period">.</span>
 </h6>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
 \matr{ccc|c}{
-3 \amp -1 \amp 2 \amp 3
+1 \amp a \amp 0 \amp 0
 \\
-1 \amp 1 \amp -1 \amp 2
+0 \amp 1 \amp b \amp 0
 \\
-2 \amp -2 \amp 3 \amp b
+c \amp 0 \amp 1 \amp 0 
 }
-\overset{3R_{2}}{\underset{3R_{3}}{\longrightarrow}}
+\overset{-cR_{1}+R_{3}}{\longrightarrow}
 \amp
 \matr{ccc|c}{
-3 \amp -1 \amp 2 \amp 3
+1 \amp a \amp 0 \amp 0
 \\
-3 \amp 3 \amp -3 \amp 6
+0 \amp 1 \amp b \amp 0
 \\
-6 \amp -6 \amp 9 \amp 3b
+0 \amp -ca \amp 1 \amp 0 
 }\\
-\overset{-R_{1}+R_{2}}{\underset{-2R_{1}+R_{3}}{\longrightarrow}}
+\overset{caR_{2}+R_{3}}{\underset{-aR_{2}+R_{1}}{\longrightarrow}}
 \amp
 \matr{ccc|c}{
-3 \amp -1 \amp 2 \amp 3
+1 \amp 0 \amp -ab \amp 0
 \\
-0 \amp 4 \amp -5 \amp 3
+0 \amp 1 \amp b \amp 0
 \\
-0 \amp -4 \amp 5 \amp 3b-6
-}\\
-\overset{R_{2}+R_{3}}{\underset{4R_{1}}{\longrightarrow}}
-\amp
-\matr{ccc|c}{
-12 \amp -4 \amp 8 \amp 12
-\\
-0 \amp 4 \amp -5 \amp 3
-\\
-0 \amp 0 \amp 0 \amp 3b-3
-}
-.
-\end{align*}
-</div>If \(b\neq 1\text{,}\) then this system is inconsistent and has no solution. Otherwise,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\matr{ccc|c}{
-12 \amp -4 \amp 8 \amp 12
-\\
-0 \amp 4 \amp -5 \amp 3
-\\
-0 \amp 0 \amp 0 \amp 0
-}
-\overset{R_{2}+R_{1}}{\longrightarrow}
-\amp
-\matr{ccc|c}{
-12 \amp 0 \amp 3 \amp 15
-\\
-0 \amp 4 \amp -5 \amp 3
-\\
-0 \amp 0 \amp 0 \amp 0
-}\\
-\overset{\frac{1}{12}R_{1}}{\underset{\frac{1}{4}R_{2}}{\longrightarrow}}
-\amp
-\matr{ccc|c}{
-1 \amp 0 \amp \frac{1}{4} \amp \frac{5}{4}
-\\
-0 \amp 1 \amp -\frac{5}{4} \amp \frac{3}{4}
-\\
-0 \amp 0 \amp 0 \amp 0
+0 \amp 0 \amp 1 + cab  \amp 0 
 }.
 \end{align*}
-</div>Thus, if \(b = 1\text{,}\) then the solution set of the system is<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>To proceed, we need to make a case distinction: If \(1+cab = 0\text{,}\) then we have found the RREF of the matrix and the solution set is given  by<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
 \left\{
-\left(\frac{5}{4} - \frac{1}{4}z,\frac{3}{4}+\frac{5}{4}z,z\right)
+(abz, -bz, z)
 \,\vert\,
 z\in\mathbb{R}
 \right\}.
 \end{equation*}
-</div>
-</div>
+</div>If \(1+cab \neq 0\text{,}\) then we can divide by \(1+cab\text{:}\)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+1 \amp 0 \amp -ab \amp 0
+\\
+0 \amp 1 \amp b \amp 0
+\\
+0 \amp 0 \amp 1 + cab  \amp 0 
+}
+\overset{\frac{1}{1+cab}R_{3}}{\longrightarrow}
+\amp
+\matr{ccc|c}{
+1 \amp 0 \amp -ab \amp 0
+\\
+0 \amp 1 \amp b \amp 0
+\\
+0 \amp 0 \amp 1 \amp 0 
+}\\
+\overset{abR_{3}+R_{1}}{\underset{-bR_{3}+R_{2}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp 0 \amp 0 \amp 0
+\\
+0 \amp 1 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp 0 
+}.
+\end{align*}
+</div>Thus, if \(1+cab \neq 0\text{,}\) then the unique solution to the system is \((0,0,0)\text{.}\)</div>
 <span class="incontext"><a href="sec-solv-lin-systms.html#solution-79">in-context</a></span>
 </body>
 </html>

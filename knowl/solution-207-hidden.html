@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-28T11:45:10-07:00       *-->
+<!--*       on 2021-05-28T15:20:08-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,40 +13,43 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">We choose the third row because this choice gives us the most amount of zeros, which means we have less cofactors to compute. For a \(4\times 4 \) matrix,\(A \text{,}\) expanding along the \(3\)rd row,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body><div class="solution solution-like">For a \(3\times3 \) matrix, expanding along the \(1\)st column,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\det(A) = a_{31}cof(A)_{31}+a_{32}cof(A)_{32}+a_{33}cof(A)_{33}+a_{34}cof(A)_{34}
+cof(A)_{11} = (-1)^{1+1}\begin{vmatrix} 0 \amp 1 \\ 1 \amp 1 \end{vmatrix} =-1 
 \end{equation*}
 </div>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\det(A) = (0)cof(A)_{31}+(0)cof(A)_{32}+(0)cof(A)_{33}+(2)cof(A)_{34}
+cof(A)_{21} = (-1)^{2+1}\begin{vmatrix} 2 \amp 1 \\ 1 \amp 1 \end{vmatrix}=(-1)(1)=-1 
 \end{equation*}
 </div>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-cof(A)_{34} = (-1)^{3+4}\begin{vmatrix} 1 \amp 0 \amp 0 \\ 2 \amp 1 \amp 1 \\ 2 \amp 1 \amp 3 \end{vmatrix} 
-\end{equation*}
-</div>Let \(B = \begin{bmatrix} 1 \amp 0 \amp 0 \\ 2 \amp 1 \amp 1 \\ 2 \amp 1 \amp 3 \end{bmatrix} \text{.}\) To find the determinant of \(B \) we will expand along the first row, since it has the most amount of zeros.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-det(B) = b_{11}cof(B)_{11} + b_{12}cof(B)_{12} + b_{13}cof(B)_{13} 
+cof(A)_{31} = (-1)^{3+1}\begin{vmatrix} 1 \amp 2 \\ 1 \amp 0 \end{vmatrix}=-2 
 \end{equation*}
 </div>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-det(B) = (1)cof(B)_{11} + (0)cof(B)_{12} + (0)cof(B)_{13} = (1)(-1)^{1+1}\begin{vmatrix}1 \amp 1 \\ 1 \amp 3 \end{vmatrix} = 2 
+\det(A) = a_{11}cof(A)_{11}+a_{21}cof(A)_{21}+a_{31}cof(A)_{31}=(1)(-1) + (1)(-1)+ (2)(-2)=-6 
+\end{equation*}
+</div>For a \(3\times3 \) matrix, expanding along the \(3\)rd row,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+cof(A)_{31} = (-1)^{3+1}\begin{vmatrix} 2 \amp 1 \\ 0 \amp 1 \end{vmatrix} =-2 
 \end{equation*}
 </div>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-cof(A)_{34} = -2 
+cof(A)_{32} = (-1)^{3+2}\begin{vmatrix} 1 \amp 1 \\ 1 \amp 1 \end{vmatrix}=0 
 \end{equation*}
 </div>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\det(A) \amp = (0)cof(A)_{31}+(0)cof(A)_{32}+(0)cof(A)_{33}+(2)cof(A)_{34} \\
-\amp = (2)(-2) \\
-\amp = -4 
-\end{align*}
-</div>The determinant of the matrix is -4.</div></body>
+\begin{equation*}
+cof(A)_{33} = (-1)^{3+3}\begin{vmatrix} 1 \amp 2 \\ 1 \amp 0 \end{vmatrix}=-2
+\end{equation*}
+</div>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\det(A) = a_{12}cof(A)_{12}+a_{22}cof(A)_{22}+a_{32}cof(A)_{32}=(2)(-2) + (1)(0)+ (1)(-2)=-6 
+\end{equation*}
+</div>The determinant of the matrix is -6.</div></body>
 </html>

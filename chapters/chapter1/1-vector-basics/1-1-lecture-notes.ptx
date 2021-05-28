@@ -68,10 +68,97 @@
 		<title>
 			Addition and scalar multiplication
 		</title>
+
 		<definition>
-			Suppose that <m>\vec{v} = \begin{bmatrix}x_1\\y_1\end{bmatrix}</m> and <m>\vec{w} = \begin{bmatrix}x_2\\y_2\end{bmatrix}</m>.  We define <em>vector addition</em> by defining <m>\vec{v}+\vec{w} = \begin{bmatrix}x_1+x_2\\y_1+y_2\end{bmatrix}</m>.
+			Suppose that <m>\vec{v} = \begin{bmatrix}v_1\\v_2\end{bmatrix}</m> and <m>\vec{w} = \begin{bmatrix}w_1\\w_2\end{bmatrix}</m>.  We define <em>vector addition</em> "<m>\vec{v}</m> plus <m>\vec{w}</m>" by defining <me>\vec{v}+\vec{w} = \begin{bmatrix}v_1+w_1 \\ v_2+w_2\end{bmatrix}</me>.
+		</definition>
+		<p>
+			Geometrically, following the vector <m>\vec{v}+\vec{w}</m> amounts to first following <m>\vec{v}</m> and then following <m>\vec{w}</m>.
+		</p>
+		<example>
+			Let <m>\vec{v} = \begin{bmatrix}1\\-1\end{bmatrix}</m> and <m>\vec{w} = \begin{bmatrix}3\\2\end{bmatrix}</m>.  If we begin at the origin <m>O = (0,0)</m>and follow <m>\vec{v}</m> we will end up at <m>P = (1, -1)</m>.  Then starting from <m>P</m> and following <m>\vec{w}</m> will take us to <m>Q = (4, 1)</m>.  On the other hand, <m>\vec{v}+\vec{w} = \begin{bmatrix}1+3\\-1+2\end{bmatrix} = \begin{bmatrix}4\\1\end{bmatrix}</m>.  Thus <m>\vec{v}+\vec{w} = \vec{OQ}</m>.
+			<figure>
+				<caption>The vectors <m>\vec{v}, \vec{w}, \vec{v}+\vec{w}</m>.</caption>
+				<!--<image>
+					<latex-image>
+						\begin{tikzpicture}
+					
+						\end{tikzpicture}
+					</latex-image>
+				</image>-->
+			</figure>
+		</example>
+
+		<p> Addition of vectors in <m>\mathbb{R}^2</m> shares many properties with addition of numbers.  We list some of the most important properties in the following theorem, but before that we need one more definition. </p>
+
+		<definition>
+			The <em>zero vector</em> in <m>\mathbb{R}^2</m> is the vector <m>\vec{0} = \begin{bmatrix}0\\0\end{bmatrix}</m>
 		</definition>
 
+		<theorem>
+			<p>Suppose that <m>\vec{v}</m>, <m>\vec{w}</m>, and <m>\vec{z}</m> are vectors in <m>\mathbb{R}^2</m>.  Then:</p>
+			<ul>
+				<li><m>\vec{v}+\vec{w} = \vec{w}+\vec{v}</m></li>
+				<li><m>(\vec{v}+\vec{w}) +\vec{z} = \vec{v} + (\vec{w}+\vec{z})</m></li>
+				<li><m>\vec{v} + \vec{0} = \vec{v}</m></li>
+			</ul>
+			<proof>
+				<p> We will only prove the second property, as an illustration of what it takes to prove a statement like this.  We emphasize that the theorem statement is supposed to apply to any vectors we might have, so a proof needs to handle <em>all possible choices</em> for <m>\vec{v}, \vec{w}, \vec{z}</m>, so working with a numerical example is not enough.  Instead, we assign variables to the entries of our vectors, and thus do a calculation that will work for all possible vectors.  Suppose that <m>\vec{v} = \begin{bmatrix}v_1\\v_2\end{bmatrix}, \vec{w} = \begin{bmatrix}w_1\\w_2\end{bmatrix}, \vec{z} = \begin{bmatrix}z_1\\z_2\end{bmatrix}</m>.  Then we calculate:</p>
+				<md>
+					<mrow> (\vec{v}+\vec{w})+\vec{z} \amp = \left(\begin{bmatrix}v_1\\v_2\end{bmatrix}+\begin{bmatrix}w_1\\w_2\end{bmatrix}\right)+\begin{bmatrix}z_1\\z_2\end{bmatrix}</mrow>
+					<mrow> \amp = \begin{bmatrix}v_1+w_1\\v_2+w_2\end{bmatrix} + \begin{bmatrix}z_1\\z_2\end{bmatrix} </mrow>
+					<mrow> \amp = \begin{bmatrix}(v_1+w_1)+z_1 \\ (v_2+w_2)+z_2\end{bmatrix}</mrow>
+					<mrow> \amp = \begin{bmatrix}v_1 + (w_1+z_1) \\ v_2 + (w_2+z_2)\end{bmatrix}</mrow>
+					<mrow> \amp = \begin{bmatrix}v_1\\v_2\end{bmatrix} + \begin{bmatrix}w_1+z_1\\w_2+z_2\end{bmatrix}</mrow>
+					<mrow> \amp = \begin{bmatrix}v_1 \\ v_2 \end{bmatrix} + \left(\begin{bmatrix}w_1\\w_2\end{bmatrix} + \begin{bmatrix}z_1\\z_2\end{bmatrix}\right) </mrow>
+					<mrow> \amp = \vec{v} + (\vec{w} + \vec{z}) </mrow>
+				</md>
+				<p>The proofs of the other two statements of the theorem are similar, and are good exercises to make sure you're comfortable with what a proof needs to do.</p>
+			</proof>
+		</theorem>
+
+		<p> The second of the two main things we do with vectors is <em>scalar multiplication</em>, which allows us to change the length of a vector without changing its direction.  </p>
+
+		<definition>
+			Suppose that <m>\vec{v} = \begin{bmatrix}v_1\\v_2\end{bmatrix}</m> is a vector in <m>\mathbb{R}^2</m>, and <m>r</m> is a scalar (that is, a real number).  We define the <em>scalar multiplication</em> "<m>r</m> times <m>\vec{v}</m>" by defining <me>r\vec{v} = \begin{bmatrix}rv_1 \\ rv_2\end{bmatrix}.</me>
+		</definition>
+
+		<example>
+			Let <m>\vec{v} = \begin{bmatrix}1\\2\end{bmatrix}</m>.  Then:
+			<ul>
+				<li><m>2\vec{v} = \begin{bmatrix}2\\4\end{bmatrix}</m></li>
+				<li><m>\frac{1}{2}\vec{v} = \begin{bmatrix}1/2 \\ 1\end{bmatrix}</m></li>
+				<li><m>-3\vec{v} = \begin{bmatrix}-3\\-6\end{bmatrix}</m></li>
+				<li><m>0\vec{v} = \vec{0}</m></li>
+			</ul>
+
+			<figure>
+				<caption>The vectors <m>\vec{v}</m>, <m>2\vec{v}</m>, <m>\frac{1}{2}\vec{v}</m>, and <m>-3\vec{v}</m>.</caption>
+				<!--<image>
+					<latex-image>
+						\begin{tikzpicture}
+					
+						\end{tikzpicture}
+					</latex-image>
+				</image>-->
+			</figure>
+		</example>
+
+		<p>Addition and scalar multiplication of vectors interact in the ways that you probably expect based on how addition and multiplication of numbers work.  However, we must be a little bit careful!  We are <em>not</em> defining what it means to multiply a vector by another vector; an expression like <m>r(\vec{v}\vec{w}) = (r\vec{v})\vec{w}</m> isn't even false, it is meaningless.</p>
+		<theorem>
+			<p>Suppose that <m>\vec{v}</m> and <m>\vec{w}</m> are vectors in <m>\mathbb{R}^2</m>, and <m>r</m> and <m>s</m> are scalars.  Then:</p>
+			<ul>
+				<li><m>r(\vec{v}+\vec{w}) = r\vec{v} + r\vec{w}</m></li>
+				<li><m>(r+s)(\vec{v}) = r\vec{v} + s\vec{v}</m></li>
+				<li><m>(rs)(\vec{v}) = r(s\vec{v})</m></li>
+				<li><m>0\vec{v} = \vec{0}</m></li>
+				<li><m>r\vec{0} = \vec{0}</m></li>
+			</ul>
+		</theorem>
+
+		<definition>
+			If <m>\vec{v} = \begin{bmatrix}v_1\\v_2\end{bmatrix}</m> and <m>\vec{w} = \begin{bmatrix}w_1\\w_2\end{bmatrix}</m>, then we define subtraction by <me>\vec{v} - \vec{w} = \vec{v} + (-1)\vec{w} = \begin{bmatrix}v_1-w_1 \\ v_2-w_2\end{bmatrix}.</me>
+		</definition>
 	</subsection>
 
 	<subsection>
@@ -80,14 +167,65 @@
 		</title>
 
 		<p>
-			Text here
+			So far we have considered vectors in the plane, <m>\mathbb{R}^2</m>.  In applications of linear algebra one often needs to work in higher dimensions for a variety of reasons.  First, the space around is is three-dimensional, so for physical applications we often work in <m>\mathbb{R}^3</m>.  Other applications of linear algebra think of a vector as a list of data (rather than as a geometric object), and so may need even higher dimensions.  For instance, if you are taking five courses this term, then when the term is over your grades for the term could be listed as a vector with <m>5</m> entries (that is, a vector in <m>\mathbb{R}^5</m>).
 		</p>
+		<p>
+			If you look back at the previous section, you will see that the algebraic definitions we gave make perfect sense no matter how many dimensions we are in.  Thus, for example, if <m>\vec{v} = \begin{bmatrix}v_1\\v_2\\v_3\\v_4\end{bmatrix}</m> and <m>\vec{w} = \begin{bmatrix}w_1\\w_2\\w_3\\w_4\end{bmatrix}</m> then it still makes sense to define <m>\vec{v}+\vec{w} = \begin{bmatrix}v_1+w_1\\v_2+w_2\\v_3+w_3\\v_4+w_4\end{bmatrix}.</m>  You can also verify that the properties of addition and scalar multiplication continue to work in any number of dimensions.  This will become a recurring theme in the course: We will take geometric ideas from <m>\mathbb{R}^2</m> or <m>\mathbb{R}^3</m>, translate them into algebraic language, and then use that to generalize to <m>\mathbb{R}^n</m> for higher values of <m>n</m>.
+		</p>
+		<p>
+			We will usually state general results for vectors in <m>\mathbb{R}^n</m>, leaving <m>n</m> unspecified so that our results can be applied in any number of dimensions.
+		</p>
+		<note>
+			There are a few subtle details that we should be careful about.
+			<ul>
+				<li>It does not make sense to combine vectors with different numbers of entries.  If <m>\vec{v}</m> is in <m>\mathbb{R}^4</m> and <m>\vec{w}</m> is in <m>\mathbb{R}^6</m> then the expression <m>\vec{v}+\vec{w}</m> does not make sense.</li>
+				<li>The zero vector in <m>\mathbb{R}^2</m> is <m>\begin{bmatrix}0\\0\end{bmatrix}</m>, while the zero vector in <m>\mathbb{R}^3</m> is <m>\begin{bmatrix}0\\0\\0\end{bmatrix}</m>, and these are different!  Much of the time it will be clear from context what the symbol <m>\vec{0}</m> means, but sometimes we will write <m>\vec{0}_n</m> if we need to emphasize that we are talking about the zero vector in <m>\mathbb{R}^n</m>.</li>
+			</ul>
+		</note>
+
 	</subsection>
 
 	<subsection>
 		<title>
 			A first look at linear combinations
 		</title>
+		<definition>
+			Suppose that <m>\vec{v}_1, \ldots, \vec{v}_k</m> are vectors in <m>\mathbb{R}^n</m>.  A <em>linear combination</em> of <m>\vec{v}_1, \ldots, \vec{v}_k</m> is a vector that can be written in the form <me>c_1\vec{v}_1+\cdots+c_k\vec{v}_k,</me> where <m>c_1, \ldots, c_k</m> are scalars.
+		</definition>
+		<example>
+			The vector <m>\vec{w} = \begin{bmatrix}-1\\1\\5\end{bmatrix}</m> is a linear combination of the vectors <m>\vec{v_1} = \begin{bmatrix}1\\2\\1\end{bmatrix}</m> and <m>\vec{v_2} = \begin{bmatrix}-1\\-1\\1\end{bmatrix}</m>, because <m>\vec{w} = 2\vec{v}_1+3\vec{v}_2</m>.
+		</example>
+		<example>
+			Every vector in <m>\mathbb{R}^2</m> can be written as a linear combination of <m>\begin{bmatrix}1\\0\end{bmatrix}</m> and <m>\begin{bmatrix}0\\1\end{bmatrix}</m>, because for any <m>\begin{bmatrix}x\\y\end{bmatrix}</m> in <m>\mathbb{R}^2</m> we have <me>\begin{bmatrix}x\\y\end{bmatrix} = x\begin{bmatrix}0\\1\end{bmatrix} + y\begin{bmatrix}0\\1\end{bmatrix}.</me>
+		</example>
+		<example>
+			<p>Which vectors in <m>\mathbb{R}^3</m> can be expressed as linear combinations of <m>\vec{v_1} = \begin{bmatrix}1\\1\\-1\end{bmatrix}, \vec{v_2} = \begin{bmatrix}2\\-1\\0\end{bmatrix}, \vec{v_3} = \begin{bmatrix}3\\0\\-1\end{bmatrix}</m>?</p>
+			<solution>
+				<p>Consider any vector <m>\vec{w} = \begin{bmatrix}x\\y\\z\end{bmatrix}</m> in <m>\mathbb{R}^3</m>.  We are interested in knowing what must be true about <m>x, y, z</m> in order for there to be scalars <m>a, b, c</m> such that <me>\vec{w} = a\vec{v_1} + b\vec{v_2}+c\vec{v_3},</me> that is, <me>\begin{bmatrix}x\\y\\z\end{bmatrix} = a\begin{bmatrix}1\\1\\-1\end{bmatrix}+b\begin{bmatrix}2\\-1\\0\end{bmatrix}+c\begin{bmatrix}3\\0\\-1\end{bmatrix}.</me>  By calculating the right side of this equation and then comparing first entries, second entries, and third entries, we get a system of equations:</p>
+				<md>
+					<mrow>x = a+2b+3c</mrow>
+					<mrow>y = a-b+0c</mrow>
+					<mrow>z = -a+0b-c</mrow>
+				</md>
+				<p>We recognize this as a system of linear equations, but we should be careful to remember what we're trying to do: We want to know what must be true about <m>x, y, z</m> in order for this system to have a solution.  We set up an augmented matrix and row reduce.</p>
+				<me>
+					\matr{ccc|c}
+						{
+							1 \amp 2 \amp 3 \amp x \\
+							1 \amp -1 \amp 0 \amp y \\
+							-1 \amp 0 \amp -1 \amp z
+						}
+					\to
+					\matr{ccc|c}
+						{
+							1 \amp 2 \amp 3 \amp x \\
+							0 \amp 1 \amp 1 \amp \frac{1}{3}x - \frac{1}{3}y \\
+							0 \amp 0 \amp 0 \amp \frac{1}{3}x+\frac{2}{3}y + z
+						}
+				</me>
+				<p>From the row-echelon form we can see that our system will have a solution as long as <m>\frac{1}{3}x+\frac{2}{3}y+z=0</m>.  We therefore conclude that the vectors that can be expressed as linear combinations of <m>\vec{v_1}, \vec{v_2}, \vec{v_3}</m> are precisely those vectors <m>\begin{bmatrix}x\\y\\z\end{bmatrix}</m> where <m>\frac{1}{3}x+\frac{2}{3}y+z=0</m>.</p>
+			</solution>
+		</example>
 	</subsection>
 
 

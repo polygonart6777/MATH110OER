@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-28T11:45:03-07:00       *-->
+<!--*       on 2021-05-28T15:20:01-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,8 +16,65 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.5.1</span><span class="period">.</span>
-</h6>First, assume that \(B \overset{R_{i}\leftrightarrow R_{j}}{\longrightarrow} A\text{.}\) Then \(A \overset{R_{j}\leftrightarrow R_{i}}{\longrightarrow} B\text{,}\) so the first row operation is invertible. To be more precise, the first row operation is its own inverse. Next, assume that \(B \overset{\alpha R_{i}}{\longrightarrow} A\text{.}\) For this to be a legitimate row operation, we must have \(\alpha\neq 0\text{.}\) In particular, \(\frac{1}{\alpha}\) exists and \(A \overset{\frac{1}{\alpha} R_{i}}{\longrightarrow} B\) is also a legitimate row operation. Thus, the row operation of multiplication by \(\alpha\) is invertible with inverse the row operation of multiplication by \(\frac{1}{\alpha}\text{.}\) Lastly, assume that \(B \overset{\alpha R_{i} + R_{j}}{\longrightarrow} A\text{.}\) If \(\alpha = 0 \) or row \(i\) in \(B\) is a zero-row, then the operation does nothing and \(B=A\text{.}\) If \(\alpha\neq 0\) and row \(i\) in \(B\) is not a zero-row, then \(A\) differs from \(B\) exactly in row \(j\text{;}\) in particular, row \(i\) is the same in \(A\) and \(B\text{.}\) We see from this that \(A \overset{-\frac{1}{\alpha} R_{i} + R_{j}}{\longrightarrow} B\) inverts the row operation.</div>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.3.1</span><span class="period">.</span>
+</h6>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\begin{bmatrix}
+2 \amp  -1 \amp  3 \amp  -1
+\\
+1 \amp  0 \amp  2 \amp  1
+\\
+1 \amp  -1 \amp  1 \amp  -2 
+\end{bmatrix}
+\overset{-\frac{1}{2}R_{1} + R_{2}}{\underset{-\frac{1}{2}R_{1} + R_{3}}{\longrightarrow}}
+\amp
+\begin{bmatrix}
+2 \amp  -1 \amp  3 \amp  -1
+\\
+0 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+\\
+0 \amp  -\frac{1}{2} \amp  -\frac{1}{2} \amp  -\frac{3}{2}
+\end{bmatrix}\\
+\overset{\frac{1}{2}R_{1}}{\underset{R_{2}+R_{3}}{\longrightarrow}}
+\amp
+\begin{bmatrix}
+1 \amp  -\frac{1}{2} \amp  \frac{3}{2} \amp  -\frac{1}{2}
+\\
+0 \amp  \frac{1}{2} \amp  \frac{1}{2} \amp  \frac{3}{2}
+\\
+0 \amp  0 \amp  0 \amp  0
+\end{bmatrix}\\
+\overset{2R_{2}}{\longrightarrow}
+\amp
+\begin{bmatrix}
+1 \amp  -\frac{1}{2} \amp  \frac{3}{2} \amp  -\frac{1}{2}
+\\
+0 \amp  1 \amp 1 \amp  3
+\\
+0 \amp  0 \amp  0 \amp  0
+\end{bmatrix}.
+\end{align*}
+</div>We have arrived at a matrix in REF. To get it into RREF, we need to make sure that any column with a leading \(1\) has no other non-zero entries, so:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{bmatrix}
+1 \amp  -\frac{1}{2} \amp  \frac{3}{2} \amp  -\frac{1}{2}
+\\
+0 \amp  1 \amp 1 \amp  3
+\\
+0 \amp  0 \amp  0 \amp  0
+\end{bmatrix}.
+\overset{\frac{1}{2}R_{2} + R_{1}}{\longrightarrow}
+\begin{bmatrix}
+1 \amp  0 \amp  2 \amp  -1
+\\
+0 \amp  1 \amp 1 \amp  3
+\\
+0 \amp  0 \amp  0 \amp  0
+\end{bmatrix}.
+\end{equation*}
+</div>
+</div>
 <span class="incontext"><a href="sec-solv-lin-systms.html#solution-59">in-context</a></span>
 </body>
 </html>

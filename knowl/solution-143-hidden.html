@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-28T11:45:07-07:00       *-->
+<!--*       on 2021-05-28T15:20:05-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,10 +13,23 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">In the situation of  \(2\times 2\) matrices, we can approach the question in two different ways: one option is using <a class="xref" data-knowl="./knowl/eq-inverse-of-2-times-2-matrix.html" title="Answer 3.3.2.1">Answer 3.3.2.1</a> to compute the inverse \(A^{-1}\) of \(A\) and then check whether it coincides with the given matrix \(B\text{.}\) The second option is to check whether \(AB=I\) and \(BA=I\text{,}\) which is exactly the case if \(B=A^{-1}\text{.}\) This latter approach also works for matrices of larger size. <ol class="lower-alpha">
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-144-hidden.html" title="Solution 3.3.4.a.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-145-hidden.html" title="Solution 3.3.4.b.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-146-hidden.html" title="Solution 3.3.4.c.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-</ol>
-</div></body>
+<body><div class="solution solution-like">Just as before, we see that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix} \begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} a \\ b \end{bmatrix}
+\iff
+\begin{bmatrix}x \\ y \end{bmatrix} = \begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix}^{-1}\begin{bmatrix} a \\ b \end{bmatrix}.
+\end{equation*}
+</div>We compute:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{bmatrix} 2 \amp 4 \\ 1 \amp 1 \end{bmatrix}^{-1}
+\begin{bmatrix} a \\ b \end{bmatrix}
+=
+\frac{1}{2}
+\begin{bmatrix} -1 \amp 4 \\ 1 \amp -2 \end{bmatrix}
+\begin{bmatrix} a \\ b \end{bmatrix}
+=
+\frac{1}{2}
+\begin{bmatrix} -a + 4 b \\ a - 2b \end{bmatrix}.
+\end{equation*}
+</div>The solution is therefore given by \(\begin{bmatrix} x \\ y \end{bmatrix}=\begin{bmatrix} \frac{-a}{2} + 2 b \\ \frac{a}{2} - b \end{bmatrix}.\)</div></body>
 </html>

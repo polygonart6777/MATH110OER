@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-28T11:45:08-07:00       *-->
+<!--*       on 2021-05-28T15:20:06-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,54 +13,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">We row-reduce \(A\text{:}\)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\begin{bmatrix}
-1 \amp 3 \amp 2
-\\
-3 \amp 9 \amp 6
-\\
-1 \amp 3 \amp 2
-\end{bmatrix}
-\overset{-3R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
-\begin{bmatrix}
-1 \amp 3 \amp 2
-\\
-0 \amp 0 \amp 0
-\\
-0 \amp 0 \amp 0
-\end{bmatrix}.
-\end{align*}
-</div>We have found a row echelon form of \(A\) (actually, we have found its RREF). It has one non-zero row, so that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{gather*}
-\rank (A) = 1
-\text{ and }
-\nullity (A) = 3-1 = 2.
-\end{gather*}
-</div>Moreover, using <a class="xref" data-knowl="./knowl/hint-equivalent-matrices-same-row-and-null.html" title="Hint 3.4.4.3">Hint 3.4.4.3</a> for the row space and <a class="xref" data-knowl="./knowl/Casting-out-algorithm.html" title="Hint 3.4.4.4">Hint 3.4.4.4</a> for the column space, we find the following bases:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\text{basis of } \row (A):\quad \amp \span \left\{\begin{bmatrix}1 \amp 3 \amp 2\end{bmatrix}\right\} \\
-\text{basis of } \col (A):\quad \amp \span \left\{\begin{bmatrix}1 \\ 3 \\ 1\end{bmatrix}\right\}.
-\end{align*}
-</div>Lastly, for the null space, we use <a class="xref" data-knowl="./knowl/hint-basis-of-null-space.html" title="Hint 3.4.4.1">Hint 3.4.4.1</a>: From the RREF of \(A\text{,}\) we are looking for the solution set of<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body><div class="solution solution-like">Since \(U\) is proper, there exists a <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">non-zero</em> vector in \(U\text{,}\) say \(\mathbf{d}\text{.}\) We want to show that \(U = \mathbb{R}\textbf{d}\text{,}\) where<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\matr{ccc|c}{
-1 \amp 3 \amp 2 \amp 0
-\\
-0 \amp 0 \amp 0 \amp 0
-\\
-0 \amp 0 \amp 0 \amp 0
-}.
+\mathbb{R}\textbf{d}:=\{ r\textbf{d} \ | \ r  \text{ in } \mathbb{R}\} \subseteq \mathbb{R}^{2},
 \end{equation*}
-</div>We have that \(x_{2}\) and \(x_{3}\) are free variables, and \(x_{1}=-3x_{2}-2x_{3}\text{,}\) so that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\text{basis of } \null (B):\quad \amp
-\span
-\left\{
-\begin{bmatrix} -3 \\ 1 \\ 0\end{bmatrix},
-\begin{bmatrix} -2 \\ 0 \\ 1\end{bmatrix}
-\right\}.
-\end{align*}
-</div>
-</div></body>
+</div>a line through the origin in direction of \(\mathbf{d}\text{.}\) Assume otherwise: there exists \(\mathbf{u}\in U\) which is not in \(\mathbb{R}\textbf{d}\text{.}\) Note that, since \(U\) is a subspace, this means that \(\span \{\mathbf{d} , \mathbf{u}\} \subseteq U\text{.}\) Consider the vector equation<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation}
+t \mathbf{d} + s \mathbf{u} = \mathbf{0}.\tag{3.4.1}
+\end{equation}
+</div>If \(s\neq 0\text{,}\) then this is equivalent to<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\frac{-t}{s} \mathbf{d} = \mathbf{u}.
+\end{equation*}
+</div>If this were true for some choice of \(t, s\text{,}\) then that would mean \(\mathbf{u} \in \mathbb{R}\textbf{d},\) which contradicts our assumption. If \(s=0\text{,}\) then <a class="xref" data-knowl="./knowl/eq-linear-comb.html" title="Equation 3.4.1">(3.4.1)</a> is equivalent to<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+t \mathbf{d} = \mathbf{0}.
+\end{equation*}
+</div>Since \(\mathbf{d} \neq \mathbf{0}\) by assumption, this implies \(t=0\text{.}\) Thus, we have shown that the only solution to <a class="xref" data-knowl="./knowl/eq-linear-comb.html" title="Equation 3.4.1">(3.4.1)</a> is \((t,s)=(0,0)\text{.}\) This means exactly that \(\{\mathbf{d} , \mathbf{u}\}\) is linearly independent. Since \(\dim (\mathbb{R}^2) = 2\text{,}\) we onclude that \(\mathbb{R}^2 = \span \{\mathbf{d} , \mathbf{u}\} \subseteq U \subsetneq \mathbb{R}^2\text{,}\) a contradiction to \(U\) being proper.</div></body>
 </html>

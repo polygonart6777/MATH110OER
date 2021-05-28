@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-28T11:45:02-07:00       *-->
+<!--*       on 2021-05-28T15:20:00-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,56 +16,81 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.3.2.7.1</span><span class="period">.</span>
-</h6>A normal vector to \(\mathcal{P}_1\) resp. \(\mathcal{P}_2\) is given by<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.3.2.6.1</span><span class="period">.</span>
+</h6>We follow the idea of <a class="xref" data-knowl="./knowl/hint-dist-parallel-lines.html" title="Hint 1.3.2.6.1">Hint 1.3.2.6.1</a> and make one additional remark: The line from \(Q_1\) to \(Q_2\) is, by construction, contained in the plane since the two points are in the plane. In particular, said line is orthogonal to  \(\ell_1\) and  \(\ell_2\) and hence describes the direct path from \(\ell_1\) to \(\ell_2\text{,}\) meaning<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\mbf{n}_1
+\operatorname{dist} (\ell_1, \ell_2)
 =
-\begin{bmatrix} 1 \\ 1\\ 0 \end{bmatrix} 
-\text{ resp. }
-\mbf{n}_2
+\norm{\vect{Q_1 Q_2}}.
+\end{equation*}
+</div>We now follow this recipe for the two given pairs of lines. <ol class="lower-alpha">
+<li>We choose the point \(Q_1= (2 , -1, 3 ) \) on \(\ell_1\) and the declare the directional vector \(\mbf{n}=\begin{bmatrix} 1 \\ -1\\ 4 \end{bmatrix} \) of  \(\ell_1\) to be normal to the plane  \(\mathcal{P}\text{.}\) The normal form of  \(\mathcal{P}\) is then given by \(\mbf{n} \cdot \mbf{x} = \mbf{n} \cdot \vect{OQ_1}\text{,}\) so its general form is<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x_1 - x_2 + 4 x_3
 =
-\begin{bmatrix} 2 \\ 1\\ -1 \end{bmatrix}
+15
 .
 \end{equation*}
-</div>According to the <a class="xref" data-knowl="./knowl/cosine-formula.html" title="Hint 1.2.2.5.1">Cosine Formula 1.2.2.5.1</a>, the angle between \(\mbf{n}_1\) and \(\mbf{n}_2\) is the number \(\theta\) that satisfies<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>Next, we are looking for the intersection of \(\mathcal{P}\) with  \(\ell_2\text{.}\) In other words, we are looking for \(t\) such that \(\begin{bmatrix} 1 \\ 0\\ 1 \end{bmatrix} +t\begin{bmatrix} 1 \\ -1\\ 4 \end{bmatrix}\) satisfies the general equation of  \(\mathcal{P}\text{:}\)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\cos (\theta)
-=
-\frac{ \mbf{n}_1\cdot \mbf{n}_2}{ \norm{\mbf{n}_1}\cdot \norm{\mbf{n}_2}}
-,
+(1+t) - (0-t) + 4 (1+4t) = 15
+\iff
+t = \tfrac{5}{9}.
 \end{equation*}
-</div>so we compute:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>We conclude that the point \(Q_2\) that \(\mathcal{P}\) and \(\ell_2\) share is given by<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{bmatrix} 1 \\ 0\\ 1 \end{bmatrix} +\tfrac{5}{9}\begin{bmatrix} 1 \\ -1\\ 4 \end{bmatrix}
+=\begin{bmatrix} \tfrac{14}{9} \\ -\tfrac{5}{9}\\ \tfrac{29}{9}\end{bmatrix} 
+.
+\end{equation*}
+</div>The distance between the points \(Q_1\) and \(Q_2\) is then the distance between the lines:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\mbf{n}_1\cdot \mbf{n}_2
-\amp =
-1\cdot 2 + 1\cdot 1 + 0\cdot (-1) = 3\\
-\norm{\mbf{n}_1}
-\amp =
-\sqrt{ 1^2 + 1^2 + 0^2}
+\operatorname{dist} (\ell_1, \ell_2)
+\amp=
+\norm{\vect{Q_1 Q_2}}\\
+\amp=
+\sqrt{(\tfrac{14}{9} -2)^2 + (-\tfrac{5}{9} +1)^2 + (\tfrac{29}{9} -3)^2}
 =
-\sqrt{2}\\
-\norm{\mbf{n}_1}
-\amp =
-\sqrt{ 2^2 + 1^2 + (-1)^2}
+\sqrt{\tfrac{36}{81}}
 =
-\sqrt{6},
+\tfrac{2}{3}.
 \end{align*}
-</div>so that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>
+</li>
+<li>We choose the point \(Q_1= (3 , 0, 2 ) \) on \(\ell_1\) and the declare the directional vector \(\mbf{n}=\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix} \) of  \(\ell_1\)to be normal to the plane  \(\mathcal{P}\text{.}\) The normal form of  \(\mathcal{P}\) is then given by \(\mbf{n} \cdot \mbf{x} = \mbf{n} \cdot \vect{OQ_1}\text{,}\) so its general form is<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\cos (\theta)
+3x_1 + x_2 
 =
-\frac{ 3}{ \sqrt{2}\cdot \sqrt{6}}
-=
-\frac{ 3}{\sqrt{12}}
-,
-\text{ i.e. }
-\sphericalangle (\mathcal{P}_1, \mathcal{P}_2)
-=
-\theta = \tfrac{\pi}{6}
+9
 .
 \end{equation*}
+</div>Next, we are looking for the intersection of \(\mathcal{P}\) with  \(\ell_2\text{.}\) In other words, we are looking for \(t\) such that \(\begin{bmatrix} -1 \\ 2\\ 2 \end{bmatrix} +t\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix}\) satisfies the general equation of  \(\mathcal{P}\text{:}\)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+3(-1+3t) + (2+t)  = 9
+\iff
+t = 1.
+\end{equation*}
+</div>We conclude that the point \(Q_2\) that \(\mathcal{P}\) and \(\ell_2\) share is given by<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{bmatrix} -1 \\ 2\\ 2 \end{bmatrix} +1\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix}
+=
+\begin{bmatrix} 2 \\ 3\\ 2 \end{bmatrix}
+.
+\end{equation*}
+</div>The distance between the points \(Q_1\) and \(Q_2\) is then the distance between the lines:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\operatorname{dist} (\ell_1, \ell_2)
+\amp=
+\norm{\vect{Q_1 Q_2}}\\
+\amp=
+\sqrt{(2-3)^2 + (3-0)^2 + (2-2)^2}
+=
+\sqrt{10}
+.
+\end{align*}
 </div>
+</li>
+</ol>
 </div>
 <span class="incontext"><a href="sec-Lines-and-Planes.html#solution-46">in-context</a></span>
 </body>
