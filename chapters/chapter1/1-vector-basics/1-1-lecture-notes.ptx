@@ -123,6 +123,10 @@
 			Suppose that <m>\vec{v} = \begin{bmatrix}v_1\\v_2\end{bmatrix}</m> is a vector in <m>\mathbb{R}^2</m>, and <m>r</m> is a scalar (that is, a real number).  We define the <em>scalar multiplication</em> "<m>r</m> times <m>\vec{v}</m>" by defining <me>r\vec{v} = \begin{bmatrix}rv_1 \\ rv_2\end{bmatrix}.</me>
 		</definition>
 
+		<definition>
+			If <m>\vec{v}</m> and <m>\vec{w}</m> are vectors, and there is a scalar <m>c</m> such that <m>\vec{v} = c\vec{w}</m>, then we say that <m>\vec{v}</m> is <em>parallel</em> to <m>\vec{w}</m>.
+		</definition>
+
 		<example>
 			Let <m>\vec{v} = \begin{bmatrix}1\\2\end{bmatrix}</m>.  Then:
 			<ul>

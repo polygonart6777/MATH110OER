@@ -4,7 +4,7 @@
 		</title>
 
 		<introduction>
-			So far we have seen vectors as algebraic objects (columns of numbers) and geometric objects (directed line segments).  We have alluded to notions such as "length" and "angle" in the previous section.  The goal of this section is to take those geometric ideas and discover how they can be interpreted algebraically.  Our method is to start from our understanding of plane geometry, derive formulas for length and angle that work in <m>\mathbb{R}^2</m>, and then take those formulas as <emph>definitions</emph> in higher dimensions.  By the end of this section we will be able to make sense of things like the length of a vector in <m>\mathbb{R}^{15}</m> or the angle between two vectors in <m>\mathbb{R}^{2112}</m>.
+			So far we have seen vectors as algebraic objects (columns of numbers) and geometric objects (directed line segments).  We have alluded to notions such as "length" and "angle" in the previous section.  The goal of this section is to take those geometric ideas and discover how they can be interpreted algebraically.  Our method is to start from our understanding of plane geometry, derive formulas for length and angle that work in <m>\mathbb{R}^2</m>, and then take those formulas as <em>definitions</em> in higher dimensions.  By the end of this section we will be able to make sense of things like the length of a vector in <m>\mathbb{R}^{15}</m> or the angle between two vectors in <m>\mathbb{R}^{2112}</m>.
 		</introduction>
 
 		<subsection>
@@ -12,8 +12,8 @@
 			<p>Perhaps surprisingly, it turns out that length and angle are closely related by a single algebraic construction.  For now, this definition is somewhat unmotivated.  The remainder of this section will explain the usefulness of this concept.</p>
 			<definition>
 				<p>
-					Suppose that <m>\vec{v} = \begin{bmatrix}v_1\\ \vdots \\ v_n\end{bmatrix}</m> and <m>\vec{w} = \begin{bmatrix}w_1 \\ \vdots \\ w_n \end{bmatrix}</m> are vectors in <m>\mathbb{R}^n</m>.  We define their <emph>dot product</emph> to be:
-					<me>\vec{v} \cdot \vec{w} = v_1w_1 + \cdots + v_nw_n</me>
+					Suppose that <m>\vec{v} = \begin{bmatrix}v_1\\ \vdots \\ v_n\end{bmatrix}</m> and <m>\vec{w} = \begin{bmatrix}w_1 \\ \vdots \\ w_n \end{bmatrix}</m> are vectors in <m>\mathbb{R}^n</m>.  We define their <em>dot product</em> (or <em>inner product</em>)to be:
+					<me>\vec{v} \cdot \vec{w} = v_1w_1 + \cdots + v_nw_n</me>.
 				</p>
 			</definition>
 			<note>
@@ -26,7 +26,7 @@
 					</ul>
 				</p>
 			</note>
-			<example>
+			<example xml:id="eg-dot-product-calculation">
 				<p>
 					<ul>
 						<li> <m> \begin{bmatrix}1\\1\\5\end{bmatrix} \cdot \begin{bmatrix}\sqrt{2} \\ 0 \\ \pi\end{bmatrix} = 1(\sqrt{2}) + 1(0) + 5(\pi) = \sqrt{2}+5\pi </m> </li>
@@ -36,7 +36,7 @@
 					Take a moment and try to see if you can find the geometric significance of the second and third examples above.  Each of them illustrates something that will be explored in more detail below.
 				</p>
 			</example>
-			<theorem>
+			<theorem xml:id="thm-dot-product-basic-properties">
 				<p> Suppose that <m>\vec{v}</m>, <m>\vec{w}</m>, and <m>\vec{z}</m> are vectors in <m>\mathbb{R}^n</m>, and <m>c</m> is a scalar.  Then:
 					<ol>
 						<li> <m> \vec{v} \cdot \vec{w} = \vec{w} \cdot \vec{v} </m> </li>
@@ -65,7 +65,7 @@
 			<title> Length </title>
 			<p> Now that we have the basic properties of the dot product, we are ready to start exploring what it means.  We will start with a very special case, namely what happens when we take the dot product of a vector with itself.  We begin in <m>\mathbb{R}^2</m>. </p>
 			<example>
-				<p> Consider the vector <m>\vec{v} = \begin{bmatrix}2\\1\end{bmatrix}</m>.  In Example (REF?) we calculated that <m>\vec{v} \cdot \vec{v} = 2^2+1^2 = 5</m>.
+				<p> Consider the vector <m>\vec{v} = \begin{bmatrix}2\\1\end{bmatrix}</m>.  In <xref ref="eg-dot-product-calculation" /> we calculated that <m>\vec{v} \cdot \vec{v} = 2^2+1^2 = 5</m>.
 					<figure>
 						<caption>Calculating the length of <m>\vec{v}</m></caption>
 						<!--<image>
@@ -78,13 +78,13 @@
 					</figure>
 				</p>
 				<p>
-					Using the Pythagorean Theorem we calculate that the length of the line segment representing <m>\vec{v}</m> is <m>\sqrt{2^2+1^2} = \sqrt{\vec{v} \cdot \vec{v}}</m>!
+					Using the Pythagorean Theorem we calculate that the length of the line segment representing <m>\vec{v}</m> is <m>\sqrt{2^2+1^2} = \sqrt{\vec{v} \cdot \vec{v}}</m>.
 				</p>
 			</example>
 
 			<p>The example generalizes to any vector in <m>\mathbb{R}^2</m>: If <m>\vec{v} = \begin{bmatrix}x\\y\end{bmatrix}</m>, then <m>\vec{v} \cdot \vec{v} = x^2+y^2</m>, and if we draw <m>\vec{v}</m> in the plane we will get a line segment of length <m>\sqrt{x^2+y^2} = \sqrt{\vec{v}\cdot\vec{v}}</m>.</p>
-			<p> Our plan is to take <m>\sqrt{\vec{v}\cdot\vec{v}}</m> as the <emph>definition</emph> of the length of <m>\vec{v}</m> when <m>\vec{v}</m> is a vector in any <m>\mathbb{R}^n</m>.  Before we can sensibly do that we need to know that the expression <m>\vec{v}\cdot\vec{v}</m> always produces a non-negative answer, so that the square root makes sense.</p>
-			<theorem>
+			<p> Our plan is to take <m>\sqrt{\vec{v}\cdot\vec{v}}</m> as the <em>definition</em> of the length of <m>\vec{v}</m> when <m>\vec{v}</m> is a vector in any <m>\mathbb{R}^n</m>.  Before we can sensibly do that we need to know that the expression <m>\vec{v}\cdot\vec{v}</m> always produces a non-negative answer, so that the square root makes sense.</p>
+			<theorem xml:id="thm-dot-product-positive">
 				<p> Suppose that <m>\vec{v}</m> is a vector in <m>\mathbb{R}^n</m>.  Then:
 					<ul>
 						<li> <m>\vec{v}\cdot\vec{v} \geq 0 </m>.</li>
@@ -97,7 +97,7 @@
 						For the first claim, if <m>\vec{v} = \begin{bmatrix}v_1 \\ \vdots \\ v_n\end{bmatrix}</m> then <m>\vec{v} \cdot \vec{v} = v_1^2 + \cdots + v_n^2</m>.  For each index <m>j</m> we have <m>v_j^2 \geq 0</m>, and the sum of non-negative numbers is non-negative, so <m>\vec{v} \cdot \vec{v} \geq 0</m>.
 					</p>
 					<p>
-						The second claim is an "if and only if" statement, which means that it asserts <emph>two</emph> things.  Specifically, we need to prove that if <m>\vec{v} = \vec{0}</m> then <m>\vec{v}\cdot\vec{v} = 0</m>, and we also need to prove that if <m>\vec{v} \cdot \vec{v} = 0</m> then <m>\vec{v} = \vec{0}</m>.
+						The second claim is an "if and only if" statement, which means that it asserts <em>two</em> things.  Specifically, we need to prove that if <m>\vec{v} = \vec{0}</m> then <m>\vec{v}\cdot\vec{v} = 0</m>, and we also need to prove that if <m>\vec{v} \cdot \vec{v} = 0</m> then <m>\vec{v} = \vec{0}</m>.
 					</p>
 					<p>
 						The first direction is easy: If <m>\vec{v} = \vec{0}</m> then <m>\vec{v} \cdot \vec{v} = \vec{0}\cdot\vec{0} = 0^2+\cdots + 0^2 = 0</m>.
@@ -109,36 +109,36 @@
 			</theorem>
 
 			<definition>
-				<p> Suppose that <m>\vec{v}</m> is a vector in <m>\mathbb{R}^n</m>.  We define the <emph>length</emph> (or <emph>norm</emph>) of <m>\vec{v}</m> to be: 
-					<me> \norm{v} = \sqrt{\vec{v}\cdot\vec{v}}.</me>
+				<p> Suppose that <m>\vec{v}</m> is a vector in <m>\mathbb{R}^n</m>.  We define the <em>length</em> (or <em>norm</em>, or <em>magnitude</em>) of <m>\vec{v}</m> to be: 
+					<me> \norm{v} = \sqrt{\vec{v}\cdot\vec{v}}</me>.
 				</p>
 			</definition>
 			<note>
 				<p> 
 					Here are some things about the above definition that help make it a good notion of length: 
 					<ul>
-						<li> The definition is sensible for any vector.  We proved in Theorem (REF?) that <m>\vec{v} \cdot \vec{v} \geq 0</m>, so <m>\norm{\vec{v}} = \sqrt{\vec{v}\cdot\vec{v}}</m> makes sense. </li>
+						<li> The definition is sensible for any vector.  We proved in <xref ref="thm-dot-product-positive" /> that <m>\vec{v} \cdot \vec{v} \geq 0</m>, so <m>\norm{\vec{v}} = \sqrt{\vec{v}\cdot\vec{v}}</m> makes sense. </li>
 						<li> Every vector has non-negative length, because the square root function always returns a non-negative number. </li>
-						<li> The only vector in <m>\mathbb{R}^n</m> with length <m>0</m> is the vector <m>\vec{0}</m>.  This is because we proved in Theorem (REF?) that <m>\vec{v}\cdot\vec{v} = 0</m> if and only if <m>\vec{v} = \vec{0}</m>, which means that <m>\norm{\vec{v}} = 0</m> if and only if <m>\vec{v} = \vec{0}</m>. </li>
+						<li> The only vector in <m>\mathbb{R}^n</m> with length <m>0</m> is the vector <m>\vec{0}</m>.  This is because we proved in <xref ref="thm-dot-product-positive" /> that <m>\vec{v}\cdot\vec{v} = 0</m> if and only if <m>\vec{v} = \vec{0}</m>, which means that <m>\norm{\vec{v}} = 0</m> if and only if <m>\vec{v} = \vec{0}</m>. </li>
 						<li> This definition of length agrees with our geometric understanding of length for vectors in the plane.  If you have seen geometry in three-dimensional space you will also recognize that in <m>\mathbb{R}^3</m> the length of the line segment from the origin <m>O = (0,0,0)</m> to a point <m>P = (x, y, z)</m> is <m>\sqrt{x^2+y^2+z^2}</m>, which agrees with our definition of <m>\norm{\vec{OP}}</m>.</li>
 					</ul>
 				</p>
 			</note>
 
 			<p> When we want to prove things about lengths it is often easier to work with the square of the length, to remove the square root.  The next theorem illustrates this technique, and also tells that length is affected by scalar multiplication in a reasonable way. </p>
-			<theorem>
+			<theorem xml:id="thm-norm-homogeneity">
 				<p>Suppose that <m>\vec{v}</m> is a vector in <m>\mathbb{R}^n</m> and <m>c</m> is a scalar.  Then <m>\norm{c\vec{v}} = \abs{c}\norm{\vec{v}}</m>.</p>
 				<proof>
-					<p> We calculate <m>\norm{c\vec{v}}^2</m>:</p>
+					<p> We calculate <m>\norm{c\vec{v}}^2</m>, using the properties of dot products from <xref ref="thm-dot-product-basic-properties" /></p>
 					<md>
 						<mrow>\norm{c\vec{v}}^2 \amp = (c\vec{v}) \cdot (c\vec{v}) </mrow>
-						<mrow>\amp = c(\vec{v} \cdot (c\vec{v})) \amp (Theorem (REF?)) </mrow>
-						<mrow>\amp = c(c\vec{v} \cdot \vec{v}) \amp (Theorem (REF?))</mrow>
-						<mrow>\amp = c^2(\vec{v}\cdot \vec{v}) \amp (Theorem REF?))</mrow>
+						<mrow>\amp = c(\vec{v} \cdot (c\vec{v})) </mrow>
+						<mrow>\amp = c(c\vec{v} \cdot \vec{v}) </mrow>
+						<mrow>\amp = c^2(\vec{v}\cdot \vec{v}) </mrow>
 						<mrow>\amp = c^2\norm{v}^2 </mrow>
 					</md>
 					<p> Now we take square roots on both sides.  Remember that <m>\sqrt{x^2} = \abs{x}</m> for every real number <m>x</m>, and that lengths are always non-negative, to see</p>
-					<me>\norm{c\vec{v}} = \sqrt{\norm{c\vec{v}}^2} = \sqrt{c^2\norm{v}^2} = \abs{c}\norm{v}^2.</me>
+					<me>\norm{c\vec{v}} = \sqrt{\norm{c\vec{v}}^2} = \sqrt{c^2\norm{v}^2} = \abs{c}\norm{v}^2</me>.
 				</proof>
 			</theorem>
 
@@ -154,15 +154,15 @@
 			</theorem>
 
 			<definition>
-				<p>A <emph>unit vector</emph> is a vector <m>\vec{v}</m> such that <m>\norm{\vec{v}} = 1</m>.</p>
+				<p>A  <em>unit vector</em> is a vector <m>\vec{v}</m> such that <m>\norm{\vec{v}} = 1</m>.</p>
 			</definition>
 
 			<theorem>
 				<p> If <m>\vec{v}</m> is any vector in <m>\mathbb{R}^n</m> other than <m>\vec{0}</m> then <m>\frac{1}{\norm{\vec{v}}}\vec{v}</m> is a unit vector.</p>
 				<proof>
-					<p>We just need to calculate.</p>
+					<p>We just need to do a calculation, using <xref ref="thm-norm-homogeneity" /></p>
 					<md>
-						<mrow> \norm{\frac{1}{\norm{\vec{v}}}\vec{v}} \amp = \abs{\frac{1}{\norm{\vec{v}}}}\norm{\vec{v}} \amp (Theorem REF ??) </mrow>
+						<mrow> \norm{\frac{1}{\norm{\vec{v}}}\vec{v}} \amp = \abs{\frac{1}{\norm{\vec{v}}}}\norm{\vec{v}} </mrow>
 						<mrow> \amp = \frac{1}{\norm{\vec{v}}}\norm{\vec{v}} </mrow>
 						<mrow> \amp = 1 </mrow>
 					</md>
@@ -187,35 +187,35 @@
 			</figure>
 
 			<p>Using the cosine law, we get</p>
-			<me>\norm{\vec{v} - \vec{w}}^2 = \norm{\vec{v}}^2 + \norm{\vec{w}}^2 - 2\norm{\vec{v}}\norm{\vec{w}}\cos\theta.</me>
-			<p>Next, we expand the left side and use properties of the dot product (Theorem REF?):</p>
+			<me>\norm{\vec{v} - \vec{w}}^2 = \norm{\vec{v}}^2 + \norm{\vec{w}}^2 - 2\norm{\vec{v}}\norm{\vec{w}}\cos\theta</me>.
+			<p>Next, we expand the left side and use properties of the dot product from <xref ref="thm-dot-product-basic-properties" />:</p>
 			<md>
 				<mrow> \norm{\vec{v} - \vec{w}}^2 \amp = (\vec{v} - \vec{w})\cdot(\vec{v} - \vec{w})</mrow>
 				<mrow> \amp = \vec{v}\cdot\vec{v} - \vec{v}\cdot\vec{w} - \vec{w}\cdot\vec{v} + \vec{w}\cdot\vec{w} </mrow>
 				<mrow> \amp = \norm{\vec{v}}^2 + \norm{\vec{w}}^2 - 2(\vec{v}\cdot\vec{w}) </mrow>
 			</md>
 			<p> Now we plug this back in to the left side of the equation </p>
-			<me> \norm{\vec{v}}^2 + \norm{\vec{w}}^2 - 2(\vec{v} \cdot \vec{w}) = \norm{\vec{v}}^2 + \norm{\vec{w}}^2 - 2\norm{\vec{v}}\norm{\vec{w}}\cos\theta. </me>
+			<me> \norm{\vec{v}}^2 + \norm{\vec{w}}^2 - 2(\vec{v} \cdot \vec{w}) = \norm{\vec{v}}^2 + \norm{\vec{w}}^2 - 2\norm{\vec{v}}\norm{\vec{w}}\cos\theta</me>.
 			<p> Simplifying this leads to </p>
-			<me> \vec{v}\cdot\vec{w} = \norm{\vec{v}}\norm{\vec{w}}\cos\theta. </me>
+			<me> \vec{v}\cdot\vec{w} = \norm{\vec{v}}\norm{\vec{w}}\cos\theta</me>.
 			<p> As long as neither <m>\vec{v}</m> nor <m>\vec{w}</m> is <m>\vec{0}</m> we can write this as </p>
-			<me> \cos\theta = \frac{\vec{v}\cdot\vec{w}}{\norm{\vec{v}}\norm{\vec{w}}}.</me>
+			<me> \cos\theta = \frac{\vec{v}\cdot\vec{w}}{\norm{\vec{v}}\norm{\vec{w}}}</me>.
 			<p> As we did with length, we now take the formula we found for <m>\mathbb{R}^2</m> as the definition of angle in <m>\mathbb{R}^n</m>.</p>
-			<definition>
-				<p>Suppose that <m>\vec{v}</m> and <m>\vec{w}</m> are non-zero vectors in <m>\mathbb{R}^n</m>.  The <emph>angle between <m>\vec{v}</m> and <m>\vec{w}</m></emph> is the angle <m>\theta</m> such that <m>0 \leq \theta \leq \pi</m> that satisfies <me> \cos\theta = \frac{\vec{v}\cdot\vec{w}}{\norm{\vec{v}}\norm{\vec{w}}}.</me></p>
+			<definition xml:id="def-angle-between-vectors">
+				<p>Suppose that <m>\vec{v}</m> and <m>\vec{w}</m> are non-zero vectors in <m>\mathbb{R}^n</m>.  The <em>angle between <m>\vec{v}</m> and <m>\vec{w}</m></em> is the angle <m>\theta</m> such that <m>0 \leq \theta \leq \pi</m> that satisfies <me> \cos\theta = \frac{\vec{v}\cdot\vec{w}}{\norm{\vec{v}}\norm{\vec{w}}}</me>.</p>
 			</definition>
 
 			<example>
 				<p> What is the angle between <m>\vec{v} = \begin{bmatrix}1\\0\\2\\-1\end{bmatrix}</m> and <m>\vec{w} = \begin{bmatrix}0\\1\\-1\\0\end{bmatrix}</m> in <m>\mathbb{R}^4</m>?</p>
 				<solution>
 					<p> Let <m>\theta</m> be the angle we're looking for.  Then:</p>
-					<me> \cos\theta = \frac{\vec{v}\cdot\vec{w}}{\norm{\vec{v}}\norm{\vec{w}}} = \frac{-2}{\sqrt{6}\sqrt{2}} = -\frac{1}{\sqrt{3}}. </me>
+					<me> \cos\theta = \frac{\vec{v}\cdot\vec{w}}{\norm{\vec{v}}\norm{\vec{w}}} = \frac{-2}{\sqrt{6}\sqrt{2}} = -\frac{1}{\sqrt{3}}</me>.
 					<p> The angle is therefore the angle with <m>0 \leq \theta \leq \pi </m> with <m>\cos\theta = -\frac{1}{\sqrt{3}}</m>.  This angle is approximately <m>\theta = 2.186</m> (radians, as always). </p>
 				</solution>
 			</example>
 
 			<definition>
-				<p> We say that two vectors <m>\vec{v}</m> and <m>\vec{w}</m> are <emph>orthogonal</emph> (or <emph>perpendicular</emph>) if <m>\vec{v}\cdot\vec{w} = 0</m>.  We write <m>\vec{v} \perp \vec{w}</m> as an abbreviation for the statement "<m>\vec{v}</m> and <m>\vec{w}</m> are orthogonal".</p>
+				<p> We say that two vectors <m>\vec{v}</m> and <m>\vec{w}</m> are <em>orthogonal</em> (or <em>perpendicular</em>) if <m>\vec{v}\cdot\vec{w} = 0</m>.  We write <m>\vec{v} \perp \vec{w}</m> as an abbreviation for the statement "<m>\vec{v}</m> and <m>\vec{w}</m> are orthogonal".</p>
 			</definition>
 
 			<note>
@@ -235,7 +235,7 @@
 				<title> The Pythagorean Theorem </title>
 				<p> Let <m>\vec{v}</m> and <m>\vec{w}</m> be vectors in <m>\mathbb{R}^n</m>.  Then <m>\vec{v} \perp \vec{w}</m> if and only if <m>\norm{\vec{v} + \vec{w}}^2 = \norm{\vec{v}}^2 + \norm{\vec{w}}^2</m>.</p>
 				<proof>
-					<p> We begin by calculating: </p>
+					<p> We begin with a calculation. </p>
 					<md>
 						<mrow> \norm{\vec{v} + \vec{w}}^2 \amp = (\vec{v} + \vec{w}) \cdot (\vec{v} + \vec{w}) </mrow>
 						<mrow> \amp = \vec{v} \cdot \vec{v} + 2(\vec{v}\cdot\vec{w}) + \vec{w}\cdot\vec{w} </mrow>
@@ -249,7 +249,7 @@
 		<subsection>
 			<title>Orthogonal projections</title>
 			<p> It happens fairly often that we have vectors <m>\vec{v}</m> and <m>\vec{w}</m>, and we would like to express <m>\vec{v}</m> as the sum of a vector in the same direction as <m>\vec{w}</m> and a vector that is orthogonal to <m>\vec{w}</m>.</p>
-			<p>If <m>\vec{w} = \begin{bmatrix}1\\0\end{bmatrix}</m> this is not difficult to do: Given <m>\vec{v} = \begin{bmatrix}x\\y\end{bmatrix}</m> we can write <me>\vec{v} = x\begin{bmatrix}1\\0\end{bmatrix}+ y\begin{bmatrix}0\\1\end{bmatrix} = x\vec{w}+ \begin{bmatrix}0\\y\end{bmatrix},</me> and <m>\vec{w}\perp\begin{bmatrix}0\\y\end{bmatrix}</m>.  Our next goal is to generalize this idea to cases when <m>\vec{w}</m> is not necessarily along a coordinate axis.  As in previous sections, we begin in <m>\mathbb{R}^2</m> and then generalize to higher dimensions.</p>
+			<p>If <m>\vec{w} = \begin{bmatrix}1\\0\end{bmatrix}</m> this is not difficult to do: Given <m>\vec{v} = \begin{bmatrix}x\\y\end{bmatrix}</m> we can write <me>\vec{v} = x\begin{bmatrix}1\\0\end{bmatrix}+ y\begin{bmatrix}0\\1\end{bmatrix} = x\vec{w}+ \begin{bmatrix}0\\y\end{bmatrix}</me>, and <m>\vec{w}\perp\begin{bmatrix}0\\y\end{bmatrix}</m>.  Our next goal is to generalize this idea to cases when <m>\vec{w}</m> is not necessarily along a coordinate axis.  As in previous sections, we begin in <m>\mathbb{R}^2</m> and then generalize to higher dimensions.</p>
 
 			<figure>
 				<caption>The orthogonal projection of one vector on another.</caption>
@@ -261,25 +261,25 @@
 					</latex-image>
 				</image>-->
 			</figure>
-			<p> From highschool geometry you know that the shortest distance from the tip of <m>\vec{v}</m> to the line following <m>\vec{w}</m> occurs at the point on that line where the angle made to the tip of <m>\vec{v}</m> is a right angle, as shown in the figure above.  The vector from the origin to this point, labelled as <m>\vec{p}</m> on the figure, is called the <emph>orthogonal projection of <m>\vec{v}</m> on <m>\vec{w}</m></emph>, and is often written as <m>\operatorname{proj}_{\vec{w}}(\vec{v})</m>. </p>
+			<p> From highschool geometry you know that the shortest distance from the tip of <m>\vec{v}</m> to the line following <m>\vec{w}</m> occurs at the point on that line where the angle made to the tip of <m>\vec{v}</m> is a right angle, as shown in the figure above.  The vector from the origin to this point, labelled as <m>\vec{p}</m> on the figure, is called the <em>orthogonal projection of <m>\vec{v}</m> on <m>\vec{w}</m></em>, and is often written as <m>\proj_{\vec{w}}(\vec{v})</m>. </p>
 			
-			<p> Let <m>\vec{u} = \frac{1}{\norm{\vec{w}}}\vec{w}</m>, so that <m>\vec{u}</m> is the unit vector in the same direction as <m>\vec{w}</m>.  Then we have <me>\vec{p} = \norm{\vec{p}}\vec{u},</me> so to find a formula for <m>\vec{p}</m> we only need to calculate <m>\norm{\vec{p}}</m>, which is the length of the line segment from the origin to the tip of <m>\vec{p}</m>.</p>
+			<p> Let <m>\vec{u} = \frac{1}{\norm{\vec{w}}}\vec{w}</m>, so that <m>\vec{u}</m> is the unit vector in the same direction as <m>\vec{w}</m>.  Then we have <me>\vec{p} = \norm{\vec{p}}\vec{u}</me>, so to find a formula for <m>\vec{p}</m> we only need to calculate <m>\norm{\vec{p}}</m>, which is the length of the line segment from the origin to the tip of <m>\vec{p}</m>.</p>
 
-			<p>From the trigonometry of right-angled triangles we have <m>\cos\theta = \frac{\norm{\vec{p}}}{\norm{\vec{v}}}</m>, so <m>\norm{\vec{p}} = \norm{\vec{v}}\cos\theta</m>.  We know a formula for <m>\cos\theta</m> (see Definition REF?), and plugging that in gives us</p>
-			<me>\norm{\vec{p}} = \norm{\vec{v}}\left(\frac{\vec{v}\cdot\vec{w}}{\norm{\vec{v}}\norm{\vec{w}}}\right) = \frac{\vec{v}\cdot\vec{w}}{\norm{\vec{w}}}.</me>
+			<p>From the trigonometry of right-angled triangles we have <m>\cos\theta = \frac{\norm{\vec{p}}}{\norm{\vec{v}}}</m>, so <m>\norm{\vec{p}} = \norm{\vec{v}}\cos\theta</m>.  We know a formula for <m>\cos\theta</m> (<xref ref="def-angle-between-vectors" />), and plugging that in gives us</p>
+			<me>\norm{\vec{p}} = \norm{\vec{v}}\left(\frac{\vec{v}\cdot\vec{w}}{\norm{\vec{v}}\norm{\vec{w}}}\right) = \frac{\vec{v}\cdot\vec{w}}{\norm{\vec{w}}}</me>.
 			<p>Putting together these calculations, we obtain:</p>
-			<me>\vec{p} = \norm{\vec{p}}\vec{u} = \frac{\vec{v}\cdot\vec{w}}{\norm{\vec{w}}}\left(\frac{1}{\norm{\vec{w}}}\vec{w}\right) = \frac{\vec{v}\cdot\vec{w}}{\vec{w}\cdot\vec{w}}\vec{w}.</me>
+			<me>\vec{p} = \norm{\vec{p}}\vec{u} = \frac{\vec{v}\cdot\vec{w}}{\norm{\vec{w}}}\left(\frac{1}{\norm{\vec{w}}}\vec{w}\right) = \frac{\vec{v}\cdot\vec{w}}{\vec{w}\cdot\vec{w}}\vec{w}</me>.
 			<p>The result of this calculation now becomes our definition in general.</p>
 			<definition>
-				<p> Let <m>\vec{v}</m>, <m>\vec{w}</m> be vectors in <m>\mathbb{R}^n</m> with <m>\vec{w} \neq \vec{0}</m>.  The <emph>orthogonal projection of <m>\vec{v}</m> on <m>\vec{w}</m></emph> is the vector </p>
-				<me> \operatorname{proj}_{\vec{w}}(\vec{v}) = \frac{\vec{v}\cdot\vec{w}}{\vec{w}\cdot\vec{w}}\vec{w}.</me>
+				<p> Let <m>\vec{v}</m>, <m>\vec{w}</m> be vectors in <m>\mathbb{R}^n</m> with <m>\vec{w} \neq \vec{0}</m>.  The <em>orthogonal projection of <m>\vec{v}</m> on <m>\vec{w}</m></em> is the vector </p>
+				<me> \proj_{\vec{w}}(\vec{v}) = \frac{\vec{v}\cdot\vec{w}}{\vec{w}\cdot\vec{w}}\vec{w}</me>.
 			</definition>
 			<definition>
-				<p> Let <m>\vec{v}</m>, <m>\vec{w}</m> be vectors in <m>\mathbb{R}^n</m>, with <m>\vec{w} \neq \vec{0}</m>.  The <emph>component of <m>\vec{v}</m> orthogonal to <m>\vec{w}</m></emph> is the vector </p>
-				<me> \operatorname{perp}_{\vec{w}}(\vec{v}) = \vec{v} - \operatorname{proj}_{\vec{w}}(\vec{v}).</me>
+				<p> Let <m>\vec{v}</m>, <m>\vec{w}</m> be vectors in <m>\mathbb{R}^n</m>, with <m>\vec{w} \neq \vec{0}</m>.  The <em>component of <m>\vec{v}</m> orthogonal to <m>\vec{w}</m></em> is the vector </p>
+				<me> \operatorname{perp}_{\vec{w}}(\vec{v}) = \vec{v} - \proj_{\vec{w}}(\vec{v})</me>.
 			</definition>
 
-			<lemma>
+			<lemma xml:id="lem-parallel-and-orthogonal-is-zero">
 				<p>Let <m>\vec{w}</m> be a non-zero vector in <m>\mathbb{R}^n</m>.  The only vector that is simultaneously parallel to <m>\vec{w}</m> and orthogonal to <m>\vec{w}</m> is <m>\vec{0}</m>.</p>
 				<proof>
 					<p> First, notice that <m>\vec{0} = 0\vec{w}</m>, so <m>\vec{0}</m> is parallel to <m>\vec{w}</m>, but also <m>\vec{0}\cdot\vec{w} = 0</m>, so <m>\vec{0}</m> is orthogonal to <m>\vec{w}</m>.</p>
@@ -291,25 +291,25 @@
 						<mrow> \amp c\norm{\vec{w}}^2 </mrow>
 					</md>
 					<p> From here we see that either <m>c=0</m> or <m>\norm{\vec{w}}^2 = 0</m>.  The latter option is impossible, because one of our assumptions is that <m>\vec{w} \neq \vec{0}</m>.  Therefore <m>c=0</m>, and hence </p>
-					<me>\vec{v} = c\vec{w} = 0\vec{w} = \vec{0}.</me>
+					<me>\vec{v} = c\vec{w} = 0\vec{w} = \vec{0}</me>.
 				</proof>
 			</lemma>
 
-			<theorem>
+			<theorem xml:id="thm-orthogonal-decomposition-v1">
 				<p> 
-					Let <m>\vec{v}</m> and <m>\vec{w}</m> be vectors in <m>\mathbb{R}^n</m>, with <m>\vec{w} \neq \vec{0}</m>.  The only way to write <m>\vec{v} = \vec{v_1} + \vec{v_2}</m> with <m>\vec{v_1}</m> parallel to <m>\vec{w}</m> and <m>\vec{v_2}</m> orthogonal to <m>\vec{w}</m> is by using <m>\vec{v_1} = \operatorname{proj}_{\vec{w}}(\vec{v})</m> and <m>\vec{v_2} = \operatorname{perp}_{\vec{w}}(\vec{v})</m>.</p>
+					Let <m>\vec{v}</m> and <m>\vec{w}</m> be vectors in <m>\mathbb{R}^n</m>, with <m>\vec{w} \neq \vec{0}</m>.  The only way to write <m>\vec{v} = \vec{v_1} + \vec{v_2}</m> with <m>\vec{v_1}</m> parallel to <m>\vec{w}</m> and <m>\vec{v_2}</m> orthogonal to <m>\vec{w}</m> is by using <m>\vec{v_1} = \proj_{\vec{w}}(\vec{v})</m> and <m>\vec{v_2} = \operatorname{perp}_{\vec{w}}(\vec{v})</m>.</p>
 
 				<proof>
 					<p> 
-						There are two things that need to be proved here.  First, we must show that the choice <m>\vec{v_1} = \operatorname{proj}_{\vec{w}}(\vec{v})</m> and <m>\vec{v_2} = \operatorname{perp}_{\vec{w}}(\vec{v})</m> has the properties stated in the theorem, and then we need to show that this is the <emph>only</emph> possible choice of <m>\vec{v_1}</m> and <m>\vec{v_2}</m>.
+						There are two things that need to be proved here.  First, we must show that the choice <m>\vec{v_1} = \proj_{\vec{w}}(\vec{v})</m> and <m>\vec{v_2} = \operatorname{perp}_{\vec{w}}(\vec{v})</m> has the properties stated in the theorem, and then we need to show that this is the <em>only</em> possible choice of <m>\vec{v_1}</m> and <m>\vec{v_2}</m>.
 					</p>
 					<p> 
-						First, let's show that the proposed choice of <m>\vec{v_1}</m> and <m>\vec{v_2}</m> does work.  That is, let <m>\vec{v_1} = \operatorname{proj}_{\vec{w}}(\vec{v})</m> and <m>\vec{v_2} = \operatorname{perp}_{\vec{w}}(\vec{v})</m>.  From the formula for <m>\operatorname{proj}_{\vec{w}}(\vec{v})</m> we see that this vector is a scalar multiple of <m>\vec{w}</m>, and hence <m>\vec{v_1}</m> is parallel to <m>\vec{w}</m>.  Next, we calculate:
+						First, let's show that the proposed choice of <m>\vec{v_1}</m> and <m>\vec{v_2}</m> does work.  That is, let <m>\vec{v_1} = \proj_{\vec{w}}(\vec{v})</m> and <m>\vec{v_2} = \operatorname{perp}_{\vec{w}}(\vec{v})</m>.  From the formula for <m>\proj_{\vec{w}}(\vec{v})</m> we see that this vector is a scalar multiple of <m>\vec{w}</m>, and hence <m>\vec{v_1}</m> is parallel to <m>\vec{w}</m>.  Next, we calculate:
 					</p>
 					<md>
 						<mrow> \vec{v_2}\cdot\vec{w} \amp = \operatorname{perp}_{\vec{w}}(\vec{v})\cdot \vec{w} </mrow>
-						<mrow> \amp = \left(v - \operatorname{proj}_{\vec{w}}(\vec{v})\right)\cdot \vec{w} </mrow>
-						<mrow> \amp = \vec{v}\cdot\vec{w} - \operatorname{proj}_{\vec{w}}(\vec{v})\cdot\vec{w} </mrow>
+						<mrow> \amp = \left(v - \proj_{\vec{w}}(\vec{v})\right)\cdot \vec{w} </mrow>
+						<mrow> \amp = \vec{v}\cdot\vec{w} - \proj_{\vec{w}}(\vec{v})\cdot\vec{w} </mrow>
 						<mrow> \amp = \vec{v}\cdot\vec{w} - \left(\frac{\vec{v}\cdot\vec{w}}{\vec{w}\cdot\vec{w}}\vec{w}\right)\cdot\vec{w} </mrow>
 						<mrow> \amp = \vec{v}\cdot\vec{w} - \left(\frac{\vec{v}\cdot\vec{w}}{\vec{w}\cdot\vec{w}}\right)(\vec{w}\cdot\vec{w}) </mrow>
 						<mrow> \amp = \vec{v} \cdot\vec{w} - \vec{v}\cdot\vec{w} </mrow>
@@ -318,15 +318,15 @@
 					<p>
 						Thus our proposed choice of <m>\vec{v_2}</m> does satisfy <m>\vec{v_2}\perp\vec{w}</m>.  Finally, we have
 					</p>
-					<me>\vec{v_1}+\vec{v_2} = \operatorname{proj}_{\vec{w}}(\vec{v}) + \operatorname{perp}_{\vec{w}}(\vec{v}) = \operatorname{proj}_{\vec{w}}(\vec{v}) + (v - \operatorname{proj}_{\vec{w}}(\vec{v})) = \vec{v}.</me>
+					<me>\vec{v_1}+\vec{v_2} = \proj_{\vec{w}}(\vec{v}) + \operatorname{perp}_{\vec{w}}(\vec{v}) = \proj_{\vec{w}}(\vec{v}) + (v - \proj_{\vec{w}}(\vec{v})) = \vec{v}</me>.
 					<p>
-						So far we have proved that the propsed choices of <m>\vec{v_1}</m> and <m>\vec{v_2}</m> have all the properties we wanted.  Now we turn to showing that these are the <emph>only</emph> choices that work.  Do to that, suppose that we have another decomposition, say <m>\vec{v} = \vec{z_1} + \vec{z_2}</m>, where <m>\vec{z_1}</m> is parallel to <m>\vec{w}</m> and <m>\vec{z_2}</m> is orthogonal to <m>\vec{w}</m>.  Then we have
+						So far we have proved that the propsed choices of <m>\vec{v_1}</m> and <m>\vec{v_2}</m> have all the properties we wanted.  Now we turn to showing that these are the <em>only</em> choices that work.  Do to that, suppose that we have another decomposition, say <m>\vec{v} = \vec{z_1} + \vec{z_2}</m>, where <m>\vec{z_1}</m> is parallel to <m>\vec{w}</m> and <m>\vec{z_2}</m> is orthogonal to <m>\vec{w}</m>.  Then we have
 					</p>
-					<me>\vec{v} = \vec{v_1}+\vec{v_2} = \vec{z_1}+\vec{z_2},</me>
+					<me>\vec{v} = \vec{v_1}+\vec{v_2} = \vec{z_1}+\vec{z_2}</me>,
 					<p>so</p>
-					<me>\vec{v_1}-\vec{z_1} = \vec{z_2}-\vec{v_2}.</me>
+					<me>\vec{v_1}-\vec{z_1} = \vec{z_2}-\vec{v_2}</me>.
 					<p>
-						The vector <m>\vec{v_1}-\vec{z_1}</m> is the difference of two vectors each of which is parallel to <m>\vec{w}</m>, so it is also parallel to <m>\vec{w}</m>.  On the other hand, <m>\vec{z_2} - \vec{v_2}</m> is the difference of two vectors that are each orthogonal to <m>\vec{w}</m>, so it is also orthogonal to <m>\vec{w}</m> (you should verify this fact!).  But these two vectors are the same, so this one vector is both parallel to <m>\vec{w}</m> and orthogonal to <m>\vec{w}</m>.  In Lemma REF? we saw that the only such vector is <m>\vec{0}</m>.  Therefore <m>\vec{v_1} - \vec{z_1} = \vec{0}</m>, so <m>\vec{z_1} = \vec{v_1}</m>.  Similarly, <m>\vec{z_2} - \vec{v_2} = \vec{0}</m>, so <m>\vec{z_2} = \vec{v_1}</m>.
+						The vector <m>\vec{v_1}-\vec{z_1}</m> is the difference of two vectors each of which is parallel to <m>\vec{w}</m>, so it is also parallel to <m>\vec{w}</m>.  On the other hand, <m>\vec{z_2} - \vec{v_2}</m> is the difference of two vectors that are each orthogonal to <m>\vec{w}</m>, so it is also orthogonal to <m>\vec{w}</m> (you should verify this fact!).  But these two vectors are the same, so this one vector is both parallel to <m>\vec{w}</m> and orthogonal to <m>\vec{w}</m>.  In <xref ref="lem-parallel-and-orthogonal-is-zero" /> we saw that the only such vector is <m>\vec{0}</m>.  Therefore <m>\vec{v_1} - \vec{z_1} = \vec{0}</m>, so <m>\vec{z_1} = \vec{v_1}</m>.  Similarly, <m>\vec{z_2} - \vec{v_2} = \vec{0}</m>, so <m>\vec{z_2} = \vec{v_1}</m>.
 					</p>
 				</proof>
 			</theorem>
@@ -334,22 +334,24 @@
 			<example>
 				<p> Write the vector <m>\begin{bmatrix}1\\3\\-1\end{bmatrix}</m> as the sum of a vector that is parallel to <m>\begin{bmatrix}1\\1\\0\end{bmatrix}</m> and a vector that is orthogonal to <m>\begin{bmatrix}1\\1\\0\end{bmatrix}</m>.</p>
 				<solution>
-					<p> By Theorem REF? there is only one way to do this, namely:</p>
-					<me>\begin{bmatrix}1\\3\\-1\end{bmatrix} = \operatorname{proj}_{\begin{bmatrix}1\\1\\0\end{bmatrix}}\left(\begin{bmatrix}-1\\3\\1\end{bmatrix}\right) + \operatorname{perp}_{\begin{bmatrix}1\\1\\0\end{bmatrix}}\left(\begin{bmatrix}1\\3\\-1\end{bmatrix}\right).</me>
+					<p> By <xref ref="thm-orthogonal-decomposition-v1" /> there is only one way to do this, namely:</p>
+					<me>\begin{bmatrix}1\\3\\-1\end{bmatrix} = \proj_{\begin{bmatrix}1\\1\\0\end{bmatrix}}\left(\begin{bmatrix}-1\\3\\1\end{bmatrix}\right) + \operatorname{perp}_{\begin{bmatrix}1\\1\\0\end{bmatrix}}\left(\begin{bmatrix}1\\3\\-1\end{bmatrix}\right)</me>.
 					<p> Now it's just a matter of calculating those two vectors. </p>
 					<md>
-						<mrow> \operatorname{proj}_{\begin{bmatrix}1\\1\\0\end{bmatrix}}\left(\begin{bmatrix}1\\3\\-1\end{bmatrix}\right) \amp = \left(\frac{\begin{bmatrix}1\\3\\-1\end{bmatrix} \cdot \begin{bmatrix}1\\1\\0\end{bmatrix}}{\begin{bmatrix}1\\1\\0\end{bmatrix}\cdot\begin{bmatrix}1\\1\\0\end{bmatrix}}\right)\begin{bmatrix}1\\1\\0\end{bmatrix}</mrow>
+						<mrow> \proj_{\begin{bmatrix}1\\1\\0\end{bmatrix}}\left(\begin{bmatrix}1\\3\\-1\end{bmatrix}\right) \amp = \left(\frac{\begin{bmatrix}1\\3\\-1\end{bmatrix} \cdot \begin{bmatrix}1\\1\\0\end{bmatrix}}{\begin{bmatrix}1\\1\\0\end{bmatrix}\cdot\begin{bmatrix}1\\1\\0\end{bmatrix}}\right)\begin{bmatrix}1\\1\\0\end{bmatrix}</mrow>
 						<mrow> \amp = \frac{4}{2}\begin{bmatrix}1\\1\\0\end{bmatrix} </mrow>
 						<mrow> \amp = \begin{bmatrix}2\\2\\0\end{bmatrix}</mrow>
 					</md>
 					<p>And</p>
 					<md>
-						<mrow> \operatorname{perp}_{\begin{bmatrix}1\\1\\0\end{bmatrix}}\left(\begin{bmatrix}1\\3\\-1\end{bmatrix}\right) \amp = \begin{bmatrix}1\\3\\-1\end{bmatrix} - \operatorname{proj}_{\begin{bmatrix}1\\1\\0\end{bmatrix}}\left(\begin{bmatrix}1\\3\\-1\end{bmatrix}\right)</mrow>
+						<mrow> \operatorname{perp}_{\begin{bmatrix}1\\1\\0\end{bmatrix}}\left(\begin{bmatrix}1\\3\\-1\end{bmatrix}\right) \amp = \begin{bmatrix}1\\3\\-1\end{bmatrix} - \proj_{\begin{bmatrix}1\\1\\0\end{bmatrix}}\left(\begin{bmatrix}1\\3\\-1\end{bmatrix}\right)</mrow>
 						<mrow> \amp = \begin{bmatrix}1\\3\\-1\end{bmatrix} - \begin{bmatrix}2\\2\\0\end{bmatrix}</mrow>
 						<mrow> \amp = \begin{bmatrix}-1\\1\\-1\end{bmatrix}</mrow>
 					</md>
-					<p>Here is the desired expression.  You can verify directly that <m>\begin{bmatrix}-1\\1\\-1\end{bmatrix} \perp \begin{bmatrix}1\\1\\0\end{bmatrix}</m>, but we don't actually need to, because we proved something more general in Theorem REF?.</p>
-					<me>\begin{bmatrix}-1\\3\\1\end{bmatrix} = \begin{bmatrix}2\\2\\0\end{bmatrix} + \begin{bmatrix}-1\\1\\-1\end{bmatrix}.</me>
+					<p>Here is the desired expression: </p>
+					<me>\begin{bmatrix}-1\\3\\1\end{bmatrix} = \begin{bmatrix}2\\2\\0\end{bmatrix} + \begin{bmatrix}-1\\1\\-1\end{bmatrix}</me>.
+					<p>You could verify directly that <m>\begin{bmatrix}-1\\1\\-1\end{bmatrix} \perp \begin{bmatrix}1\\1\\0\end{bmatrix}</m>, but we don't actually need to, because in <xref ref="thm-orthogonal-decomposition-v1" /> we proved that the method we used here always works.</p>
+
 				</solution>
 			</example>
 		</subsection>

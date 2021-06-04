@@ -12,7 +12,7 @@
 	\newcommand{\matr}[2]{\left[\begin{array}{#1}#2\end{array}\right]}
 	\newcommand{\vect}[1]{\overrightarrow{#1}}
 	\let\mbf\mathbf
-	\newcommand{\norm}[1]{\left\| #1 \right\|}
+	\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
 	\newcommand{\abs}[1]{\left\vert #1 \right\vert}
 	\renewcommand{\vec}[1]{\overrightarrow{#1}}
 	\DeclareMathOperator{\nullity}{nullity}
@@ -22,6 +22,7 @@
 	\DeclareMathOperator{\null}{null}
 	\DeclareMathOperator{\span}{span}
 	\DeclareMathOperator{\RREF}{RREF}
+	\DeclareMathOperator{\proj}{proj}
 </macros>
 	<latex-image-preamble>
 		\usepackage{tikz}
@@ -44,7 +45,7 @@
 			</title>
 
 			<introduction>
-				Some introductory text here.
+				
 			</introduction>
 
 			<!-- It seems to be necessary to put the <section> tag in the file to be included.  To get the numbering right it's then necessary that the lecture notes file includes the exercises file. -->
