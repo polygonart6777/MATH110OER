@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-28T15:20:04-07:00       *-->
+<!--*       on 2021-06-04T13:00:34-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,41 +16,14 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.3.1.a.1</span><span class="period">.</span>
-</h6>We will use the approach explained in <a class="xref" data-knowl="./knowl/hint-how-to-find-inverse-matrix.html" title="Hint 3.3.1.1">Hint 3.3.1.1</a>.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.2.9.1</span><span class="period">.</span>
+</h6>Recall first that \((A+B)^T = A^T + B^T\) for any matrices \(A, B\) of the same size. Now, since \(A\) is square, \(A\) and \(A^T\) are of the same size, so we may use this fact for \(B=A^T\text{:}\)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\matr{cc|cc}
-{
-2 \amp 1 \amp 1 \amp 0
-\\
--1 \amp 3 \amp 0 \amp 1
-}
-\overset{R_{1}+2R_{2}}{\longrightarrow}
-\amp
-\matr{cc|cc}
-{
-2 \amp 1 \amp 1 \amp 0
-\\
-0 \amp 7 \amp 1 \amp 2
-}\\
-\overset{-R_{2}+7R_{1}}{\longrightarrow}
-\amp
-\matr{cc|cc}
-{
-14 \amp 0 \amp 6 \amp -2
-\\
-0 \amp 7 \amp 1 \amp 2
-}\\
-\overset{\frac{1}{14}R_{1}}{\underset{\frac{1}{7}R_{2}}{\longrightarrow}}
-\amp
-\matr{cc|cc}
-{
-1 \amp 0 \amp \frac{3}{7} \amp -\frac{1}{7}
-\\
-0 \amp 1 \amp \frac{1}{7} \amp \frac{2}{7}
-}.
+(A+A^T)^T \amp= A^T + (A^T)^T\\
+\amp = A^T + A,\qquad\text{ since } (A^T)^=A\\
+\amp = A + A^T,\qquad\text{ since addition is commutative.}
 \end{align*}
-</div>We conclude that \(\begin{bmatrix} 2 \amp 1 \\ -1 \amp 3 \end{bmatrix}^{-1} = \frac{1}{7}\begin{bmatrix} 3 \amp -1 \\ 1 \amp 2 \end{bmatrix}.\)</div>
-<span class="incontext"><a href="sec-inverse-matrix.html#solution-134">in-context</a></span>
+</div>This shows that \(A+A^T\) is its own transpose, i.e. symmetric.</div>
+<span class="incontext"><a href="sec-matrix-algebra.html#solution-134">in-context</a></span>
 </body>
 </html>

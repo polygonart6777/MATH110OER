@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-28T15:19:58-07:00       *-->
+<!--*       on 2021-06-04T13:00:26-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,50 +13,50 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">Since<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\operatorname{proj}_{\mathbf{v}}(\mathbf{w})
-=
-\left(
-\frac{\mbf{v}\cdot \mbf{w}}{\mbf{v}\cdot \mbf{v}}
-\right)
-\mbf{v}
-,
-\end{equation*}
-</div>we should first compute the dot products:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body><div class="solution solution-like">
+<p xmlns:svg="http://www.w3.org/2000/svg">According to the <a class="xref" data-knowl="./knowl/cosine-formula.html" title="Hint 1.2.5.5.1">Cosine Formula 1.2.5.5.1</a>, we have to compute the norm of the vectors and their dot product:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\mbf{v}\cdot \mbf{w}
+\norm{\mbf{u}}
 \amp =
-\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} 
-\cdot
-\begin{bmatrix} 1 \\ 0 \\ -2 \end{bmatrix} 
+\sqrt{\mbf{u}\cdot\mbf{u}}
 =
-1\cdot 1 + 2\cdot 0 + 3\cdot (-2)
+\sqrt{ 1^2 + (-2)^2 + 1^2}
 =
--5,\\
-\mbf{v}\cdot \mbf{v}
+\sqrt{6}\\
+\norm{\mbf{v}}
 \amp =
-\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} 
-\cdot
-\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} 
+\sqrt{\mbf{v}\cdot\mbf{v}}
 =
-1^2 + 2^2 + 3^2
+\sqrt{ 1^2 + 2^2 + (-7)^2}
 =
-14,
-\text{ and so }\\
-\amp \frac{\mbf{v}\cdot \mbf{w}}{\mbf{v}\cdot \mbf{v}}
+\sqrt{54}\\
+\mbf{u}\cdot\mbf{v}
+\amp =
+1\cdot 1 + (-2)\cdot 2 + 1\cdot (-7)
 =
-\frac{-5}{14}
-.
+-10
 \end{align*}
-</div>Therefore,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">Therefore,</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\operatorname{proj}_{\mathbf{v}}(\mathbf{w})
+\cos (\theta)
 =
-\frac{-5}{14}
-\mathbf{v} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} 
+\frac{ \mbf{u}\cdot \mbf{v}}{ \norm{\mbf{u}}\cdot \norm{\mbf{v}}}
 =
-\mathbf{v} = \begin{bmatrix} \frac{-5}{14} \\ \frac{-10}{14} \\ \frac{-15}{14} \end{bmatrix} 
+\frac{-10}{ \sqrt{6}\cdot \sqrt{54}}
+=
+\frac{-10}{18}
+=
+\frac{-5}{9}
+\end{equation*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">and</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\theta
+=\mathrm{arcos} \left(\frac{-5}{9}\right)
 .
 \end{equation*}
 </div>

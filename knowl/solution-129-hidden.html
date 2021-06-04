@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-28T15:20:04-07:00       *-->
+<!--*       on 2021-06-04T13:00:34-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,10 +13,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">Let \(A=[a_{ij}]\) and \(B=[b_{ij}]\text{,}\) so that \(A-B=[a_{ij}-b_{ij}]\text{.}\) Since \(A=A^T\text{,}\) we have \(a_{ij} = a_{ji}\) for all choices of \(i,j\text{,}\) and similarly \(b_{ij} = b_{ji}\text{.}\) Thus,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-(A-B)^{T} \amp= [a_{ij}-b_{ij}]^{T} = [a_{ji}-b_{ji}] \\
-\amp= [a_{ij}-b_{ij}]  =  [a_{ij}]-[b_{ij}]  = A-B,
-\end{align*}
-</div>so \(A-B\) is symmetric.</div></body>
+<body><div class="solution solution-like">We compute<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+AB = \begin{bmatrix} 3 \amp 2+2k \\ 7 \amp 6+4k \end{bmatrix}
+\text{ and }
+BA = \begin{bmatrix} 7 \amp 10 \\ 1+3k \amp 6+4k \end{bmatrix}.
+\end{equation*}
+</div>For these to be equal, we need them to be equal entrywise, but no matter what \(k\) we choose, the \((1,1)\)-entries will never coincide (\(3\neq 7\)). Thus, the answer is no.</div></body>
 </html>

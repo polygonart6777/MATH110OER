@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-28T15:20:08-07:00       *-->
+<!--*       on 2021-06-04T13:00:38-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,15 +16,16 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.2.9.b.1</span><span class="period">.</span>
-</h6>As in the previous part (a), there are many ways to go about finding the answer by expanding along various rows or columns.  In this solution, we will expand along the first column.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-det(A) \amp = 2 \begin{vmatrix}y \amp 3 \\ z \amp 4 \end{vmatrix} -1 \begin{vmatrix} x \amp -1 \\ z \amp 4 \end{vmatrix} -3 \begin{vmatrix} x \amp -1 \\ y \amp 3 \end{vmatrix}\\
-\amp = 2(4y-3z) - (4x+z) + -3(3x + y) \\
-\amp = 8y-6z-4x-z-9x-3y\\
-\amp = -13x +5y-7z
-\end{align*}
-</div>If \(det(A) = ax + by+cz\text{,}\) then \(c = -7\)</div>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">4.2.8.b.1</span><span class="period">.</span>
+</h6>We subtract the first row from the second row.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{bmatrix} a \amp b \amp c \\ a+b \amp 2b \amp c+b \\ 2 \amp 2 \amp 2 \end{bmatrix} \to   \begin{bmatrix} a \amp b \amp c \\ b \amp b \amp b\\ 2 \amp 2 \amp 2 \end{bmatrix} 
+\end{equation*}
+</div>Now if \(b \) is equal to zero, then we have a matrix with a row of zeros and hence the determinant must be zero. If \(b \) is not equal to zero, then we can multiple the second row by \(\frac{2}{b} \) to obtain a matrix which has two rows that are the same, and in this case the determinant must be zero as well.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{bmatrix} a \amp b \amp c \\ b \amp b \amp b\\ 2 \amp 2 \amp 2 \end{bmatrix} \to   \begin{bmatrix} a \amp b \amp c \\ 2 \amp 2 \amp 2\\ 2 \amp 2 \amp 2 \end{bmatrix} 
+\end{equation*}
+</div>Therefore, the determinant of the matrix must be zero.</div>
 <span class="incontext"><a href="sec-determinants.html#solution-213">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-28T15:19:58-07:00       *-->
+<!--*       on 2021-06-04T13:00:27-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,9 +16,54 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.2.2.11.1</span><span class="period">.</span>
-</h6>First, let us draw the triangle as suggested by the hint: <p xmlns:svg="http://www.w3.org/2000/svg"><figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="images/image-2.svg" role="img" class="contained" alt=""></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.1<span class="period">.</span></span><span class="space"> </span>A triangle with \(\mathbf{u}\) and \(\mathbf{v}\) as two sides</figcaption></figure></p>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.2.5.8.1</span><span class="period">.</span>
+</h6>Since<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\operatorname{proj}_{\mathbf{v}}(\mathbf{w})
+=
+\left(
+\frac{\mbf{v}\cdot \mbf{w}}{\mbf{v}\cdot \mbf{v}}
+\right)
+\mbf{v}
+,
+\end{equation*}
+</div>we should first compute the dot products:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\mbf{v}\cdot \mbf{w}
+\amp =
+\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} 
+\cdot
+\begin{bmatrix} 1 \\ 0 \\ -2 \end{bmatrix} 
+=
+1\cdot 1 + 2\cdot 0 + 3\cdot (-2)
+=
+-5,\\
+\mbf{v}\cdot \mbf{v}
+\amp =
+\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} 
+\cdot
+\begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} 
+=
+1^2 + 2^2 + 3^2
+=
+14,
+\text{ and so }\\
+\amp \frac{\mbf{v}\cdot \mbf{w}}{\mbf{v}\cdot \mbf{v}}
+=
+\frac{-5}{14}
+.
+\end{align*}
+</div>Therefore,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\operatorname{proj}_{\mathbf{v}}(\mathbf{w})
+=
+\frac{-5}{14}
+\mathbf{v} = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix} 
+=
+\mathbf{v} = \begin{bmatrix} \frac{-5}{14} \\ \frac{-10}{14} \\ \frac{-15}{14} \end{bmatrix} 
+.
+\end{equation*}
+</div>
 </div>
 <span class="incontext"><a href="sec-DotProd.html#solution-23">in-context</a></span>
 </body>

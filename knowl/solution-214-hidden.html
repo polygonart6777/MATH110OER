@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-28T15:20:08-07:00       *-->
+<!--*       on 2021-06-04T13:00:38-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,10 +13,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">There exists matrices \(A\) and \(B\) such that \(det(A+B) \ne det(A) + det(B)\text{.}\) Therefore, the statement of the exercise is false.  Let us show this with a counterexample. Let \(A \) be the identity matrix, \(A = \begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix}\) and let \(B = \begin{bmatrix} -1 \amp 0 \\ 0 \amp -1 \end{bmatrix}\text{,}\) then<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-det(A+B) = det\left(\begin{bmatrix} 1 \amp 0 \\ 0 \amp 1 \end{bmatrix} + \begin{bmatrix} -1 \amp 0 \\ 0 \amp -1 \end{bmatrix}right) = det(\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix} \ne det(A) + det(B) = 1 + 1 =2 
-\end{equation*}
-</div>
-</div></body>
+<body><div class="solution solution-like">There are many ways to go about finding \(b\text{,}\) you may expand along various rows or columns.  For this solution, let us expand along the first row.<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+det(A) \amp = 5 \begin{vmatrix}6 \amp y \\ 4 \amp x \end{vmatrix} + 1 \begin{vmatrix} 2 \amp y \\ -5 \amp x \end{vmatrix} + x \begin{vmatrix} 2 \amp 6 \\ -5 \amp 4 \end{vmatrix}\\
+\amp = 5(6x-4y) + (2x+5y) + x(8 + 30) \\
+\amp = 30x - 20y+ 2x+5y+38x\\
+\amp = 70x - 15y
+\end{align*}
+</div>If \(det(A) = ax + by\text{,}\) then \(b = -15\)</div></body>
 </html>

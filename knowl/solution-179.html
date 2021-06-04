@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-28T15:20:06-07:00       *-->
+<!--*       on 2021-06-04T13:00:36-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,18 +16,45 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.4.6.a.1</span><span class="period">.</span>
-</h6>Recall that the dimension of the row space always coincides with the dimension of the column space. Since the matrix only has three rows, its column space can have at most dimension three. Since four vectors in a three dimensional space are always linearly dependent, the answer is: No, it cannot have independent columns. For the other statement, consider<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.4.5.c.1</span><span class="period">.</span>
+</h6>We will write the vectors as rows of a matrix and then use <a class="xref" data-knowl="./knowl/hint-equivalent-matrices-same-row-and-null.html" title="Hint 3.4.4.3">Hint 3.4.4.3</a> to determine a basis of its row space. We row-reduce:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
 \matr{cccc}{
-1 \amp 0 \amp 0 \amp 0
+-1 \amp 2 \amp 1 \amp 0
 \\
-0 \amp 1 \amp 0 \amp 0
+2 \amp 0 \amp 3 \amp -1
 \\
-0 \amp 0 \amp 1 \amp 0
+4 \amp 4 \amp 11 \amp -3
+\\
+3 \amp -2 \amp 2 \amp -1
 }
+\overset{2R_{1}+R_{2}, 4R_{1}+R_{3}}{\underset{3R_{1}+R_{4}}{\longrightarrow}}
+\amp\matr{ccc}{
+-1 \amp 2 \amp 1 \amp 0
+\\
+0 \amp 4 \amp 5 \amp -1
+\\
+0 \amp 12 \amp 15 \amp -3
+\\
+0 \amp 4 \amp 5 \amp -1
+}\\
+\overset{-R_{2}+R_{4}}{\underset{-2R_{2}+R_{3}}{\longrightarrow}}
+\amp\matr{cccc}{
+-1 \amp 2 \amp 1 \amp 0
+\\
+0 \amp 4 \amp 5 \amp -1
+\\
+0 \amp 0 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 0
+}.
+\end{align*}
+</div>We see that the rank of the matrix and thus the dimension of the subspace is \(2\text{.}\) Moreover, a basis for the space in question is given by<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left\{ (-1 , 2 , 1 , 0), (0 , 4 , 5 , -1)\right\}.
 \end{equation*}
-</div>This matrix has three rows and four columns (i.e. it is \(3 \times 4 \)) and its rows are linearly independent. So the answer is yes, it can have independent rows.</div>
+</div>
+</div>
 <span class="incontext"><a href="sec-subspaces-basis-dim-rank.html#solution-179">in-context</a></span>
 </body>
 </html>

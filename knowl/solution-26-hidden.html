@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-28T15:19:58-07:00       *-->
+<!--*       on 2021-06-04T13:00:27-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,42 +13,102 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">The vector equation of the line is given by<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\mbf{x} 
-=
-\begin{bmatrix} -7\\ 6 \\ 0 \end{bmatrix} 
-+
-t
-\left(
-\begin{bmatrix} -1\\ 1 \\ 4 \end{bmatrix} 
+<body><div class="solution solution-like">
+<p xmlns:svg="http://www.w3.org/2000/svg">Since we are making a claim about the dot product of \(\mathbf{u} + \mathbf{v}\) and \(\mathbf{u} - \mathbf{v}\text{,}\) let us use the properties of the dot product to simplify it:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+(\mathbf{u} + \mathbf{v})\cdot(\mathbf{u} - \mathbf{v})
+\amp =
+(\mathbf{u} + \mathbf{v})\cdot\mathbf{u} - (\mathbf{u} + \mathbf{v})\cdot\mathbf{v}
+\amp\amp
+(\text{Distributivity})\notag\\
+\amp =
+(\mathbf{u}\cdot\mathbf{u} + \mathbf{v}\cdot\mathbf{u})
 -
-\begin{bmatrix} -7\\ 6 \\ 0 \end{bmatrix} 
+(\mathbf{u}\cdot\mathbf{v} + \mathbf{v}\cdot\mathbf{v})
+\amp\amp
+(\text{Distributivity})\notag\\
+\amp =
+\norm{\mbf{u}}^2 + \mathbf{v}\cdot\mathbf{u}
+-
+\mathbf{u}\cdot\mathbf{v} - \norm{\mbf{v}}^2
+\amp\amp
+(\text{definition of } \norm{\cdot})\notag\\
+\amp =
+\norm{\mbf{u}}^2 + \mathbf{u}\cdot \mathbf{v}
+-
+\mathbf{u}\cdot\mathbf{v} - \norm{\mbf{v}}^2
+\amp\amp
+(\text{Commutativity})\notag\\
+\amp =
+\norm{\mbf{u}}^2  - \norm{\mbf{v}}^2
+.\tag{1.2.2}
+\end{align}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">The two vectors being perpendicular means exactly that their dot product is zero, i.e.</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(\mathbf{u} + \mathbf{v})\perp (\mathbf{u} - \mathbf{v})
+\iff
+(\mathbf{u} + \mathbf{v})\cdot(\mathbf{u} - \mathbf{v}) = 0
+\end{equation*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">By <a class="xref" data-knowl="./knowl/ex-same-norm-iff-two-things-are-perp-manipulation.html" title="Equation 1.2.2">(1.2.2)</a>, this happens if and only if \(\norm{\mbf{u}}^2  - \norm{\mbf{v}}^2 = 0\text{,}\) or in other words:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(\mathbf{u} + \mathbf{v})\perp (\mathbf{u} - \mathbf{v})
+\iff
+\norm{\mbf{u}}^2 = \norm{\mbf{v}}^2 
+\iff
+\norm{\mbf{u}}= \norm{\mbf{v}}
+,
+\end{equation*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">as claimed.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">For example, the vectors \(\mathbf{u} = \begin{bmatrix} 3 \\ 4 \end{bmatrix} \) and \(\mathbf{v} = \begin{bmatrix} 5 \\ 0 \end{bmatrix} \) have the same norm since</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\norm{\mbf{u}}^2
+=
+\mbf{u}\cdot \mbf{u}
+=
+3^2 + 4^2 = 25
+\;\text{ and }\;
+\norm{\mbf{v}}^2
+=
+\mbf{v}\cdot \mbf{v}
+=
+5^2 + 0^2 = 25
+.
+\end{equation*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">We check that indeed</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+(\mathbf{u} + \mathbf{v})\cdot (\mathbf{u} - \mathbf{v})
+\amp =
+\left(
+\begin{bmatrix} 3 \\ 4 \end{bmatrix} 
++
+\begin{bmatrix} 5 \\ 0 \end{bmatrix} 
 \right)
+\cdot
+\left(	
+\begin{bmatrix} 3 \\ 4 \end{bmatrix} 
+-
+\begin{bmatrix} 5 \\ 0 \end{bmatrix} 
+\right)\\
+\amp =
+\begin{bmatrix} 3+5 \\ 4+0 \end{bmatrix} 
+\cdot
+\begin{bmatrix} 3-5 \\ 4-0 \end{bmatrix} 
 =
-\begin{bmatrix} -7\\ 6 \\ 0 \end{bmatrix} 
-+
-t
-\begin{bmatrix} 6\\ -5 \\ 4 \end{bmatrix} 
-.
-\end{equation*}
-</div>To check that we did not make a mistake: for \(t=0\text{,}\) we are indeed at the point \((-7,6,0)\text{,}\) and for \(t=1\text{,}\) we are at the point<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\begin{bmatrix} -7\\ 6 \\ 0 \end{bmatrix} 
-+
-\begin{bmatrix} 6\\ -5 \\ 4 \end{bmatrix} 
-=
-\begin{bmatrix} -1\\ 1 \\ 4 \end{bmatrix} ,
-\end{equation*}
-</div>the second point. For the parametric equations, we just have to rephrase the above vector equation in terms of its coordinates:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-x_1 = -7 + 6t
-;
-x_2 = 6 - 5t
-;
-x_3 = 4t
-.
-\end{equation*}
+\begin{bmatrix} 8 \\ 4 \end{bmatrix} 
+\cdot
+\begin{bmatrix} -2 \\ 4 \end{bmatrix} \\
+\amp =
+8\cdot (-2) + 4\cdot 4 = 0.
+\end{align*}
 </div>
 </div></body>
 </html>

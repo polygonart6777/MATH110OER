@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-28T15:20:01-07:00       *-->
+<!--*       on 2021-06-04T13:00:30-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,11 +13,54 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><ol class="lower-alpha">
-<li>The equation  \(2x -3y + 4z = -10 \) is a linear equation because it is of the form given in <a class="xref" data-knowl="./knowl/def-linear-equation.html" title="Hint 2.1.1.1">Hint 2.1.1.1</a> where \(2, -3, 4, -10 \) are scalars and \(x,y, z \) are variables.</li>
-<li>The equation  \(2.123x_1+5.541x_2-9.101x_3 = 11.012\) is a linear equation because it is of the form given in <a class="xref" data-knowl="./knowl/def-linear-equation.html" title="Hint 2.1.1.1">Hint 2.1.1.1</a> where \(2.123, 5.541, 9.101, 11.012 \) are scalars and \(x_1,x_2, x_3 \) are variables.</li>
-<li>The equation  \(x^2 +y^2 +z^2 =1\) is a not a linear equation because it is not of the form given in <a class="xref" data-knowl="./knowl/def-linear-equation.html" title="Hint 2.1.1.1">Hint 2.1.1.1</a>.  The equation contains the variables \(x,y, z \) squared.</li>
-<li>The equation  \(\frac{1}{\sqrt{2}}x+4^3y = \sin\left(\frac{\pi}{3} \right)\) is a liner equation because it is of the form given in <a class="xref" data-knowl="./knowl/def-linear-equation.html" title="Hint 2.1.1.1">Hint 2.1.1.1</a> where \(\frac{1}{\sqrt{2}}, 4^3,  \sin\left(\frac{\pi}{3}\right)\) are scalars and \(x,y \) are variables.</li>
-<li>The equation  \(x +yz =3\) is a not a liner equation because it is not of the form given in <a class="xref" data-knowl="./knowl/def-linear-equation.html" title="Hint 2.1.1.1">Hint 2.1.1.1</a>.  The equation contains a product of the variables \(y, z. \)</li>
-</ol></div></body>
+<body><div class="solution solution-like">A normal vector to \(\mathcal{P}_1\) resp. \(\mathcal{P}_2\) is given by<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mbf{n}_1
+=
+\begin{bmatrix} 1 \\ 1\\ 0 \end{bmatrix} 
+\text{ resp. }
+\mbf{n}_2
+=
+\begin{bmatrix} 2 \\ 1\\ -1 \end{bmatrix}
+.
+\end{equation*}
+</div>According to the <a class="xref" data-knowl="./knowl/cosine-formula.html" title="Hint 1.2.5.5.1">Cosine Formula 1.2.5.5.1</a>, the angle between \(\mbf{n}_1\) and \(\mbf{n}_2\) is the number \(\theta\) that satisfies<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\cos (\theta)
+=
+\frac{ \mbf{n}_1\cdot \mbf{n}_2}{ \norm{\mbf{n}_1}\cdot \norm{\mbf{n}_2}}
+,
+\end{equation*}
+</div>so we compute:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\mbf{n}_1\cdot \mbf{n}_2
+\amp =
+1\cdot 2 + 1\cdot 1 + 0\cdot (-1) = 3\\
+\norm{\mbf{n}_1}
+\amp =
+\sqrt{ 1^2 + 1^2 + 0^2}
+=
+\sqrt{2}\\
+\norm{\mbf{n}_1}
+\amp =
+\sqrt{ 2^2 + 1^2 + (-1)^2}
+=
+\sqrt{6},
+\end{align*}
+</div>so that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\cos (\theta)
+=
+\frac{ 3}{ \sqrt{2}\cdot \sqrt{6}}
+=
+\frac{ 3}{\sqrt{12}}
+,
+\text{ i.e. }
+\sphericalangle (\mathcal{P}_1, \mathcal{P}_2)
+=
+\theta = \tfrac{\pi}{6}
+.
+\end{equation*}
+</div>
+</div></body>
 </html>

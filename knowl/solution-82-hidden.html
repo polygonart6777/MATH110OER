@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-05-28T15:20:03-07:00       *-->
+<!--*       on 2021-06-04T13:00:32-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,11 +13,81 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">To find out if there is a common point of intersection we want to find out if the three given equations have a simultaneous solution.  We therefore turn the equations into an augmented matrix and row reduce:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body><div class="solution solution-like">
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+3 \amp -1 \amp 2 \amp 3
+\\
+1 \amp 1 \amp -1 \amp 2
+\\
+2 \amp -2 \amp 3 \amp b
+}
+\overset{3R_{2}}{\underset{3R_{3}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+3 \amp -1 \amp 2 \amp 3
+\\
+3 \amp 3 \amp -3 \amp 6
+\\
+6 \amp -6 \amp 9 \amp 3b
+}\\
+\overset{-R_{1}+R_{2}}{\underset{-2R_{1}+R_{3}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+3 \amp -1 \amp 2 \amp 3
+\\
+0 \amp 4 \amp -5 \amp 3
+\\
+0 \amp -4 \amp 5 \amp 3b-6
+}\\
+\overset{R_{2}+R_{3}}{\underset{4R_{1}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+12 \amp -4 \amp 8 \amp 12
+\\
+0 \amp 4 \amp -5 \amp 3
+\\
+0 \amp 0 \amp 0 \amp 3b-3
+}
+.
+\end{align*}
+</div>If \(b\neq 1\text{,}\) then this system is inconsistent and has no solution. Otherwise,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+12 \amp -4 \amp 8 \amp 12
+\\
+0 \amp 4 \amp -5 \amp 3
+\\
+0 \amp 0 \amp 0 \amp 0
+}
+\overset{R_{2}+R_{1}}{\longrightarrow}
+\amp
+\matr{ccc|c}{
+12 \amp 0 \amp 3 \amp 15
+\\
+0 \amp 4 \amp -5 \amp 3
+\\
+0 \amp 0 \amp 0 \amp 0
+}\\
+\overset{\frac{1}{12}R_{1}}{\underset{\frac{1}{4}R_{2}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp 0 \amp \frac{1}{4} \amp \frac{5}{4}
+\\
+0 \amp 1 \amp -\frac{5}{4} \amp \frac{3}{4}
+\\
+0 \amp 0 \amp 0 \amp 0
+}.
+\end{align*}
+</div>Thus, if \(b = 1\text{,}\) then the solution set of the system is<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\matr{cc|c}{1\amp 2\amp 1\\2\amp -1\amp 1\\4\amp 3\amp 3}
-\to \matr{cc|c}{1\amp 2\amp 1 \\ 0 \amp  -5 \amp  -1 \\ 0 \amp  -5 \amp  -1} 
-\to \matr{cc|c}{1 \amp  0 \amp  \frac{3}{5} \\ 0 \amp  1 \amp  \frac{1}{5} \\ 0 \amp  0 \amp  0}
+\left\{
+\left(\frac{5}{4} - \frac{1}{4}z,\frac{3}{4}+\frac{5}{4}z,z\right)
+\,\vert\,
+z\in\mathbb{R}
+\right\}.
 \end{equation*}
-</div>The row reduced form tells us that there is a solution to this system, and that the only solution is \(x=\frac{3}{5}, y = \frac{1}{5}\text{.}\)  Therefore the three given lines do have a common point of intersection, and that point is \(\left(\frac{3}{5}, \frac{1}{5}\right)\text{.}\)</div></body>
+</div>
+</div></body>
 </html>
