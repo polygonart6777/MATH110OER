@@ -6,12 +6,163 @@
 
 
 		<introduction>
-			Introductory text
+			In this section we apply the tools we developed in the previous two sections to the study of lines and planes.  We start by describing two different ways of describing lines in <m>\mathbb{R}^2</m>, and then see that those methods generalize differently to lines and planes in <m>\mathbb{R}^3</m>.
 		</introduction>
 
 		<subsection>
-			Stuff goes here
+			<title>Lines in <m>\mathbb{R}^2</m></title>
+			<p>
+				In previous mathematics courses you have seen that most lines in <m>\mathbb{R}^2</m> can be expressed by equations of the form <m>y = ax+b</m>, where <m>a</m> is the slope of the line and <m>b</m> is the <m>y</m>-intercept of the line.  One downside to this kind of equation is that not every line can be expressed in this way; specifically, vertical lines do not have equations of this form.  By slightly rearranging we get another form that addresses this problem.
+			</p>
+			<definition>
+				<p> The <emph>general form equation</emph> of a line <m>L</m> is an equation of the form <me>ax+by=c</me>, where <m>a</m>, <m>b</m>, and <m>c</m> are constants, such that the points on <m>L</m> are exactly the points <m>(x, y)</m> that satisfy the equation.</p>
+			</definition>
+			<example>
+				<p>The equation <m>x = 5</m> is the general equation of a vertical line.  There is no point-slope equation for this line.</p>
+			</example>
+			<example>
+				<p>
+					Let <m>L</m> be the line in <m>\mathbb{R}^2</m> that passes through the points <m>(1, 3)</m> and <m>(-1, 7)</m>.  The equation of this line in point-intercept form is <m>y=-2x+5</m>.  Rearranging this we get the general form equation <m>2x+y=5</m>.
+				</p>
+				<p>
+					Notice that we could have rearranged the equation a bit differently, and obtained <m>-2x-y=-5</m>.  This is also a general form equation for the same line <m>L</m>, because the solutions to this equation are the same as the solutions to the equation <m>2x+y=5</m>.  In fact, if we multiply both sides of our equation by any non-zero constant we will get another general form equation for the same line.  Thus, for instance, <m>8x+4y=20</m> is another general equation for <m>L</m>.
+				</p>
+			</example>
+			<p>
+				We now turn to interpreting the general form equation using vectors.  Given a general equation <m>ax+by=c</m>, let <m>\vec{n} = \begin{bmatrix}a\\b\end{bmatrix}</m> and <m>\vec{v} = \begin{bmatrix}x\\y\end{bmatrix}</m>.  Then we see that the general equation <m>ax+by=c</m> is equivalent to <m>\vec{n} \cdot \vec{v} = c</m>.  In order to explain what the number <m>c</m> means, it is useful to draw a picture and consider an example.
+			</p>
+			<example>
+				<p> We once again consider the line <m>L</m> with general form equation <m>2x+y=5</m>.  Let <m>\vec{n} = \begin{bmatrix}2\\1\end{bmatrix}</m>, <m>\vec{v} = \begin{bmatrix}x\\y\end{bmatrix}</m>, and <m>\vec{p} = \begin{bmatrix}1\\3\end{bmatrix}</m>. </p>
+				<figure>
+					<caption>The line <m>2x+y=5</m> with the vectors <m>\vec{n}, \vec{v}, \vec{p}</m>.</caption>
+					<!--<image>
+						<latex-image>
+							\begin{tikzpicture}
+					
+							\end{tikzpicture}
+						</latex-image>
+					</image>-->
+				</figure>
+				<p> We can see from the image that <m>\vec{n}</m> is orthogonal to the direction of the line <m>L</m>.  Moreover, if <m>(x, y)</m> is a point on <m>L</m> then <m>\vec{v} - \vec{p}</m> is a vector in the direction of <m>L</m>.  Thus <m>\vec{v}-\vec{p} \perp \vec{n}</m>, meaning <m>(\vec{v} - \vec{p})\cdot \vec{n} = 0</m>.  Expanding this and rearranging we get <m>\vec{n}\cdot\vec{v} = \vec{n}\cdot\vec{p}</m>.  The left side expands to <m>2x+y</m>, and the right side expands to <m>5</m>. </p>
+				<p>As an exercise, take a moment to verify that if you take <m>\vec{p}</m> to be the vector to another point on the line (instead of <m>(1, 3)</m>) then it is still true that <m>\vec{p}\cdot\vec{n} = 5</m>.</p>
+			</example>
+			<p>
+				The phenomenon of the example works for every line: Given <m>ax+by=c</m>, the vector <m>\vec{n} = \begin{bmatrix}a\\b\end{bmatrix}</m> is orthogonal to the direction of the line, and if <m>\vec{p}</m> is the vector from the origin to any fixed point on the line, then <m>\vec{n}\cdot\vec{p} = c</m>.
+			</p>
+			<definition>
+				<p>Let <m>L</m> be a line in <m>\mathbb{R}^2</m>.  Let <m>\vec{n}</m> be a vector orthogonal to the direction of the line, and let <m>\vec{p}</m> be the vector from the origin to any fixed point on the line.  Let <m>\vec{v} = \begin{bmatrix}x\\y\end{bmatrix}</m>.  The <emph>normal form equation</emph> of the line <m>L</m> is the equation <me>\vec{n}\cdot\vec{v} = \vec{n}\cdot\vec{p}</me>.  The vector <m>\vec{n}</m> is called the <emph>normal vector</emph> to the line.</p>
+			</definition>
+			<p>It is important to notice that the general form equation and the normal form equation are fundamentally the same equation, just represented in different ways.  In particular, the normal vector to the line <m>ax+by=c</m> is <m>\vec{n} = \begin{bmatrix}a\\b\end{bmatrix}</m>, and the number <m>c</m> can be found by taking the dot product of the normal vector with any point on the line. </p>
+			<p>
+				We now turn to a different way of describing a line in <m>\mathbb{R}^2</m>.  Instead of describing a line by giving an equation that the points on the line must satisfy, we instead describe how to create the line by starting at a particular point and then following the 	direction of the line.
+			</p>
+			<definition>
+				<p>Let <m>L</m> be a line in <m>\mathbb{R}^2</m>.  Let <m>\vec{d}</m> be a vector such that if <m>P</m> is any point on <m>L</m> then starting from <m>P</m> and following any multiple of <m>\vec{d}</m> results in another point on <m>L</m> (such a vector is called a <emph>direction vector</emph> for the line).  Let <m>\vec{p}</m> be a vector which, in standard position, ends on <m>L</m>.  Let <m>\vec{v} = \begin{bmatrix}x\\y\end{bmatrix}</m>.  The <emph>vector form equation</emph> of <m>L</m> is the equation <me>\vec{v} = \vec{p}+t\vec{d}</me>.</p>
+			</definition>
+			<p>The variable <m>t</m> appearing in the vector equation is a parameter.  Given any value of <m>t</m>, we can plug that value in to <m>\vec{p}+t\vec{d}</m> to get the coordinates of a point on the line.  Conversely, given any point <m>\vec{q}</m> on the line, there is a unique value of <m>t</m> such that <m>\vec{q} = \vec{p}+t\vec{d}</m>.  We may use any variable, not just <m>t</m>, as the name of the parameter.</p>
+			<example>
+				<p>
+					We continue again with the line <m>L</m> passing through <m>P = (1, 3)</m> and <m>Q = (-1, 7)</m>.  A direction vector for this line is <m>\vec{d} = \vec{PQ} = \begin{bmatrix}-2\\4\end{bmatrix}</m>.  We could take any multiple of this vector as a direction vector instead, so let us choose to use <m>\vec{d} = \begin{bmatrix}1\\-2\end{bmatrix}</m>.  A vector form equation of <m>L</m> is:
+				</p>
+				<me>\begin{bmatrix}x\\y\end{bmatrix} = \begin{bmatrix}1\\3\end{bmatrix} + t\begin{bmatrix}1\\-2\end{bmatrix}</me>.
+				<p>If we choose <m>t=3</m>, we find that <m>\begin{bmatrix}1\\3\end{bmatrix} + 3\begin{bmatrix}1\\-2\end{bmatrix} = \begin{bmatrix}4\\-3\end{bmatrix}</m>, so we find that <m>(4, -3)</m> is a point on <m>L</m>.</p>
+				<p>We already know that <m>(-1, 7)</m> is a point on the line.  Therefore there should be a number <m>t</m> such that <m>\begin{bmatrix}-1\\7\end{bmatrix} = \begin{bmatrix}1\\3\end{bmatrix} + t\begin{bmatrix}1\\-2\end{bmatrix}</m>.  By expanding this vector equation into a system of two linear equations we can find that <m>t=-2</m>.</p>
+				<p>The vector equation we found is not the only one.  We can choose any point on the line, so another perfectly good vector equation for this line is:</p>
+				<me>\begin{bmatrix}x\\y\end{bmatrix} = \begin{bmatrix}-1\\7\end{bmatrix}+s\begin{bmatrix}1\\-2\end{bmatrix}</me>.
+			</example>
+			<p>Given a vector equation <m>\begin{bmatrix}x\\y\end{bmatrix} = \begin{bmatrix}p_1\\p_2\end{bmatrix} + t\begin{bmatrix}d_1\\d_2\end{bmatrix}</m> we can expand it into two equations:</p>
+			<md>
+				<mrow>x = p_1+td_1</mrow>
+				<mrow>y = p_2+td_2</mrow>
+			</md>
+			<p>These equations are called a <emph>parametric</emph> form equation of the line.  Since the parametric form and the vector form are so closely related, we will usually not distinguish between them.</p>
 		</subsection>
+		<subsection>
+			<title>Lines in <m>\mathbb{R}^3</m></title>
+			
+			<p>In <m>\mathbb{R}^2</m> the only "flat" objects are straight lines.  When we move up to <m>\mathbb{R}^3</m> we have two different kinds of "flat" objects, namely lines and planes.  We start with lines, and will explore planes in the next section.</p>
 
+
+			<p>It is easiest to start with the vector form equations.  A line in <m>\mathbb{R}^3</m> can be described by specifying a point on the line and a direction vector for the line, just like we did in <m>\mathbb{R}^2</m>.</p>
+
+			<definition>
+				<p>Let <m>L</m> be a line in <m>\mathbb{R}^3</m>.  Let <m>\vec{v} = \begin{bmatrix}x\\y\\z\end{bmatrix}</m>, let <m>\vec{p}</m> be a vector to a point on <m>L</m>, and let <m>\vec{d}</m> be a direction vector for the line.  A <emph>vector form equation</emph> of the line <m>L</m> is the equation </p>
+				<me>\vec{v} = \vec{p}+t\vec{d}</me>
+			</definition>
+
+
+			<example>
+				<p>Let <m>L</m> be the line in <m>\mathbb{R}^3</m> passing through <m>P = (1, 2, 3)</m> and <m>Q = (-1, 0, 1)</m>.  A direction vector for <m>L</m> is <m>\vec{d} = \vec{PQ} = \begin{bmatrix}-2\\-2\\-2\end{bmatrix}</m>.  We can use any multiple of this as a direction vector, so we choose to use <m>\vec{d} = \begin{bmatrix}1\\1\\1\end{bmatrix}</m>.  A vector equation for <m>L</m> is thus:</p>
+				<me>\begin{bmatrix}x\\y\\z\end{bmatrix} = \begin{bmatrix}1\\2\\3\end{bmatrix} + t\begin{bmatrix}1\\1\\1\end{bmatrix}</me>.
+			</example>
+			
+
+			<p>As in <m>\mathbb{R}^2</m>, expanding out the vector equation into three linear equations gives the <emph>parametric form</emph>.</p>
+			<p>Our next goal is to describe the general form and normal form equations for a line.  This turns out to be more complicated in <m>\mathbb{R}^3</m> than it is in <m>\mathbb{R}^2</m>, because in <m>\mathbb{R}^3</m> there are infinitely many different directions that are orthogonal to any fixed line.  At any particular point the vectors that are orthogonal to a line form a plane, so to give a normal form equation for the line we will need to give enough normal vectors to describe this plane.  Intuitively, you might expect that planes are ``two-dimensional", and hence that two (non-parallel) vectors should be sufficient.  This is true (but it will be some time before we are ready to make it precise).</p>
+			<definition>
+				<p>The <emph>normal equations</emph> for a line in <m>\mathbb{R}^3</m> are a system of two equations,</p>
+				<md>
+					<mrow>\vec{n_1}\cdot\vec{v} = \vec{n_1}\cdot\vec{p}</mrow>
+					<mrow>\vec{n_2}\cdot\vec{v} = \vec{n_2}\cdot\vec{p}</mrow>
+				</md>
+				<p>Here <m>\vec{v} = \begin{bmatrix}x\\y\\z\end{bmatrix}</m>, <m>\vec{p}</m> is a vector to any chosen point on the line, and <m>\vec{n_1}</m> and <m>\vec{n_2}</m> are non-parallel vectors each of which is orthogonal to the line.</p>
+				<p>If we expand the dot products we obtain a system of two linear equations, which is referred to as the <emph>general form equations</emph> of the line.</p>
+			</definition>
+			<example xml:id="eg-line-R3-normal">
+				<p>Let us find normal and general equations for the line from the previous example, which is the line passing through <m>P = (1, 2, 3)</m> and <m>Q = (-1, 0, 1)</m>.  A direction vector for this line is <m>\vec{d} = \begin{bmatrix}1\\1\\1\end{bmatrix}</m>.  We need to find two normal vectors, that is, two non-parallel, non-zero vectors <m>\vec{n_1}</m> and <m>\vec{n_2}</m> such that <m>\vec{n_1}\cdot\vec{d} = 0 = \vec{n_2}\cdot\vec{d}</m>.  There are several ways we could do this:
+				<ul>
+					<li>By inspection, i.e., by guess-and-check.</li>
+					<li>By inspection for <m>\vec{n_1}</m>, and then using a cross product to find <m>\vec{n_2}</m>.</li>
+					<li>By setting up a system of equations.</li>
+				</ul></p>
+				<p>The first two methods both rely on some guesswork, and the second one uses a technique (the cross product) that will not be part of this course, so we illustrate the third (and most systematic) method.</p>
+				<p>Let <m>\vec{n_1} = \begin{bmatrix}a\\b\\c\end{bmatrix}</m>.  The equation <m>\vec{n_1}\cdot\vec{d} = 0</m> in this example expands to <m>a+b+c=0</m>.  If we rearrange this a bit, we get <m>a = -b-c</m>, so that:</p>
+				<me>\begin{bmatrix}a\\b\\c\end{bmatrix} = \begin{bmatrix}-b-c\\b\\c\end{bmatrix} = b\begin{bmatrix}-1\\1\\0\end{bmatrix} + c\begin{bmatrix}-1\\0\\1\end{bmatrix}</me>.
+				<p>We now see that we can choose any values of <m>b</m> and <m>c</m> that we like, and we will be able to get a normal vector for the line.  To ensure that we get two non-parallel normal vectors we will get <m>\vec{n_1}</m> by choosing <m>b=1, c=0</m> and we will get <m>\vec{n_2}</m> by choosing <m>b=0, c=1</m>.  We thus get:</p>
+				<me>\vec{n_1} = \begin{bmatrix}-1\\1\\0\end{bmatrix}</me>
+				<me>\vec{n_2} = \begin{bmatrix}-1\\0\\1\end{bmatrix}</me>
+				<p> Now we need <m>\vec{p}</m>, for which we can take any point on the line.  For this example we will choose <m>\vec{p} = \begin{bmatrix}1\\2\\3\end{bmatrix}</m>, but any other point on the line would also be fine.  We are now prepared to write down normal form equations of our line:</p>
+				<md>
+					<mrow> \begin{bmatrix}-1\\1\\0\end{bmatrix}\cdot\begin{bmatrix}x\\y\\z\end{bmatrix} = \begin{bmatrix}-1\\1\\0\end{bmatrix}\cdot\begin{bmatrix}1\\2\\3\end{bmatrix}</mrow>
+					<mrow> \begin{bmatrix}-1\\0\\1\end{bmatrix}\cdot\begin{bmatrix}x\\y\\z\end{bmatrix} = \begin{bmatrix}-1\\0\\1\end{bmatrix}\cdot\begin{bmatrix}1\\2\\3\end{bmatrix}</mrow>
+				</md>
+				<p> To turn this into general form equations we simply expand the dot products.  We calculate <m>\vec{n_1}\cdot\vec{p} = 1</m> and <m>\vec{n_2}\cdot\vec{p} = 2</m>.  The general form equations are:</p>
+				<md>
+					<mrow> -x+y=1 </mrow>
+					<mrow> -x+z=2</mrow>
+				</md>
+			</example>
+			<example>
+				<p>In this example we will reverse what we did in example <xref ref="eg-dot-product-calculation" />.  Suppose that we are told that a line has general equations
+				<md>
+					<mrow> -x+y=1 </mrow>
+					<mrow> -x+z=2</mrow>
+				</md>
+				and we wish to find a vector equation.</p>
+				<p>We notice that the general equations are a system of two linear equations in three variables.  If we set these up in an augmented matrix and row reduce, we have:</p>
+				<me>
+					\matr{ccc|c}
+						{
+							-1 \amp 1 \amp 0 \amp 1 \\
+							-1 \amp 0 \amp 1 \amp 2
+						}
+					\to
+					\matr{ccc|c}
+						{
+							1 \amp 0 \amp -1 \amp -2 \\
+							0 \amp 1 \amp -1 \amp -1
+						}
+				</me>
+				<p>That is, we have <m>x = z+2</m> and <m> y = z+1</m>.  Writing this as a vector, we have: </p>
+				<me>\begin{bmatrix}x\\y\\z\end{bmatrix} = \begin{bmatrix}z+2\\z+1\\z\end{bmatrix} = \begin{bmatrix}2\\1\\0\end{bmatrix} + z\begin{bmatrix}1\\1\\1\end{bmatrix}</me>.
+				<p>This is already a vector equation, but if we want to make it look more like the forms we have seen before we could choose to introduce a parameter <m>t</m>, set <m>z=t</m>, and obtain:</p>
+				<me>\begin{bmatrix}x\\y\\z\end{bmatrix} = \begin{bmatrix}2\\1\\0\end{bmatrix} + t\begin{bmatrix}1\\1\\1\end{bmatrix}</me>.
+				<p>It is worth noticing that we obtained the same direction vector that we found in <xref ref="eg-dot-product-calculation" />.  This time our equation used the point <m>\begin{bmatrix}2\\1\\0\end{bmatrix}</m>, but since the vector equation can use any point on the line this is not a problem.</p>
+			</example>
+			<p> In summary, a line in <m>\mathbb{R}^3</m> is described by a vector equation with <emph>one</emph> direction vector, or by <emph>two</emph> normal or general form equations, and we have seen how to translate between these forms. </p>
+		</subsection>
+		<subsection>
+			<title>Planes in <m>\mathbb{R}^3</m></title>
+		</subsection>
 	<xi:include href="1-3-exercises.ptx" />
 </section>
