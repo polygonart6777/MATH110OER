@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-18T13:39:44-07:00       *-->
+<!--*       on 2021-06-25T15:12:08-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,163 +13,133 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">For a point \(X\) to be equidistant from \(P\) and \(Q\text{,}\) we must have<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body><div class="solution solution-like">First, we have to find out in which point the two lines meet. (If they do not meet, then they are skew lines since they are clearly not parallel. In this case, they are not in the same plane.) In other words, we are looking for two real numbers \(s, t\) such that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\norm{\vect{PX}}= \norm{\vect{QX}}.
-\end{equation*}
-</div>By squaring both sides of the equation, we can rewrite this to<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\vect{PX}\cdot \vect{PX}= \vect{QX}\cdot \vect{QX}.\tag{1.3.2}
-\end{equation}
-</div>If we use that \(\vect{PX} = \vect{OX} - \vect{OP}\text{,}\) then using the properties of the dot product yields<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\vect{PX}\cdot \vect{PX} 
-\amp =
-(\vect{OX} - \vect{OP})\cdot(\vect{OX} - \vect{OP})\\
-\amp =
-\vect{OX}\cdot\vect{OX} - \vect{OX}\cdot\vect{OP}
-- \vect{OP}\cdot\vect{OX} + \vect{OP}\cdot\vect{OP}\\
-\amp =
-\norm{\vect{OX}}^2 + \norm{\vect{OP}}^2
-- 2 \vect{OX}\cdot\vect{OP}.
-\end{align*}
-</div>Similarly,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\vect{QX}\cdot \vect{QX} 
+\begin{bmatrix} 
+1 \\ -1\\ 2
+\end{bmatrix}
++
+s
+\begin{bmatrix}
+1 \\ 1\\ 1
+\end{bmatrix}
 =
-\norm{\vect{OX}}^2 + \norm{\vect{OQ}}^2
-- 2 \vect{OX}\cdot\vect{OQ}
+\begin{bmatrix}
+0 \\ 0\\ 2
+\end{bmatrix}
++
+t
+\begin{bmatrix} 1 \\ -1\\ 0 \end{bmatrix}
 .
 \end{equation*}
-</div>So if we plug both of these into <a class="xref" data-knowl="./knowl/eq-1.html" title="Equation 1.3.2">(1.3.2)</a> and cancel the summand of \(\norm{\vect{OX}}^2\) on both sides, then we see that \(\norm{\vect{PX}}= \norm{\vect{QX}}\) is equivalent to<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation}
-\norm{\vect{OP}}^2
-- 2 \vect{OX}\cdot\vect{OP}
-=
-\norm{\vect{OQ}}^2
-- 2 \vect{OX}\cdot\vect{OQ}
-.\tag{1.3.3}
-\end{equation}
-</div>We compute with \(X=(x_1,x_2,x_3)\text{:}\)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{gather*}
-\vect{OX}\cdot\vect{OP}
-=
-2x_1 - x_2 + 3x_3\\
-\vect{OX}\cdot\vect{OQ}
-=
-x_1 + x_2 - x_3\\
-\norm{\vect{OP}}^2
-=
-2^2 + (-1)^2 +3^2
-=
-14\\
-\norm{\vect{OQ}}^2
-=
-1^2 + 1^2 + (-1)^2
-=
-3,
-\end{gather*}
-</div>so that <a class="xref" data-knowl="./knowl/eq-reformulation-of-equidistant.html" title="Equation 1.3.3">(1.3.3)</a> becomes:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\amp
-14
-- 2 (2x_1 - x_2 + 3x_3)
-=
-3
-- 2 (x_1 + x_2 - x_3)\\
-\iff \amp
-11
-=
-(- 2 x_1 - 2  x_2 + 2  x_3)
-+
-(4x_1 - 2x_2 + 6x_3)\\
-\iff \amp
-11
-=
-2x_1 - 4x_2 + 8x_3,
-\end{align*}
-</div>which is the general form of our plane equation. We can rewrite this to<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>Componentwise, this vector equation means:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\begin{bmatrix}
-2\\
--4\\
-8
-\end{bmatrix}
-\cdot
-\begin{bmatrix}
-x_1 \\
-x_2 \\
-x_3 
-\end{bmatrix}
-=
-11,
+1 + s = t;\;
+-1 + s = -t;\;
+2 + s = 2.
 \end{equation*}
-</div>which is its normal form. Lastly, for the vector form, we need three points in the plane which do not lie on a line. Let us choose \(R_1= (0, -3 , -\frac{1}{8} )\text{,}\) \(R_2= (\frac{3}{2}, 0, 1)\text{,}\) and \(R_3= (6,\frac{1}{4} ,0)\) which all satisfy the general equation. Now, the plane's vector equation is given by<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\mbf{x}
-\amp =
-\vect{OR_1}
-+
-t
-\vect{R_1 R_2}
-+
-s
-\vect{R_1 R_3}\\
-\amp	=
-\begin{bmatrix}
-0 \\ -3 \\ -\frac{1}{8} 
-\end{bmatrix}
-+
-t
-\begin{bmatrix}
-\frac{3}{2}  - 0 \\ 0 - (-3) \\ 1 - (-\frac{1}{8})
-\end{bmatrix}
-+
-s
-\begin{bmatrix}
-6 - 0 \\ \frac{1}{4} - (-3) \\ 0 - (-\frac{1}{8})
-\end{bmatrix}\\
-\amp =
-\begin{bmatrix}
-0 \\ -3 \\ -\frac{1}{8} 
-\end{bmatrix}
-+
-t
-\begin{bmatrix}
-\frac{3}{2} \\ 3 \\ \frac{9}{8}
-\end{bmatrix}
-+
-s
-\begin{bmatrix}
-6 \\ \frac{13}{4} \\ \frac{1}{8}
-\end{bmatrix}
-\end{align*}
-</div>We can rewrite this by rescaling (\(t=8r\) and \(s=8q\)) to:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>The last equation yields \(s=0\) and both other equations then yield \(t =  1\text{.}\) We conclude that the two lines meet in the point \((1,-1,2)\) because<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\mbf{x}
+\begin{bmatrix} 
+1 \\ -1\\ 2
+\end{bmatrix}
++
+0
+\begin{bmatrix}
+1 \\ 1\\ 1
+\end{bmatrix}
 =
 \begin{bmatrix}
-0 \\ -3 \\ -\frac{1}{8} 
+0 \\ 0\\ 2
+\end{bmatrix}
++
+1
+\begin{bmatrix} 1 \\ -1\\ 0 \end{bmatrix}
+=
+\begin{bmatrix} 
+1 \\ -1\\ 2
+\end{bmatrix}
+.
+\end{equation*}
+</div>Since the two lines are not parallel, their directional vectors span the plane that contains them, so we arrive at the following vector equation of the plane,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{bmatrix} 
+x_1 \\ x_2 \\ x_3
+\end{bmatrix}
+=
+\begin{bmatrix} 
+1 \\ -1\\ 2
 \end{bmatrix}
 +
 r
 \begin{bmatrix}
-12 \\ 24 \\ 9
+1 \\ 1\\ 1
 \end{bmatrix}
 +
 q
 \begin{bmatrix}
-48 \\ 26 \\ 1
+1 \\ -1\\ 0
 \end{bmatrix}
 ,
 \end{equation*}
-</div>which yields the parametric equations:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>which means in parametric form:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-x_1 = 12r + 48q
+x_1 = 1 + r + q
 ;
-x_2 = -3 +24r +26 q
+x_2 = -1 + r - q
 ;
-x_3 = -\frac{1}{8} + 9r + q
+x_3 = 2 + r
+.
+\end{equation*}
+</div>For the normal form, we form the cross product of the two directional vectors to find a normal vector (see <a class="xref" data-knowl="./knowl/hint-def-cross-product-and-it-is-normal.html" title="Hint 1">Hint 1</a>):<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mbf{n}
+=
+\begin{bmatrix}
+1 \\ 1\\ 1
+\end{bmatrix}
+\times
+\begin{bmatrix}
+1 \\ -1\\ 0
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 \cdot 0 -1 \cdot (-1)\\
+1 \cdot 1 - 1 \cdot 0\\
+1 \cdot (-1) -1 \cdot 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+1\\
+1\\
+-2
+\end{bmatrix}
+.
+\end{equation*}
+</div>We now only need a point on the plane, say \((1 , -1 ,2)\text{,}\) to give the normal form \(\mbf{n}\cdot\vect{PX}=0\) explicitly:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{bmatrix}
+1\\
+1\\
+-2
+\end{bmatrix}
+\cdot
+\left(
+\begin{bmatrix}
+x_1 - 1\\
+x_2 + 1\\
+x_3 - 2
+\end{bmatrix}
+\right)
+=
+0
+.
+\end{equation*}
+</div>The general form can then be computed to be:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x_1 + x_2 - 2 x_3
+=
+-4
 .
 \end{equation*}
 </div>

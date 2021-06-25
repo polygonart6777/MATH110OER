@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-18T13:39:45-07:00       *-->
+<!--*       on 2021-06-25T15:12:08-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,50 +16,82 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.3.4.8.1</span><span class="period">.</span>
-</h6>A normal vector to the plane is given by<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1.3.4.6.1</span><span class="period">.</span>
+</h6>We follow the idea of <a class="xref" data-knowl="./knowl/hint-dist-parallel-lines.html" title="Hint 1.3.4.6.1">Hint 1.3.4.6.1</a> and make one additional remark: The line from \(Q_1\) to \(Q_2\) is, by construction, contained in the plane since the two points are in the plane. In particular, said line is orthogonal to  \(\ell_1\) and  \(\ell_2\) and hence describes the direct path from \(\ell_1\) to \(\ell_2\text{,}\) meaning<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\mbf{n} = \begin{bmatrix} 4 \\ 7\\ 4 \end{bmatrix}.
-\end{equation*}
-</div>The angle \(\theta\) between this vector and the directional vector \(\mbf{d} = \begin{bmatrix} 1 \\ 1\\ 4 \end{bmatrix}\) of the line can be computed using the <a class="xref" data-knowl="./knowl/cosine-formula.html" title="Hint 1.2.5.5.1">Cosine Formula 1.2.5.5.1</a>:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\cos (\theta)
+\operatorname{dist} (\ell_1, \ell_2)
 =
-\frac{ \mbf{n} \cdot \mbf{d}}{ \norm{\mbf{n}}\cdot \norm{\mbf{d}}}
-,
+\norm{\vect{Q_1 Q_2}}.
 \end{equation*}
-</div>so we compute<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>We now follow this recipe for the two given pairs of lines. <ol class="lower-alpha">
+<li>We choose the point \(Q_1= (2 , -1, 3 ) \) on \(\ell_1\) and the declare the directional vector \(\mbf{n}=\begin{bmatrix} 1 \\ -1\\ 4 \end{bmatrix} \) of  \(\ell_1\) to be normal to the plane  \(\mathcal{P}\text{.}\) The normal form of  \(\mathcal{P}\) is then given by \(\mbf{n} \cdot \mbf{x} = \mbf{n} \cdot \vect{OQ_1}\text{,}\) so its general form is<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x_1 - x_2 + 4 x_3
+=
+15
+.
+\end{equation*}
+</div>Next, we are looking for the intersection of \(\mathcal{P}\) with  \(\ell_2\text{.}\) In other words, we are looking for \(t\) such that \(\begin{bmatrix} 1 \\ 0\\ 1 \end{bmatrix} +t\begin{bmatrix} 1 \\ -1\\ 4 \end{bmatrix}\) satisfies the general equation of  \(\mathcal{P}\text{:}\)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+(1+t) - (0-t) + 4 (1+4t) = 15
+\iff
+t = \tfrac{5}{9}.
+\end{equation*}
+</div>We conclude that the point \(Q_2\) that \(\mathcal{P}\) and \(\ell_2\) share is given by<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{bmatrix} 1 \\ 0\\ 1 \end{bmatrix} +\tfrac{5}{9}\begin{bmatrix} 1 \\ -1\\ 4 \end{bmatrix}
+=\begin{bmatrix} \tfrac{14}{9} \\ -\tfrac{5}{9}\\ \tfrac{29}{9}\end{bmatrix} 
+.
+\end{equation*}
+</div>The distance between the points \(Q_1\) and \(Q_2\) is then the distance between the lines:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\mbf{n}\cdot \mbf{d}
-\amp =
-4\cdot 1 + 7\cdot 1 + 4\cdot 4
+\operatorname{dist} (\ell_1, \ell_2)
+\amp=
+\norm{\vect{Q_1 Q_2}}\\
+\amp=
+\sqrt{(\tfrac{14}{9} -2)^2 + (-\tfrac{5}{9} +1)^2 + (\tfrac{29}{9} -3)^2}
 =
-27\\
-\norm{\mbf{n}}
-\amp =
-\sqrt{ 4^2 + 7^2 + 4^2}
+\sqrt{\tfrac{36}{81}}
 =
-\sqrt{81}
-=
-9\\
-\norm{\mbf{d}}
-\amp =
-\sqrt{ 1^2 + 1^2 + 4^2}
-=
-\sqrt{18}
-=
-3\sqrt{2}.
+\tfrac{2}{3}.
 \end{align*}
-</div>It follows that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>
+</li>
+<li>We choose the point \(Q_1= (3 , 0, 2 ) \) on \(\ell_1\) and the declare the directional vector \(\mbf{n}=\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix} \) of  \(\ell_1\)to be normal to the plane  \(\mathcal{P}\text{.}\) The normal form of  \(\mathcal{P}\) is then given by \(\mbf{n} \cdot \mbf{x} = \mbf{n} \cdot \vect{OQ_1}\text{,}\) so its general form is<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\cos (\theta)
+3x_1 + x_2 
 =
-\frac{ 27}{ 9\cdot 3\sqrt{2}} = \frac{\sqrt{2}}{2}
-,
-\text{ i.e. }
-\theta=\tfrac{\pi}{4}.
+9
+.
 \end{equation*}
-</div>The angle \(\alpha\) between the line and the plane is then given by \(\alpha = \tfrac{\pi}{2} - \theta = \tfrac{\pi}{4}.\)</div>
+</div>Next, we are looking for the intersection of \(\mathcal{P}\) with  \(\ell_2\text{.}\) In other words, we are looking for \(t\) such that \(\begin{bmatrix} -1 \\ 2\\ 2 \end{bmatrix} +t\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix}\) satisfies the general equation of  \(\mathcal{P}\text{:}\)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+3(-1+3t) + (2+t)  = 9
+\iff
+t = 1.
+\end{equation*}
+</div>We conclude that the point \(Q_2\) that \(\mathcal{P}\) and \(\ell_2\) share is given by<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{bmatrix} -1 \\ 2\\ 2 \end{bmatrix} +1\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix}
+=
+\begin{bmatrix} 2 \\ 3\\ 2 \end{bmatrix}
+.
+\end{equation*}
+</div>The distance between the points \(Q_1\) and \(Q_2\) is then the distance between the lines:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\operatorname{dist} (\ell_1, \ell_2)
+\amp=
+\norm{\vect{Q_1 Q_2}}\\
+\amp=
+\sqrt{(2-3)^2 + (3-0)^2 + (2-2)^2}
+=
+\sqrt{10}
+.
+\end{align*}
+</div>
+</li>
+</ol>
+</div>
 <span class="incontext"><a href="sec-Lines-and-Planes.html#solution-50">in-context</a></span>
 </body>
 </html>

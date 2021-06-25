@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-18T13:39:50-07:00       *-->
+<!--*       on 2021-06-25T15:12:13-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,16 +16,41 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
-</h6>By assumption, \(C:= A + B \) is invertible. By the first part of the exercise, we know that \(A^{-1} + B^{-1}  = A^{-1}(A + B) B^{-1},\) i.e. \(A^{-1} + B^{-1}= A^{-1}CB^{-1}.\) The matrix \(A^{-1}CB^{-1}\) is invertible as product of invertible matrices by <a class="xref" data-knowl="./knowl/ex-prod-of-invertible-matrices.html" title="Exercise 3.3.5">Exercise 3.3.5</a>, which shows that \(A^{-1} + B^{-1}\) is invertible. <a class="xref" data-knowl="./knowl/ex-prod-of-invertible-matrices.html" title="Exercise 3.3.5">Exercise 3.3.5</a> also gives a formula for the inverse of a product, which we use for the equalities \((*)\) in the following computation:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.3.5.1</span><span class="period">.</span>
+</h6>Recall that \(A^{-1}\) is the unique matrix that satisfies \(AA^{-1}=I=A^{-1}A\text{,}\) and similarly for \(B^{-1}\text{.}\) We use this in the following computation:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-(A^{-1}CB^{-1})^{-1} 
-\amp=(A^{-1}[CB^{-1}])^{-1}
-\overset{(*)}{=}[CB^{-1}]^{-1} (A^{-1})^{-1}\\
-\amp\overset{(*)}{=}(B^{-1})^{-1} C^{-1} A
-=B C^{-1} A.
+A B (B^{-1}A^{-1})
+\amp=
+A (B B^{-1})A^{-1}
+\amp \text{by associativity of matrix multiplication}\\
+\amp=
+A (I)A^{-1}
+\amp \text{since } B B^{-1}=I\\
+\amp=
+A A^{-1}
+\amp \text{by the properties of } I\\
+\amp=
+I
+\amp\text{since } AA^{-1} = I.
 \end{align*}
-</div>We conclude: The inverse of \(A^{-1} + B^{-1} \) is given by \(B C^{-1} A = B (A + B)^{-1} A.\)</div>
+</div>For the other equality, we proceed similarly:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+B^{-1}A^{-1} (AB)
+\amp=
+B^{-1}(A^{-1} A)B
+\amp \text{by associativity of matrix multiplication}\\
+\amp=
+B^{-1}(I)B
+\amp \text{since } A^{-1}A=I\\
+\amp=
+B^{-1}B
+\amp \text{by the properties of } I\\
+\amp=
+I
+\amp\text{since } B^{-1}B=I.
+\end{align*}
+</div>
+</div>
 <span class="incontext"><a href="sec-inverse-matrix.html#solution-152">in-context</a></span>
 </body>
 </html>

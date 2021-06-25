@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-18T13:39:47-07:00       *-->
+<!--*       on 2021-06-25T15:12:10-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,55 +14,54 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p xmlns:svg="http://www.w3.org/2000/svg">The question can be rephrased to: "Does the system of linear equations have a solution?", and we know that such a question is easily answered using an augmented matrix, which we row-reduce:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\matr{cc|c}{
-1 \amp 2 \amp 1
+\matr{ccc|c}{
+1 \amp 1 \amp 1 \amp 2
 \\
-2 \amp -1 \amp 1
+1 \amp 0 \amp 1 \amp 1
 \\
-4 \amp 3 \amp 3
+2 \amp 5 \amp 2 \amp 7
 }
-\overset{-2R_{1}+R_{2}}{\underset{-4R_{1}+R_{3}}{\longrightarrow}}
-\matr{cc|c}{
-1 \amp 2 \amp 1
+\overset{-R_{1}+R_{2}}{\underset{-2R_{1}+R_{3}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp 1 \amp 1 \amp 2
 \\
-0 \amp -5 \amp -1
+0 \amp -1 \amp 0 \amp -1
 \\
-0 \amp -5 \amp -1
-}
-.
-\end{align*}
-</div>
-<p xmlns:svg="http://www.w3.org/2000/svg">We can already see that there is going to be a solution, and that said solution is unique. We proceed to find the intersection point:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\matr{cc|c}{
-1 \amp 2 \amp 1
-\\
-0 \amp -5 \amp -1
-\\
-0 \amp -5 \amp -1
-}
-\overset{-R_{2}+R_{3}}{\underset{2R_{2}+5R_{1}}{\longrightarrow}}
-\amp\matr{cc|c}{
-5 \amp 0 \amp 3
-\\
-0 \amp -5 \amp -1
-\\
-0 \amp 0 \amp 0
-}\\
-\overset{\frac{-1}{5}R_{2}}{\underset{\frac{1}{5}R_{1}}{\longrightarrow}}
-\amp\matr{cc|c}{
-1 \amp 0 \amp \frac{3}{5}
-\\
-0 \amp 1 \amp \frac{1}{5}
-\\
-0 \amp 0 \amp 0
+0 \amp 3 \amp 0 \amp 3
 }
 \end{align*}
 </div>
-<p xmlns:svg="http://www.w3.org/2000/svg">We conclude that the three lines intersect in the point \(\left( \frac{3}{5}, \frac{1}{5}\right)\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">We already see that there is not going to be a unique solution. We proceed:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+1 \amp 1 \amp 1 \amp 2
+\\
+0 \amp -1 \amp 0 \amp -1
+\\
+0 \amp 3 \amp 0 \amp 3
+}
+\overset{3R_{2}+R_{3}}{\underset{R_{2}+R_{1}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp 0 \amp 1 \amp 1
+\\
+0 \amp -1 \amp 0 \amp -1
+\\
+0 \amp 0 \amp 0 \amp 0
+}.
+\end{align*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">We conclude that there is one free variable and the solution set is given by</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left\{
+\left(1-z, 1, z\right) \vert z \in \mathbb{R}
+\right\}.
+\end{equation*}
+</div>
 </div></body>
 </html>

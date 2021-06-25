@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-18T13:39:42-07:00       *-->
+<!--*       on 2021-06-25T15:12:06-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,28 +14,27 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution solution-like">
-<p xmlns:svg="http://www.w3.org/2000/svg">The vector equation is given by</p>
+<p>We now give a second solution to the same problem, which uses a different approach.  As described in the first solution, we know that we are looking for a point on the plane that can be reached from \(B\) by following the vector normal to the plane.  We also know from the general equation of the plane that the normal vector is \(\vec{n} = \begin{bmatrix}1\\-1\\-2\end{bmatrix}\text{.}\)  We are therefore looking for a point that satisfies \(x-y-2z=1\) and lies on the line given in vector form as \(\begin{bmatrix}x\\y\\z\end{bmatrix} = \begin{bmatrix}1\\1\\1\end{bmatrix}+t\begin{bmatrix}1\\-1\\-2\end{bmatrix}\text{.}\)  That is, we want all of the following equations to be satisfied:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{gather*}
+x-y-2z=1\\
+x=1+t\\
+y=1-t\\
+z=1-2t
+\end{gather*}
+</div>
+<p>Substituting the last three equations into the first one, we get:</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\mbf{x}
-=
-\begin{bmatrix} 1\\ -1 \\ 3 \end{bmatrix} 
-+
-t
-\begin{bmatrix} 2 \\ -1\\ 0 \end{bmatrix} ,
+(1+t)-(1-t)-2(1-2t)=1\text{,}
 \end{equation*}
 </div>
-<p xmlns:svg="http://www.w3.org/2000/svg">because for \(t=0\text{,}\) we are at the perscribed point, and the directional vector has the perscribed direction.</p>
-<p xmlns:svg="http://www.w3.org/2000/svg">The parametric form is therefore given by</p>
+<p class="continuation">and the only solution to this equation is \(t = 1/2\text{.}\)  The point we are looking for is therefore</p>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-x_1 = 1 +2t
-;
-x_2 = -1 - t
-;
-x_3 = 3
-.
+C = B + \frac{1}{2}\vec{n} = (3/2, 1/2, 0),
 \end{equation*}
 </div>
+<p class="continuation">which is the same answer we found in the first solution.  If we wanted to know what the distance is, we could compute \(\norm{\vec{BC}} = \sqrt{3/2}\text{,}\) which is also the same answer we found in the first solution.</p>
 </div></body>
 </html>

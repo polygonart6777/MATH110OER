@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-18T13:39:49-07:00       *-->
+<!--*       on 2021-06-25T15:12:12-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,11 +13,56 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">We compute<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body><div class="solution solution-like">We need to figure out wheter<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-AB = \begin{bmatrix} 3 \amp 2+2k \\ 7 \amp 6+4k \end{bmatrix}
-\text{ and }
-BA = \begin{bmatrix} 7 \amp 10 \\ 1+3k \amp 6+4k \end{bmatrix}.
+x_{1} \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}
++ x_{2}\begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}
++ x_{3} \begin{bmatrix} 0 \amp 1 \\ 1 \amp 2 \end{bmatrix}
+=
+\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}
 \end{equation*}
-</div>For these to be equal, we need them to be equal entrywise, but no matter what \(k\) we choose, the \((1,1)\)-entries will never coincide (\(3\neq 7\)). Thus, the answer is no.</div></body>
+</div>has a non-zero solution. We reuse our computation from <a class="xref" data-knowl="./knowl/soln-3-2-4a.html" title="Solution 3.2.4.a.1">Solution 3.2.4.a.1</a> for the case \(\begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix} = \begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}\text{:}\)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\matr{ccc|c}
+{
+1 \amp 2 \amp 0 \amp a
+\\
+2 \amp 1 \amp 1 \amp b
+\\
+2 \amp -1 \amp 1 \amp c
+\\
+1 \amp 2 \amp 2 \amp d
+}
+\amp\overset{\text{row reduction}}{\longrightarrow}
+\matr{ccc|c}
+{
+1 \amp 2 \amp 0 \amp 0
+\\
+0 \amp -15 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp 0
+}\\
+\amp\overset{2R_{2}+15R_{1}}{\longrightarrow}
+\matr{ccc|c}
+{
+15 \amp 0 \amp 0 \amp 0
+\\
+0 \amp -15 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp 0
+}.
+\end{align*}
+</div>From this, we see that the only solution to the system of equations<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x_{1} \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}
++ x_{2}\begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}
++ x_{3} \begin{bmatrix} 0 \amp 1 \\ 1 \amp 2 \end{bmatrix}
+=
+\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}
+\end{equation*}
+</div>is \((x_{1},x_{2},x_{3})=(0,0,0)\text{.}\) Thus, the set \(S\) is linearly independent.</div></body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-18T13:39:51-07:00       *-->
+<!--*       on 2021-06-25T15:12:15-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,61 +13,63 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">We row-reduce \(D\text{:}\)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body><div class="solution solution-like">We row-reduce \(B\text{:}\)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\begin{bmatrix} 0 \amp 0  \amp -1 \amp 0 \amp 1 \\ 1 \amp 2 \amp 3 \amp -2 \amp -18\\ 1 \amp 2 \amp 2 \amp 1 \amp 11 \\ -1 \amp -2 \amp -2 \amp 1 \amp 11 \end{bmatrix}
-\longrightarrow
 \begin{bmatrix}
-1 \amp 2  \amp 0 \amp 0 \amp 0
+1 \amp 3 \amp 0  \amp 2
 \\
-0 \amp 0 \amp 1 \amp 0 \amp 0
+3 \amp 9 \amp 1 \amp 7
 \\
-0 \amp 0 \amp 0 \amp 1 \amp 0
-\\
-0 \amp 0 \amp 0 \amp 0 \amp 1
+1 \amp 3 \amp 1 \amp 3
 \end{bmatrix}
+\overset{-3R_{1}+R_{2}}{\underset{-R_{1}+R_{3}}{\longrightarrow}}
+\amp\begin{bmatrix}
+1 \amp 3 \amp 0  \amp 2
+\\
+0 \amp 0 \amp 1 \amp 1
+\\
+0 \amp 0 \amp 1 \amp 1											\end{bmatrix}\\
+\overset{-R_{2}+R_{3}}{\longrightarrow}
+\amp\begin{bmatrix}
+1 \amp 3 \amp 0  \amp 2
+\\
+0 \amp 0 \amp 1 \amp 1
+\\
+0 \amp 0 \amp 0 \amp 0
+\end{bmatrix}.
 \end{align*}
-</div>The reduced row echelon form of \(D\) has four non-zero rows, so that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>We have found a row echelon form of \(B\) (actually, we have found its RREF).It has two non-zero rows, so that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{gather*}
-\rank (D) = 4
+\rank (B) = 2
 \text{ and }
-\nullity (D) = 5-4 = 1.
+\nullity (B) = 4-2 = 2.
 \end{gather*}
 </div>Moreover, using <a class="xref" data-knowl="./knowl/hint-equivalent-matrices-same-row-and-null.html" title="Hint 3.4.4.3">Hint 3.4.4.3</a> for the row space and <a class="xref" data-knowl="./knowl/Casting-out-algorithm.html" title="Hint 3.4.4.4">Hint 3.4.4.4</a> for the column space, we find the following bases:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\text{basis of } \row (D):\quad \amp \span \left\{
-\begin{bmatrix}1 \amp 2  \amp 0 \amp 0 \amp 0\end{bmatrix},
-\begin{bmatrix}0 \amp 0 \amp 1 \amp 0 \amp 0\end{bmatrix},
-\right.\\
-\amp \hphantom{\span}\left.
-\begin{bmatrix}0 \amp 0 \amp 0 \amp 1 \amp 0\end{bmatrix},
-\begin{bmatrix}0 \amp 0 \amp 0 \amp 0 \amp 1\end{bmatrix}
-\right\}\\
-\text{basis of } \col (D):\quad \amp \span \left\{
-\begin{bmatrix}0 \\ 1 \\ 1 \\ -1\end{bmatrix},
-\begin{bmatrix}-1 \\ 3 \\ 2 \\ -2\end{bmatrix},
-\begin{bmatrix}0 \\ -2 \\ 1 \\ 1\end{bmatrix},
-\begin{bmatrix}1 \\ -18 \\ 11 \\ 11\end{bmatrix}
+\text{basis of } \row (B):\quad \amp \span \left\{\begin{bmatrix}1 \amp 3 \amp 0  \amp 2\end{bmatrix},
+\begin{bmatrix}0 \amp 0 \amp 1 \amp 1\end{bmatrix}\right\} \\
+\text{basis of } \col (B):\quad \amp \span \left\{
+\begin{bmatrix}1 \\ 3 \\ 1\end{bmatrix},
+\begin{bmatrix}0 \\ 1 \\ 1\end{bmatrix}
 \right\}.
 \end{align*}
-</div>Lastly, for the null space, we use <a class="xref" data-knowl="./knowl/hint-basis-of-null-space.html" title="Hint 3.4.4.1">Hint 3.4.4.1</a>: From the RREF of \(D\text{,}\) we are looking for the solution set of<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>Lastly, for the null space, we use <a class="xref" data-knowl="./knowl/hint-basis-of-null-space.html" title="Hint 3.4.4.1">Hint 3.4.4.1</a>: From the RREF of \(B\text{,}\) we are looking for the solution set of<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\matr{ccccc|c}{
-1 \amp 2  \amp 0 \amp 0 \amp 0  \amp 0
+\matr{cccc|c}{
+1 \amp 3 \amp 0  \amp 2 \amp 0  
 \\
-0 \amp 0 \amp 1 \amp 0 \amp 0 \amp 0
+0 \amp 0 \amp 1 \amp 1 \amp 0  
 \\
-0 \amp 0 \amp 0 \amp 1 \amp 0 \amp 0
-\\
-0 \amp 0 \amp 0 \amp 0 \amp 1 \amp 0
+0 \amp 0 \amp 0 \amp 0 \amp 0 
 }
 \end{equation*}
-</div>We have that \(x_{2}\) is the only free variable, and<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>We have that \(x_{2}\) and \(x_{4}\) are free variables, and \(x_{1}=-3x_{2}-2x_{4}\text{,}\) \(x_{3}=-x_{4}\text{,}\) so that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\text{basis of } \null (D):\quad \amp
+\text{basis of } \null (B):\quad \amp
 \span
 \left\{
-\begin{bmatrix} -2 \\ 1 \\ 0 \\ 0 \\ 0\end{bmatrix}
+\begin{bmatrix} -3 \\ 1 \\ 0 \\ 0\end{bmatrix},
+\begin{bmatrix} -2 \\ 0 \\ -1 \\ 1\end{bmatrix}
 \right\}.
 \end{align*}
 </div>

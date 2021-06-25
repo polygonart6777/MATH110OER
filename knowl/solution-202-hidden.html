@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-18T13:39:53-07:00       *-->
+<!--*       on 2021-06-25T15:12:16-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,10 +13,56 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">minor\((A)_{11}\) is given by finding the determinant of the matrix which results when the first row and column is deleted from \(A \text{.}\)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body><div class="solution solution-like">First, we have to write the vector at which we want to evaluate \(T\) in terms of the known vectors. In other words, we need to solve the following system of linear equations:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\matr{cc|c}
+{
+1 \amp 1 \amp 1
+\\
+-1 \amp 1 \amp -7
+}
+\overset{R_{1}+R_{2}}{\longrightarrow}
+\amp
+\matr{cc|c}
+{
+1 \amp 1 \amp 1
+\\
+0 \amp 2 \amp -6
+}\\
+\overset{\frac{1}{2}R_{2}}{\underset{-R_{2}' + R_{1}}{\longrightarrow}}
+\amp
+\matr{cc|c}
+{
+1 \amp 0 \amp 4
+\\
+0 \amp 1 \amp -3
+}.
+\end{align*}
+</div>We conclude that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\text{minor}(A)_{11} = \begin{bmatrix} 1 \amp 3 \\ 5 \amp 1 \end{bmatrix}=-14 
+4  \begin{bmatrix}1 \\ -1 \end{bmatrix}
+-3 \begin{bmatrix}1 \\ 1 \end{bmatrix}
+=
+\begin{bmatrix} 1  \\ -7 \end{bmatrix}.
 \end{equation*}
+</div>Therefore,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+T\left(\begin{bmatrix} 1  \\ -7 \end{bmatrix}\right)
+=\amp
+T
+\left(
+4  \begin{bmatrix}1 \\ -1 \end{bmatrix}
+-3 \begin{bmatrix}1 \\ 1 \end{bmatrix}
+\right)\\
+=\amp
+4T \left(\begin{bmatrix}1 \\ -1 \end{bmatrix}\right)
+-3 T\left(\begin{bmatrix}1 \\ 1 \end{bmatrix}\right)
+=
+4 \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+-3 \begin{bmatrix} 1 \\ 0 \end{bmatrix}
+=
+\begin{bmatrix} -3 \\ 4 \end{bmatrix}.
+\end{align*}
 </div>
 </div></body>
 </html>

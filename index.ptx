@@ -131,7 +131,7 @@
 			</section>
 	</chapter>
 
-		<chapter><!--Orthogonality-->
+		<chapter xml:id="chap-ortho"><!--Orthogonality-->
 			<title>
 				Orthogonality
 			</title>

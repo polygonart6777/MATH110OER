@@ -163,6 +163,55 @@
 		</subsection>
 		<subsection>
 			<title>Planes in <m>\mathbb{R}^3</m></title>
+			<p> We now turn to planes in <m>\mathbb{R}^3</m>.  While a line in <m>\mathbb{R}^3</m> can be described by either <emph>one</emph> direction vector or <emph>two</emph> normal vectors, describing a plane requires <emph>two</emph> direction vectors or <emph>one</emph> normal vector.  You might notice that for both lines and planes the number of direction vectors plus the number of normal vectors is <m>3</m>, and we are working in <m>\mathbb{R}^3</m>.  This is certainly not an accident, but we will have to wait until <xref ref="chap-ortho" /> for a full explanation. </p>
+			<definition>
+				<p>The <emph>normal equation</emph> of a plane in <m>\mathbb{R}^3</m> is an equation of the form <me>\vec{n}\cdot\vec{v} = \vec{n}\cdot\vec{p}</me>.  Here <m>\vec{v} = \begin{bmatrix}x\\y\\z\end{bmatrix}</m>, <m>\vec{p}</m> is a vector to any chosen point on the plane, and <m>\vec{n}</m> is a vector orthogonal to the plane.</p>
+				<p>If we expand the dot product in the normal equation of a plane we obtain the <emph>general equation</emph> of the plane.</p>
+			</definition>
+			<definition>
+				<p> The <emph>vector equation</emph> of a plane in <m>\mathbb{R}^3</m> is an equation of the form <me>\vec{v} = \vec{p}+t\vec{d_1}+s\vec{d_2}</me>.  Here <m>\vec{v} = \begin{bmatrix}x\\y\\z\end{bmatrix}</m>, <m>\vec{p}</m> is a vector to any chosen point on the plane, and <m>\vec{d_1}</m> and <m>\vec{d_2}</m> are non-parallel direction vectors for the plane.</p>
+				<p>The three equations obtained by looking at the <m>x, y, z</m> components of the vector equation are the <emph>parametric equations</emph> for the plane.</p>
+			</definition>
+			<example xml:id="eg-plane-R3-normal">
+				<p>Consider the plane passing through the points <m>P = (1, 2, 1)</m>, <m>Q = (0, 0, 1)</m>, and <m>R = (-1, 0, -1)</m>.  Two direction vectors for this plane are <m>\vec{QP} = \begin{bmatrix}1\\2\\0\end{bmatrix}</m> and <m>\vec{QR} = \begin{bmatrix}-1\\0\\-2\end{bmatrix}</m>.  Thus a vector equation for the plane is <me>\begin{bmatrix}x\\y\\z\end{bmatrix} = \begin{bmatrix}1\\2\\1\end{bmatrix} + t\begin{bmatrix}1\\2\\0\end{bmatrix} + s\begin{bmatrix}-1\\0\\-2\end{bmatrix}</me>.</p>
+				<p>As with the other examples in this chapter, this is not the only possible vector equation for this plane.</p>
+				<p>To obtain a normal equation we need to find a normal vector for the plane, that is, a vector that is orthogonal to both of the two direction vectors we have.  If you know about the cross product you can take <m>\vec{n} = \vec{d_1}\times\vec{d_2}</m>.  Alternatively, if <m>\vec{n} = \begin{bmatrix}a\\b\\c\end{bmatrix}</m> then we need <m>0 = \vec{n}\cdot\vec{d_1} = a+2b</m> and <m>0 = \vec{n}\cdot\vec{d_2} = -a-2c</m>, yielding a system of equations we can solve.  Regardless of which method we use to find <m>\vec{n}</m>, the only possible choices for <m>\vec{n}</m> are multiples of <m>\vec{n} = \begin{bmatrix}2\\-1\\-1\end{bmatrix}</m>.  We then choose <m>\vec{p} = \begin{bmatrix}1\\2\\1\end{bmatrix}</m> (but any other point on the plane would also be fine), to get the normal equation <me>\begin{bmatrix}2\\-1\\-1\end{bmatrix}\cdot\begin{bmatrix}x\\y\\z\end{bmatrix} = \begin{bmatrix}2\\-1\\-1\end{bmatrix}\cdot\begin{bmatrix}1\\2\\1\end{bmatrix}</me>.  If we expand the dot products we get the general equation <me>2x-y-z = -1</me>.  You can verify that this equation is correct by checking that the points <m>P, Q, R</m> all satisfy the equation.</p>
+			</example>
+			<p>As an illustration of the techniques we have developed so far, we end this section with an example of finding the shortest distance from a point to a plane.  We will solve the next example in two ways, because the two techniques are sometimes useful in different circumstances.</p>
+			<example>
+				<p>Find point on the plane <m>x-y-2z=1</m> that is closest to <m>B = (1, 1, 1)</m>.</p>
+				<solution>
+					<p>The key observation is that the shortest distance from <m>B</m> to our plane will be made at a point <m>C</m> on the plane where the vector <m>\vec{BC}</m> is normal to the plane.  We begin by finding any point on the plane, that is, any point that satisfies the equation <m>x-y-2z=1</m>; the point <m>A = (1, 0, 0)</m> will do.  Now consider the vector <m>\vec{AB} = \begin{bmatrix}0\\1\\1\end{bmatrix}</m>.  This vector goes from the plane to <m>B</m>, but it isn't normal to the plane.  What we're interested in is the component of <m>\vec{AB}</m> along the direction normal to the plane.  That is, the distance we want is <m>\norm{\operatorname{proj}_{\vec{n}}(\vec{AB})}</m>.</p>
+					<p> The only ingredient we haven't found yet is the normal vector <m>\vec{n}</m> to the plane.  Finding <m>\vec{n}</m> is exactly the same as it was for finding the normal vector to a line in <m>\mathbb{R}^2</m>; we just read the coefficients from the general equation.  Thus our normal vector is <m>\vec{n} = \begin{bmatrix}1\\-1\\-2\end{bmatrix}</m>.</p>
+					<p>Finally, we do the required calculation.  The shortest distance from the plane to <m>B = (1, 1, 1)</m> is:
+					<md>
+						<mrow>\norm{\operatorname{proj}_{\vec{n}}(\vec{AB})} \amp = \norm{\operatorname{proj}_{\begin{bmatrix}1\\-1\\-2\end{bmatrix}}\left(\begin{bmatrix}0\\1\\1\end{bmatrix}\right)} </mrow>
+						<mrow> \amp = \norm{\left(\frac{\begin{bmatrix}1\\-1\\-2\end{bmatrix}\cdot\begin{bmatrix}0\\1\\1\end{bmatrix}}{\begin{bmatrix}1\\-1\\-2\end{bmatrix}\cdot\begin{bmatrix}1\\-1\\-2\end{bmatrix}}\right)\begin{bmatrix}1\\-1\\-2\end{bmatrix}} </mrow>
+						<mrow> \amp = \norm{\begin{bmatrix}-1/2\\1/2\\1\end{bmatrix}} </mrow>
+						<mrow> \amp = \sqrt{(-1/2)^2+(1/2)^2+1^2}</mrow>
+						<mrow> \amp = \sqrt{3/2}</mrow>
+					</md></p>
+					<p>Therefore the shortest distance from <m>B = (1, 1, 1)</m> to a point on the plane <m>x-y-2z=1</m> is <m>\sqrt{3/2}</m>.</p>
+					<p>If we wanted to find the point on the plane where this distance occured, we want to follow the direction of <m>\vec{n}</m> from <m>B</m> for a distance of <m>\sqrt{3/2}</m>.  First, let 
+					<me>\vec{m} = \frac{1}{\norm{\vec{n}}}\vec{n} = \begin{bmatrix}1/\sqrt{6} \\ -1/\sqrt{6} \\ -2/\sqrt{6}\end{bmatrix}</me> 
+					be the unit vector in the direction of <m>\vec{n}</m>.  We will be starting at <m>B</m>, but we aren't yet sure if we want to travel along <m>\sqrt{3/2}\vec{m}</m> or <m>-\sqrt{3/2}\vec{m}</m>.  The easiest solution is to do both, and consider the points <m>C_1 = B + \sqrt{3/2}\vec{m} = (3/2, 1/2, 0)</m> and <m>C_2 = B-\sqrt{3/2}\vec{m} = (1/2, 3/2, 2)</m>.  We see that only the point <m>C_1</m> satisfies the plane's equation <m>x-y-2z=1</m>, so that's the point we're looking for.</p>
+					<p>The point on the plane <m>x-y-2z=1</m> closest to <m>B = (1, 1, 1)</m> is therefore <m>C = (3/2, 1/2, 0)</m>.</p>
+				</solution>
+				<solution>
+					<p> We now give a second solution to the same problem, which uses a different approach.  As described in the first solution, we know that we are looking for a point on the plane that can be reached from <m>B</m> by following the vector normal to the plane.  We also know from the general equation of the plane that the normal vector is <m>\vec{n} = \begin{bmatrix}1\\-1\\-2\end{bmatrix}</m>.  We are therefore looking for a point that satisfies <m>x-y-2z=1</m> and lies on the line given in vector form as <m>\begin{bmatrix}x\\y\\z\end{bmatrix} = \begin{bmatrix}1\\1\\1\end{bmatrix}+t\begin{bmatrix}1\\-1\\-2\end{bmatrix}</m>.  That is, we want all of the following equations to be satisfied:
+					<md>
+					<mrow>x-y-2z=1</mrow>
+					<mrow>x=1+t</mrow>
+					<mrow>y=1-t</mrow>
+					<mrow>z=1-2t</mrow>
+					</md>
+					</p>
+					<p>Substituting the last three equations into the first one, we get:
+					<me>(1+t)-(1-t)-2(1-2t)=1</me>,
+					and the only solution to this equation is <m>t = 1/2</m>.  The point we are looking for is therefore
+					<me>C = B + \frac{1}{2}\vec{n} = (3/2, 1/2, 0),</me>which is the same answer we found in the first solution.  If we wanted to know what the distance is, we could compute <m>\norm{\vec{BC}} = \sqrt{3/2}</m>, which is also the same answer we found in the first solution.</p>
+				</solution>
+			</example>
 		</subsection>
 	<xi:include href="1-3-exercises.ptx" />
 </section>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-18T13:39:48-07:00       *-->
+<!--*       on 2021-06-25T15:12:11-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,20 +16,113 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.1.1.1</span><span class="period">.</span>
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">2.2.15.e.1</span><span class="period">.</span>
 </h6>
-<ol class="lower-alpha">
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-86-hidden.html" title="Solution 3.1.1.a.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-87-hidden.html" title="Solution 3.1.1.b.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-88-hidden.html" title="Solution 3.1.1.c.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-89-hidden.html" title="Solution 3.1.1.d.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-90-hidden.html" title="Solution 3.1.1.e.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-91-hidden.html" title="Solution 3.1.1.f.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-92-hidden.html" title="Solution 3.1.1.g.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-93-hidden.html" title="Solution 3.1.1.h.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-94-hidden.html" title="Solution 3.1.1.i.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-</ol>
-</div>
-<span class="incontext"><a href="sec-matrix-operations.html#solution-85">in-context</a></span>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+1 \amp a \amp -1 \amp 1
+\\
+-1 \amp a-2 \amp 1 \amp -1
+\\
+2 \amp 2 \amp a-2 \amp 1
+}
+\overset{R_{1}+R_{2}}{\underset{-2R_{1}+R_{3}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp a \amp -1 \amp 1
+\\
+0 \amp 2a-2 \amp 0 \amp 0
+\\
+0 \amp 2-2a \amp a \amp -1
+}\\
+\overset{R_{2}+R_{3}}{\longrightarrow}
+\amp
+\matr{ccc|c}{
+1 \amp a \amp -1 \amp 1
+\\
+0 \amp 2a-2 \amp 0 \amp 0
+\\
+0 \amp 0 \amp a \amp -1
+}
+.
+\end{align*}
+</div>If \(a=0\text{,}\) then the system is inconsistent (because of the third row) and there is no solution. Otherwise, we can divide by \(a\text{:}\)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+1 \amp a \amp -1 \amp 1
+\\
+0 \amp 2a-2 \amp 0 \amp 0
+\\
+0 \amp 0 \amp a \amp -1
+}
+\overset{\frac{1}{a}R_{3}}{\underset{R_{3}'+R_{1}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp a \amp 0 \amp 1-\frac{1}{a}
+\\
+0 \amp 2a-2 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp -\frac{1}{a}
+}
+.
+\end{align*}
+</div>If \(a=1\text{,}\) then switching the second and third row yields the RREF:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\matr{ccc|c}{
+1 \amp 1 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp -1
+}
+\overset{R_{2}\leftrightarrow R_{3}}{\longrightarrow}
+\matr{ccc|c}{
+1 \amp 1 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp -1										
+\\
+0 \amp 0 \amp 0 \amp 0
+}.
+\end{equation*}
+</div>Thus, the solution set is given by<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left\{
+\left(-y,y,-1
+\right)
+\,\vert\, y\in\mathbb{R}
+\right\}.
+\end{equation*}
+</div>If \(a\neq 1\text{,}\) then we can divide by \(2a-2 \text{:}\)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\matr{ccc|c}{
+1 \amp a \amp 0 \amp 1-\frac{1}{a}
+\\
+0 \amp 2a-2 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp -\frac{1}{a}
+}
+\overset{\frac{1}{2a-2}R_{2}}{\longrightarrow}
+\amp
+\matr{ccc|c}{
+1 \amp a \amp 0 \amp 1-\frac{1}{a}
+\\
+0 \amp 1 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp -\frac{1}{a}
+}\\
+\overset{-aR_{2}+R_{1}}{\longrightarrow}
+\amp
+\matr{ccc|c}{
+1 \amp 0 \amp 0 \amp 1-\frac{1}{a}
+\\
+0 \amp 1 \amp 0 \amp 0
+\\
+0 \amp 0 \amp 1 \amp -\frac{1}{a}
+}
+.
+\end{align*}
+</div>Thus, in this case, the unique solution is given by \(\left(1-\frac{1}{a}, 0, -\frac{1}{a} \right)\text{.}\)</div>
+<span class="incontext"><a href="sec-solv-lin-systms.html#solution-85">in-context</a></span>
 </body>
 </html>
