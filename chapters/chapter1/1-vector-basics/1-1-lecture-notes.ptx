@@ -30,13 +30,31 @@
 			Let <m>P = (2, 3)</m> and <m>Q = (-1, 1)</m>.  Then <m>\vec{PQ} = \begin{bmatrix}-1-2 \\ 1-3\end{bmatrix} = \begin{bmatrix}-3\\-2\end{bmatrix}</m>.  Geometrically, we have the following picture:
 			<figure>
 				<caption>The vector from <m>P</m> to <m>Q</m>.</caption>
-				<!--<image>
+				<image>
 					<latex-image>
-						\begin{tikzpicture}
-					
+						\begin{tikzpicture}[scale=1.7]
+						\draw[thick] (0,-4.2) -- (0,4.2);
+						\draw[thick] (-4.2,0) -- (4.2,0);
+						\foreach \x in{-4,-3,-2,-1,1,2,3,4}
+						{
+							\draw[gray] (\x,-4.2) -- (\x,4.2);
+							\draw[gray] (-4.2, \x) -- (4.2,\x);
+							\node[below] at (\x,0) {$\x$};
+							\node[left] at (0,\x) {$\x$};
+						}
+						\filldraw[blue] (2, 3) circle (0.04);
+						\node[above right, blue] at (2, 3) {$P$};
+						
+						\filldraw[blue] (-1, 1) circle (0.04);
+						\node[below right, blue] at (-1, 1) {$Q$};
+						
+						\draw[-Triangle, blue, ultra thick] (2, 3) -- (-0.98, 1.02) node[midway, above, blue] {$\overrightarrow{PQ}$};
+
+						
+
 						\end{tikzpicture}
 					</latex-image>
-				</image>-->
+				</image>
 			</figure>
 		</example>
 

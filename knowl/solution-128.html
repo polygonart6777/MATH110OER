@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-06-25T15:02:17-07:00       *-->
+<!--*       on 2021-06-30T15:44:11-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,59 +16,26 @@
 <body>
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
-<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.2.4.b.1</span><span class="period">.</span>
-</h6>We need to figure out wheter<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-x_{1} \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}
-+ x_{2}\begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}
-+ x_{3} \begin{bmatrix} 0 \amp 1 \\ 1 \amp 2 \end{bmatrix}
-=
-\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}
-\end{equation*}
-</div>has a non-zero solution. We reuse our computation from <a class="xref" data-knowl="./knowl/soln-3-2-4a.html" title="Solution 3.2.4.a.1">Solution 3.2.4.a.1</a> for the case \(\begin{bmatrix} a \amp b \\ c \amp d \end{bmatrix} = \begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}\text{:}\)<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<span class="type">Solution</span><span class="space"> </span><span class="codenumber">3.3.1.d.1</span><span class="period">.</span>
+</h6>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\matr{ccc|c}
+\matr{cc|cc}
 {
-1 \amp 2 \amp 0 \amp a
+2 \amp 1  \amp 1 \amp 0
 \\
-2 \amp 1 \amp 1 \amp b
-\\
-2 \amp -1 \amp 1 \amp c
-\\
-1 \amp 2 \amp 2 \amp d
+4 \amp 2 \amp 0 \amp 1
 }
-\amp\overset{\text{row reduction}}{\longrightarrow}
-\matr{ccc|c}
+\overset{-2R_{1}+R_{2}}{\longrightarrow}
+\amp
+\matr{cc|cc}
 {
-1 \amp 2 \amp 0 \amp 0
+2 \amp 1  \amp 1 \amp 0
 \\
-0 \amp -15 \amp 0 \amp 0
-\\
-0 \amp 0 \amp 0 \amp 0
-\\
-0 \amp 0 \amp 1 \amp 0
-}\\
-\amp\overset{2R_{2}+15R_{1}}{\longrightarrow}
-\matr{ccc|c}
-{
-15 \amp 0 \amp 0 \amp 0
-\\
-0 \amp -15 \amp 0 \amp 0
-\\
-0 \amp 0 \amp 0 \amp 0
-\\
-0 \amp 0 \amp 1 \amp 0
-}.
+0 \amp 0 \amp -2 \amp 1
+} 
 \end{align*}
-</div>From this, we see that the only solution to the system of equations<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-x_{1} \begin{bmatrix} 1 \amp 2 \\ 2 \amp 1 \end{bmatrix}
-+ x_{2}\begin{bmatrix} 2 \amp 1 \\ -1 \amp 2 \end{bmatrix}
-+ x_{3} \begin{bmatrix} 0 \amp 1 \\ 1 \amp 2 \end{bmatrix}
-=
-\begin{bmatrix} 0 \amp 0 \\ 0 \amp 0 \end{bmatrix}
-\end{equation*}
-</div>is \((x_{1},x_{2},x_{3})=(0,0,0)\text{.}\) Thus, the set \(S\) is linearly independent.</div>
-<span class="incontext"><a href="sec-matrix-algebra.html#solution-128">in-context</a></span>
+</div>We see that the left-hand side will not have the identity matrix as its RREF. Therefore, the matrix \(\begin{bmatrix} 2 \amp 1 \\ 4 \amp 2 \end{bmatrix}\) does not have an inverse.</div>
+<span class="incontext"><a href="sec-inverse-matrix.html#solution-128">in-context</a></span>
 </body>
 </html>
