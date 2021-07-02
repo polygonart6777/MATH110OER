@@ -192,7 +192,7 @@
 			<p>Unless explicitly stated otherwise, all angles are measured in radians.</p>
 			<p>Consider two vectors, <m>\vec{v}</m> and <m>\vec{w}</m>, in <m>\mathbb{R}^2</m>.  Draw both vectors in standard position, and let <m>\theta</m> be the shorter of the two angles between the vectors (so <m>0 \leq \theta \leq \pi</m>).</p>
 			<figure>
-				<caption>$\theta$ is the angle between <m>\vec{v}</m> and <m>\vec{w}</m>, $\psi$ is not.</caption>
+				<caption><m>\theta</m> is the angle between <m>\vec{v}</m> and <m>\vec{w}</m>, <m>\psi</m> is not.</caption>
 				<image>
 					<latex-image>
 						\begin{tikzpicture}
