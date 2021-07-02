@@ -1,0 +1,8 @@
+<section xml:id="sec-Eigen" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+	<title>
+		Eigenvalues and eigenvectors
+	</title>
+
+	<xi:include href="4-1-exercises.ptx" />
+</section>

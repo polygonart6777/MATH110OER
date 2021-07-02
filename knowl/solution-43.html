@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-07-02T11:52:04-07:00       *-->
+<!--*       on 2021-07-02T14:30:52-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -17,79 +17,46 @@
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
 <span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
-</h6>Since the plane contains the line, it in particular contains the point \(Q=(3,-1,2)\) (choose \(t=0\) in the line equation). Since \(P\) is assumed to be in the plane, we conclude that the line that goes through \(Q\) and \(P\text{,}\) whose vector form is given by <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">First, let us find a directional vector for the line whose parametric equations are given. For \(t=0\text{,}\) that line passes through the point \(Q=(-1,2,3)\) and for \(t=1\text{,}\) it passes through \(R=(1,1,6)\text{.}\) Therefore, the vector</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\mbf{x}  =
-\vect{OQ}
-+
-s\vect{QP}
-= 
-\begin{bmatrix} 3 \\ -1 \\ 2 \end{bmatrix}
-+
-s\begin{bmatrix} -1 \\ 2 \\ -2 \end{bmatrix}
-,
-\end{equation*}
-</div> is also contained in the plane. Since this second line's directional vector is not parallel to the first line's directional vector, we conclude that the plane is spanned by those two directional vectors and thus has vector form <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\mbf{x} 
+\vect{QR}=
+\begin{bmatrix} 
+1-(-1) \\ 1-2 \\ 6-3
+\end{bmatrix} 
 =
-\begin{bmatrix} 3 \\ -1\\ 2 \end{bmatrix} 
-+
-t\begin{bmatrix} 1 \\ 0\\ - 1 \end{bmatrix}
-+
-s \begin{bmatrix} -1 \\ 2 \\ -2 \end{bmatrix}
-.
+\begin{bmatrix} 
+2 \\ -1 \\ 3
+\end{bmatrix} 			 		
 \end{equation*}
-</div> In particular, the parametric equations are <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">gives the direction of said line.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">The vector equation of the line in question is therefore given by</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-x_1 =  3 + t - s
-;
-x_2 =  -1 + 2s
-;
-x_3 =  2-t-2s.
-\end{equation*}
-</div> We can find a normal vector \(\mbf{n}\) by taking the cross product of the two directional vectors (see <a class="xref" data-knowl="./knowl/hint-def-cross-product-and-it-is-normal.html" title="Hint 1">Hint 1</a>): <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\mbf{n}
-=
-\begin{bmatrix} 1 \\ 0\\ - 1 \end{bmatrix}
-\times
-\begin{bmatrix} -1 \\ 2 \\ -2 \end{bmatrix}
-=
-\begin{bmatrix}
-0 \cdot (-2)-(-1) \cdot 2\\
-(-1) \cdot (-1) -1 \cdot (-2)\\
-1 \cdot 2-0\cdot (-1)
-\end{bmatrix})
-=
-\begin{bmatrix}
-2\\
-3\\
-2
-\end{bmatrix})
-.
-\end{equation*}
-</div> The normal equation of the plane is now given by \(\mbf{n}\cdot\vect{PX}=0\text{,}\) or more explicitly: <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\begin{bmatrix}
-2\\
-3\\
-2
-\end{bmatrix}
-\cdot
-\left(
 \mbf{x}
--
-\begin{bmatrix}
-3 \\ -1\\ 2
-\end{bmatrix}
-\right)=0
-\end{equation*}
-</div> and we get the general form by computing the dot product on the left-hand side and rearranging: <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-2x_1 + 3x_2 + 2x_3 
 =
-7.
+\begin{bmatrix} 
+1 \\ 0\\ -3
+\end{bmatrix} 
++
+t
+\begin{bmatrix} 
+2 \\ -1 \\ 3
+\end{bmatrix} ,
+\end{equation*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">because for \(t=0\text{,}\) it passes through \(P\text{,}\) and it has the perscribed directional vector.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">The parametric form is then given by</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x_1 = 1+2t
+;
+x_2 = -t
+;
+x_3 = -3+3t
+.
 \end{equation*}
 </div>
 </div>

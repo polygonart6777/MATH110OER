@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-07-02T11:51:59-07:00       *-->
+<!--*       on 2021-07-02T14:30:48-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,70 +13,63 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">We want to find real numbers \(c_1, c_2, c_3\) such that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body><div class="solution solution-like">In the following, let \(\mbf{r}\) be the vector of the point \(R\text{.}\) In other words,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\mbf{v}
+\mbf{r}
 =
-c_1 \mathbf{u}_1
-+
-c_2 \mathbf{u}_2
-+
-c_3 \mathbf{u}_3
-.
+\mbf{p}+\mbf{q}
 \end{equation*}
-</div>We compute the right-hand side:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-c_1 \mathbf{u}_1
-+
-c_2 \mathbf{u}_2
-+
-c_3 \mathbf{u}_3
-\amp =
-c_1 \begin{bmatrix} 3\\ 1 \\ -1 \end{bmatrix} 
-+
-c_2 \begin{bmatrix} 8\\ 0 \\ -1 \end{bmatrix} 
-+
-c_3 \begin{bmatrix} 2\\ -2 \\ 1 \end{bmatrix} \\
-\amp =
-\begin{bmatrix} c_1 3\\ c_1  \\ -c_1  \end{bmatrix} 
-+
-\begin{bmatrix} c_2 8\\ 0 \\ -c_2 \end{bmatrix} 
-+
-\begin{bmatrix} c_3 2\\ c_3(-2) \\ c_3 \end{bmatrix} \\
-\amp =
-\begin{bmatrix} c_1 3 + c_2 8 + c_3 2\\ c_1  +0 - c_3 2\\ -c_1  -c_2 +c_3 \end{bmatrix} 
-\end{align*}
-</div>We want this to equal \(\mbf{v}\text{,}\) i.e. we want<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>by the choice of \(R\text{.}\) <ol class="lower-alpha">
+<li>By definition, the components of \(\overrightarrow{QP}\) are the difference of the respective components of the point \(P\) and of the point \(Q\text{,}\) or in other words:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\begin{bmatrix} 4 \\ 4 \\ 4  \end{bmatrix} 
+\overrightarrow{QP}
 =
-\begin{bmatrix} c_1 3 + c_2 8 + c_3 2\\ c_1  +0 - c_3 2\\ -c_1  -c_2 +c_3 \end{bmatrix} 
-.
+\mbf{p}-\mbf{q}.
 \end{equation*}
-</div>In other words, we need<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align}
-4 \amp =c_1 3 + c_2 8 + c_3 2\notag\\
-4 \amp = c_1 - c_3 2\tag{1.1.13}\\
-4 \amp = -c_1  -c_2 + c_3\notag
-\end{align}
-</div>The <a class="xref" data-knowl="./knowl/ex-lin-comb-of-vecs2-eq1.html" title="Equation 1.1.13">second equation (1.1.13)</a> yields \(c_1 = 4 + c_3 2\text{.}\) Plugging this into the other two equations, we get:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align}
-4 \amp =(4 + c_3 2) 3 + c_2 8 + c_3 2\tag{1.1.14}\\
-4 \amp = -(4 + c_3 2)  -c_2  + c_3\tag{1.1.15}
-\end{align}
-</div>The <a class="xref" data-knowl="./knowl/ex-lin-comb-of-vecs2-eq2.html" title="Equation 1.1.14">first equation (1.1.14)</a> yields:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>
+</li>
+<li>
+<p xmlns:svg="http://www.w3.org/2000/svg">Similarly, we have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-4
-=(4 + c_3 2) 3 + c_2 8 + c_3 2
-=12 + c_3 6 + c_2 8 + c_3 2
-=12 +  c_2 8 + c_3 8,
+\overrightarrow{QR}
+=
+\mbf{r}-\mbf{q}
+=
+(\mbf{p}+\mbf{q}) -\mbf{q}
+=
+\mbf{p}.
 \end{equation*}
-</div>i.e. \(c_2 = -1 - c_3\text{.}\)	Plugging this, in turn, into the <a class="xref" data-knowl="./knowl/ex-lin-comb-of-vecs2-eq3.html" title="Equation 1.1.15">last remaining equation (1.1.15)</a> yields:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>
+</li>
+<li>
+<p xmlns:svg="http://www.w3.org/2000/svg">Just as above, we have</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-4
-= -(4 + c_3 2)  -c_2  + c_3
-= -4 - c_3 2  -(-1 - c_3)  + c_3
-= -3.
+\overrightarrow{RP}
+=
+\mbf{p}-\mbf{r}
+=
+\mbf{p}-(\mbf{p}+\mbf{q})
+=
+-\mbf{q}.
 \end{equation*}
-</div>Since this is false, we conclude: No, the vector \(\mbf{v}\) is not a linear combination of the vectors \(\mbf{u}_1\text{,}\) \(\mbf{u}_2\text{,}\) and \(\mbf{u}_3\text{.}\)</div></body>
+</div>
+</li>
+<li>
+<p xmlns:svg="http://www.w3.org/2000/svg">If we write \(\mbf{0}\) for the vector of the origin \(O\text{,}\) all of whose components are zero, then</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\overrightarrow{RO}
+=
+\mbf{0} - \mbf{r}
+=
+- (\mbf{p}+\mbf{q})
+=
+-\mbf{p} - \mbf{q}.
+\end{equation*}
+</div>
+</li>
+</ol>
+</div></body>
 </html>

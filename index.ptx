@@ -29,17 +29,31 @@
 			\usetikzlibrary{arrows}
 		\usepackage{pgfplots}<!-- for coordinate systems-->
 			\usetikzlibrary{arrows.meta}
-		\usepackage{tkz-euclide}<!-- also trying to use it for coordinate systems-->
+			\usetikzlibrary{decorations.pathreplacing}
+		\usepackage{tkz-euclide}<!-- also trying to use it for coordinate systems; also needed for some angle markers, so please don't remove!-->
 	</latex-image-preamble>
 </docinfo>
 
 <book>
-	<title>Math 110</title>
+	<title>Math 110 Lecture Notes</title>
 		
 		<xi:include href="frontmatter.ptx" />
+
+		<chapter xml:id="chapt-0"><!--prologue on linear systems-->
+				<title>
+					Systems of Linear Equations
+				</title>
+
+				<introduction>
+					
+				</introduction>
+
+				<!-- It seems to be necessary to put the <section> tag in the file to be included.  To get the numbering right it's then necessary that the lecture notes file includes the exercises file. -->
+				<xi:include href="chapters/chapter0/1-systems-of-equations/0-1-lecture-notes.ptx" />
+				<xi:include href="chapters/chapter0/2-elimination/0-2-lecture-notes.ptx" />
+		</chapter>
 		
 		<chapter xml:id="chapt-1"><!--Vectors in Rn-->
-
 			<title>
 				Vectors in <m>\mathbb{R}^n</m>
 			</title>
@@ -48,99 +62,62 @@
 				
 			</introduction>
 
-			<!-- It seems to be necessary to put the <section> tag in the file to be included.  To get the numbering right it's then necessary that the lecture notes file includes the exercises file. -->
-
 			<xi:include href="chapters/chapter1/1-vector-basics/1-1-lecture-notes.ptx" />
-
 			<xi:include href="chapters/chapter1/2-dot-product/1-2-lecture-notes.ptx" />
-
 			<xi:include href="chapters/chapter1/3-lines-and-planes/1-3-lecture-notes.ptx" />
-
 		</chapter>
 
-		<chapter xml:id="chapt-2"><!--Systems of Linear equations-->
+		<chapter xml:id="chapt-2"><!--Span and independence-->
 			<title>
-				Systems of Linear Equations
+				Linear Independence, Span, Subspaces
 			</title>
 			<introduction>
-				<p> These practice problems correspond to the material from Chapter 2 of the course textbook <xref ref="ref-DP" />.
-				</p>
+
 			</introduction>
 
-			<section xml:id="sec-sys-of-lin-eqnts"><!--Sec 2.1 in Poole-->
-				<xi:include href="chapters/chapter2/1-systems-of-equations/2-1-lecture-notes.ptx" />
-				<xi:include href="chapters/chapter2/1-systems-of-equations/2-1-exercises.ptx" />
-
-			</section>
-			
-			<section xml:id="sec-solv-lin-systms"><!--Sec 2.1 in Poole-->
-				<xi:include href="chapters/chapter2/2-solving-linear-systems/2-2-lecture-notes.ptx" />
-				<xi:include href="chapters/chapter2/2-solving-linear-systems/2-2-exercises.ptx" />
-			</section>
+			<xi:include href="chapters/chapter2/1-linear-systems-revisited/2-1-lecture-notes.ptx" />
+			<xi:include href="chapters/chapter2/2-linear-independence/2-2-lecture-notes.ptx" />
+			<xi:include href="chapters/chapter2/3-span/2-3-lecture-notes.ptx" />
+			<xi:include href="chapters/chapter2/4-subspaces/2-4-lecture-notes.ptx" />
 		</chapter>
 
-
-		<chapter><!--Matrices-->
+		<chapter xml:id="chapt-3"><!--Matrices-->
 			<title>
-				Matrices
+				Linear Transformations and Matrix Algebra
 			</title>
+			<introduction>
 
-			<section xml:id="sec-matrix-operations"><!--Sec 3.1 in Poole-->
-			<xi:include href="chapters/chapter3/1-matrix-operations/3-1-lecture-notes.ptx" />
-			<xi:include href="chapters/chapter3/1-matrix-operations/3-1-exercises.ptx" />
-			</section>
-			
-			<section xml:id="sec-matrix-algebra"><!--Sec 3.2 in Poole-->
-			<xi:include href="chapters/chapter3/2-matrix-algebra/3-2-lecture-notes.ptx" />			
-			<xi:include href="chapters/chapter3/2-matrix-algebra/3-2-exercises.ptx" />
-			</section>
-			
-			<section xml:id="sec-inverse-matrix"><!--Sec 3.3 in Poole-->
-			<xi:include href="chapters/chapter3/3-inverse-of-a-matrix/3-3-lecture-notes.ptx" />
-			<xi:include href="chapters/chapter3/3-inverse-of-a-matrix/3-3-exercises.ptx" />			
-			</section>
+			</introduction>
 
-			<section xml:id="sec-subspaces-basis-dim-rank"><!--Sec 3.5 in Poole-->
-			<xi:include href="chapters/chapter3/4-subspaces-basis-dimension-rank/3-4-lecture-notes.ptx" />
-			<xi:include href="chapters/chapter3/4-subspaces-basis-dimension-rank/3-4-exercises.ptx" />
- 			</section>
-
-			<section xml:id="sec-lin-transformtions"><!--Sec 3.5 in Poole-->
-			 <xi:include href="chapters/chapter3/5-linear-transformations/3-5-lecture-notes.ptx" />
-			<xi:include href="chapters/chapter3/5-linear-transformations/3-5-exercises.ptx" />
-			</section>
+			<xi:include href="chapters/chapter3/1-linear-transformations/3-1-lecture-notes.ptx" />
+			<xi:include href="chapters/chapter3/2-basic-operations/3-2-lecture-notes.ptx" />
+			<xi:include href="chapters/chapter3/3-multiplication/3-3-lecture-notes.ptx" />
+			<xi:include href="chapters/chapter3/4-inverses/3-4-lecture-notes.ptx" />
+			<xi:include href="chapters/chapter3/5-determinants/3-5-lecture-notes.ptx" />
+			<xi:include href="chapters/chapter3/6-matrix-subspaces/3-6-lecture-notes.ptx" />
 		</chapter>
 
-		<chapter><!--Eigenvalues, eigenvectors, and Diagonalization-->
+
+		<chapter xml:id="chapt-4"><!--Eigenstuff-->
 			<title>
 				Eigenvalues, Eigenvectors, and Diagonalization
 			</title>
-			<section xml:id="sec-intro-eigenvalues-eigenvectors"> <!--Sec 4.1 in Poole-->
-			<xi:include href="chapters/chapter4/1-eigenvalues-eigenvectors/4-1-lecture-notes.ptx" />
-			<xi:include href="chapters/chapter4/1-eigenvalues-eigenvectors/4-1-exercises.ptx" />
-			</section>
+			<introduction>
 
-			<section xml:id="sec-determinants"><!--Sec 4.2 in Poole-->
-			<xi:include href="chapters/chapter4/2-determinants/4-2-lecture-notes.ptx" />
-			<xi:include href="chapters/chapter4/2-determinants/4-2-exercises.ptx" />
-			</section> 
-				
-			<section xml:id="sec-eigenvalues-eigenvectors-n-matrices"><!--Sec 4.3 in Poole-->
-			<xi:include href="chapters/chapter4/3-eigenvalues-eigenvectors-of-n-by-n-matrices/4-3-lecture-notes.ptx" />
-			<xi:include href="chapters/chapter4/3-eigenvalues-eigenvectors-of-n-by-n-matrices/4-3-exercises.ptx" />	
-			</section>
-	</chapter>
+			</introduction>
 
-		<chapter xml:id="chap-ortho"><!--Orthogonality-->
+			<xi:include href="chapters/chapter4/1-eigenvalues/4-1-lecture-notes.ptx" />
+			<xi:include href="chapters/chapter4/2-diagonalization/4-2-lecture-notes.ptx" />
+		</chapter>
+
+		<chapter xml:id="chapt-5"><!--Orthogonality-->
 			<title>
-				Orthogonality
+				Vector Geometry Revisited
 			</title>
 
-			<section xml:id="sec-orthogonality"><!--Sec 5.1 in Poole-->
 			<xi:include href="chapters/chapter5/1-orthogonality/5-1-lecture-notes.ptx" />
-			<xi:include href="chapters/chapter5/1-orthogonality/5-1-exercises.ptx" />	
-			</section>
 		</chapter>
+
 		<xi:include href="backmatter.ptx" />
 
 	</book>

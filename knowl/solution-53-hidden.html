@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-07-02T11:52:05-07:00       *-->
+<!--*       on 2021-07-02T14:30:54-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,11 +13,99 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><ol class="lower-alpha">
-<li>The equation  \(2x -3y + 4z = -10 \) is a linear equation because it is of the form given in <a class="xref" data-knowl="./knowl/def-linear-equation.html" title="Hint 2.1.1.1">Hint 2.1.1.1</a> where \(2, -3, 4, -10 \) are scalars and \(x,y, z \) are variables.</li>
-<li>The equation  \(2.123x_1+5.541x_2-9.101x_3 = 11.012\) is a linear equation because it is of the form given in <a class="xref" data-knowl="./knowl/def-linear-equation.html" title="Hint 2.1.1.1">Hint 2.1.1.1</a> where \(2.123, 5.541, 9.101, 11.012 \) are scalars and \(x_1,x_2, x_3 \) are variables.</li>
-<li>The equation  \(x^2 +y^2 +z^2 =1\) is a not a linear equation because it is not of the form given in <a class="xref" data-knowl="./knowl/def-linear-equation.html" title="Hint 2.1.1.1">Hint 2.1.1.1</a>.  The equation contains the variables \(x,y, z \) squared.</li>
-<li>The equation  \(\frac{1}{\sqrt{2}}x+4^3y = \sin\left(\frac{\pi}{3} \right)\) is a liner equation because it is of the form given in <a class="xref" data-knowl="./knowl/def-linear-equation.html" title="Hint 2.1.1.1">Hint 2.1.1.1</a> where \(\frac{1}{\sqrt{2}}, 4^3,  \sin\left(\frac{\pi}{3}\right)\) are scalars and \(x,y \) are variables.</li>
-<li>The equation  \(x +yz =3\) is a not a liner equation because it is not of the form given in <a class="xref" data-knowl="./knowl/def-linear-equation.html" title="Hint 2.1.1.1">Hint 2.1.1.1</a>.  The equation contains a product of the variables \(y, z. \)</li>
-</ol></div></body>
+<body><div class="solution solution-like">First, we have to find out in which point the two lines meet. (If they do not meet, then they are skew lines since they are clearly not parallel. In this case, they are not in the same plane.) In other words, we are looking for two real numbers \(s, t\) such that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix} +s\begin{bmatrix} 1 \\ -1\\ 3 \end{bmatrix}
+=
+\begin{bmatrix} 0 \\ -2\\ 5 \end{bmatrix} +t\begin{bmatrix} 2 \\ 1\\ -1 \end{bmatrix}
+.
+\end{equation*}
+</div>Componentwise, this vector equation means:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+3 + s = 2t;\;
+1 - s = -2+t;\;
+3s = 5 - t.
+\end{equation*}
+</div>The second equation says \(t=3-s\text{,}\) which we plug into the other equations to get \(s = 1\text{.}\) We conclude that the two lines meet in the point \((4,0,3)\) because<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{bmatrix} 3 \\ 1\\ 0 \end{bmatrix} +1\begin{bmatrix} 1 \\ -1\\ 3 \end{bmatrix}
+=\begin{bmatrix} 4 \\ 0\\ 3 \end{bmatrix}
+.
+\end{equation*}
+</div>Since the two lines are not parallel, their directional vectors span the plane that contains them, so we arrive at the following vector equation of the plane,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{bmatrix} 
+x_1 \\ x_2 \\ x_3
+\end{bmatrix}
+=
+\begin{bmatrix} 
+4 \\ 0\\ 3
+\end{bmatrix}
++
+r
+\begin{bmatrix}
+1 \\ -1\\ 3 
+\end{bmatrix}
++
+q
+\begin{bmatrix}
+2 \\ 1\\ -1
+\end{bmatrix}
+,
+\end{equation*}
+</div>which means in parametric form:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+x_1 =  4 + r + 2q
+;
+x_2 =  -r+q
+;
+x_3 = 3 +3r -q
+.
+\end{equation*}
+</div>For the normal form, we form the cross product of the two directional vectors to find a normal vector (see <a class="xref" data-knowl="./knowl/hint-def-cross-product-and-it-is-normal.html" title="Hint 1">Hint 1</a>):<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mbf{n}
+=
+\begin{bmatrix}
+1 \\ -1\\ 3 
+\end{bmatrix}
+\times
+\begin{bmatrix}
+2 \\ 1\\ -1
+\end{bmatrix}
+=
+\begin{bmatrix}
+(-1) \cdot (-1)-3 \cdot 1\\
+3 \cdot 2-1 \cdot (-1)\\
+1 \cdot 1-(-1) \cdot 2
+\end{bmatrix}
+=
+\begin{bmatrix}
+-2\\
+7\\
+3
+\end{bmatrix}
+.
+\end{equation*}
+</div>We now only need a point on the plane, say \((4,0,3)\text{,}\) to give the normal form \(\mbf{n}\cdot\vect{PX}=0\) explicitly:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{bmatrix}
+-2\\
+7\\
+3
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+x_1 - 4\\
+x_2 \\
+x_3 - 3
+\end{bmatrix}
+.
+\end{equation*}
+</div>The general form can then be computed to be:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+-2x_1 + 7x_2 + 3 x_3 = 1.
+\end{equation*}
+</div>
+</div></body>
 </html>

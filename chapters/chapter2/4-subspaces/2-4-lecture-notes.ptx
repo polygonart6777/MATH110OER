@@ -1,0 +1,8 @@
+<section xml:id="sec-Subspaces" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+	<title>
+		Subspaces of <m>\mathbb{R}^n</m>
+	</title>
+
+	<xi:include href="2-4-exercises.ptx" />
+</section>

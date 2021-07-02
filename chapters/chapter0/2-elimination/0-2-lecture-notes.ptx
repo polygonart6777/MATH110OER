@@ -1,0 +1,8 @@
+<section xml:id="sec-Elimination" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+	<title>
+		Gauss-Jordan elimination
+	</title>
+
+	<xi:include href="0-2-exercises.ptx" />
+</section>

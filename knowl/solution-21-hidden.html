@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-07-02T11:52:01-07:00       *-->
+<!--*       on 2021-07-02T14:30:50-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,52 +13,70 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like">
-<p xmlns:svg="http://www.w3.org/2000/svg">According to the <a class="xref" data-knowl="./knowl/cosine-formula.html" title="Hint 1.2.5.5.1">Cosine Formula 1.2.5.5.1</a>, we have to compute the norm of the vectors and their dot product:</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-\norm{\mbf{u}}
-\amp =
-\sqrt{\mbf{u}\cdot\mbf{u}}
-=
-\sqrt{ 1^2 + (-2)^2 + 1^2}
-=
-\sqrt{6}\\
-\norm{\mbf{v}}
-\amp =
-\sqrt{\mbf{v}\cdot\mbf{v}}
-=
-\sqrt{ 1^2 + 2^2 + (-7)^2}
-=
-\sqrt{54}\\
-\mbf{u}\cdot\mbf{v}
-\amp =
-1\cdot 1 + (-2)\cdot 2 + 1\cdot (-7)
-=
--10
-\end{align*}
-</div>
-<p xmlns:svg="http://www.w3.org/2000/svg">Therefore,</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+<body><div class="solution solution-like">We want to find real numbers \(c_1, c_2, c_3\) such that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\cos (\theta)
+\mbf{v}
 =
-\frac{ \mbf{u}\cdot \mbf{v}}{ \norm{\mbf{u}}\cdot \norm{\mbf{v}}}
-=
-\frac{-10}{ \sqrt{6}\cdot \sqrt{54}}
-=
-\frac{-10}{18}
-=
-\frac{-5}{9}
-\end{equation*}
-</div>
-<p xmlns:svg="http://www.w3.org/2000/svg">and</p>
-<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\theta
-=\mathrm{arcos} \left(\frac{-5}{9}\right)
+c_1 \mathbf{u}_1
++
+c_2 \mathbf{u}_2
++
+c_3 \mathbf{u}_3
 .
 \end{equation*}
-</div>
-</div></body>
+</div>We compute the right-hand side:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+c_1 \mathbf{u}_1
++
+c_2 \mathbf{u}_2
++
+c_3 \mathbf{u}_3
+\amp =
+c_1 \begin{bmatrix} 3\\ 1 \\ -1 \end{bmatrix} 
++
+c_2 \begin{bmatrix} 8\\ 0 \\ -1 \end{bmatrix} 
++
+c_3 \begin{bmatrix} 2\\ -2 \\ 1 \end{bmatrix} \\
+\amp =
+\begin{bmatrix} c_1 3\\ c_1  \\ -c_1  \end{bmatrix} 
++
+\begin{bmatrix} c_2 8\\ 0 \\ -c_2 \end{bmatrix} 
++
+\begin{bmatrix} c_3 2\\ c_3(-2) \\ c_3 \end{bmatrix} \\
+\amp =
+\begin{bmatrix} c_1 3 + c_2 8 + c_3 2\\ c_1  +0 - c_3 2\\ -c_1  -c_2 +c_3 \end{bmatrix} 
+\end{align*}
+</div>We want this to equal \(\mbf{v}\text{,}\) i.e. we want<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{bmatrix} 4 \\ 4 \\ 4  \end{bmatrix} 
+=
+\begin{bmatrix} c_1 3 + c_2 8 + c_3 2\\ c_1  +0 - c_3 2\\ -c_1  -c_2 +c_3 \end{bmatrix} 
+.
+\end{equation*}
+</div>In other words, we need<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+4 \amp =c_1 3 + c_2 8 + c_3 2\notag\\
+4 \amp = c_1 - c_3 2\tag{2.1.13}\\
+4 \amp = -c_1  -c_2 + c_3\notag
+\end{align}
+</div>The <a class="xref" data-knowl="./knowl/ex-lin-comb-of-vecs2-eq1.html" title="Equation 2.1.13">second equation (2.1.13)</a> yields \(c_1 = 4 + c_3 2\text{.}\) Plugging this into the other two equations, we get:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align}
+4 \amp =(4 + c_3 2) 3 + c_2 8 + c_3 2\tag{2.1.14}\\
+4 \amp = -(4 + c_3 2)  -c_2  + c_3\tag{2.1.15}
+\end{align}
+</div>The <a class="xref" data-knowl="./knowl/ex-lin-comb-of-vecs2-eq2.html" title="Equation 2.1.14">first equation (2.1.14)</a> yields:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+4
+=(4 + c_3 2) 3 + c_2 8 + c_3 2
+=12 + c_3 6 + c_2 8 + c_3 2
+=12 +  c_2 8 + c_3 8,
+\end{equation*}
+</div>i.e. \(c_2 = -1 - c_3\text{.}\)	Plugging this, in turn, into the <a class="xref" data-knowl="./knowl/ex-lin-comb-of-vecs2-eq3.html" title="Equation 2.1.15">last remaining equation (2.1.15)</a> yields:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+4
+= -(4 + c_3 2)  -c_2  + c_3
+= -4 - c_3 2  -(-1 - c_3)  + c_3
+= -3.
+\end{equation*}
+</div>Since this is false, we conclude: No, the vector \(\mbf{v}\) is not a linear combination of the vectors \(\mbf{u}_1\text{,}\) \(\mbf{u}_2\text{,}\) and \(\mbf{u}_3\text{.}\)</div></body>
 </html>

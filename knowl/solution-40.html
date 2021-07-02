@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-07-02T11:52:04-07:00       *-->
+<!--*       on 2021-07-02T14:30:52-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -17,111 +17,47 @@
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
 <span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
-</h6>Two planes are parallel if and only if they have the same normal vectors. Therefore, we should first find a  normal vector to the plane whose general equation is given: If we chose <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">Our line can be described by \(\mbf{x} = \vect{OP} + t\vect{PQ}\) since this makes sure that, for \(t=0\text{,}\) our line passes through \(P\text{,}\) and for \(t=1\text{,}\) it passes through \(Q\text{.}\) The vector equation is therefore given by</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\mbf{n}
+\mbf{x}
 =
-\begin{bmatrix}
-3 \\
--2 \\
--1
-\end{bmatrix},
-\end{equation*}
-</div> then the given general form is equivalent to <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\mbf{n}
-\cdot\mbf{x}
-=0,
-\end{equation*}
-</div> so \(\mbf{n}\) is indeed a normal vector. With this at hand, any point \(X=(x_1,x_2,x_3)\) on the plane whose normal form we are after can be described by \(\mbf{n}\cdot\vect{PX}=0\text{,}\) or more explicitly: <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\begin{bmatrix}
-3 \\
--2 \\
--1
-\end{bmatrix}
-\cdot
+\begin{bmatrix} 
+3\\-1\\4
+\end{bmatrix} 
++
+t
 \left(
-\mbf{x}
+\begin{bmatrix} 
+1\\0\\-1
+\end{bmatrix} 
 -
-\begin{bmatrix}
-2 \\
-- 3 \\
-5
-\end{bmatrix}
+\begin{bmatrix} 
+3\\-1\\4
+\end{bmatrix} 
 \right)
-=0
+=
+\begin{bmatrix} 
+3\\-1\\4
+\end{bmatrix} 
++
+t
+\begin{bmatrix} 
+-2\\1\\-5
+\end{bmatrix} 
+,
 \end{equation*}
-</div> To get the general form, we have to compute the dot product on the left-hand side and rearrange: <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">The parametric form is therefore given by</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-3x_{1} - 2 x_{2} - x_{3}							
-= 7.
-\end{equation*}
-</div> For the vector form, we need two <em xmlns:svg="http://www.w3.org/2000/svg" class="emphasis">non-parallel</em> vectors \(\mbf{u}\text{,}\) \(\mbf{v}\) which are orthogonal to \(\mbf{n}\text{,}\) i.e. they need to satisfy <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\mbf{u}\cdot \begin{bmatrix}
-3 \\
--2 \\
--1
-\end{bmatrix}
-=
-0
-\text{ and }
-\mbf{v}\cdot \begin{bmatrix}
-3 \\
--2 \\
--1
-\end{bmatrix}
-=
-0.
-\end{equation*}
-</div> For example, <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\mbf{u}
-=
-\begin{bmatrix}
-0 \\
-1 \\
--2
-\end{bmatrix}
-\text{ and }
-\mbf{v}
-=
-\begin{bmatrix}
-2 \\
-3 \\
-0
-\end{bmatrix}
-\end{equation*}
-</div> work. Therefore, the vector equation of the plane is <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\mbf{x}
-=
-\vect{OP}
-+t\mbf{u}
-+s\mbf{v}
-=
-\begin{bmatrix}
-2\\-3\\5
-\end{bmatrix}
-+t\begin{bmatrix}
-0 \\
-1 \\
--2
-\end{bmatrix}
-+s\begin{bmatrix}
-2 \\
-3 \\
-0
-\end{bmatrix}
-\end{equation*}
-</div> and so the parametric equations are <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-x_1 =  2 +2s
+x_1 = 3 - 2t
 ;
-x_2 =  -3 + t + 3s
+x_2 = -1 + t
 ;
-x_3 =  5 -2t.
+x_3 = 4 - 5t
+.
 \end{equation*}
 </div>
 </div>

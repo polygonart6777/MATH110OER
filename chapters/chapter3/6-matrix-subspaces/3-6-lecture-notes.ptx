@@ -1,0 +1,8 @@
+<section xml:id="sec-Matrix-Subspaces" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+	<title>
+		Subspaces associated to matrices
+	</title>
+
+	<xi:include href="3-6-exercises.ptx" />
+</section>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-07-02T11:52:02-07:00       *-->
+<!--*       on 2021-07-02T14:30:52-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -15,7 +15,19 @@
 </head>
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
-<p xmlns:svg="http://www.w3.org/2000/svg">The parametric form is therefore given by</p>
+<p>To obtain a normal equation we need to find a normal vector for the plane, that is, a vector that is orthogonal to both of the two direction vectors we have.  If you know about the cross product you can take \(\vec{n} = \vec{d_1}\times\vec{d_2}\text{.}\)  Alternatively, if \(\vec{n} = \begin{bmatrix}a\\b\\c\end{bmatrix}\) then we need \(0 = \vec{n}\cdot\vec{d_1} = a+2b\) and \(0 = \vec{n}\cdot\vec{d_2} = -a-2c\text{,}\) yielding a system of equations we can solve.  Regardless of which method we use to find \(\vec{n}\text{,}\) the only possible choices for \(\vec{n}\) are multiples of \(\vec{n} = \begin{bmatrix}2\\-1\\-1\end{bmatrix}\text{.}\)  We then choose \(\vec{p} = \begin{bmatrix}1\\2\\1\end{bmatrix}\) (but any other point on the plane would also be fine), to get the normal equation</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\begin{bmatrix}2\\-1\\-1\end{bmatrix}\cdot\begin{bmatrix}x\\y\\z\end{bmatrix} = \begin{bmatrix}2\\-1\\-1\end{bmatrix}\cdot\begin{bmatrix}1\\2\\1\end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<p class="continuation">If we expand the dot products we get the general equation</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+2x-y-z = -1\text{.}
+\end{equation*}
+</div>
+<p class="continuation">You can verify that this equation is correct by checking that the points \(P, Q, R\) all satisfy the equation.</p>
 <span class="incontext"><a href="sec-Lines-and-Planes.html#p-327">in-context</a></span>
 </body>
 </html>

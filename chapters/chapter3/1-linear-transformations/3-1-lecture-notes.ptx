@@ -1,0 +1,8 @@
+<section xml:id="sec-LinearTransformations" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+	<title>
+		Linear transformations
+	</title>
+
+	<xi:include href="3-1-exercises.ptx" />
+</section>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-07-02T11:52:04-07:00       *-->
+<!--*       on 2021-07-02T14:30:53-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -17,133 +17,44 @@
 <div class="solution solution-like">
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading">
 <span class="type">Solution</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span>
-</h6>First, we have to find out in which point the two lines meet. (If they do not meet, then they are skew lines since they are clearly not parallel. In this case, they are not in the same plane.) In other words, we are looking for two real numbers \(s, t\) such that<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</h6>
+<p xmlns:svg="http://www.w3.org/2000/svg">First, let us find a directional vector for the line whose parametric equations are given. For \(t=0\text{,}\) that line passes through the point \(Q=(2,1,0)\) and for \(t=1\text{,}\) it passes through \(R=(1,1,1)\text{.}\) Therefore, the vector</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
+\vect{QR}=
 \begin{bmatrix} 
-1 \\ -1\\ 2
-\end{bmatrix}
-+
-s
-\begin{bmatrix}
-1 \\ 1\\ 1
-\end{bmatrix}
+1-2 \\ 1-1 \\ 1-0
+\end{bmatrix} 
 =
-\begin{bmatrix}
-0 \\ 0\\ 2
-\end{bmatrix}
+\begin{bmatrix} 
+-1 \\ 0 \\ 1
+\end{bmatrix} 			 		
+\end{equation*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">gives the direction of said line.</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">The vector equation of the line in question is therefore given by</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\mbf{x}
+=
+\begin{bmatrix} 
+2 \\ -1 \\ 1
+\end{bmatrix} 
 +
 t
-\begin{bmatrix} 1 \\ -1\\ 0 \end{bmatrix}
-.
-\end{equation*}
-</div>Componentwise, this vector equation means:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-1 + s = t;\;
--1 + s = -t;\;
-2 + s = 2.
-\end{equation*}
-</div>The last equation yields \(s=0\) and both other equations then yield \(t =  1\text{.}\) We conclude that the two lines meet in the point \((1,-1,2)\) because<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
 \begin{bmatrix} 
-1 \\ -1\\ 2
-\end{bmatrix}
-+
-0
-\begin{bmatrix}
-1 \\ 1\\ 1
-\end{bmatrix}
-=
-\begin{bmatrix}
-0 \\ 0\\ 2
-\end{bmatrix}
-+
-1
-\begin{bmatrix} 1 \\ -1\\ 0 \end{bmatrix}
-=
-\begin{bmatrix} 
-1 \\ -1\\ 2
-\end{bmatrix}
-.
+-1 \\ 0 \\ 1
+\end{bmatrix} 
 \end{equation*}
-</div>Since the two lines are not parallel, their directional vectors span the plane that contains them, so we arrive at the following vector equation of the plane,<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">The parametric form is therefore given by</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{equation*}
-\begin{bmatrix} 
-x_1 \\ x_2 \\ x_3
-\end{bmatrix}
-=
-\begin{bmatrix} 
-1 \\ -1\\ 2
-\end{bmatrix}
-+
-r
-\begin{bmatrix}
-1 \\ 1\\ 1
-\end{bmatrix}
-+
-q
-\begin{bmatrix}
-1 \\ -1\\ 0
-\end{bmatrix}
-,
-\end{equation*}
-</div>which means in parametric form:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-x_1 = 1 + r + q
+x_1 = 2-t
 ;
-x_2 = -1 + r - q
+x_2 = -1
 ;
-x_3 = 2 + r
-.
-\end{equation*}
-</div>For the normal form, we form the cross product of the two directional vectors to find a normal vector (see <a class="xref" data-knowl="./knowl/hint-def-cross-product-and-it-is-normal.html" title="Hint 1">Hint 1</a>):<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\mbf{n}
-=
-\begin{bmatrix}
-1 \\ 1\\ 1
-\end{bmatrix}
-\times
-\begin{bmatrix}
-1 \\ -1\\ 0
-\end{bmatrix}
-=
-\begin{bmatrix}
-1 \cdot 0 -1 \cdot (-1)\\
-1 \cdot 1 - 1 \cdot 0\\
-1 \cdot (-1) -1 \cdot 1
-\end{bmatrix}
-=
-\begin{bmatrix}
-1\\
-1\\
--2
-\end{bmatrix}
-.
-\end{equation*}
-</div>We now only need a point on the plane, say \((1 , -1 ,2)\text{,}\) to give the normal form \(\mbf{n}\cdot\vect{PX}=0\) explicitly:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-\begin{bmatrix}
-1\\
-1\\
--2
-\end{bmatrix}
-\cdot
-\left(
-\begin{bmatrix}
-x_1 - 1\\
-x_2 + 1\\
-x_3 - 2
-\end{bmatrix}
-\right)
-=
-0
-.
-\end{equation*}
-</div>The general form can then be computed to be:<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{equation*}
-x_1 + x_2 - 2 x_3
-=
--4
+x_3 = 1+t
 .
 \end{equation*}
 </div>

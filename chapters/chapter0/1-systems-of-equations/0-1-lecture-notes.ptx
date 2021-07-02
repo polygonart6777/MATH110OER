@@ -1,0 +1,8 @@
+<section xml:id="sec-FirstSLE" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+	<title>
+		Systems of linear equations
+	</title>
+
+	<xi:include href="0-1-exercises.ptx" />
+</section>

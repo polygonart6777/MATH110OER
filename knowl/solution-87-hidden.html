@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-07-02T11:52:08-07:00       *-->
+<!--*       on 2021-07-02T14:27:04-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -13,15 +13,56 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution solution-like"><ol class="lower-alpha">
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-88-hidden.html" title="Solution 3.1.1.a.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-89-hidden.html" title="Solution 3.1.1.b.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-90-hidden.html" title="Solution 3.1.1.c.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-91-hidden.html" title="Solution 3.1.1.d.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-92-hidden.html" title="Solution 3.1.1.e.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-93-hidden.html" title="Solution 3.1.1.f.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-94-hidden.html" title="Solution 3.1.1.g.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-95-hidden.html" title="Solution 3.1.1.h.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-<li><a class="solution-knowl original" data-knowl="./knowl/solution-96-hidden.html" title="Solution 3.1.1.i.1"><span xmlns:svg="http://www.w3.org/2000/svg" class="type">Solution</span></a></li>
-</ol></div></body>
+<body><div class="solution solution-like">
+<p xmlns:svg="http://www.w3.org/2000/svg">We row reduce:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\matr{cc|c}{ 
+1 \amp  h \amp  2
+\\
+2 \amp  4 \amp  k
+}
+\overset{-2R_{1}+R_{2}}{\longrightarrow}
+\matr{cc|c}{ 
+1 \amp  h \amp  2
+\\
+0 \amp  4-2h \amp  k-4
+}.
+\end{equation*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">For there to be <em class="emphasis">one solution</em>, we need \(4-2h \neq 0\) (i.e. \(h \neq 2\)), so that the system is exactly determined. In that case, we can continue reducing:</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{align*}
+\matr{cc|c}{ 
+1 \amp  h \amp  2
+\\
+0 \amp  4-2h \amp  k-4
+}
+\overset{\frac{1}{4-2h}R_{2}}{\longrightarrow}
+\amp\matr{cc|c}{ 
+1 \amp  h \amp  2
+\\
+0 \amp  1 \amp  \frac{k-4}{4-2h}
+}\\
+\overset{-hR_{2}+R_{1}}{\longrightarrow}
+\amp\matr{cc|c}{ 
+1 \amp  0 \amp  2 - h \frac{k-4}{4-2h}
+\\
+0 \amp  1 \amp  \frac{k-4}{4-2h}
+}.
+\end{align*}
+</div>
+<p xmlns:svg="http://www.w3.org/2000/svg">The unique solution is therefore given by \(\left(2 - h \frac{k-4}{4-2h}, \frac{k-4}{4-2h}\right)\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">For there to be <em class="emphasis">no solution</em>, we need that \(4-2h = 0 \) while \(k-4 \neq 0\text{,}\) because then, the last row of the matrix reads as \(0x + 0y = k-4 \neq 0\text{,}\) i.e. \(0\neq 0\text{,}\) which is false. In other words, the system is inconsistent if and only if \(h = 2\) and \(k\neq 4\text{.}\)</p>
+<p xmlns:svg="http://www.w3.org/2000/svg">For there to be <em class="emphasis">infinitely many solutions</em>, we need \(4-2h = 0 \) and \(k-4 = 0\text{,}\) so that the last line reads as  \(0x + 0y = 0\text{,}\) which is always true. In other words, if  \(h = 2\) and \(k = 4\text{,}\) then the solution set is given by</p>
+<div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
+\begin{equation*}
+\left\{
+(2-hy,y)
+\,\vert\,
+y\in\mathbb{R}
+\right\}.
+\end{equation*}
+</div>
+</div></body>
 </html>

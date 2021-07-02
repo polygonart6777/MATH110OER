@@ -1,1 +1,8 @@
-<title> Orthogonality </title>
+<section xml:id="sec-Ortho" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+	<title>
+		Orthogonality
+	</title>
+
+	<xi:include href="5-1-exercises.ptx" />
+</section>

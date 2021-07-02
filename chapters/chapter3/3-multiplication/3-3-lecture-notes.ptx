@@ -1,0 +1,8 @@
+<section xml:id="sec-Multiplication" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+	<title>
+		Matrix multiplication
+	</title>
+
+	<xi:include href="3-3-exercises.ptx" />
+</section>

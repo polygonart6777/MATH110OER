@@ -6,7 +6,7 @@
 					<institution>University of Victoria</institution>
 					<email>eaglec@uvic.ca</email>
 				</author>
-				<date>September 2019</date>
+				<date>September 2021</date>
 			</titlepage>
 
 			<acknowledgement>
@@ -14,14 +14,15 @@
 				<p>The creation of this resource was financially supported by the University of Victoria Open Educational Resources Grant.</p>
 			</acknowledgement>
 			<introduction>
-				<p> This is a collection of practice problems designed to assist students in Math 110.  These problems have been obtained from a variety of openly available textbooks (see <xref ref="ref-references"/>). </p>
+				<p>This is a set of lecture notes, together with practice problems, for students taking Math 110 at the University of Victoria.</p>
+				<p>The lecture notes are based on the lectures given by Christopher Eagle. </p>
+				<p>The practice problems have been obtained from a variety of openly available textbooks (see <xref ref="ref-references"/>). </p>
 				<p>Each question provides a link to the original source of the question.  The hints, answers, and solutions are new: If you spot any errors, please contact <email>eaglec@uvic.ca</email> so we can correct them!</p>
-				<p>Additional problems can be found in the course textbook, which is <xref ref="ref-DP" />.</p>
 			</introduction>
 			<colophon>	 
 				<copyright>
 					<holder>Christopher Eagle</holder>
-		 			<year>2019</year>
+		 			<year>2021</year>
 		 			<shortlicense>Creative Commons BY-SA-NC</shortlicense>
 				</copyright>
 		 	</colophon>
