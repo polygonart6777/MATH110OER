@@ -63,18 +63,34 @@
 
 		<subsection>
 			<title> Length </title>
-			<p> Now that we have the basic properties of the dot product, we are ready to start exploring what it means.  We will start with a very special case, namely what happens when we take the dot product of a vector with itself.  We begin in <m>\mathbb{R}^2</m>. </p>
+			<p> Now that we have the basic properties of the dot product, we are ready to start exploring what it means.  We will start with the very special case of taking the dot product of a vector with itself.  We begin in <m>\mathbb{R}^2</m>. </p>
 			<example>
 				<p> Consider the vector <m>\vec{v} = \begin{bmatrix}2\\1\end{bmatrix}</m>.  In <xref ref="eg-dot-product-calculation" /> we calculated that <m>\vec{v} \cdot \vec{v} = 2^2+1^2 = 5</m>.
 					<figure>
 						<caption>Calculating the length of <m>\vec{v}</m></caption>
-						<!--<image>
+						<image>
 							<latex-image>
 								\begin{tikzpicture}
-							
+										\draw[thick] (0,-0.2) -- (0,1.1);
+										\draw[thick] (-0.2,0) -- (2.2,0);
+			
+										\draw[gray] (1,-0.2) -- (1,1.1);
+										\draw[gray] (-0.2, 1) -- (2.2,1);
+										\node[below] at (1,0) {$1$};
+										\node[left] at (0,1) {$1$};
+										
+										\draw[gray] (2,-0.2) -- (2,1.1);
+										\node[below] at (2,0) {$2$};
+									
+									
+										\draw[-Triangle, blue, very thick] (0, 0) -- (2, 1);
+
+										\draw [decorate,decoration={brace,amplitude=20pt, mirror}, red] (0,0) -- (2, 0)node [red, midway, below, yshift=-24pt] {Length $= 2$};
+										\draw [decorate,decoration={brace,amplitude=10pt, mirror}, red] (2,0) -- (2,1)node [red, midway, right, xshift = 10pt] {Length $= 1$};											
+										\draw [decorate,decoration={brace,amplitude=20pt}, blue] (0,0) -- (2,1)node [blue, midway, above, yshift=30pt] {Length $= \sqrt{2^2+1^2} = \sqrt{5}$};
 								\end{tikzpicture}
 							</latex-image>
-						</image>-->
+						</image>
 					</figure>
 				</p>
 				<p>
@@ -176,14 +192,34 @@
 			<p>Unless explicitly stated otherwise, all angles are measured in radians.</p>
 			<p>Consider two vectors, <m>\vec{v}</m> and <m>\vec{w}</m>, in <m>\mathbb{R}^2</m>.  Draw both vectors in standard position, and let <m>\theta</m> be the shorter of the two angles between the vectors (so <m>0 \leq \theta \leq \pi</m>).</p>
 			<figure>
-				<caption>The angle between <m>\vec{v}</m> and <m>\vec{w}</m>.</caption>
-				<!--<image>
+				<caption>$\theta$ is the angle between <m>\vec{v}</m> and <m>\vec{w}</m>, $\psi$ is not.</caption>
+				<image>
 					<latex-image>
 						\begin{tikzpicture}
-							
+							\draw[thick] (0,-3.2) -- (0,3.2);
+							\draw[thick] (-3.2,0) -- (3.2,0);
+							\foreach \x in{-3, -2,-1,1,2,3}
+							{
+								\draw[gray] (\x,-3.2) -- (\x,3.2);
+								\draw[gray] (-3.2, \x) -- (3.2,\x);
+								\node[below] at (\x,0) {$\x$};
+								\node[left] at (0,\x) {$\x$};
+							}
+		
+							\coordinate (O) at (0,0);
+							\coordinate (A) at (-2,1);
+							\coordinate (B) at (1,-3);
+			
+							\draw[-Triangle, blue, ultra thick] (0, 0) -- (-2, 1) node[midway, above right, blue] {$\overrightarrow{v}$};
+							\draw[-Triangle, blue, ultra thick] (0, 0) -- (1, -3) node[midway, below right, blue]{$\overrightarrow{w}$};
+
+							\tkzMarkAngle[size=0.5, blue](A,O,B)
+							\tkzLabelAngle[pos = 0.65, blue](A,O,B){$\theta$}
+							\tkzMarkAngle[size=0.7, red](B,O,A)
+							\tkzLabelAngle[pos = 0.85, red](B,O,A){$\psi$}
 						\end{tikzpicture}
 					</latex-image>
-				</image>-->
+				</image>
 			</figure>
 
 			<p>Using the cosine law, we get</p>
@@ -252,14 +288,19 @@
 			<p>If <m>\vec{w} = \begin{bmatrix}1\\0\end{bmatrix}</m> this is not difficult to do: Given <m>\vec{v} = \begin{bmatrix}x\\y\end{bmatrix}</m> we can write <me>\vec{v} = x\begin{bmatrix}1\\0\end{bmatrix}+ y\begin{bmatrix}0\\1\end{bmatrix} = x\vec{w}+ \begin{bmatrix}0\\y\end{bmatrix}</me>, and <m>\vec{w}\perp\begin{bmatrix}0\\y\end{bmatrix}</m>.  Our next goal is to generalize this idea to cases when <m>\vec{w}</m> is not necessarily along a coordinate axis.  As in previous sections, we begin in <m>\mathbb{R}^2</m> and then generalize to higher dimensions.</p>
 
 			<figure>
-				<caption>The orthogonal projection of one vector on another.</caption>
-				<!--<image>
+				<caption>The orthogonal projection of <m>\vec{v}</m> on <m>\vec{w}</m>.</caption>
+				<image>
 					<latex-image>
-						\begin{tikzpicture}
-							
+						\begin{tikzpicture}[rotate=30, transform shape]
+							\draw[-Triangle, blue, thick] (0, 0) -- (1,3) node[midway, above right, blue] {$\overrightarrow{v}$};
+							\draw[-Triangle, blue, thick] (0, 0) -- (4,0) node[midway, below right, blue]{$\overrightarrow{w}$};
+							\draw[dashed] (1,3) -- (1,0);
+							\draw (1,0.2)--(1.2,0.2);
+							\draw (1.2, 0.2)--(1.2,0);
+							\draw[-Triangle, red, ultra thick] (0, 0) -- (1, 0) node[midway, below, red]{$proj_{\overrightarrow{w}}(\overrightarrow{v})$};
 						\end{tikzpicture}
 					</latex-image>
-				</image>-->
+				</image>
 			</figure>
 			<p> From highschool geometry you know that the shortest distance from the tip of <m>\vec{v}</m> to the line following <m>\vec{w}</m> occurs at the point on that line where the angle made to the tip of <m>\vec{v}</m> is a right angle, as shown in the figure above.  The vector from the origin to this point, labelled as <m>\vec{p}</m> on the figure, is called the <em>orthogonal projection of <m>\vec{v}</m> on <m>\vec{w}</m></em>, and is often written as <m>\proj_{\vec{w}}(\vec{v})</m>. </p>
 			

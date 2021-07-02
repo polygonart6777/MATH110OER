@@ -35,13 +35,35 @@
 				<p> We once again consider the line <m>L</m> with general form equation <m>2x+y=5</m>.  Let <m>\vec{n} = \begin{bmatrix}2\\1\end{bmatrix}</m>, <m>\vec{v} = \begin{bmatrix}x\\y\end{bmatrix}</m>, and <m>\vec{p} = \begin{bmatrix}1\\3\end{bmatrix}</m>. </p>
 				<figure>
 					<caption>The line <m>2x+y=5</m> with the vectors <m>\vec{n}, \vec{v}, \vec{p}</m>.</caption>
-					<!--<image>
+					<image>
 						<latex-image>
-							\begin{tikzpicture}
-					
+							\begin{tikzpicture}[scale=2]
+								\draw[thick] (0,-0.2) -- (0,4.2);
+								\draw[thick] (-0.2,0) -- (4.2,0);
+								\foreach \x in{1,2,3,4}
+								{
+									\draw[gray] (\x,-0.2) -- (\x,4.2);
+									\draw[gray] (-0.2, \x) -- (4.2,\x);
+									\node[below] at (\x,0) {$\x$};
+									\node[left] at (0,\x) {$\x$};
+								}
+
+						
+								\draw[thick, blue] (0, 5) --  (3, -1) node[pos=0.2, above right]{$2x+y=5$};
+						
+								\draw[-Triangle, very thick, red] (0,0)--(2, 1) node[midway, below right]{$\overrightarrow{n}$};
+								\draw[-Triangle, very thick, olive] (0, 0) -- (1, 3) node[midway, above left]{$\overrightarrow{p}$};
+								\draw[-Triangle, very thick, violet] (0, 0)--(2.3, 0.4) node[midway, below right]{$\overrightarrow{v}$};
+								\draw[-Triangle, ultra thick, orange] (1, 3) -- (2.3, 0.4) node[midway, above right]{$\overrightarrow{v} - \overrightarrow{p}$};
+						
+								\filldraw[olive] (1, 3) circle (0.04);
+								\node[below right, olive] at (1, 3) {$(1, 3)$};
+								
+								\filldraw[violet] (2.3, 0.4) circle (0.04);
+								\node[right, violet] at (2.3, 0.4) {$(x, y)$};
 							\end{tikzpicture}
 						</latex-image>
-					</image>-->
+					</image>
 				</figure>
 				<p> We can see from the image that <m>\vec{n}</m> is orthogonal to the direction of the line <m>L</m>.  Moreover, if <m>(x, y)</m> is a point on <m>L</m> then <m>\vec{v} - \vec{p}</m> is a vector in the direction of <m>L</m>.  Thus <m>\vec{v}-\vec{p} \perp \vec{n}</m>, meaning <m>(\vec{v} - \vec{p})\cdot \vec{n} = 0</m>.  Expanding this and rearranging we get <m>\vec{n}\cdot\vec{v} = \vec{n}\cdot\vec{p}</m>.  The left side expands to <m>2x+y</m>, and the right side expands to <m>5</m>. </p>
 				<p>As an exercise, take a moment to verify that if you take <m>\vec{p}</m> to be the vector to another point on the line (instead of <m>(1, 3)</m>) then it is still true that <m>\vec{p}\cdot\vec{n} = 5</m>.</p>
