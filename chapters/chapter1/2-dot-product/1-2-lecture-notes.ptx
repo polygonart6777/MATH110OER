@@ -297,7 +297,7 @@
 							\draw[dashed] (1,3) -- (1,0);
 							\draw (1,0.2)--(1.2,0.2);
 							\draw (1.2, 0.2)--(1.2,0);
-							\draw[-Triangle, red, ultra thick] (0, 0) -- (1, 0) node[midway, below, red]{$proj_{\overrightarrow{w}}(\overrightarrow{v})$};
+							\draw[-Triangle, red, ultra thick] (0, 0) -- (1, 0) node[midway, below, red]{$\overrightarrow{p}$};
 						\end{tikzpicture}
 					</latex-image>
 				</image>
