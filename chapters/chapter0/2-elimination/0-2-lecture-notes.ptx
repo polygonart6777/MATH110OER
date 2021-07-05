@@ -4,5 +4,196 @@
 		Gauss-Jordan elimination
 	</title>
 
+	<subsection>
+		<title>
+			The method of elimination
+		</title>
+		<p> In the previous section we saw examples of solving systems of linear equations using substitution.  Our goal is now to study a more efficient method of solving systems of linear equations, the method of <emph>elimination</emph>.</p>
+		<p> The central observation is that there are some things we can do to the equations in a system of linear equations that can make the equations easier to work with, while not changing the solutions.</p>
+		<definition xml:id="def-system-equivalent">
+			<p> Two systems of linear equations in the same variables are called <emph>equivalent</emph> if they have exactly the same solutions; that is, if a point is a solution to one system then it is a solution to the other, and if a point is not a solution to one of the systems then it is not a solution to the other.</p>
+		</definition>
+		<p>It turns out that to change a system into an equivalent system there are only three things that we will need to do:
+		<ul>
+			<li> Switch the order in which we write two equations. </li>
+			<li> Multiply an equation by a non-zero constant. </li>
+			<li> Add a multiple of one equation to another equation, replacing the equation that we are adding into. </li>
+		</ul>
+		</p>
+		<fact xml:id="fact-equation-operations">
+			<p> Applying any of the three operations above to a system of linear equations produces a new system of linear equations this is equivalent to the original system. </p>
+		</fact>
+		<p>The idea of elimination is to repeatedly use the three operations above until we reach a new system of equations that is easier to solve.  The name <emph>elimination</emph> comes from the fact that our strategy is to <emph>eliminate</emph> variables from the equations so that (for example) the first variable ends up appearing only in the first equation.  The best way to understand the process is through an example.</p>
+		<example xml:id="ex-solve-system-by-elimination">
+			<p> Consider this system of equations:</p>
+			<md>
+				<mrow>x+2y-z=3</mrow>
+				<mrow>x-y+z=1</mrow>
+				<mrow>-2x-z=0</mrow>
+			</md>
+			<p> If we add <m>(-1)</m> times the first equation to the second equation, and replace the second equation by the result, we obtain the following system: </p>
+			<md>
+				<mrow>x+2y-z=3</mrow>
+				<mrow>-3y+2z=-2</mrow>
+				<mrow>-2x-z=0</mrow>
+			</md>
+			<p>Notice that only the second equation has changed.  Now let's add <m>2</m> times the first equation to the third equation.  We get: </p>
+			<md>
+				<mrow>x+2y-z=3</mrow>
+				<mrow>-3y+2z=-2</mrow>
+				<mrow>4y-3z=6</mrow>
+			</md>
+			<p>We've made progress - the variable <m>x</m> now appears only in the first equation!  To continue, let's multiply the second equation by <m>-1/3</m>:</p>
+			<md>
+				<mrow>x+2y-z=3</mrow>
+				<mrow>y-\frac{2}{3}z=\frac{2}{3}</mrow>
+				<mrow>4y-3z=6</mrow>
+			</md>
+			<p>Now we'll add <m>-4</m> times the second equation to the third equation.</p>
+			<md>
+				<mrow>x+2y-z=3</mrow>
+				<mrow>y-\frac{2}{3}z=\frac{2}{3}</mrow>
+				<mrow>-\frac{1}{3}z = \frac{10}{3}</mrow>
+			</md>
+			<p>And next, to clean things up a bit, we'll multiply the third equation by <m>-3</m>.</p>
+			<md>
+				<mrow>x+2y-z=3</mrow>
+				<mrow>y-\frac{2}{3}z = \frac{2}{3}</mrow>
+				<mrow>z = -10</mrow>
+			</md>
+			<p>Now we've accomplished something really useful!  Since the system we've arrived at has the same solutions as the original solution, we can see from here that any solution to the original system has <m>z=-10</m>.  We could now subsitute <m>z=-10</m> into the first two equations, or we can continue with elimination.  For the purposes of this example, let's continue with elimination.  For our next move, we'll add <m>2/3</m> times the third equation to the second equation.</p>
+			<md>
+				<mrow>x+2y-z=3</mrow>
+				<mrow>y=-6</mrow>
+				<mrow>z=-10</mrow>
+			</md>
+			<p>Now let's add the third equation into the first: </p>
+			<md>
+				<mrow>x+2y=-7</mrow>
+				<mrow>y=-6</mrow>
+				<mrow>z=-10</mrow>
+			</md>
+			<p>And finally, we'll add <m>-2</m> times the second equation into the first. </p>
+			<md>
+				<mrow>x=5</mrow>
+				<mrow>y=-6</mrow>
+				<mrow>z=-10</mrow>
+			</md>
+			<p>After all of these steps we now have a system of equations that is very easy to solve - in fact, it just tells us that the solution is <m>x=5, y=-6, z=-10</m>.  From <xref ref="fact-equation-operations" /> we know that our new system has the same solutions as the original solution, so we conclude that the only solution to our original system
+			<md>
+				<mrow>x+2y-z=3</mrow>
+				<mrow>x-y+z=1</mrow>
+				<mrow>-2x-z=0</mrow>
+			</md>
+			is <m>x=5, y=-6, z=-10</m>.</p>
+		</example>
+	</subsection>
+
+	<subsection>
+		<title>
+			Elimination using matrices
+		</title>
+		<p>
+			The method of elimination is very powerful, but it gets quite tedious to write out all of the steps in the process.  In <xref ref="subsec-augmented-matrices" /> we saw that we can keep track of a system of equations as an augmented matrix, with the rows of the augmented matrix representing the equations.  Augmented matrices give us a convenient way to keep track of our work when we use elimination to solve systems.  Corresponding to the three operations on equations discussed above, we have:
+		</p>
+		<definition>
+			<p>The <emph>elementary row operations</emph> on a matrix are:</p>
+			<ul>
+				<li>Swapping the order of two rows.  When swapping row <m>i</m> with row <m>j</m> we often write <m>R_i \leftrightarrow R_j</m>.</li>
+				<li>Multiply a row by a non-zero constant.  When we multiply row <m>i</m> by the constant <m>c</m> we often write <m>cR_i</m>.</li>
+				<li>Add a multiple of one row into another, replacing the row we are adding into.  When we add <m>c</m> times row <m>i</m> into row <m>j</m> we often write <m>R_j + cR_i</m>.  Instead of something like <m>R_3+(-2)R_1</m> we usually write <m>R_3-2R_1</m>.</li>
+			</ul>
+		</definition>
+		<definition xml:id="def-row-equivalent">
+			<p>
+			Suppose that <m>A</m> and <m>B</m> are two matrices with the same number of rows and the same number of columns.  We say that <m>A</m> and <m>B</m> are <emph>row equivalent</emph> if there is a finite sequence of elementary row operations that transforms <m>A</m> into <m>B</m>.  The process of using elementary row operations to turn one matrix into another matrix is called <emph>row reduction</emph>.
+			</p>
+		</definition>
+		<fact xml:id="fact-row-equivalence-same-solution">
+			<p>
+			Suppose that <m>S_1</m> and <m>S_2</m> are two systems of linear equations, with corresponding augmented matrices <m>A_1</m> and <m>A_2</m>.  The systems <m>S_1</m> and <m>S_2</m> are <xref ref="def-system-equivalent" text="custom">equivalent</xref> if and only if <m>A_1</m> and <m>A_2</m> are <xref ref="def-row-equivalent" text="custom">row-equivalent</xref>.
+			</p>
+		</fact>
+		<p>With these definitions in place, we now re-do <xref ref="ex-solve-system-by-elimination" /> using the notation of augmented matrices.</p>
+		<example xml:id="ex-solving-system-using-row-operations">
+			<p> Consider again this system of equations:</p>
+			<md>
+				<mrow>x+2y-z=3</mrow>
+				<mrow>x-y+z=1</mrow>
+				<mrow>-2x-z=0</mrow>
+			</md>
+			<p> Here is how we write the process of solving this system using elementary row operations.  The sequence of operations is exactly the same one that we used in <xref ref="ex-solve-system-by-elimination" />.</p>
+			<md>
+				<mrow>\matr{ccc|c}{1 \amp 2 \amp -1 \amp 3 \\ 1 \amp -1 \amp 1 \amp 1 \\ -2 \amp 0 \amp -1 \amp 0} \amp\to_{R_2-R_1} \matr{ccc|c}{1 \amp 2 \amp -1 \amp 3 \\ 0 \amp -3 \amp 2 \amp -2 \\ -2 \amp 0 \amp -1 \amp 0}</mrow>
+				<mrow>\amp \to_{R_3+2R_1}\matr{ccc|c}{1 \amp 2 \amp -1 \amp 3 \\ 0 \amp -3 \amp 2 \amp -2 \\ 0 \amp 4 \amp -3 \amp 6}</mrow>
+					<mrow>\amp \to_{(-1/3)R_2}\matr{ccc|c}{1 \amp 2 \amp -1 \amp 3 \\ 0 \amp 1 \amp -2/3 \amp 2/3 \\ 0 \amp 4 \amp -3 \amp 6}</mrow>
+				<mrow>\amp \to_{R_3-4R_2}\matr{ccc|c}{1 \amp 2 \amp -1 \amp 3 \\ 0 \amp 1 \amp -2/3 \amp 2/3 \\ 0 \amp 0 \amp -1/3 \amp 10/3}</mrow>
+				<mrow>\amp \to_{-3R_3}\matr{ccc|c}{1 \amp 2 \amp -1 \amp 3 \\ 0 \amp 1 \amp -2/3 \amp 2/3 \\ 0 \amp 0 \amp 1 \amp -10}</mrow>
+				<mrow>\amp \to_{R_2+(2/3)R_3}\matr{ccc|c}{1 \amp 2 \amp -1 \amp 3 \\ 0 \amp 1 \amp 0 \amp -6 \\ 0 \amp 0 \amp 1 \amp -10}</mrow>
+				<mrow>\amp \to_{R_1+R_3}\matr{ccc|c}{1 \amp 2 \amp 0 \amp -7 \\ 0 \amp 1 \amp 0 \amp -6 \\ 0 \amp 0 \amp 1 \amp -10}</mrow>
+				<mrow>\amp \to_{R_1-2R_2}\matr{ccc|c}{1 \amp 0 \amp 0 \amp 5 \\ 0 \amp 1 \amp 0 \amp -6 \\ 0 \amp 0 \amp 1 \amp -10}</mrow>
+			</md>
+			<p>
+				The matrices in this calculation are all row-equivalent, so <xref ref="fact-row-equivalence-same-solution" /> tells us that all of these augmented matrices represent systems with exactly the same set of solutions.</p><p>In particular, our original system (which corresponds to the first augmented matrix) has the same solutions as the system corresponding to the final augmented matrix.  That final system is <m>x=5, y=-6, z=-10</m>, so once again we have found the unique solution to our original system.
+			</p>
+		</example>
+	</subsection>
+
+	<subsection>
+		<title>
+			Gauss-Jordan elimination and reduced row echelon form
+		</title>
+		<p> In <xref ref="ex-solving-system-using-row-operations" /> we used a sequence of row operations to transform the augmented matrix of a linear system into the augmented matrix of a much simpler linear system.  We could have used the three elementary row operations in any order, and stopped at any time, and we still would have had a system equivalent to our original one.  In this section we answer two questions: How can we recognize when we have reached the simplest possible form of a system, and what sequence of row operations will get us there?  We start with the question of how to tell when we should stop doing row operations. </p>
+		<definition xml:id="def-row-echelon-form">
+			<p>
+				In any row of any matrix, the first non-zero entry of the row is called the <emph>leading entry</emph> of the row.
+			</p>
+			<p>
+				A matrix is in <emph>row echelon form</emph> if it has all of the following properties:
+				<ul>
+					<li>If there are any rows where every entry is <m>0</m> then those rows occur below any rows with a non-zero entry.</li>
+					<li>In any row where not every entry is <m>0</m>, if we look at the leading entry then every number below it in the same column is <m>0</m>.</li>
+				</ul>
+			</p>
+		</definition>
+		<example>
+			<p></p>
+		</example>
+		<p>We will see some uses for row echelon form later on.  For our current purposes it isn't quite strict enough, so we introduce the following concept.</p>
+		<definition>
+			<p>A matrix is in <emph>reduced row echelon form</emph> if it is in <xref ref="def-row-echelon-form" text="custom">row echelon form</xref> and it also satisfies the following additional properties:
+			<ul>
+				<li>If a row has any non-zero entries then the leading entry of that row is <m>1</m>.</li>
+				<li>In any row where not every entry is <m>0</m>, if we look at the leading entry then every number both above and below it in the same column is <m>0</m>.</li>
+			</ul>
+			</p>
+		</definition>
+
+		<example>
+			<p></p>
+		</example>
+
+		<fact>
+			<p>If <m>A</m> is any matrix then there is a unique matrix <m>B</m> such that <m>B</m> is in reduced row echelon form and <m>A</m> is row equivalent to <m>B</m>.  We call this matrix the <emph>reduced row echelon form of <m>A</m></emph>, and sometimes denote it by <m>\RREF(A)</m>.</p>
+		</fact>
+
+		<p>If we start with an augmented matrix <m>A</m> then <m>\RREF(A)</m> is the simplest form we can reach using row operations; that is, <m>\RREF(A)</m> represents the simplest system of linear equations that has the same solutions as the system represented by <m>A</m>.  So when we are faced with a system of linear equations our goal should be to row reduce its augmented matrix until we reach reduced row echelon form.  If we choose our row operations at random it is very unlikely that we will get to reduced row echelon form.  Fortunately, there is an algorithm (the <emph>Gauss-Jordan algorithm</emph>) to help us decide which operations to use.</p>
+
+		<definition>
+			<p></p>
+		</definition>
+
+		<fact>
+			<p>If we start from a matrix <m>A</m> and follow the Gauss-Jordan algorithm we will always end at <m>\RREF(A)</m>.</p>
+		</fact>
+		<p>There are always many different sequences of row operations that take <m>A</m> to <m>\RREF(A)</m>, and sometimes you may find a sequence that is shorter than the one given by the Gauss-Jordan algorithm.  The benefit of the Gauss-Jordan algorithm is simply that it provides a sequence that is <emph>guaranteed</emph> to take you from <m>A</m> to <m>\RREF(A)</m>.</p>
+
+		<example>
+			<p></p>
+		</example>
+
+	</subsection>
+
 	<xi:include href="0-2-exercises.ptx" />
 </section>
+

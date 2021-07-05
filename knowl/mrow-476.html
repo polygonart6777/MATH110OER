@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-07-02T14:27:04-07:00       *-->
+<!--*       on 2021-07-05T16:47:59-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -19,27 +19,36 @@
 \matr{ccc|c}{
 -1 \amp 3 \amp 2 \amp -8
 \\
-1 \amp 0 \amp 1 \amp 2
+0 \amp 1 \amp 1 \amp -2
 \\
-3 \amp 3 \amp a \amp b
+0 \amp 0 \amp a-6 \amp b
 }
-\overset{R_{1}+R_{2}}{\underset{3R_{1}+R_{3}}{\longrightarrow}}
-\amp
-\matr{ccc|c}{
--1 \amp 3 \amp 2 \amp -8
-\\
-0 \amp 3 \amp 3 \amp -6
-\\
-0 \amp 12 \amp a+6 \amp b-24
-}										\\
-\overset{-4R_{2}+R_{3}}{\underset{\frac{1}{3}R_{2}}{\longrightarrow}}
+\overset{\frac{1}{a-6}R_{3}}{\longrightarrow}
 \amp
 \matr{ccc|c}{
 -1 \amp 3 \amp 2 \amp -8
 \\
 0 \amp 1 \amp 1 \amp -2
 \\
-0 \amp 0 \amp a-6 \amp b
+0 \amp 0 \amp 1 \amp \frac{b}{a-6}
+}								\\
+\overset{-R_{3}+R_{2}}{\underset{-2R_{3}+R_{1}}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+-1 \amp 3 \amp 0 \amp -8 - 2\frac{b}{a-6}
+\\
+0 \amp 1 \amp 0 \amp -2-\frac{b}{a-6}
+\\
+0 \amp 0 \amp 1 \amp \frac{b}{a-6}
+}							\\
+\overset{-R_{1}}{\underset{3R_{2}+R_{1}'}{\longrightarrow}}
+\amp
+\matr{ccc|c}{
+1 \amp 0 \amp 0 \amp 8 + 2\frac{b}{a-6}-6-3\frac{b}{a-6}
+\\
+0 \amp 1 \amp 0 \amp -2-\frac{b}{a-6}
+\\
+0 \amp 0 \amp 1 \amp \frac{b}{a-6}
 }.									
 \end{align*}
 </div>

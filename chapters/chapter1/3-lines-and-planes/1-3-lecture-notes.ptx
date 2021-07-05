@@ -185,7 +185,7 @@
 		</subsection>
 		<subsection>
 			<title>Planes in <m>\mathbb{R}^3</m></title>
-			<p> We now turn to planes in <m>\mathbb{R}^3</m>.  While a line in <m>\mathbb{R}^3</m> can be described by either <emph>one</emph> direction vector or <emph>two</emph> normal vectors, describing a plane requires <emph>two</emph> direction vectors or <emph>one</emph> normal vector.  You might notice that for both lines and planes the number of direction vectors plus the number of normal vectors is <m>3</m>, and we are working in <m>\mathbb{R}^3</m>.  This is certainly not an accident, but we will have to wait until <xref ref="chap-ortho" /> for a full explanation. </p>
+			<p> We now turn to planes in <m>\mathbb{R}^3</m>.  While a line in <m>\mathbb{R}^3</m> can be described by either <emph>one</emph> direction vector or <emph>two</emph> normal vectors, describing a plane requires <emph>two</emph> direction vectors or <emph>one</emph> normal vector.  You might notice that for both lines and planes the number of direction vectors plus the number of normal vectors is <m>3</m>, and we are working in <m>\mathbb{R}^3</m>.  This is certainly not an accident, but we will have to wait until <xref ref="chapt-5" /> for a full explanation. </p>
 			<definition>
 				<p>The <emph>normal equation</emph> of a plane in <m>\mathbb{R}^3</m> is an equation of the form <me>\vec{n}\cdot\vec{v} = \vec{n}\cdot\vec{p}</me>.  Here <m>\vec{v} = \begin{bmatrix}x\\y\\z\end{bmatrix}</m>, <m>\vec{p}</m> is a vector to any chosen point on the plane, and <m>\vec{n}</m> is a vector orthogonal to the plane.</p>
 				<p>If we expand the dot product in the normal equation of a plane we obtain the <emph>general equation</emph> of the plane.</p>

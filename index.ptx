@@ -45,7 +45,7 @@
 				</title>
 
 				<introduction>
-					
+					In this course we will be exploring a wide variety of topics related to vectors and matrices.  We will see that nearly everything we discuss reduces, in one way or another, to solving a system of linear equations.  The purpose of this chapter is to provide the tools necessary for solving these systems.  In fact, there is rather a lot that one can say about systems of linear equations.  We will say more in future chapters; for now, our goal is just to develop enough machinery to facilitate the calculations that arise in the examples in <xref ref="chapt-1" />.
 				</introduction>
 
 				<!-- It seems to be necessary to put the <section> tag in the file to be included.  To get the numbering right it's then necessary that the lecture notes file includes the exercises file. -->

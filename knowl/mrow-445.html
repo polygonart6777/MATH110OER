@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-07-02T14:27:03-07:00       *-->
+<!--*       on 2021-07-05T16:47:59-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,29 +16,24 @@
 <body>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
 \begin{align*}
-\matr{cc|c}{
-1 \amp 2 \amp 1
-\\
-0 \amp -5 \amp -1
-\\
-0 \amp -5 \amp -1
+\matr{ccc|c} {
+a \amp  b \amp  c \amp  d\\
+0 \amp  e \amp  f \amp  g \\
+0 \amp  0 \amp  h \amp  i}
+\overset{\frac{1}{h}R_{3}}{\longrightarrow}
+\amp
+\matr{ccc|c} { a \amp  b \amp  c \amp  d\\
+0 \amp  e \amp  f \amp  g \\
+0 \amp  0 \amp  1 \amp  \frac{i}{h}
+}	\\
+\overset{-cR_{3}+R_{1}}{\underset{-fR_{3}+R_{2}}{\longrightarrow}}
+\amp
+\matr{ccc|c} {
+a \amp  b \amp  0 \amp  d - c\frac{i}{h}\\
+0 \amp  e \amp  0 \amp  g - f\frac{i}{h} \\
+0 \amp  0 \amp  1 \amp  \frac{i}{h}
 }
-\overset{-R_{2}+R_{3}}{\underset{2R_{2}+5R_{1}}{\longrightarrow}}
-\amp\matr{cc|c}{
-5 \amp 0 \amp 3
-\\
-0 \amp -5 \amp -1
-\\
-0 \amp 0 \amp 0
-}\\
-\overset{\frac{-1}{5}R_{2}}{\underset{\frac{1}{5}R_{1}}{\longrightarrow}}
-\amp\matr{cc|c}{
-1 \amp 0 \amp \frac{3}{5}
-\\
-0 \amp 1 \amp \frac{1}{5}
-\\
-0 \amp 0 \amp 0
-}
+.	
 \end{align*}
 </div>
 <span class="incontext"><a href="sec-SLERevisted.html#mjx-eqn:mrow-445">in-context</a></span>
