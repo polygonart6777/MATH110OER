@@ -55,25 +55,25 @@
 				<mrow>y-\frac{2}{3}z=\frac{2}{3}</mrow>
 				<mrow>-\frac{1}{3}z = \frac{10}{3}</mrow>
 			</md>
-			<p>And next, to clean things up a bit, we'll multiply the third equation by <m>-3</m>.</p>
+			<p>Next, we eliminate <m>y</m> from the first equation by subtracting <m>2</m> times the second equation.</p>
 			<md>
-				<mrow>x+2y-z=3</mrow>
-				<mrow>y-\frac{2}{3}z = \frac{2}{3}</mrow>
+				<mrow>x+\frac{1}{3}z=\frac{5}{3}</mrow>
+				<mrow>y-\frac{2}{3}z=\frac{2}{3}</mrow>
+				<mrow>-\frac{1}{3}z = \frac{10}{3}</mrow>
+			</md>
+			<p>To clean things up a bit, we'll multiply the third equation by <m>-3</m>.</p>
+			<md>
+				<mrow>x+\frac{1}{3}z=\frac{5}{3}</mrow>
+				<mrow>y-\frac{2}{3}z=\frac{2}{3}</mrow>
 				<mrow>z = -10</mrow>
 			</md>
 			<p>Now we've accomplished something really useful!  Since the system we've arrived at has the same solutions as the original solution, we can see from here that any solution to the original system has <m>z=-10</m>.  We could now subsitute <m>z=-10</m> into the first two equations, or we can continue with elimination.  For the purposes of this example, let's continue with elimination.  For our next move, we'll add <m>2/3</m> times the third equation to the second equation.</p>
 			<md>
-				<mrow>x+2y-z=3</mrow>
+				<mrow>x+\frac{1}{3}z=\frac{5}{3}</mrow>
 				<mrow>y=-6</mrow>
 				<mrow>z=-10</mrow>
 			</md>
-			<p>Now let's add the third equation into the first: </p>
-			<md>
-				<mrow>x+2y=-7</mrow>
-				<mrow>y=-6</mrow>
-				<mrow>z=-10</mrow>
-			</md>
-			<p>And finally, we'll add <m>-2</m> times the second equation into the first. </p>
+			<p>Finally, we'll subtract <m>\frac{1}{3}</m> times the third equation from the first. </p>
 			<md>
 				<mrow>x=5</mrow>
 				<mrow>y=-6</mrow>
@@ -122,16 +122,16 @@
 				<mrow>x-y+z=1</mrow>
 				<mrow>-2x-z=0</mrow>
 			</md>
-			<p> Here is how we write the process of solving this system using elementary row operations.  The sequence of operations is exactly the same one that we used in <xref ref="ex-solve-system-by-elimination" />.</p>
+			<p> Here is how we write the process of solving this system using elementary row operations.  The sequence of operations is exactly the same one that we used in <xref ref="ex-solve-system-by-elimination" />, so the only thing that is different this time is how we record what we're doing.</p>
 			<md>
 				<mrow>\matr{ccc|c}{1 \amp 2 \amp -1 \amp 3 \\ 1 \amp -1 \amp 1 \amp 1 \\ -2 \amp 0 \amp -1 \amp 0} \amp\to_{R_2-R_1} \matr{ccc|c}{1 \amp 2 \amp -1 \amp 3 \\ 0 \amp -3 \amp 2 \amp -2 \\ -2 \amp 0 \amp -1 \amp 0}</mrow>
 				<mrow>\amp \to_{R_3+2R_1}\matr{ccc|c}{1 \amp 2 \amp -1 \amp 3 \\ 0 \amp -3 \amp 2 \amp -2 \\ 0 \amp 4 \amp -3 \amp 6}</mrow>
-					<mrow>\amp \to_{(-1/3)R_2}\matr{ccc|c}{1 \amp 2 \amp -1 \amp 3 \\ 0 \amp 1 \amp -2/3 \amp 2/3 \\ 0 \amp 4 \amp -3 \amp 6}</mrow>
+				<mrow>\amp \to_{(-1/3)R_2}\matr{ccc|c}{1 \amp 2 \amp -1 \amp 3 \\ 0 \amp 1 \amp -2/3 \amp 2/3 \\ 0 \amp 4 \amp -3 \amp 6}</mrow>
 				<mrow>\amp \to_{R_3-4R_2}\matr{ccc|c}{1 \amp 2 \amp -1 \amp 3 \\ 0 \amp 1 \amp -2/3 \amp 2/3 \\ 0 \amp 0 \amp -1/3 \amp 10/3}</mrow>
-				<mrow>\amp \to_{-3R_3}\matr{ccc|c}{1 \amp 2 \amp -1 \amp 3 \\ 0 \amp 1 \amp -2/3 \amp 2/3 \\ 0 \amp 0 \amp 1 \amp -10}</mrow>
-				<mrow>\amp \to_{R_2+(2/3)R_3}\matr{ccc|c}{1 \amp 2 \amp -1 \amp 3 \\ 0 \amp 1 \amp 0 \amp -6 \\ 0 \amp 0 \amp 1 \amp -10}</mrow>
-				<mrow>\amp \to_{R_1+R_3}\matr{ccc|c}{1 \amp 2 \amp 0 \amp -7 \\ 0 \amp 1 \amp 0 \amp -6 \\ 0 \amp 0 \amp 1 \amp -10}</mrow>
-				<mrow>\amp \to_{R_1-2R_2}\matr{ccc|c}{1 \amp 0 \amp 0 \amp 5 \\ 0 \amp 1 \amp 0 \amp -6 \\ 0 \amp 0 \amp 1 \amp -10}</mrow>
+				<mrow>\amp \to_{R_1-2R_2}\matr{ccc|c}{1 \amp 0 \amp 1/3 \amp 5/3 \\ 0 \amp 1 \amp -2/3 \amp 2/3 \\ 0 \amp 0 \amp -1/3 \amp 10/3}</mrow>
+				<mrow>\amp \to_{-3R_3}\matr{ccc|c}{1 \amp 0 \amp 1/3 \amp 5/3 \\ 0 \amp 1 \amp -2/3 \amp 2/3 \\ 0 \amp 0 \amp 1 \amp -10}</mrow>
+				<mrow>\amp \to_{R_2+(2/3)R_3}\matr{ccc|c}{1 \amp 0 \amp 1/3 \amp 5/3 \\ 0 \amp 1 \amp 0 \amp -6 \\ 0 \amp 0 \amp 1 \amp -10}</mrow>
+				<mrow>\amp \to_{R_1 - (1/3)R_3}\matr{ccc|c}{1 \amp 0 \amp 0 \amp 5 \\ 0 \amp 1 \amp 0 \amp -6 \\ 0 \amp 0 \amp 1 \amp -10}</mrow>
 			</md>
 			<p>
 				The matrices in this calculation are all row-equivalent, so <xref ref="fact-row-equivalence-same-solution" /> tells us that all of these augmented matrices represent systems with exactly the same set of solutions.</p><p>In particular, our original system (which corresponds to the first augmented matrix) has the same solutions as the system corresponding to the final augmented matrix.  That final system is <m>x=5, y=-6, z=-10</m>, so once again we have found the unique solution to our original system.
@@ -156,9 +156,24 @@
 				</ul>
 			</p>
 		</definition>
+		<p>Notice that the definition of row echelon form does not require our matrix to be augmented - the definition is the same regardless of whether or not there is a vertical line separating parts of the matrix.  We will often (but not always!) be interested in row echelon form for augmented matrices; when determining if an augmented matrix is in row echelon form or not you can simply ignore the vertical line.</p>
 		<example>
-			<p></p>
+			<p>Here are some matrices that are in row echelon form.</p>
+			<ul>
+				<li><m>\matr{cc|c}{3 \amp 2 \amp 1 \\ 0 \amp -1 \amp 3 \\ 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0}</m></li>
+				<li><m>\matr{ccc|c}{1 \amp 2 \amp 3 \amp 0 \\ 0 \amp 0 \amp 1 \amp 1 \\ 0 \amp 0 \amp 0 \amp 1}</m></li>
+				<li><m>\matr{cc}{0 \amp 1 \\ 0 \amp 0}</m></li>
+			</ul>
 		</example>
+		<example>
+			<p>Here are some matrices that are not in row echelon form.</p>
+			<ul>
+				<li><m>\matr{cc|c}{5 \amp 2 \amp 1 \\ 2 \amp -1 \amp 3}</m></li>
+				<li><m>\matr{ccc|c}{1 \amp 2 \amp 3 \amp 0 \\ 0 \amp 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \amp 1 }</m></li>
+				<li><m>\matr{cc}{1 \amp 1 \\ 1 \amp 2 \\ 0 \amp 0}</m></li>
+			</ul>
+		</example>
+
 		<p>We will see some uses for row echelon form later on.  For our current purposes it isn't quite strict enough, so we introduce the following concept.</p>
 		<definition>
 			<p>A matrix is in <emph>reduced row echelon form</emph> if it is in <xref ref="def-row-echelon-form" text="custom">row echelon form</xref> and it also satisfies the following additional properties:
@@ -168,20 +183,42 @@
 			</ul>
 			</p>
 		</definition>
-
+		<p>As with row echelon form, the definition of reduced row echelon form is the same regardless of whether or not the matrix is augmented.</p>
 		<example>
-			<p></p>
+			<p>Here are some matrices that are in reduced row echelon form.</p>
+			<ul>
+				<li><m>\matr{cc|c}{1 \amp 0 \amp -3\\ 0 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0}</m></li>
+				<li><m>\matr{ccc|c}{1 \amp 0 \amp 3 \amp 0 \\ 0 \amp 1 \amp 0 \amp 0 \\ 0 \amp 0 \amp 0 \amp 1}</m></li>
+				<li><m>\matr{cc}{0 \amp 1 \\ 0 \amp 0}</m></li>
+				<li><m>\matr{ccc}{1 \amp 0 \amp 0 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1}</m></li>
+			</ul>
 		</example>
-
-		<fact>
+		<example>
+			<p>Here are some matrices that are not in reduced row echelon form.</p>
+			<ul>
+				<li><m>\matr{cc|c}{5 \amp 2 \amp 1 \\ 2 \amp -1 \amp 3}</m></li>
+				<li><m>\matr{ccc|c}{2 \amp 0 \amp 1 \amp 3 \\ 0 \amp 1 \amp 0 \amp 1 \\ 0 \amp 0 \amp 0 \amp 0}</m></li>
+				<li><m>\matr{ccc}{1 \amp 0 \amp 1 \\ 0 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1}</m></li>
+			</ul>
+		</example>
+		<fact xml:id="fact-rref-exists">
 			<p>If <m>A</m> is any matrix then there is a unique matrix <m>B</m> such that <m>B</m> is in reduced row echelon form and <m>A</m> is row equivalent to <m>B</m>.  We call this matrix the <emph>reduced row echelon form of <m>A</m></emph>, and sometimes denote it by <m>\RREF(A)</m>.</p>
 		</fact>
 
+		<note><p>The reduced row echelon form of a matrix <m>A</m> is not the same matrix as <m>A</m>, unless the original matrix <m>A</m> was already in reduced row echelon form.  That is, <m>\RREF(A) = A</m> <emph>only</emph> when <m>A</m> itself is already in reduced row echelon form.  Performing row operations produces a matrix that is <emph>row-equivalent</emph> to the original matrix, but not <emph>equal</emph> to the original one!</p></note>
 		<p>If we start with an augmented matrix <m>A</m> then <m>\RREF(A)</m> is the simplest form we can reach using row operations; that is, <m>\RREF(A)</m> represents the simplest system of linear equations that has the same solutions as the system represented by <m>A</m>.  So when we are faced with a system of linear equations our goal should be to row reduce its augmented matrix until we reach reduced row echelon form.  If we choose our row operations at random it is very unlikely that we will get to reduced row echelon form.  Fortunately, there is an algorithm (the <emph>Gauss-Jordan algorithm</emph>) to help us decide which operations to use.</p>
 
-		<definition>
-			<p></p>
-		</definition>
+		<p>Since we are not planning to prove <xref ref="fact-rref-exists" /> we will also not give an entirely precise statement of the Gauss-Jordan algorithm.  Instead, we give an informal description that will be adequate for working with examples.  Here is the algorithm:</p>
+		<ol>
+			<li>Find the first column (from the left) of the matrix that has a non-zero entry in it.  Make that non-zero entry into a <m>1</m>, and move it to the top row.</li>
+			<li>Use the <m>1</m> you obtained in the previous step to make the rest of that column be <m>0</m>.</li>
+			<li>Find the next column (further to the right from the previous one used) that has a non-zero entry in a position other than the first row.  Make that entry into a <m>1</m>, and move it to the second row.</li>
+			<li>Use the <m>1</m> you obtained in the previous step to make the rest of that column be <m>0</m>.</li>
+			<li>Find the next column (further to the right from the previous one used) that has a non-zero entry in a position other than the first two rows.  Make that entry into a <m>1</m>, and move it to the third row.</li>
+			<li>Use the <m>1</m> you obtained in the previous step to make the rest of that column be <m>0</m>.</li>
+			<li>Repeat this process until you cannot continue.</li>
+		</ol>
+
 
 		<fact>
 			<p>If we start from a matrix <m>A</m> and follow the Gauss-Jordan algorithm we will always end at <m>\RREF(A)</m>.</p>
@@ -189,9 +226,28 @@
 		<p>There are always many different sequences of row operations that take <m>A</m> to <m>\RREF(A)</m>, and sometimes you may find a sequence that is shorter than the one given by the Gauss-Jordan algorithm.  The benefit of the Gauss-Jordan algorithm is simply that it provides a sequence that is <emph>guaranteed</emph> to take you from <m>A</m> to <m>\RREF(A)</m>.</p>
 
 		<example>
-			<p></p>
+			<p>Take a moment to verify that in <xref ref="ex-solving-system-using-row-operations" /> the steps we followed were exactly the steps of the Gauss-Jordan algorithm.</p>
 		</example>
 
+		<example>
+			<p>Let <m>A = \matr{ccc|c}{0 \amp 1 \amp 1 \amp 0 \\ 2 \amp 0 \amp 4 \amp 2}</m>.  To find <m>\RREF(A)</m> we can follow the Gauss-Jordan algorithm.</p>
+			<md>
+				<mrow>A \amp \to_{R_1 \leftrightarrow R_2} \matr{ccc|c}{2 \amp 0 \amp 4 \amp 2 \\ 0 \amp 1 \amp 1 \amp 0}</mrow>
+				<mrow>\amp \to_{(1/2)R_1}\matr{ccc|c}{1 \amp 0 \amp 2 \amp 1 \\ 0 \amp 1 \amp 1 \amp 0}</mrow>
+			</md>
+			<p>We've arrived at a matrix in reduced row echelon form, so we stop.</p>
+		</example>
+
+		<example>
+			<p>Let <m>B = \matr{ccc}{1 \amp 1 \amp 1 \\ 1 \amp 1 \amp 3 \\ 0 \amp 0 \amp 2}</m>.  To find <m>\RREF(B)</m> we follow Gauss-Jordan.</p>
+			<md>
+				<mrow>B \amp \to_{R_2 - R_1}\matr{ccc}{1 \amp 1 \amp 1 \\ 0 \amp 0 \amp 2 \\ 0 \amp 0 \amp 2}</mrow>
+				<mrow>\amp \to_{(1/2)R_2}\matr{ccc}{1 \amp 1 \amp 1 \\ 0 \amp 0 \amp 1 \\ 0 \amp 0 \amp 2}</mrow>
+				<mrow>\amp \to_{R_1-R_2}\matr{ccc}{1 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \\ 0 \amp 0 \amp 2}</mrow>
+				<mrow>\amp \to_{R_3-2R_2}\matr{ccc}{1 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \\ 0 \amp 0 \amp 0}</mrow>
+			</md>
+			<p>Therefore <m>\RREF(B) = \matr{ccc}{1 \amp 1 \amp 0 \\ 0 \amp 0 \amp 1 \\ 0 \amp 0 \amp 0}</m>.</p>
+		</example>
 	</subsection>
 
 	<xi:include href="0-2-exercises.ptx" />

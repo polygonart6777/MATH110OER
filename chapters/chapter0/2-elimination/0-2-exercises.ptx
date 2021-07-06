@@ -1,5 +1,5 @@
 				<exercises>
-				<p><exercise><!-- xml:id="ex-" --><!-- Replacement for Poole's Section 2.1, Exercise 35 and 37-->
+				<p><exercise><!-- xml:id="ex-" -->
 						<statement>
 							<aside><p> (Source: <xref ref="ref-KN"/>, Section 1.1, Exercise 1.1.19.) </p></aside>
 							Find the solution of each of the following systems of linear equations using Gauss-Jordan elimination and augmented matrices.
@@ -183,7 +183,7 @@
 					<p><exercise><!-- xml:id="ex-" -->
 						<statement>
 							<aside><p> (Source: <xref ref="ref-PS"/>, Section 1.3, Exercise 1.3.4.) </p></aside>
-							Do the three planes, <m>x+y-3z=2</m>, <m>2x+y+z=1</m>, and <m>3x + 2y-2z =0</m> have a common point of intersection? If so, find one and if not, tell why there is no such point.  Note that a point of intersection is a point that satisfies all three equations.
+							We will see in <xref ref="chapt-1" /> that a single linear equation in three variables represents a plane in three-dimensional space.  Do the three planes, <m>x+y-3z=2</m>, <m>2x+y+z=1</m>, and <m>3x + 2y-2z =0</m> have a common point of intersection? If so, find one and if not, tell why there is no such point.  Note that a point of intersection is a point that satisfies all three equations.
 						</statement>
 						<hint>
 							The three planes give a system of three equations.  A solution to the system will be the common point of intersection. 

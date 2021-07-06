@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2021-07-05T16:47:54-07:00       *-->
+<!--*       on 2021-07-06T11:07:00-07:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,31 +16,34 @@
 <body>
 <h6 xmlns:svg="http://www.w3.org/2000/svg" class="heading"><span class="type">Paragraph</span></h6>
 <div xmlns:svg="http://www.w3.org/2000/svg" class="displaymath">
-\begin{align*}
-(\mathbf{u} + \mathbf{v})\cdot (\mathbf{u} - \mathbf{v})
+\begin{align}
+(\mathbf{u} + \mathbf{v})\cdot(\mathbf{u} - \mathbf{v})
 \amp =
-\left(
-\begin{bmatrix} 3 \\ 4 \end{bmatrix} 
-+
-\begin{bmatrix} 5 \\ 0 \end{bmatrix} 
-\right)
-\cdot
-\left(	
-\begin{bmatrix} 3 \\ 4 \end{bmatrix} 
+(\mathbf{u} + \mathbf{v})\cdot\mathbf{u} - (\mathbf{u} + \mathbf{v})\cdot\mathbf{v}
+\amp\amp
+(\text{Distributivity})\notag\\
+\amp =
+(\mathbf{u}\cdot\mathbf{u} + \mathbf{v}\cdot\mathbf{u})
 -
-\begin{bmatrix} 5 \\ 0 \end{bmatrix} 
-\right)\\
+(\mathbf{u}\cdot\mathbf{v} + \mathbf{v}\cdot\mathbf{v})
+\amp\amp
+(\text{Distributivity})\notag\\
 \amp =
-\begin{bmatrix} 3+5 \\ 4+0 \end{bmatrix} 
-\cdot
-\begin{bmatrix} 3-5 \\ 4-0 \end{bmatrix} 
-=
-\begin{bmatrix} 8 \\ 4 \end{bmatrix} 
-\cdot
-\begin{bmatrix} -2 \\ 4 \end{bmatrix} \\
+\norm{\mbf{u}}^2 + \mathbf{v}\cdot\mathbf{u}
+-
+\mathbf{u}\cdot\mathbf{v} - \norm{\mbf{v}}^2
+\amp\amp
+(\text{definition of } \norm{\cdot})\notag\\
 \amp =
-8\cdot (-2) + 4\cdot 4 = 0.
-\end{align*}
+\norm{\mbf{u}}^2 + \mathbf{u}\cdot \mathbf{v}
+-
+\mathbf{u}\cdot\mathbf{v} - \norm{\mbf{v}}^2
+\amp\amp
+(\text{Commutativity})\notag\\
+\amp =
+\norm{\mbf{u}}^2  - \norm{\mbf{v}}^2
+.\tag{2.2.2}
+\end{align}
 </div>
 <span class="incontext"><a href="sec-DotProd.html#p-333">in-context</a></span>
 </body>
