@@ -8,7 +8,7 @@
 			Systems and their solutions
 		</title>
 		<definition>
-			<p> A <emph>linear equation</emph> in variables <m>x_1, \ldots, x_n</m> is an equation of the form <m>a_1x_1 + \cdots + a_nx_n = b</m>, where <m>a_1, \ldots, a_n, b</m> are constants.</p>
+			<p> A <em>linear equation</em> in variables <m>x_1, \ldots, x_n</m> is an equation of the form <m>a_1x_1 + \cdots + a_nx_n = b</m>, where <m>a_1, \ldots, a_n, b</m> are constants.</p>
 			<p> We will sometimes say that an equation is a linear equation if it can be easily rearranged into an equation of the form above.</p>
 		</definition>
 		<p> 
@@ -27,7 +27,7 @@
 		</example>
 		<example>
 			<p>
-				The following equations in the variables <m>x, y, z</m> are <emph>not</emph> linear:
+				The following equations in the variables <m>x, y, z</m> are <em>not</em> linear:
 				<ul>
 					<li> <m>xy+z=2</m> </li>
 					<li> <m>x^2+y^2-z=0</m></li>
@@ -37,10 +37,10 @@
 		</example>
 		<definition>
 			<p>
-				A <emph> system of linear equations </emph> is a finite collection of linear equations, all of which are in the same finite collection of variables.  The number of variables does not need to be the same as the number of equations.
+				A <em> system of linear equations </em> is a finite collection of linear equations, all of which are in the same finite collection of variables.  The number of variables does not need to be the same as the number of equations.
 			</p>
 			<p>
-				A <emph> solution </emph> to a system of linear equations is a choice of values for the variables that makes all of the equations true.
+				A <em> solution </em> to a system of linear equations is a choice of values for the variables that makes all of the equations true.
 			</p>
 		</definition>
 		<example xml:id="ex-solve-substitution-1">
@@ -53,7 +53,7 @@
 				The assignment <m>x=0, y=0, z=2</m> is one solution to this system of equations.  Another solution is <m>x=1, y=1, z=0</m>.  Yet another solution is <m>x=2, y=2, z=-2</m>.  The assignment <m>x=3, y=2, z=-3</m> is not a solution to this system.
 			</p>
 			<p> 
-				If we re-write the second equation as <m>x=y</m> then we can substitute it into the first equation to get <me>2y+z=2</me>, which we can rearrange as <m>z=2-2y</m>.  Now if we choose any value for <m>y</m>, and then take <m>x=y</m> and <m>z=2-2y</m>, then the first equation becomes <m>y+y+(2-2y) = 2</m> and the second equation becomes <m>y-y=0</m>.  Both of these equations are true no matter what value we give to <m>y</m>.  Therefore this system has <emph>infinitely many solutions</emph>.  Even better, we know how to find all of the solutions: Pick any value at all for <m>y</m>, then choose <m>x=y</m> and <m>z = 2-2y</m>, and you will have a solution to this system; moreover, every solution to the system is of this form.
+				If we re-write the second equation as <m>x=y</m> then we can substitute it into the first equation to get <me>2y+z=2</me>, which we can rearrange as <m>z=2-2y</m>.  Now if we choose any value for <m>y</m>, and then take <m>x=y</m> and <m>z=2-2y</m>, then the first equation becomes <m>y+y+(2-2y) = 2</m> and the second equation becomes <m>y-y=0</m>.  Both of these equations are true no matter what value we give to <m>y</m>.  Therefore this system has <em>infinitely many solutions</em>.  Even better, we know how to find all of the solutions: Pick any value at all for <m>y</m>, then choose <m>x=y</m> and <m>z = 2-2y</m>, and you will have a solution to this system; moreover, every solution to the system is of this form.
 			</p>
 		</example>
 
@@ -64,7 +64,7 @@
 				<mrow> x-y=0 </mrow>
 			</md>
 			<p>
-				For this system the <emph>only</emph> solution is <m>x=0, y=0</m>.  One way to see this is to re-write the second equation as <m>x=y</m>.  We can then substitute this in to the first equation to obtain <m>y+y=0</m>, which means <m>y=0</m>.  Then plugging this back into <m>x=y</m> we get <m>x=0</m>.
+				For this system the <em>only</em> solution is <m>x=0, y=0</m>.  One way to see this is to re-write the second equation as <m>x=y</m>.  We can then substitute this in to the first equation to obtain <m>y+y=0</m>, which means <m>y=0</m>.  Then plugging this back into <m>x=y</m> we get <m>x=0</m>.
 			</p>
 		</example>
 
@@ -100,12 +100,12 @@
 		</md>
 		because the only difference between the two is the letters we chose for the variables.</p>
 		<p> 
-			In fact, the only important information about the system above is that in the first equation the first variable has coefficient <m>1</m>, the second variable has coefficient <m>-3</m>, and on the other side of the equals sign the constant is <m>4</m>, together with similar information for the second equation.  Thus the following array of numbers, known as an <emph>augmented matrix</emph>, contains all of the relevant information about the system of equations:
+			In fact, the only important information about the system above is that in the first equation the first variable has coefficient <m>1</m>, the second variable has coefficient <m>-3</m>, and on the other side of the equals sign the constant is <m>4</m>, together with similar information for the second equation.  Thus the following array of numbers, known as an <em>augmented matrix</em>, contains all of the relevant information about the system of equations:
 			<me>\matr{cc|c}{1 \amp -3 \amp 4 \\ 2 \amp 1 \amp -2}</me>.
 		</p>
 		<definition>
 			<p>
-			The <emph>augmented matrix</emph> associated to the system of linear equations
+			The <em>augmented matrix</em> associated to the system of linear equations
 			<md>
 				<mrow>a_{1, 1}x_1 + a_{1,2}x_2 + \cdots + a_{1, n}x_n = b_1</mrow>
 				<mrow>a_{2, 1}x_1 + a_{2,2}x_2 + \cdots + a_{2, n}x_n = b_2</mrow>
@@ -117,7 +117,7 @@
 			</p>
 		</definition>
 		<p>
-			In the augmented matrix of a system of linear equations the part of the matrix to the left of the vertical bar is called the <emph>coefficient matrix</emph>.  In this part of the matrix the numbers are the coefficients of the variables, while the variables themselves are represented by the column positions.  Thus the numbers in the second column of the coefficient matrix represent the coefficients of the second variable of the system.  Notice that we do not write the variable letters in the matrix!
+			In the augmented matrix of a system of linear equations the part of the matrix to the left of the vertical bar is called the <em>coefficient matrix</em>.  In this part of the matrix the numbers are the coefficients of the variables, while the variables themselves are represented by the column positions.  Thus the numbers in the second column of the coefficient matrix represent the coefficients of the second variable of the system.  Notice that we do not write the variable letters in the matrix!
 		</p>
 		<p>
 			On the right side of the vertical line we have the constants from the equations.  The vertical line itself represents the equals sign.

@@ -3,6 +3,189 @@
 	<title>
 		Linear transformations
 	</title>
+	<subsection>
+		<title>
+			Definition and first properties
+		</title>
+		<p>
+			So far we have considered vectors in <m>\mathbb{R}^n</m> as fixed objects and carried out basic operations on them.  It is now time to consider functions that move vectors around.  You have studied functions in previous mathematics courses, but it is likely that the functions you have spent most of your time with have taken inputs that are real numbers and given outputs that are also real numbers.  Here we will be interested in functions that take vectors as inputs and give back vectors as outputs.
+		</p>
+		<definition>
+			<p> A <em>function</em> <m>f</m> from <m>\mathbb{R}^n</m> to <m>\mathbb{R}^m</m> is a machine that accepts as an input a vector <m>\vec{v}</m> from <m>\mathbb{R}^n</m> and returns as output a vector <m>f(\vec{v})</m> in <m>\mathbb{R}^m</m>.</p><p>We often write <m> f : \mathbb{R}^n \to \mathbb{R}^m</m> to emphasize that <m>f</m> is a function from <m>\mathbb{R}^n</m> to <m>\mathbb{R}^m</m>. </p>
+		</definition>
+		<p> You may have seen in calculus that there is very little that you can say about an arbitrary function <m>f : \mathbb{R} \to \mathbb{R}</m>; in order to do calculus you need to assume more about the function (such as continuity, differentiability, or other such properties).  Similarly, in linear algebra there isn't a lot that we can say about an arbitrary function <m>f : \mathbb{R}^n \to \mathbb{R}^m</m>.  In order to be able to say something meaningful we need to assume that the function <m>f</m> has some nice properties.  In particular, when we study vectors the most basic operations we have are addition and scalar multiplication, and we would like our functions to respect those operations.  The idea of "respecting" the operations is made precise in the following definition. </p>
+		<definition xml:id="def-linear-transformation">
+			<p>Let <m>f : \mathbb{R}^n \to \mathbb{R}^m</m> be a function.  We say that <m>f</m> is a <em>linear transformation</em> if it satisfies both of the following properties:</p>
+			<ol>
+				<li>For all vectors <m>\vec{v}</m> and <m>\vec{w}</m> in <m>\mathbb{R}^n</m>, <me>f(\vec{v}+\vec{w}) = f(\vec{v}) + f(\vec{w})</me>.</li>
+				<li>For every vector <m>\vec{v}</m> in <m>\mathbb{R}^n</m> and every scalar <m>k</m>, <me>f(k\vec{v}) = kf(\vec{v})</me>.</li>
+			</ol>
+		</definition>
+		<p>Sometimes instead of saying that a function "is a linear transformation" we will just say that it "is linear".  It is conventional to use the letters <m>T, S, R, \ldots </m> instead of <m>f, g, h, \ldots </m> for linear transformations, although this is only a stylistic choice.  You should also be careful - knowing that a function has been named <m>T</m> does not mean it <em>must</em> be linear!</p>
+		<example xml:id="ex-linear-transformation">
+			<p> Consider the function <m>T : \mathbb{R}^3 \to \mathbb{R}^2</m> defined by <m>T\left(\matr{c}{x\\y\\z}\right) = \matr{c}{x+y\\2x-z}</m>.  We will show that this function <m>T</m> is a linear transformation.  To do so we need to check both of the properties from <xref ref="def-linear-transformation" />.</p>
+			<p> For the first property, suppose that we have two vectors <m>\vec{v} = \begin{bmatrix}a\\b\\c\end{bmatrix}</m> and <m>\vec{w} = \begin{bmatrix}d\\e\\f\end{bmatrix}</m>.  Then we calculate:</p>
+			<md>
+				<mrow>T(\vec{v}+\vec{w}) \amp = T\left(\begin{bmatrix}a\\b\\c\end{bmatrix} + \begin{bmatrix}d\\e\\f\end{bmatrix}\right)</mrow>
+				<mrow> \amp = T\left(a+d\\b+e\\c+f\right) </mrow>
+				<mrow> \amp = \begin{bmatrix}(a+d)+(b+e)\\2(a+d)-(c+f)\end{bmatrix} </mrow>
+				<mrow> \amp = \begin{bmatrix}a+b\\2a-c\end{bmatrix} + \begin{bmatrix}d+e\\2d-f\end{bmatrix}</mrow>
+				<mrow> \amp = T\left(\begin{bmatrix}a\\b\\c\end{bmatrix}\right) + T\left(\begin{bmatrix}d\\e\\f\end{bmatrix}\right)</mrow>
+				<mrow> \amp = T(\vec{v}) + T(\vec{w}) </mrow>
+			</md>
+			<p> The calculation above verifies the first property in the definition of being a linear transformation.  For the second property, suppose that <m>\vec{v} = \begin{bmatrix}a\\b\\c\end{bmatrix}</m> and that <m>k</m> is a scalar.  Then:</p>
+			<md>
+				<mrow>T(k\vec{v}) \amp = T\left(k\begin{bmatrix}a\\b\\c\end{bmatrix}\right)</mrow>
+				<mrow>\amp = T\left(\begin{bmatrix}ka\\kb\\kc\end{bmatrix}\right)</mrow>
+				<mrow>\amp = \begin{bmatrix}ka+kb\\2ka-kc\end{bmatrix}</mrow>
+				<mrow>\amp = \begin{bmatrix}k(a+b)\\k(2a-c)\end{bmatrix}</mrow>
+				<mrow>\amp = k\begin{bmatrix}a+b\\2a-c\end{bmatrix}</mrow>
+				<mrow>\amp = kT\left(\begin{bmatrix}a\\b\\c\end{bmatrix}\right) </mrow>
+				<mrow>\amp = kT(\vec{v})</mrow>
+			</md>
+			<p>Now we have verified both properties from the definition of being a linear transformation, so we conclude that our function <m>T</m> is a linear transformation.</p>
+		</example>
+		<example xml:id="ex-not-linear-transformation">
+			<p>Consider the function <m>T : \mathbb{R}^2 \to \mathbb{R}^3</m> defined by <m>T\left(\begin{bmatrix}x\\y\end{bmatrix}\right) = \begin{bmatrix}0\\xy\\0\end{bmatrix}</m>.  We will show that <m>T</m> is <em>not</em> a linear transformation.  To do this we need to show that at least one of the two parts of the definition fails at least one time.  For instance, we have the following calculations:</p>
+			<md>
+				<mrow> T\left(2\begin{bmatrix}1\\1\end{bmatrix}\right) = T\left(\begin{bmatrix}2\\2\end{bmatrix}\right) = \begin{bmatrix}0\\4\\0\end{bmatrix}</mrow>
+				<mrow> 2T\left(\begin{bmatrix}1\\1\end{bmatrix}\right) = 2\begin{bmatrix}0\\1\\0\end{bmatrix} = \begin{bmatrix}0\\2\\0\end{bmatrix}</mrow>
+			</md>
+			<p>We therefore see that <m>T\left(2\begin{bmatrix}1\\1\end{bmatrix}\right) \neq 2T\left(\begin{bmatrix}1\\1\end{bmatrix}\right)</m>.  Therefore the second point of <xref ref="def-linear-transformation" /> is not satisfied, so <m>T</m> is <em>not</em> a linear transformation.</p>
+		</example>
+		<p>
+			Notice that in <xref ref="ex-linear-transformation" />, where we showed that a certain function <em>is</em> a linear transformation, we needed to verify both parts of <xref ref="def-linear-transformation" /> in general - using a specific numerical example would not be enough to be sure that the required properties hold for <em>all</em> vectors and <em>all</em> scalars.  On the other hand, in <xref ref="ex-not-linear-transformation" />, where we showed that a certain function is <em>not</em> a linear transformation, it was enough to give one specific numerical example where one of the properties from <xref ref="def-linear-transformation" /> does not hold.
+		</p>
+		<example xml:id="ex-rotation-linear">
+			<p> Fix an angle <m>\theta</m>, and consider the function <m>T_\theta : \mathbb{R}^2 \to \mathbb{R}^2 </m> that rotates vectors in the plane counterclockwise by <m>\theta</m> radians.  Take a moment to convince yourself that <m>T_\theta</m> is a linear transformation.</p>
+		</example>
+		<p>We defined linear transformations to be functions that respect our fundamental operations of vector addition and scalar multiplication.  It turns out that our definition is equivalent to requiring that the function respects all linear combinations.</p>
+		<theorem xml:id="thm-linear-transformation-linear-combination">
+			<p> Let <m>T : \mathbb{R}^n \to \mathbb{R}^m </m> be a function.  The following are equivalent: </p>
+			<ol>
+				<li><m>T</m> is a linear transformation.</li>
+				<li>For all vectors <m>\vec{v_1}, \ldots, \vec{v_k}</m> in <m>\mathbb{R}^n</m> and all scalars <m>c_1, \ldots, c_k</m>, <me>T(c_1\vec{v_1} + \cdots + c_k\vec{v_k}) = c_1T(\vec{v_1}) + \cdots + c_kT(\vec{v_k})</me>.</li>
+			</ol>
+			<proof>
+				<p>A fully rigorous proof of (1) implies (2) would use the technique of mathematical induction; instead, we will only give the proof in the case <m>k=3</m> (we stress that this is <em>not</em> a complete proof, just an illustration to help you believe the statement).  Assume that <m>T</m> is a linear transformation.  Using the two properties from <xref ref="def-linear-transformation" /> we calculate:</p>
+				<md>
+					<mrow> T(c_1\vec{v_1}+c_2\vec{v_2}+c_3\vec{v_3}) \amp = T(c_1\vec{v_1} + (c_2\vec{v_2} + c_3\vec{v_3}))</mrow>
+					<mrow> \amp = T(c_1\vec{v_1}) + T(c_2\vec{v_2}+c_3\vec{v_3})</mrow>
+					<mrow> \amp = T(c_1\vec{v_1}) + T(c_2\vec{v_2}) + T(c_3\vec{v_3})</mrow>
+					<mrow> \amp = c_1T(\vec{v_1}) + c_2T(\vec{v_2}) + c_3T(\vec{v_3})</mrow>
+				</md>
+				<p>Now we prove that (2) implies (1), so assume that (2) is true.  Then, in particular, for any vectors <m>\vec{v}, \vec{w}</m> we can use the <m>k=2</m> case of (2) to calculate: <me>T(\vec{v}+\vec{w}) = T(1\vec{v}+1\vec{w}) = 1T(\vec{v}) + 1T(\vec{w}) = T(\vec{v})+T(\vec{w})</me>, which confirms the first point of the definition of linear transformations.  The second point of the definition is exactly the <m>k=1</m> case of (2), so there is nothing to prove there.</p>
+			</proof>
+		</theorem> 
+	</subsection>
+	<subsection>
+		<title>Matrix representation</title>
+		<p>The goal of this section is to show how we can encode a linear transformation as a matrix.  Doing this will allow us to translate almost all questions about linear transformations into questions about matrices, which are often easier to solve.  Our next theorem is the key to making this possible.</p>
+		<theorem xml:id="thm-transformation-determined-by-basis">
+			<p>Fix vectors <m>\vec{v_1}, \ldots, \vec{v_n}</m> such that <m>\span(\vec{v_1}, \ldots, \vec{v_n}) = \mathbb{R}^n</m>.  Suppose that <m>T : \mathbb{R}^n \to \mathbb{R}^m</m> and <m>S : \mathbb{R}^n \to \mathbb{R}^m</m> are two linear transformations, and suppose that for every <m>k</m> with <m>1 \leq k \leq n</m> we have <m>T(\vec{v_k}) = S(\vec{v_k})</m>.  Then <m>T=S</m> (that is, for every vector <m>\vec{w}</m> in <m>\mathbb{R}^n</m>, <m>T(\vec{w}) = S(\vec{w})</m>).</p>
+			<proof>
+				<p> By <xref ref="def-span" /> there are scalars <m>c_1, \ldots, c_n</m> such that <m>\vec{w} = c_1\vec{v_1}+\cdots+c_n\vec{v_n}</m>.  We now use <xref ref="thm-linear-transformation-linear-combination" /> to calculate:</p>
+				<md>
+					<mrow> T(\vec{w}) \amp = T(c_1\vec{v_1} + \cdots + c_n\vec{v_n})</mrow>
+					<mrow> \amp = c_1T(\vec{v_1}) + \cdots + c_nT(\vec{v_n})</mrow>
+					<mrow> \amp = c_1S(\vec{v_1}) + \cdots + c_nS(\vec{v_n})</mrow>
+					<mrow> \amp = S(c_1\vec{v_1}+\cdots+c_n\vec{v_n})</mrow>
+					<mrow> \amp = S(\vec{w}).</mrow>
+				</md>
+			</proof>
+		</theorem>
 
+		<p> While <xref ref="thm-transformation-determined-by-basis" /> can be applied using any set of vectors that spans <m>\mathbb{R}^n</m>, there is a very natural choice of vectors to work with, namely the standard basis vectors <m>\vec{e_1}, \ldots, \vec{e_n}</m>.  Since any two linear transformations that act in the same way on <m>\vec{e_1}, \ldots, \vec{e_n}</m> must be the same transformation, it makes sense to keep track of a transformation <m>T</m> by recording the outputs <m>T(\vec{e_1}), \ldots, T(\vec{e_n})</m>.</p>
+		<definition>
+			<p> Let <m>T : \mathbb{R}^n \to \mathbb{R}^m</m> be a linear transformation.  The <em>standard matrix of <m>T</m></em> is the matrix whose columns are <m>T(\vec{e_1}), \ldots, T(\vec{e_n})</m>.  We denote the standard matrix of <m>T</m> by <m>[T]</m>.</p>
+		</definition>
+
+		<example xml:id="ex-linear-transformation-standard-matrix">
+			<p> Let <m>T:\mathbb{R}^2 \to \mathbb{R}^4</m> be defined by <m>T\left(\begin{bmatrix}x\\y\end{bmatrix}\right) = \begin{bmatrix}2x-y\\4y\\0\\x+y\end{bmatrix}</m>.  Then <m>T</m> is a linear transformation (as you should verify!).  To find the standard matrix of <m>T</m> we do some calculations.</p>
+			<md>
+				<mrow> T(\vec{e_1}) = T\left(\begin{bmatrix}1\\0\end{bmatrix}\right) = \begin{bmatrix}2\\0\\0\\1\end{bmatrix}</mrow>
+				<mrow> T(\vec{e_2}) = T\left(\begin{bmatrix}0\\1\end{bmatrix}\right) = \begin{bmatrix}-1\\4\\0\\1\end{bmatrix}</mrow>
+			</md>
+			<p> Therefore, by definition, <me> [T] = \matr{cc}{2 \amp -1 \\ 0 \amp 4 \\ 0 \amp 0 \\ 1 \amp 1}</me>.</p>
+		</example>
+
+		<definition>
+			<p> A matrix with <m>m</m> rows and <m>n</m> columns is said to be an <m>m \times n</m> matrix, and <m>m \times n</m> is referred to as the <em>size</em> of the matrix.  If <m>1 \leq i \leq m</m> and <m>1 \leq j \leq n</m> then the entry in row <m>i</m> and column <m>j</m> of a matrix is called the <m>(i, j)</m> entry.</p>
+			<p> If <m>A</m> and <m>B</m> are matrices then we say <m>A = B</m> if <m>A</m> and <m>B</m> have the same size, and for all <m>i, j</m> the <m>(i, j)</m> entry of <m>A</m> is the same as the <m>(i, j)</m> entry of <m>B</m>. </p>
+		</definition>
+
+		<observation>
+			<p>Notice that if <m>T : \mathbb{R}^n \to \mathbb{R}^m</m> is a linear transformation then the outputs from <m>T</m> will be vectors in <m>\mathbb{R}^m</m>, so the matrix <m>[T]</m> will have <m>m</m> rows.  The columns will be <m>T(\vec{e_1}), \ldots, T(\vec{e_n})</m>, so there will be <m>n</m> columns.  Thus if <m>T : \mathbb{R}^n \to \mathbb{R}^m</m> is a linear transformation then <m>[T]</m> is an <m>m \times n</m> matrix.</p>
+			<p> In the terminology we have established, <xref ref="thm-transformation-determined-by-basis" /> says that if <m>T</m> and <m>S</m> are linear transformations then <m>T</m> and <m>S</m> are the same transformation if and only if <m>[T] = [S]</m>.</p>
+		</observation>
+	</subsection>
+	<subsection>
+		<title>
+			Using the matrix representation
+		</title>
+		<p> 
+			Given a linear transformation <m>T : \mathbb{R}^n \to \mathbb{R}^m</m>, we now have a matrix <m>[T]</m> that encodes all the information about <m>T</m>.  The main thing one does with functions is apply them to vectors and look at the output, so we would like to be able to use the matrix <m>[T]</m> to calculate outputs of <m>T</m>.  That is, we would like to be able to start with a vector <m>\vec{v}</m> in <m>\mathbb{R}^n</m> and the matrix <m>[T]</m> and use that data to calculate the vector <m>T(\vec{v})</m>.
+		</p>
+
+		<p> 
+			Suppose that <m>\vec{v} = \begin{bmatrix}x_1 \\ \vdots \\ x_n\end{bmatrix}</m>.  Then we can write <m>\vec{v} = x_1\vec{e_1} + \cdots + x_n\vec{e_n}</m>, so since <m>T</m> is linear we have <me>T(\vec{v}) = x_1T(\vec{e_1}) + \cdots x_nT(\vec{e_n})</me>.  Now the vectors <m>T(\vec{e_1}), \ldots, T(\vec{e_n})</m> are precisely the columns of the matrix <m>[T]</m>, so we see that <m>T(\vec{v})</m> is the linear combination of the columns of <m>[T]</m> where the coefficients of the linear combination are the entries of the vector <m>\vec{v}</m>.  This calculation is so important that it gets its own definition. 
+		</p>
+		
+		<definition>
+			<p> Let <m>A</m> be an <m>m \times n</m> matrix with columns <m>\vec{A_1}, \ldots, \vec{A_n}</m>, and let <m>\vec{v} = \begin{bmatrix}x_1\\ \vdots \\ x_n\end{bmatrix}</m> be a vector in <m>\mathbb{R}^n</m>.  We define the <em>product</em> of <m>A</m> and <m>\vec{v}</m> to be: <me>A\vec{v} = x_1\vec{A_1} + \cdots + x_n\vec{A_n}</me>.</p>
+		</definition>
+
+		<p>
+			The discussion before the definition is actually a proof of the following very important theorem.
+		</p>
+
+		<theorem xml:id="thm-matrix-times-vector-implements-transformation">
+			<p> Let <m>T : \mathbb{R}^n \to \mathbb{R}^m</m> be a linear transformation, and let <m>\vec{v}</m> be a vector in <m>\mathbb{R}^n</m>.  Then <me>T(\vec{v}) = [T]\vec{v}</me>. </p>
+		</theorem>
+
+		<example>
+			<p> In <xref ref="ex-linear-transformation-standard-matrix" /> we considered the linear transformation <m>T:\mathbb{R}^2 \to \mathbb{R}^4</m> defined by <m>T\left(\begin{bmatrix}x\\y\end{bmatrix}\right) = \begin{bmatrix}2x-y\\4y\\0\\x+y\end{bmatrix}</m>, and we found that <m>[T] = \matr{cc}{2 \amp -1 \\ 0 \amp 4 \\ 0 \amp 0 \\ 1 \amp 1}</m>.  Now consider the vector <m>\vec{v} = \begin{bmatrix}5\\-2\end{bmatrix}</m>.  On the one hand, plugging this in to the formula for <m>T</m> gives us <me>T(\vec{v}) = \begin{bmatrix} 2(5)-(-2) \\ 4(-2) \\ 0 \\ 5+(-2)\end{bmatrix} = \begin{bmatrix}12 \\ -8 \\ 0 \\ 3\end{bmatrix}</me>. On the other hand, if we use the product of <m>[T]</m> with <m>\vec{v}</m> we get <me> [T]\vec{v} = \matr{cc}{2 \amp -1 \\ 0 \amp 4 \\ 0 \amp 0 \\ 1 \amp 1}\begin{bmatrix}5\\-2\end{bmatrix} = 5\begin{bmatrix}2\\0\\0\\1\end{bmatrix} + (-2)\begin{bmatrix}-1\\4\\0\\1\end{bmatrix} = \begin{bmatrix}12 \\ -8 \\ 0 \\3\end{bmatrix}</me>.  Thus, as predicted by <xref ref="thm-matrix-times-vector-implements-transformation" />, <m>T(\vec{v}) = [T]\vec{v}</m>.</p>
+		</example>
+
+		<example>
+			<p> Fix an angle <m>\theta</m>, and consider the function <m>T_\theta : \mathbb{R}^2 \to \mathbb{R}^2</m> which rotates counterclockwise by <m>\theta</m> radians.  In <xref ref="ex-rotation-linear" /> you were asked to think about why <m>T_\theta</m> is a linear transformation.  Taking for granted that it is linear, we can use the matrix <m>[T_\theta]</m> to find a formula for this rotation. </p>
+			<p> First, we need to calculate <m>[T_\theta]</m>.  To do that we need to find <m>T_\theta\left(\begin{bmatrix}1\\0\end{bmatrix}\right)</m> and <m>T_\theta\left(\begin{bmatrix}0\\1\end{bmatrix}\right)</m>.  That is, need to know where we will end up if we start at <m>\begin{bmatrix}1\\0\end{bmatrix}</m> and rotate counterclockwise by <m>\theta</m> radians.  As you know from highschool trigonometry, the result is <m>\begin{bmatrix}\cos(\theta) \\ \sin(\theta)\end{bmatrix}</m>. </p>
+			<figure>
+				<caption>Rotating <m>\begin{bmatrix}1\\0\end{bmatrix}</m> by <m>\theta</m>.</caption>
+				<!--<image>
+					<latex-image>
+
+					</latex-image>
+				</image>-->
+			</figure>
+			<p> Working out what happens when we rotate <m>\begin{bmatrix}0\\1\end{bmatrix}</m> requires a bit more trigonometry, but you can check that the result is <m>\begin{bmatrix}-\sin(\theta) \\ \cos(\theta)\end{bmatrix}</m>. </p>
+
+			<figure>
+				<caption>Rotating <m>\begin{bmatrix}0\\1\end{bmatrix}</m> by <m>\theta</m>.</caption>
+				<!--<image>
+					<latex-image>
+
+					</latex-image>
+				</image>-->
+			</figure>
+
+			<p> Thus we have <m>[T_\theta] = \matr{cc}{\cos(\theta) \amp -\sin(\theta) \\ \sin(\theta) \amp \cos(\theta)}</m>.  Now we can calculate, for <em>any</em> vector, 
+			<md>
+				<mrow> T_\theta\left(\begin{bmatrix}x\\y\end{bmatrix}\right) \amp = [T_\theta]\begin{bmatrix}x\\y\end{bmatrix} </mrow>
+				<mrow> \amp = \matr{cc}{\cos(\theta) \amp -\sin(\theta) \\ \sin(\theta) \amp \cos(\theta)}\begin{bmatrix}x\\y\end{bmatrix} </mrow>
+				<mrow> \amp = x\begin{bmatrix}\cos(\theta) \\ \sin(\theta)\end{bmatrix} + y\begin{bmatrix}-\sin(\theta) \\ \cos(\theta)\end{bmatrix} </mrow>
+				<mrow> \amp = \begin{bmatrix}x\cos(\theta) - y\sin(\theta) \\ x\sin(\theta) + y\cos(\theta)\end{bmatrix}.</mrow>
+			</md>
+			We have thus found a formula for the rotation of any vector in <m>\mathbb{R}^2</m> by any angle <m>\theta</m>!</p>
+		</example>
+
+		<p> We have seen that every linear transformation gives rise to a matrix, and that applying the transformation to a vector is the same thing as multiplying the matrix by the vector.  Now we go the other way, and start with the matrix.  The next theorem completes the picture that matrices and linear transformations are fundamentally the same thing. </p>
+		<theorem>
+			<p> Let <m>A</m> be an <m>m \times n</m> matrix.  Define a function <m>T : \mathbb{R}^n \to \mathbb{R}^m</m> by <m>T(\vec{v}) = A\vec{v}</m>.  Then <m>T</m> is a linear transformation, and <m>[T] = A</m>. </p>
+			<proof>
+				<p> .. </p>
+			</proof>
+		</theorem>
+	</subsection>
 	<xi:include href="3-1-exercises.ptx" />
 </section>

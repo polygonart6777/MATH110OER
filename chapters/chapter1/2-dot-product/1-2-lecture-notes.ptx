@@ -12,7 +12,7 @@
 			<p>Perhaps surprisingly, it turns out that length and angle are closely related by a single algebraic construction.  For now, this definition is somewhat unmotivated.  The remainder of this section will explain the usefulness of this concept.</p>
 			<definition>
 				<p>
-					Suppose that <m>\vec{v} = \begin{bmatrix}v_1\\ \vdots \\ v_n\end{bmatrix}</m> and <m>\vec{w} = \begin{bmatrix}w_1 \\ \vdots \\ w_n \end{bmatrix}</m> are vectors in <m>\mathbb{R}^n</m>.  We define their <em>dot product</em> (or <em>inner product</em>)to be:
+					Suppose that <m>\vec{v} = \begin{bmatrix}v_1\\ \vdots \\ v_n\end{bmatrix}</m> and <m>\vec{w} = \begin{bmatrix}w_1 \\ \vdots \\ w_n \end{bmatrix}</m> are vectors in <m>\mathbb{R}^n</m>.  We define their <em>dot product</em> (or <em>inner product</em>) to be:
 					<me>\vec{v} \cdot \vec{w} = v_1w_1 + \cdots + v_nw_n</me>.
 				</p>
 			</definition>

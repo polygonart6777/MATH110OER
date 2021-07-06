@@ -3,6 +3,8 @@
 	<title>
 		Span
 	</title>
-
+	<definition xml:id="def-span">
+		<p>Definition of span</p>
+	</definition>
 	<xi:include href="2-3-exercises.ptx" />
 </section>
