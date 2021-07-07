@@ -96,7 +96,7 @@
 		</theorem>
 
 		<p> While <xref ref="thm-transformation-determined-by-basis" /> can be applied using any set of vectors that spans <m>\mathbb{R}^n</m>, there is a very natural choice of vectors to work with, namely the standard basis vectors <m>\vec{e_1}, \ldots, \vec{e_n}</m>.  Since any two linear transformations that act in the same way on <m>\vec{e_1}, \ldots, \vec{e_n}</m> must be the same transformation, it makes sense to keep track of a transformation <m>T</m> by recording the outputs <m>T(\vec{e_1}), \ldots, T(\vec{e_n})</m>.</p>
-		<definition>
+		<definition xml:id="def-standard-matrix">
 			<p> Let <m>T : \mathbb{R}^n \to \mathbb{R}^m</m> be a linear transformation.  The <em>standard matrix of <m>T</m></em> is the matrix whose columns are <m>T(\vec{e_1}), \ldots, T(\vec{e_n})</m>.  We denote the standard matrix of <m>T</m> by <m>[T]</m>.</p>
 		</definition>
 

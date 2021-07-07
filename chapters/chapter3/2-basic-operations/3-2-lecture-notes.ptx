@@ -4,5 +4,156 @@
 		Operations on matrices
 	</title>
 
+	<introduction>
+		<p> In this section we will see some fundamental ways of combining linear transformations to make other linear transformations.  As we saw in the previous section, linear transformations are fundamentally related to matrices, so we will also see how the operations we introduce act on matrices. </p>
+	</introduction>
+
+	<subsection>
+		<title>
+			Addition
+		</title>
+		<definition>
+			<p> Suppose that <m>T : \mathbb{R}^n \to \mathbb{R}^m</m> and <m>S : \mathbb{R}^n \to \mathbb{R}^m</m> are linear transformations.  We define their <em>sum</em> to be the function <m>T+S : \mathbb{R}^n \to \mathbb{R}^m</m> defined by <me>(T+S)(\vec{v}) = T(\vec{v}) + S(\vec{v})</me>.</p>
+		</definition>
+
+		<example xml:id="ex-adding-transformations">
+			<p> Let <m>T : \mathbb{R}^2 \to \mathbb{R}^3</m> be defined by <m>T\left(\begin{bmatrix}x\\y\end{bmatrix}\right) = \begin{bmatrix}x+y\\x-y\\2y\end{bmatrix}</m> and let <m>S : \mathbb{R}^2 \to \mathbb{R}^3</m> be defined by <m>S\left(\begin{bmatrix}x\\y\end{bmatrix}\right) = \begin{bmatrix}y\\x\\2x+y\end{bmatrix}</m>.  Then
+			<me> 
+				(T+S)\left(\begin{bmatrix}x\\y\end{bmatrix}\right) = T\left(\begin{bmatrix}x\\y\end{bmatrix}\right) + S\left(\begin{bmatrix}x\\y\end{bmatrix}\right)  = \begin{bmatrix}x+y\\x-y\\2y\end{bmatrix} + \begin{bmatrix}y\\x\\2x+y\end{bmatrix} = \begin{bmatrix}x+2y \\ 2x-y \\ 2x+3y\end{bmatrix}
+			</me>. </p>
+		</example>
+
+		<note>
+			<p>We can only add two linear transformations if they have the same domain (that is, they take inputs from the same dimension as each other) and the same codomain (that is, they give their outputs in the same dimension as each other).  For instance, if <m>T : \mathbb{R}^2 \to \mathbb{R}^3</m> and <m>S : \mathbb{R}^3 \to \mathbb{R}^3</m> are linear transformations then <m>T+S</m> does not make sense.</p>
+		</note>
+
+		<theorem xml:id="thm-sum-of-linear-is-linear">
+			<statement> <p>Suppose that <m>T : \mathbb{R}^n \to \mathbb{R}^m</m> and <m>S : \mathbb{R}^n \to \mathbb{R}^m</m> are linear transformations.  Then <m>(T+S) : \mathbb{R}^n \to \mathbb{R}^m</m> is also a linear transformation.</p></statement>
+			<proof>
+				<p> Suppose that <m>\vec{v}, \vec{w}</m> are vectors in <m>\mathbb{R}^n</m>, and <m>c</m> is a scalar.  Then: 
+				<md>
+					<mrow> (T+S)(\vec{v}+\vec{w}) \amp = T(\vec{v}+\vec{w}) + S(\vec{v}+\vec{w}) </mrow>
+					<mrow> \amp = T(\vec{v}) + T(\vec{w}) + S(\vec{v}) + S(\vec{w}) </mrow>
+					<mrow> \amp = T(\vec{v}) + S(\vec{v}) + T(\vec{w}) + S(\vec{w}) </mrow>
+					<mrow> \amp = (T+S)(\vec{v}) + (T+S)(\vec{w})</mrow>
+				</md>,
+				and
+				<md>
+					<mrow> (T+S)(c\vec{v}) \amp = T(c\vec{v}) + S(c\vec{v}) </mrow>
+					<mrow> \amp = cT(\vec{v}) + cS(\vec{v}) </mrow>
+					<mrow> \amp = c(T(\vec{v}) + S(\vec{v})) </mrow>
+					<mrow> \amp = c(T+S)(\vec{v}) </mrow>
+				</md>.</p>
+			</proof>
+		</theorem>
+
+		<p>On the side of matrices, we define addition in the most natural way.</p>
+		<definition>
+			<p> Suppose that <m>A</m> and <m>B</m> are <m>m \times n</m>matrices.  Their <em>sum</em> is the <m>m \times n</m> matrix <m>A+B</m>, defined by saying that for every <m>i</m> and <m>j</m>, the <m>(i, j)</m> entry of <m>A+B</m> is the <m>(i,j)</m> entry of <m>A</m> plus the <m>(i,j)</m> entry of <m>B</m>.</p>
+		</definition>
+		<example>
+			<p> If <m>A = \begin{bmatrix}1 \amp 2 \amp 3 \\ -2 \amp 0 \amp 1\end{bmatrix}</m> and <m>B = \begin{bmatrix}0 \amp 1 \amp -1 \\ 4 \amp 1 \amp 0\end{bmatrix}</m> then <m>A+B = \begin{bmatrix}1 \amp 3 \amp 2 \\ 2 \amp 1 \amp 1\end{bmatrix}</m>.</p>
+		</example>
+
+		<note>
+			<p> We can only add two matrices of the same size.  For instance, the expression <m>\matr{cc}{1 \amp 2 \\ 3 \amp 4} + \matr{ccc}{1 \amp 2 \amp 3 \\ 2 \amp 4 \amp 5}</m> simply does not make sense.</p>
+		</note>
+
+		<p>As you probably expect, our definitions of addition of linear transformations and of matrices were designed to interact nicely.</p>
+		<theorem xml:id="thm-matrix-of-sum">
+			<statement> <p>Suppose that <m>T : \mathbb{R}^n \to \mathbb{R}^m</m> and <m>S : \mathbb{R}^n \to \mathbb{R}^m</m> are linear transformations.  Then <m>[T+S] = [T] + [S]</m>.</p></statement>
+			<proof>
+				<p> The first column of <m>[T+S]</m> is <m>(T+S)(\vec{e_1})</m>, and <m>(T+S)(\vec{e_1}) = T(\vec{e_1}) + S(\vec{e_1})</m>, which is the sum of the first column of <m>[T]</m> and the first column of <m>[S]</m>.  Thus <m>[T+S]</m> and <m>[T]+[S]</m> have the same first column.  Repeating this for the other columns, using the other <m>\vec{e_k}</m>s instead of <m>\vec{e_1}</m>, shows that <m>[T+S]</m> and <m>[T]+[S]</m> have exactly the same columns, so <m>[T+S] = [T] + [S]</m>. </p>
+			</proof>
+		</theorem>
+
+		<example>
+			<p> Consider again the transformations <m>T : \mathbb{R}^2 \to \mathbb{R}^3</m> defined by <m>T\left(\begin{bmatrix}x\\y\end{bmatrix}\right) = \begin{bmatrix}x+y\\x-y\\2y\end{bmatrix}</m> and <m>S : \mathbb{R}^2 \to \mathbb{R}^3</m> defined by <m>S\left(\begin{bmatrix}x\\y\end{bmatrix}\right) = \begin{bmatrix}y\\x\\2x+y\end{bmatrix}</m>.  We saw in <xref ref="ex-adding-transformations" /> that <m>(T+S) : \mathbb{R}^2 \to \mathbb{R}^3</m> is given by <m>(T+S)\left(\begin{bmatrix}x\\y\end{bmatrix}\right) = \begin{bmatrix}x+2y \\ 2x-y \\ 2x+3y\end{bmatrix}</m>.  Plugging in <m>\vec{e_1}</m> and <m>\vec{e_2}</m>, we find that <me>[T+S] = \begin{bmatrix}1 \amp 2 \\ 2 \amp -1 \\ 2 \amp 3\end{bmatrix}</me>.</p>
+			<p> On the other hand, we can also calculate <m>[T] = \begin{bmatrix}1 \amp 1 \\ 1 \amp -1 \\ 0 \amp 2\end{bmatrix}</m> and <m>[S] = \begin{bmatrix}0 \amp 1 \\ 1 \amp 0 \\ 2 \amp 1\end{bmatrix}</m>, and then calculate <me>[T]+[S] = \begin{bmatrix}1 \amp 2 \\ 2 \amp -1 \\ 2 \amp 3\end{bmatrix}</me>, as we expected. </p>
+		</example>
+	</subsection>
+
+
+
+	<subsection>
+		<title>
+			Scalar multiplication
+		</title>
+		<definition>
+			<p> Let <m>T : \mathbb{R}^n \to \mathbb{R}^m</m> be a linear transformation, and let <m>c</m> be a scalar.  We define a new linear transformation <m>cT : \mathbb{R}^n \to \mathbb{R}^m</m> by <me>(cT)(\vec{v}) = c(T(\vec{v}))</me>. </p>
+		</definition>
+		<example xml:id="ex-scalar-multiply-transformation">
+			<p> Let <m>T : \mathbb{R}^4 \to \mathbb{R}^2</m> be defined by <m>T\left(\begin{bmatrix}x\\y\\z\\w\end{bmatrix}\right) = \begin{bmatrix}x+y-2w\\z+w\end{bmatrix}</m>.  Then <m>(-3)T : \mathbb{R}^4 \to \mathbb{R}^2</m> is defined by <me>((-3)T)\left(\begin{bmatrix}x\\y\\z\\w\end{bmatrix}\right) = -3\left(T\left(\begin{bmatrix}x\\y\\z\\w\end{bmatrix}\right)\right) = -3\begin{bmatrix}x+y-2w\\z+w\end{bmatrix} = \begin{bmatrix}-3x-3y+6w \\ -3z-3w\end{bmatrix}</me>.</p>
+		</example>
+		<theorem>
+			<statement> <p>Suppose that <m>T : \mathbb{R}^n \to \mathbb{R}^m</m> is a linear transformation, and <m>c</m> is a scalar.  Then <m>cT : \mathbb{R}^n \to \mathbb{R}^m</m> is also a linear transformation.</p></statement>
+			<proof>
+				<p>This is left as an exercise; it is similar in spirit to the proof of <xref ref="thm-sum-of-linear-is-linear" />.</p>
+			</proof>
+		</theorem>
+
+		<p>On the side of matrices, we have:</p>
+		<definition>
+			<p> Let <m>A</m> be an <m>m \times n</m> matrix, and let <m>c</m> be a scalar.  We define the <m>m \times n</m> matrix <m>cA</m> by multiplying every entry of <m>A</m> by <m>c</m>.</p>
+		</definition>
+		<example>
+			<p>If <m>A = \begin{bmatrix}1 \amp 2 \amp 3 \\ 4 \amp 5 \amp 6\end{bmatrix}</m> then <m>5A = \begin{bmatrix}5 \amp 10 \amp 15 \\ 20 \amp 25 \amp 30\end{bmatrix}</m>.</p>
+		</example>
+		<p>Like with addition, the linear transformations viewpoint and the matrix viewpoint play nicely together:</p>
+		<theorem>
+			<statement> <p>Suppose that <m>T : \mathbb{R}^n \to \mathbb{R}^m</m> is a linear transformation, and <m>c</m> is a scalar.  Then <m>[cT] = c[T]</m>.</p></statement>
+			<proof>
+				<p>Exercise; similar to the proof of <xref ref="thm-matrix-of-sum" />.</p>
+			</proof>
+		</theorem>
+
+		<example>
+			<p> 
+				Consider again the transformation <m>T : \mathbb{R}^4 \to \mathbb{R}^2</m> defined by <m>T\left(\begin{bmatrix}x\\y\\z\\w\end{bmatrix}\right) = \begin{bmatrix}x+y-2w\\z+w\end{bmatrix}</m>.  We saw in <xref ref="ex-scalar-multiply-transformation" /> that <me>(-3)T\left(\begin{bmatrix}x\\y\\z\\w\end{bmatrix}\right) = \begin{bmatrix}-3x-3y+6w \\ -3z-3w\end{bmatrix}</me>. 
+				A direct calculation using <xref ref="def-standard-matrix" /> shows that <m>[T] = \begin{bmatrix}1 \amp 1 \amp 0 \amp -2 \\ 0 \amp 0 \amp 1 \amp 1\end{bmatrix}</m>, and that <me>(-3)[T] = (-3)\begin{bmatrix}1 \amp 1 \amp 0 \amp -2 \\ 0 \amp 0 \amp 1 \amp 1\end{bmatrix} = \begin{bmatrix}-3 \amp -3 \amp 0 \amp 6 \\ 0 \amp 0 \amp -3 \amp -3\end{bmatrix} = [(-3)T]</me>.
+			</p>
+		</example>
+
+		<p> As we did with vectors (and also with numbers), we will often write <m>A - B</m> instead of <m>A + (-1)B</m>. </p>
+	</subsection>
+
+	<subsection>
+		<title>
+			Transpose
+		</title>
+		<p> Our last basic operation is a bit harder to motivate than addition and scalar multiplication, but we will see in <xref ref="chapt-5" /> that is is very important.  For this particular operation the definition in terms of linear transformations is outside the scope of this course, so we restrict ourselves to matrices. </p>
+		<definition>
+			<p> Suppose that <m>A</m> is an <m>m \times n</m> matrix.  The <em>transpose</em> of <m>A</m> is the <m>n \times m</m> matrix obtained by writing the columns of <m>A</m> as rows. </p>
+			<p> A matrix <m>A</m>is called <em>symmetric</em> if <m>A = A^t</m>.</p>
+		</definition>
+		<example>
+			<p> Let <m>A = \begin{bmatrix}1 \amp 2 \amp 3 \\ 3 \amp 4 \amp 0\end{bmatrix}</m>.  Then <m>A^t = \begin{bmatrix}1 \amp 3 \\ 2 \amp 4 \\ 3 \amp 0\end{bmatrix}</m>.</p>
+		</example>
+
+		<theorem xml:id="thm-symmetric-square">
+			<statement> <p> Let <m>A</m> be a symmetric matrix.  Then <m>A</m> is square.</p></statement>
+			<proof><p> If <m>A</m> is <m>m \times n</m> then <m>A^t</m> is <m>n \times m</m>, so to have <m>A = A^t</m> we must have <m>m=n</m>, i.e., that <m>A</m> is square.</p></proof>
+		</theorem>
+
+		<note>
+			<p> Be careful!  <xref ref="thm-symmetric-square" /> says that every symmetric matrix is square.  It does <em>not</em> say that every square matrix is symmetric.  For example, <m>\begin{bmatrix}1 \amp 1 \\ 2 \amp 1\end{bmatrix}</m> is a square matrix that is not symmetric.</p>
+		</note>
+
+		<p> Now that we have several things that we can do to matrices (or linear transformations) it is important to know how these operations interact with each other.  Fortunately, the answer is that they interact in exactly the ways that you would hope for, as long as we are careful to make sure that the sizes of the matrices (equivalently, the domains and codomains of the linear transformations) match up correctly.  We'll state the relations for matrices, and leave it up to you to translate these statements into the language of linear transformations.  We omit the proofs, and invite you to verify these statements yourself.</p>
+		<theorem xml:id="thm-basic-matrix-operation-properties">
+			<statement> 
+				<p> Let <m>A</m>, <m>B</m>, and <m>C</m> be matrices, all of which are the same size, and let <m>c</m> and <m>d</m> be scalars.  Then: </p>
+				<ol>
+					<li><m>(A+B)+C = A+(B+C)</m></li>
+					<li><m>A+B=B+A</m></li>
+					<li><m>(c+d)A = cA+dA</m></li>
+					<li><m>(cd)A = c(dA)</m></li>
+					<li><m>c(A+B) = cA+cB</m></li>
+					<li><m>(A+B)^t = A^t + B^t</m></li>
+					<li><m>(cA)^t = c(A^t)</m></li>
+				</ol>
+			</statement>
+		</theorem>
+	</subsection>
 	<xi:include href="3-2-exercises.ptx" />
 </section>
