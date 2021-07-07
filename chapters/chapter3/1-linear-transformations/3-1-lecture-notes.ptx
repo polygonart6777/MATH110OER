@@ -151,22 +151,64 @@
 			<p> Fix an angle <m>\theta</m>, and consider the function <m>T_\theta : \mathbb{R}^2 \to \mathbb{R}^2</m> which rotates counterclockwise by <m>\theta</m> radians.  In <xref ref="ex-rotation-linear" /> you were asked to think about why <m>T_\theta</m> is a linear transformation.  Taking for granted that it is linear, we can use the matrix <m>[T_\theta]</m> to find a formula for this rotation. </p>
 			<p> First, we need to calculate <m>[T_\theta]</m>.  To do that we need to find <m>T_\theta\left(\begin{bmatrix}1\\0\end{bmatrix}\right)</m> and <m>T_\theta\left(\begin{bmatrix}0\\1\end{bmatrix}\right)</m>.  That is, need to know where we will end up if we start at <m>\begin{bmatrix}1\\0\end{bmatrix}</m> and rotate counterclockwise by <m>\theta</m> radians.  As you know from highschool trigonometry, the result is <m>\begin{bmatrix}\cos(\theta) \\ \sin(\theta)\end{bmatrix}</m>. </p>
 			<figure>
-				<caption>Rotating <m>\begin{bmatrix}1\\0\end{bmatrix}</m> by <m>\theta</m>.</caption>
-				<!--<image>
+				<caption>Rotating <m>\vec{e_1} = \begin{bmatrix}1\\0\end{bmatrix}</m> by <m>\theta</m>.</caption>
+				<image>
 					<latex-image>
+						\begin{tikzpicture}[scale=2]
+							\draw[thick] (0,-2.2) -- (0,2.2);
+							\draw[thick] (-2.2,0) -- (2.2,0);
+							\foreach \x in{-2, -1, 1,2}
+							{
+								\draw[gray] (\x,-2.2) -- (\x,2.2);
+								\draw[gray] (-2.2, \x) -- (2.2,\x);
+								\node[below] at (\x,0) {$\x$};
+								\node[left] at (0,\x) {$\x$};
+							}
+							
+							\coordinate (O) at (0,0);
+							\coordinate (A) at (1,0);
+							\coordinate (B) at (0.7071, 0.7071);
+							
+							\draw[-Triangle, very thick, blue] (O)--(A) node[midway, below]{$\overrightarrow{e_1}$};
+							\draw[-Triangle, very thick, purple] (O)--(B) node[pos=1, above right]{$T_\theta(\overrightarrow{e_1}) = (\cos(\theta), \sin(\theta))$};
+							
 
+							\tkzMarkAngle[size=0.5, blue](A,O,B)
+							\tkzLabelAngle[pos = 0.65, blue](A,O,B){$\theta$}
+						\end{tikzpicture}
 					</latex-image>
-				</image>-->
+				</image>
 			</figure>
 			<p> Working out what happens when we rotate <m>\begin{bmatrix}0\\1\end{bmatrix}</m> requires a bit more trigonometry, but you can check that the result is <m>\begin{bmatrix}-\sin(\theta) \\ \cos(\theta)\end{bmatrix}</m>. </p>
 
 			<figure>
-				<caption>Rotating <m>\begin{bmatrix}0\\1\end{bmatrix}</m> by <m>\theta</m>.</caption>
-				<!--<image>
+				<caption>Rotating <m>\vec{e_2} = \begin{bmatrix}0\\1\end{bmatrix}</m> by <m>\theta</m>.</caption>
+				<image>
 					<latex-image>
+						\begin{tikzpicture}[scale=2]
+							\draw[thick] (0,-2.2) -- (0,2.2);
+							\draw[thick] (-2.2,0) -- (2.2,0);
+							\foreach \x in{-2, -1, 1,2}
+							{
+								\draw[gray] (\x,-2.2) -- (\x,2.2);
+								\draw[gray] (-2.2, \x) -- (2.2,\x);
+								\node[below] at (\x,0) {$\x$};
+								\node[left] at (0,\x) {$\x$};
+							}
+							
+							\coordinate (O) at (0,0);
+							\coordinate (A) at (0,1);
+							\coordinate (B) at (-0.7071, 0.7071);
+							
+							\draw[-Triangle, very thick, blue] (O)--(A) node[midway, right]{$\overrightarrow{e_2}$};
+							\draw[-Triangle, very thick, purple] (O)--(B) node[pos=1.3, above]{$T_\theta(\overrightarrow{e_2}) = (-\sin(\theta), \cos(\theta))$};
+							
 
+							\tkzMarkAngle[size=0.5, blue](A,O,B)
+							\tkzLabelAngle[pos = 0.65, blue](A,O,B){$\theta$}
+						\end{tikzpicture}
 					</latex-image>
-				</image>-->
+				</image>
 			</figure>
 
 			<p> Thus we have <m>[T_\theta] = \matr{cc}{\cos(\theta) \amp -\sin(\theta) \\ \sin(\theta) \amp \cos(\theta)}</m>.  Now we can calculate, for <em>any</em> vector, 
@@ -180,12 +222,46 @@
 		</example>
 
 		<p> We have seen that every linear transformation gives rise to a matrix, and that applying the transformation to a vector is the same thing as multiplying the matrix by the vector.  Now we go the other way, and start with the matrix.  The next theorem completes the picture that matrices and linear transformations are fundamentally the same thing. </p>
-		<theorem>
+		<theorem xml:id="thm-matrix-transform">
 			<p> Let <m>A</m> be an <m>m \times n</m> matrix.  Define a function <m>T : \mathbb{R}^n \to \mathbb{R}^m</m> by <m>T(\vec{v}) = A\vec{v}</m>.  Then <m>T</m> is a linear transformation, and <m>[T] = A</m>. </p>
 			<proof>
-				<p> .. </p>
+				<p>
+					Let the columns of <m>A</m> be <m>\vec{A_1}, \ldots, \vec{A_n}</m>.  Suppose that <m>\vec{v} = \begin{bmatrix}x_1 \\ \vdots \\ x_n\end{bmatrix}</m> and <m>\vec{w} = \begin{bmatrix}y_1 \\ \vdots \\ y_n\end{bmatrix}</m>, and let <m>c</m> be a scalar.  Then we can calculate:
+					<md>
+						<mrow>T_A(\vec{v}+\vec{w}) \amp = A(\vec{v}+\vec{w}) </mrow>
+						<mrow> \amp = A\begin{bmatrix}x_1+y_1 \\ \vdots \\ x_n+y_n\end{bmatrix} </mrow>
+						<mrow> \amp = (x_1+y_1)\vec{A_1} + \cdots + (x_n+y_n)\vec{A_n} </mrow>
+						<mrow> \amp = x_1\vec{A_1}+y_1\vec{A_1} + \cdots + x_n\vec{A_n} + y_n\vec{A_n} </mrow>
+						<mrow> \amp = (x_1\vec{A_1} + \cdots + x_n\vec{A_n}) + (y_1\vec{A_1} + \cdots + y_n\vec{A_n}) </mrow>
+						<mrow> \amp = A\begin{bmatrix}x_1 \\ \vdots \\ x_n\end{bmatrix} + A\begin{bmatrix}y_1 \\ \vdots \\ y_n\end{bmatrix} </mrow>
+						<mrow> \amp = A\vec{v} + A\vec{w} </mrow>
+						<mrow> \amp = T_A(\vec{v}) + T_A(\vec{w})</mrow>
+					</md>, and 
+					<md>
+						<mrow>T_A(c\vec{v}) \amp = A\begin{bmatrix}cx_1 \\ \vdots \\ cx_n\end{bmatrix} </mrow>
+						<mrow> \amp = (cx_1)\vec{A_1} + \cdots + (cx_n)\vec{A_n} </mrow>
+						<mrow> \amp = c(x_1\vec{A_1} + \cdots + x_n\vec{A_n}) </mrow>
+						<mrow> \amp = c(A\vec{v}) </mrow>
+						<mrow> \amp = cT_A(\vec{v}) </mrow>
+					</md>.  These two calculations show that <m>T_A</m> is a linear transformation.
+				</p>
+				<p>
+					Now we need to show that <m>[T_A] = A</m>.  To do that, let us start by calculating the first column of <m>[T_A]</m>, which by definition is <m>T_A(\vec{e_1})</m>.
+					<md>
+						<mrow>T_A(\vec{e_1}) \amp = A\vec{e_1} </mrow>
+						<mrow> \amp = A\begin{bmatrix}1 \\ 0 \\ \vdots \\ 0\end{bmatrix} </mrow>
+						<mrow> \amp = 1\vec{A_1} + 0\vec{A_2} + \cdots + 0\vec{A_n} </mrow>
+						<mrow> \amp = \vec{A_1} </mrow>
+					</md>.  This shows that the first column of <m>[T_A]</m> is the same as the first column of <m>A</m>.  Repeating this calculation with <m>\vec{e_2}, \cdots, \vec{e_n}</m> shows that for every <m>k</m> the <m>k</m>th column of <m>[T_A]</m> is the same as the <m>k</m>th column of <m>A</m>, and thus <m>[T_A] = A</m>.
+				</p>
 			</proof>
 		</theorem>
+		<p> We will only occasionally have a reason to explicitly talk about the transformation <m>T_A</m> associated to a matrix <m>A</m>, but we will use the result of <xref ref="thm-matrix-transform" /> very frequently, in the sense that we will use these two equations all the time:
+			<ul>
+				<li><m>A(\vec{v}+\vec{w}) = A\vec{v} + A\vec{w}</m></li>,
+				<li><m>A(c\vec{v}) = cA\vec{v}</m>.</li>
+			</ul>
+		</p>
 	</subsection>
 	<xi:include href="3-1-exercises.ptx" />
 </section>
