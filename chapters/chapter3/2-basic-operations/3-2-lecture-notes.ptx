@@ -71,6 +71,10 @@
 			<p> Consider again the transformations <m>T : \mathbb{R}^2 \to \mathbb{R}^3</m> defined by <m>T\left(\begin{bmatrix}x\\y\end{bmatrix}\right) = \begin{bmatrix}x+y\\x-y\\2y\end{bmatrix}</m> and <m>S : \mathbb{R}^2 \to \mathbb{R}^3</m> defined by <m>S\left(\begin{bmatrix}x\\y\end{bmatrix}\right) = \begin{bmatrix}y\\x\\2x+y\end{bmatrix}</m>.  We saw in <xref ref="ex-adding-transformations" /> that <m>(T+S) : \mathbb{R}^2 \to \mathbb{R}^3</m> is given by <m>(T+S)\left(\begin{bmatrix}x\\y\end{bmatrix}\right) = \begin{bmatrix}x+2y \\ 2x-y \\ 2x+3y\end{bmatrix}</m>.  Plugging in <m>\vec{e_1}</m> and <m>\vec{e_2}</m>, we find that <me>[T+S] = \begin{bmatrix}1 \amp 2 \\ 2 \amp -1 \\ 2 \amp 3\end{bmatrix}</me>.</p>
 			<p> On the other hand, we can also calculate <m>[T] = \begin{bmatrix}1 \amp 1 \\ 1 \amp -1 \\ 0 \amp 2\end{bmatrix}</m> and <m>[S] = \begin{bmatrix}0 \amp 1 \\ 1 \amp 0 \\ 2 \amp 1\end{bmatrix}</m>, and then calculate <me>[T]+[S] = \begin{bmatrix}1 \amp 2 \\ 2 \amp -1 \\ 2 \amp 3\end{bmatrix}</me>, as we expected. </p>
 		</example>
+
+		<definition>
+			<p> For any <m>m</m> and <m>n</m>, the <m>m \times n</m> <em>zero matrix</em> is the <m>m \times n</m> matrix <m>0_{m\times n}</m> where every entry is <m>0</m>. </p>
+		</definition>
 	</subsection>
 
 
@@ -142,13 +146,15 @@
 		<p> Now that we have several things that we can do to matrices (or linear transformations) it is important to know how these operations interact with each other.  Fortunately, the answer is that they interact in exactly the ways that you would hope for, as long as we are careful to make sure that the sizes of the matrices (equivalently, the domains and codomains of the linear transformations) match up correctly.  We'll state the relations for matrices, and leave it up to you to translate these statements into the language of linear transformations.  We omit the proofs, and invite you to verify these statements yourself.</p>
 		<theorem xml:id="thm-basic-matrix-operation-properties">
 			<statement> 
-				<p> Let <m>A</m>, <m>B</m>, and <m>C</m> be matrices, all of which are the same size, and let <m>c</m> and <m>d</m> be scalars.  Then: </p>
+				<p> Let <m>A</m>, <m>B</m>, and <m>C</m> be matrices, all of which are the same size <m>m \times n</m>, and let <m>c</m> and <m>d</m> be scalars.  Then: </p>
 				<ol>
 					<li><m>(A+B)+C = A+(B+C)</m></li>
 					<li><m>A+B=B+A</m></li>
+					<li><m>A+0_{m\times n} = A</m></li>
 					<li><m>(c+d)A = cA+dA</m></li>
 					<li><m>(cd)A = c(dA)</m></li>
 					<li><m>c(A+B) = cA+cB</m></li>
+					<li><m>0A = 0_{m \times n}</m></li>
 					<li><m>(A+B)^t = A^t + B^t</m></li>
 					<li><m>(cA)^t = c(A^t)</m></li>
 				</ol>

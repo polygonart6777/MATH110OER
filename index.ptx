@@ -116,6 +116,7 @@
 			</title>
 
 			<xi:include href="chapters/chapter5/1-orthogonality/5-1-lecture-notes.ptx" />
+			<xi:include href="chapters/chapter5/3-spectral-theorem/5-3-lecture-notes.ptx" />
 		</chapter>
 
 		<xi:include href="backmatter.ptx" />

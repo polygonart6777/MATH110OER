@@ -113,12 +113,12 @@
 								\vect{OQ} = \vect{OP} + c\mbf{v} 
 							</me>
 							for some positive (resp. negative) number <m>c</m>.
-							Therefore, we should compute <m>\vect{OP}+\mbf{v}</m> (resp. <m>\vect{OP}-\mbf{v}</m>) for the given point <m>P</m> and the given vector <m>\mbf{v}</m>.<fn>Notice that we could also compute <m>\vect{OP}+5\mbf{v}</m>, <m>\vect{OP}+ \pi \mbf{v}</m>, or many other things for <xref ref="ex-pt-vec-direction-item-same"/>, but the positive number <m>+1</m> is an easy choice. Similarly, for <xref text="custom" ref="ex-pt-vec-direction-item-opposite"/>, we could also compute <m>\vect{OP}-5\mbf{v}</m>, <m>\vect{OP} - \frac{1}{8} \mbf{v}</m>, etc. - there are many correct answers.</fn>
+							Therefore, we should compute <m>\vect{OP}+\mbf{v}</m> (resp. <m>\vect{OP}-\mbf{v}</m>) for the given point <m>P</m> and the given vector <m>\mbf{v}</m>. (Notice that we could also compute <m>\vect{OP}+5\mbf{v}</m>, <m>\vect{OP}+ \pi \mbf{v}</m>, or many other things for <xref text="custom" ref="ex-pt-vec-direction-item-same"><em>same direction</em></xref>, but the positive number <m>+1</m> is an easy choice. Similarly, for <xref text="custom" ref="ex-pt-vec-direction-item-opposite"><em>opposite direction</em></xref>, we could also compute <m>\vect{OP}-5\mbf{v}</m>, <m>\vect{OP} - \frac{1}{8} \mbf{v}</m>, etc. - there are many correct answers.)
 							
-							<p>First, our solution for <xref ref="ex-pt-vec-direction-item-first-combo">
+							<p>First, our solution for <xref text="custom" ref="ex-pt-vec-direction-item-first-combo">
 								<m>P=(-1,2,2)</m> and <m>\mathbf{v} = \begin{bmatrix} 1 \\ 3 \\ 1 \end{bmatrix}</m></xref>:</p>
 							<p>
-							<xref ref="ex-pt-vec-direction-item-same"><em>same direction</em></xref>:
+							<xref text="custom" ref="ex-pt-vec-direction-item-same"><em>same direction</em></xref>:
 								We compute
 
 								<me>
@@ -197,9 +197,9 @@
 								so that <m>\vect{PQ}</m> indeed has the opposite direction as <m>\mbf{v}</m>.
 							</p>		
 							
-							<p>Next, our solution for <m>P=(3,0,-1)</m> and <m>\mathbf{v} = \begin{bmatrix} 2 \\ -1 \\ 3 \end{bmatrix} </m>:</p>
+							<p>Next, our solution for <xref text="custom" ref="ex-pt-vec-direction-item-second-combo"><m>P=(3,0,-1)</m> and <m>\mathbf{v} = \begin{bmatrix} 2 \\ -1 \\ 3 \end{bmatrix} </m></xref>:</p>
 							<p>
-							<xref ref="ex-pt-vec-direction-item-same"><em>same direction</em></xref>:
+							<xref text="custom" ref="ex-pt-vec-direction-item-same"><em>same direction</em></xref>:
 								We compute
 
 								<me>
@@ -241,7 +241,7 @@
 								so that <m>\vect{PQ}</m> indeed has the same direction as <m>\mbf{v}</m> (since they are equal).
 							</p>
 							<p>
-							<xref ref="ex-pt-vec-direction-item-opposite"><em>opposite direction</em></xref>:
+							<xref text="custom" ref="ex-pt-vec-direction-item-opposite"><em>opposite direction</em></xref>:
 									
 								We compute
 								

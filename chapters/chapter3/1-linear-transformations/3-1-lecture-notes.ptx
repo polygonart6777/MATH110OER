@@ -147,7 +147,7 @@
 			<p> In <xref ref="ex-linear-transformation-standard-matrix" /> we considered the linear transformation <m>T:\mathbb{R}^2 \to \mathbb{R}^4</m> defined by <m>T\left(\begin{bmatrix}x\\y\end{bmatrix}\right) = \begin{bmatrix}2x-y\\4y\\0\\x+y\end{bmatrix}</m>, and we found that <m>[T] = \matr{cc}{2 \amp -1 \\ 0 \amp 4 \\ 0 \amp 0 \\ 1 \amp 1}</m>.  Now consider the vector <m>\vec{v} = \begin{bmatrix}5\\-2\end{bmatrix}</m>.  On the one hand, plugging this in to the formula for <m>T</m> gives us <me>T(\vec{v}) = \begin{bmatrix} 2(5)-(-2) \\ 4(-2) \\ 0 \\ 5+(-2)\end{bmatrix} = \begin{bmatrix}12 \\ -8 \\ 0 \\ 3\end{bmatrix}</me>. On the other hand, if we use the product of <m>[T]</m> with <m>\vec{v}</m> we get <me> [T]\vec{v} = \matr{cc}{2 \amp -1 \\ 0 \amp 4 \\ 0 \amp 0 \\ 1 \amp 1}\begin{bmatrix}5\\-2\end{bmatrix} = 5\begin{bmatrix}2\\0\\0\\1\end{bmatrix} + (-2)\begin{bmatrix}-1\\4\\0\\1\end{bmatrix} = \begin{bmatrix}12 \\ -8 \\ 0 \\3\end{bmatrix}</me>.  Thus, as predicted by <xref ref="thm-matrix-times-vector-implements-transformation" />, <m>T(\vec{v}) = [T]\vec{v}</m>.</p>
 		</example>
 
-		<example>
+		<example xml:id="ex-rotation-matrix">
 			<p> Fix an angle <m>\theta</m>, and consider the function <m>T_\theta : \mathbb{R}^2 \to \mathbb{R}^2</m> which rotates counterclockwise by <m>\theta</m> radians.  In <xref ref="ex-rotation-linear" /> you were asked to think about why <m>T_\theta</m> is a linear transformation.  Taking for granted that it is linear, we can use the matrix <m>[T_\theta]</m> to find a formula for this rotation. </p>
 			<p> First, we need to calculate <m>[T_\theta]</m>.  To do that we need to find <m>T_\theta\left(\begin{bmatrix}1\\0\end{bmatrix}\right)</m> and <m>T_\theta\left(\begin{bmatrix}0\\1\end{bmatrix}\right)</m>.  That is, need to know where we will end up if we start at <m>\begin{bmatrix}1\\0\end{bmatrix}</m> and rotate counterclockwise by <m>\theta</m> radians.  As you know from highschool trigonometry, the result is <m>\begin{bmatrix}\cos(\theta) \\ \sin(\theta)\end{bmatrix}</m>. </p>
 			<figure>
@@ -262,6 +262,33 @@
 				<li><m>A(c\vec{v}) = cA\vec{v}</m>.</li>
 			</ul>
 		</p>
+	</subsection>
+
+	<subsection>
+		<title> A connection to systems of linear equations </title>
+		<p> Although we introduced multiplication of a matrix and a vector for reasons connected to linear transformations, the same operation has very close ties to systems of linear equations. </p>
+		<theorem>
+			<statement>
+				<p> Let <m>A</m> be an <m>m \times n</m> matrix, let <m>\vec{b} = \begin{bmatrix}b_1 \\ \vdots \\ b_m\end{bmatrix}</m>, and let <m>\vec{x} = \begin{bmatrix}x_1 \\ \vdots \\ x_n\end{bmatrix}</m>.  Then <m>A\vec{x} = \vec{b}</m> if and only if <m>\vec{x}</m> is a solution to the system of linear equations with augmented matrix <m>[A | \vec{b}]</m>. </p>
+			</statement>
+			<proof>
+				<p>Let <m>A = \begin{bmatrix}a_{1,1} \amp a_{1, 2} \amp \cdots \amp a_{1,n} \\ a_{2, 1} \amp a_{2,2} \amp \cdots \amp a_{2, n} \\ \vdots \amp \vdots \amp \ddots \amp \vdots \\ a_{m,1} \amp a_{m,2} \amp \cdots \amp a_{m,n}\end{bmatrix}</m>.  Then carrying out the matrix multiplication gives: 
+				<md>
+					<mrow> A\vec{x} \amp = \begin{bmatrix}a_{1,1} \amp a_{1, 2} \amp \cdots \amp a_{1,n} \\ a_{2, 1} \amp a_{2,2} \amp \cdots \amp a_{2, n} \\ \vdots \amp \vdots \amp \ddots \amp \vdots \\ a_{m,1} \amp a_{m,2} \amp \cdots \amp a_{m,n}\end{bmatrix}\begin{bmatrix}x_1\\ \vdots \\ x_n\end{bmatrix} </mrow>
+					<mrow> \amp = x_1\begin{bmatrix}a_{1,1}\\a_{2,1}\\ \vdots \\ a_{m,1}\end{bmatrix} + x_2\begin{bmatrix}a_{1,2} \\ a_{2,2} \\ \vdots \\ a_{m,2}\end{bmatrix} + \cdots + x_n\begin{bmatrix}a_{1,n}\\a_{2,n}\\ \vdots \\ a_{m,n}\end{bmatrix} </mrow>
+					<mrow> \amp = \begin{bmatrix}a_{1,1}x_1 + a_{1, 2}x_2 + \cdots + a_{1,n}x_n \\ a_{2,1}x_1 + a_{2,2}x_2 + \cdots + a_{2,n}x_n \\ \vdots \\ a_{m,1}x_1 + a_{m,2}x_2 + \cdots + a_{m,n}x_n\end{bmatrix}</mrow>
+				</md>.</p>
+				<p> We therefore see that the equation <m>A\vec{x}=\vec{b}</m> is equivalent to the system of equations</p>
+					<md>
+						<mrow>a_{1,1}x_1 + \cdots + a_{1,n}x_n = b_1</mrow>
+						<mrow>a_{2,1}x_1 + \cdots + a_{2,n}x_n = b_n</mrow>
+						<mrow> \vdots </mrow>
+						<mrow>a_{m,1}x_1 + \cdots + a_{m,n}x_n = b_m</mrow>
+					</md>
+				<p>The coefficient matrix of this system is exactly <m>A</m>, and so <m>A\vec{x}=\vec{b}</m> if and only if <m>\vec{x}</m> is a solution to the system <m>[A|\vec{b}]</m>.</p>
+			</proof>
+		</theorem>
+		<p> For the moment, this result just gives us a way of re-writing a system of linear equations as a single equation involving matrices and vectors.  After we develop more of the algebraic properties of equations involving matrices in <xref ref="sec-BasicOperations" /> and <xref ref="sec-Multiplication" /> we will return in <xref ref="sec-Inverses" /> to see how thinking of a system of linear equations as a matrix equation can sometimes be helpful. </p>
 	</subsection>
 	<xi:include href="3-1-exercises.ptx" />
 </section>

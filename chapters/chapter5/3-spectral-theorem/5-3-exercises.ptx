@@ -1,0 +1,140 @@
+			<exercises>
+ 					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 4, Exercise 4.11.2) </p></aside>
+						Determine whether the following set of vectors is orthogonal.  If it is orthogonal, determine whether it is also orthonormal.
+						<me> \begin{bmatrix}1 \\2 \\-1 \end{bmatrix}, \begin{bmatrix}1 \\ 0 \\ 1 \end{bmatrix}, \begin{bmatrix}-1\\1\\1 \end{bmatrix} </me>
+						</statement>
+						
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 4, Exercise 4.11.3) </p></aside>
+						Determine whether the following set of vectors is orthogonal.  If it is orthogonal, determine whether it is also orthonormal.
+
+						<me> \begin{bmatrix}1 \\-1 \\ 1 \end{bmatrix}, \begin{bmatrix} 2 \\ 1 \\ -1 \end{bmatrix}, \begin{bmatrix}0\\1\\1 \end{bmatrix} </me>
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 4, Exercise 4.11.4) </p></aside>
+						Determine whether the following set of vectors is orthogonal.  If it is orthogonal, determine whether it is also orthonormal.
+
+						<me> \begin{bmatrix}1 \\-1 \\ 1 \end{bmatrix}, \begin{bmatrix} 2 \\ 1 \\ -1 \end{bmatrix}, \begin{bmatrix}1\\2\\1 \end{bmatrix} </me>
+						</statement>
+						
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-PS" />, Chapter 11, Exercise 11.2.6) </p></aside>
+						Suppose <m> B = \{\mathbf{u_1},\mathbf{u_2}, \mathbf{u_3}\} </m> is an orthogonal basis of <m> \mathbb{R}^3 </m>.  We have been told that 
+						<me> \mathbf{u_1} = \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}, </me>
+						but it is not know what <m> \mathbf{u_2} </m> and <m> \mathbf{u_3} </m> are.  Find the first coordinate of the vector 
+						<me> \mathbf{v} = \begin{bmatrix} 1 \\ 0 \\ 2 \end{bmatrix} </me> 
+						with respect to the basis <m> B </m>. 
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 4, Example 4.125) </p></aside>
+						Consider the set of vectors given by 
+						<me> \{ \mathbf{u_1}, \mathbf{u_2}\}= \left\{ \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \begin{bmatrix}-1 \\ 1 \end{bmatrix}\right\}. </me>
+						Show that it is an othogonal set of vectors but not an orthonormal one.  Find the corresponding orthonormal set. 
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 4, Exercise 4.11.9) </p></aside>
+						Fill in the missing entries to make the matrix orthogonal.
+						<me> \begin{bmatrix} \frac{-1}{\sqrt{2}} \amp \frac{-1}{\sqrt{6}} \amp \frac{1}{\sqrt{3}} \\ \frac{1}{\sqrt{2}} \amp -- \amp -- \\ -- \amp \frac{\sqrt{6}}{3} \amp -- \end{bmatrix} .</me>
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KK" />, Chapter 4, Exercise 4.11.11) </p></aside>
+						Fill in the missing entries to make the matrix orthogonal.
+						<me> \begin{bmatrix} \frac{-1}{3} \amp \frac{-2}{\sqrt{5}} \amp -- \\ \frac{2}{3} \amp 0 \amp -- \\ -- \amp -- \amp \frac{4}{15}\sqrt{5} \end{bmatrix} .</me>
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 8, Exercise 8.2.25) </p></aside>
+						Show that every <m> 2 \times 2 </m> orthogonal matrix has the form <m> \begin{bmatrix} \cos(\theta) \amp -\sin(\theta) \\ \sin(\theta) \amp \cos(\theta) \end{bmatrix} </m> or 
+						 <m> \begin{bmatrix} \cos(\theta) \amp \sin(\theta) \\ \sin(\theta) \amp -\cos(\theta) \end{bmatrix} </m> for some angle <m> \theta </m>.
+						</statement>
+						 <hint> If <m> a^2 + b^2 = 1 </m>, then <m> a = \cos(\theta) </m> and <m> b = \sin(\theta) </m> for some angle <m> \theta </m>.
+						</hint> 
+						<!-- <solution>   
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 8, Exercise 8.2.2) </p></aside>
+						If <m> P </m> is a triangular orthogonal matrix, show that <m> P </m> is diagonal and that all diagonal entries are 1 or -1.  
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					<p><exercise><!-- xml:id="ex-" -->
+						<statement>
+							<aside><p> (Source: <xref ref="ref-KN" />, Chapter 8, Exercise 8.2.2) </p></aside>
+						If <m> P </m> is orthogonal, show that <m> kP </m> is orthogonal if and only if <m> k =1 </m> or <m> k =-1 </m>.  
+						</statement>
+						<!-- <hint>
+						</hint> -->
+						<!-- <solution>
+						</solution> -->
+						<!--<answer>
+						</answer> -->
+					</exercise></p>
+					
+			</exercises>

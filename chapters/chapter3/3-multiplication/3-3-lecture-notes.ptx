@@ -4,5 +4,218 @@
 		Matrix multiplication
 	</title>
 
+	<subsection>
+		<title> Composition of functions </title>
+		<definition>
+			<p> Let <m>f : \mathbb{R}^n \to \mathbb{R}^m</m> and <m>g : \mathbb{R}^m \to \mathbb{R}^k</m> be functions (not necessarily linear transformations).  The <em>composition</em> of <m>f</m> and <m>g</m> is the function <m>g \circ f : \mathbb{R}^n \to \mathbb{R}^k</m> defined by <m>(g \circ f)(\vec{v}) = g(f(\vec{v}))</m>.</p>
+		</definition>
+		<note>
+			<p> Be careful!  Given functions <m>f</m> and <m>g</m>, there are two ways to compose them: <m>g\circ f</m> (which computes <m>f</m> first and then <m>g</m>) and <m>f \circ g</m> (which computes <m>g</m> first and then <m>f</m>).  It can happen that neither of these makes sense, or one makes sense but not the other, or both make sense, depending on the domains and codomains of the functions involved.  Moreover, even if both <m>f\circ g</m> and <m>g \circ f</m> are defined, they are often not the same function.</p>
+			<p>The next two examples illustrate these warnings. </p>
+		</note>
+
+		<example xml:id="ex-composition-formula">
+			<p> Suppose that <m>f : \mathbb{R}^2 \to \mathbb{R}^3</m> is defined by <m>f\left(\begin{bmatrix}x\\y\end{bmatrix}\right) = \begin{bmatrix}x+y\\y\\-y\end{bmatrix}</m> and <m>g : \mathbb{R}^3 \to \mathbb{R}^3</m> is defined by <m>g\left(\begin{bmatrix}x\\y\\z\end{bmatrix}\right) = \begin{bmatrix}x\\x+y\\x+y+z\end{bmatrix}</m>.  Then <m>g \circ f : \mathbb{R}^2 \to \mathbb{R}^3</m> is given by
+			<md>
+				<mrow> (g \circ f)\left(\begin{bmatrix}x\\y\end{bmatrix}\right) \amp = g\left(f\left(\begin{bmatrix}x\\y\end{bmatrix}\right)\right) </mrow>
+				<mrow> \amp = g\left(\begin{bmatrix}x+y\\y\\-y\end{bmatrix}\right) </mrow>
+				<mrow> \amp = \begin{bmatrix}(x+y) \\ (x+y)+y \\ (x+y)+y+(-y)\end{bmatrix} </mrow>
+				<mrow> \amp = \begin{bmatrix}x+y\\x+2y\\x+y\end{bmatrix}</mrow>
+			</md>.</p>
+			<p> In this example the composition in the other order, <m>f \circ g</m>, does not make sense.  This is because the output of <m>g</m> is in <m>\mathbb{R}^3</m>, but <m>f</m> accepts inputs from <m>\mathbb{R}^2</m>, so the expression <m>f\left(g\left(\begin{bmatrix}x\\y\\z\end{bmatrix}\right)\right) = f\left(\begin{bmatrix}x\\x+y\\x+y+z\end{bmatrix}\right)</m> is meaningless. </p>
+		</example>
+
+		 <example>
+		 	<p> Let <m> f : \mathbb{R}^2 \to \mathbb{R}^2</m> and <m>g : \mathbb{R}^2 \to \mathbb{R}^2</m> be defined by <m>f\left(\begin{bmatrix}x\\y\end{bmatrix}\right) = \begin{bmatrix}x+y\\x-y\end{bmatrix}</m> and <m>g\left(\begin{bmatrix}x\\y\end{bmatrix}\right) = \begin{bmatrix}y\\2x\end{bmatrix}</m>.  In this case both <m>g \circ f</m> and <m>f \circ g</m> are defined.  If we calculate them, we get:
+		 	<md>
+		 		<mrow> (g \circ f)\left(\begin{bmatrix}x\\y\end{bmatrix}\right) \amp = g\left(f\left(\begin{bmatrix}x\\y\end{bmatrix}\right)\right) </mrow>
+		 		<mrow> \amp = g\left(\begin{bmatrix}x+y\\x-y\end{bmatrix}\right) </mrow>
+		 		<mrow> \amp = \begin{bmatrix}x-y\\2x+2y\end{bmatrix} </mrow>
+		 	</md>, and
+		 	<md>
+		 		<mrow> (f \circ g)\left(\begin{bmatrix}x\\y\end{bmatrix}\right) \amp = f\left(g\left(\begin{bmatrix}x\\y\end{bmatrix}\right)\right) </mrow>
+		 		<mrow> \amp = f\left(\begin{bmatrix}y\\2x\end{bmatrix}\right) </mrow>
+		 		<mrow> \amp = \begin{bmatrix}y+2x\\y-2x\end{bmatrix} </mrow>
+		 	</md>.  As we can see, the formulas are different.</p>
+		 	<p>To be absolutely certain they they are really different (so that there is no clever way of re-writing the formulas to make them the same) we should pick a specific vector to plug into both and see that we get different answers.  There are lots of different choices here, so we just have to pick one.  For instance, <m>(g \circ f)\left(\begin{bmatrix}1\\0\end{bmatrix}\right) = \begin{bmatrix}1\\2\end{bmatrix}</m> and <m>(f \circ g)\left(\begin{bmatrix}1\\0\end{bmatrix}\right) = \begin{bmatrix}2\\-2\end{bmatrix}</m>.</p>
+		 	<p>One final caution: There are <em>some</em> choices of vector where <m>g\circ f</m> and <m>f\circ g</m> do give the same answer (for instance, this happens with <m>\begin{bmatrix}0\\0\end{bmatrix}</m>).  That's OK, but we still have <m>g \circ f \neq f \circ g</m> because they disagree on <em>at least one</em> input.</p>
+		 </example>
+		 <p>You might have noticed that in the previous two examples we started with functions <m>f</m> and <m>g</m> that were linear transformations, and their compositions (when they were defined) were also linear transformations.  In fact, this is always the case, and is a powerful way of building new linear transformations out of old ones.</p>
+		 <theorem xml:id="thm-composition-of-linear-transformations">
+		 	<statement>
+		 		<p> Let <m>T : \mathbb{R}^n \to \mathbb{R}^m</m> and <m>S : \mathbb{R}^m \to \mathbb{R}^k</m> be linear transformations.  Then <m>S \circ T : \mathbb{R}^n \to \mathbb{R}^k</m> is a linear transformation.</p>
+		 	</statement>
+		 	<proof>
+		 		<p> Given any vectors <m>\vec{v}, \vec{w}</m> in <m>\mathbb{R}^n</m>, we use the fact that both <m>T</m> and <m>S</m> are linear to calculate:
+		 		<md>
+		 			<mrow> (S \circ T)(\vec{v} + \vec{w}) \amp = S(T(\vec{v}+\vec{w})) </mrow>
+		 			<mrow> \amp = S(T(\vec{v}) + T(\vec{w})) </mrow>
+		 			<mrow> \amp = S(T(\vec{v})) + S(T(\vec{w})) </mrow>
+		 			<mrow> \amp = (S\circ T)(\vec{v}) + (S \circ T)(\vec{w}) </mrow>
+		 		</md>.</p>
+		 		<p> Similarly, given a vector <m>\vec{v}</m> in <m>\mathbb{R}^n</m> and a scalar <m>c</m>, we have:
+		 		<md>
+		 			<mrow> (S \circ T)(c\vec{v}) \amp = S(T(c\vec{v})) </mrow>
+		 			<mrow> \amp = S(cT(\vec{v})) </mrow>
+		 			<mrow> \amp = cS(T(\vec{v})) </mrow>
+		 			<mrow> \amp = c(S \circ T)(\vec{v}) </mrow>
+		 		</md>.</p>
+		 	</proof>
+		 </theorem>
+
+		 <example>
+		 	<p> Let <m>T : \mathbb{R}^2 \to \mathbb{R}^2</m> be the transformation that takes a vector <m>\vec{v}</m>, rotates it counterclockwise by <m>\pi/6</m>, then doubles the result of that, then takes the result of that and performs the orthogonal projection in the direction of <m>\begin{bmatrix}3\\-1\end{bmatrix}</m>.  Then we can write <m> T = \proj_{\begin{bmatrix}3\\-1\end{bmatrix}} \circ S \circ R_{\pi/6}</m>, where <m>S(\vec{v}) = 2\vec{v}</m> and <m>R_{\pi/6}</m> is the rotation counterclockwise by <m>\pi/6</m>.  Since all three of the terms in the composition are things that we already know are linear transformations, it follows from <xref ref="thm-composition-of-linear-transformations" /> that <m>T</m> is also a linear transformation.</p>
+		 	<p> Notice that using <xref ref="thm-composition-of-linear-transformations" />, together with some functions that we already know are linear transformations, has saved us from a fairly unpleaseant direct verification of the properties in <xref ref="def-linear-transformation" />!</p>
+		 </example>
+	</subsection>
+
+	<subsection>
+		<title> Matrix multiplication </title>
+		<p> Suppose that <m>T : \mathbb{R}^n \to \mathbb{R}^m</m> and <m>S : \mathbb{R}^m \to \mathbb{R}^k</m> are linear transformations.  By <xref ref="thm-composition-of-linear-transformations" /> we know that <m>S \circ T : \mathbb{R}^n \to \mathbb{R}^k</m> is also a linear transformation.  Following out maxim that everything we could want to know about a linear transformation is encoded in its standard matrix, we are led to ask how we could use <m>[T]</m> and <m>[S]</m> to calculate <m>[S \circ T]</m>.  For the operations in <xref ref="sec-BasicOperations" /> it was relatively straightforward to translate from linear transformations to matrices.  With composition the translation is less obvious, as the next example illustrates. </p>
+		<example xml:id="ex-composition-linear">
+			<p> Let <m>T : \mathbb{R}^2 \to \mathbb{R}^3</m> and <m>S : \mathbb{R}^3 \to \mathbb{R}^4</m> be defined by <m>T\left(\begin{bmatrix}x\\y\end{bmatrix}\right) = \begin{bmatrix}x+2y \\ 2x+y \\ x-y\end{bmatrix}</m> and <m>S\left(\begin{bmatrix}x\\y\\z\end{bmatrix}\right) = \begin{bmatrix}x-y+z \\ x+y \\ y-z \\ 2y+3z\end{bmatrix}</m>.  Then the composition <m>S \circ T</m> makes sense, and we calculate a formula for it:
+			<md>
+				<mrow>(S \circ T)\left(\begin{bmatrix}x\\y\end{bmatrix}\right) \amp = S\left(\begin{bmatrix}x+2y \\ 2x+y \\ x-y\end{bmatrix}\right) </mrow>
+				<mrow> \amp = \begin{bmatrix}0 \\ 3x+3y \\ x+2y \\ 7x-y\end{bmatrix}</mrow>
+			</md>.</p>
+			<p> Now if we compute the standard matrices (<xref ref="def-standard-matrix" />), we find:
+			<me>[T] = \begin{bmatrix}1 \amp 2 \\ 2 \amp 1 \\ 1 \amp -1\end{bmatrix}</me>,
+			<me>[S] = \begin{bmatrix}1 \amp -1 \amp 1 \\ 1 \amp 1 \amp 0 \\ 0 \amp 1 \amp -1 \\ 0 \amp 2 \amp 3\end{bmatrix}</me>,
+			<me>[S \circ T] = \begin{bmatrix}0 \amp 0 \\ 3 \amp 3 \\ 1 \amp 2 \\ 7 \amp -1\end{bmatrix}</me>.
+			It is far from obvious how to combine <m>[T]</m> and <m>[S]</m> to obtain <m>[S \circ T]</m>!</p>
+		</example>
+		<p> Looking directly at the matrices in the previous example, it does not seem that there is an obvious relationship between the numbers in the three matrices.  There is a relationship, but to see it we need to look at the matrices through the lens of <xref ref="thm-matrix-times-vector-implements-transformation" />. </p>
+		<p> Suppose that <m>T : \mathbb{R}^n \to \mathbb{R}^m</m> and <m>S : \mathbb{R}^m \to \mathbb{R}^k</m> are linear transformations.  Let's calculate the first column of <m>[S \circ T]</m>.  By <xref ref="def-standard-matrix" /> the first column is <m>(S \circ T)(\vec{e_1})</m>, so that is what we calculate.  Let <m>\vec{T_1}</m> be the first column of <m>[T]</m>, and recall from the definition of <m>[T]</m> that <m>\vec{T_1} = T(\vec{e_1})</m>.  As we do the following computation, we use <xref ref="thm-matrix-times-vector-implements-transformation" /> to change from using transformations to using matrices.</p>
+		<md>
+			<mrow> (S \circ T)(\vec{e_1}) \amp = S(T(\vec{e_1})) </mrow>
+			<mrow> \amp = S(\vec{T_1}) </mrow>
+			<mrow> \amp = [S]\vec{T_1} </mrow>
+		</md>
+		<p> What we have just shown is that the first column of <m>[S \circ T]</m> is the product of <m>[S]</m> with the first column of <m>[T]</m>.  Repeating the calculation using <m>\vec{e_2}</m> similarly shows that the second column of <m>[S \circ T]</m> is <m>[S]</m> times the second column of <m>[T]</m>.  These calculations motivate a definition. </p>
+		<definition>
+			<p> Let <m>A</m> be an <m>k \times m</m> matrix and let <m>B</m> be an <m>m \times n</m> matrix.  The <em>product</em> <m>AB</m> is the <m>k \times n</m> matrix where, for each <m>i</m> with <m>1 \leq i \leq n</m>, the <m>i</m>th column of <m>AB</m> is the product of the matrix <m>A</m> with the vector that is the <m>i</m>th column of <m>B</m>.</p>
+		</definition>
+		<example>
+			<p> Let <m>A = \begin{bmatrix}1 \amp 2 \\ 3 \amp 4 \\ 5 \amp 6\end{bmatrix}</m> and <m>B = \begin{bmatrix}0 \amp 1 \\ 2 \amp 3\end{bmatrix}</m>.  Then the first column of <m>AB</m> is <me>\begin{bmatrix}1 \amp 2 \\ 3 \amp 4 \\ 5 \amp 6\end{bmatrix}\begin{bmatrix}0 \\ 2\end{bmatrix} = \begin{bmatrix}4 \\ 8 \\ 12\end{bmatrix}</me>, and the second column is <me>\begin{bmatrix}1 \amp 2 \\ 3 \amp 4 \\ 5 \amp 6\end{bmatrix}\begin{bmatrix}1\\3\end{bmatrix} = \begin{bmatrix}7 \\ 15 \\ 23\end{bmatrix}</me>.  Therefore <me>AB = \begin{bmatrix}1 \amp 2 \\ 3 \amp 4 \\ 5 \amp 6\end{bmatrix}\begin{bmatrix}0 \amp 1 \\ 2 \amp 3\end{bmatrix} = \begin{bmatrix}4 \amp 7 \\ 8 \amp 15 \\ 12 \amp 23\end{bmatrix}</me>.</p>
+		</example>
+
+		<p> We constructed the definition of matrix multiplication precisely to match up with composition of linear transformations, and in the discussion leading up to the definition we essentially proved that our definition was the right one to make the following theorem true.</p>
+		<theorem xml:id="thm-multiplication-is-composition">
+			<statement>
+				<p> Let <m>T : \mathbb{R}^n\to\mathbb{R}^m</m> and <m>S : \mathbb{R}^m\to\mathbb{R}^k</m> be linear transformations.  Then <m>[S \circ T] = [S][T]</m>. </p>
+			</statement>
+		</theorem>
+		
+		<example>
+			<p> We return to the transformations from <xref ref="ex-composition-linear" />.  In that example we did the composition by hand, and then used the definition of the standard matrix to find: 
+			<me>[T] = \begin{bmatrix}1 \amp 2 \\ 2 \amp 1 \\ 1 \amp -1\end{bmatrix}</me>,
+			<me>[S] = \begin{bmatrix}1 \amp -1 \amp 1 \\ 1 \amp 1 \amp 0 \\ 0 \amp 1 \amp -1 \\ 0 \amp 2 \amp 3\end{bmatrix}</me>,
+			<me>[S \circ T] = \begin{bmatrix}0 \amp 0 \\ 3 \amp 3 \\ 1 \amp 2 \\ 7 \amp -1\end{bmatrix}</me>.</p>
+			<p>With <xref ref="thm-multiplication-is-composition" /> we can now get the same answer for <m>[S \circ T]</m> without having to actually perform the composition, because
+			<me> [S\circ T] = [S][T] = \begin{bmatrix}1 \amp -1 \amp 1 \\ 1 \amp 1 \amp 0 \\ 0 \amp 1 \amp -1 \\ 0 \amp 2 \amp 3\end{bmatrix}\begin{bmatrix}1 \amp 2 \\ 2 \amp 1 \\ 1 \amp -1\end{bmatrix} = \begin{bmatrix}\begin{bmatrix}1 \amp -1 \amp 1 \\ 1 \amp 1 \amp 0 \\ 0 \amp 1 \amp -1 \\ 0 \amp 2 \amp 3\end{bmatrix}\begin{bmatrix}1 \\ 2 \\ 1\end{bmatrix} \amp \begin{bmatrix}1 \amp -1 \amp 1 \\ 1 \amp 1 \amp 0 \\ 0 \amp 1 \amp -1 \\ 0 \amp 2 \amp 3\end{bmatrix}\begin{bmatrix}2\\1\\-1\end{bmatrix}\end{bmatrix} = \begin{bmatrix}0 \amp 0 \\ 3 \amp 3 \\ 1 \amp 2 \\ 7 \amp -1\end{bmatrix}.</me></p>
+			<p> Even better, from here we can get back the formula for the composition if we want it: </p>
+			<me> (S \circ T)\left(\begin{bmatrix}x\\y\end{bmatrix}\right) = [S\circ T]\begin{bmatrix}x\\y\end{bmatrix} = \begin{bmatrix}0 \amp 0 \\ 3 \amp 3 \\ 1 \amp 2 \\ 7 \amp -1\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix} = \begin{bmatrix}0 \\ 3x+3y \\ x+2y \\ 7x-y\end{bmatrix}</me>.
+		</example>
+
+		<example>
+			<p> Fix two angles <m>\theta</m> and <m>\phi</m>, and let <m>R_\theta, R_\phi : \mathbb{R}^2 \to \mathbb{R}^2</m> be the counterclockwise rotations by <m>\theta</m> and <m>\phi</m>, respectively.  Geometrically, you can see that rotating a vector first by <m>\theta</m> and then by <m>\phi</m> is the same as rotating the vector by <m>\phi+\theta</m>, and so <m>R_\phi \circ R_\theta = R_{\phi +\theta}</m>.  By <xref ref="thm-multiplication-is-composition" /> we therefore have <me>[R_\phi][R_\theta] = [R_{\phi+\theta}]</me>.</p>
+			<p> In <xref ref="ex-rotation-matrix" /> we calculated the standard matrix for a rotation, so we can write out both sides of the above equation explicitly:
+			<me> \begin{bmatrix}\cos(\phi) \amp -\sin(\phi) \\ \sin(\phi) \amp \cos(\phi)\end{bmatrix}\begin{bmatrix}\cos(\theta) \amp -\sin(\theta) \\ \sin(\theta) \amp \cos(\theta)\end{bmatrix} = \begin{bmatrix}\cos(\phi+\theta) \amp -\sin(\phi+\theta) \\ \sin(\phi+\theta) \amp \cos(\phi+\theta)\end{bmatrix}</me>.</p>
+			<p> Now if we calculate the matrix multiplication on the left side, we get: 
+			<me> \begin{bmatrix}\cos(\phi)\cos(\theta) - \sin(\phi)\sin(\theta) \amp -\cos(\phi)\sin(\theta)-\sin(\phi)\cos(\theta) \\ \sin(\phi)\cos(\theta)+\cos(\phi)\sin(\theta) \amp -\sin(\phi)\sin(\theta)+\cos(\phi)\cos(\theta)\end{bmatrix} = \begin{bmatrix}\cos(\phi+\theta) \amp -\sin(\phi+\theta) \\ \sin(\phi+\theta) \amp \cos(\phi+\theta)\end{bmatrix}</me>.</p>
+			<p> For these two matrices to be equal they must have equal corresponding entries.  In particular, if we look at the top left entries we recover the addition formula for cosine, and if we look at the bottom left entries we get the addition formula for sine:
+			<me>\cos(\phi)\cos(\theta) - \sin(\phi)\sin(\theta) = \cos(\phi+\theta)</me>,
+			<me>\sin(\phi)\cos(\theta) + \cos(\phi)\sin(\theta) = \sin(\phi+\theta)</me>.</p>
+			<p> Notice how little trigonometry we needed in order to get these identities!  All we used was the calculations in <xref ref="ex-rotation-matrix" />, the fact that the composition of two rotations is the rotation by the sum of the angles, and some very general facts about composition of linear transformations.</p>
+		</example>
+
+	</subsection>
+
+	<subsection>
+		<title> Properties of matrix multiplication </title>
+		<p> You might find it a bit surprising that we have called the operation <m>AB</m> <em>multiplication</em> of matrices, when it arises from <em>composition</em> of functions.  The full explanation of why this is an appropriate name is somewhat beyond the scope of this course, but in this section we will show that matrix multiplication does have many of the same properties that multiplication has for numbers.  However, we will also see that there are some ways in which matrix multiplication is quite different from multiplication of numbers - when doing matrix algebra involving multiplication you must always be careful!  We start with the properties that behave in the expected way.</p>
+		<theorem>
+			<statement>
+				<p>Suppose that <m>A, B, C</m> are matrices, and <m>k</m> is a scalar.  Then the following equations are true whenever they make sense (that is, whenever all of the operations used in the equation are defined).
+				<ul>
+					<li><m>A(B+C) = AB+AC</m></li>
+					<li><m>(B+C)A = BA+CA</m></li>
+					<li><m>k(AB) = (kA)B = A(kB)</m></li>
+				</ul></p>
+			</statement>
+			<proof>
+				<p> </p>
+			</proof>
+		</theorem>
+		<p>Multiplication by zero matrices acts as you expect.</p>
+		<theorem>
+			<statement>
+				<p>If <m>A</m> is an <m>m \times k</m> matrix then for any <m>n</m>, we have <m>0_{n\times m}A = 0_{n \times k}</m> and <m>A0_{k\times n} = 0_{m \times n}</m>.</p>
+			</statement>
+		</theorem>
+		<p>There is also a matrix that acts similarly to the number <m>1</m> for multiplication.</p>
+		<definition>
+			<p></p>
+		</definition>
+		<theorem>
+			<statement>
+				<p>If <m>A</m> is an <m>m \times n</m> matrix then <m>I_mA = A</m> and <m>AI_n = A</m>.</p>
+			</statement>
+		</theorem>
+		<p>Now we turn to several examples that show how matrix multiplication can behave differently from multiplication of numbers.  Perhaps the most striking thing is that, very often, <m>AB\neq BA</m> - we say that matrix multiplication is <em>non-commutative</em>.</p>
+		<example>
+			<p>If <m>A = \begin{bmatrix}1 \amp 2 \\ 3 \amp 4\end{bmatrix}</m> and <m>B = \begin{bmatrix}1 \amp 1 \\ 2 \amp 0\end{bmatrix}</m> then <m>AB = \begin{bmatrix}5 \amp 1 \\ 11 \amp 3\end{bmatrix}</m> and <m>BA = \begin{bmatrix}4 \amp 6 \\ 2 \amp 4\end{bmatrix}</m>.</p>
+		</example>
+		<example>
+			<p>Let <m>A = \begin{bmatrix}0 \amp 1 \\ 0 \amp 0\end{bmatrix}</m> and <m>B = \begin{bmatrix}0 \amp 0 \\ 0 \amp 1\end{bmatrix}</m>.  Notice that <m>A \neq 0_{2 \times 2}</m> and <m>B \neq 0_{2 \times 2}</m>, yet <m>BA = 0_{2 \times 2}</m>!  Perhaps even more surprisingly, <m>AB = \begin{bmatrix}0 \amp 1 \\ 0 \amp 0\end{bmatrix} \neq 0_{2 \times 2}</m>.</p>
+			<p>It is a good exercise to find the linear transformations with matrices <m>A</m> and <m>B</m>, and then try to understand geometrically what the calculations in this example mean.</p>
+		</example>
+		<definition>
+			<p>If <m>A</m> is an <m>n \times n</m> matrix then we define <m>A^0 = I_n</m>, <m>A^1 = A</m>, <m>A^2 = AA</m>, <m>A^3 = AAA</m>, etc.</p>
+		</definition>
+		<p>Notice that if <m>A</m> is not square, that is, if it is <m>m\times n</m> with <m>m \neq n</m>, then <m>AA</m> does not make sense.  For this reason we only define powers of <m>A</m> when <m>A</m> is square.</p>
+		<example>
+			<p>Let <m>A = \begin{bmatrix}1 \amp 0 \\ 0 \amp 1\end{bmatrix}</m>, <m>B = \begin{bmatrix}-1 \amp 0 \\ 0 \amp -1\end{bmatrix}</m>, <m>C = \begin{bmatrix}-1 \amp 0 \\ 0 \amp 1\end{bmatrix}</m>, and <m>D = \begin{bmatrix}2 \amp 3 \\ -1 \amp -2\end{bmatrix}</m>.  Then <me>A^2 = B^2 = C^2 = D^2 = I_2</me>.</p>
+			<p>This example shows that the equation <m>X^2 = I_2</m>, where <m>X</m> is a <m>2 \times 2</m> matrix, has more than two solutions.  It turns out that this equation actually has infinitely many solutions!  Compare this with the situation of the equation <m>x^2=1</m> when <m>x</m> is a number.</p>
+		</example>
+		<example>
+			<p>Even if a matrix has no entries that are <m>0</m> products with that matrix can still yield the zero matrix.  For example, <m>\begin{bmatrix}-2 \amp 1 \\ -4 \amp 2\end{bmatrix}^2 = \begin{bmatrix}0 \amp 0 \\ 0\amp 0\end{bmatrix}</m>.</p>
+		</example>
+		<p>The non-commutativity of matrix multiplication means that we need to be careful when doing certain algebraic manipulations.  For example, if <m>A</m> and <m>B</m> are <m>n \times n</m> matrices, then:
+		<md>
+			<mrow>(A+B)^2 \amp = (A+B)(A+B) </mrow>
+			<mrow> \amp = A(A+B) + B(A+B) </mrow>
+			<mrow> \amp = A^2 + AB + BA +B^2</mrow>
+		</md>, but because we often have <m>AB \neq BA</m> we cannot simplify further.  In particular, there are square matrices <m>A</m> and <m>B</m> for which <m>(A+B)^2 \neq A^2+2AB+B^2</m>. </p>
+
+		<p>Finally, we come to the transpose.  Here the correct interaction between products and transposes is not exactly what you might have hoped for, but it's also not too unpleasant.</p>
+		<theorem xml:id="thm-transpose-of-product">
+			<statement>
+				<p>Suppose that <m>A</m> is an <m>m \times n</m> matrix and <m>B</m> is an <m>n \times k</m> matrix.  Then <m>(AB)^t = B^tA^t</m>.</p>
+			</statement>
+		</theorem>
+
+		<example>
+			<p> Let <m>A = \begin{bmatrix}2 \amp 1 \\ -1 \amp 0 \\ 3 \amp 2\end{bmatrix}</m> and <m>B = \begin{bmatrix}1 \amp 2 \\ 3 \amp 4</m>.  Then <me>AB = \begin{bmatrix}5 \amp 6 \\ -1 \amp -2 \\ 9 \amp 14\end{bmatrix}</me>, so <me>(AB)^t = \begin{bmatrix}5 \amp -1 \amp 9 \\ 6 \amp -2 \amp 14\end{bmatrix}</me>.</p>
+			<p> On the other hand, <me>B^tA^t = \begin{bmatrix}1 \amp 3 \\ 2 \amp 4\end{bmatrix}\begin{bmatrix}2 \amp -1 \amp 3 \\ 1 \amp 0 \amp 2\end{bmatrix} = \begin{bmatrix}5 \amp -1 \amp 9 \\ 6 \amp -2 \amp 14\end{bmatrix}.</me></p>
+			<p> In this example the product <m>A^tB^t</m> is not even defined.  Even in examples where <m>A^tB^t</m> is defined, we often have <m>(AB)^t \neq A^tB^t</m>.</p>
+		</example>
+
+		<theorem xml:id="thm-ata-symmetric">
+			<statement>
+				<p> Let <m>A</m> be any matrix.  Then <m>A^tA</m> is a symmetric matrix.</p>
+			</statement>
+			<proof>
+				<p>
+					First, observe that if <m>A</m> is <m>m \times n</m> then <m>A^t</m> is <m>n \times m</m>, so <m>A^tA</m> makes sense (and is <m>n \times n</m>).  Now to see that <m>A^tA</m> is symmetric, we just calculate its transpose using <xref ref="thm-transpose-of-product" />
+					<me>(A^tA)^t = A^t(A^t)^t = A^tA</me>.
+				</p>
+			</proof>
+		</theorem>
+
+		<p>The theorem above is mostly presented as an illustration of a proof using matrix algebra.  The theorem says that <m>A^tA</m> is always symmetric.  It is interesting to ask whether or not the converse is true, that is, whether every symmetric matrix <m>B</m> can be "factored" as <m>B = A^tA</m> for some <m>A</m>.  The answer turns out to be "yes", as long as we allow the entries of <m>A</m> to be <em>complex</em> numbers.  The proof that this "factoring" is possible will appear much later, in <xref ref="thm-factor-symmetric" />.</p>
+
+	</subsection>
+	
 	<xi:include href="3-3-exercises.ptx" />
 </section>

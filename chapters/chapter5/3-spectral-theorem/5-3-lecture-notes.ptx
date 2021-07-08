@@ -1,0 +1,19 @@
+<section xml:id="sec-Spectral" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+	<title>
+		The Spectral Theorem
+	</title>
+
+	<p>You might recall that we proved that if <m>A</m> is any matrix of real numbers then <m>A^tA</m> is a symmetric matrix (<xref ref="thm-ata-symmetric" />).  At that time we promised to prove a partial converse, namely that every symmetric matrix of real numbers has the form <m>A^tA</m> for some matrix <m>A</m>, where <m>A</m> might have complex entries.  With the Spectral Theorem in hand we can now give the proof. </p>
+
+	<corollary xml:id="thm-factor-symmetric">
+		<statement>
+			<p> Let <m>B</m> be a symmetric matrix of real numbers.  Then there exists a matrix <m>A</m> (whose entries may be complex) such that <m>B = A^tA</m>.</p>
+		</statement>
+		<proof>
+			<p> By the Spectral Theorem we can orthogonally diagonalize <m>B</m>, say <m>B = Q^tDQ</m> where <m>Q</m> is an orthogonal matrix and <m>D</m> is a diagonal matrix.  Let <m>\sqrt{D}</m> be the diagonal matrix whose diagonal entries are the square roots of the diagonal entries of <m>D</m>; notice that even though the entries of <m>D</m> are real numbers they could be negative, and hence the entries of <m>\sqrt{D}</m> may be complex.  Also notice that <m>\sqrt{D}^t = \sqrt{D}</m> and <m>(\sqrt{D})^2 = D</m>.</p><p>Let <m>A = \sqrt{D}Q</m>.  Then:
+			<me>A^tA = (\sqrt{D}Q)^t(\sqrt{D}Q) = Q^t\sqrt{D}^t\sqrt{D}Q = Q^t(\sqrt{D})^2Q = Q^tDQ = B</me>.</p>
+		</proof>
+	</corollary>
+	<xi:include href="5-3-exercises.ptx" />
+</section>
